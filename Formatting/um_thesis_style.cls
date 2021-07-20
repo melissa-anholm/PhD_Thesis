@@ -3,7 +3,7 @@
 
 %%% ====================================================================
 %%%  @LaTeX-class-file{
-%%%     filename        = "thesis.cls",
+%%%     filename        = "um_thesis_style.cls",
 %%%     version         = "0.3.1",
 %%%     date            = "27 Aug 1999",
 %%%	portedby	= "Ian Goh",
@@ -46,7 +46,7 @@
 %%% ====================================================================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{thesis}[1999/03/19 version 0.3.0 JHU Thesis Class]
+\ProvidesClass{um_thesis_style}[1999/03/19 version 0.3.0 JHU Thesis Class]
 
 %    ****************************************
 %    *               OPTIONS                *
@@ -222,8 +222,6 @@
 \def\nocopyrightnotice{\gdef\@copyrightnotice{}}
 
 
-
-
 % \alwayssingle and \endalwayssingle
 %
 % These macros define an environment for front matter that is always 
@@ -284,7 +282,6 @@
          \vskip 9em
          Copyright\@copyrightnotice
       \end{center} \par 
-%      \vfil
       \null
     } % end of vbox enclosing title info
    \end{alwayssingle}

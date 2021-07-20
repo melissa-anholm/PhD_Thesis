@@ -4,3 +4,6 @@
 *.log
 *.toc
 *.lot
+*.out
+*.tdo
+.texpadtmp/*

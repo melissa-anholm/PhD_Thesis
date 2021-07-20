@@ -1,0 +1,92 @@
+% !TEX root = ../thesis_main.tex
+
+
+% Misc. Formatting
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\onehalfspacing
+%\reversemarginpar
+
+% Colors, defined:
+\input{ColorNamesMacros.tex}
+
+
+% Mathematics support
+\usepackage{amsmath}
+\usepackage{isotope}
+
+% Bibliography packages
+\usepackage[numbers,sort&compress]{natbib}
+
+% Subcaption Package Stuff:
+\usepackage[list=on]{caption,subcaption}   
+\captionsetup[subfigure]{labelformat=parens, labelsep=space} %labelformat=simple, parens, empty
+\renewcommand\thesubfigure{\arabic{chapter}.\arabic{figure}\alph{subfigure}}  %this does something weird?
+\makeatletter
+	\renewcommand{\p@subfigure}{}  % this un-fucks the in-text references to subfigures.
+\makeatother
+
+% List of ToDos:
+\usepackage[colorinlistoftodos,textwidth=1.10in,textsize=footnotesize]{todonotes}
+% Because todonotes conflicts slightly with the various ams packages.
+\makeatletter
+\providecommand\@dotsep{5}
+\renewcommand{\listoftodos}[1][\@todonotes@todolistname]{\@starttoc{tdo}{#1}}
+\makeatother
+
+%\reversemarginpar
+%\marginpar[left]{right}
+% Some shortcut ToDo Macros:
+%\newcommand{\todoinline}[2][]{\todo[inline, color=orange, #1]{#2}}
+\newcommand{\todoinline}[2][]{\todo[inline, color=#1]{#2}}
+
+\newcommand{\margintodo}[2][]  % small note in the margin.
+	{\todo[caption={#2}, size=\scriptsize, color=orange, #1]{\renewcommand{\baselinestretch}{1.0}\selectfont#2\par}}  % default spacing seems to be like 1.2.  Change to 1.0.
+%
+%\renewcommand{\todo}{\todoinline}
+%\renewcommand{\todo[margin]}{\margintodo}
+
+%\usepackage{marginnote}
+%\newcommand{\lefttodo}[2][]{{%
+% \let\marginpar\marginnote
+% \reversemarginpar
+% \renewcommand{\baselinestretch}{0.8}%
+% \todo[#1]{#2}}}
+%\newcommand{\note}[2][]{\renewcommand{\baselinestretch}{0.8}\todo[#1]{#2}}
+
+
+
+
+% verbatim environment:
+\usepackage{verbatim}  %% do I need this?? -- yes, for "comment"
+%\makeatletter
+%\newcommand{\verbatimfont}[1]{\def\verbatim@font{#1}}%
+%\verbatimfont{\itshape\ttfamily}
+%\def\verbatim@font{\normalfont}
+%\makeatother
+
+\usepackage{fancyvrb}            % fancy verbatim package puts verbatims in boxes.
+% for fancyvrb (which verbatim-prints things):
+\newcommand{\bv}{\begin{Verbatim}[commandchars=\\\[\], fontfamily=normalfont, frame=single, rulecolor=\color{red}, xleftmargin=5mm, xrightmargin=5mm]}
+\newcommand{\ev}{\end{Verbatim}} % doesn't work?
+
+
+% To add TOC to the TOC.
+%\usepackage{tocbibind}
+%\usepackage[page,titletoc,title]{appendix} 
+%\usepackage{tocloft}
+% Graphics
+% Be warned, there is a potential conflict between the caption/subcaption packages and this template.  It shouldn't interfere with compiling your thesis, but do know that the conflict exists.
+% Common journal abbreviations
+%\usepackage{aas_macros}
+
+
+
+
+% Various Macros that I wrote myself:
+% \input{MiscMacros.tex}  % Currently, MiscMacros.tex has no content.
+\input{MathShorthandMacros.tex}
+\input{AlphabetSoupMacros.tex}
+%
+\input{PackageColorSetupMacros.tex}  % includes hyperref, which should probably go last.

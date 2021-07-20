@@ -97,14 +97,16 @@
    \evensidemargin 0.0in  %   Left margin on even-numbered pages.
    \marginparwidth 0pt    %   Width of marginal notes.
 \else                     % Values for one-sided printing:
-   \oddsidemargin 0.5in   %   Note that \oddsidemargin = \evensidemargin
-   \evensidemargin 0.5in
+%   \oddsidemargin 0.5in   %   Note that \oddsidemargin = \evensidemargin
+%   \evensidemargin 0.5in
+	\oddsidemargin 0.25in   %% MJA kludge  For the default asymmetric margins, use 0.5
+	\evensidemargin 0.25in  %% MJA kludge
    \marginparwidth 0pt
 \fi
 \marginparsep 10pt        % Horizontal space between outer margin and 
                           % marginal note
  
- 
+
 % VERTICAL SPACING:        
                          % Top of page:
 \topmargin 0.0in         %    Nominal distance from top of page to top
@@ -127,7 +129,8 @@
  
 \textheight = 30\baselineskip
 \advance\textheight by \topskip
-\textwidth 6.0truein     % Width of text line.
+\textwidth 6.0truein     % Width of text line.  This one is the default option with the asymmetric margins.
+%\textwidth 6.5truein     %% MJA kludge
                          % For two-column mode: 
 \columnsep 10pt          %    Space between columns 
 \columnseprule 0pt       %    Width of rule between columns.

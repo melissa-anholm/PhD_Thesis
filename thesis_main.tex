@@ -1,75 +1,34 @@
-% Misc. Formatting
+%% Input Search Paths
 \makeatletter
-\def\input@path{{Contents/}{Formatting/}{Figures/}}
-\def\includegraphics@path{{Contents/}{Formatting/}{Figures/}}
+\def\input@path{{Formatting/}{Figures/}{Equations/}{Macros/}{FrontMatter/}{Main/}{Bibliography/}{Appendices/}}
+%\def\includegraphics@path{{Contents/}{Formatting/}{Figures/}}
 \makeatother
 
-\documentclass[12pt, oneside]{thesis}
-% For a single sided thesis, use [12pt, oneside]
-% For a double sided thesis, use [12pt, twoside]
-
-% This thesis template was originally found by Dr. Adam Rogers
-% Adapted from the original format to Latex2e by Victor Arendt
-
-% Misc. Formatting
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{setspace}
-\onehalfspacing
-
-% Mathematics support
-% Include whatever math packages you need here (ie: amsmath)
-\usepackage{amsmath}
+% Document Class:
+\documentclass[12pt, oneside]{um_thesis_style}
 
 
-% Graphics
-% Use which ever graphics packages you need
-% Be warned, there is a potential conflict between the caption/subcaption packages and this template.  It shouldn't interfere with compiling your thesis, but do know that the conflict exists.
-\usepackage{graphicx} 	  % probably use some different package...
-%\graphicspath{{Figures/}} % 
-
-% Bibliography packages
-% Change the style if needed
-\usepackage[round, comma, authoryear]{natbib}
-
-% Common journal abbreviations
-% These abbreviations are primarily astrophysics/astronomy journal abbreviations, but there are others included as well.  See the aas_macros.sty file for details as to which journals are included.
-\usepackage{aas_macros}
+% Some Macros!  (I made them myself.)
+\input{LoadPackages}
 
 
-% 'Draft' background pic:
-%\usepackage{geometry}
-\usepackage{eso-pic}
-
-\newcommand\BackgroundPicture{\put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vfill\centering\includegraphics[width=0.8\paperwidth,height=0.8\paperheight,keepaspectratio]{draft.pdf}\vfill}}}
-
-\newcommand\BackgroundPic{%
-\put(10,0){%
-\parbox[b][\paperheight]{\paperwidth}{%
-\vfill
-\centering
-\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{draft}
-\vfill}}}
-
-
-
+% And now, the actual stuff in the document:
 \begin{document}
 
-% Front Matter, see frontmatter.tex for details
-\input{frontmatter.tex}
+% Front Matter, see fm.tex for details
+\input{frontmatter}
 
-
-stuff?
-\AddToShipoutPicture{\BackgroundPic}
-Stuff.
+\listoftodos
 
 % Content goes here
-% To force each chapter to begin on the right hand side in a two sided document, use \cleardoublepage before \chapter
-\input{intro.tex}
+%\input{intro}
+\input{all_the_chapters}
 
-% As a note: this template numbers equations by (Chapter Number).(Equation Number).
-% For example, the first equation in any chapter is (Chapter Number).1
-% Equation 1 in chapter 1 is 1.1
+
+\input{bibliography}
+
+
+\input{appendices}
 
 
 \end{document}
