@@ -1,0 +1,87 @@
+%!TEX root=../thesis_main.tex
+
+\chapter[How To Lifetime]{Constraining the Analysis with Lifetime Measurements}
+
+\section[Intro]{Background/Introduction}
+
+The goal here is to understand what physical interpretation to give to (linear combinations of) G4 simulations with sets of coupling constants that may or may not be physically possible, given previous lifetime measurements that were not taken into account.  The results aren't broken forever or anything, but some care must be given to the interpretation.  
+
+We'll loosely follow Severijns et. al.'s procedure~\cite{SeverijnsTandecki2008}.  In this paper, (which conveniently sets $b_{\mathrm{Fierz}}$ to zero as soon as the math starts getting messy), we see that the authors will eventually need to split their treatment into "Fermi" and "Gamow-Teller" parts to arrive at their final result.  This becomes clear upon examining their 1D decay rate element:
+\bea
+d\Gamma &=& (\textrm{constants})\,\, \xi \left( 1 + \frac{m}{W} b \right) F(\pm Z, W) S(\pm Z, W) (W-W_0)^2 p W \, dW
+\eea
+where we find that the nuclear shape correction function, $S(\pm Z, W)$, is slightly different in the case of Fermi and Gamow-Teller decays.  Though they note that $S(\pm Z, W)=1$ for both types of decay under the allowed approximation, and it changes only slightly under a more complete treatment, it is this term which gives rise to the statistical rate functions $f_V$ and $f_A$.  Note that the overall value of the ratio $f_A/f_V$ directly changes any estimate of the mixing ratio $\rho$, so we will need at least an estimate of its value in order to do anything useful.  
+
+In particular, 
+\bea
+f_{V/A} &=& \int F(\pm Z, W) S_{V/A}(\pm Z, W) (W-W_0)^2 p W \, dW
+\eea
+No matter the form of $S(\pm Z, W)$ --- and I definitely \emph{do not} know its form --- this is clearly a very challenging integral.  Luckily, a calculation result is provided (with no associated uncertainty given): 
+\bea
+\frac{f_A}{f_V}  \biggm\lvert _{37K} = 1.00456.
+\eea
+
+So, we follow their calculation through, and at the end it yields this result:
+\bea
+Ft^{\mathrm{mirror}} &=& \frac{2 Ft^{0^+\rightarrow 0^+}}{1+\frac{f_A}{f_V}\rho^2}, 
+\eea
+with
+\bea
+\rho \approx \frac{C_A M_{GT}^0}{C_V M_F^0}.
+\eea
+But of course, there's no reason why we can't do a similar calculation while including non-zero values of $C_S$ and $C_T$.  Probably.
+
+\section[Now What?]{Now What?}
+
+In the case where $b_{\mathrm{Fierz}} = 0$, this treatment gets us to the sort of results we might want.  However, if we start introducing non-zero scalar or tensor coupling constants, it's unclear (to me) how we should treat the associated shape correction function(s).  Eg, do we think the shape correction function $S_{V}(\pm Z, W)$ is associated with a \emph{Fermi} decay, or with a \emph{vector} coupling?  In the case of %a 1D decay rate element $d\Gamma$ that has already been integrated over all parameters except energy, 
+zero scalar or tensor couplings, the question is irrelevant because the calculation must be the same either way -- $M_F$ and $C_V$ go together every time. 
+
+With $b_{\mathrm{Fierz}} \neq 0$, the distinction changes the calculation though, since its terms have factors of (eg) $M_F^2 C_V$.
+%$C_V$ and $C_A$, rather than $C_V^2$ and $C_A^2$.  
+Perhaps there are a whole different set of shape correction functions associated specifically with $C_S$ and $C_T$.  
+
+%Since $A_\beta$, for example, also includes factors of $C_V$ and $C_A$, rather than just $C_V^2$ and $C_A^2$, 
+I \emph{might} be able to find a treatment in the literature somewhere where they do one thing or the other.  For my own mental clarity, I would really like to know the answer.  However, I recognize that for the purpose of evaluating scalar and tensor coupling constants, the distinction is largely academic, and won't really affect the answer.  I have to just pick something and go with it.  
+
+\section[After Picking Something...]{After Picking Something...}
+I declare (and so it has to be true, regardless of reality) that the shape correction function $S_{V/A}(\pm Z, W)$ is associated with the matrix element $M_{F/GT}$ rather than the coupling constant $C_{V/A}$.  So, given this, we'll switch our notation a bit and write down a new decay rate:
+\bea
+d\Gamma &=& \left( \vec{\xi} + \frac{m}{W}\, \vec{(b\xi)} \right) \cdot \vec{d\Gamma_0},   
+\eea
+where the vector components are the Fermi and Gamow-Teller components of the decay:
+\bea
+%
+\vec{\xi} &=&
+\begin{bmatrix}
+2 M_F^2 \,\,(C_V^2 + C_S^2) \\
+2 M_{GT}^2 (C_A^2 + C_T^2)
+\end{bmatrix} \\
+%
+\vec{(b\xi)} &=& 
+\begin{bmatrix}
+\pm 2 \gamma \, \mathrm{Re}[C_S C_V^* + C_S^\prime C_V^{\prime *}] \\
+\pm 2 \gamma \, \mathrm{Re}[C_T C_A^* + C_T^\prime C_A^{\prime *}]
+\end{bmatrix} \\
+%
+\vec{d\Gamma_0} &=& 
+(\textrm{constants}) 
+\begin{bmatrix}
+F_F(\pm Z, W) \,\, S_F(\pm Z, W) \,\, (W-W_0)^2 \, p W \, dW  \\
+F_{GT}(\pm Z, W) S_{GT}(\pm Z, W) (W-W_0)^2 \, p W \, dW
+\end{bmatrix}.
+%
+\eea
+
+We find that the integrals involved here are still hard.  I will need to make some simplifying assumptions to get anywhere.
+
+
+
+
+
+
+
+
+
+
+
+

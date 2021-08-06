@@ -1,28 +1,27 @@
 % !TEX root = ../thesis_main.tex
 
 % things that I'm redefining.  This could be dangerous.
-\renewcommand{\d}{\mathrm{d}}
+%\renewcommand{\d}{\mathrm{d}}   % doesn't fucking work in mathmode anyway.  
 \renewcommand{\a}{a_{\beta\nu}}
-\renewcommand{\c}{c_{\mathrm{align}}}
-\renewcommand{\b}{b_{\mathrm{Fierz}}}
+%\renewcommand{\c}{c_{\mathrm{align}}}
+%\renewcommand{\b}{b_{\mathrm{Fierz}}}  % also doesn't work in math mode.
 
 \newcommand{\m}{m_e}  % 
 \newcommand{\me}{m_e}
-%\newcommand{\m}{m_e c^2}  % expands to mc2.
 
 
 % some pdf macros!
 \newcommand{\FF}{F_{+}(Z, E_\beta)}  % for beta+ decay.
 
 \newcommand{\E}{E_{\beta}}
-%\newcommand{\Ee}{E_{\beta}}
+\newcommand{\Ee}{E_{\beta}}
 \newcommand{\Ebeta}{E_{\beta}}
 \newcommand{\dEe}{\d E_{\beta}}
 
 \newcommand{\pbeta}{p_{\beta}}
-%\newcommand{\pe}   {p_{\beta}}
+\newcommand{\pe}   {p_{\beta}}
 \newcommand{\vecpbeta}{\bm{\vec{p}_{\beta}}}
-%\newcommand{\vecpe}   {\bm{\vec{p}_{\beta}}}
+\newcommand{\vecpe}   {\bm{\vec{p}_{\beta}}}
 
 \newcommand{\Enu}{E_{\nu}}
 \newcommand{\pnu}{p_{\nu}}
@@ -34,22 +33,22 @@
 \newcommand{\A}{A_{\beta}}
 
 \newcommand{\bFierz}{b_{\mathrm{Fierz}}}
+\newcommand{\bfierz}{b_{\mathrm{Fierz}}}
 %\newcommand{\b}{b_{\mathrm{Fierz}}}
 
 \newcommand{\abetanu}{a_{\beta\nu}}
-%\newcommand{\a}{a_{\beta\nu}}
 
 \newcommand{\calign}{c_{\mathrm{align}}}
-%\newcommand{\c}{c_{\mathrm{align}}}
 
 \newcommand{\Bnu}{B_\nu}
 \newcommand{\B}{B_\nu}
 
 \newcommand{\Dtr}{D_{\mathrm{TR}}}
+\newcommand{\DTR}{D_{\mathrm{TR}}}
 \newcommand{\D}{D_{\mathrm{TR}}}
 
-\newcommand{\dOmegae} {\d^{3} \bm{\hat{\Omega}_\beta}}
-\newcommand{\dOmeganu}{\d^{3} \bm{\hat{\Omega}_\nu}}
+\newcommand{\dOmegae} {\mathrm{d}^{3} \bm{\hat{\Omega}_\beta}}
+\newcommand{\dOmeganu}{\mathrm{d}^{3} \bm{\hat{\Omega}_\nu}}
 
 \newcommand{\vecJ}{\bm{\vec{J}}}
 \newcommand{\vecP}{\bm{\vec{P}}}

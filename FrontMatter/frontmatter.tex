@@ -27,9 +27,19 @@
 \addcontentsline{toc}{chapter}{Contents}
 
 
+
 \listoffigures
 \listoftables
 %\listofacronyms
+
+
+%\ifthenelse{\boolean{isdraft}}{\listoftodos}{} 
+\ifthenelse{\boolean{isdraft}}
+{
+	\listoftodos[Shit To Do]\relax
+	\addcontentsline{toc}{chapter}{Shit To Do}
+}
+{}
 
 \end{frontmatter}
 

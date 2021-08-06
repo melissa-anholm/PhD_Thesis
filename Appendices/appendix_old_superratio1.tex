@@ -1,0 +1,76 @@
+\chapter[SuperRatio]{Derivation of the $\bFierz$ Dependence of the Superratio Asymmetry}
+
+Consider, from JTW, the probability distribution for outgoing beta particles in terms of only the electron energy and direction w.r.t. parent nuclear polarization (other parameters have been integrated over).  We have
+\bea
+%P(\Ebeta) &=& W(\Ebeta) \left[ 1 + \bFierz \frac{mc^2}{\Ebeta} + \Abeta \, \frac{v}{c} |\vec{P}| \hat{P} \cdot \hat{\pbeta}  \right].
+P(\Ebeta) &=& W(\Ebeta) \left[ 1 + \bFierz \frac{mc^2}{\Ebeta} + \Abeta \, \frac{v}{c} |\vec{P}| \cos\theta  \right].
+\eea
+
+In the TRINAT geometry with two polarization states (+/-) and two detectors (T/B), we are able to describe four different count rates, with different combinations of polarization states and detectors.  Thus, we have:
+\bea
+%\begin{subequations}
+%\begin{align}
+r_{\mathrm T+}(\Ebeta) &=& \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_T \, N_+ \left[1 + \bFierz \frac{mc^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm T+} \right] \label{eq:r1} \\
+r_{\mathrm B+}(\Ebeta) &=& \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_B \, N_+ \left[1 + \bFierz \frac{mc^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm B+} \right] \label{eq:r2}\\
+r_{\mathrm T-}(\Ebeta) &=& \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_T \, N_- \left[1 + \bFierz \frac{mc^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_-| \langle \cos\theta \rangle_{\mathrm T-} \right] \label{eq:r3}\\
+r_{\mathrm B-}(\Ebeta) &=& \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_B \, N_- \left[1 + \bFierz \frac{mc^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_-| \langle \cos\theta \rangle_{\mathrm B-} \right],\label{eq:r4}
+%\end{align}
+%\end{subequations}
+\eea
+where $\varepsilon_{\mathrm T / \mathrm B}(\Ebeta)$ are the (top/bottom) detector efficiencies, $\Omega_{\mathrm T / \mathrm B}$ are the fractional solid angles for the (top/bottom) detector from the trap position, $N_{+/-}$ are the number of atoms trapped in each (+/-) polarization state, and $|\vec{P}_{+/-}|$ are the magnitudes of the polarization along the detector axis for each polarization state.  $\langle \cos\theta \rangle_{\mathrm T/ \mathrm B, +/-} $ is the average of $\cos\theta$ for \emph{observed} outgoing betas, for each detector and polarization state combination.  This latter term is approximately $\pm 1$, and contains important sign information.  For a pointlike trap in the center of the chamber, 103.484 mm from either (DSSSD) detector, each of which is taken to be circular with a radius of 15.5 mm, we find that $\langle | \cos\theta | \rangle_{\mathrm T/ \mathrm B, +/-} \approx 0.994484$, and is the same for all four cases (or for $r=15.0$\,mm, we find that $\langle | \cos\theta | \rangle_{\mathrm T/ \mathrm B, +/-} \approx 0.994829$). Note that a horizontally displaced trap will decrease the magnitude of $\langle | \cos\theta | \rangle $, but all four values will remain equal to one another.  In the case of a vertically displaced trap, these four values will no longer all be equal, however it will still be the case that $\langle | \cos\theta | \rangle_{\mathrm T +} = \langle | \cos\theta | \rangle_{\mathrm T -}$, and $\langle | \cos\theta | \rangle_{\mathrm B+} = \langle | \cos\theta | \rangle_{\mathrm B -}$.
+
+For simplicity, we will henceforth assume that the trap is vertically centered, and take $|\vec{P}_+| = |\vec{P}_-|$.  We also define the following:
+\bea
+A^\prime &=& A^\prime(\Ebeta) \;\; \equiv \;\; \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \\
+b^\prime &=& b^\prime(\Ebeta) \;\; \equiv \;\; \bFierz \frac{mc^2}{\Ebeta},
+\eea
+and choose a coordinate system in which the + polarization state is, in some sense, `pointing up' toward the top detector, such that
+\bea
+\langle \cos\theta \rangle_{\mathrm T +} &\approx& +1 \\
+\langle \cos\theta \rangle_{\mathrm B +} &\approx& -1 \\
+\langle \cos\theta \rangle_{\mathrm T -} &\approx& -1 \\
+\langle \cos\theta \rangle_{\mathrm B -} &\approx& +1.
+\eea
+This allows us to rewrite the four count rates in simplified notation, as: 
+\bea
+r_{\mathrm T+} &=& \varepsilon_{\mathrm T}N_+ \left(1 + b^\prime  + A^\prime \right) \\
+r_{\mathrm B+} &=& \varepsilon_{\mathrm B}N_+ \left(1 + b^\prime  - A^\prime \right) \\
+r_{\mathrm T-} &=& \varepsilon_{\mathrm T}N_- \left(1 + b^\prime  - A^\prime \right) \\
+r_{\mathrm B-} &=& \varepsilon_{\mathrm B}N_- \left(1 + b^\prime  + A^\prime \right).
+\eea
+We further define the `superratio', $s$, to be:
+\bea
+s = \frac{ r_{\mathrm T-}\, r_{\mathrm B+} }{ r_{\mathrm T+}\, r_{\mathrm B-} }.
+\eea
+We are now in a position to define the `superratio asymmetry', $A_{\mathrm{super}}$, as
+\bea
+A_{\mathrm{super}} &=& A_{\mathrm{super}}(\Ebeta) \;\; \equiv \;\; \frac{1-\sqrt{s}}{1+\sqrt{s}}.
+\eea
+This is explicitly an experimental quantity that is measured directly by the above combination of count rates.  
+
+
+Writing the superratio out explicitly in terms of $A^\prime$ and $b^\prime$, factors of $\varepsilon_{\mathrm T / \mathrm B}$ and $N_{+/-}$ cancel out entirely, and we find that
+\bea
+s &=& \frac{(1+b^\prime - A^\prime)^2}{(1+b^\prime+A^\prime)^2 }.
+\eea
+From here it is immediately clear that in absence of other corrections (\emph{e.g.} backscattering, unpolarized background, ...), if $b^\prime = 0$ it follows that $A_{\mathrm{super}} = A^\prime$.  In the case where $b^\prime \neq 0$, we find that 
+\bea
+A_{\mathrm{super}} &=& \frac{A^\prime}{1+b^\prime} \\
+&\approx&  A^\prime \, (1 - b^\prime + {b^{\prime}}^2),
+\eea
+where we have utilized the assumption that $b^\prime \ll 1$.
+Thus, 
+\bea
+A_{\mathrm{super}} &\approx& \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle - \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \left( \bFierz \frac{mc^2}{\Ebeta}\right) + \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \left(\bFierz \frac{mc^2}{\Ebeta}\right)^{\!\!2}.
+\eea
+
+%%% -- %%% -- %%% -- %%% -- %%% -- %%% -- %%% -- %%%
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,145 @@
+\chapter[Holstein/JTW Comparison Confusion]{Holstein/JTW Comparison Confusion}
+
+Ben at pg 17(30) claims the relation between JTW and Holstein for $\Abeta$ is:
+
+\begin{equation}
+\Abeta = \frac{f_4(E)+ \frac{1}{3}f_7(E)}{f_1(E)}
+\end{equation}
+
+See, it's counterintuitive, because I would have guessed that it would be just
+
+\begin{equation}
+A_\beta = \frac{f_4(E)}{f_1(E)}
+\end{equation}
+
+...But it's not.  That extra $f_7$ term is there, being weird.  In Holstein (51), it's all like, 
+\begin{equation}
+d^5\Gamma = (...) + (...)*\Lambda_1 (\hat{n} \cdot \hat{k}) (\frac{\vec{p}}{E}\cdot \hat{k} )\,f_7(E), 
+\end{equation}
+
+and that just doesn't look like $\Abeta$.
+
+So, maybe there's some magic that happens when you integrate it and it turns into (52). 
+From (52), I would (naively??) think that:
+
+\begin{equation}
+A_\beta = \frac{F_1(E)}{F_0(E)}
+\end{equation}
+
+Is it even true?!?  Let's see what Holstein has to say...
+
+In general, 
+\begin{eqnarray}
+f_i(E) &=& F_i(E, J, J^\prime, 0) \\
+F_i(E) &=& H_i(E, J, J^\prime, 0)
+\end{eqnarray}
+
+So here specifically, we have: 
+\bea
+	F_0(E) = H_0(E, u, v, s) &=& F_1(E, u, v, s) \\ 
+	F_1(E) = H_1(E, u, v, s) &=& F_4(E, u, v, s) + \frac{1}{3}F_7(E, u, v, s) \\
+                             &=& f_4(E) + \frac{1}{3}f_7(E)
+\eea
+
+So I guess whatever the fuck Ben did to get his result checks out, and my naive supposition was correct.  But now how do I translate that into JTW for anything else?!  
+
+JTW just straight-up has *nothing* that corresponds to the $f_7$ term in Holstein.  The integral that puts $f_7$ into $A_\beta$ has simply *not been done* at the point where JTW writes down their equation.
+
+So, okay, let's take a look at how the dominant terms in $f_4$, $f_1$, and $f_7$ scale.  From Holstein (pg 807):
+\bea
+	f_1(E) & \approx & a_1^2 + c_1^2 \\
+	f_4(E) & \approx & \mathrm{(const)}*2 a_1 c_1 +\mathrm{(const)}c_1^2 \\
+	f_7(E) & \approx & \mathrm{(const)}*a_1 c_1 \frac{E0}{M} +\mathrm{(const)}a_1 c_1 \frac{E}{M} + \mathrm{(const)}c_1^2 \frac{E0}{2M} + \mathrm{(const)}c_1^2 \frac{E}{2M}
+\eea
+
+OK, so I think $f_7$ wouldn't be included in JTW anyway, because it's too high order in $E/M$.  (Is there really nothing in $f_7$ that's not multiplied by at least one factor of $1/M$ ?? .... yep, nothing.)
+
+So here's what Coulomb-JTW says (set $C_S=C_S^\prime=C_T=C_T^\prime=0$, and require that $C_A=C_A^\prime$ and $C_V=C_V^\prime$ are real):
+
+\begin{eqnarray}
+\xi         &=& |M_F|^2( 2 C_V^2) + |M_{GT}|^2(2 C_A^2) \\
+A_\beta \xi &=& |M_{GT}|^2 \frac{1}{J+1} \left[ +2 C_A^2 + M_F M_{GT} \left(\frac{J}{J+1}\right)^{1/2} *(-2 C_V C_A) \right]
+\end{eqnarray}
+
+Indeed, there are no E/M terms.  So we agree with ourselves here.  That's nice.  
+But actually, we need to figure out how to convert *all* of the JTW letters into Holstein notation.  Not just $\Abeta$.  Of particular importance is anything with a *linear* dependence on $C_T$ (or $C_S$).  That includes $bFierz$, for which there is no Holstein equivalent, but also:
+
+\begin{itemize}
+	\item Real parts of $\bFierz$
+	\item Imaginary parts of $\abetanu$
+	\item Imaginary parts of $\calign$
+	\item Imaginary parts of $\Abeta$
+	\item Real parts of $\Bnu$
+	\item Real parts of $\DTR$
+\end{itemize}
+
+...which is actually all of the things.  All of them.  So, I claim these are the relationships:
+
+\begin{eqnarray}
+\xi          &=& f_1(E) \;\;\;\;\;\; \;\;\;\;\;\; \;\;\;\; (?) \\
+a_{\beta\nu} &=& f_2(E) \: / \: f_1(E) \\
+\frac{\langle\vec{J}\rangle}{J} \cdot \frac{\vec{p}}{E} \,\, A_\beta 
+  &=& \Lambda_1 \hat{n}\cdot \frac{\vec{p}}{E} \, f_4(E) \:/\: f_1(E) \\
+\frac{\langle\vec{J}\rangle}{J} \cdot \frac{\vec{p}_\nu}{E_\nu} B_\nu  
+  &=& \Lambda_1 \hat{n} \cdot \vec{k} \;\;\, f_6(E) \:/\: f_1(E) \\
+\frac{\langle\vec{J}\rangle}{J} \cdot \frac{\left( \vec{p} \times \vec{p}_\nu \right)}{E_{} E_\nu} D_{\mathrm{TR}} 
+  &=& \Lambda_1 \hat{n} \cdot ( \frac{\vec{p}}{E} \times \hat{k} \,) \;\; f_8(E) \:/\: f_1(E) \\
+\left[ \frac{J(J+1) - 3\langle (\vec{J}\cdot\hat{j})^2 \rangle}{J(2J-1)} \right] \!\!\!
+\left[\frac{1}{3} \frac{\vec{p}\cdot\vec{p}_\nu }{E_{} E_\nu} - \frac{ (\vec{p}\cdot\hat{j}) (\vec{p}_\nu \cdot\hat{j} ) }{E_{} E_\nu} \right]c_{\mathrm{align}} 
+  &=& \Lambda_2 \! \left[(\hat{n}\cdot\frac{\vec{p}}{E})(\hat{n}\cdot\hat{k})  - \frac{1}{3} (\frac{\vec{p}}{E}\cdot\hat{k} \,)\right] \; f_{12}(E) \:/\: f_1(E)
+\end{eqnarray}
+
+Other Holstein terms in (51) have no JTW equivalent, either because JTW didn't include recoil-order corrections, or because JTW didn't bother with higher multipole moments.  These Holstein-specific spectral functions are not used in JTW:
+
+\begin{itemize}
+	\item $f_{3}(E)$  (dipole)
+	\item $f_{5}(E)$  (dipole)
+	\item $f_{7}(E)$  (dipole)
+	\item $f_{9}(E)$  (dipole)
+	\item $f_{10}(E)$ (quadrupole)
+	\item $f_{11}(E)$ (quadrupole)
+	\item $f_{13}(E)$ (quadrupole)
+	\item $f_{1}(E)$  (quadrupole, used elsewhere)
+	\item $f_{16}(E)$ (quadrupole)
+	\item $f_{17}(E)$ (quadrupole)
+	\item Octopoles:  $f_{18}$, $f_{19}$, $f_{20}$, $f_{21}$, $f_{22}$, $f_{23}$, $f_{24}$
+	\item 16-poles:   $f_{25}$, $f_{26}$, $f_{27}$.
+\end{itemize}
+
+OK, so what needs to happen now is for me to convert the JTW alphabet into *other* Holstein notation.  Since I know how they scale with the $f_i(E)$'s, let's see if we can convert those specific $f_i(E)$'s into any of the Holstein notation that is going into my code -- ie, the $F_i(E)$'s.  In particular, we'll want $f_1(E)$, $f_2(E)$, $f_4(E)$, $f_6(E)$, $f_8(E)$, $f_12(E)$.  This will actually have the pleasant side-effect of telling us how to fucking do that goddamn neutrino momentum integral in JTW.  I think.  So, from Holstein:
+
+\begin{itemize}
+	\item $f_1(E) \; = \; F_1\;(E, u, v, s) \; = \; H_0(E, u, v, s) = F_0(E) $
+	\item $f_2(E) \; = \; F_2\;(E, u, v, s) \; = \; ? $
+	\item $f_4(E) \; = \; F_4\;(E, u, v, s) \; = \; ? $
+	\item $f_6(E) \; = \; F_6\;(E, u, v, s) \; = \; ? $
+	\item $f_8(E) \; = \; F_8\;(E, u, v, s) \; = \; ? $
+	\item $f_{12}(E) = \; F_{12}(E, u, v, s)\; = \; ? $
+\end{itemize}
+
+...which, let's be honest, doesn't really help.  Let's go the other direction, then.
+
+\begin{itemize}
+	\item $ F_0(E) = H_0(E, u, v, s) = F_1(E, u, v, s)    = f_1(E) $    as before, but also:
+	\item $ F_1(E) = H_1(E, u, v, s) = F_4(E, u, v, s) + \frac{1}{3} F_7(E, u, v, s)  = f_4(E) + \frac{1}{3} f_7(E) $
+	\item $ F_2(E) = H_2(E, u, v, s) = F_{10}(E, u, v, s) + \frac{1}{3} F_{13}(E, u, v, s) = f_{10}(E) + \frac{1}{3} f_{13}(E) $ 
+	\item $ F_3(E) = H_3(E, u, v, s) = F_{18}(E, u, v, s) = f_{18}(E)$ 
+\end{itemize}
+
+So, okay, I can write *my* PDF in terms of only Holstein's $ f_1(E)$,  $f_4(E)$,  $f_7(E)$,  $f_{10}(E)$,  $f_{13}(E)$,  $f_{18}(E)$.  I can write JTW's PDF in terms of only Holstein's $f_1(E)$,  $f_2(E)$,  $f_4(E)$,  $f_6(E)$,  $f_8(E)$,  $f_{12}(E)$.  Those ... aren't the same thing.  Like, at all.  If I integrate those, do they come out to be the same things?  Somehow?  
+
+OK.  I can separate some terms out into what they *should* correspond to based on their multipole dependence...  Roughly speaking, 
+
+\begin{eqnarray}
+F_0(E) &\leftrightarrow& f_1(E) \;\;\; \mathrm{    (obviously)} \\
+F_1(E) &\leftrightarrow& f_4(E), \; f_5(E), \; f_6(E), \; f_7(E), \; f_8(E), \; f_9(E) \\
+F_2(E) &\leftrightarrow& f_{10}(E), \; f_{11}(E), \; f_{12}(E), \; f_{13}(E), \; f_1(E), \; f_{16}(E) \\ 
+F_3(E) &\leftrightarrow& \; \textrm{...who even cares?}
+\end{eqnarray}
+
+
+\begin{itemize}
+	\item * Check: in Holstein, are there simple relationships between those things?  
+	\item * Check: if I do the integrals of the momentum-thingies multiplying those specific $f_i(E)$'s in Eq. (51) do they turn out the way I expect?  ie, do I recover the corresponding terms in Eq. (52)? 
+\end{itemize}
+

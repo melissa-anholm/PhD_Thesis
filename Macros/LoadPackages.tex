@@ -1,6 +1,5 @@
 % !TEX root = ../thesis_main.tex
 
-
 % Misc. Formatting
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
@@ -8,13 +7,18 @@
 \onehalfspacing
 %\reversemarginpar
 
+
 % Colors, defined:
 \input{ColorNamesMacros.tex}
 
 
 % Mathematics support
 \usepackage{amsmath}
+\usepackage{bm}  % bold math font
 \usepackage{isotope}
+\newcommand{\potassium}{\isotope[37]{K}}
+\newcommand{\argon}{\isotope[37]{Ar}}
+
 
 % Bibliography packages
 \usepackage[numbers,sort&compress]{natbib}
@@ -28,25 +32,36 @@
 \makeatother
 
 % List of ToDos:
-\usepackage[colorinlistoftodos,textwidth=1.10in,textsize=footnotesize]{todonotes}
+\ifthenelse{\boolean{isdraft}}
+{
+	\usepackage[colorinlistoftodos,textwidth=1.30in,textsize=footnotesize]{todonotes}
+}
+{
+	\usepackage[colorinlistoftodos,textwidth=1.30in,textsize=footnotesize,disable]{todonotes}
+}
 % Because todonotes conflicts slightly with the various ams packages.
 \makeatletter
 \providecommand\@dotsep{5}
-\renewcommand{\listoftodos}[1][\@todonotes@todolistname]{\@starttoc{tdo}{#1}}
+%%\renewcommand{\listoftodos}[1][\@todonotes@todolistname]{\@starttoc{tdo}{#1}}
 \makeatother
+%\listoftodos\relax  % has to go after begin document.
 
-%\reversemarginpar
-%\marginpar[left]{right}
-% Some shortcut ToDo Macros:
-%\newcommand{\todoinline}[2][]{\todo[inline, color=orange, #1]{#2}}
-\newcommand{\todoinline}[2][]{\todo[inline, color=#1]{#2}}
 
-\newcommand{\margintodo}[2][]  % small note in the margin.
-	{\todo[caption={#2}, size=\scriptsize, color=orange, #1]{\renewcommand{\baselinestretch}{1.0}\selectfont#2\par}}  % default spacing seems to be like 1.2.  Change to 1.0.
+%% Some shortcut ToDo Macros:
+\newcommand{\todoinline}[2][]{\todo[inline, color=orange, #1]{#2}}  % Can override color.
+%\newcommand{\todoinline}[2][]{\todo[inline, color=#1]{#2}}
 %
+\newcommand{\margintodo}[2][]  % small note in the margin.
+	{\todo[caption={#2}, size=\scriptsize, color=orange, #1]{\renewcommand{\baselinestretch}{1.0}\selectfont#2\par}}  % default spacing seems to be like 1.2.  Change to 1.0.  This also allows you to override the color selection.
+
+\newcommand{\note}[2][]{\todo[inline, color=orange, #1]{#2}}  % Can override color.
+\newcommand{\aside}[2][]  % small note in the margin.
+	{\todo[caption={#2}, size=\scriptsize, color=orange, #1]{\renewcommand{\baselinestretch}{1.0}\selectfont#2\par}}  % default spacing seems to be like 1.2.  Change to 1.0.  This also allows you to override the color selection.
+
+
+
 %\renewcommand{\todo}{\todoinline}
 %\renewcommand{\todo[margin]}{\margintodo}
-
 %\usepackage{marginnote}
 %\newcommand{\lefttodo}[2][]{{%
 % \let\marginpar\marginnote

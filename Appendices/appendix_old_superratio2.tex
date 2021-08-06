@@ -1,0 +1,284 @@
+%%% -- %%% -- %%% -- %%% -- %%% -- %%% -- %%% -- %%%
+\chapter[Super Corrections]{Some Corrections to the Superratio Stuff}
+We consider further modifications to the rates described in Eqs.~(\ref{eq:r1}-\ref{eq:r4}).  In particular, we consider the effect of %a background signal on the two detectors, 
+non-identical polarization magnitudes for the two polarization states and a trap displaced from the center.
+
+We define for the polarization states:
+\bea
+P &\equiv& \frac{1}{2}\left(|\vec{P}_+| + |\vec{P}_+|\right) \\
+\Delta P &\equiv& \frac{1}{2} \left(|\vec{P}_+| - |\vec{P}_+|\right)
+\eea
+and immediately find that
+\bea
+|\vec{P}_+| &=& P + \Delta P \\
+|\vec{P}_-| &=& P - \Delta P.
+\eea
+Further, we also define:
+\bea
+\langle |\cos\theta | \rangle_T &\equiv& \langle |\cos\theta | \rangle_{\mathrm T+} \, = \, \langle |\cos\theta | \rangle_{\mathrm T-} \\
+\langle |\cos\theta | \rangle_B &\equiv& \langle |\cos\theta | \rangle_{\mathrm B+} \, = \, \langle |\cos\theta | \rangle_{\mathrm B-},
+\eea
+%which is still true for a trap displaced from the center in any direction.  
+and
+\bea
+\langle |\cos\theta | \rangle &\equiv& \frac{1}{2} \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle_T + \langle |\cos\theta | \rangle_B \, \right)\\
+\Delta \langle |\cos\theta | \rangle &\equiv& \frac{1}{2} \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle_T - \langle |\cos\theta | \rangle_B \, \right).
+\eea
+It immediately follows that 
+\bea
+\langle |\cos\theta | \rangle_{\mathrm T} \, &=&\, \langle |\cos\theta | \rangle \, + \, \Delta \langle |\cos\theta | \rangle  \\
+\langle |\cos\theta | \rangle_{\mathrm B} \, &=&\, \langle |\cos\theta | \rangle \, - \, \Delta \langle |\cos\theta | \rangle.
+\eea
+%For simplicity, we also will use
+%\bea
+%A^{\prime\prime} = A_\beta \, \frac{v}{c}.
+%\eea
+
+With this new set of variables defined, we can re-write Eqs.~(\ref{eq:r1}-\ref{eq:r4}) as
+\bea
+r_{\mathrm T+}(\Ebeta) &=& \varepsilon_{\mathrm T}(\Ebeta)\, N_+ \left[1 + b^\prime  + (A_\beta \frac{v}{c}) (P + \Delta P) \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle + \Delta \langle | \cos\theta | \rangle \, \right) \right] \\
+r_{\mathrm B+}(\Ebeta) &=& \varepsilon_{\mathrm B}(\Ebeta)\, N_+ \left[1 + b^\prime  - (A_\beta \frac{v}{c}) (P + \Delta P) \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle - \Delta \langle | \cos\theta | \rangle \, \right) \right] \\
+r_{\mathrm T-}(\Ebeta) &=& \varepsilon_{\mathrm T}(\Ebeta)\, N_- \left[1 + b^\prime  - (A_\beta \frac{v}{c}) (P - \Delta P) \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle + \Delta \langle | \cos\theta | \rangle \, \right) \right] \\
+r_{\mathrm B-}(\Ebeta) &=& \varepsilon_{\mathrm B}(\Ebeta)\, N_- \left[1 + b^\prime  + (A_\beta \frac{v}{c}) (P - \Delta P) \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle - \Delta \langle | \cos\theta | \rangle \, \right) \right], 
+\eea
+and the superratio becomes
+\bea
+s &=& \frac{ \left( \phantom{\frac{2_2}{2}}\!\!\!\! 
+1+b^\prime - (A_\beta \frac{v}{c})(P - \Delta P)\left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle + \Delta \langle | \cos\theta | \rangle \, \right) \right) 
+\left( \phantom{\frac{2_2}{2}}\!\!\!\! 
+1+b^\prime - (A_\beta \frac{v}{c})(P + \Delta P)\left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle - \Delta \langle | \cos\theta | \rangle \, \right) \right) 
+}{ 
+\left( \phantom{\frac{2_2}{2}}\!\!\!\!
+1+b^\prime + (A_\beta \frac{v}{c})(P + \Delta P)\left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle + \Delta \langle | \cos\theta | \rangle \, \right) \right) 
+\left( \phantom{\frac{2_2}{2}}\!\!\!\! 
+1+b^\prime + (A_\beta \frac{v}{c})(P - \Delta P)\left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle - \Delta \langle | \cos\theta | \rangle \, \right) \right)},
+\nonumber \\
+\eea
+where $\varepsilon_{\mathrm T / \mathrm B}$ and $N_{+/-}$ still completely cancel out.  After a bit of algebra, this simplifies to:
+\bea
+s &=& \frac{ 
+%\left[ 
+\left(\phantom{2_2^2}\!\!\!\! 
+1+b^\prime - A^\prime + A_\beta \frac{v}{c} \Delta P \, \Delta \langle | \cos\theta | \rangle 
+\right)^2 
+- 
+(A_\beta \frac{v}{c})^2 \left(\phantom{2_2^2}\!\!\!\!
+\Delta P \langle | \cos\theta | \rangle - P \Delta\langle | \cos\theta |\rangle
+\right)^2 
+%\right] 
+}{ 
+%\left[ 
+\left( \phantom{2_2^2}\!\!\!\! 
+1+b^\prime + A^\prime + A_\beta \frac{v}{c} \Delta P \, \Delta \langle | \cos\theta | \rangle 
+\right)^2 
+- 
+(A_\beta \frac{v}{c})^2 \left(\phantom{2_2^2}\!\!\!\! 
+\Delta P \langle | \cos\theta | \rangle + P \Delta\langle | \cos\theta |\rangle
+\right)^2 
+%\right] 
+}, \label{eq:simplifiedcorrectedsuperratio}
+\eea
+Note that in the superratio $\Delta P$ and $\Delta \langle |\cos\theta|\rangle$ have cancelled out to first order, and the remaining dependencies are quadratic only.  Eq.~(\ref{eq:simplifiedcorrectedsuperratio}) is exact, but still a huge enough expression to be pretty unweildy to work with.  Let's introduce some shorthand notation to make this less painful:  
+\bea
+A^{\prime\prime} &:=& A_\beta \frac{v}{c} \\ 
+c &:=& \langle | \cos\theta | \rangle \\
+\Delta c &:=& \Delta \langle | \cos\theta | \rangle \\ 
+%r_0^+ &:=& 1+b^\prime + A^\prime \\ 
+%r_0^- &:=& 1+b^\prime - A^\prime \\
+%r_0 &:=& 1+b^\prime \\
+r^\prime &:=& 1+b^\prime + A_\beta \frac{v}{c} \, \Delta P \, \Delta \langle | \cos\theta | \rangle
+\eea
+In this notation, we find that
+\bea
+s &=& \frac{ 
+\left(\vphantom{2_2^2} 
+%r_0 - A^\prime + A^{\prime\prime} \, \Delta P \, \Delta c
+r^\prime - A^\prime
+\right)^2 
+- 
+(A^{\prime\prime})^2 \left( \vphantom{2_2^2}
+\Delta P \, c - P \, \Delta c
+\right)^2 
+}{ 
+\left( \vphantom{2_2^2}
+%r_0 + A^\prime + A^{\prime\prime} \, \Delta P \, \Delta c 
+r^\prime + A^\prime 
+\right)^2 
+- 
+(A^{\prime\prime})^2 \left( \vphantom{2_2^2} 
+\Delta P \,c + P \, \Delta c
+\right)^2 
+},
+\eea
+which hurts a lot less to look at.  Then, the superratio asymmetry is
+\bea
+A_{\mathrm{super}} &=& \frac{
+1 - \sqrt{ 
+\frac{ 
+\left(\vphantom{2_2^2} 
+%r_0 - A^\prime + A^{\prime\prime} \, \Delta P \, \Delta c
+r^\prime - A^\prime
+\right)^2 
+- 
+(A^{\prime\prime})^2 \left( \vphantom{2_2^2}
+\Delta P \, c - P \, \Delta c
+\right)^2 
+}{ 
+\left( \vphantom{2_2^2}
+%r_0 + A^\prime + A^{\prime\prime} \, \Delta P \, \Delta c 
+r^\prime + A^\prime 
+\right)^2 
+- 
+(A^{\prime\prime})^2 \left( \vphantom{2_2^2} 
+\Delta P \,c + P \, \Delta c
+\right)^2 
+}
+}
+}{
+1 + \sqrt{ 
+\frac{ 
+\left(\vphantom{2_2^2} 
+r^\prime - A^\prime
+\right)^2 
+- 
+(A^{\prime\prime})^2 \left( \vphantom{2_2^2}
+\Delta P \, c - P \, \Delta c
+\right)^2 
+}{ 
+\left( \vphantom{2_2^2}
+r^\prime + A^\prime 
+\right)^2 
+- 
+(A^{\prime\prime})^2 \left( \vphantom{2_2^2} 
+\Delta P \,c + P \, \Delta c
+\right)^2 
+}
+}
+} \\
+&=&
+\frac{ \left[
+\sqrt{\left( \vphantom{2_2^2}
+r^\prime + A^\prime 
+\right)^2 
+- 
+(A^{\prime\prime})^2 \left( \vphantom{2_2^2} 
+\Delta P \,c + P \, \Delta c
+\right)^2 
+} - \sqrt{\left( \vphantom{2_2^2} 
+r^\prime - A^\prime \right)^2 
+- 
+(A^{\prime\prime})^2 \left( \vphantom{2_2^2}
+\Delta P \, c - P \, \Delta c \right)^2} \right]^2
+}{
+%\sqrt{ 
+\left[ \left( \vphantom{2_2^2} 
+r^\prime + A^\prime \right)^2 
+- 
+(A^{\prime\prime})^2 \left( \vphantom{2_2^2} 
+\Delta P \,c + P \, \Delta c \right)^2 \right]
+%}
+ - 
+%\sqrt{ 
+\left[ \left(\vphantom{2_2^2} 
+r^\prime - A^\prime \right)^2 
+- 
+(A^{\prime\prime})^2 \left( \vphantom{2_2^2}
+\Delta P \, c - P \, \Delta c
+\right)^2 \right] 
+%}
+} \\
+&=&
+\frac{%\mathrm{numerator}
+\left(
+\begin{array}{@{}c@{}}
+2\left[  \vphantom{\sqrt{2}_2^2}
+( r^\prime )^2 + (A^\prime)^2 - (A^{\prime\prime})^2\left( (P\,\Delta c)^2 + (\Delta P \, c)^2 \right)
+\right] 
+\\
+- 2\left[ \left( \vphantom{2_2^2}
+r^\prime + A^\prime 
+\right)^2 
+- 
+(A^{\prime\prime})^2 \left( \vphantom{2_2^2} 
+\Delta P \,c + P \, \Delta c
+\right)^2 \right]^{1/2}
+\left[ \left( \vphantom{2_2^2} 
+r^\prime - A^\prime \right)^2 
+- 
+(A^{\prime\prime})^2 \left( \vphantom{2_2^2}
+\Delta P \, c - P \, \Delta c \right)^2 \right]^{1/2}
+\end{array} 
+\right)
+}{
+4\left[ \vphantom{\sqrt{2}_2^2}
+( r^\prime \, A^\prime )  - (A^{\prime\prime})^2 \left( P \, c \, \Delta P \, \Delta c \right) 
+\right]
+}
+\eea
+
+
+%Then (multiplying $\Asuper$ by factors of one), 
+%\bea
+%A_{\mathrm{super}} &=& \frac{ \left(\phantom{\frac{1^1}{1^1}}\!\!\!\!\! 
+%\begin{array}{@{}c@{}}
+%\phantom{-} \left[ \left( \phantom{2_2^2}\!\!\!\! 
+%1+b^\prime + A^\prime + A_\beta \frac{v}{c} \Delta P \, \Delta \langle | \cos\theta | \rangle 
+%\right)^2 
+% - (A_\beta \frac{v}{c})^2 \left(\phantom{2_2^2}\!\!\!\! 
+%\Delta P \langle | \cos\theta | \rangle + P \Delta\langle | \cos\theta |\rangle
+%\right)^2  \right]^{1/2}  
+%\\
+%- \left[ \left(\phantom{2_2^2}\!\!\!\! 
+%1+b^\prime - A^\prime + A_\beta \frac{v}{c} \Delta P \, \Delta \langle | \cos\theta | \rangle 
+%\right)^2 
+%- 
+%(A_\beta \frac{v}{c})^2 \left(\phantom{2_2^2}\!\!\!\!
+%\Delta P \langle | \cos\theta | \rangle - P \Delta\langle | \cos\theta |\rangle
+%\right)^2 
+% \right]^{1/2} 
+%\end{array}
+%\right)^2 
+%}{ 
+%\left( \begin{array}{@{}c@{}} \phantom{+} 
+%\left[  \left( \phantom{2_2^2}\!\!\!\! 
+%1+b^\prime + A^\prime + A_\beta \frac{v}{c} \Delta P \, \Delta \langle | \cos\theta | \rangle 
+%\right)^2 
+% - (A_\beta \frac{v}{c})^2 \left(\phantom{2_2^2}\!\!\!\! 
+%\Delta P \langle | \cos\theta | \rangle + P \Delta\langle | \cos\theta |\rangle
+%\right)^2   \right] 
+%\;
+%\\[0.6em]
+%+ \left[ \left(\phantom{2_2^2}\!\!\!\! 
+%1+b^\prime - A^\prime + A_\beta \frac{v}{c} \Delta P \, \Delta \langle | \cos\theta | \rangle 
+%\right)^2 
+%- 
+%(A_\beta \frac{v}{c})^2 \left(\phantom{2_2^2}\!\!\!\!
+%\Delta P \langle | \cos\theta | \rangle - P \Delta\langle | \cos\theta |\rangle
+%\right)^2 
+%\right] \;
+%\end{array}
+%\right)
+%}, 
+%\nonumber \\
+%\eea
+%which is clearly way too huge for me to have either written or typed out without making a mistake somewhere.  Still, the only thing to be done at this point is to expand it all out and make the expression even larger.  
+
+
+
+%\bea
+%r_{\mathrm T+}(\Ebeta) &=& \varepsilon_{\mathrm T}(\Ebeta)\, N_+ \left[1 + \bFierz \frac{mc^2}{\Ebeta}  + \Abeta \, \frac{v}{c} (P + \Delta P) \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle  +  \Delta \langle |\cos\theta | \rangle \, \right) \right]  + R_{\mathrm T}(\Ebeta) \\
+%r_{\mathrm B+}(\Ebeta) &=& \varepsilon_{\mathrm B}(\Ebeta)\, N_+ \left[1 + \bFierz \frac{mc^2}{\Ebeta}  - \Abeta \, \frac{v}{c} (P + \Delta P) \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle - \Delta \langle |\cos\theta | \rangle \, \right) \right] + R_{\mathrm B}(\Ebeta)  \\
+%r_{\mathrm T-}(\Ebeta) &=& \varepsilon_{\mathrm T}(\Ebeta)\, N_- \left[1 + \bFierz \frac{mc^2}{\Ebeta}  - \Abeta \, \frac{v}{c} (P - \Delta P) \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle +  \Delta \langle |\cos\theta | \rangle \, \right) \right] + R_{\mathrm T}(\Ebeta)  \\
+%r_{\mathrm B-}(\Ebeta) &=& \varepsilon_{\mathrm B}(\Ebeta)\, N_- \left[1 + \bFierz \frac{mc^2}{\Ebeta}  + \Abeta \, \frac{v}{c} (P - \Delta P) \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle - \Delta \langle |\cos\theta | \rangle \, \right) \right] + R_{\mathrm B}(\Ebeta), 
+%\eea
+%where we have also introduced the additional energy-dependent background rates $R_{\mathrm T / \mathrm B}$, which are unique to each detector.
+
+
+
+
+
+
+
+
+
+

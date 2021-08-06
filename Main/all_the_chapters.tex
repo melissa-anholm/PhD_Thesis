@@ -44,70 +44,8 @@
 	%\\*
 	To conduct a precision search for scalar and tensor couplings, it is necessary to combine the Holstein and JTW models into a single cohesive probability distribution.  
 
-
 %%%% --- * --- %%%%	
-\clearpage
-%\part{Experimental Overview}
-\chapter{The Experimental Setup}
-\label{setup_chapter}
-
-\section{Double MOT System to Supply Atoms}
-	%\\*
-	Mostly, 
-	\margintodo{A thing that's worth noting is that (I think!) recoil-order corrections have been implicitly excluded at some point here.  ...Is this even true??}
-	this requires a diagram.  We take ions supplied by the ISAC beamline, neutralize them and trap them in the first MOT, then periodically transfer them to a second MOT.  Detectors are 
-%	\todo{A thing that's worth noting is that (I think!) recoil-order corrections have been implicitly excluded at some point here.  ...Is this even true??}
-	positioned about the second MOT for data 
-%	\lefttodo{A thing that's worth noting is that (I think!) recoil-order corrections have been implicitly excluded at some point here.  ...Is this even true??}
-	collection.  This double MOT system eliminates a great deal of background.  
-%	\tinytodo{A thing that's worth noting is that recoil-order corrections have been implicitly excluded at some point here. (Here's a parenthetical.) ...Is this even true??  Also, what is even happening to the spacing here??!}
-	Also, here's some random equation that doesn't really go with the topic of this section:
-	\input{AnEquation}
-	Furthermore, here's a picture that doesn't really go with the topic of this section.
-%	\lefttodo{A thing that's worth noting is that (I think!) recoil-order corrections have been implicitly excluded at some point here.  ...Is this even true??}
-	collection.  This double MOT system 
-%	\margintodo{A thing that's worth noting is that (I think!) recoil-order corrections have been implicitly excluded at some point here.  ...Is this even true??}
-	eliminates a great deal of background.  
-	
-	
-\section{AC-MOT and Polarization Setup}
-	%\\*
-	In order to facilitate a measurement of $A_{\mathrm{\beta}}$, we went to great efforts to polarize the atom cloud, and quantify that polarization.  This resulted in a duty cycle in which the atoms were intermittently trapped in the AC-MOT, then optically pumped to polarize them.  While knowledge of the polarization is less critical in a measurement of $b_{\mathrm{Fierz}}$, we still use only the polarized portion of the duty cycle in order to minimize other systematic errors, such as the scintillator energy calibration and overall trap position.
-	\todoinline[inline,color=green]{Is that $\uparrow$ even true??  Because I'm really not sure it is.  Via Kofoedhansen, $(E_0 - E_e) = E_\nu$.  So there.}
-	\todoinline[lime]{Is that $\uparrow$ even true??  Because I'm really not sure it is.  Via Kofoedhansen, $(E_0 - E_e) = E_\nu$.  So there.}
-	Anyway, here's some figures.  Or possibly one figure.  Whatever.  Also, here's a reference to a figure.  See Fig.~\ref*{fig:themot}, or also its subfigures, eg Fig.~\ref{fig:acmot} and Fig.~\ref{fig:mot}.  Maybe I have to subref them?  Like, eg, Subfig.~\subref{fig:acmot} and Subfig.~\subref*{fig:mot}.  What if we try to subref everything?  Consider, eg, Fig.~\subref{fig:themot}.
-	\todo{Does this work?  It really should.}
-	
-
-	\begin{figure}[ht]
-	\centering
-	%	\begin{subfigure}[t]{0.237\textwidth}
-		\begin{subfigure}[t]{0.242\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{mot.png}
-		%	\label{fig:mot}
-			\caption{Components of a magneto-optical trap, including current-carrying magnetic field coils and counterpropagating circularly polarized laser beams.}
-			\label{fig:mot}
-		\end{subfigure}
-		\hfill
-	%	\begin{subfigure}[t]{0.726\textwidth}
-		\begin{subfigure}[t]{0.728\textwidth}
-			\centering
-			\includegraphics[width=\textwidth]{acmot.png}
-			\caption{One cycle of trapping with the AC-MOT, followed by optical pumping to spin-polarize the atoms.  After atoms are transferred into the science chamber, this cycle is repeated 500 times before the next transfer.  The magnetic dipole field is created by running parallel (rather than anti-parallel as is needed for the MOT) currents through the two coils.}
-			\label{fig:acmot}
-		\end{subfigure}
-		\caption{An alternating-current magneto-optical trap with a duty cycle optimized for producing polarized atoms}	
-		\label{fig:themot}
-	\end{figure}
-	
-	
-	
-%	\subsection{\textbf{Nuclear Setup}}
-\section{Measurement Geometry and Detectors}
-	%\\*
-	Needs several diagrams.  Back-to-back beta detectors along the polarization axis.  Back-to-back MCPs in an electric field to tag events from the trap, and to measure the trap position and polarization.  Hoops to produce the electric field.  Many laser ports to make the MOT functional, and for optical pumping.  Fancy mirror geometry to combine optical pumping and trapping light along the vertical axis.  Water-cooled (anti-)Helmholz coils within the chamber for the AC-MOT, fast switching to produce an optical pumping field.  
-%	\subsection{\textbf{All the Detectors}}
+\input{chapter_experimental}
 
 
 %%%% --- * --- %%%%	

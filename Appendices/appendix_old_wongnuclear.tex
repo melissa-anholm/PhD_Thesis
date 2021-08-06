@@ -1,0 +1,66 @@
+%\chapter[Nuclear]{Misc. Nuclear Physics}
+%\label{nuclear}
+%\section{Things.}
+
+\chapter[Misc. Nuclear Physics]{The Parity Operator:  Vectors and Axial Vectors and Pseudoscalars, oh my!}
+
+%\section{The Parity Operator:  Vectors and Axial Vectors and Pseudoscalars, oh my!}
+via Samuel Wong, 1990.  pg 212.
+
+\section{Scalars}
+A scalar does not change sign under the parity operation, because why even would it?
+
+\section{Vectors}
+Vectors, or ``polar vectors'' (V) are exactly what I think they are.  Position $\vec{r}$ and (linear) momentum $\vec{p}$ are examples.  The thing about these vectors is that they change sign (or, really, direction) under a parity transformation.  
+
+\section{Axial Vectors}
+Axial vectors (A) \emph{don't} change sign under a parity transformation.  An example is angular momentum, $\vec{L} = \vec{r} \times \vec{p}$.  This is where the "mirror" thing breaks down.  A mirror only is only a one-dimensional parity operator, so if you think of a thing with angular momentum and its reflection in a mirror, you imagine the mirror image with reversed angular momentum too.  But in reality, if you change the sign of \emph{all components} of $\vec{r}$ and simultaneously all components of $\vec{p}$, it's clear that the quantity $(\vec{r} \times \vec{p})$ remains unchanged.  Pauli spin matrices, $\vec{\mathbf{\sigma}}$, are axial vectors.
+
+\section{Pseudoscalars}
+Pseudoscalars, (P).  You'd think they were scalars, because they're just a number, but have to remember that you got them by taking the scalar product of a (polar) vector and an axial vector.  If you apply the parity operator to the quantity $P = (\vec{V} \cdot \vec{A})$, $\vec{V}$ changes sign (for all components) while $\vec{A}$ does not.  So the resultant ``scalar'' $P$ has to change sign too.  That's how you know that $P$ is really a pseudoscalar.
+
+\section{Tensors}
+...Yeah, Wong doesn't really get into that.  At least not here.
+
+\section{Comments on Parity Conservation}
+An interaction made from a mixture of scalars and pseudoscalars, or a mixture of vectors and axial vectors, does \emph{not} conserve parity.  
+
+For the strong and electromagnetic forces, parity \emph{is} strictly conserved.  Not so for the weak force!
+
+\section{Q-Values}
+The $Q$-value for a particular reaction is defined as the difference between the kinetic energies of the final and initial systems.
+\bea
+Q&=&T_f - T_i
+\eea
+
+\section{Helicity}
+Helicity, $h$, is a pseudoscalar.
+\bea
+h &=& \frac{\vec{\sigma} \cdot \vec{p}}{|\vec{p}|}
+\eea
+
+\section{Allowed Decays}
+via Krane:
+
+The beta and the neutrino can't carry away any \emph{orbital} angular momentum, because we pretend like everything starts at the origin and moves directly outwards.  You \emph{can} change the nuclear angular momentum in an allowed decay though, because your outgoing leptons have spin.  So the nuclear angular momentum changes by either 0 or 1 in an allowed decay.
+
+via severjins\_beck\_cuncic\_2006.pdf:
+
+Selection rules for an allowed transition are:
+\bea
+\Delta I = I_f - I_i = \{0, \pm 1\} \\ 
+\hat{\Pi}_i \, \hat{\Pi}_f = +1
+\eea
+Then, you divide the allowed transitions into singlet (anti-parallel lepton spins, $S=0$ -- a Fermi transition) and triplet states (parallel lepton spins, $S=1$ -- a Gamow-Teller transition).
+
+\section{Fermi Decays}
+The spins of the two leptons are antiparallel, so there's no change in nuclear angular momentum (assuming it's  an Allowed transition).  They're ``vector'' interactions.
+
+\section{Gamow-Teller Decays}
+The leptons have parallel spins, so (in the Allowed approximation) they change the projection of the nuclear angular momentum ($M_I$) by 1 unit.  The transition may or may not simultaneously change I by one unit.  These are ``axial vector'' interactions.  Note that $I=0 \rightarrow I=0$ transitions are not permitted as Gamow-Teller decays.
+
+\section{Conserved Vector Current Hypothesis}
+The CVC hypothesis asserts that the Fermi interactions of nucleons within a nucleus are \emph{not} changed by all the surrounding mesons.  (What?)
+
+
+

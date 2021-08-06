@@ -48,6 +48,11 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{um_thesis_style}[1999/03/19 version 0.3.0 JHU Thesis Class]
 
+
+% Make a boolean to define whether it's a draft and turn shit on and off.
+\usepackage{ifthen}
+
+
 %    ****************************************
 %    *               OPTIONS                *
 %    ****************************************
@@ -63,7 +68,17 @@
 \DeclareOption{twoside}{\@twosidetrue  \@mparswitchtrue}
 \DeclareOption{draft}{\renewcommand\@draftmark{1}}
 \DeclareOption{final}{\renewcommand\@draftmark{0}}
-\ExecuteOptions{11pt,oneside,final}
+\newcommand\@isadraft{}
+\DeclareOption{isdraft}{\renewcommand\@isadraft{1}}
+\DeclareOption{isfinal}{\renewcommand\@isadraft{0}}
+\ExecuteOptions{11pt,oneside,final,isfinal}
+\ProcessOptions
+
+\newboolean{isdraft}
+\setboolean{isdraft}{false}
+\ifnum \@isadraft = 1
+\setboolean{isdraft}{true}
+\fi
 
 
 % CHOOSING THE TYPE SIZE:
@@ -78,6 +93,7 @@
 % \@twosidefalse               %  Default is one-sided printing.
 \def\ds@twoside{\@twosidetrue  %  Defines twoside option.
            \@mparswitchtrue}   %    Marginpars go on outside of page.
+
 
 % This is a tricky solution to a tough bootstrapping problem.  The
 % "draft" option requires the definition of the \ssp macro.  However,

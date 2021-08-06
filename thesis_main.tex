@@ -5,12 +5,11 @@
 \makeatother
 
 % Document Class:
-\documentclass[12pt, oneside]{um_thesis_style}
-
+\documentclass[12pt, oneside, final, isdraft]{um_thesis_style}
+%\documentclass[12pt, oneside, final, isfinal]{um_thesis_style}
 
 % Some Macros!  (I made them myself.)
 \input{LoadPackages}
-
 
 % And now, the actual stuff in the document:
 \begin{document}
@@ -18,17 +17,12 @@
 % Front Matter, see fm.tex for details
 \input{frontmatter}
 
-\listoftodos
-
 % Content goes here
 %\input{intro}
 \input{all_the_chapters}
 
-
 \input{bibliography}
 
-
 \input{appendices}
-
 
 \end{document}
