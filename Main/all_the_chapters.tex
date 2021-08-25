@@ -12,13 +12,14 @@
 
 \section{Exotic Couplings}
 	In particular, we're interested in so-called scalar and tensor couplings within the nuclear weak force. Standard model beta decay involves only vector and axial-vector couplings.
-		
+%\missingfigure{Make a sketch of the structure of a trebuchet.}
+
 \section{Fierz Interference -- The Physical Signature}
 	The physical effects resulting from the presence of scalar or tensor couplings include a small perturbation to the energy spectrum of betas produced by radioactive decay.  
-		
+
 \section{Present Limits}
 	A bit about other people's physics.
-	
+
 \section{A Toy Experiment}
 	A quick overview of how an experiment like this one would be set up to extract the physics of interest, to keep the reader from getting too lost in the rest of the thesis.
 
@@ -30,7 +31,27 @@
 
 \section{The Basics of Beta Decay}
 	%\\*
-	Standard model beta decay is well understood.  The Fermi model of beta decay is in all the textbooks, but you have to dig slightly harder to understand Gamow-Teller or mixed decays, all of which are relevant here.
+	Standard Model beta decay is well understood.  The Fermi model of beta decay is in all the textbooks, but you have to dig slightly harder to understand Gamow-Teller or mixed decays, all of which are relevant here.  
+	
+	via Krane~\cite{krane}
+	Under the Allowed Approximation, we require that a beta decay may not carry away any orbital angular momentum, because we treat the nucleus as pointlike \aside{Is this even true?  The pointlike thing?} and work in the CM frame.  An Allowed decay can, however, change the total nuclear angular momentum, because the outgoing leptons have spin$=1/2$ and therefore carry angular momentum.  Therefore, in an allowed decay, the total nuclear angular momentum must always change by either $0$ or $1$.  
+	
+	From a 2006 paper by Severijns et al ~\cite{severijns_beck_cuncic_2006}, the selection rules for an allowed transition are:
+	
+\bea
+\Delta I = I_f - I_i = \{0, \pm 1\} \\ 
+\hat{\Pi}_i \, \hat{\Pi}_f = +1
+\eea
+
+	Then, you can separate the allowed transitions into singlet (anti-parallel lepton spins, $S=0$ -- a Fermi transition) and triplet states (parallel lepton spins, $S=1$ -- a Gamow-Teller transition).
+	
+	
+	Fermi decays are so-called ``vector'' interactions, and happen when the spin of the two leptons involved are antiparallel, so there can be no change in angular momentum (at least in the case of the Allowed approximation).  
+	
+	Gamow-Teller decays involve two leptons with parallel spins, so the decay must change the projection of the nuclear angular momentum, $M_I$, by exactly one unit (in the case of the Allowed approximation).  They transition may or may not simultaneously change the total nuclear spin, $I$, by one unit.  These are ``axial-vector'' interactions.  (Note that $I=0 \rightarrow I=0$ interactions are never Gamow-Teller decays.  
+	
+	Probably everything in this section is yoinked from ~\cite{wong1990}, pg 212.  
+	
 	
 \section{JTW Formalism}	
 	%\\*
@@ -49,46 +70,14 @@
 
 
 %%%% --- * --- %%%%	
-\clearpage	
-\chapter{Calibrations}
-\label{calibrations_chapter}
-	
-\section{Polarization}
-	%\\*
-	Polarization measurement was conducted on a different set of data, collected in between the measurements used for $A_{\mathrm{\beta}}$ and $b_{\mathrm{Fierz}}$, and at a higher electric field, because we were unable to run both our MCP detectors simultaneously.  
-	
-\section{Trap Position}
-	%\\*
-	Measured using the same dataset that was used to quantify the polarization.  The trap drifts slightly over the course of our data collection.  Describe the rMCP calibration needed to extract this info.  
-	
-\section{Beta Detectors}
-	%\\*
-	Energy calibration for the scintillator+PMT setup changed dramatically at one point.    Describe how calibration was done.  Also describe how the DSSD calibration was done, even though it wasn't implemented by me.  
-	
-\section{The eMCP}
-	%\\*
-	I can describe the eMCP calibration here, even though it mostly wasn't implemented by me.  It is tangentially relevant to data selection and background estimation by providing an experimental energy spectrum for shake-off electrons.  
-	
-	
-%%%% --- * --- %%%%	
-\clearpage	
-%\part{Data Analysis}
-%\section{The Experimental Signature}
-\chapter{The Experimental Signature}
-\label{analysis_chapter}
+\input{chapter_calibrations}
 
-\section{The Superratio and Asymmetry}
-	%\\*
-	The data can be combined into a superratio asymmetry.  This has the benefit of causing many systematics to cancel themselves out at leading order.  It also will increase the fractional size of the effects we're looking for.  This can be shown by using math.  
-	
-\section{Signature of a Fierz Term in This Experiment}
-	%\\*
-	Not all systematics effects are eliminated.  We'll want to be careful to propagate through any effects that are relevant.  Using the superratio asymmetry as our physical observable makes this process a bit messier for the things that don't cancel out, but it's all just math.  
-	
-\section{Comparative Merits of the Superratio and Supersum for Measurement}
-	%\\*
-	Some other groups have performed similar measurements using the supersum as the physical observable.  There are pros and cons to both methods.  I can show, using a back-of-the-envelope calculation, that for this particular dataset, the superratio asymmetry method produces a better result.  
-	
+
+
+%%%% --- * --- %%%%
+\input{chapter_signature}
+
+
 
 \chapter{Estimating Systematic Effects}
 	\section{Low-energy Scintillator Threshold}

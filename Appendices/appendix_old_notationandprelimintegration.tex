@@ -1,3 +1,8 @@
+% !TEX root = ../thesis_main.tex
+
+
+
+
 \chapter[Notation]{Proposed Notation}
 \label{notation}
 
@@ -177,292 +182,324 @@ T_r &=& \left( p_r^2 c^2 + m_r^2 c^4 \right)^{1/2} - m_r c^2 \nonumber\\
 \eea
 
 %
-\section{Things.4}
-From jtw, the unpolarized P.D.F. is like this:
-\bea
-\omega d(\textrm{stuff}) &=& \left(\frac{1}{2\pi}\right)^5 p_e E_e (E_0 - E_e)^2 d E_e d\Omega_e d\Omega_\nu \xi 
-\left(1+ a\frac{\vec{p}_e \cdot \vec{p}_\nu }{E_e E_\nu} + b \frac{m}{E_e} \right)
-\eea
-But recall (recall!!) that the lab frame coordinates are implicit in at least one of the lepton coordinates.  Probably both.  Then, 
-\bea
-d\Omega_e     &=& \sin(\theta_e - \theta_L)d(\theta_e - \theta_L) d(\phi_e - \phi_L)     \\
-d\Omega_\nu &=& \sin(\theta_\nu - \theta_L)d(\theta_\nu - \theta_L) d(\phi_\nu - \phi_L),
-\eea
-and of course, 
-\bea
-\vec{p}_e + \vec{p}_\nu + \vec{p}_r = \vec{0},
-\eea
-so we can always switch everything from neutrino- into recoil coordinates.  If we were to do that, we'd find that
-\bea
-\vec{p}_e \cdot \vec{p}_\nu &=& \vec{p}_e \cdot (-\vec{p}_e - \vec{p}_r) \\ 
-&=& -|\vec{p}_e|^2 - \vec{p}_e\cdot \vec{p}_r.
-\eea
-Right about now, we really wish we knew how to convert everything between spherical and cartesian coordinates.  To that end, we'll write out the explicit conversion convention to be used:
-\bea
-p_x &=& p \sin\theta \cos\phi \\
-p_y &=& p \sin\theta \sin\phi \\
-p_z &=& p \cos\theta .
-\eea
-\bea
-p         &=& \left( p_x^2 + p_y^2 + p_z^2 \right)^{1/2} \\
-\theta &=& \arctan\left( \frac{ \left(p_x^2 + p_y^2 \right)^{1/2} }{p_z} \right) \\
-\phi    &=& \arctan\left( \frac{p_y}{p_x} \right)
-\eea
-
-Putting this trivial bullshit stuff together, we find:
-\bea
-\omega d(\textrm{stuff})|_{\nu} &=& \left(\frac{1}{2\pi}\right)^5 \xi p_e E_e (E_0 - E_e)^2 d E_e \nonumber\\
-&& \times \sin(\theta_e - \theta_L) d(\theta_e - \theta_L) d(\phi_e - \phi_L)  \phantom{^2} 
-\sin(\theta_\nu - \theta_L) d(\theta_\nu - \theta_L) d(\phi_\nu - \phi_L) \nonumber\\
-&& \times \left[1+ b \frac{m}{E_e} + a\frac{1}{E_e E_\nu}\left(|\vec{p}_e||\vec{p}_\nu | \right) \right.  \nonumber\\
-&& \times \left( \phantom{\frac{1}{1}\!\!\!\!\! }  \sin(\theta_e - \theta_L)\sin(\theta_\nu-\theta_L)
-\left( \cos(\phi_e-\phi_L)\cos(\phi_\nu-\phi_L) + \sin(\phi_e-\phi_L)\sin(\phi_\nu-\phi_L) \phantom{1^2\!\!\!\!\! } \right) \right. \nonumber\\
-&& + \left.\left. \cos(\theta_e-\theta_L)\cos(\theta_\nu- \theta_L) \phantom{\frac{1}{1}\!\!\!\!\!} \right) \right] .
-\label{neutrino_omega}
-\eea
-Or equivalently,
-\bea
-\omega d(\textrm{stuff})|_{r} &=& \left(\frac{1}{2\pi}\right)^5 \xi p_e E_e (E_0 - E_e)^2 d E_e \nonumber\\
-&& \times \sin(\theta_e - \theta_L) d(\theta_e - \theta_L) d(\phi_e - \phi_L)  \phantom{^2} 
-\sin(\theta_\nu - \theta_L) d(\theta_\nu - \theta_L) d(\phi_\nu - \phi_L) \nonumber\\
-&& \times \left[1+ b \frac{m}{E_e} + a\frac{1}{E_e E_\nu}\left( -|\vec{p}_e|^2 - |\vec{p}_e||\vec{p}_r| \right.\right. 
-\nonumber\\
-&& \times \left( \phantom{\frac{1}{1}\!\!\!\!\! }  \sin(\theta_e - \theta_L)\sin(\theta_r-\theta_L)
-( \cos(\phi_e-\phi_L)\cos(\phi_r-\phi_L) + \sin(\phi_e-\phi_L)\sin(\phi_r-\phi_L) ) \right. 
-\nonumber\\
-&& + \left.\left. \cos(\theta_e-\theta_L)\cos(\theta_r - \theta_L) \phantom{\frac{1}{1}\!\!\!\!\!} \right) \left.\phantom{1^2 \!\!\!\! \!
-\! }\right)  \right].
-\label{recoil_omega}
-\eea
-
-And I now would very much like to integrate over $d\Omega_\nu$. \textit{Very much.}  SO MUCH.
-So I'm going to play a fucktarded integration trick, in which I hold the neutrino direction fixed, and then integrate over the lab frame.  The lab frame stuff will be automagically eliminated from the integral (and infinitesimals) over beta-direction, and everything will be all happy.  So...
-
-\todo[inline]{Start of nu-basis integration stuff.}
-%%
-\bea
-\int \int \omega d(\textrm{stuff}) &:=& \omega^\prime d(\textrm{stuff}) \nonumber\\
-&=& \left(\frac{1}{2\pi}\right)^5 \xi p_e E_e (E_0 - E_e)^2 d E_e \, d\theta_e d\phi_e \nonumber\\
-&& \times \int_0^\pi d \theta_L \int_0^{2\pi} d \phi_L \,\,
-\sin(\theta_e - \theta_L) \sin(\theta_\nu - \theta_L)   \phantom{^2} 
-%\nonumber\\
-%&& \times 
-\left[1+ b \frac{m}{E_e} + a\frac{|\vec{p}_e ||\vec{p}_\nu | }{E_e E_\nu} \right.  \nonumber\\
-&& \times \left( \phantom{\frac{1}{1}\!\!\!\!\! }  \sin(\theta_e - \theta_L)\sin(\theta_\nu-\theta_L)
-\left( \cos(\phi_e-\phi_L)\cos(\phi_\nu-\phi_L) + \sin(\phi_e-\phi_L)\sin(\phi_\nu-\phi_L) \phantom{1^2\!\!\!\!\! } \right) \right. \nonumber\\
-&& + \left.\left. \cos(\theta_e-\theta_L)\cos(\theta_\nu- \theta_L) \phantom{\frac{1}{1}\!\!\!\!\!} \right) \right] 
-\label{nu_integral}
-\eea
-
-Here, it may be useful (or not...) to recall (from a trig identity) that:
-\bea
-\cos \left(\phi_e - \phi_\nu \right) 
-&=& 
-\Big( \cos(\phi_e-\phi_L)\cos(\phi_\nu-\phi_L) + \sin(\phi_e-\phi_L)\sin(\phi_\nu-\phi_L) \Big) \\ 
-&=&
- \cos\phi_e\cos\phi_\nu + \sin\phi_e\sin\phi_\nu,
-\eea
-and further (from conservation of momentum), that:
-\bea
-\cos \theta_\nu &=&
-- \frac{1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big) 
-\label{costhetanu}
-\\
+%\section{Things.4}
+%From jtw, the unpolarized P.D.F. is like this:
+%\bea
+%\omega d(\textrm{stuff}) &=& \left(\frac{1}{2\pi}\right)^5 p_e E_e (E_0 - E_e)^2 d E_e d\Omega_e d\Omega_\nu \xi 
+%\left(1+ a\frac{\vec{p}_e \cdot \vec{p}_\nu }{E_e E_\nu} + b \frac{m}{E_e} \right)
+%\eea
+%But recall (recall!!) that the lab frame coordinates are implicit in at least one of the lepton coordinates.  Probably both.  Then, 
+%\bea
+%d\Omega_e     &=& \sin(\theta_e - \theta_L)d(\theta_e - \theta_L) d(\phi_e - \phi_L)     \\
+%d\Omega_\nu &=& \sin(\theta_\nu - \theta_L)d(\theta_\nu - \theta_L) d(\phi_\nu - \phi_L),
+%\eea
+%and of course, 
+%\bea
+%\vec{p}_e + \vec{p}_\nu + \vec{p}_r = \vec{0},
+%\eea
+%so we can always switch everything from neutrino- into recoil coordinates.  If we were to do that, we'd find that
+%\bea
+%\vec{p}_e \cdot \vec{p}_\nu &=& \vec{p}_e \cdot (-\vec{p}_e - \vec{p}_r) \\ 
+%&=& -|\vec{p}_e|^2 - \vec{p}_e\cdot \vec{p}_r.
+%\eea
+%Right about now, we really wish we knew how to convert everything between spherical and cartesian coordinates.  To that end, we'll write out the explicit conversion convention to be used:
+%\bea
+%p_x &=& p \sin\theta \cos\phi \\
+%p_y &=& p \sin\theta \sin\phi \\
+%p_z &=& p \cos\theta .
 %\eea
 %\bea
-\!\!\!\! \!\!\!\! \!\!\!\!  \!\!\!\! \!\!\!\! 
-\cos(\phi_\nu - \phi_L) 
-&=&
-\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
-\Big( p_\beta \sin(\theta_\beta - \theta_L) \cos(\phi_\beta - \phi_L) + 
-p_r \sin(\theta_r - \theta_L) \cos(\phi_r - \phi_L)
-\Big)
-\\
-\!\!\!\! \!\!\!\! \!\!\!\!  \!\!\!\! \!\!\!\! 
-\sin(\phi_\nu - \phi_L) 
-&=&
-\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
-\Big( p_\beta \sin(\theta_\beta - \theta_L) \sin(\phi_\beta - \phi_L) + 
-p_r \sin(\theta_r - \theta_L) \sin(\phi_r - \phi_L)
-\Big),
-\eea
-and if $Q$ is as defined in Eq.~(\ref{Q_def}), then we also have:
-\bea
-p_\nu \, c &\approx& \left(Q - \frac{p_r^2}{2M_r} - E_\beta + m_e c^2 \right),
-\label{pnu}
-\eea
-and as always, 
-\bea
-p_\beta \, c &=& \left( E_\beta^2 - m_e^2 c^4 \right)^{1/2} .
-\eea
-
-It's straightforward to extract $\sin \theta_\nu$ too, and the sign ambiguity is OK, because $\theta$ is only defined over $0$-$\pi$, where `$\sin(\cos^{-1}(...) )$' comes out correctly.  The goal, of course, is to get rid of all references to $\nu$ in Eq~(\ref{nu_integral}).
-
-At any rate, the term that looks like $\cos \left(\phi_e - \phi_\nu \right)$ becomes:
-\bea
-\!\!\!\! \!\!\!\! \!\!\!\!
-\cos \left(\phi_e - \phi_\nu \right) 
-&=&
- \Big( \cos(\phi_e-\phi_L)\cos(\phi_\nu-\phi_L) + \sin(\phi_e-\phi_L)\sin(\phi_\nu-\phi_L) \Big) 
-\\ 
-&=& 
-\lbracket{26} \!\!
-\cos(\phi_e-\phi_L) \!
-	\left(
-		\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
-	\right) \!
-	\Big( 
-		p_e \sin(\theta_e - \theta_L) \cos(\phi_e - \phi_L) + 
-		p_r \sin(\theta_r - \theta_L) \cos(\phi_r - \phi_L) 
-	\Big)
-	\nonumber \\
-	&& + \:
-	\sin(\phi_e-\phi_L) \!
-	\left(
-		\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
-	\right) \!
-	\Big( 
-		p_e \sin(\theta_e - \theta_L) \sin(\phi_e - \phi_L) + 
-		p_r \sin(\theta_r - \theta_L) \sin(\phi_r - \phi_L)
-	\Big)	
-\!\! \rbracket{26}
-\nonumber \\
-\eea
+%p         &=& \left( p_x^2 + p_y^2 + p_z^2 \right)^{1/2} \\
+%\theta &=& \arctan\left( \frac{ \left(p_x^2 + p_y^2 \right)^{1/2} }{p_z} \right) \\
+%\phi    &=& \arctan\left( \frac{p_y}{p_x} \right)
+%\eea
+%
+%Putting this trivial bullshit stuff together, we find:
+%\bea
+%\omega d(\textrm{stuff})|_{\nu} &=& \left(\frac{1}{2\pi}\right)^5 \xi p_e E_e (E_0 - E_e)^2 d E_e \nonumber\\
+%&& \times \sin(\theta_e - \theta_L) d(\theta_e - \theta_L) d(\phi_e - \phi_L)  \phantom{^2} 
+%\sin(\theta_\nu - \theta_L) d(\theta_\nu - \theta_L) d(\phi_\nu - \phi_L) \nonumber\\
+%&& \times \left[1+ b \frac{m}{E_e} + a\frac{1}{E_e E_\nu}\left(|\vec{p}_e||\vec{p}_\nu | \right) \right.  \nonumber\\
+%&& \times \left( \phantom{\frac{1}{1}\!\!\!\!\! }  \sin(\theta_e - \theta_L)\sin(\theta_\nu-\theta_L)
+%\left( \cos(\phi_e-\phi_L)\cos(\phi_\nu-\phi_L) + \sin(\phi_e-\phi_L)\sin(\phi_\nu-\phi_L) \phantom{1^2\!\!\!\!\! } \right) \right. \nonumber\\
+%&& + \left.\left. \cos(\theta_e-\theta_L)\cos(\theta_\nu- \theta_L) \phantom{\frac{1}{1}\!\!\!\!\!} \right) \right] .
+%\label{neutrino_omega}
+%\eea
+%Or equivalently,
+%\bea
+%\omega d(\textrm{stuff})|_{r} &=& \left(\frac{1}{2\pi}\right)^5 \xi p_e E_e (E_0 - E_e)^2 d E_e \nonumber\\
+%&& \times \sin(\theta_e - \theta_L) d(\theta_e - \theta_L) d(\phi_e - \phi_L)  \phantom{^2} 
+%\sin(\theta_\nu - \theta_L) d(\theta_\nu - \theta_L) d(\phi_\nu - \phi_L) \nonumber\\
+%&& \times \left[1+ b \frac{m}{E_e} + a\frac{1}{E_e E_\nu}\left( -|\vec{p}_e|^2 - |\vec{p}_e||\vec{p}_r| \right.\right. 
+%\nonumber\\
+%&& \times \left( \phantom{\frac{1}{1}\!\!\!\!\! }  \sin(\theta_e - \theta_L)\sin(\theta_r-\theta_L)
+%( \cos(\phi_e-\phi_L)\cos(\phi_r-\phi_L) + \sin(\phi_e-\phi_L)\sin(\phi_r-\phi_L) ) \right. 
+%\nonumber\\
+%&& + \left.\left. \cos(\theta_e-\theta_L)\cos(\theta_r - \theta_L) \phantom{\frac{1}{1}\!\!\!\!\!} \right) \left.\phantom{1^2 \!\!\!\! \!
+%\! }\right)  \right].
+%\label{recoil_omega}
+%\eea
+%
+%And I now would very much like to integrate over $d\Omega_\nu$. \textit{Very much.}  SO MUCH.
+%So I'm going to play a fucktarded integration trick, in which I hold the neutrino direction fixed, and then integrate over the lab frame.  The lab frame stuff will be automagically eliminated from the integral (and infinitesimals) over beta-direction, and everything will be all happy.  So...
+%
+%\todo[inline]{Start of nu-basis integration stuff.}
+%%%
+%\bea
+%\int \int \omega d(\textrm{stuff}) &:=& \omega^\prime d(\textrm{stuff}) \nonumber\\
+%&=& \left(\frac{1}{2\pi}\right)^5 \xi p_e E_e (E_0 - E_e)^2 d E_e \, d\theta_e d\phi_e \nonumber\\
+%&& \times \int_0^\pi d \theta_L \int_0^{2\pi} d \phi_L \,\,
+%\sin(\theta_e - \theta_L) \sin(\theta_\nu - \theta_L)   \phantom{^2} 
+%%\nonumber\\
+%%&& \times 
+%\left[1+ b \frac{m}{E_e} + a\frac{|\vec{p}_e ||\vec{p}_\nu | }{E_e E_\nu} \right.  \nonumber\\
+%&& \times \left( \phantom{\frac{1}{1}\!\!\!\!\! }  \sin(\theta_e - \theta_L)\sin(\theta_\nu-\theta_L)
+%\left( \cos(\phi_e-\phi_L)\cos(\phi_\nu-\phi_L) + \sin(\phi_e-\phi_L)\sin(\phi_\nu-\phi_L) \phantom{1^2\!\!\!\!\! } \right) \right. \nonumber\\
+%&& + \left.\left. \cos(\theta_e-\theta_L)\cos(\theta_\nu- \theta_L) \phantom{\frac{1}{1}\!\!\!\!\!} \right) \right] 
+%\label{nu_integral}
+%\eea
+%
+%Here, it may be useful (or not...) to recall (from a trig identity) that:
+%\bea
+%\cos \left(\phi_e - \phi_\nu \right) 
+%&=& 
+%\Big( \cos(\phi_e-\phi_L)\cos(\phi_\nu-\phi_L) + \sin(\phi_e-\phi_L)\sin(\phi_\nu-\phi_L) \Big) \\ 
+%&=&
+% \cos\phi_e\cos\phi_\nu + \sin\phi_e\sin\phi_\nu,
+%\eea
+%and further (from conservation of momentum), that:
+%\bea
+%\cos \theta_\nu &=&
+%- \frac{1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big) 
+%\label{costhetanu}
 %\\
-%% 
-\bea
-\cos \left(\phi_e - \phi_\nu \right) 
-&=&
-\left(
-	\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
-\right) \!\!
-\nonumber\\
-&& \times
-\lbracket{26} \!\!
-	\Big( 
-		p_e \sin(\theta_e - \theta_L) \cos^2(\phi_e - \phi_L) % \cos(\phi_e-\phi_L) 
-		+ p_r \sin(\theta_r - \theta_L) \cos(\phi_r - \phi_L) \cos(\phi_e-\phi_L)
-	\Big)
-	\nonumber \\
-	&& + \:
-	\Big( 
-		p_e \sin(\theta_e - \theta_L) \sin^2(\phi_e - \phi_L)%\sin(\phi_e-\phi_L) 
-		+ p_r \sin(\theta_r - \theta_L) \sin(\phi_r - \phi_L)\sin(\phi_e-\phi_L)
-	\Big)	
-\!\! \rbracket{26}
-\nonumber \\
-\\
-&=&
-\left(
-	\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
-\right) \!\!
-\lbracket{26} \!\!
-	p_e \sin(\theta_e - \theta_L) 
-	\left(
-		\cos^2(\phi_e - \phi_L) 
-		+ \sin^2(\phi_e - \phi_L)
-	\right)
-	\nonumber\\
-	&&
-	+ \:
-	p_r \sin(\theta_r - \theta_L) 
-	\big(
-		\cos(\phi_r - \phi_L) \cos(\phi_e-\phi_L)
-		+ 
-		 \sin(\phi_r - \phi_L)\sin(\phi_e-\phi_L)
-	\big)
-\!\! \rbracket{26}
-\nonumber \\
-\\
-&=&
-\left(
-	\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
-\right) \!\!
-\lbracket{26} \!\!
-	p_e \sin(\theta_e - \theta_L) 
-	+ 
-	p_r \sin(\theta_r - \theta_L) 
-		\cos(\phi_r - \phi_e)
-\!\! \rbracket{26}
-\eea
-...and that's really not so bad at all.  
-
-Back to the master equation (\ref{nu_integral}) now.  It turns out, 
-\bea
-%\!\!\!\! \!\!\!\! \!\!\!\! 
-\omega^\prime d(\textrm{stuff}) 
-&=& 
-\left(\frac{1}{2\pi}\right)^5 \xi p_e E_e (E_0 - E_e)^2 d E_e \, d\theta_e d\phi_e 
-\nonumber\\
-&& \times \int_0^\pi d \theta_L \int_0^{2\pi} d \phi_L \,\,
-\sin(\theta_e - \theta_L) \sin(\theta_\nu - \theta_L)  
-\!
-\lbracket{22} \!
-    1+ b \frac{m}{E_e} 
-    \nonumber\\
-    &&
-    + a\frac{|\vec{p}_e ||\vec{p}_\nu | }{E_e E_\nu} 
-    \lparen{18} \!
-	    \cos(\theta_e-\theta_L)\cos(\theta_\nu- \theta_L) %\phantom{\frac{1}{1}\!\!\!\!\!} 
-	%    \nonumber \\
-	%    && +
-	    +
-	    \sin(\theta_e - \theta_L)\sin(\theta_\nu-\theta_L)
-	    \nonumber\\
-	    && \times
-	    %
-	    \left(
-		\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
-	    \right) \!\!
-	    \lbracket{26} \!\!
-		p_e \sin(\theta_e - \theta_L) 
-		+ 
-		p_r \sin(\theta_r - \theta_L) 
-		\cos(\phi_r - \phi_e)
-	    \!\! \rbracket{26}
-	   %
-    \!
-    \rparen{18}
-\! 
-\rbracket{22} 
-\\ %%%    %%% 
-\omega^\prime d(\textrm{stuff}) 
-&=& 
-\left(\frac{1}{2\pi}\right)^5 \xi p_e E_e (E_0 - E_e)^2 d E_e \, d\theta_e d\phi_e 
-\nonumber\\
-&& \times \int_0^\pi d \theta_L \int_0^{2\pi} d \phi_L \,\,
-\sin(\theta_e - \theta_L) \sin(\theta_\nu - \theta_L)  
-\!
-\lbracket{22} \!
-    1+ b \frac{m}{E_e} 
-    \nonumber\\
-    &&
-    + \:
-    a\frac{p_e \, p_\nu}{E_e E_\nu} 
-    \lparen{18} \!
-	    \cos(\theta_e-\theta_L)\cos(\theta_\nu- \theta_L) 
-    \rparen{18}
-    \nonumber\\
-    &&
-    -
-    a\frac{ p_e }{E_e E_\nu} 
-    \lparen{18} \!
-	    \sin(\theta_e - \theta_L)
-	    \! \lbracket{16} \!\!
-		p_e \sin(\theta_e - \theta_L) 
-		+ 
-		p_r \sin(\theta_r - \theta_L) 
-		\cos(\phi_r - \phi_e)
-	    \!\! \rbracket{16}
-    \!
-    \rparen{18}
-\! 
-\rbracket{22} 
-\eea
-
-...Aaaaaand, we're almost done.  I think.  Let's do the $\theta_L$ integral now.
-\bea
-\omega^\prime d(\textrm{stuff}) 
+%%\eea
+%%\bea
+%\!\!\!\! \!\!\!\! \!\!\!\!  \!\!\!\! \!\!\!\! 
+%\cos(\phi_\nu - \phi_L) 
+%&=&
+%\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
+%\Big( p_\beta \sin(\theta_\beta - \theta_L) \cos(\phi_\beta - \phi_L) + 
+%p_r \sin(\theta_r - \theta_L) \cos(\phi_r - \phi_L)
+%\Big)
+%\\
+%\!\!\!\! \!\!\!\! \!\!\!\!  \!\!\!\! \!\!\!\! 
+%\sin(\phi_\nu - \phi_L) 
+%&=&
+%\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
+%\Big( p_\beta \sin(\theta_\beta - \theta_L) \sin(\phi_\beta - \phi_L) + 
+%p_r \sin(\theta_r - \theta_L) \sin(\phi_r - \phi_L)
+%\Big),
+%\eea
+%and if $Q$ is as defined in Eq.~(\ref{Q_def}), then we also have:
+%\bea
+%p_\nu \, c &\approx& \left(Q - \frac{p_r^2}{2M_r} - E_\beta + m_e c^2 \right),
+%\label{pnu}
+%\eea
+%and as always, 
+%\bea
+%p_\beta \, c &=& \left( E_\beta^2 - m_e^2 c^4 \right)^{1/2} .
+%\eea
+%
+%It's straightforward to extract $\sin \theta_\nu$ too, and the sign ambiguity is OK, because $\theta$ is only defined over $0$-$\pi$, where `$\sin(\cos^{-1}(...) )$' comes out correctly.  The goal, of course, is to get rid of all references to $\nu$ in Eq~(\ref{nu_integral}).
+%
+%At any rate, the term that looks like $\cos \left(\phi_e - \phi_\nu \right)$ becomes:
+%\bea
+%\!\!\!\! \!\!\!\! \!\!\!\!
+%\cos \left(\phi_e - \phi_\nu \right) 
+%&=&
+% \Big( \cos(\phi_e-\phi_L)\cos(\phi_\nu-\phi_L) + \sin(\phi_e-\phi_L)\sin(\phi_\nu-\phi_L) \Big) 
+%\\ 
+%&=& 
+%\lbracket{26} \!\!
+%\cos(\phi_e-\phi_L) \!
+%	\left(
+%		\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
+%	\right) \!
+%	\Big( 
+%		p_e \sin(\theta_e - \theta_L) \cos(\phi_e - \phi_L) + 
+%		p_r \sin(\theta_r - \theta_L) \cos(\phi_r - \phi_L) 
+%	\Big)
+%	\nonumber \\
+%	&& + \:
+%	\sin(\phi_e-\phi_L) \!
+%	\left(
+%		\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
+%	\right) \!
+%	\Big( 
+%		p_e \sin(\theta_e - \theta_L) \sin(\phi_e - \phi_L) + 
+%		p_r \sin(\theta_r - \theta_L) \sin(\phi_r - \phi_L)
+%	\Big)	
+%\!\! \rbracket{26}
+%\nonumber \\
+%\eea
+%%\\
+%%% 
+%\bea
+%\cos \left(\phi_e - \phi_\nu \right) 
+%&=&
+%\left(
+%	\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
+%\right) \!\!
+%\nonumber\\
+%&& \times
+%\lbracket{26} \!\!
+%	\Big( 
+%		p_e \sin(\theta_e - \theta_L) \cos^2(\phi_e - \phi_L) % \cos(\phi_e-\phi_L) 
+%		+ p_r \sin(\theta_r - \theta_L) \cos(\phi_r - \phi_L) \cos(\phi_e-\phi_L)
+%	\Big)
+%	\nonumber \\
+%	&& + \:
+%	\Big( 
+%		p_e \sin(\theta_e - \theta_L) \sin^2(\phi_e - \phi_L)%\sin(\phi_e-\phi_L) 
+%		+ p_r \sin(\theta_r - \theta_L) \sin(\phi_r - \phi_L)\sin(\phi_e-\phi_L)
+%	\Big)	
+%\!\! \rbracket{26}
+%\nonumber \\
+%\\
+%&=&
+%\left(
+%	\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
+%\right) \!\!
+%\lbracket{26} \!\!
+%	p_e \sin(\theta_e - \theta_L) 
+%	\left(
+%		\cos^2(\phi_e - \phi_L) 
+%		+ \sin^2(\phi_e - \phi_L)
+%	\right)
+%	\nonumber\\
+%	&&
+%	+ \:
+%	p_r \sin(\theta_r - \theta_L) 
+%	\big(
+%		\cos(\phi_r - \phi_L) \cos(\phi_e-\phi_L)
+%		+ 
+%		 \sin(\phi_r - \phi_L)\sin(\phi_e-\phi_L)
+%	\big)
+%\!\! \rbracket{26}
+%\nonumber \\
+%\\
+%&=&
+%\left(
+%	\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
+%\right) \!\!
+%\lbracket{26} \!\!
+%	p_e \sin(\theta_e - \theta_L) 
+%	+ 
+%	p_r \sin(\theta_r - \theta_L) 
+%		\cos(\phi_r - \phi_e)
+%\!\! \rbracket{26}
+%\eea
+%...and that's really not so bad at all.  
+%
+%Back to the master equation (\ref{nu_integral}) now.  It turns out, 
+%\bea
+%%\!\!\!\! \!\!\!\! \!\!\!\! 
+%\omega^\prime d(\textrm{stuff}) 
+%&=& 
+%\left(\frac{1}{2\pi}\right)^5 \xi p_e E_e (E_0 - E_e)^2 d E_e \, d\theta_e d\phi_e 
+%\nonumber\\
+%&& \times \int_0^\pi d \theta_L \int_0^{2\pi} d \phi_L \,\,
+%\sin(\theta_e - \theta_L) \sin(\theta_\nu - \theta_L)  
+%\!
+%\lbracket{22} \!
+%    1+ b \frac{m}{E_e} 
+%    \nonumber\\
+%    &&
+%    + a\frac{|\vec{p}_e ||\vec{p}_\nu | }{E_e E_\nu} 
+%    \lparen{18} \!
+%	    \cos(\theta_e-\theta_L)\cos(\theta_\nu- \theta_L) %\phantom{\frac{1}{1}\!\!\!\!\!} 
+%	%    \nonumber \\
+%	%    && +
+%	    +
+%	    \sin(\theta_e - \theta_L)\sin(\theta_\nu-\theta_L)
+%	    \nonumber\\
+%	    && \times
+%	    %
+%	    \left(
+%		\frac{-1}{p_\nu \sin(\theta_\nu - \theta_L) } 
+%	    \right) \!\!
+%	    \lbracket{26} \!\!
+%		p_e \sin(\theta_e - \theta_L) 
+%		+ 
+%		p_r \sin(\theta_r - \theta_L) 
+%		\cos(\phi_r - \phi_e)
+%	    \!\! \rbracket{26}
+%	   %
+%    \!
+%    \rparen{18}
+%\! 
+%\rbracket{22} 
+%\\ %%%    %%% 
+%\omega^\prime d(\textrm{stuff}) 
+%&=& 
+%\left(\frac{1}{2\pi}\right)^5 \xi p_e E_e (E_0 - E_e)^2 d E_e \, d\theta_e d\phi_e 
+%\nonumber\\
+%&& \times \int_0^\pi d \theta_L \int_0^{2\pi} d \phi_L \,\,
+%\sin(\theta_e - \theta_L) \sin(\theta_\nu - \theta_L)  
+%\!
+%\lbracket{22} \!
+%    1+ b \frac{m}{E_e} 
+%    \nonumber\\
+%    &&
+%    + \:
+%    a\frac{p_e \, p_\nu}{E_e E_\nu} 
+%    \lparen{18} \!
+%	    \cos(\theta_e-\theta_L)\cos(\theta_\nu- \theta_L) 
+%    \rparen{18}
+%    \nonumber\\
+%    &&
+%    -
+%    a\frac{ p_e }{E_e E_\nu} 
+%    \lparen{18} \!
+%	    \sin(\theta_e - \theta_L)
+%	    \! \lbracket{16} \!\!
+%		p_e \sin(\theta_e - \theta_L) 
+%		+ 
+%		p_r \sin(\theta_r - \theta_L) 
+%		\cos(\phi_r - \phi_e)
+%	    \!\! \rbracket{16}
+%    \!
+%    \rparen{18}
+%\! 
+%\rbracket{22} 
+%\eea
+%
+%...Aaaaaand, we're almost done.  I think.  Let's do the $\theta_L$ integral now.
+%\bea
+%\omega^\prime d(\textrm{stuff}) 
+%%&=& 
+%%\left(\frac{1}{2\pi}\right)^5 \xi p_e E_e (E_0 - E_e)^2 d E_e \, d\theta_e d\phi_e 
+%%\nonumber\\
+%%&& \times 
+%%\int_0^{2\pi} d \phi_L \,\,
+%%\lbracket{22} \!
+%%\frac{\pi}{2} \cos\left(\theta_e - \theta_\nu \right)
+%%    \left( 1+ b \frac{m}{E_e} \right)
+%%    + a\frac{p_e \, p_\nu}{E_e E_\nu} 
+%%    \lparen{18} \!
+%%	    \frac{\pi}{8} 
+%%	    \cos \Big( 
+%%	    	2(\theta_e - \theta_\nu) 
+%%	    \Big) \!\!
+%%    \rparen{18}
+%%    \nonumber\\
+%%    &&
+%%    -
+%%    a\frac{ p_e }{E_e E_\nu} 
+%%    \int_0^\pi d \theta_L 
+%%    \lparen{18} \!
+%%	    p_e
+%%	    \sin^3(\theta_e - \theta_L) \sin(\theta_\nu - \theta_L)
+%%	    + 
+%%	    p_r  \sin^2(\theta_e - \theta_L) \sin(\theta_r - \theta_L) \cos(\phi_r - \phi_e)
+%%    \!
+%%    \rparen{18}
+%%\! 
+%%\rbracket{22} 
+%%\nonumber\\
+%%\\
+%%%%  %%%
 %&=& 
 %\left(\frac{1}{2\pi}\right)^5 \xi p_e E_e (E_0 - E_e)^2 d E_e \, d\theta_e d\phi_e 
 %\nonumber\\
@@ -482,626 +519,594 @@ Back to the master equation (\ref{nu_integral}) now.  It turns out,
 %    &&
 %    -
 %    a\frac{ p_e }{E_e E_\nu} 
-%    \int_0^\pi d \theta_L 
 %    \lparen{18} \!
-%	    p_e
-%	    \sin^3(\theta_e - \theta_L) \sin(\theta_\nu - \theta_L)
-%	    + 
-%	    p_r  \sin^2(\theta_e - \theta_L) \sin(\theta_r - \theta_L) \cos(\phi_r - \phi_e)
+%	    \frac{3\pi}{8} p_e \cos(\theta_e - \theta_\nu)
+%	    + \frac{\pi}{8}
+%	    p_r \cos(\phi_r - \phi_e)
+%	    \Big( \!
+%	    	\cos \big(
+%			2\theta_e - \theta_\nu - \theta_r
+%		\big)
+%		+ 
+%		2 \cos \big(
+%			\theta_\nu - \theta_r
+%		\big)
+%	    \!
+%	    \Big)
 %    \!
 %    \rparen{18}
 %\! 
 %\rbracket{22} 
 %\nonumber\\
+%\eea
+%That's not really good enough though.  We have to get rid of all those pesky $\theta_\nu$'s, $p_\nu$'s, and $E_\nu$'s.  Do we do it before or after the next integral?  In principle, it doesn't matter.  In practice, one way is probably messier than the other.  
+%
+%Whatever, let's simplify some shit.
+%\bea
+%\omega^\prime d(\textrm{stuff}) 
+%&=& 
+%\left(\frac{1}{2\pi}\right)^4 \frac{\pi}{8} \:
+%\xi p_e E_e 
+%%(E_0 - E_e)^2 
+%E_\nu^2 \,
+%d E_e \, d\theta_e d\phi_e 
+%\nonumber\\
+%&& \times 
+%\lbracket{22} \!
+%4
+%\cos\left(\theta_e - \theta_\nu \right)
+%    \left( 1+ b \frac{m}{E_e} \right)
+%    + a \frac{p_e }{E_e} 
+%    \cos \Big( 
+%    	2 \big(\theta_e - \theta_\nu \big) \!
+%    \Big)
+%    -
+%    3 \,
+%    a\frac{ p_e^2 }{E_e E_\nu} 
+%	    \cos \big(\theta_e - \theta_\nu \big)
+%    \nonumber\\
+%    &&
+%    - \:
+%    a\frac{ p_e \, p_r}{E_e E_\nu} 
+%    \Big( \!
+%	    \cos \big(
+%		2\theta_e - \theta_\nu - \theta_r
+%	\big)
+%	+ 
+%	2 \cos \big(
+%		\theta_\nu - \theta_r
+%	\big) \!
+%    \Big)
+%    \cos \big(\phi_r - \phi_e \big)
+%\! 
+%\rbracket{22} 
+%% \nonumber\\
+%\eea
+%
+%So we're down to just $E_\nu$'s and $\theta_\nu$'s.  It's OK though -- there are expressions for those!  To reiterate Eqs.~(\ref{pnu}, \ref{costhetanu}), 
+%\bea
+%p_\nu \, c &\approx& \left(Q - \frac{p_r^2}{2M_r} - E_\beta + m_e c^2 \right)
 %\\
-%%%  %%%
-&=& 
-\left(\frac{1}{2\pi}\right)^5 \xi p_e E_e (E_0 - E_e)^2 d E_e \, d\theta_e d\phi_e 
-\nonumber\\
-&& \times 
-\int_0^{2\pi} d \phi_L \,\,
-\lbracket{22} \!
-\frac{\pi}{2} \cos\left(\theta_e - \theta_\nu \right)
-    \left( 1+ b \frac{m}{E_e} \right)
-    + a\frac{p_e \, p_\nu}{E_e E_\nu} 
-    \lparen{18} \!
-	    \frac{\pi}{8} 
-	    \cos \Big( 
-	    	2(\theta_e - \theta_\nu) 
-	    \Big) \!\!
-    \rparen{18}
-    \nonumber\\
-    &&
-    -
-    a\frac{ p_e }{E_e E_\nu} 
-    \lparen{18} \!
-	    \frac{3\pi}{8} p_e \cos(\theta_e - \theta_\nu)
-	    + \frac{\pi}{8}
-	    p_r \cos(\phi_r - \phi_e)
-	    \Big( \!
-	    	\cos \big(
-			2\theta_e - \theta_\nu - \theta_r
-		\big)
-		+ 
-		2 \cos \big(
-			\theta_\nu - \theta_r
-		\big)
-	    \!
-	    \Big)
-    \!
-    \rparen{18}
-\! 
-\rbracket{22} 
-\nonumber\\
-\eea
-That's not really good enough though.  We have to get rid of all those pesky $\theta_\nu$'s, $p_\nu$'s, and $E_\nu$'s.  Do we do it before or after the next integral?  In principle, it doesn't matter.  In practice, one way is probably messier than the other.  
-
-Whatever, let's simplify some shit.
-\bea
-\omega^\prime d(\textrm{stuff}) 
-&=& 
-\left(\frac{1}{2\pi}\right)^4 \frac{\pi}{8} \:
-\xi p_e E_e 
-%(E_0 - E_e)^2 
-E_\nu^2 \,
-d E_e \, d\theta_e d\phi_e 
-\nonumber\\
-&& \times 
-\lbracket{22} \!
-4
-\cos\left(\theta_e - \theta_\nu \right)
-    \left( 1+ b \frac{m}{E_e} \right)
-    + a \frac{p_e }{E_e} 
-    \cos \Big( 
-    	2 \big(\theta_e - \theta_\nu \big) \!
-    \Big)
-    -
-    3 \,
-    a\frac{ p_e^2 }{E_e E_\nu} 
-	    \cos \big(\theta_e - \theta_\nu \big)
-    \nonumber\\
-    &&
-    - \:
-    a\frac{ p_e \, p_r}{E_e E_\nu} 
-    \Big( \!
-	    \cos \big(
-		2\theta_e - \theta_\nu - \theta_r
-	\big)
-	+ 
-	2 \cos \big(
-		\theta_\nu - \theta_r
-	\big) \!
-    \Big)
-    \cos \big(\phi_r - \phi_e \big)
-\! 
-\rbracket{22} 
-% \nonumber\\
-\eea
-
-So we're down to just $E_\nu$'s and $\theta_\nu$'s.  It's OK though -- there are expressions for those!  To reiterate Eqs.~(\ref{pnu}, \ref{costhetanu}), 
-\bea
-p_\nu \, c &\approx& \left(Q - \frac{p_r^2}{2M_r} - E_\beta + m_e c^2 \right)
-\\
+%%\eea
+%%\bea
+%\cos \theta_\nu &=&
+%- \frac{1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big) .
+%\eea
+%%%
+%%%
+%...
+%
+%
+%\todo[inline]{End of nu-basis integration stuff.}
+%%%%%%    %%%%%    %%%%%    %%%%%    %%%%%
+%
+%But actually, we've still got to integrate over beta direction before this'll do anything useful for us.  I think.  Therefore, define
+%\bea
+%\omega^{\prime \prime} d(\textrm{...}) 
+%&:=& 
+%\int_0^{2\pi} \!\! d\phi_e 
+%\int_0^\pi \!\! d \theta_e 
+%\:
+%\frac{  \omega^{\prime}  d(\textrm{stuff}) }{ d\phi_e d \theta_e},
+%\eea
+%which is totally legit, since we've already converted $d \Omega_e $ into things with a factor of $\sin \theta_e$.  On that note, 
+%%%
+%\bea
+%\omega^{\prime \prime} d(\textrm{...}) 
+%&=& 
+%\left(\frac{1}{2\pi}\right)^4 \frac{\pi}{8} \: \xi 
+%\int_0^{2\pi} \!\! d\phi_e 
+%\int_0^\pi \!\! d \theta_e 
+%\lparen{24}
+%p_e E_e 
+%%(E_0 - E_e)^2 
+%E_\nu^2 \,
+%d E_e \, 
+%%d\theta_e d\phi_e 
+%\nonumber\\
+%&& \times 
+%\lbracket{22} \!
+%4
+%\cos\left(\theta_e - \theta_\nu \right)
+%    \left( 1+ b \frac{m}{E_e} \right)
+%    + a \frac{p_e }{E_e} 
+%    \cos \Big( 
+%    	2 \big(\theta_e - \theta_\nu \big) \!
+%    \Big)
+%    -
+%    3 \,
+%    a\frac{ p_e^2 }{E_e E_\nu} 
+%	    \cos \big(\theta_e - \theta_\nu \big)
+%    \nonumber\\
+%    &&
+%    - \:
+%    a\frac{ p_e \, p_r}{E_e E_\nu} 
+%    \Big( \!
+%	    \cos \big(
+%		2\theta_e - \theta_\nu - \theta_r
+%	\big)
+%	+ 
+%	2 \cos \big(
+%		\theta_\nu - \theta_r
+%	\big) \!
+%    \Big)
+%    \cos \big(\phi_r - \phi_e \big)
+%\! 
+%\rbracket{22} 
+%\rparen{24},
+%\eea
+%and in a step that I'm thoroughly suspicious of, the last term that looks like $\cos(\phi_r - \phi_e)$ integrates to zero.  Hey, it \emph{might} be true.  Anyway, that means:
+%
+%\bea
+%\omega^{\prime \prime} d(\textrm{...}) 
+%&=& 
+%\left(\frac{1}{2\pi}\right)^3 \frac{\pi}{8} \: \xi 
+%\int_0^\pi \!\! d \theta_e 
+%\lparen{24}
+%p_e E_e 
+%E_\nu^2 \,
+%d E_e \, 
+%\nonumber\\
+%&&\times
+%\lbracket{22} \!
+%\cos\left(\theta_e - \theta_\nu \right)
+%    \lbracket{16}
+%    4 \left( 1+ b \frac{m}{E_e} \right)
+%    -
+%    3 \,
+%    a\frac{ p_e^2 }{E_e E_\nu} 
+%    \rbracket{16}
+%    \nonumber\\
+%    && 
+%    + a \frac{p_e }{E_e} 
+%    \cos \Big( 
+%    	2 \big(\theta_e - \theta_\nu \big) \!
+%    \Big)
+%\rbracket{22} 
+%\rparen{24},
+%\eea
+%and sadly, I'm doomed to put in the $\theta_\nu$'s (and $p_\nu$'s ???) in before doing the $\theta_e$ integral, because those things are functions of $\theta_e$. Sooo...
+%%%    %%    %% 
+%\def \thetanu {\theta_\nu }
+%%\def \thetanu { \cos^{-1} \Big( \frac{-1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big) \Big) }
+%%\def \costhetanu {\frac{-1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big)}
+%\def \costemtn {\cos \theta_e \cos\thetanu + \sin\theta_e \sin\theta_\nu}
+%\def \sintemtn {\sin \theta_e \cos\thetanu - \cos\theta_e \sin\theta_\nu}
+%%%    %%    %% 
+%\bea
+%\omega^{\prime \prime} d(\textrm{...}) 
+%&=& 
+%\left(\frac{1}{2\pi}\right)^3 \frac{\pi}{8} \: \xi 
+%\int_0^\pi \!\! d \theta_e 
+%\lparen{24}
+%p_e E_e 
+%E_\nu^2 \,
+%d E_e \, 
+%\nonumber\\
+%&&\times
+%\lbracket{22} \!
+%	\left( \costemtn \right)
+%    \lbracket{16}
+%    4 \left( 1+ b \frac{m}{E_e} \right)
+%    -
+%    3 \,
+%    a\frac{ p_e^2 }{E_e E_\nu} 
+%    \rbracket{16}
+%    \nonumber\\
+%    && 
+%    + a \frac{p_e }{E_e} 
+%        \Bigg(
+%    \left( \costemtn \right)^2
+%    - 
+%    \left( \sintemtn \right)^2
+%    \Bigg)
+%\rbracket{22} 
+%\rparen{24},
+%\eea
+%and therefore, 
+%%
+%%%    %%    %% 
+%\def \thetanu {\theta_\nu }
+%\def \costhetanu {\frac{-1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big)}
+%\def \sinthetanu {\sin \! \left[ \cos^{-1}\! \left(\frac{-1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big) \right) \right] }
+%%\def \sinthetanu { \sqrt{1-\left(\frac{-1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big) \right)^2}}
+%\def \costemtn {\cos \theta_e \left(\costhetanu \right) + \sin\theta_e \sinthetanu}
+%\def \sintemtn {\sin \theta_e \left(\costhetanu \right) - \cos\theta_e \sinthetanu}
+%%%    %%    %% 
+%\bea
+%\!\!\!\!\!\!
+%\omega^{\prime \prime} d(\textrm{...}) 
+%&=& 
+%\left(\frac{1}{2\pi}\right)^3 \frac{\pi}{8} \: \xi 
+%\int_0^\pi \!\! d \theta_e 
+%\lparen{22}
+%	p_e E_e 
+%	E_\nu^2 \,
+%	d E_e \, 
+%	\lbracket{28} \!
+%		\Big( 
+%			\cos \theta_e \left(\costhetanu\right) 
+%			\nonumber\\
+%			&&
+%			+ \sin\theta_e \sinthetanu
+%		\Big)
+%	    \lbracket{16}
+%	    4 \left( 
+%			1+ b \frac{m}{E_e} 
+%		\right)
+%	    -
+%	    3 \, a\frac{ p_e^2 }{E_e E_\nu} 
+%	    \rbracket{16}
+%			\nonumber\\
+%			&& 
+%			+ a \frac{p_e }{E_e} 
+%			\Bigg(
+%				\left( 
+%					\cos \theta_e \left(\costhetanu\right) + \sin\theta_e \sinthetanu
+%				\right)^2
+%				\nonumber\\
+%				&&
+%				- 
+%				\left( 
+%					\sintemtn 
+%				\right)^2
+%			\Bigg)
+%		\rbracket{28} 
+%	\rparen{22},
+%	\nonumber\\
+%\eea
+%...
+%
+%I might try to simplify that and make it look pretty.  Perhaps this is horribly misguided.  I don't know.  
+%%%
+%\def \sinthetanu {\sin \! \left[ \cos^{-1}\!\! \left(  \frac{- p_e}{p_\nu} \cos\theta_e +\frac{ -p_r}{p_\nu} \cos \theta_r \right)\! \right] }
+%%%
+%\bea
+%\omega^{\prime \prime} d(\textrm{...}) 
+%&=& 
+%\left(\frac{1}{2\pi}\right)^3 \frac{\pi}{8} \: \xi 
+%\int_0^\pi \!\! d \theta_e 
+%\lparen{22}
+%	p_e E_e 
+%	E_\nu^2 \,
+%	d E_e 
+%	\lbracket{28} \!
+%	    \frac{-1}{p_\nu} 
+%	    \lparen{13} \!
+%		    4 \left( \!
+%				1+ b \frac{m}{E_e} 
+%			\! \right)
+%		    - 3 \, a\frac{ p_e^2 }{E_e E_\nu} 
+%	    \rparen{13}			
+%		\cos \theta_e 
+%		\Big(
+%			p_e \cos\theta_e + p_r \cos \theta_r  
+%		\Big) 
+%		\nonumber\\
+%		&&
+%		+ 
+%	    \lparen{13} \!
+%		    4 \left( \!
+%				1+ b \frac{m}{E_e} 
+%			\! \right)
+%		    - 3 \, a\frac{ p_e^2 }{E_e E_\nu} 
+%	    \rparen{13}
+%			\sin\theta_e 
+%			\, 
+%			\sinthetanu
+%			\nonumber\\
+%			&& 
+%			+ a \frac{p_e }{E_e} 
+%			\lparen{36} \!\!
+%				\left( 
+%					\sin\theta_e 
+%					\, 
+%					\sinthetanu
+%					+
+%					\frac{-1}{p_\nu} 
+%					\cos \theta_e 
+%					\Big(
+%						p_e \cos\theta_e + p_r \cos \theta_r  
+%					\Big) 
+%				\right)^2
+%				\nonumber\\
+%				&&
+%				+
+%				\left( 
+%					\frac{+1}{p_\nu} 
+%					\sin \theta_e 
+%					\Big(
+%							p_e \cos\theta_e + p_r \cos \theta_r  
+%					\Big) 
+%					+ \cos\theta_e \,
+%					\sinthetanu
+%				\right)^2
+%			\!\! \rparen{36}
+%		\rbracket{28} 
+%	\rparen{22},
+%	\nonumber\\
+%\eea
+%
+%Anyway.  We'll want to list off some nice integrals here.  See integration\_scratch.nb.
+%%%% first, some definitions, for ease of latex-ing:
+%%%
+%\def \intsinthetaesinthetanu {\frac{p_\nu }{2p_e}
+%\left( 
+%	\sin^{-1}\!\left[\frac{p_e}{p_\nu}-\frac{p_r }{p_\nu}\cos\theta_r\right] 
+%	+ 
+%	\sin^{-1}\!\left[\frac{p_e}{p_\nu}+\frac{p_r }{p_\nu}\cos\theta_r\right]
+%\right)
+%\nonumber\\
+%&&
+%+
+%\frac{1}{2p_e p_\nu}
+%\left(
+%	(p_e+ p_r\cos\theta_r) \sqrt{p_\nu^2- \left( p_e+p_r \cos\theta_r\right)^2}
+%	+
+%	(p_e-p_r\cos\theta_r) \sqrt{p_\nu^2- \left(p_e - p_r\cos\theta_r\right)^2}
+%\right)
+%}
+%%%
+%\def \sintesintenpcostecostensq {
+%-\frac{1}{24 p_e^2} 
+%\Bigg( \!
+%	-\frac{6 p_e^4 \pi }{p_{\nu}^2}
+%	-12 p_e^2 \pi 
+%	+ 6p_{\nu}^2 \sin^{-1}\! \left[\frac{p_e}{p_{\nu}}-\frac{p_r \cos\theta_r}{p_{\nu}}\right]
+%	+ 6 p_{\nu}^2\sin^{-1}\!\left[\frac{p_e}{p_{\nu}}+\frac{p_r \cos\theta_r}{p_{\nu}}\right]
+%	\!
+%\Bigg)
+%	\nonumber\\
+%&&	
+%-\frac{1}{24 p_e^2}
+%\bigg(
+%	\frac{1}{p_{\nu}^2} 
+%\bigg) \!
+%\Bigg( \!\!
+%	\left(
+%		\sqrt{
+%			p_{\nu}^2-(p_e + p_r \cos\theta_r)^2
+%		} 
+%		+ 
+%		\sqrt{
+%			p_{\nu}^2-(p_e - p_r \cos\theta_r)^2
+%		} \,
+%	\right)
+%	\left(
+%		%\frac{2 p_e}{1}
+%		2 p_e
+%	\right)
+%	\left(
+%		6 p_e^2 + 2p_r^2 \cos^2\theta_r - 3p_{\nu}^2 
+%	\right) 
+%	\nonumber\\
+%&&	+ 
+%	\left( 
+%		\sqrt{ 
+%			p_{\nu}^2-(p_e + p_r \cos\theta_r)^2
+%		}
+%		- 
+%		\sqrt{
+%			p_{\nu}^2-(p_e - p_r \cos\theta_r)^2
+%		} \,
+%	\right)
+%	\left(
+%		%\frac{2p_r}{1} 
+%		2p_r 
+%		\cos\theta_r
+%	\right)
+%	\left(
+%		10p_e^2 -2p_r^2\cos^2\theta_r + 5p_{\nu}^2
+%	\right)
+%	\!\!
+%\Bigg)
+%}
+%%
+%\def \outfour {
+%\frac{1}{24 \text{pe}^2}\left(-\frac{6 \text{pe}^4 \pi}{\text{pn}^2}+12 \text{pe}^2 \pi +6\text{pn}^2 \text{ArcSin}\left[\frac{\text{pe}}{\text{pn}}-\frac{\text{pr} \text{Cos}[\text{tr}]}{\text{pn}}\right]+6 \text{pn}^2\text{ArcSin}\left[\frac{\text{pe}}{\text{pn}}+\frac{\text{pr} \text{Cos}[\text{tr}]}{\text{pn}}\right]\right)
+%\nonumber\\
+%&&
+%+\frac{1}{24 \text{pe}^2}\frac{1}{\text{pn}^2}
+%\Bigg(
+%\!\!
+%\left(\sqrt{\text{pn}^2 -(\text{pe}+\text{pr} \text{Cos}[\text{tr}])^2} +\sqrt{\text{pn}^2 -(\text{pe}-\text{pr} \text{Cos}[\text{tr}])^2}\right)(2\text{pe})\left(6 \text{pe}^2-3\text{pn}^2+2\text{pr}^2 \text{Cos}[\text{tr}]^2\right)
+%\nonumber\\
+%&&
+%+
+%\left(
+%\sqrt{\text{pn}^2 -(\text{pe}+\text{pr} \text{Cos}[\text{tr}])^2} -\sqrt{\text{pn}^2 -(\text{pe}-\text{pr} \text{Cos}[\text{tr}])^2}\right)(2\text{pr} \text{Cos}[\text{tr}]) \left(10 \text{pe}^2 +5 \text{pn}^2-2\text{pr}^2 \text{Cos}[\text{tr}]^2
+%\right)
+%\!\!
+%\Bigg)
+%}
+%%% End of latex-y definitions.  That was fun.
+%\bea
+%\int_0^\pi \!\! d \theta_e \,
+%\cos\theta_e \Big( p_e \cos\theta_e + p_r \cos \theta_r \Big) 
+%&=&
+%\frac{\pi}{2} p_e 
+%\eea
+%%
+%\bea
+%&&
+%\int_0^\pi \!\! d \theta_e \,
+%\sin\theta_e 
+%\sin \!
+%\left( \!
+%	\cos^{-1} \!
+%	\Big( 
+%		 \frac{- p_e}{p_\nu} \cos\theta_e +\frac{ -p_r}{p_\nu} \cos \theta_r 
+%	\Big) \!
+%\right)
+%\nonumber\\
+%&&
+%=
+%\intsinthetaesinthetanu
+%%\frac{p_\nu }{2p_e}\left( \sin^{-1}\!\left[\frac{p_e}{p_\nu}-\frac{p_r }{p_\nu}\cos\theta_r\right] 
+%%+ \sin^{-1}\!\left[\frac{p_e}{p_\nu}+\frac{p_r }{p_\nu}\cos\theta_r\right]\right)
+%%\nonumber\\
+%%+\frac{1 }{2p_e p_\nu}
+%%\left((p_e+ p_r\cos\theta_r) \sqrt{p_\nu^2- \left( p_e+p_r \cos\theta_r\right)^2}
+%%+
+%%(p_e-p_r\cos\theta_r) \sqrt{p_\nu^2- \left(p_e - p_r\cos\theta_r\right)^2}\right)
+%\nonumber\\
+%\eea
+%%
+%\bea
+%&&\int_0^\pi \!\! d \theta_e \,
+%%\sin\theta_e 
+%\lparen{26}
+%	\!
+%	\sin\theta_e 
+%	\sin \!
+%	\left( \!
+%		\cos^{-1} \!
+%		\Big( 
+%			 \frac{- p_e}{p_\nu} \cos\theta_e +\frac{ -p_r}{p_\nu} \cos \theta_r 
+%		\Big) \!
+%	\right)
+%	+ 
+%	\frac{-1}{p_\nu}
+%	\cos\theta_e 
+%	\Big( 
+%		p_e \cos\theta_e + p_r \cos \theta_r  
+%	\Big)
+%	\!
+%\rparen{26}^2
+%\nonumber\\
+%&&=
+%\sintesintenpcostecostensq
+%%
+%\nonumber\\
 %\eea
 %\bea
-\cos \theta_\nu &=&
-- \frac{1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big) .
-\eea
-%%
-%%
-...
-
-
-\todo[inline]{End of nu-basis integration stuff.}
-%%%%%    %%%%%    %%%%%    %%%%%    %%%%%
-
-But actually, we've still got to integrate over beta direction before this'll do anything useful for us.  I think.  Therefore, define
-\bea
-\omega^{\prime \prime} d(\textrm{...}) 
-&:=& 
-\int_0^{2\pi} \!\! d\phi_e 
-\int_0^\pi \!\! d \theta_e 
-\:
-\frac{  \omega^{\prime}  d(\textrm{stuff}) }{ d\phi_e d \theta_e},
-\eea
-which is totally legit, since we've already converted $d \Omega_e $ into things with a factor of $\sin \theta_e$.  On that note, 
-%%
-\bea
-\omega^{\prime \prime} d(\textrm{...}) 
-&=& 
-\left(\frac{1}{2\pi}\right)^4 \frac{\pi}{8} \: \xi 
-\int_0^{2\pi} \!\! d\phi_e 
-\int_0^\pi \!\! d \theta_e 
-\lparen{24}
-p_e E_e 
-%(E_0 - E_e)^2 
-E_\nu^2 \,
-d E_e \, 
-%d\theta_e d\phi_e 
-\nonumber\\
-&& \times 
-\lbracket{22} \!
-4
-\cos\left(\theta_e - \theta_\nu \right)
-    \left( 1+ b \frac{m}{E_e} \right)
-    + a \frac{p_e }{E_e} 
-    \cos \Big( 
-    	2 \big(\theta_e - \theta_\nu \big) \!
-    \Big)
-    -
-    3 \,
-    a\frac{ p_e^2 }{E_e E_\nu} 
-	    \cos \big(\theta_e - \theta_\nu \big)
-    \nonumber\\
-    &&
-    - \:
-    a\frac{ p_e \, p_r}{E_e E_\nu} 
-    \Big( \!
-	    \cos \big(
-		2\theta_e - \theta_\nu - \theta_r
-	\big)
-	+ 
-	2 \cos \big(
-		\theta_\nu - \theta_r
-	\big) \!
-    \Big)
-    \cos \big(\phi_r - \phi_e \big)
-\! 
-\rbracket{22} 
-\rparen{24},
-\eea
-and in a step that I'm thoroughly suspicious of, the last term that looks like $\cos(\phi_r - \phi_e)$ integrates to zero.  Hey, it \emph{might} be true.  Anyway, that means:
-
-\bea
-\omega^{\prime \prime} d(\textrm{...}) 
-&=& 
-\left(\frac{1}{2\pi}\right)^3 \frac{\pi}{8} \: \xi 
-\int_0^\pi \!\! d \theta_e 
-\lparen{24}
-p_e E_e 
-E_\nu^2 \,
-d E_e \, 
-\nonumber\\
-&&\times
-\lbracket{22} \!
-\cos\left(\theta_e - \theta_\nu \right)
-    \lbracket{16}
-    4 \left( 1+ b \frac{m}{E_e} \right)
-    -
-    3 \,
-    a\frac{ p_e^2 }{E_e E_\nu} 
-    \rbracket{16}
-    \nonumber\\
-    && 
-    + a \frac{p_e }{E_e} 
-    \cos \Big( 
-    	2 \big(\theta_e - \theta_\nu \big) \!
-    \Big)
-\rbracket{22} 
-\rparen{24},
-\eea
-and sadly, I'm doomed to put in the $\theta_\nu$'s (and $p_\nu$'s ???) in before doing the $\theta_e$ integral, because those things are functions of $\theta_e$. Sooo...
-%%    %%    %% 
-\def \thetanu {\theta_\nu }
-%\def \thetanu { \cos^{-1} \Big( \frac{-1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big) \Big) }
-%\def \costhetanu {\frac{-1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big)}
-\def \costemtn {\cos \theta_e \cos\thetanu + \sin\theta_e \sin\theta_\nu}
-\def \sintemtn {\sin \theta_e \cos\thetanu - \cos\theta_e \sin\theta_\nu}
-%%    %%    %% 
-\bea
-\omega^{\prime \prime} d(\textrm{...}) 
-&=& 
-\left(\frac{1}{2\pi}\right)^3 \frac{\pi}{8} \: \xi 
-\int_0^\pi \!\! d \theta_e 
-\lparen{24}
-p_e E_e 
-E_\nu^2 \,
-d E_e \, 
-\nonumber\\
-&&\times
-\lbracket{22} \!
-	\left( \costemtn \right)
-    \lbracket{16}
-    4 \left( 1+ b \frac{m}{E_e} \right)
-    -
-    3 \,
-    a\frac{ p_e^2 }{E_e E_\nu} 
-    \rbracket{16}
-    \nonumber\\
-    && 
-    + a \frac{p_e }{E_e} 
-        \Bigg(
-    \left( \costemtn \right)^2
-    - 
-    \left( \sintemtn \right)^2
-    \Bigg)
-\rbracket{22} 
-\rparen{24},
-\eea
-and therefore, 
-%
-%%    %%    %% 
-\def \thetanu {\theta_\nu }
-\def \costhetanu {\frac{-1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big)}
-\def \sinthetanu {\sin \! \left[ \cos^{-1}\! \left(\frac{-1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big) \right) \right] }
-%\def \sinthetanu { \sqrt{1-\left(\frac{-1}{p_\nu} \big(  p_e \cos\theta_e + p_r \cos \theta_r  \big) \right)^2}}
-\def \costemtn {\cos \theta_e \left(\costhetanu \right) + \sin\theta_e \sinthetanu}
-\def \sintemtn {\sin \theta_e \left(\costhetanu \right) - \cos\theta_e \sinthetanu}
-%%    %%    %% 
-\bea
-\!\!\!\!\!\!
-\omega^{\prime \prime} d(\textrm{...}) 
-&=& 
-\left(\frac{1}{2\pi}\right)^3 \frac{\pi}{8} \: \xi 
-\int_0^\pi \!\! d \theta_e 
-\lparen{22}
-	p_e E_e 
-	E_\nu^2 \,
-	d E_e \, 
-	\lbracket{28} \!
-		\Big( 
-			\cos \theta_e \left(\costhetanu\right) 
-			\nonumber\\
-			&&
-			+ \sin\theta_e \sinthetanu
-		\Big)
-	    \lbracket{16}
-	    4 \left( 
-			1+ b \frac{m}{E_e} 
-		\right)
-	    -
-	    3 \, a\frac{ p_e^2 }{E_e E_\nu} 
-	    \rbracket{16}
-			\nonumber\\
-			&& 
-			+ a \frac{p_e }{E_e} 
-			\Bigg(
-				\left( 
-					\cos \theta_e \left(\costhetanu\right) + \sin\theta_e \sinthetanu
-				\right)^2
-				\nonumber\\
-				&&
-				- 
-				\left( 
-					\sintemtn 
-				\right)^2
-			\Bigg)
-		\rbracket{28} 
-	\rparen{22},
-	\nonumber\\
-\eea
-...
-
-I might try to simplify that and make it look pretty.  Perhaps this is horribly misguided.  I don't know.  
-%%
-\def \sinthetanu {\sin \! \left[ \cos^{-1}\!\! \left(  \frac{- p_e}{p_\nu} \cos\theta_e +\frac{ -p_r}{p_\nu} \cos \theta_r \right)\! \right] }
-%%
-\bea
-\omega^{\prime \prime} d(\textrm{...}) 
-&=& 
-\left(\frac{1}{2\pi}\right)^3 \frac{\pi}{8} \: \xi 
-\int_0^\pi \!\! d \theta_e 
-\lparen{22}
-	p_e E_e 
-	E_\nu^2 \,
-	d E_e 
-	\lbracket{28} \!
-	    \frac{-1}{p_\nu} 
-	    \lparen{13} \!
-		    4 \left( \!
-				1+ b \frac{m}{E_e} 
-			\! \right)
-		    - 3 \, a\frac{ p_e^2 }{E_e E_\nu} 
-	    \rparen{13}			
-		\cos \theta_e 
-		\Big(
-			p_e \cos\theta_e + p_r \cos \theta_r  
-		\Big) 
-		\nonumber\\
-		&&
-		+ 
-	    \lparen{13} \!
-		    4 \left( \!
-				1+ b \frac{m}{E_e} 
-			\! \right)
-		    - 3 \, a\frac{ p_e^2 }{E_e E_\nu} 
-	    \rparen{13}
-			\sin\theta_e 
-			\, 
-			\sinthetanu
-			\nonumber\\
-			&& 
-			+ a \frac{p_e }{E_e} 
-			\lparen{36} \!\!
-				\left( 
-					\sin\theta_e 
-					\, 
-					\sinthetanu
-					+
-					\frac{-1}{p_\nu} 
-					\cos \theta_e 
-					\Big(
-						p_e \cos\theta_e + p_r \cos \theta_r  
-					\Big) 
-				\right)^2
-				\nonumber\\
-				&&
-				+
-				\left( 
-					\frac{+1}{p_\nu} 
-					\sin \theta_e 
-					\Big(
-							p_e \cos\theta_e + p_r \cos \theta_r  
-					\Big) 
-					+ \cos\theta_e \,
-					\sinthetanu
-				\right)^2
-			\!\! \rparen{36}
-		\rbracket{28} 
-	\rparen{22},
-	\nonumber\\
-\eea
-
-Anyway.  We'll want to list off some nice integrals here.  See integration\_scratch.nb.
-%%% first, some definitions, for ease of latex-ing:
-%%
-\def \intsinthetaesinthetanu {\frac{p_\nu }{2p_e}
-\left( 
-	\sin^{-1}\!\left[\frac{p_e}{p_\nu}-\frac{p_r }{p_\nu}\cos\theta_r\right] 
-	+ 
-	\sin^{-1}\!\left[\frac{p_e}{p_\nu}+\frac{p_r }{p_\nu}\cos\theta_r\right]
-\right)
-\nonumber\\
-&&
-+
-\frac{1}{2p_e p_\nu}
-\left(
-	(p_e+ p_r\cos\theta_r) \sqrt{p_\nu^2- \left( p_e+p_r \cos\theta_r\right)^2}
-	+
-	(p_e-p_r\cos\theta_r) \sqrt{p_\nu^2- \left(p_e - p_r\cos\theta_r\right)^2}
-\right)
-}
-%%
-\def \sintesintenpcostecostensq {
--\frac{1}{24 p_e^2} 
-\Bigg( \!
-	-\frac{6 p_e^4 \pi }{p_{\nu}^2}
-	-12 p_e^2 \pi 
-	+ 6p_{\nu}^2 \sin^{-1}\! \left[\frac{p_e}{p_{\nu}}-\frac{p_r \cos\theta_r}{p_{\nu}}\right]
-	+ 6 p_{\nu}^2\sin^{-1}\!\left[\frac{p_e}{p_{\nu}}+\frac{p_r \cos\theta_r}{p_{\nu}}\right]
-	\!
-\Bigg)
-	\nonumber\\
-&&	
--\frac{1}{24 p_e^2}
-\bigg(
-	\frac{1}{p_{\nu}^2} 
-\bigg) \!
-\Bigg( \!\!
-	\left(
-		\sqrt{
-			p_{\nu}^2-(p_e + p_r \cos\theta_r)^2
-		} 
-		+ 
-		\sqrt{
-			p_{\nu}^2-(p_e - p_r \cos\theta_r)^2
-		} \,
-	\right)
-	\left(
-		%\frac{2 p_e}{1}
-		2 p_e
-	\right)
-	\left(
-		6 p_e^2 + 2p_r^2 \cos^2\theta_r - 3p_{\nu}^2 
-	\right) 
-	\nonumber\\
-&&	+ 
-	\left( 
-		\sqrt{ 
-			p_{\nu}^2-(p_e + p_r \cos\theta_r)^2
-		}
-		- 
-		\sqrt{
-			p_{\nu}^2-(p_e - p_r \cos\theta_r)^2
-		} \,
-	\right)
-	\left(
-		%\frac{2p_r}{1} 
-		2p_r 
-		\cos\theta_r
-	\right)
-	\left(
-		10p_e^2 -2p_r^2\cos^2\theta_r + 5p_{\nu}^2
-	\right)
-	\!\!
-\Bigg)
-}
-%
-\def \outfour {
-\frac{1}{24 \text{pe}^2}\left(-\frac{6 \text{pe}^4 \pi}{\text{pn}^2}+12 \text{pe}^2 \pi +6\text{pn}^2 \text{ArcSin}\left[\frac{\text{pe}}{\text{pn}}-\frac{\text{pr} \text{Cos}[\text{tr}]}{\text{pn}}\right]+6 \text{pn}^2\text{ArcSin}\left[\frac{\text{pe}}{\text{pn}}+\frac{\text{pr} \text{Cos}[\text{tr}]}{\text{pn}}\right]\right)
-\nonumber\\
-&&
-+\frac{1}{24 \text{pe}^2}\frac{1}{\text{pn}^2}
-\Bigg(
-\!\!
-\left(\sqrt{\text{pn}^2 -(\text{pe}+\text{pr} \text{Cos}[\text{tr}])^2} +\sqrt{\text{pn}^2 -(\text{pe}-\text{pr} \text{Cos}[\text{tr}])^2}\right)(2\text{pe})\left(6 \text{pe}^2-3\text{pn}^2+2\text{pr}^2 \text{Cos}[\text{tr}]^2\right)
-\nonumber\\
-&&
-+
-\left(
-\sqrt{\text{pn}^2 -(\text{pe}+\text{pr} \text{Cos}[\text{tr}])^2} -\sqrt{\text{pn}^2 -(\text{pe}-\text{pr} \text{Cos}[\text{tr}])^2}\right)(2\text{pr} \text{Cos}[\text{tr}]) \left(10 \text{pe}^2 +5 \text{pn}^2-2\text{pr}^2 \text{Cos}[\text{tr}]^2
-\right)
-\!\!
-\Bigg)
-}
-%% End of latex-y definitions.  That was fun.
-\bea
-\int_0^\pi \!\! d \theta_e \,
-\cos\theta_e \Big( p_e \cos\theta_e + p_r \cos \theta_r \Big) 
-&=&
-\frac{\pi}{2} p_e 
-\eea
-%
-\bea
-&&
-\int_0^\pi \!\! d \theta_e \,
-\sin\theta_e 
-\sin \!
-\left( \!
-	\cos^{-1} \!
-	\Big( 
-		 \frac{- p_e}{p_\nu} \cos\theta_e +\frac{ -p_r}{p_\nu} \cos \theta_r 
-	\Big) \!
-\right)
-\nonumber\\
-&&
-=
-\intsinthetaesinthetanu
-%\frac{p_\nu }{2p_e}\left( \sin^{-1}\!\left[\frac{p_e}{p_\nu}-\frac{p_r }{p_\nu}\cos\theta_r\right] 
-%+ \sin^{-1}\!\left[\frac{p_e}{p_\nu}+\frac{p_r }{p_\nu}\cos\theta_r\right]\right)
+%&&
+%\int_0^\pi \!\! d \theta_e \,
+%\bigg( 
+%	\frac{+1}{p_\nu} 
+%	\sin \theta_e 
+%	\Big(
+%			p_e \cos\theta_e + p_r \cos \theta_r  
+%	\Big) 
+%	+ \cos\theta_e \,
+%	\sinthetanu
+%\bigg)^2
 %\nonumber\\
-%+\frac{1 }{2p_e p_\nu}
-%\left((p_e+ p_r\cos\theta_r) \sqrt{p_\nu^2- \left( p_e+p_r \cos\theta_r\right)^2}
-%+
-%(p_e-p_r\cos\theta_r) \sqrt{p_\nu^2- \left(p_e - p_r\cos\theta_r\right)^2}\right)
-\nonumber\\
-\eea
+%&&
+%=
+%\outfour
+%\nonumber\\
+%\eea
+%%% End of math-y definitions to be used for future reference.
+%...Or whatever.  The point is, those last two equations add up to $\pi$.  Exciting!!!
 %
-\bea
-&&\int_0^\pi \!\! d \theta_e \,
-%\sin\theta_e 
-\lparen{26}
-	\!
-	\sin\theta_e 
-	\sin \!
-	\left( \!
-		\cos^{-1} \!
-		\Big( 
-			 \frac{- p_e}{p_\nu} \cos\theta_e +\frac{ -p_r}{p_\nu} \cos \theta_r 
-		\Big) \!
-	\right)
-	+ 
-	\frac{-1}{p_\nu}
-	\cos\theta_e 
-	\Big( 
-		p_e \cos\theta_e + p_r \cos \theta_r  
-	\Big)
-	\!
-\rparen{26}^2
-\nonumber\\
-&&=
-\sintesintenpcostecostensq
 %
-\nonumber\\
-\eea
-\bea
-&&
-\int_0^\pi \!\! d \theta_e \,
-\bigg( 
-	\frac{+1}{p_\nu} 
-	\sin \theta_e 
-	\Big(
-			p_e \cos\theta_e + p_r \cos \theta_r  
-	\Big) 
-	+ \cos\theta_e \,
-	\sinthetanu
-\bigg)^2
-\nonumber\\
-&&
-=
-\outfour
-\nonumber\\
-\eea
-%% End of math-y definitions to be used for future reference.
-...Or whatever.  The point is, those last two equations add up to $\pi$.  Exciting!!!
-
-
-We can ``simplify'' that 
-%shitty 
-integral thing quite a bit now.
-
-%%
-\bea
-\omega^{\prime \prime} d(\textrm{...}) 
-&=& 
-\left(\frac{1}{2\pi}\right)^3 \frac{\pi}{8} \: \xi 
-	p_e E_e 
-	E_\nu^2 \,
-	d E_e 
-\lbracket{30}\!\!
-	\left(
-		\frac{\pi}{2} p_e
-	\right)
-	\left( \frac{-1}{p_\nu} \right)
-	\lparen{13} \!
-		4 \left( \!
-			1+ b \frac{m}{E_e} 
-		\! \right)
-	    - 3 \, a\frac{ p_e^2 }{E_e E_\nu} 
-	\rparen{13}
-	+ 
-	a \frac{p_e }{E_e} 
-	\left( \pi \right)			
-\nonumber\\
-&&
-+ 
-\lparen{13} 
-	\! 4 
-    \left( \!
-		1+ b \frac{m}{E_e} 
-	\! \right)
-    - 3 \, a\frac{ p_e^2 }{E_e E_\nu} 
-\rparen{13}
-\lbracket{20}
-	\intsinthetaesinthetanu
-\rbracket{20}
-\rbracket{30},
-\nonumber\\
-\eea
-%%    %%
-\bea
-\omega^{\prime \prime} d(\textrm{...}) 
-&=& 
-\left(\frac{1}{2\pi}\right)^3 \frac{\pi}{8} \: \xi 
-p_e E_e 
-E_\nu^2 \,
-d E_e 
-\lbracket{30}\!\!
+%We can ``simplify'' that 
+%%shitty 
+%integral thing quite a bit now.
+%
+%%%
+%\bea
+%\omega^{\prime \prime} d(\textrm{...}) 
+%&=& 
+%\left(\frac{1}{2\pi}\right)^3 \frac{\pi}{8} \: \xi 
+%	p_e E_e 
+%	E_\nu^2 \,
+%	d E_e 
+%\lbracket{30}\!\!
 %	\left(
-%		\frac{ - \pi \,p_e }{2 p_\nu}
+%		\frac{\pi}{2} p_e
 %	\right)
+%	\left( \frac{-1}{p_\nu} \right)
 %	\lparen{13} \!
 %		4 \left( \!
 %			1+ b \frac{m}{E_e} 
 %		\! \right)
 %	    - 3 \, a\frac{ p_e^2 }{E_e E_\nu} 
 %	\rparen{13}
-	+ 
-	a \frac{p_e }{E_e} 
-	\left( \pi \right)			
-\nonumber\\
-&&
-+ 
-\lparen{13} 
-	\! 4 
-    \left( \!
-		1+ b \frac{m}{E_e} 
-	\! \right)
-    - 3 \, a\frac{ p_e^2 }{E_e E_\nu} 
-\rparen{13}
-\lbracket{20}
-	\left(
-		\frac{ - \pi \,p_e }{2 p_\nu}
-	\right)
-	+
-	\intsinthetaesinthetanu
-\rbracket{20}
-\rbracket{30},
-\nonumber\\
-\eea
-
-
-
+%	+ 
+%	a \frac{p_e }{E_e} 
+%	\left( \pi \right)			
+%\nonumber\\
+%&&
+%+ 
+%\lparen{13} 
+%	\! 4 
+%    \left( \!
+%		1+ b \frac{m}{E_e} 
+%	\! \right)
+%    - 3 \, a\frac{ p_e^2 }{E_e E_\nu} 
+%\rparen{13}
+%\lbracket{20}
+%	\intsinthetaesinthetanu
+%\rbracket{20}
+%\rbracket{30},
+%\nonumber\\
+%\eea
+%%%    %%
+%\bea
+%\omega^{\prime \prime} d(\textrm{...}) 
+%&=& 
+%\left(\frac{1}{2\pi}\right)^3 \frac{\pi}{8} \: \xi 
+%p_e E_e 
+%E_\nu^2 \,
+%d E_e 
+%\lbracket{30}\!\!
+%%	\left(
+%%		\frac{ - \pi \,p_e }{2 p_\nu}
+%%	\right)
+%%	\lparen{13} \!
+%%		4 \left( \!
+%%			1+ b \frac{m}{E_e} 
+%%		\! \right)
+%%	    - 3 \, a\frac{ p_e^2 }{E_e E_\nu} 
+%%	\rparen{13}
+%	+ 
+%	a \frac{p_e }{E_e} 
+%	\left( \pi \right)			
+%\nonumber\\
+%&&
+%+ 
+%\lparen{13} 
+%	\! 4 
+%    \left( \!
+%		1+ b \frac{m}{E_e} 
+%	\! \right)
+%    - 3 \, a\frac{ p_e^2 }{E_e E_\nu} 
+%\rparen{13}
+%\lbracket{20}
+%	\left(
+%		\frac{ - \pi \,p_e }{2 p_\nu}
+%	\right)
+%	+
+%	\intsinthetaesinthetanu
+%\rbracket{20}
+%\rbracket{30},
+%\nonumber\\
+%\eea
+%
+%
+%
 
 
 
