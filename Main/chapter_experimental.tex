@@ -9,7 +9,7 @@
 %\color{oldcolor}
 \section{Overview}
 
-The experimental subject matter of this thesis was conducted at TRIUMF using the apparatus of the TRIUMF Neutral Atom Trap (TRINAT) collaboration.  The TRINAT laboratory offers an experimental set-up which is uniquely suited to precision tests of Standard Model beta decay physics, by virtue of its ability to produce highly localized samples of isotopically pure cold atoms within an open detector geometry.  
+The experimental subject matter of this thesis was conducted at TRIUMF using the apparatus of the TRIUMF Neutral Atom Trap (TRINAT) collaboration.  The TRINAT laboratory offers an experimental set-up which is uniquely suited to precision tests of Standard Model beta decay physics, by virtue of its ability to produce highly localized samples of isotopically pure cold atoms within an open detector geometry.  \note{mumble mumble 7ish days of beamtime, mumble mumble 2014.}
 
 The TRINAT lab accepts radioactive ions delivered by the ISAC beamline at TRIUMF.  These ions are collected on the surface of a hot zirconium \aside{Is it definitely zirconium?  I don't remember.} foil where they are electrically neutralized, and subsequently escape from the foil into the first of two experimental chambers (the ``collection chamber").  Within the collection chamber, atoms of one specific isotope -- for the purposes of this thesis,  \isotope[37]{K} -- are continuously collected into a magneto-optical trap (MOT).  Approximately once per second, the atoms in the collection MOT are transferred to a second experimental chamber (the ``detection chamber'') and loaded into a second MOT (see Fig.~\ref{fig:doublemot}).  Because the transfer and trapping mechanisms rely on tuning to specific atomic resonances, this setup allows for the selection of only a single isotope within the detection MOT, and a significantly reduced background relative to the initial beamline output.  The transfer methodology is discussed in some detail within another publication~\cite{swanson}.
 
@@ -25,56 +25,21 @@ The TRINAT lab accepts radioactive ions delivered by the ISAC beamline at TRIUMF
 	\label{fig:doublemot}
 \end{figure}
 
-Once the newly transferred atoms have arrived at the second trap, the MOT cycles 500 times between a state where it is `on' and actively confining atoms to a region of approximately 2\,mm$^3$, to a state where it is `off' and instead the atoms are spin-polarized by optical pumping while the atom cloud expands ballistically before being re-trapped.  In order to eliminate systematic effects, the polarization direction is flipped every 16 seconds.  This optical pumping technique and its results are the subject of a recent publication~\cite{ben_OP}.
+Once the newly transferred atoms have arrived at the second trap, the MOT cycles 500 times between a state where it is `on' and actively confining atoms to a region of approximately 2\,mm$^3$, to a state where it is `off' and instead the atoms are spin-polarized by optical pumping while the atom cloud expands ballistically before being re-trapped.  This setup is described further in Section~\ref{section:acmot_and_polarization}, and the optical pumping technique and its results are the subject of a recent publication~\cite{ben_OP}.
 
 \note{Below is pretty vague.  I could do better, even for just an overview-summary thing.  Obvs I have to describe it in detail later on *somewhere*, though maybe not in the overview-summary...} 
  
-Detectors are positioned about the second MOT for data collection.  The science chamber (shown in Figure \ref{fig:thechamber}) operates at ultra-high vacuum (UHV) and provides the apparatus necessary to intermittently confine atoms within a MOT and then spin-polarize them, and quantify their position, temperature, and initial polarization, and electrostatic hoops to allow for collection and observation of charged recoiling daughter nuclei, as well as further detectors to observe the outgoing betas and reconstruct angular correlations.  
-%\comment{(should I elaborate here?) -- "no".} 
-
-\begin{figure}[h!!!tb]
-	\centering
-%	\hspace*{\fill}%
-	\subfloat[A decay event within the TRINAT science chamber.  After a decay, the daughter will be unaffected by forces from the MOT.  Positively charged recoils and negatively charged shake-off electrons are pulled towards detectors in opposite directions.  Although the $\beta^+$ is charged, it is also highly relativistic and escapes the electric field with minimal perturbation.
-	%\comment{The pic is still kind-of fuzzy.}
-	]
-	{\includegraphics[width=.530\linewidth]{Figures/chamber_decayevent3.png}\label{chamber_decayevent} }
-	\hspace*{\fill}
-%	\hfill
-	\hspace*{\fill}
-	\subfloat[Inside the TRINAT science chamber.  This photo is taken from the vantage point of one of the microchannel plates, looking into the chamber towards the second microchannel plate.  The current-carrying copper Helmholtz coils and two beta telescopes are visible at the top and bottom.  The metallic piece near the center is one of the electrostatic `hoops' used to generate an electric field within the chamber.  The hoop's central circular hole allows access to the microchannel plate, and the two elongated holes on the sides allow the MOT's trapping lasers to pass unimpeded at an angle of 45 degress `out of the page'.]	
-	{\includegraphics[width=.444\linewidth]{Figures/chamber_photo_2.png}}
-%	\hspace*{\fill}%
-	\caption{The TRINAT detection chamber}	
-	\label{fig:thechamber}
-\end{figure}
-%\clearpage
-
-
-
-%\color{black}
-%\section{Double MOT System to Supply Atoms}
-%%\\*
-%Mostly, 
-%this requires a diagram.  We take ions supplied by the ISAC beamline, neutralize them and trap them in the first MOT, then periodically transfer them to a second MOT.  Detectors are 
-%positioned about the second MOT for data 
-%collection.  This double MOT system eliminates a great deal of background.  
-%Also, here's some random equation that doesn't really go with the topic of this section:
-%\input{AnEquation}
-%Furthermore, here's a picture that doesn't really go with the topic of this section.
-%collection.  This double MOT system 
-%\margintodo[color=green]{A thing that's worth noting is that (I think!) recoil-order corrections have been implicitly excluded at some point here.  ...Is this even true??}
-%eliminates a great deal of background.  
+Detectors are positioned about the second MOT for data collection.  The detection chamber 
+%(shown in Figure \ref{fig:thechamber}) 
+operates at ultra-high vacuum (UHV) and provides not only the apparatus necessary to intermittently confine and then spin-polarize atoms, but also the vbariety of detectors and implements required to quantify their position, temperature, and polarization.  The detection chamber further boasts an array of electrostatic hoops to collect both positively and negatively charged low energy particles into two microchannel plates (MCPs),  and a further set of two beta detectors positioned along the polarization axis, each of which consists of a 40x40 pixel double-sided silicon strip detector (DSSD) and a scintillator and photomultiplier tube (PMT).  The details of the detection chamber setup are described in detail in Section~\ref{section:detectors}.
 
 
 \section{AC-MOT and Polarization Setup}
-
+\label{section:acmot_and_polarization}
 %\\*
 In order to facilitate a measurement of $A_{\mathrm{\beta}}$, we went to great efforts to polarize the atom cloud, and quantify that polarization.  This resulted in a duty cycle in which the atoms were intermittently trapped in the AC-MOT, then optically pumped to polarize them.  While knowledge of the polarization is less critical in a measurement of $b_{\mathrm{Fierz}}$, we still use only the polarized portion of the duty cycle in order to minimize other systematic errors, such as the scintillator energy calibration and overall trap position.
-\note[color=green]{Is that $\uparrow$ even true??  Because I'm really not sure it is.  Via Kofoedhansen, $(E_0 - E_e) = E_\nu$.  So there.}  
-Anyway, here's some figures.  Or possibly one figure.  Whatever.  Also, here's a reference to a figure.  See Fig.~\ref*{fig:themot}, or also its subfigures, eg Fig.~\ref{fig:acmot} and Fig.~\ref{fig:mot}.  Maybe I have to subref them?  Like, eg, Subfig.~\subref{fig:acmot} and Subfig.~\subref*{fig:mot}.  What if we try to subref everything?  Consider, eg, Fig.~\subref{fig:themot}.
-\margintodo{Does this work?  It really should.}
 
+\note{In order to eliminate systematic effects, the polarization direction is flipped every 16 seconds.}
 
 The Magneto-Optical Trap is a well-known technique from atomic physics, used to confine and cool neutral atoms~\cite{raabprentiss}.  The technique is used predominantly with alkalis due to their simple orbital electron structure, and is quite robust, so is appropriate for use with $^{37}\textrm{K}$.  Once set up, the trapping force is specific to the isotope for which the trap has been tuned, which makes it ideal for use in radioactive decay experiments, since the daughters are unaffected by the trapping forces keeping the parent confined.
 
@@ -89,45 +54,43 @@ One feature which makes our MOT unusual has been developed as a result of our ne
 
 
 
-\begin{figure}[ht]
-\centering
-	\begin{subfigure}[t]{0.242\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{mot.png}
-	%	\label{fig:mot}
-		\caption{Components of a magneto-optical trap, including current-carrying magnetic field coils and counterpropagating circularly polarized laser beams.}
-		\label{fig:mot}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[t]{0.728\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{acmot.png}
-		\caption{One cycle of trapping with the AC-MOT, followed by optical pumping to spin-polarize the atoms.  After atoms are transferred into the science chamber, this cycle is repeated 500 times before the next transfer.  The magnetic dipole field is created by running parallel (rather than anti-parallel as is needed for the MOT) currents through the two coils.}
-		\label{fig:acmot}
-	\end{subfigure}
-	\caption{An alternating-current magneto-optical trap with a duty cycle optimized for producing polarized atoms}	
-	\label{fig:themot}
-\color{black}
-\end{figure}
+\note[color=green]{Anyway, here's some figures.  Or possibly one figure.  Whatever.  Also, here's a reference to a figure.  See Fig.~\ref*{fig:themot} (works -- currently ``3.4"), or also its subfigures, eg Fig.~\ref{fig:acmot} (works -- currently ``3.4b") and Fig.~\ref{fig:mot} (works -- currently ``3.4a").  Maybe I have to subref them?  Like, eg, Subfig.~\subref{fig:acmot} (works -- currently ``3.4b") and Subfig.~\subref*{fig:mot} (works -- currently ``3.4a").  What if we try to subref everything?  Consider, eg, Fig.~\subref{fig:themot} (doesn't work).  Yeah, ok, so fortunately the note cites like the text.  This gives an example of shit to do and not to do.  Also, can't do a linebreak within a note.}  
+
+\input{figure_theacmot_sidebyside}
+% fig:themot
+% 	fig:mot
+% 	fig:acmot
+
 
 
 We spin-polarize $^{37}\textrm{K}$ atoms within the trapping region by optical pumping~\cite{ben_OP}.  A circularly polarized laser is tuned to match the relevant atomic resonances, and is directed through the trapping region along the vertical axis in both directions.  When a photon is absorbed by an atom, the atom transitions to an excited state and its total angular momentum (electron spin + orbital + nuclear spin) along the vertical axis is incremented by one unit.  When the atom is de-excited a photon is emitted isotropically, 
 %\comment{(is it still isotropic when it's polarized?  I bet it's not.)}
 so it follows that if there are available states of higher and lower angular momentum, the \emph{average} change in the angular momentum projection is zero.  If the atom is not yet spin-polarized, it can absorb and re-emit another photon, following a biased random walk towards complete polarization.  
 
-In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  In particular, the magnetic field must be aligned along the polarization axis (otherwise the tendency will be to actually depolarize the atoms), and it must be uniform in magnitude over the region of interest (otherwise its divergencelessness will result in the field also having a non-uniform direction, which results in a spatially-dependent depolarization mechanism).  Note that this type of magnetic field is not compatible with the MOT, which requires a quadrupolar magnetic field \emph{gradient}, and has necessitated our use of the AC-MOT as described in Subsection~\ref{trap}.
+In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  In particular, the magnetic field must be aligned along the polarization axis (otherwise the tendency will be to actually depolarize the atoms), and it must be uniform in magnitude over the region of interest (otherwise its divergencelessness will result in the field also having a non-uniform direction, which results in a spatially-dependent depolarization mechanism).  Note that this type of magnetic field is not compatible with the MOT, which requires a linear magnetic field gradient in all directions (characteristic of a quadrupolar field shape), and has necessitated our use of the AC-MOT as described in Subsection~\ref{section:acmot_and_polarization}.\aside{that's this section.}
+
+
 
 
 %\color{black}
 %	\subsection{\textbf{Nuclear Setup}}
 \section{Measurement Geometry and Detectors}
+\label{section:detectors}
 	%\\*
 	Needs several diagrams.  Back-to-back beta detectors along the polarization axis.  Back-to-back MCPs in an electric field to tag events from the trap, and to measure the trap position and polarization.  Hoops to produce the electric field.  Many laser ports to make the MOT functional, and for optical pumping.  Fancy mirror geometry to combine optical pumping and trapping light along the vertical axis.  Water-cooled (anti-)Helmholz coils within the chamber for the AC-MOT, fast switching to produce an optical pumping field.  
 %	\subsection{\textbf{All the Detectors}}
 
+
+\input{figure_thechamber_sidebyside}
+% "fig:thechamber"
+
+
+
+
+\note{...(shown in Figure \ref{fig:thechamber}) ...}
 The beta detectors, located above and below the atom cloud along the axis of polarization (see Figure~\ref{chamber_decayevent}), are each the combination of a plastic scintillator and a set of silicon strip detectors.  Using all of the available information, these detectors are able to reconstruct the energy of an incident beta, as well as its hit position, and provide a timestamp for the hit's arrival.  Together the upper and lower beta detectors subtend approximately 1.4\% of the total solid angle as measured with respect to the cloud position. 
 
-It must be noted that the path between the cloud of trapped atoms and either beta detector is blocked by two objects:  a 254$\,\mu$m silicon carbide mirror (necessary for both trapping and optical pumping), and a 229$\,\mu$m beryllium foil (separating the UHV vacuum within the chamber from the outside world).  In order to minimize beta scattering and energy attenuation, these objects have had their materials selected to use the lightest nuclei with the desired material properties, and have been manufactured to be as thin as possible without compromising the experiment.  As the $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$ decay proceess releases $Q=5.125$\,MeV of kinetic energy~\cite{Q_value}, the great majority of betas are energetic enough to punch through both obstacles without significant energy loss before being collected by the beta detectors.  
+It must be noted that the path between the cloud of trapped atoms and either beta detector is blocked by two objects:  a 275$\,\mu$m silicon carbide mirror (necessary for both trapping and optical pumping), and a 229$\,\mu$m beryllium foil (separating the UHV vacuum within the chamber from the outside world).  In order to minimize beta scattering and energy attenuation, these objects have had their materials selected to use the lightest nuclei with the desired material properties, and have been manufactured to be as thin as possible without compromising the experiment.  As the $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$ decay proceess releases $Q=5.125$\,MeV of kinetic energy~\cite{Q_value}, the great majority of betas are energetic enough to punch through both obstacles without significant energy loss before being collected by the beta detectors.  
 
 On opposing sides of the chamber, and perpendicular to the axis of polarization, two stacks of $\sim$ 80\,mm diameter microchannel plates (MCPs) have been placed (see Figure~\ref{fig:thechamber}) as detectors, providing a time stamp when a particle is incident on their surfaces.  Behind each stack of MCPs there is a set of delay lines, which provide  position sensitivity for these detectors.   
 

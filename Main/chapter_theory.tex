@@ -1,0 +1,66 @@
+% !TEX root = ../thesis_main.tex
+
+
+
+\clearpage
+\chapter{Theoretical Overview}
+\label{theory_chapter}
+
+\section{The Basics of Beta Decay}
+	%\\*
+	Standard Model beta decay is well understood.  The Fermi model of beta decay is in all the textbooks, but you have to dig slightly harder to understand Gamow-Teller or mixed decays, all of which are relevant here.  
+	
+	via Krane~\cite{krane}
+	Under the Allowed Approximation, we require that a beta decay may not carry away any orbital angular momentum, because we treat the nucleus as pointlike \aside{Is this even true?  The pointlike thing?} and work in the CM frame.  An Allowed decay can, however, change the total nuclear angular momentum, because the outgoing leptons have spin$=1/2$ and therefore carry angular momentum.  Therefore, in an allowed decay, the total nuclear angular momentum must always change by either $0$ or $1$.  
+	
+	From a 2006 paper by Severijns et al ~\cite{severijns_beck_cuncic_2006}, the selection rules for an allowed transition are:
+	
+\bea
+\Delta I = I_f - I_i = \{0, \pm 1\} \\ 
+\hat{\Pi}_i \, \hat{\Pi}_f = +1
+\eea
+
+	Then, you can separate the allowed transitions into singlet (anti-parallel lepton spins, $S=0$ -- a Fermi transition) and triplet states (parallel lepton spins, $S=1$ -- a Gamow-Teller transition).
+	
+	
+	Fermi decays are so-called ``vector'' interactions, and happen when the spin of the two leptons involved are antiparallel, so there can be no change in angular momentum (at least in the case of the Allowed approximation).  
+	
+	Gamow-Teller decays involve two leptons with parallel spins, so the decay must change the projection of the nuclear angular momentum, $M_I$, by exactly one unit (in the case of the Allowed approximation).  They transition may or may not simultaneously change the total nuclear spin, $I$, by one unit.  These are ``axial-vector'' interactions.  (Note that $I=0 \rightarrow I=0$ interactions are never Gamow-Teller decays.  
+	
+	Probably everything in this section is yoinked from ~\cite{wong1990}, pg 212.  
+	
+	
+%\section{JTW Formalism}	
+%	%\\*
+%	Describes how to search for a variety of BSM terms within beta decay.  Does not account for certain well-understood effects of similar (or greater) magnitude.
+%	
+%	\input{equation_jtw_master}
+%	% equation:jtw_master
+%	
+%\note{Probably I should now give values for things, or expressions for letters, or something.  }
+%We haven't integrated out the neutrino momentum.  Neutrino energy itself is a redundant parameter, I think, because we are already using an endpoint energy and a beta energy, and we are not taking recoil-order effects into account.
+%
+%For ``convenience'', let's define a nuclear alignment term, $\Talign$, so that:
+%\bea
+%\Talign(\vecJ) &=& \TalignExpand
+%\eea
+%
+%
+%
+%\section{Holstein Formalism}
+%	An in-depth mathematical description of beta decay, including many smaller effects.  It does not include a description of the BSM physics of greatest interest to us.   Here, we've already integrated over neutrino momentum at least.  That's something.  Here's Holstein's Eq.~(52):
+%\input{equation_holstein52}
+%% equation:holstein52
+%
+%\section{Relation between JTW and Holstein Formalisms}
+%	%\\*
+%	To conduct a precision search for scalar and tensor couplings, it is necessary to combine the Holstein and JTW models into a single cohesive probability distribution.  
+\section{Mathematical Formalism}
+	In order to proceed with a measurement, we must find a master equation to describe the probability of beta decay events with any given distribution of energy and momenta among the daughter particles, as a function of the strength of the specific couplings of interest to us.  To do this, two sets of formalisms are combined -- the older formalism from Jackson, Treiman, and Wylde (JTW)~\cite{jtw},~\cite{jtw_coulomb}, which describes the effects of all types of Standard Model and exotic couplings of interest to us here, but which truncates its expression at first order in the (small) parameter of recoil energy, and a newer formalism from Holstein ~\cite{holstein}, which includes terms up to several orders higher in recoil energy, but which does not include any description of the exotic couplings of particular interest to us.  We note that because any exotic couplings present in nature have already been determined to be either small or nonexistant, it is sufficient to describe these parameters with expressions truncated at first order, despite the fact that it is still necessary to describe the larger Standard Model couplings with higher-order terms. 
+	
+	The procedure for combining the two formalisms is described in detail in Appendix~\ref{appendix_forthepeople}, so we will simply provide the combined master equation here:
+	
+\bea
+\textrm{put  a master equation here.}
+\eea
+\aside{Do it!  Do the master equation!}
