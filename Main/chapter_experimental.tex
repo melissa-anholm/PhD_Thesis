@@ -45,6 +45,13 @@ The Magneto-Optical Trap is a well-known technique from atomic physics, used to 
 
 There are two primary components necessary for any MOT:  a laser, and a magnetic field.  The laser, which must be circularly polarized in the appropriate directions and tuned slightly to the red of an atomic resonance, is split into three perpendicular retroreflected beams, doppler cooling the atoms and (with the appropriate magnetic field) confining them in all three dimensions (see Figure~\ref{fig:mot}).  The TRINAT science chamber includes 6 `viewports' specifically designed to be used for the trapping laser.
 
+\missingfigure{This is going to need another edge-on G4 picture of the chamber to label all the atomic components.  }
+
+\missingfigure{I need \emph{at least} one atomic level diagram.  But possibly as many as 3 level diagrams.  Have to show energies for MOT, energies for OP, and energies for photoionization.  }
+
+\note{Need to describe how polarization works.}
+\note{Is my photoionization description adequate?}
+
 A MOT also requires a quadrupolar magnetic field, which we generate with two current-carrying anti-Helmholtz coils located within the vacuum chamber itself.  The coils themselves are hollow, and are cooled continuously by pumping temperature-controlled water through them.   
 
 One feature which makes our MOT unusual has been developed as a result of our need to rapidly cycle the MOT on and off -- that is, it is an ``AC-MOT''.  Rather than running the trap with one particular magnetic field and one set of laser polarizations to match, we run a sinusoidal AC current in the magnetic field coils, and so the sign and magnitude of the magnetic field alternate smoothly between two extrema, and the trapping laser polarizations are rapidly swapped to remain in sync with the field~\cite{harveymurray}\cite{thesis}.  See Figure~\ref{fig:acmot}.  
@@ -67,8 +74,9 @@ We spin-polarize $^{37}\textrm{K}$ atoms within the trapping region by optical p
 %\comment{(is it still isotropic when it's polarized?  I bet it's not.)}
 so it follows that if there are available states of higher and lower angular momentum, the \emph{average} change in the angular momentum projection is zero.  If the atom is not yet spin-polarized, it can absorb and re-emit another photon, following a biased random walk towards complete polarization.  
 
-In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  In particular, the magnetic field must be aligned along the polarization axis (otherwise the tendency will be to actually depolarize the atoms), and it must be uniform in magnitude over the region of interest (otherwise its divergencelessness will result in the field also having a non-uniform direction, which results in a spatially-dependent depolarization mechanism).  Note that this type of magnetic field is not compatible with the MOT, which requires a linear magnetic field gradient in all directions (characteristic of a quadrupolar field shape), and has necessitated our use of the AC-MOT as described in Subsection~\ref{section:acmot_and_polarization}.\aside{that's this section.}
+\missingfigure{Need a picture of the whole duty cycle.  Possibly combine with ~\ref{fig:acmot}.}
 
+In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  In particular, the magnetic field must be aligned along the polarization axis (otherwise the tendency will be to actually depolarize the atoms), and it must be uniform in magnitude over the region of interest (otherwise its divergencelessness will result in the field also having a non-uniform direction, which results in a spatially-dependent depolarization mechanism).  Note that this type of magnetic field is not compatible with the MOT, which requires a linear magnetic field gradient in all directions (characteristic of a quadrupolar field shape), and has necessitated our use of the AC-MOT as described in Section~\ref{section:acmot_and_polarization}.\aside{that's this section.  I should really describe the AC-MOT.}
 
 
 
@@ -76,7 +84,7 @@ In order to optimally polarize a sample of atoms by this method, it is necessary
 %	\subsection{\textbf{Nuclear Setup}}
 \section{Measurement Geometry and Detectors}
 \label{section:detectors}
-	%\\*
+\note{Do I want to make an entirely new section for the MCPs and electric field stuff?  It doesn't seem to quite fit in either of the two sections here...}
 	Needs several diagrams.  Back-to-back beta detectors along the polarization axis.  Back-to-back MCPs in an electric field to tag events from the trap, and to measure the trap position and polarization.  Hoops to produce the electric field.  Many laser ports to make the MOT functional, and for optical pumping.  Fancy mirror geometry to combine optical pumping and trapping light along the vertical axis.  Water-cooled (anti-)Helmholz coils within the chamber for the AC-MOT, fast switching to produce an optical pumping field.  
 %	\subsection{\textbf{All the Detectors}}
 

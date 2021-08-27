@@ -4,9 +4,6 @@
 
 %%%% --- * --- %%%%	
 \clearpage
-%\part{Background}
-%\chapter{Motivation}
-
 \chapter{Background and Motivation}
 \label{background_chapter}
 
@@ -31,6 +28,7 @@
 \input{chapter_theory}
 
 
+
 %%%% --- * --- %%%%	
 \input{chapter_experimental}
 
@@ -45,40 +43,13 @@
 
 
 
-\chapter{Estimating Systematic Effects}
-	\section{Low-energy Scintillator Threshold}
-	%\\*
-	Choice of low-energy scintillator threshold has a large systematic effect...  
-	
-	\section{BB1 Radius, Energy Threshold, Agreement}
-	%\\*
-	BB1 radius cut can help to eliminate scattered events.  Energy threshold selection and statistical agreement between BB1 detectors' energies only makes a small effect on results.  
+%%%% --- * --- %%%%
+\input{chapter_systematics}
 
-\section{Background Modeling}
-	\subsection{Decay from Chamber Surfaces}
-
-\section{Quantifying the Effects Backscatter with Geant4}
-	Beta decay (back-)scatter from surfaces within the experimental chamber is a significant systematic, and it must be evaluated, quantified, and corrected for.  This is done via a series of GEANT4 simulations.  While only a small fraction of events are affected, the process results in an energy loss in the beta that can, if not understood, be misinterpreted as the exact signal we're searching for.  It is therefore imperative that this be well understood. 
-
-\section{Lineshape Reconstruction}
-	\subsection{Motivation}
-	This process is used because the (back-)scatter, which it itself an important systematic, is largely independent of a wide variety of other experimental effects.  These other effects must all be evaluated, but it is computationally prohibitive to re-evaluate the scattering with every other effect under consideration.
-	
-	\subsection{What is it and how does it work?}
-	Mono-energetic beta decay events are generated in GEANT4, which outputs an energy spectrum for unscattered and forward-scattered beta events in the detector.  These spectra are fit to a function to model the scintillator resolution, as well as energy loss in materials that the beta passed through before arriving at the scintillator.  These spectrum fits are performed for a set of beta energies, and parameters are extrapolated to be applied to betas emitted at intermediate energies.  Thus, the whole spectrum can be modeled.  Pictures will make this clearer. 
-	
-	\subsection{The Math-Specifics}
-	I'll write down the specific functions I'm using, and the parameter values I'm using.  (Maybe this should go in an appendix instead?)  I'll describe the adjustments I make to the spectrum so that it can work even for the dataset where the scintillators' resolutions have changed.
-	
-	\subsection{The Results -- Things That Got Evaluated This Way}
-	Trap position, size, sail velocity.  Thicknesses of the SiC mirror, the Be foil, and the DSSD.  Scintillator calibration.  
-	
-	\subsection{The low-energy tail uncertainty, and what it does}
 
 
 %%%% --- * --- %%%%	
 \clearpage	
-%\part{Results}
 \chapter{Results}
 
 \section{Measured Limits on $b_{Fierz}$, $C_S$, $C_T$}
