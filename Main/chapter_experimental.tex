@@ -7,11 +7,11 @@
 \label{setup_chapter}
 
 %\color{oldcolor}
-\section{Overview}
+\section{Overview and Double MOT System}
 
 The experimental subject matter of this thesis was conducted at TRIUMF using the apparatus of the TRIUMF Neutral Atom Trap (TRINAT) collaboration.  The TRINAT laboratory offers an experimental set-up which is uniquely suited to precision tests of Standard Model beta decay physics, by virtue of its ability to produce highly localized samples of isotopically pure cold atoms within an open detector geometry.  \note{mumble mumble 7ish days of beamtime, mumble mumble 2014.}
 
-The TRINAT lab accepts radioactive ions delivered by the ISAC beamline at TRIUMF.  These ions are collected on the surface of a hot zirconium \aside{Is it definitely zirconium?  I don't remember.} foil where they are electrically neutralized, and subsequently escape from the foil into the first of two experimental chambers (the ``collection chamber").  Within the collection chamber, atoms of one specific isotope -- for the purposes of this thesis,  \isotope[37]{K} -- are continuously collected into a magneto-optical trap (MOT).  Approximately once per second, the atoms in the collection MOT are transferred to a second experimental chamber (the ``detection chamber'') and loaded into a second MOT (see Fig.~\ref{fig:doublemot}).  Because the transfer and trapping mechanisms rely on tuning to specific atomic resonances, this setup allows for the selection of only a single isotope within the detection MOT, and a significantly reduced background relative to the initial beamline output.  The transfer methodology is discussed in some detail within another publication~\cite{swanson}.
+The TRINAT lab accepts radioactive ions delivered by the ISAC beamline at TRIUMF.  These ions are collected on the surface of a hot zirconium foil where they are electrically neutralized, and subsequently escape from the foil into the first of two experimental chambers (the ``collection chamber").  Further details on the neutralization process are presented in a previous publication~\cite{gorelov2000}.  Within the collection chamber, atoms of one specific isotope -- for the purposes of this thesis,  \isotope[37]{K} -- are continuously collected into a magneto-optical trap (MOT).  Approximately once per second, the atoms in the collection MOT are transferred to a second experimental chamber (the ``detection chamber'') and loaded into a second MOT (see Fig.~\ref{fig:doublemot}).  Because the transfer and trapping mechanisms rely on tuning to specific atomic resonances, this setup allows for the selection of only a single isotope within the detection MOT, and a significantly reduced background relative to the initial beamline output.  The transfer methodology is discussed in some detail within another publication~\cite{swanson}.
 
 \note{Probably describe the laser transfer method slightly.}  
 
@@ -34,7 +34,7 @@ Detectors are positioned about the second MOT for data collection.  The detectio
 operates at ultra-high vacuum (UHV) and provides not only the apparatus necessary to intermittently confine and then spin-polarize atoms, but also the vbariety of detectors and implements required to quantify their position, temperature, and polarization.  The detection chamber further boasts an array of electrostatic hoops to collect both positively and negatively charged low energy particles into two microchannel plates (MCPs),  and a further set of two beta detectors positioned along the polarization axis, each of which consists of a 40x40 pixel double-sided silicon strip detector (DSSD) and a scintillator and photomultiplier tube (PMT).  The details of the detection chamber setup are described in detail in Section~\ref{section:detectors}.
 
 
-\section{AC-MOT and Polarization Setup}
+\section{The AC-MOT and Polarization Setup}
 \label{section:acmot_and_polarization}
 %\\*
 In order to facilitate a measurement of $A_{\mathrm{\beta}}$, we went to great efforts to polarize the atom cloud, and quantify that polarization.  This resulted in a duty cycle in which the atoms were intermittently trapped in the AC-MOT, then optically pumped to polarize them.  While knowledge of the polarization is less critical in a measurement of $b_{\mathrm{Fierz}}$, we still use only the polarized portion of the duty cycle in order to minimize other systematic errors, such as the scintillator energy calibration and overall trap position.
@@ -48,9 +48,16 @@ There are two primary components necessary for any MOT:  a laser, and a magnetic
 \missingfigure{This is going to need another edge-on G4 picture of the chamber to label all the atomic components.  }
 
 \missingfigure{I need \emph{at least} one atomic level diagram.  But possibly as many as 3 level diagrams.  Have to show energies for MOT, energies for OP, and energies for photoionization.  }
+\note[color=purple]{JB says:  ``I would say you don't need an atomic level diagram.  You could just describe in words the semiclassical picture of atoms absorbing photons until they are nearly fully polarized, then they stop absorbing.  The optical pulmping + photoionization is then an in situ probe of the polarization. ... You would need to add in words that quantum mechanical corrections to this picture are in the optical Bloch equation approach in B. Fenker et al.  The depolarized states still have high nuclear polarization (1/2 for $F=2, M_F=1$, 5/6 for $F=1, M_F=1$) and determining the ratio of those two populations provides most of the info we need -- we model with the O.B.E, measure the optical pumping light polarization, and float an average transverse magnetic field.  This is adequate to determine the depolarized fraction to 10\% accuracy, which is all that is needed.'' }
+
+\[\]
+
+\note{Is my photoionization description adequate?  ... in light of John's feedback:  no.}
+\note[color=jb]{JB says:  ``Since you worked hard on the logic triggers, a photoion spectrum with duty cycle would be appropriate if you want."}
 
 \note{Need to describe how polarization works.}
-\note{Is my photoionization description adequate?}
+\note[color=jb]{JB says:  all polarization details could be deferred to ~\cite{ben_OP}.  (be sure to list all authors including [me]).  )}
+
 
 A MOT also requires a quadrupolar magnetic field, which we generate with two current-carrying anti-Helmholtz coils located within the vacuum chamber itself.  The coils themselves are hollow, and are cooled continuously by pumping temperature-controlled water through them.   
 
