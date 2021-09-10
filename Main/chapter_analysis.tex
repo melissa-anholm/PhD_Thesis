@@ -1,0 +1,31 @@
+% !TEX root = ../thesis_main.tex
+
+
+
+%%%% --- * --- %%%%	
+\clearpage
+\chapter{Analysis}
+\label{analysis_chapter}
+
+Right, so.  Here's how I processed the data into an answer.
+
+With the Data:
+\begin{itemize}
+	\item Higher-level data cleaning.  Discard events during parts of the duty cycle when atoms weren't polarized.  Discard events near a recorded spark time.  Discard events when the photoionization laser fires.  Discard events when the LED pulser used to calibrate the scintillators fires.  
+	\item Split up runs into sets, to account for changing experimental conditions.  Possibly I should list what the differences between runs were somewhere.  But not in this section.
+	\item Using the ``other'' data set with the rMCP:  Measure the trap position/size/velocity/expansion with the rMCP and with the camera.  Necessitates calibrating the rMCP.  Also measure polarization.
+	\item Make some more careful cuts to clean the data.  
+		\begin{itemize}
+		\item Discard events without a ``good'' DSSD hit.  Eliminates vast majority of background 511s.  Necessitates having a definition of what a ``good'' DSSD hit is.  It's subtle enough that we'll want to leave some part of this definition of ``good'' to be varied as a systematic effect.
+		\item Discard events where SOE-Beta TOF falls outside a certain range.  Necessitates picking a ``good'' range.  The precise definition of ``good'' is varied as a systematic.
+		\end{itemize}
+\end{itemize}
+
+With the Simulations:
+\begin{itemize}
+	\item Update G4 event generator to be able to model non-zero scalar and tensor coupling.   
+	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
+	
+	
+\end{itemize}
+
