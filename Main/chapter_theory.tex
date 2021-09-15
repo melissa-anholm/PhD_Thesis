@@ -60,11 +60,21 @@
 	In order to proceed with a measurement, we must find a master equation to describe the probability of beta decay events with any given distribution of energy and momenta among the daughter particles, as a function of the strength of the specific couplings of interest to us.  To do this, two sets of formalisms are combined -- the older formalism from Jackson, Treiman, and Wylde (JTW)~\cite{jtw},~\cite{jtw_coulomb}, which describes the effects of all types of Standard Model and exotic couplings of interest to us here, but which truncates its expression at first order in the (small) parameter of recoil energy, and a newer formalism from Holstein ~\cite{holstein}, which includes terms up to several orders higher in recoil energy, but which does not include any description of the exotic couplings of particular interest to us.  We note that because any exotic couplings present in nature have already been determined to be either small or nonexistant, it is sufficient to describe these parameters with expressions truncated at first order, despite the fact that it is still necessary to describe the larger Standard Model couplings with higher-order terms. 
 	
 	The procedure for combining the two formalisms is described in detail in Appendix~\ref{appendix_forthepeople}, so we will simply provide the combined master equation here:
-	
-\bea
-\textrm{put  a master equation here.}
-\eea
+
 \aside{Do it!  Do the master equation!}
+%\bea
+%\textrm{put  a master equation here.}
+%\eea
+
+
+In the mean time, here's what happens when we integrate JTW over neutrino direction:
+\input{equation_protomaster_jtw}
+where 
+\bea
+\xi = G_v^2 \, \cos\theta_C \, f_1(E).
+\eea
+
+
 
 \section{Our Decay}
 Talk about how great \isotope[37]{K} is for what we're doing with it.  Also, drop all the math-numbers to support those assertions.

@@ -11,10 +11,27 @@ Here's a master equation from JTW to describe beta decay kinematics~\cite{jtw},~
 
 \input{equation_jtw_master}
 
-We haven't integrated out the neutrino momentum.  Neutrino energy itself is a redundant parameter, I think, because we are already using an endpoint energy and a beta energy, and we are not taking recoil-order effects into account.  Also, we treat neutrinos as massless here, which is a perfectly reasonable approximation for our purposes.  For ``convenience'', let's define a nuclear alignment term, $\Talign$, so that:
+where, for convenience, we have defined a nuclear alignment term,
 \bea
-\Talign(\vecJ) &=& \TalignExpand
+\Talign(\vecJ) &\equiv& \TalignExpand.
 \eea
+
+Note that this master equation depends on neutrino momentum, which we cannot observe directly.  Furthermore, we cannot reconstruct neutrino momenta in our decay events either, because it would be necessary to account for the momentum of the recoiling daughter nucleus, treating the decay as a three-body problem.  From an experimental standpoint, we failed to measure the momenta of the daughters in conjunction with the ``tagged'' beta decay events with which we are primarily concerned in this thesis.  From a theoretical standpoint, JTW has intentionally neglected recoil-order terms -- meaning that the daughter nucleus is treated, for the purpose of calculating the kinetic energy distribution, as being infinitely massive, and as such it has no change in kinetic energy from the decay.  This approximation makes it a bit tricky to correctly re-formulate Eq.~(\ref{equation:jtw_master}) in terms of the momentum of the daughter instead of the momentum of the neutrino.  
+
+Fortunately, it is possible to simplify Eq.~(\ref{equation:jtw_master}) by integrating over all possible neutrino directions, such that the result no longer depends on parameters that we do not observe.  The neutrino energy itself is not a free variable in this equation, because the energy release in the decay is fixed, and given the approximation that none of that energy is allocated to the recoiling daughter, it is very straightforward to calculate the neutrino energy for a decay event in which the beta energy is known.
+
+%We haven't integrated out the neutrino momentum.  Neutrino energy itself is a redundant parameter, I think, because we are already using an endpoint energy and a beta energy, and we are not taking recoil-order effects into account.  Also, we treat neutrinos as massless here, which is a perfectly reasonable approximation for our purposes.  For ``convenience'', let's define a nuclear alignment term, $\Talign$, so that:
+
+
+The result of performing this integration over neutrino direction is:
+\input{equation_protomaster_jtw}
+\aside{We've changed the notation of d$^3\Gamma$ from the JTW master equation, while conveniently avoiding mentioning it.}
+
+...where 
+\bea
+\xi = G_v^2 \, \cos\theta_C \, f_1(E).
+\eea
+
 
 \section[Holstein]{Holstein}
 This one is harder.  But here, we've already integrated over neutrino momentum at least.  That's something.  Here's Holstein's Eq.~(52):

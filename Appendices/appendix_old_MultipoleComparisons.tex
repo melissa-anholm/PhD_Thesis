@@ -1,3 +1,8 @@
+% !TEX root = ../thesis_main.tex
+
+
+
+%%%% --- * --- %%%%
 \chapter[Multipole Comparisons]{Compare by Multipoles!}
 
 My code uses Holstein's Eq. (52), rather than Eq. (51).  In his notation, I'm using $F_i(E)$'s rather than $f_i(E)$'s.  I need to convert between them.  
@@ -13,19 +18,27 @@ This is because:
 
 Holstein and JTW terms have *this* relationship:
 \begin{eqnarray}
-\xi          &=& f_1(E) \;\;\;\;\;\; \;\;\;\;\;\; \;\;\;\;\;\; \textrm{(? times some constant?  doesn't matter.)} \\
+\xi          &=& f_1(E) \;\;\;\;\;\; \;\;\;\;\;\; \;\;\;\;\;\; \textrm{(? times some constant?  doesn't matter.)}
+\eea
+\note{In fact, 
+\beq 
+\xi = G_v^2 \, \cos\theta_C \, f_1(E)
+\eeq  
+}
+\bea
 a_{\beta\nu} &=& f_2(E) \: / \: f_1(E) \\
 \frac{\langle\vec{J}\rangle}{J} \cdot \frac{\vec{p}}{E} \,\, A_\beta 
   &=& \Lambda_1 \hat{n}\cdot \frac{\vec{p}}{E} \, f_4(E) \:/\: f_1(E) \\
 \frac{\langle\vec{J}\rangle}{J} \cdot \frac{\vec{p}_\nu}{E_\nu} B_\nu  
   &=& \Lambda_1 \hat{n} \cdot \vec{k} \;\;\, f_6(E) \:/\: f_1(E) \\
 \frac{\langle\vec{J}\rangle}{J} \cdot \frac{\left( \vec{p} \times \vec{p}_\nu \right)}{E_{} E_\nu} D_{\mathrm{TR}} 
-  &=& \Lambda_1 \hat{n} \cdot ( \frac{\vec{p}}{E} \times \hat{k} \,) \;\; f_8(E) \:/\: f_1(E) \\
-\left[ \frac{J(J+1) - 3\langle (\vec{J}\cdot\hat{j})^2 \rangle}{J(2J-1)} \right] \!\!\!
-\left[\frac{1}{3} \frac{\vec{p}\cdot\vec{p}_\nu }{E_{} E_\nu} - \frac{ (\vec{p}\cdot\hat{j}) (\vec{p}_\nu \cdot\hat{j} ) }{E_{} E_\nu} \right]c_{\mathrm{align}} 
-  &=& \Lambda_2 \! \left[(\hat{n}\cdot\frac{\vec{p}}{E})(\hat{n}\cdot\hat{k})  - \frac{1}{3} (\frac{\vec{p}}{E}\cdot\hat{k} \,)\right] \; f_{12}(E) \:/\: f_1(E)
+  &=& \Lambda_1 \hat{n} \cdot ( \frac{\vec{p}}{E} \times \hat{k} \,) \;\; f_8(E) \:/\: f_1(E)
 \end{eqnarray}
-
+\begin{eqnarray}
+&& \left[ \frac{J(J+1) - 3\langle (\vec{J}\cdot\hat{j})^2 \rangle}{J(2J-1)} \right] \!\!\!
+\left[\frac{1}{3} \frac{\vec{p}\cdot\vec{p}_\nu }{E_{} E_\nu} - \frac{ (\vec{p}\cdot\hat{j}) (\vec{p}_\nu \cdot\hat{j} ) }{E_{} E_\nu} \right]c_{\mathrm{align}} \nonumber\\
+&& = \Lambda_2 \! \left[(\hat{n}\cdot\frac{\vec{p}}{E})(\hat{n}\cdot\hat{k})  - \frac{1}{3} (\frac{\vec{p}}{E}\cdot\hat{k} \,)\right] \; f_{12}(E) \:/\: f_1(E)
+\end{eqnarray}
 
 \begin{itemize}
 	\item
