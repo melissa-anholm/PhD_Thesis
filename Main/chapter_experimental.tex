@@ -31,7 +31,7 @@ Once the newly transferred atoms have arrived at the second trap, the MOT cycles
  
 Detectors are positioned about the second MOT for data collection.  The detection chamber 
 %(shown in Figure \ref{fig:thechamber}) 
-operates at ultra-high vacuum (UHV) and provides not only the apparatus necessary to intermittently confine and then spin-polarize atoms, but also the vbariety of detectors and implements required to quantify their position, temperature, and polarization.  The detection chamber further boasts an array of electrostatic hoops to collect both positively and negatively charged low energy particles into two microchannel plates (MCPs),  and a further set of two beta detectors positioned along the polarization axis, each of which consists of a 40x40 pixel double-sided silicon strip detector (DSSD) and a scintillator and photomultiplier tube (PMT).  The details of the detection chamber setup are described in detail in Section~\ref{section:detectors}.
+operates at ultra-high vacuum (UHV) and provides not only the apparatus necessary to intermittently confine and then spin-polarize atoms, but also the variety of detectors and implements required to quantify their position, temperature, and polarization.  The detection chamber further boasts an array of electrostatic hoops to collect both positively and negatively charged low energy particles into two microchannel plates (MCPs),  and a further set of two beta detectors positioned along the polarization axis, each of which consists of a 40x40 pixel double-sided silicon strip detector (DSSD) and a scintillator and photomultiplier tube (PMT).  The details of the detection chamber setup are described in detail in Section~\ref{section:betadetectors}. \note{ ...where I basically repeat this same content.  Blarg.}
 
 
 \section{The AC-MOT and Polarization Setup}
@@ -95,10 +95,15 @@ In order to optimally polarize a sample of atoms by this method, it is necessary
 
 
 
+\section{Microchannel Plates and Electric Field}
+\label{section:mcps}
+MCPs.  Hoops.  Only one thing works at a time!  Blarg.
+
+
 %\color{black}
 %	\subsection{\textbf{Nuclear Setup}}
 \section{Measurement Geometry and Detectors}
-\label{section:detectors}
+\label{section:betadetectors}
 \note{Do I want to make an entirely new section for the MCPs and electric field stuff?  It doesn't seem to quite fit in either of the two sections here...}
 	Needs several diagrams.  Back-to-back beta detectors along the polarization axis.  Back-to-back MCPs in an electric field to tag events from the trap, and to measure the trap position and polarization.  Hoops to produce the electric field.  Many laser ports to make the MOT functional, and for optical pumping.  Fancy mirror geometry to combine optical pumping and trapping light along the vertical axis.  Water-cooled (anti-)Helmholz coils within the chamber for the AC-MOT, fast switching to produce an optical pumping field.  
 %	\subsection{\textbf{All the Detectors}}
@@ -112,6 +117,10 @@ In order to optimally polarize a sample of atoms by this method, it is necessary
 
 \note{...(shown in Figure \ref{fig:thechamber}) ...}
 The beta detectors, located above and below the atom cloud along the axis of polarization (see Figure~\ref{chamber_decayevent}), are each the combination of a plastic scintillator and a set of silicon strip detectors.  Using all of the available information, these detectors are able to reconstruct the energy of an incident beta, as well as its hit position, and provide a timestamp for the hit's arrival.  Together the upper and lower beta detectors subtend approximately 1.4\% of the total solid angle as measured with respect to the cloud position. 
+
+%\section{Beta Detectors}
+	The two sets of beta detectors were positioned directly along the axis of polarization.  Each beta detector consists of a plastic scintillator and photo-multiplier tube (PMT) \aside{There's gotta be a better way to describe it} placed directly behind a 40$\times$40-pixel double-sided silicon strip detector (DSSD).  \aside{what's the open area of the detector?  how big is each pixel?}  The scintillator is used to measure the overall energy of the incoming particles, as well as to assign a timestamp to these events, while the DSSD is used both to localize the hit position to one (or in some cases, two) individual pixel(s), and also to discriminate between different types of incoming particles.  In particular, while an incoming beta is expected to lose some portion of its kinetic energy as it passes through the DSSD into the scintillator, an incident gamma ray will deposit a much smaller amount of energy in the DSSD layer, making it possible to reject events with insufficient energy deposited in the DSSD as likely gamma ray events.  Given that the decay of interest to us emits positrons, we expect a persistent background 511 keV gamma rays that are not of interest to us, so it is extremely important that we are able to clean these background events from our spectrum. 
+
 
 It must be noted that the path between the cloud of trapped atoms and either beta detector is blocked by two objects:  a 275$\,\mu$m silicon carbide mirror (necessary for both trapping and optical pumping), and a 229$\,\mu$m beryllium foil (separating the UHV vacuum within the chamber from the outside world).  In order to minimize beta scattering and energy attenuation, these objects have had their materials selected to use the lightest nuclei with the desired material properties, and have been manufactured to be as thin as possible without compromising the experiment.  As the $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$ decay proceess releases $Q=5.125$\,MeV of kinetic energy~\cite{Q_value}, the great majority of betas are energetic enough to punch through both obstacles without significant energy loss before being collected by the beta detectors.  
 

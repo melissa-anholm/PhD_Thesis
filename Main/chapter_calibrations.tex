@@ -47,16 +47,25 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 \note{describe how you'd turn this into a physical description of the cloud, with like a temperature and a sail velocity and shit.  with equations.}
 
 
-\section{Plastic Scintillators}
+\section{Beta Detectors}
+\label{section:calibrations_betadetectors}
+	As described in Section~\ref{section:betadetectors}, ...
+\comment{the two sets of beta detectors were positioned directly along the axis of polarization.  Each beta detector consists of a plastic scintillator and photo-multiplier tube (PMT) placed directly behind a 40$\times$40-pixel double-sided silicon strip detector (DSSD).  The scintillator is used to measure the overall energy of the incoming particles, as well as to assign a timestamp to these events, while the DSSD is used both to localize the hit position to one (or in some cases, two) individual pixel(s), and also to discriminate between different types of incoming particles.  In particular, while an incoming beta is expected to lose some portion of its kinetic energy as it passes through the DSSD into the scintillator, an incident gamma ray will deposit a much smaller amount of energy in the DSSD layer, making it possible to reject events with insufficient energy deposited in the DSSD as likely gamma ray events.  Given that the decay of interest to us emits positrons, we expect a persistent background 511 keV gamma rays that are not of interest to us, so it is extremely important that we are able to clean these background events from our spectrum.}
+	 
+	
+%\section{Plastic Scintillators}
 	Energy calibration for the scintillator+PMT setup changed dramatically at one point.    Describe how calibration was done.  
+	
+	Also describe how the DSSD calibration was done, even though it wasn't implemented by me. 
 	\note{How the fuck WERE these things done?!}
 	\note[color=jb]{JB:  ``You can describe anything you did differently or improved, but you can and should otherwise defer all details of the scintillator calibration and DSSD calibration to Ben's paper and his thesis and Spencer's.  E.g. Section~\ref{section:bb1_systematics} ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement."
 	\label{thesisconventionjb} }
 	\note[color=jb]{JB:  ``If you have some way of documenting the coding you used, that would be great."  ... yeah, it would, wouldn't it?}
 	
-\section{Strip Detectors}
-	Also describe how the DSSD calibration was done, even though it wasn't implemented by me. 
-	\note{How the fuck WERE these things done?!}
+%\section{Strip Detectors}
+%	\note{How the fuck WERE these things done?!}
+
+
 
 \section{The eMCP}
 	I can describe the eMCP calibration here, even though it mostly wasn't implemented by me.  It is tangentially relevant to data selection and background estimation by providing an experimental energy spectrum for shake-off electrons.  It's actually a pretty neat algorithm that I basically wasn't involved with.
