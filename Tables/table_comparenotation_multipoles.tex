@@ -1,0 +1,71 @@
+% !TEX root = ../thesis_main.tex
+%
+%
+%
+%%%% --- * --- %%%%	
+\renewcommand{\arraystretch}{1.6}
+\begin{table}[h!!!!t]
+	\begin{center}
+	\begin{tabular}{ | l | l | l | p{2.35in} | }
+		\multicolumn{1}{c}{Holstein} 				& \multicolumn{1}{c}{JTW} 					& \multicolumn{1}{c}{Thesis} 				& \multicolumn{1}{c}{Comments}
+		\\  \hline
+		$G_v^2 \, \cos\theta_C \, f_1(E)$  			& $\xi$    									& $\xi(\Ebeta)$  							& Normalization.  Proportional to the fractional decay rate.
+		\\  \hline
+		$\hat{n}$ 									& $\mathbf{j}$								& $\hatj$									& Nuclear polarization unit vector.  Also the axis of quantization.  %In Holstein, this is actually just the axis of quantization, and the mathematical framework is provided such that it need not be aligned with the polarization.  However, JTW makes the simplification that the axis of quantization and the axis of polarization are the same, so we will do the likewise here.  \comment{(is this even true?)}
+		\\  \hline
+		$J$											& $J$ 										& 											& Total nuclear angular momentum quantum number
+		\\  \hline
+		$\langle M \rangle$							& $ \left| \langle \mathbf{J} \rangle \right| $ 			& 											& Angular momentum projection along the axis of quantization
+		\\  \hline
+		$\Lambda^{(1)}\hat{n} = \frac{\langle M \rangle}{J} \hat{n} $		& $\frac{\langle \mathbf{J} \rangle}{J}$ 	& $\Lambda_{1}\hatn $ 						& Dipole element vector.  Proportional to nuclear polarization. \comment{(Rephrase this.)}
+		\\  \hline
+		$\Lambda^{(1)} = \frac{\langle M \rangle}{J} $		& ...								& $\Lambda_{1} $ 							& ...
+%		\\[6pt]  \hline &\\[-6pt]
+		\\  \hline 
+%		\\[6pt]  \hline \rule{0pt}{18pt}
+		$\Lambda^{(2)}$ 							& $\TalignExpand \frac{(2J-1)}{(J+1)}$ 		& $\Talign(\vecJ) \frac{(2J-1)}{(J+1)}$ 	& Quadrupole element
+		\\  \hline 
+		$\Lambda^{(3)}$								& No equivalent								& $\Lambda_{3} $							& Octopole element
+		\\  \hline
+		$\Lambda^{(4)}$								& No equivalent								& $\Lambda_{4} $							& Hexadecapole element
+%		\\  \hline
+%		$\hatn$ 									& $\hatj$									& & Nuclear polarization unit vector.
+%		\\  \hline
+%		$\hatk$ 									& $\frac{\vecpnu}{E_\nu}$					& & Neutrino emission direction unit vector.  Neutrinos are always treated as massless.
+%		\\  \hline
+%		$\bm{\vec{p}} $								& $\bm{\vec{p}_e}$							& & Beta momentum.  We use $\bm{\vec{p}_\beta}$ in this document.
+		\\  \hline
+	\end{tabular}
+	\end{center}
+	\caption[Notation Guide]{A comparison of the multipole elements and their normalizations (and some other stuff) in JTW~\cite{jtw}~\cite{jtw_coulomb} and Holstein~\cite{holstein}.}
+	\label{table:compare_notation_multipoles}
+\end{table}
+\renewcommand{\arraystretch}{1}
+%
+%
+%
+%\renewcommand{\arraystretch}{1.6}
+%\begin{table}[h!!!!t]
+%	\begin{center}
+%	\begin{tabular}{ | l | l | p{3.35in} | }
+%		\multicolumn{1}{c}{JTW} 				& \multicolumn{1}{c}{Holstein} 				& \multicolumn{1}{c}{Comments}
+%		\\  \hline
+%		$\xi$    								& $G_v^2 \, \cos\theta_C \, f_1(E_\beta)$  	& Normalization.  Proportional to the decay rate.
+%		\\  \hline
+%		$\hatj$									& $\hatn$ 									& Nuclear polarization unit vector.
+%		\\  \hline
+%		$\frac{\vecJ}{J}$ 						& $\Lambda_1\hatn $							& Dipole element vector.  Proportional to nuclear polarization.
+%%		\\[6pt]  \hline &\\[-6pt]
+%		\\  \hline 
+%%		\\[6pt]  \hline \rule{0pt}{18pt}
+%		$\Talign(\vecJ) \frac{(2J-1)}{(J+1)}$ 	& $\Lambda_2$ 								& Quadrupole element.
+%		\\  \hline 
+%		No equivalent							& $\Lambda_3$								& Octopole element.
+%		\\  \hline
+%	\end{tabular}
+%	\end{center}
+%	\caption[Notation Guide]{A table comparing equivalent terms in Holstein and JTW.}
+%	\label{table:compare_notation}
+%\end{table}
+%
+%\renewcommand{\arraystretch}{1}

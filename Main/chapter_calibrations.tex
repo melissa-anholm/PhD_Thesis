@@ -47,21 +47,18 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 \note{describe how you'd turn this into a physical description of the cloud, with like a temperature and a sail velocity and shit.  with equations.}
 
 
-\section{Beta Detectors}
+\section{Beta Detector Cuts}
 \label{section:calibrations_betadetectors}
-	As described in Section~\ref{section:betadetectors}, ...
-\comment{the two sets of beta detectors were positioned directly along the axis of polarization.  Each beta detector consists of a plastic scintillator and photo-multiplier tube (PMT) placed directly behind a 40$\times$40-pixel double-sided silicon strip detector (DSSD).  The scintillator is used to measure the overall energy of the incoming particles, as well as to assign a timestamp to these events, while the DSSD is used both to localize the hit position to one (or in some cases, two) individual pixel(s), and also to discriminate between different types of incoming particles.  In particular, while an incoming beta is expected to lose some portion of its kinetic energy as it passes through the DSSD into the scintillator, an incident gamma ray will deposit a much smaller amount of energy in the DSSD layer, making it possible to reject events with insufficient energy deposited in the DSSD as likely gamma ray events.  Given that the decay of interest to us emits positrons, we expect a persistent background 511 keV gamma rays that are not of interest to us, so it is extremely important that we are able to clean these background events from our spectrum.}
-	 
-	
+	Setup is as described in Section~\ref{section:betadetectors}.	 
+	\note{This is a stupid section name.  Also, I really do need to describe how the cuts were made here somewhere, because it's non-trivial in many cases, and possibly different than what Ben did in some cases.  But it won't make sense to describe what I did different if I don't describe the thing as a whole, at least a bit.  The point is, this is a set of cuts/systematics that isn't really that straightforward to understand.  }
 %\section{Plastic Scintillators}
-	Energy calibration for the scintillator+PMT setup changed dramatically at one point.    Describe how calibration was done.  
+	\note{Energy calibration for the scintillator+PMT setup changed dramatically at one point.    Describe how calibration was done.  Like, one sentence or something.  Something about the endpoint energy, and something about the compton edge for 511s, IIRC.}
 	
-	Also describe how the DSSD calibration was done, even though it wasn't implemented by me. 
-	\note{How the fuck WERE these things done?!}
+%	Also describe how the DSSD calibration was done, even though it wasn't implemented by me. 
+%	\note{How the fuck WERE these things done?!}
 	\note[color=jb]{JB:  ``You can describe anything you did differently or improved, but you can and should otherwise defer all details of the scintillator calibration and DSSD calibration to Ben's paper and his thesis and Spencer's.  E.g. Section~\ref{section:bb1_systematics} ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement."
 	\label{thesisconventionjb} }
 	\note[color=jb]{JB:  ``If you have some way of documenting the coding you used, that would be great."  ... yeah, it would, wouldn't it?}
-	
 %\section{Strip Detectors}
 %	\note{How the fuck WERE these things done?!}
 

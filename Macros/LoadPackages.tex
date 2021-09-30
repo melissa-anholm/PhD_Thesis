@@ -7,10 +7,10 @@
 \onehalfspacing
 %\reversemarginpar
 
+%\newcommand{\inputy}[1]{\input{#1}\unskip}  % to eliminate the stupid extra spaces after \input.  Except somehow it doesn't work.
 
 % Colors, defined:
 \input{ColorNamesMacros.tex}
-
 
 % Mathematics support
 \usepackage{amsmath}
@@ -46,36 +46,7 @@
 % Because todonotes conflicts slightly with the various ams packages.
 \makeatletter
 \providecommand\@dotsep{5}
-%%\renewcommand{\listoftodos}[1][\@todonotes@todolistname]{\@starttoc{tdo}{#1}}
 \makeatother
-%\listoftodos\relax  % has to go after begin document.
-
-
-%% Some shortcut ToDo Macros:
-\newcommand{\todoinline}[2][]{\todo[inline, color=orange, #1]{#2}}  % Can override color.
-%\newcommand{\todoinline}[2][]{\todo[inline, color=#1]{#2}}
-%
-\newcommand{\margintodo}[2][]  % small note in the margin.
-	{\todo[caption={#2}, size=\scriptsize, color=orange, #1]{\renewcommand{\baselinestretch}{1.0}\selectfont#2\par}}  % default spacing seems to be like 1.2.  Change to 1.0.  This also allows you to override the color selection.
-
-\newcommand{\note}[2][]{\todo[inline, color=orange, #1]{#2}}  % Can override color.
-\newcommand{\bluetodo}[2][]{\todo[inline, color=todoblue, #1]{#2}}  % Can override color.
-
-\newcommand{\aside}[2][]  % small note in the margin.
-	{\todo[caption={#2}, size=\scriptsize, color=orange, #1]{\renewcommand{\baselinestretch}{1.0}\selectfont#2\par}}  % default spacing seems to be like 1.2.  Change to 1.0.  This also allows you to override the color selection.
-
-
-
-%\renewcommand{\todo}{\todoinline}
-%\renewcommand{\todo[margin]}{\margintodo}
-%\usepackage{marginnote}
-%\newcommand{\lefttodo}[2][]{{%
-% \let\marginpar\marginnote
-% \reversemarginpar
-% \renewcommand{\baselinestretch}{0.8}%
-% \todo[#1]{#2}}}
-%\newcommand{\note}[2][]{\renewcommand{\baselinestretch}{0.8}\todo[#1]{#2}}
-
 
 
 
@@ -93,20 +64,9 @@
 \newcommand{\ev}{\end{Verbatim}} % doesn't work?
 
 
-% To add TOC to the TOC.
-%\usepackage{tocbibind}
-%\usepackage[page,titletoc,title]{appendix} 
-%\usepackage{tocloft}
-% Graphics
-% Be warned, there is a potential conflict between the caption/subcaption packages and this template.  It shouldn't interfere with compiling your thesis, but do know that the conflict exists.
-% Common journal abbreviations
-%\usepackage{aas_macros}
-
-
-
-
 % Various Macros that I wrote myself:
-% \input{MiscMacros.tex}  % Currently, MiscMacros.tex has no content.
+\input{MiscMacros.tex} 
+%
 \input{MathShorthandMacros.tex}
 \input{AlphabetSoupMacros.tex}
 %

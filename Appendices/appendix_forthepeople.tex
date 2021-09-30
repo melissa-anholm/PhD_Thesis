@@ -24,28 +24,50 @@ Fortunately, it is possible to simplify Eq.~(\ref{equation:jtw_master}) by integ
 
 
 The result of performing this integration over neutrino direction is:
-\input{equation_integratedjtw}
-which is a great simplification on Eq.~(\ref{equation:jtw_master}).  We still must write the remaining parameters in terms of the relevant nuclear matrix elements and fundamental coupling constants.  These coupling constants are, in general, complex-valued, and JTW does not choose a phase angle for us.  We write them out in 
+\input{equation_integratedjtw}\unskip which is a great simplification on Eq.~(\ref{equation:jtw_master}).  We still must write the remaining parameters in terms of the relevant nuclear matrix elements and fundamental coupling constants.  These coupling constants are, in general, complex-valued, and JTW does not choose a phase angle for us.  We write them out in 
 Eqs.~(\ref{eq:jtw_xi}-\ref{eq:jtw_Abetaxi}).
-%Table~\ref{table:jtw_params}.
 \input{equations_jtw_params}
+Note that JTW presents slightly different expressions for the sign convention in components of $\Abeta$ within~\cite{jtw} and~\cite{jtw_coulomb}.  Here, we adopt the convention from the latter publication.  Furthermore, we do not require that either $M_F$ or $M_{GT}$ be positive (which would allow us to safely drop their absolute value indicators and make the conventions of these two papers equivalent).  In order to obtain the correct, physically observed value for $\Abeta$, we require that the 
+$M_{F}\,M_{GT}$ term in Eq.~(\ref{eq:jtw_Abetaxi}) have an overall positive value.  Because we know that the scalar and tensor couplings must be small, and any imaginary contributions to the term must be small, we conclude that
+\bea
+	M_{F}\,M_{GT} \left( C_V C_A^{\prime *} + C_V^\prime C_A^* \right) < 0.
+\eea
 
-\note{In order to make JTW give us the correct, physically observed value for $\Abeta$, we need either for both $M_{GT}$ and $M_{F}$ to be positive, or we use the notation for $\Abeta$ from JTW's earlier paper rather than the one with the coulomb corrections.  Somehow, we run into problems getting JTW to agree with Holstein if we require $M_{GT}$ and $M_{F}$ to have the same sign, so we're going to kludge together two different expressions for $\Abeta$ from both of JTW's papers.}
+%\note{In order to make JTW give us the correct, physically observed value for $\Abeta$, we need ... something.  JTW writes an expression for $\Abeta$ with slightly different sign convention in~\cite{jtw} and~\cite{jtw_coulomb}.  There is some subtlety involved in getting the correct signs on things, but the easiest way to figure it out is to make sure the calculation of the value of $\Abeta$ matches reality.  To this end, ... either for both $M_{GT}$ and $M_{F}$ to be positive, or we use the notation for $\Abeta$ from JTW's earlier paper rather than the one with the coulomb corrections.  Somehow, we run into problems getting JTW to agree with Holstein if we require $M_{GT}$ and $M_{F}$ to have the same sign, so we're going to kludge together two different expressions for $\Abeta$ from both of JTW's papers.  Or ... wait ... maybe the opposite thing is what I should be doing?  In handwritten notes, I explicitly use the *later* JTW sign convention.}
+
+%\note{In order to make JTW give us the correct, physically observed value for $\Abeta$, we need either for both $M_{GT}$ and $M_{F}$ to be positive, or we use the notation for $\Abeta$ from JTW's earlier paper rather than the one with the coulomb corrections.  Somehow, we run into problems getting JTW to agree with Holstein if we require $M_{GT}$ and $M_{F}$ to have the same sign, so we're going to kludge together two different expressions for $\Abeta$ from both of JTW's papers.  Or ... wait ... maybe the opposite thing is what I should be doing?  In handwritten notes, I explicitly use the *later* JTW sign convention.}
+
 \aside{Also, $\xi = G_v^2 \, \cos\theta_C \, f_1(E).$}
 
 
 \section[Holstein]{Holstein} 
-Holstein~\cite{holstein} generously provides explicit equations to match both Eq.~\ref{equation:jtw_master} (Holstein's Eq.~(51), where neutrino direction is a parameter of the probability distribution) and Eq.~\ref{equation:integrated_jtw} (Holstein's Eq.~(52), where neutrino direction has already been integrated over).  
+Holstein~\cite{holstein}~\cite{holstein_errata} generously provides explicit equations to match both Eq.~(\ref{equation:jtw_master}) (i.e. Holstein's Eq.~(51), where neutrino direction is a parameter of the probability distribution) and Eq.~(\ref{equation:integrated_jtw}) (Holstein's Eq.~(52), where neutrino direction has already been integrated over).  
 
 %Holstein~\cite{holstein} generously provides explicit equations to match both Eq.~\ref{equation:jtw_master} (where neutrino direction is a parameter of the probability distribution), and Eq.~\ref{equation:integrated_jtw} (where the neutrino direction has already been integrated over).
 
 %This one is harder.  But here, we've already integrated over neutrino momentum at least.  That's something.  
 
 Here's Holstein's Eq.~(52):
+\input{equation_holstein52}\unskip
 
+A careful reader will eventually note that Holstein's spectral functions $F_i(\Ee)$ are not the same as the $F_i(\Ee, u, v, s)$ in any limit, despite the notational similarities.  Among other rules, Holstein's spectral functions obey these:
+\bea
+	F_i(\Ee) &\neq& F_i(\Ee, u, v, s)    \\
+	F_i(\Ee) &=&    H_i(\Ee, u, v, 0)    \\
+	f_i(\Ee) &=&    F_i(\Ee, u, v, 0).
+\eea
+For the $F_i(\Ee)$ functions of interest to us here, we find the following relationships:
+%though expressions for $F_i(\Ee)$ can still be obtained through a chain of substitutions: 
+\input{equations_holstein_FHFf}\unskip  % eq:holstein_FHFf
 
-\input{equation_holstein52}
-
+Note that the $f_i(\Ee)$ in Eq.~\ref{eq:holstein_FHFf} are the same spectral functions used to describe a polarized decay spectrum when the neutrino (ie, the recoil) is also observed -- though of course such a spectrum must have other terms as well.  For the spectrum of interest to us here, in which the neutrino direction has already been integrated over, we can simply look up the $H_i(\Ee, J, J^\prime, 0) = H_i(E, u, v, s\!=\!0)$ spectral functions, and leave it at that.  We find:
+%Here, we've taken $u=J$ and $v=J^\prime$ to be the initial and final angular momenta respectively, because apparently I'm having a hard time keeping my notation straight.
+\input{equation_holstein_F0}\unskip
+\input{equation_holstein_F1}\unskip
+\input{equation_holstein_F2}\unskip
+\input{equation_holstein_F3}\unskip
+and we might really appreciate if these things could be simplified a bit.  
+\note{In fact, we might want to add the other different-er terms in to this thing now, before we get ahead of ourselves.}
 
 Let's define some of that notation!
 Firstly, 
@@ -72,191 +94,47 @@ We immediately see that Holstein's $\Lambda_1$ is closely related to JTW's $\fra
 %\Lambda_2 \frac{(J+1)}{(2J-1)} &=& \Talign
 \Lambda_2 &=& \Talign \frac{(2J-1)}{(J+1)}.
 \eea
-Now we'll have to deal with expanding the $F_i(\Ee)$.  %Note that these are very different from the $F_i(\Ee, u, v, s)$, and also different from the $f_i(\Ee)$.  
-Holstein makes a goddamn mess of this, so here we go!  From Holstein's Eq.~(B10):
-\bea
-F_i(\Ee) &=& H_i(\Ee, J, J^\prime, 0).
-\eea
-%and from Holstein's Eq.~(B9), we see that 
+%Now we'll have to deal with expanding the $F_i(\Ee)$.  %Note that these are very different from the $F_i(\Ee, u, v, s)$, and also different from the $f_i(\Ee)$.  
+%Holstein makes a goddamn mess of this, so here we go!  From Holstein's Eq.~(B10):
 %\bea
-%f_i(\Ee) &=& F_i(\Ee, J, J^\prime, 0)
+%F_i(\Ee) &=& H_i(\Ee, J, J^\prime, 0).
 %\eea
-From Holstein's many Eqs.~(B7), we see that the $H_i(\Ee, u, v, s)$ can be written in terms of the functions $F_i(\Ee, u, v, s)$, which we carefully note \emph{are not the same} as the functions $F_i(\Ee)$.  We further see, from Holstein's Eq.~(B9) that a further set of functions, $f_i(\Ee)$ are defined in terms of the $F_i(\Ee, u, v, s)$.  In particular, Holstein's Eq.~(B9) states that
-\bea
-f_i(\Ee) &=& F_i(\Ee, J, J^\prime, 0).
-\eea
-Then, if we combine (some parts of) Holstein's Eqs.~(B7) with (B9) and (B10)
-
-\begin{align}
-F_0(\Ee) & \;\;=\;\; H_0(\Ee, J, J^\prime, 0) \;\;=\;\; F_1(\Ee, J, J^\prime, 0) 
-	\!\!\!\! \!\! \!\! 
-	& =\;\; & f_1(\Ee) 
-	\\
-F_1(\Ee) & \;\;=\;\; H_1(\Ee, J, J^\prime, 0) \;\;=\;\; F_4(\Ee, J, J^\prime, 0) \,\,+ \frac{1}{3}F_7(\Ee, J, J^\prime, 0) 
-	\!\!\!\! \!\! \!\! 
-	& =\;\; & f_4(\Ee) \,\,+ \frac{1}{3}f_7(\Ee) 
-	\\
-F_2(\Ee) & \;\;=\;\; H_2(\Ee, J, J^\prime, 0) \;\;=\;\; F_{10}(\Ee, J, J^\prime, 0) + \frac{1}{2}F_{13}(\Ee, J, J^\prime, 0) 
-	\!\!\!\! \!\! \!\! 
-	& =\;\; & f_{10}(\Ee) + \frac{1}{3}f_{13}(\Ee) 
-	\\
-F_3(\Ee) & \;\;=\;\; H_3(\Ee, J, J^\prime, 0) \;\;=\;\; F_{18}(\Ee, J, J^\prime, 0) 
-	\!\!\!\! \!\! \!\! 
-	& =\;\; & f_{18}(\Ee) .
-\end{align}
-So that's fun.  Note that the $f_i(\Ee)$ are what goes into the polarized decay spectrum when the neutrino (ie, the recoil) is also observed.  It's a more complicated spectrum that way.  For this spectrum in which the neutrino has already been integrated over, we can just look up the $H_i(\Ee, J, J^\prime, 0) = H_i(\Ee, u, v, s)$ spectral functions, and leave it at that.
-
-So let's do this thing!
-\begin{multline}
-F_0(\Ee) = 
-\left| a_1 \right|^2 
-+ 2 Re\left[ a_1^* a_2 \right] \frac{1}{3 M^2} 
-\left[  
-	\m^2 + 4 \Ee E_0 + 2 \frac{\me^2}{\Ee}E_0 - 4\Ee^2
-\right]
-\\
-+ \left| c_1 \right|^2
-+ 2 Re\left[ c_1^* c_2\right] \frac{1}{9 M^2} 
-\left[
-	11 \me^2 + 20 \Ee E_0 
-	- 2\frac{\me^2}{\Ee}E_0
-	- 20\Ee^2
-\right]
-- 2 \frac{E_0}{3M} Re\left[ c_1^*(c_1 + d \pm b)\right]
-\\
-+ \frac{2\Ee}{3M} 
-\left( 
-	3 \left| a_1 \right|^2 + Re \left[ c_1^*(5c_1 \pm 2 b) \right]
-\right)
-- \frac{\me^2}{3 M \Ee} 
-Re \left[ 
-	-3 a_1^*e + c_1^*\left(2c_1 + d \pm 2b - h\frac{E_0 - \Ee}{2M} \right)
-\right]
-\end{multline}
-% comment comment comment...
-\begin{multline}
-F_1(\Ee) = 
-\deltauv \left( \frac{u}{\!u+1\!} \right)^{\!\!1/2} \!\!
-\left\{
-	2 Re\left[ 
-		a_1^*\left(\! c_1 - \frac{E_0}{3M}(c_1 + d \pm b) + \frac{\Ee}{3M}( 7 c_1 \pm b + d )\! \right)
-	\right]
-	\right.\\\left.
-	+
-	2 Re\left[
-		a_1^* c_2 + c_1^* a_2
-	\right] \!
-	\left(
-		\frac{4 \E(E_0 - \E) + 3 \me^2}{3M^2}
-	\right) \!
-\right\}
-\\
-\mp \frac{ (-1)^s \gammauv}{u+1} 
-Re \left[
-	c_1^*\left(
-		c_1 + 2 c_2 \left(\frac{8\Ee(E_0-\Ee)+3\me^2}{3M^2}\right)
-		- \frac{2 E_0}{3 M} (c_1 + d \pm b) 
-		+ \frac{\Ee}{3M} (11 c_1 - d \pm 5 b)
-	\right)
-\right]
-\\
-+ 
-\frac{\lambdauv}{u+1}
-Re \left[
-	c_1^* \left(
-		- f \left(\frac{5\Ee}{M}\right)
-		+ g \left( \frac{3}{2} \right)^{\!\!1/2} \!
-		\left(
-			\frac{E_0^2 - 11 E_0 \Ee + 6 \me^2 + 4\Ee^2 }{6M^2}
-		\right)
-		\pm 3 j_2 
-		\left(
-			\frac{8 \Ee^2 - 5E_0 \Ee - 3 \me^2}{6M^2}
-		\right)
-	\right)
-\right]
-\end{multline}
-%
-\begin{multline}
-F_2(\Ee) = 
-\thetauv \frac{\Ee}{2M} 
-Re\left[
-	c_1^*\left(
-		c_1 + c_2 \frac{8(E_0-\Ee)}{3M}
-		-d \pm b
-	\right)
-\right]
-\\
-- \deltauv \frac{\Ee}{M} 
-\left[ \frac{u(u+1)}{(2u-1)(2u+3)} \right]^{1/2} \!
-Re \left[
-	a_1^*\left( 
-		\left( \frac{3}{2} \right)^{\!1/2}\! f
-		+ g \frac{\Ee+2E_0}{4M} 
-		\pm \left( \frac{3}{2} \right)^{\!1/2}\! j_2 \frac{E_0-\E}{2M}
-	\right)
-\right]
-\\
-+ (-1)^s \kappauv \frac{\E}{2M}
-Re \left[
-	c_1^* \left(
-		\pm 3 f 
-		\pm \left( \frac{3}{2} \right)^{\!1/2}\! g \frac{E_0-\Ee}{M}
-		+ 3 j_2 \frac{E_0-2\Ee}{2M}
-	\right)
-\right]
-+ \epsilonuv Re\left[ c_1^* j_3 \right]
-\left( 
-	\frac{21 \E^2}{8 M^2}
-\right)
-\end{multline}
-%
-\begin{multline}
-F_3(\Ee) = 
-- \deltauv (3 u^2 + 3 u -1)
-\left[
-	\frac{u}{(u-1)(u+1)(u+2)(2u-1)(2u+3)}
-\right]^{1/2}\!
-Re \left[
-	a_1^* j_3
-\right]
-\left( 
-	\frac{\Ee^2 \sqrt{15} }{4M^2}
-\right)
-\\
-+ 
-\frac{\rhouv}{u+1} 
-Re\left[
-	c_1^*(g\sqrt{3} + j_2\sqrt{2})
-	\left(
-		\frac{5 \Ee^2}{4 M^2}
-	\right)
-\right]
-\pm
-\frac{(-1)^s \sigmauv }{u+1} 
-Re \left[ c_1^*j_3 \right] 
-\left( 
-	\frac{5\Ee^2}{2 M^2}
-\right)
-\end{multline}
-...Phew!  I typed all of that out just so that I can have a record of what's going on here, but actually, the very first thing I want to do is make some simplifications here.  If we evaluate Holstein's Eqs.~(B8), which I will absolutely not type out here, for the case $u=v=J=J^\prime=3/2$, we find the following values:
-\begin{align}
-\deltauv     &= 1 
-& \thetauv   &= 1 
-& \rhouv     &= \frac{-41}{40}
-	\nonumber\\
-\gammauv     &= 1 
-& \kappauv   &=\frac{1}{2\sqrt{2}} % \;\; ! \!=\;\; \frac{3}{\sqrt{2}}
-& \sigmauv   &= \frac{-41}{4\sqrt{35}}
-	\nonumber\\
-\lambdauv    &= \frac{-\sqrt{2} }{5} % 2\sqrt{3} 
-& \epsilonuv &= \frac{-1}{2\sqrt{5}}
-& \phiuv     &= 0 % \frac{1}{32} \left(\frac{3}{5}\right)^{\!1/2}.
-	\nonumber\\
-%
-\end{align}
+%%and from Holstein's Eq.~(B9), we see that 
+%%\bea
+%%f_i(\Ee) &=& F_i(\Ee, J, J^\prime, 0)
+%%\eea
+%From Holstein's many Eqs.~(B7), we see that the $H_i(\Ee, u, v, s)$ can be written in terms of the functions $F_i(\Ee, u, v, s)$, which we carefully note \emph{are not the same} as the functions $F_i(\Ee)$.  We further see, from Holstein's Eq.~(B9) that a further set of functions, $f_i(\Ee)$ are defined in terms of the $F_i(\Ee, u, v, s)$.  In particular, Holstein's Eq.~(B9) states that
+%\bea
+%f_i(\Ee) &=& F_i(\Ee, J, J^\prime, 0).
+%\eea
+%Then, if we combine (some parts of) Holstein's Eqs.~(B7) with (B9) and (B10):
+%\input{equations_holstein_FHFf}\unskip
+%So that's fun.  Note that the $f_i(\Ee)$ are what goes into the polarized decay spectrum when the neutrino (ie, the recoil) is also observed.  It's a more complicated spectrum that way.  For this spectrum in which the neutrino has already been integrated over, we can just look up the $H_i(\Ee, J, J^\prime, 0) = H_i(\Ee, u, v, s)$ spectral functions, and leave it at that.
+%So let's do this thing!
+%\input{equation_holstein_F0}\unskip
+%\input{equation_holstein_F1}\unskip
+%\input{equation_holstein_F2}\unskip
+%\input{equation_holstein_F3}\unskip
+%...Phew!  I typed all of that out just so that I can have a record of what's going on here, but actually, the very first thing I want to do is make some simplifications here.  
+If we evaluate Holstein's Eqs.~(B8), which I will absolutely not type out here, for the case $u=v=J=J^\prime=3/2$, we find the following values:
+\input{equations_holstein_greekletterfunctions}\unskip  % eq:holstein_greekletterfunctions
+%\begin{align}
+%\deltauv     &= 1 
+%& \thetauv   &= 1 
+%& \rhouv     &= \frac{-41}{40}
+%	\nonumber\\
+%\gammauv     &= 1 
+%& \kappauv   &=\frac{1}{2\sqrt{2}} % \;\; ! \!=\;\; \frac{3}{\sqrt{2}}
+%& \sigmauv   &= \frac{-41}{4\sqrt{35}}
+%	\nonumber\\
+%\lambdauv    &= \frac{-\sqrt{2} }{5} % 2\sqrt{3} 
+%& \epsilonuv &= \frac{-1}{2\sqrt{5}}
+%& \phiuv     &= 0 % \frac{1}{32} \left(\frac{3}{5}\right)^{\!1/2}.
+%	\nonumber\\
+%%
+%\end{align}
 Furthermore, in our calculations here, we will be considering only the $\beta^+$ decay modes, and therefore we take the \emph{lower} sign when the option arises.  We also will use $s=0$, so that $(-1)^s = +1$.
-
+\note{Also, pretty sure one of those never gets used.  Which one was it?  idk.}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
