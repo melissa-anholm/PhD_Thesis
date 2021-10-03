@@ -158,81 +158,87 @@ $\textrm{(some stuff.}  \;\; \textrm{don't care.)}$
 
 Holstein's tensor notation definitions:
 \bea
-T_2(\hat{n}):[\vec{a}, \vec{b}]  \;\;\; \;\;\; \; 
-  &=& \left( (\hat{n}\cdot \vec{a})(\hat{n} \cdot \vec{b}) 
-    - \frac{1}{3} \vec{a} \cdot \vec{b} \right)  \\
-T_3(\hat{n}):[\vec{a}, \vec{b}, \vec{c}] \;\;\; \;
-  &=& \left( (\hat{n}\cdot \vec{a})(\hat{n} \cdot \vec{b})(\hat{n} \cdot \vec{c}) 
+\textstyle 
+T_2(\hat{n})\!:\![\vec{a}, \vec{b}]  \;\;\; \;\;\;
+  =&&  \textstyle \!\!\!\! \!\!\!\!
+  \left( (\hat{n}\cdot \vec{a})(\hat{n} \cdot \vec{b}) 
+    - \frac{1}{3} \vec{a} \cdot \vec{b} \right)   \\
+\textstyle 
+T_3(\hat{n})\!:\![\vec{a}, \vec{b}, \vec{c}] \;\;\; 
+  =&&  \textstyle \!\!\!\! \!\!\!\!
+  \left( (\hat{n}\cdot \vec{a})(\hat{n} \cdot \vec{b})(\hat{n} \cdot \vec{c}) 
     - \frac{1}{5} \left( (\hat{n}\cdot \vec{a})(\vec{b}\cdot\vec{c}) 
                        + (\hat{n}\cdot \vec{b})(\vec{a}\cdot\vec{c})
                        + (\hat{n}\cdot \vec{c})(\vec{a}\cdot\vec{c})
-    \right)
-\right)  \\ 
-T_4(\hat{n}):[\vec{a}, \vec{b}, \vec{c}, \vec{d}] \;
-  &=& \;\,
+    \right) 
+\right)  \nonumber \\ 
+\\ 
+T_4(\hat{n})\!:\![\vec{a}, \vec{b}, \vec{c}, \vec{d}] 
+   =&& \!\!\!\! \!\!\!\!
   \textrm{(some stuff)}  
 \eea
 
 
 Integrals by inspection:  [****** REINSPECT THEM TOMORROW MELISSA, FOR THE LOVE OF GOD.]
+... Actually, I'm'a just reference Table~\ref{table:integrals_by_inspection}.
 
-\begin{eqnarray}
-\int 1 \,                                                 \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 4\pi 
-\;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_1(E)
-\\
-\int \left(\! \frac{\vec{p}\cdot \hat{k}}{E} \!\right)    \textrm{d}^{}_{}\hat{\Omega}_k &= \:\:  0   
-\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_2(E)
-\\
-\int \left(\! \left(\! \frac{\vec{p}\cdot \hat{k}}{E}\!\right)^2 - \frac{1}{3} \frac{p^2}{E^2} \!\right)    \textrm{d}^{}_{}\hat{\Omega}_k &=  \:\: 0   
-\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_3(E)
-\end{eqnarray}
-\begin{eqnarray}
-\int \left( \hat{n}\cdot \frac{\vec{p}}{E} \right)  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\:  4\pi \left( \hat{n}\cdot \frac{\vec{p}}{E} \right)
-\,  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\;  f_4(E)
-\\
-\int \left(\hat{n}\cdot\frac{\vec{p}}{E}\right)\left(\frac{\vec{p}\cdot \hat{k}}{E}\right)  \,\textrm{d}^{}_{}\hat{\Omega}_k &=  \:\: 0
-\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_5(E)
-\\
-\int \left( \hat{n}\cdot\hat{k} \right)   \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
-\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_6(E)
-\\
-\int \left( \hat{n}\cdot\hat{k} \right)\left( \frac{\vec{p}\cdot\hat{k}}{E}\right)   \textrm{d}^{}_{}\hat{\Omega}_k &= \:\:  \frac{1}{3} 4\pi \left(\hat{n}\cdot \frac{\vec{p}}{E}\right)
-\, \;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_7(E)
-\\
-\int \hat{n}\cdot \left( \frac{\vec{p}\times \hat{k}}{E} \right) \textrm{d}^{}_{}\hat{\Omega}_k &= \:\:  0
-\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_8(E)
-\\
-\int \hat{n}\cdot \left( \frac{\vec{p}\times \hat{k}}{E} \right) \left(\frac{\vec{p}\cdot \hat{k}}{E}\right)  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
-\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \; &\leftrightarrow \;\;\;\;\;\;\; f_9(E)
-\end{eqnarray}
-\begin{eqnarray}
-\int T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E} \right]  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 4\pi \, T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E} \right]
-\;\;\;\;\;\;\;  &\leftrightarrow \;\;\;\;\;\;\; f_{10}(E)
-\\
-\int T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E} \right]  \left( \frac{\vec{p}\cdot\hat{k} }{E} \right) \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
-\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_{11}(E)
-\\
-\int T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \hat{k} \right]  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
-\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_{12}(E)
-\\
-\int T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \hat{k} \right] \left( \frac{\vec{p}\cdot\hat{k}}{E} \right) \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: \frac{1}{3} 4\pi  T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E} \right] 
-\, \;\;\;\; &\leftrightarrow \;\;\;\;\;\;\; f_{13}(E)
-\\
-\int T_2(\hat{n}): \!\! \left[\hat{k}, \hat{k} \right]  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
-\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_{14}(E)
-\\
-\int T_2(\hat{n}): \!\! \left[\hat{k}, \hat{k} \right] \left( \frac{\vec{p}\cdot\hat{k}}{E} \right) \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
-\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_{15}(E) \;\;\; (?)
-\\
-\int T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E} \times \hat{k} \right]  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
-\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_{16}(E)
-\\
-\int T_2(\hat{n}): \!\! \left[\hat{k}, \frac{\vec{p}}{E} \times \hat{k} \right]  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
-\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_{17}(E)
-\\
-\int T_3(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E}, \frac{\vec{p}}{E} \right]  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 4 \pi  T_3(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E}, \frac{\vec{p}}{E} \right] 
-\;\, \;&\leftrightarrow \;\;\;\;\;\;\; f_{18}(E)
-\end{eqnarray}
+%\begin{eqnarray}
+%\int 1 \,                                                 \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 4\pi 
+%\;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_1(E)
+%\\
+%\int \left(\! \frac{\vec{p}\cdot \hat{k}}{E} \!\right)    \textrm{d}^{}_{}\hat{\Omega}_k &= \:\:  0   
+%\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_2(E)
+%\\
+%\int \left(\! \left(\! \frac{\vec{p}\cdot \hat{k}}{E}\!\right)^2 - \frac{1}{3} \frac{p^2}{E^2} \!\right)    \textrm{d}^{}_{}\hat{\Omega}_k &=  \:\: 0   
+%\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_3(E)
+%\end{eqnarray}
+%\begin{eqnarray}
+%\int \left( \hat{n}\cdot \frac{\vec{p}}{E} \right)  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\:  4\pi \left( \hat{n}\cdot \frac{\vec{p}}{E} \right)
+%\,  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\;  f_4(E)
+%\\
+%\int \left(\hat{n}\cdot\frac{\vec{p}}{E}\right)\left(\frac{\vec{p}\cdot \hat{k}}{E}\right)  \,\textrm{d}^{}_{}\hat{\Omega}_k &=  \:\: 0
+%\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_5(E)
+%\\
+%\int \left( \hat{n}\cdot\hat{k} \right)   \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
+%\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_6(E)
+%\\
+%\int \left( \hat{n}\cdot\hat{k} \right)\left( \frac{\vec{p}\cdot\hat{k}}{E}\right)   \textrm{d}^{}_{}\hat{\Omega}_k &= \:\:  \frac{1}{3} 4\pi \left(\hat{n}\cdot \frac{\vec{p}}{E}\right)
+%\, \;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_7(E)
+%\\
+%\int \hat{n}\cdot \left( \frac{\vec{p}\times \hat{k}}{E} \right) \textrm{d}^{}_{}\hat{\Omega}_k &= \:\:  0
+%\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_8(E)
+%\\
+%\int \hat{n}\cdot \left( \frac{\vec{p}\times \hat{k}}{E} \right) \left(\frac{\vec{p}\cdot \hat{k}}{E}\right)  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
+%\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \; &\leftrightarrow \;\;\;\;\;\;\; f_9(E)
+%\end{eqnarray}
+%\begin{eqnarray}
+%\int T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E} \right]  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 4\pi \, T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E} \right]
+%\;\;\;\;\;\;\;  &\leftrightarrow \;\;\;\;\;\;\; f_{10}(E)
+%\\
+%\int T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E} \right]  \left( \frac{\vec{p}\cdot\hat{k} }{E} \right) \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
+%\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_{11}(E)
+%\\
+%\int T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \hat{k} \right]  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
+%\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_{12}(E)
+%\\
+%\int T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \hat{k} \right] \left( \frac{\vec{p}\cdot\hat{k}}{E} \right) \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: \frac{1}{3} 4\pi  T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E} \right] 
+%\, \;\;\;\; &\leftrightarrow \;\;\;\;\;\;\; f_{13}(E)
+%\\
+%\int T_2(\hat{n}): \!\! \left[\hat{k}, \hat{k} \right]  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
+%\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_{14}(E)
+%\\
+%\int T_2(\hat{n}): \!\! \left[\hat{k}, \hat{k} \right] \left( \frac{\vec{p}\cdot\hat{k}}{E} \right) \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
+%\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_{15}(E) \;\;\; (?)
+%\\
+%\int T_2(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E} \times \hat{k} \right]  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
+%\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_{16}(E)
+%\\
+%\int T_2(\hat{n}): \!\! \left[\hat{k}, \frac{\vec{p}}{E} \times \hat{k} \right]  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 0
+%\;\;  \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;\;\;\;\;\;\; \;&\leftrightarrow \;\;\;\;\;\;\; f_{17}(E)
+%\\
+%\int T_3(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E}, \frac{\vec{p}}{E} \right]  \textrm{d}^{}_{}\hat{\Omega}_k &= \:\: 4 \pi  T_3(\hat{n}): \!\! \left[\frac{\vec{p}}{E}, \frac{\vec{p}}{E}, \frac{\vec{p}}{E} \right] 
+%\;\, \;&\leftrightarrow \;\;\;\;\;\;\; f_{18}(E)
+%\end{eqnarray}
 
 
 

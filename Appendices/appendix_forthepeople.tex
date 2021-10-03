@@ -68,18 +68,29 @@ Note that the $f_i(\Ee)$ in Eq.~\ref{eq:holstein_FHFf} are the same spectral fun
 \input{equation_holstein_F3}\unskip
 and we might really appreciate if these things could be simplified a bit.  
 \note{In fact, we might want to add the other different-er terms in to this thing now, before we get ahead of ourselves.}
+Next, Holstein goes and tweaks those $F_i(\Ebeta)$ terms that we've already written out, by adding in a tweak for Coulomb corrections.  We'll impose the following corrections:
+\beq
+	F_i(\Ebeta) \rightarrow \tilde{F}_i(\Ebeta) := \FF F_i(\Ebeta) + \FF \, \Delta F_i(\Ebeta)
+\eeq
+Because Holstein doesn't actually write this stuff out in terms of $F_i(\Ebeta)$, but rather in terms of $F_i(\Ebeta, u,v,s)$, this correction presents yet another opportunity for the reader to interpret his notation incorrectly.  We note that one must remember to make use of the relations in Eq.~(\ref{eq:holstein_FHFf}).
+\note{So clearly I'm going to need terms for $\Delta F_1(\Ebeta, u, v, s)$, $\Delta F_4(\Ebeta, u, v, s)$, $\Delta F_7(\Ebeta, u, v, s)$, $\Delta F_{10}(\Ebeta, u, v, s)$, $\Delta F_{13}(\Ebeta, u, v, s)$, and $\Delta F_{18}(\Ebeta, u, v, s)$. We really only have expressions for some of them in Holstein's Eq.~(C4).  That's annoying.}
+
 The terms $a_1, a_2, b, c_1, c_2, d, e, f, g, h, j_2, j_3$ are ``structure functions''.  Holstein gives some predictions for their form, assuming the impulse approximation holds, in his Eq.~(67). \aside{There was something wrong with this assumption.  Something circular.  I forget.  Blah.}  For the most part, the values and form of these structure functions are beyond the scope of this thesis, so I will not re-write them all here. \aside{Or will I?}  \comment{It should be noted that the numerical values used for these parameters came from a private communication from Ian Towner to ... someone other than me.}  However, it is important to note the expressions for $a_i$ and $c_i$, because these will directly come into play when we try to reconcile Holstein's expression with JTW's.  Therefore, 
 \bea
-a(q^2) &\approx& \frac{g_V(q^2)}{(1 + \frac{\Delta}{2M})} \left[ M_F    + \frac{1}{6}(q^2 - \Delta^2) M_{r^2} + \frac{1}{3} \Delta M_{\mathbf{r} \cdot \mathbf{p} } \right] \\ 
+a(q^2) &\approx& \frac{g_V(q^2)}{(1 + \frac{\Delta}{2M})} \left[ M_F    + \frac{1}{6}(q^2 - \Delta^2) M_{r^2} + \frac{1}{3} \Delta M_{\mathbf{r} \cdot \mathbf{p} } \right] 
+\\ 
 c(q^2) &\approx& \frac{g_A(q^2)}{(1 + \frac{\Delta}{2M})} \left[ M_{GT} + \frac{1}{6}(q^2 - \Delta^2) M_{\sigma r^2} + \frac{1}{6 \sqrt{10} }(2\Delta^2 + q^2) M_{1y} 
 \right. \nonumber \\ && \left.
 + A \frac{\Delta}{2 M} M_{\sigma L} + \frac{1}{2} \Delta M_{\sigma r p} \right]
 \eea
+...where the $M_{xxx}$'s are matrix elements of various sorts.  \aside{Somewhere, just list out the goddamn values of things that I inherited from Ian Towner's personal communication that one time, over multiple generations of grad students.}  Also, Holstein proceeds to split up $a(q^2)$ and $c(q^2)$ into their first two Taylor series terms for an expansion of .... $q/M$, maybe?  Or possibly $q^2 / M^2$?  Anyway, that's $a_1$ and $a_2$, and $c_1$ and $c_2$, in Holstein notation.  He doesn't do that with any of the other structure functions. 
+\bluetodo{Seriously, I need to check what the taylor series is even expanding in.}
+
 
 Let's define some of that notation!
 Firstly, 
 \bea
-\textrm{Holstein's \,} \hatn &=& \textrm{JTW's \,} \hatj,
+\textrm{Holstein's \,} \hat{n} &=& \textrm{JTW's \,} \mathbf{j},
 \label{eq:nequalsj}
 \eea
 and the 

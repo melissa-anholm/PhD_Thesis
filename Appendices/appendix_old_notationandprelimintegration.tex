@@ -6,26 +6,27 @@
 \chapter[Notation]{Proposed Notation}
 \label{notation}
 
-\section{Things.}
-The jtw expression, after integrating over $d\Omega_\nu$ and making some substitutions (and more controversially, adjustments so that neutrinos aren't massless, and recoil energy isn't zero), turns out like this:
-\bea
-& \!\!\!\!  \omega \mathrm{d(stuff})  \!\!\!\!\!\!\!\! & 
-\nonumber\\
-&= \!\!\!\!\!\!\!\! & 2\left( \frac{1}{2\pi} \right)^4 p_\beta E_\beta \left( |\vec{p}_\beta + \vec{p}_r | \right)(Q-E_\beta -E_r) dE_\beta d\Omega_\beta \xi \nonumber \\
-&& \times \left[ \phantom{\frac{\left< \vec{J} \right>}{J}   \!\!\!\!\!\!\!\!   \!\!\!\!} 
- 1 + a_{\beta\nu} \left( \frac{-|\vec{p}_\beta|^2 - \vec{p}_\beta \cdot \vec{p}_r}{E_\beta(Q-E_\beta -E_r)}\right) + b_{\mathrm{Fierz}} \left( \frac{m_e}{E_\beta} \right) \right. \nonumber \\
-&& \left. + c_{\mathrm{align}} \left( \frac{J(J+1) - 3 \left<(\vec{J} \cdot \hat{j})^2 \right>}{ J(2J+1) } \right) \!\!
-\left( \frac{- \frac{1}{3}(|\vec{p}_\beta|^2 + \vec{p}_\beta \cdot \vec{p}_r )+ (\vec{p}_\beta \cdot \hat{j})^2 + (\vec{p}_\beta \cdot \hat{j})(\vec{p}_r \cdot \hat{j}) }{E_\beta (Q-E_\beta-E_r)}\right) \right.\nonumber \\
-&& \left. +\frac{\left< \vec{J} \right>}{J} \cdot \left[ A_\beta \frac{\vec{p}_\beta}{E_\beta} + B_\nu \left(\frac{-\vec{p}_\beta - \vec{p}_r}{Q-E_\beta-E_r}\right) + D \left( \frac{ (\vec{p}_r \times \vec{p}_\beta) }{E_\beta(Q-E_\beta-E_r)} \right) 
-\right] \right].
-\eea
-Assumptions/substitutions that I made in order to arrive at that expression are:
-\bea
-&& Q = E_\beta + E_\nu + E_r \\
-&& \vec{p}_\beta + \vec{p}_\nu + \vec{p}_r = 0 \\
-&& (E_0 - E_e)^2 \rightarrow p_\nu E_\nu = \left|\vec{p}_\beta + \vec{p}_r \right| (Q-E_\beta-E_r) \\
-&& \int d\Omega_\nu = 4\pi .
-\eea
+%\section{Things.}
+%The jtw expression, after integrating over $d\Omega_\nu$ and making some substitutions (and more controversially, adjustments so that neutrinos aren't massless, and recoil energy isn't zero), turns out like this:
+%\bea
+%& \!\!\!\!  \omega \mathrm{d(stuff})  \!\!\!\!\!\!\!\! & 
+%\nonumber\\
+%&= \!\!\!\!\!\!\!\! & 2\left( \frac{1}{2\pi} \right)^4 p_\beta E_\beta \left( |\vec{p}_\beta + \vec{p}_r | \right)(Q-E_\beta -E_r) dE_\beta d\Omega_\beta \xi \nonumber \\
+%&& \times \left[ \phantom{\frac{\left< \vec{J} \right>}{J}   \!\!\!\!\!\!\!\!   \!\!\!\!} 
+% 1 + a_{\beta\nu} \left( \frac{-|\vec{p}_\beta|^2 - \vec{p}_\beta \cdot \vec{p}_r}{E_\beta(Q-E_\beta -E_r)}\right) + b_{\mathrm{Fierz}} \left( \frac{m_e}{E_\beta} \right) \right. \nonumber \\
+%&& \left. + c_{\mathrm{align}} \left( \frac{J(J+1) - 3 \left<(\vec{J} \cdot \hat{j})^2 \right>}{ J(2J+1) } \right) \!\!
+%\left( \frac{- \frac{1}{3}(|\vec{p}_\beta|^2 + \vec{p}_\beta \cdot \vec{p}_r )+ (\vec{p}_\beta \cdot \hat{j})^2 + (\vec{p}_\beta \cdot \hat{j})(\vec{p}_r \cdot \hat{j}) }{E_\beta (Q-E_\beta-E_r)}\right) \right.\nonumber \\
+%&& \left. +\frac{\left< \vec{J} \right>}{J} \cdot \left[ A_\beta \frac{\vec{p}_\beta}{E_\beta} + B_\nu \left(\frac{-\vec{p}_\beta - \vec{p}_r}{Q-E_\beta-E_r}\right) + D \left( \frac{ (\vec{p}_r \times \vec{p}_\beta) }{E_\beta(Q-E_\beta-E_r)} \right) 
+%\right] \right].
+%\eea
+%Assumptions/substitutions that I made in order to arrive at that expression are:
+%\bea
+%&& Q = E_\beta + E_\nu + E_r \\
+%&& \vec{p}_\beta + \vec{p}_\nu + \vec{p}_r = 0 \\
+%&& (E_0 - E_e)^2 \rightarrow p_\nu E_\nu = \left|\vec{p}_\beta + \vec{p}_r \right| (Q-E_\beta-E_r) \\
+%&& \int d\Omega_\nu = 4\pi .
+%\eea
+%
 \section{Things.2}
 Actually though, I'm'a back up.  Let's talk about dot products in spherical coordinates.  Of course, in Cartesian coordinates,
 \bea
@@ -48,67 +49,69 @@ Actually though, I'm'a back up.  Let's talk about dot products in spherical coor
 \cos\theta_\nu \\
 \end{bmatrix}
 \eea
-and
-\bea
-\vec{p}_\beta + \vec{p}_r + \vec{p}_\nu = 0.
-\eea
-We'd like to find an expression for $\vec{p}_\beta \cdot \vec{p}_\nu$, and we'd probably like to get rid of all dependence on the direction of $\nu$, which will make the integral over $d\Omega_\nu$ easier to deal with.  
-\bea
-\vec{p}_\beta \cdot \vec{p}_\nu 
-&=& - \vec{p}_\beta \cdot (\vec{p}_\beta + \vec{p}_r ) \\
-& = & -p_\beta^2 - \vec{p}_\beta \cdot \vec{p}_r \\ 
-& = & -p_\beta^2 - p_\beta p_r  
-\begin{bmatrix}
-\sin\theta_\beta \cos\phi_\beta \\
-\sin\theta_\beta \sin\phi_\beta \\
-\cos\theta_\beta \\
-\end{bmatrix}
-\cdot
-\begin{bmatrix}
-\sin\theta_r \cos\phi_r \\
-\sin\theta_r \sin\phi_r \\
-\cos\theta_r \\
-\end{bmatrix} \\
-& = & -p_\beta^2 - p_\beta p_r  
-\left[ \sin\theta_\beta \cos\phi_\beta \sin\theta_r \cos\phi_r
-+ \sin\theta_\beta \sin\phi_\beta \sin\theta_r \sin\phi_r  \right.\nonumber\\
-&& \left.
-+ \cos\theta_\beta \cos\theta_r 
-\right] \\
-&=&  -p_\beta^2 - p_\beta p_r  
-\left[ \cos\theta_\beta \cos\theta_r + \sin\theta_\beta \sin\theta_r \cos(\phi_\beta - \phi_r) \right],
-\eea
-where that last step happens via the use of some nice trig identities, and Mathematica confirms it. Equivalently, though:
-\bea
-\vec{p}_\beta \cdot \vec{p}_\nu 
-&=& 
-p_\beta p_\nu 
-\left[ \cos\theta_\beta \cos\theta_\nu + \sin\theta_\beta \sin\theta_\nu \cos(\phi_\beta - \phi_\nu) \right].
-\eea
-That version is actually probably better, since recoil momentum isn't even a thing, for the purposes of integration.
+%and
+%\bea
+%\vec{p}_\beta + \vec{p}_r + \vec{p}_\nu = 0.
+%\eea
+%We'd like to find an expression for $\vec{p}_\beta \cdot \vec{p}_\nu$, and we'd probably like to get rid of all dependence on the direction of $\nu$, which will make the integral over $d\Omega_\nu$ easier to deal with.  
+%\bea
+%\vec{p}_\beta \cdot \vec{p}_\nu 
+%&=& - \vec{p}_\beta \cdot (\vec{p}_\beta + \vec{p}_r ) \\
+%& = & -p_\beta^2 - \vec{p}_\beta \cdot \vec{p}_r \\ 
+%& = & -p_\beta^2 - p_\beta p_r  
+%\begin{bmatrix}
+%\sin\theta_\beta \cos\phi_\beta \\
+%\sin\theta_\beta \sin\phi_\beta \\
+%\cos\theta_\beta \\
+%\end{bmatrix}
+%\cdot
+%\begin{bmatrix}
+%\sin\theta_r \cos\phi_r \\
+%\sin\theta_r \sin\phi_r \\
+%\cos\theta_r \\
+%\end{bmatrix} \\
+%& = & -p_\beta^2 - p_\beta p_r  
+%\left[ \sin\theta_\beta \cos\phi_\beta \sin\theta_r \cos\phi_r
+%+ \sin\theta_\beta \sin\phi_\beta \sin\theta_r \sin\phi_r  \right.\nonumber\\
+%&& \left.
+%+ \cos\theta_\beta \cos\theta_r 
+%\right] \\
+%&=&  -p_\beta^2 - p_\beta p_r  
+%\left[ \cos\theta_\beta \cos\theta_r + \sin\theta_\beta \sin\theta_r \cos(\phi_\beta - \phi_r) \right],
+%\eea
+%where that last step happens via the use of some nice trig identities, and Mathematica confirms it. Equivalently, though:
+%\bea
+%\vec{p}_\beta \cdot \vec{p}_\nu 
+%&=& 
+%p_\beta p_\nu 
+%\left[ \cos\theta_\beta \cos\theta_\nu + \sin\theta_\beta \sin\theta_\nu \cos(\phi_\beta - \phi_\nu) \right].
+%\eea
+%That version is actually probably better, since recoil momentum isn't even a thing, for the purposes of integration.
+%
+%Consider, now, the integral:
+%\bea \!\!\!\! \!\!\!\! \!\!\!\! \!\!\!\!
+%\int \frac{\vec{p}_\beta \cdot \vec{p}_\nu}{E_\beta E_\nu} d\Omega_\nu 
+%&=& \int_0^{2\pi} \!\!\! \int_0^{\pi} \frac{\vec{p}_\beta \cdot \vec{p}_\nu}{E_\beta E_\nu} \sin\theta_\nu d\theta_\nu d\phi_\nu \\ 
+%&=& \frac{p_\beta p_\nu }{E_\beta E_\nu}  \int_0^{2\pi} \!\!\! \int_0^{\pi} 
+%\left[ 
+%\cos\theta_\beta \cos\theta_\nu + \sin\theta_\beta \sin\theta_\nu \cos(\phi_\beta - \phi_\nu)
+%\right] 
+%\sin\theta_\nu d\theta_\nu d\phi_\nu \\
+%&=&  \frac{p_\beta p_\nu }{E_\beta E_\nu} \left[
+%2\pi  \cos\theta_\beta \int_0^{\pi} \cos\theta_\nu \sin\theta_\nu d\theta_\nu \right.\nonumber\\
+%&&\left.+ \sin\theta_\beta \int_0^{2\pi} \!\!\! \cos(\phi_\beta - \phi_\nu)
+%\int_0^{\pi}  \sin^2\theta_\nu  d\theta_\nu d\phi_\nu
+%\right] \\
+%&=& \frac{p_\beta p_\nu }{E_\beta E_\nu} \frac{\pi}{2} \sin\theta_\beta \int_0^{2\pi} \!\!\! \cos(\phi_\beta - \phi_\nu) d\phi_\nu \\
+%&=& 0.
+%\eea
+%That obviously didn't work.  Probably $p_\nu = p_\nu(\hat{p}_\nu)$.  How do I even *deal* with that?!?
+%
+%--
+%
+%Actually, according to insight that Alexandre thought was very obvious, because it was, this notation only happened in the first place because the lab frame matters.  it's measured w.r.t. polarization or alignment or something.  The integration over the two leptons is really an integration over the lab frame + one lepton.  
 
-Consider, now, the integral:
-\bea \!\!\!\! \!\!\!\! \!\!\!\! \!\!\!\!
-\int \frac{\vec{p}_\beta \cdot \vec{p}_\nu}{E_\beta E_\nu} d\Omega_\nu 
-&=& \int_0^{2\pi} \!\!\! \int_0^{\pi} \frac{\vec{p}_\beta \cdot \vec{p}_\nu}{E_\beta E_\nu} \sin\theta_\nu d\theta_\nu d\phi_\nu \\ 
-&=& \frac{p_\beta p_\nu }{E_\beta E_\nu}  \int_0^{2\pi} \!\!\! \int_0^{\pi} 
-\left[ 
-\cos\theta_\beta \cos\theta_\nu + \sin\theta_\beta \sin\theta_\nu \cos(\phi_\beta - \phi_\nu)
-\right] 
-\sin\theta_\nu d\theta_\nu d\phi_\nu \\
-&=&  \frac{p_\beta p_\nu }{E_\beta E_\nu} \left[
-2\pi  \cos\theta_\beta \int_0^{\pi} \cos\theta_\nu \sin\theta_\nu d\theta_\nu \right.\nonumber\\
-&&\left.+ \sin\theta_\beta \int_0^{2\pi} \!\!\! \cos(\phi_\beta - \phi_\nu)
-\int_0^{\pi}  \sin^2\theta_\nu  d\theta_\nu d\phi_\nu
-\right] \\
-&=& \frac{p_\beta p_\nu }{E_\beta E_\nu} \frac{\pi}{2} \sin\theta_\beta \int_0^{2\pi} \!\!\! \cos(\phi_\beta - \phi_\nu) d\phi_\nu \\
-&=& 0.
-\eea
-That obviously didn't work.  Probably $p_\nu = p_\nu(\hat{p}_\nu)$.  How do I even *deal* with that?!?
-
---
-
-Actually, according to insight that Alexandre thought was very obvious, because it was, this notation only happened in the first place because the lab frame matters.  it's measured w.r.t. polarization or alignment or something.  The integration over the two leptons is really an integration over the lab frame + one lepton.  
+\note{According to insight that Alexandre thought was very obvious, because it was, JTW-style notation only happened in the first place because the lab frame matters.  it's measured w.r.t. polarization or alignment or something.  The integration over the two leptons is really an integration over the lab frame + one lepton.}
 
 \section{Things.3}
 
@@ -119,12 +122,12 @@ Suppose I integrate jtw over everything but electron energy.  What's left?
 \eea
 ...Or, in units that don't suck, with terminology that's useful to us (and assuming massless neutrinos, which is fine, 'cause the uncertainty in $Q$ is like ~200 eV or something (check value) ), 
 \bea
-\!\!\!\! \!\!\!\! \!\!\!\! \!\!\!\!
-\omega \mathrm{d(stuff}) &=& 4 \left( \frac{1}{2\pi} \right)^3 \!
+\omega \mathrm{d(stuff}) &=& \textstyle 4 \left( \frac{1}{2\pi} \right)^3 \!
 \frac{(E_\beta^2 - m^2c^4)^{1/2} }{c}  \, E_\beta 
 (Q - E_\beta - E_{r\textrm{kin}})^2 
 \, dE_\beta \, \xi  
 \left[1 + b_{\mathrm{Fierz}} \left( \frac{m_ec^2}{E_\beta} \right) \right]
+\nonumber\\
 \eea
 Integrate over the beta energy (**NOT** between $E_\beta = m_e c^2$ and $E_\beta = m_e c^2 + Q$ ; fix this in the code!) and we find:
 \bea
