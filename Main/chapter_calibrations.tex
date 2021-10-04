@@ -34,6 +34,24 @@ The key to the polarization measurement is that only atoms in the excited atomic
 
 \note{Trap position -- Measured using the same dataset that was used to quantify the polarization.  The trap drifts slightly over the course of our data collection.  Describe the rMCP calibration needed to extract this info.}
 \note{Polarization measurement was conducted on a different set of data, collected in between the measurements used for $A_{\mathrm{\beta}}$ and $b_{\mathrm{Fierz}}$, and at a higher electric field, because we were unable to run both our MCP detectors simultaneously.  }
+
+\begin{figure}[h!!t]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/y_from_camera_electron_recoil.pdf}
+	\caption[Trap Position along TOF Axis]{Trap Position along the ``Time-of-Flight'' Axis.  Electron runs and recoil runs plotted by run number. \comment{(I should probably re-plot this.  Maybe combine info with Fig.~(\ref{fig:cameraposition_by_time}).) } }	
+	\label{fig:camera_electron_recoil}
+\end{figure}
+
+\begin{figure}[h!!t]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/TrapPosition_FromCamera.pdf}
+	\caption[Trap Position from Camera]{Trap Position along the ``Time-of-Flight'' Axis and the ``Vertical+30" Axis.  All runs plotted by time of run. \comment{(Need to re-plot this.)}}	
+	\label{fig:cameraposition_by_time}
+\end{figure}
+
+
 %\note{Need to describe how polarization works.  Needs a level diagram.  Needs another(?) level diagram for the photoionization, and maybe a third for the MOT.  Can I combine them all?  idk.}
 
 Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, and I'll immediately reference it right now, as Table~\ref{table:cloudpositions}:
@@ -72,10 +90,17 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 
 \section{The rMCP}
 	I did this, and they're absolutely needed to make any sense of the trap position data.  
-\missingfigure{Needs two pictures from the rMCP with the grid lines -- before and after corrections are performed.  Just for fun, I could throw in one with the stupid stripes.}
+%\missingfigure{Needs two pictures from the rMCP with the grid lines -- before and after corrections are performed.  Just for fun, I could throw in one with the stupid stripes.}
+\begin{figure}[h!!t]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/rMCP_Calibration}
+	\caption[rMCP Calibration]{rMCP Calibration.  Definitely comment about how this calibration went here, in the figure caption. \comment{(Do I definitely want a picture with the stupid line-y runs?  Maybe it's better to just *not*...)}}	
+	\label{fig:rmcp_calibration}
+\end{figure}
 	These calibrations are done during AC-MOT time, and we're actually interested in the rMCP data taken during OP time.  Can I find pictures to estimate the size of the change resulting from the magnetic field?  In any case, the change is pretty small.  
 
-\missingfigure{Position as a function of run number.  I have this somewhere.}
+%\missingfigure{Position as a function of run number.  I have this somewhere.}
 
 
 

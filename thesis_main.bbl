@@ -38,6 +38,10 @@ Clifford, E., Hagberg, E., Koslowsy, V., Hardy, J., Schmeing, H. {\mdseries
   range 0.8–3.8 MeV}, Nuclear Instruments and Methods in Physics Research,
   Vol.~224, No.~3, pp.~440--447, 1984.
 
+\bibitem{Jelley}
+Jelley, N.~A., Fundamentals of Nuclear Physics, Cambridge University Press,
+  1990.
+
 \bibitem{SeverijnsTandecki2008}
 Severijns, N., Tandecki, M., Phalet, T. {\mdseries and} Towner, I.~S.,
   \textit{$\mathcal{F}t$ values of the $T=1/2$ mirror \ensuremath{\beta}
@@ -116,6 +120,11 @@ Anholm, M., Characterizing the {AC-MOT}, Master's thesis, University of British
 Audi, G., Wapstra, A. {\mdseries and} Thibault, C., \textit{The {AME2003}
   Atomic Mass Evaluation}, Nuclear Physics A, Vol.~729, No.~1, pp.~337 -- 676,
   2003.
+
+\bibitem{holstein_errata}
+Holstein, B.~R., \textit{Erratum: Recoil effects in allowed beta decay: The
+  elementary particle approach}, Rev. Mod. Phys., Vol.~48, pp.~673--673, Oct
+  1976.
 
 \bibitem{severijns_cuncic_2011}
 Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
