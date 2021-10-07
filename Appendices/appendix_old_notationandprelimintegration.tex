@@ -27,28 +27,30 @@
 %&& \int d\Omega_\nu = 4\pi .
 %\eea
 %
-\section{Things.2}
-Actually though, I'm'a back up.  Let's talk about dot products in spherical coordinates.  Of course, in Cartesian coordinates,
-\bea
-\vec{p}_\beta = p_\beta
-\begin{bmatrix}
-\sin\theta_\beta \cos\phi_\beta \\
-\sin\theta_\beta \sin\phi_\beta \\
-\cos\theta_\beta \\
-\end{bmatrix} ;
-& \vec{p}_r = p_r 
-\begin{bmatrix}
-\sin\theta_r \cos\phi_r \\
-\sin\theta_r \sin\phi_r \\
-\cos\theta_r \\
-\end{bmatrix} ;
-&\vec{p}_\nu= p_\nu
-\begin{bmatrix}
-\sin\theta_\nu \cos\phi_\nu \\
-\sin\theta_\nu \sin\phi_\nu \\
-\cos\theta_\nu \\
-\end{bmatrix}
-\eea
+
+%\section{Things.2}
+%Actually though, I'm'a back up.  Let's talk about dot products in spherical coordinates.  Of course, in Cartesian coordinates,
+%\bea
+%\vec{p}_\beta = p_\beta
+%\begin{bmatrix}
+%\sin\theta_\beta \cos\phi_\beta \\
+%\sin\theta_\beta \sin\phi_\beta \\
+%\cos\theta_\beta \\
+%\end{bmatrix} ;
+%& \vec{p}_r = p_r 
+%\begin{bmatrix}
+%\sin\theta_r \cos\phi_r \\
+%\sin\theta_r \sin\phi_r \\
+%\cos\theta_r \\
+%\end{bmatrix} ;
+%&\vec{p}_\nu= p_\nu
+%\begin{bmatrix}
+%\sin\theta_\nu \cos\phi_\nu \\
+%\sin\theta_\nu \sin\phi_\nu \\
+%\cos\theta_\nu \\
+%\end{bmatrix}
+%\eea
+
 %and
 %\bea
 %\vec{p}_\beta + \vec{p}_r + \vec{p}_\nu = 0.
@@ -113,28 +115,28 @@ Actually though, I'm'a back up.  Let's talk about dot products in spherical coor
 
 \note{According to insight that Alexandre thought was very obvious, because it was, JTW-style notation only happened in the first place because the lab frame matters.  it's measured w.r.t. polarization or alignment or something.  The integration over the two leptons is really an integration over the lab frame + one lepton.}
 
-\section{Things.3}
-
-Suppose I integrate jtw over everything but electron energy.  What's left?
-\bea
-\omega \mathrm{d(stuff}) &=& \left( \frac{1}{2\pi} \right)^5 \! (4\pi)^2 \,p_\beta E_\beta E_\nu^2 \, dE_\beta \, \xi  
- \left[1 + b_{\mathrm{Fierz}} \left( \frac{m_e}{E_\beta} \right) \right].
-\eea
-...Or, in units that don't suck, with terminology that's useful to us (and assuming massless neutrinos, which is fine, 'cause the uncertainty in $Q$ is like ~200 eV or something (check value) ), 
-\bea
-\omega \mathrm{d(stuff}) &=& \textstyle 4 \left( \frac{1}{2\pi} \right)^3 \!
-\frac{(E_\beta^2 - m^2c^4)^{1/2} }{c}  \, E_\beta 
-(Q - E_\beta - E_{r\textrm{kin}})^2 
-\, dE_\beta \, \xi  
-\left[1 + b_{\mathrm{Fierz}} \left( \frac{m_ec^2}{E_\beta} \right) \right]
-\nonumber\\
-\eea
-Integrate over the beta energy (**NOT** between $E_\beta = m_e c^2$ and $E_\beta = m_e c^2 + Q$ ; fix this in the code!) and we find:
-\bea
-\omega &=& 4 \left( \frac{1}{2\pi} \right)^3 \! (...)
-\eea 
-This is *probably* interpreted as the overall decay rate, somehow.
-
+%\section{Things.3}
+%
+%Suppose I integrate jtw over everything but electron energy.  What's left?
+%\bea
+%\omega \mathrm{d(stuff}) &=& \left( \frac{1}{2\pi} \right)^5 \! (4\pi)^2 \,p_\beta E_\beta E_\nu^2 \, dE_\beta \, \xi  
+% \left[1 + b_{\mathrm{Fierz}} \left( \frac{m_e}{E_\beta} \right) \right].
+%\eea
+%...Or, in units that don't suck, with terminology that's useful to us (and assuming massless neutrinos, which is fine, 'cause the uncertainty in $Q$ is like ~200 eV or something (check value) ), 
+%\bea
+%\omega \mathrm{d(stuff}) &=& \textstyle 4 \left( \frac{1}{2\pi} \right)^3 \!
+%\frac{(E_\beta^2 - m^2c^4)^{1/2} }{c}  \, E_\beta 
+%(Q - E_\beta - E_{r\textrm{kin}})^2 
+%\, dE_\beta \, \xi  
+%\left[1 + b_{\mathrm{Fierz}} \left( \frac{m_ec^2}{E_\beta} \right) \right]
+%\nonumber\\
+%\eea
+%Integrate over the beta energy (**NOT** between $E_\beta = m_e c^2$ and $E_\beta = m_e c^2 + Q$ ; fix this in the code!) and we find:
+%\bea
+%\omega &=& 4 \left( \frac{1}{2\pi} \right)^3 \! (...)
+%\eea 
+%This is *probably* interpreted as the overall decay rate, somehow.
+%
 \section{Beta End-point Energy}
 Note that nuclear physics notational convention, which is fucking retarded, apparently defines kinetic energy $T$ s.t. 
 \beq
@@ -150,7 +152,8 @@ But since $Q=T_{final} - T_{initial}$, we're sort-of stuck, if we want to descri
 && Q = (p_\textrm{max}^2 c^2 + m_e^2 c^4)^{1/2} - m_e c^2
 \eea
 
-... actually, pretty sure that's all wrong.  ... ... Actually-actually, it's fine.  See \\ ``jtw\_integration\_scratch3.nb'' for more-other details.  That version, I believe, finally got all the thingies right.
+... actually, pretty sure that's all wrong.  ... ... Actually-actually, it's fine.  
+\note{ See ``jtw\_integration\_scratch3.nb'' for more-other details.  Of things.  Things I've deleted from the document now.  ...That version of the mathematica notebook, I believe, has finally got all the thingies right.}
 
 \section{Beta End-point Energy.2}
 Firstly, some Q-values for $^{37}$K (via bnl).

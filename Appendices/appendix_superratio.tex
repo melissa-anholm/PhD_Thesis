@@ -1,0 +1,61 @@
+% !TEX root = ../thesis_main.tex
+%
+%
+%
+%
+%%%% --- * --- %%%%	
+\chapter[SuperRatio]{Derivation of the $\bFierz$ Dependence of the Superratio Asymmetry}
+\label{appendix:superratio}
+
+%Consider the following probability distribution for beta decay, which is equivalent to Eq.~(\ref{equation:integrated_jtw}).  %\aside{It's not just equivalent, it's literally identical.  }
+Recall the integrated JTW probability distribution for outgoing beta particles from Eq.~(\ref{equation:integrated_jtw}):
+\bea
+	\textrm{d}^3 \Gamma ( \Ebeta, \mathbf{ \hat{\Omega}}_\beta ) \, \dEe \, \dOmegae
+	&=& 
+	\frac{2}{(2\pi)^4} \, \FF \, \pe \Ee (E_0 - \Ee)^2 \, \dEe \, \dOmegae \, \xi \nonumber\\ 
+	&& \times \left[
+		1 + \bFierz \frac{\m c^2}{\Ee} + 
+		\A  
+		\left(
+			\frac{\vecJ}{J} \cdot \frac{\vecpe}{\Ee} 
+		\right) 
+	\right].
+	\label{equation:integrated_jtw_in_superratiosection}
+\eea
+We note that the only angular dependence remaining in this equation is the dot product between the direction of beta emission and the direction of nuclear spin-polarization.  This allows us to pull out a further factor of $2\pi$ by choosing the axis of polarization as defining our coordinate system, and integrating over the ``$\phi_\beta$'' coordinate.  The result is a bit more friendly to work with:
+%Integrating this distribution again over $\phi_\beta$, while reducing the
+\bea
+	\textrm{d}^2 \Gamma  ( \Ebeta, \theta ) %\, \dEe \, \dOmegae
+	&=&
+%	\frac{2}{(2\pi)^3} \, \FF \, \pe \Ee (E_0 - \Ee)^2 \, \dEe \, \dOmegae \, \xi \nonumber\\ 
+%	&& \times \left[
+%		1 + \bFierz \frac{\m c^2}{\Ee} + 
+%		\A  
+%		\left(
+%			\frac{\vecJ}{J} \cdot \frac{\vecpe}{\Ee} 
+%		\right) 
+%	\right]
+%	\\
+%	&=&
+	W(\Ebeta) \left[ 1 + \bFierz \frac{\m c^2}{\Ebeta} + \Abeta \, \frac{v_\beta }{c} |\vec{P}| \cos\theta  \right], 
+%\label{equation:integrated_jtw}
+\eea
+where $\theta$ is the angle between the beta emission direction and the polarization direction, and is the only angular dependence that remains.  Here, we have grouped the overall energy dependence into $W(\Ebeta)$, so that
+\beq
+W(\Ebeta) = \frac{2}{(2\pi)^3} \, \FF \, \pe \Ee (E_0 - \Ee)^2.
+\eeq
+\note{We could also use this with the Holstein formulation, at least some of it.  The point is, we can put *anything* that only depends on beta energy into $W(\Ebeta)$.  It doesn't matter, because it's already only integrable through numerical methods anyway -- so we can't possibly make it worse.}
+
+In the TRINAT geometry with two polarization states (+/-) and two detectors (T/B) aligned along the axis of polarization, we are able to describe four different count rates, with different combinations of polarization states and detectors.  Thus, neglecting beta scattering effects, we have:
+\bea
+r_{\mathrm T+}(\Ebeta) &=& \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm T+} \right] \label{eq:r1} \\
+r_{\mathrm B+}(\Ebeta) &=& \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm B+} \right] \label{eq:r2}\\
+r_{\mathrm T-}(\Ebeta) &=& \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T} \, N_- \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_-| \langle \cos\theta \rangle_{\mathrm T-} \right] \label{eq:r3}\\
+r_{\mathrm B-}(\Ebeta) &=& \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_- \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_-| \langle \cos\theta \rangle_{\mathrm B-} \right],\label{eq:r4}
+\eea
+where $\varepsilon_{\mathrm T / \mathrm B}(\Ebeta)$ are the (top/bottom) detector efficiencies, $\Omega_{\mathrm T / \mathrm B}$ are the fractional solid angles for the (top/bottom) detector from the trap position, $N_{+/-}$ are the number of atoms trapped in each (+/-) polarization state, and $|\vec{P}_{+/-}|$ are the magnitudes of the polarization along the detector axis for each polarization state.  $\langle \cos\theta \rangle_{\mathrm T/ \mathrm B, +/-} $ is the average of $\cos\theta$ for \emph{observed} outgoing betas, for each detector and polarization state combination.  This latter term is approximately $\pm 1$ as a result of our detector geometry, but contains important sign information.  For a pointlike trap in the center of the chamber, 103.484 mm from either (DSSSD) detector, each of which is taken to be circular with a radius of 15.5 mm, we find that $\langle | \cos\theta | \rangle_{\mathrm T/ \mathrm B, +/-} \approx 0.994484$, and is the same for all four cases.
+\aside{Not quite true.  Some strips are missing.}
+% (or for $r=15.0$\,mm, we find that $\langle | \cos\theta | \rangle_{\mathrm T/ \mathrm B, +/-} \approx 0.994829$). 
+\aside{This is only true if we neglect (back-)scatter.  This is not actually a good approximation.  But we have pretty good simulations to give us the real numbers, anyway. } Note that a horizontally displaced trap will decrease the magnitude of $\langle | \cos\theta | \rangle $, but as it is an expectation value of an absolute value, all four will remain equal to one another.  In the case of a vertically displaced trap, these four values will no longer all be equal, however it will still be the case that $\langle | \cos\theta | \rangle_{\mathrm T +} = \langle | \cos\theta | \rangle_{\mathrm T -}$, and $\langle | \cos\theta | \rangle_{\mathrm B+} = \langle | \cos\theta | \rangle_{\mathrm B -}$.  \aside{Is that definitely true, or is it only true to lowest order?}
+
+In the case of the present experiment, we note that $|\vec{P}_+| = |\vec{P}_-|$ is correct to a high degree of precision.
