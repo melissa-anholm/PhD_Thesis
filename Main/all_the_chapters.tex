@@ -3,52 +3,15 @@
 
 
 %%%% --- * --- %%%%	
-\clearpage
-\chapter{Background and Motivation}
-\label{background_chapter}
-
-\section{Exotic Couplings}
-	In particular, we're interested in so-called scalar and tensor couplings within the nuclear weak force. Standard model beta decay involves only vector and axial-vector couplings, combined with a ``$(V-A)$'' handedness (left-handed).  
-\bluetodo{Need to figure out how the exotic couplings actually work, mathematically.  What the fuck does ``$(V-A)$'' even *mean*?  IIRC John wants a brief mention of $\gamma_5$'s and $\gamma_\mu$'s, and probably a brief mention of what mumble-mumble group is mumble-mumble represented or something.}
-
-\section{Fierz Interference -- The Physical Signature}
-	The physical effects resulting from the presence of scalar or tensor couplings include a small perturbation to the energy spectrum of betas produced by radioactive decay.  
-
-\missingfigure{I need that simulated picture of the different beta energy spectra, with different values of $\bFierz$.}
-
-\section{Present Limits}
-	A bit about other people's physics.
-
-\section{A Toy Experiment}
-	A quick overview of how an experiment like this one would be set up to extract the physics of interest, to keep the reader from getting too lost in the rest of the thesis.
-\note{Do I really even *want* to include a toy experiment?  And would I want to do it here??  What even is the point?  I think in the past I decided it was easier to build up a description of .... something .... starting this way.  But why??  Possibly as I continue to add content, it will become obvious again why I originally wanted to do this.}
+\input{chapter_motivation}
 
 
 %%%% --- * --- %%%%	
 \input{chapter_theory}
 
 
-
-
 %%%% --- * --- %%%%	
-\clearpage
-\chapter{Atomic Physics Overview}
-\label{atomicphysics_chapter}
-\section{Magneto-Optical Traps}
-	\subsection{Doppler Cooling}
-	\subsection{Zeeman Splitting}
-	Needs a level diagram.
-	\subsection{Atom Trapping with a MOT}
-
-\section{Optical Pumping}
-Needs a level diagram.
-
-
-\section{Shake-off Electron Spectrum}
-Shake-off electrons:  where do they come from, and where do they go?  ~\cite{Levinger}.
-
-John made some nice plots of these from the eMCP data.  I did *not* use it to make a cut on eMCP hit position in the end, despite the fact that it makes the spectrum more clean, because a lot of good events don't have full hit position information, and you lose an awful lot of statistics by making the cut.  I used this for modeling the background spectrum, but in the end it wasn't as elegant a result as I might have hoped.  Also, it's still an open question exactly which fraction of SOEs come from which atomic shell, but it doesn't change the resulting spectrum very much.
-\missingfigure{SOE Spectrum goes here.}
+\input{chapter_atomic}
 
 
 %%%% --- * --- %%%%	
@@ -59,20 +22,16 @@ John made some nice plots of these from the eMCP data.  I did *not* use it to ma
 \input{chapter_calibrations}
 
 
-
 %%%% --- * --- %%%%
 \input{chapter_signature}
-
 
 
 %%%% --- * --- %%%%
 \input{chapter_analysis}
 
 
-
 %%%% --- * --- %%%%
 \input{chapter_systematics}
-
 
 
 %%%% --- * --- %%%%	
