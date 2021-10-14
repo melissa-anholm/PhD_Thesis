@@ -68,12 +68,33 @@ Note that the $f_i(\Ee)$ in Eq.~\ref{eq:holstein_FHFf} are the same spectral fun
 \input{equation_holstein_F3}\unskip
 and we might really appreciate if these things could be simplified a bit.  
 \note{In fact, we might want to add the other different-er terms in to this thing now, before we get ahead of ourselves.}
-Next, Holstein goes and tweaks those $F_i(\Ebeta)$ terms that we've already written out, by adding in a tweak for Coulomb corrections.  We'll impose the following corrections:
+Next, Holstein goes and tweaks those $F_i(\Ebeta)$ terms that we've already written out, by adding in an adjustment for Coulomb corrections.  Those corrections have this form:
 \beq
-	F_i(\Ebeta) \rightarrow \tilde{F}_i(\Ebeta) := \FF F_i(\Ebeta) + \FF \, \Delta F_i(\Ebeta)
+	F_i(\Ebeta) \rightarrow \tilde{F}_i(\Ebeta) := \FF \left[ F_i(\Ebeta) + \Delta F_i(\Ebeta) \right]
 \eeq
+
+To obtain expressions for the $\Delta F_i(\Ebeta)$, Holstein invokes some Feynman diagrams and provides expressions for several integrals, all of which are both complex and complicated.  The modified spectral functions are provided in terms of functions of these integrals.  Since nobody wants to have to evaluate those integrals, Holstein makes a further approximation by taking only the first term in an expansion of the $\Delta F_i(\Ebeta)$ in terms of $Z\alpha$, where $Z\alpha \ll 1$.  Then, the resulting expressions for $\Delta F_i(\Ebeta)$ can be written in terms of much more straightforward integrals over form factors for electric change and weak charge.  
+
+If we make the further assumption that these form factors are identical, and that both types of charge are spread over a ball of uniform density with radius $R$, then we find:
+\bea
+	X = Y = \frac{9\pi R}{140}
+\eea
+in the Eqs.~(\ref{eq:holstein_DeltaF1_Euvs} - \ref{eq:holstein_DeltaF7_Euvs}) that follow.
+
 Because Holstein doesn't actually write this stuff out in terms of $F_i(\Ebeta)$, but rather in terms of $F_i(\Ebeta, u,v,s)$, this correction presents yet another opportunity for the reader to interpret his notation incorrectly.  We note that one must remember to make use of the relations in Eq.~(\ref{eq:holstein_FHFf}).
-\note{So clearly I'm going to need terms for $\Delta F_1(\Ebeta, u, v, s)$, $\Delta F_4(\Ebeta, u, v, s)$, $\Delta F_7(\Ebeta, u, v, s)$, $\Delta F_{10}(\Ebeta, u, v, s)$, $\Delta F_{13}(\Ebeta, u, v, s)$, and $\Delta F_{18}(\Ebeta, u, v, s)$. We really only have expressions for some of them in Holstein's Eq.~(C4).  That's annoying.}
+
+\note{So clearly I'm going to need terms for $\Delta F_1(\Ebeta, u, v, s)$, $\Delta F_4(\Ebeta, u, v, s)$, $\Delta F_7(\Ebeta, u, v, s)$, $\Delta F_{10}(\Ebeta, u, v, s)$, $\Delta F_{13}(\Ebeta, u, v, s)$, and $\Delta F_{18}(\Ebeta, u, v, s)$. We really only have expressions for some of them in Holstein's Eq.~(C4).  In particular, we've got $\Delta F_1(\Ebeta, u, v, s)$, $\Delta F_4(\Ebeta, u, v, s)$ and $\Delta F_7(\Ebeta, u, v, s)$, but we're missing $\Delta F_{10}(\Ebeta, u, v, s)$, $\Delta F_{13}(\Ebeta, u, v, s)$, and $\Delta F_{18}(\Ebeta, u, v, s)$.  That's annoying.  Holstein gives as an excuse for that (have to check to make sure it works and that it's actually an excuse is for this) that the recoil terms $b$, $d$, and $f$ are already suppressed in their contribution to beta decay spectra. }
+
+\note{ What is less clear, given the context in the paper, is whether or not when Holstein writes out his simplified expressions for $\Delta F_{x}(\Ebeta, u, v, s)$ he actually means $ \FF \Delta F_{i}(\Ebeta, u, v, s)$.  These terms are pretty small, so it probably doesn't *really* matter, but it would still be really nice to *know*, damn it.}
+
+
+
+So, we'll write out the functions for these corrections.  
+
+\input{equation_holstein_DeltaF1_Euvs}\unskip
+\input{equation_holstein_DeltaF4_Euvs}\unskip
+\input{equation_holstein_DeltaF7_Euvs}\unskip
+
 
 The terms $a_1, a_2, b, c_1, c_2, d, e, f, g, h, j_2, j_3$ are ``structure functions''.  Holstein gives some predictions for their form, assuming the impulse approximation holds, in his Eq.~(67). \aside{There was something wrong with this assumption.  Something circular.  I forget.  Blah.}  For the most part, the values and form of these structure functions are beyond the scope of this thesis, so I will not re-write them all here. \aside{Or will I?}  \comment{It should be noted that the numerical values used for these parameters came from a private communication from Ian Towner to ... someone other than me.}  However, it is important to note the expressions for $a_i$ and $c_i$, because these will directly come into play when we try to reconcile Holstein's expression with JTW's.  Therefore, 
 \bea
