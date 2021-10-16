@@ -25,7 +25,7 @@ Recall the integrated JTW probability distribution for outgoing beta particles f
 We note that the only angular dependence remaining in this equation is the dot product between the direction of beta emission and the direction of nuclear spin-polarization.  This allows us to pull out a further factor of $2\pi$ by choosing the axis of polarization as defining our coordinate system, and integrating over the ``$\phi_\beta$'' coordinate.  The result is a bit more friendly to work with:
 %Integrating this distribution again over $\phi_\beta$, while reducing the
 \bea
-	\textrm{d}^2 \Gamma  ( \Ebeta, \theta ) %\, \dEe \, \dOmegae
+	\textrm{d}^2 \Gamma  ( \Ebeta, \theta ) \, \dEe \, \textrm{d} \theta %\, \dEe \, \dOmegae
 	&=&
 %	\frac{2}{(2\pi)^3} \, \FF \, \pe \Ee (E_0 - \Ee)^2 \, \dEe \, \dOmegae \, \xi \nonumber\\ 
 %	&& \times \left[
@@ -37,7 +37,7 @@ We note that the only angular dependence remaining in this equation is the dot p
 %	\right]
 %	\\
 %	&=&
-	W(\Ebeta) \left[ 1 + \bFierz \frac{\m c^2}{\Ebeta} + \Abeta \, \frac{v_\beta }{c} |\vec{P}| \cos\theta  \right], 
+	W(\Ebeta) \left[ 1 + \bFierz \frac{\m c^2}{\Ebeta} + \Abeta \, \frac{v_\beta }{c} |\vec{P}| \cos\theta  \right] \, \dEe \, \textrm{d} \theta , 
 %\label{equation:integrated_jtw}
 \eea
 where $\theta$ is the angle between the beta emission direction and the polarization direction, and is the only angular dependence that remains.  Here, we have grouped the overall energy dependence into $W(\Ebeta)$, so that
