@@ -15,7 +15,10 @@ We obtain a sample of neutral, cold, nuclear spin-polarized $^{37}\textrm{K}$ at
 }
 
 
-The experimental subject matter of this thesis was conducted at TRIUMF using the apparatus of the TRIUMF Neutral Atom Trap (TRINAT) collaboration.  The TRINAT laboratory offers an experimental set-up which is uniquely suited to precision tests of Standard Model beta decay physics, by virtue of its ability to produce highly localized samples of cold, isotopically pure atoms within an open detector geometry.  \note{mumble mumble 7ish days of beamtime, mumble mumble 2014.}
+The experimental subject matter of this thesis was conducted at TRIUMF using the apparatus of the TRIUMF Neutral Atom Trap (TRINAT) collaboration.  The TRINAT laboratory offers an experimental set-up which is uniquely suited to precision tests of Standard Model beta decay physics, by virtue of its ability to produce highly localized samples of cold, isotopically pure atoms within an open detector geometry.  Although the discussion in this chapter will focus on the methodologies used to collect one particular dataset, taken over approximately 7 days of beamtime in June 2014, the full apparatus and the techniques used are fairly versatile, and can be (and have been) applied to
+several related experiments using other isotopes.
+\note{Cite a bunch of papers here.}
+%\note{mumble mumble 7ish days of beamtime, mumble mumble 2014.}
 
 \begin{figure}[t!h]
 	\centering
@@ -23,7 +26,7 @@ The experimental subject matter of this thesis was conducted at TRIUMF using the
 	{Figures/doublemot4.pdf}
 	\caption{The TRINAT experimental set-up, viewed from above.  The two MOT system reduces background in the detection chamber.  Funnel beams along the atom transfer path keep the atoms focused.}	
 	\label{fig:doublemot}
-\note{Figure was originally created by Alexandre, modified by ... someone else?  Or Alexandre?  And I got it from ... probably an experimental proposal?}
+\note{Figure was originally created by Alexandre, modified by ... someone else?  Or Alexandre?  And I got it from ... probably an experimental proposal?  I should figure out how to cite a proposal...}
 \end{figure}
 
 The TRINAT lab accepts radioactive ions delivered by the ISAC beamline at TRIUMF.  These ions are collected on the surface of a hot zirconium foil where they are electrically neutralized, and subsequently escape from the foil into the first of two experimental chambers (the ``collection chamber").  Further details on the neutralization process are presented in a previous publication~\cite{gorelov2000}.  Within the collection chamber, atoms of one specific isotope -- for the purposes of this thesis,  \isotope[37]{K} -- are continuously collected into a magneto-optical trap (MOT) from the tail end of the thermal distribution.  Although this procedure preferrentially traps only the slowest atoms, once trapped, atoms will be cooled further as a side-effect of the MOT's trapping mechanism.  The result is a small ($\sim\!1\,$mm diameter), cold ($\sim\!1\,$mK) cloud of atoms of a particular isotope.  
@@ -43,7 +46,7 @@ Because the transfer and trapping mechanisms rely on tuning laser frequencies to
 
 %The TRIUMF Neutral Atom Trap (TRINAT) offers an experimental set-up which is uniquely suited to precision tests of Standard Model beta decay physics.  Radioactive ions are delivered from the ISAC beamline and neutralized before being trapped in the first of two magneto-optical traps (MOTs).  Approximately once per second, atoms from the first MOT are transferred to the second, where their decay products can be observed with significantly less background than would have been possible in the first trap (see Figure~\ref{fig:doublemot}).  The transfer methodology is discussed in some detail in a paper by Swanson et al~\cite{swanson}. \aside{The point is that this eliminates background from the decays of other stuff.  Or the same stuff.  Stuff that's not centered at the trap.}
 
-We now turn our attention to what happens to the atom cloud in the detection chamber between loading phases (see Fig.~\ref{fig:dutycycle}).  One of the goals for the 2014 $^{37}\textrm{K}$ beamtime required that the atom cloud must be spin-polarized, as well as being cold and spatially confined.  Although the MOT makes it straightforward to produce a cold and well confined cloud of atoms, it is fundamentally incompatible with techniques to polarize these atoms. The physical reasons behind this are discussed in Section~\ref{section:acmot_and_polarization}.  \aside{I *do* discuss this, right?  Right??}
+We now turn our attention to what happens to the atom cloud in the detection chamber between loading phases (see Fig.~\ref{fig:dutycycle}).  One of the goals for the 2014 $^{37}\textrm{K}$ beamtime required that the atom cloud must be spin-polarized, as well as being cold and spatially confined.  Although the MOT makes it straightforward to produce a cold and well confined cloud of atoms, it is fundamentally incompatible with techniques to polarize these atoms. The physical reasons behind this are discussed in Section~\ref{section:acmot_and_polarization}.  \aside[color=org]{I *do* discuss this, right?  Right??}
 
 % One goal for the 2014 $^{37}\textrm{K}$ beamtime was to perform a precision measurement of the beta asymmetry, 
 
@@ -51,13 +54,13 @@ We now turn our attention to what happens to the atom cloud in the detection cha
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/DutyCycle_2014.pdf}
-	\caption{The duty cycle used for transferring, cooling, trapping, and optically pumping $\isotope[37]{K}$ during the June 2014 experiment.  Not drawn to scale.  Atoms are transferred during operation of the DC-MOT.  Though the push beam laser itself is only on for $30\,$ms, the bulk of the DC-MOT's operation time afterwards is needed to collect and cool the transferred atoms.  After 100 on/off cycles of optical pumping and the AC-MOT, the DC-MOT resumes and the next group of atoms is transferred in.  After 16 atom transfers, the polarization of the optical pumping laser is flipped to spin-polarize the atoms in the opposite direction, in order to minimize systematic errors.}	
+	\caption{The duty cycle used for transferring, cooling, trapping, and optically pumping $\isotope[37]{K}$ during the June 2014 experiment.  Not drawn to scale.  Question marks indicate timings that varied either as a result of electronic jitter or as a result of variable times to execute the control code.  Atoms are transferred during operation of the DC-MOT.  Though the push beam laser itself is only on for $30\,$ms, the bulk of the DC-MOT's operation time afterwards is needed to collect and cool the transferred atoms.  After 100 on/off cycles of optical pumping and the AC-MOT, the DC-MOT resumes and the next group of atoms is transferred in.  After 16 atom transfers, the polarization of the optical pumping laser is flipped to spin-polarize the atoms in the opposite direction, in order to minimize systematic errors.}	
 	\label{fig:dutycycle}
 \end{figure}
 
 Once the newly transferred set of $^{37}\textrm{K}$ atoms has been collected into the cloud, the entire MOT apparatus cycles 100 times between a state where it is `on' and actively confining atoms, and a state where it is `off' and instead the atoms are spin-polarized by optical pumping while the atom cloud expands ballistically before being re-trapped.  These 100 on/off cycles take a combined total of $488\,$ms.  The laser components of the trap are straightforward to cycle on and off on these timescales, but the magnetic field is much more challenging to cycle in this manner.  
 
-\note{How to segue here?  Do I...  Cite myself?  Cite Harvey+Murray?  Reference the next section?  Reference the previous chapter?  This is clunky and stupid.}
+\note[color=org]{How to segue here?  Do I...  Cite myself?  Cite Harvey+Murray?  Reference the next section?  Reference the previous chapter?  This is clunky and stupid.}
 %Once the newly transferred atoms have arrived at the second trap, the MOT cycles 100 times between a state where it is `on' and actively confining atoms to a region of approximately 2\,mm$^3$, to a state where it is `off' and instead the atoms are spin-polarized by optical pumping while the atom cloud expands ballistically before being re-trapped.  
 Immediately following each set of 100 optical pumping cycles, another set of atoms is transferred in from the collection chamber to the detection chamber, joining the atoms that remain in the trap (see Fig.~\ref{fig:dutycycle}).  The details of the trapping and optical pumping cycles are described further in Section~\ref{section:acmot_and_polarization}, and the optical pumping technique and its results for this beamtime are the subject of a recent publication~\cite{ben_OP}.
 
@@ -67,16 +70,21 @@ Immediately following each set of 100 optical pumping cycles, another set of ato
 \section{The AC-MOT and Polarization Setup}
 \label{section:acmot_and_polarization}
 %\\*
-As alluded to in the previous section~(\ref{section:overview}), the measurement in question required a spin-polarized sample of atoms, and a precise knowledge of what that polarization was.  This was primarily needed in order to facilitate a measurement of $A_{\mathrm{\beta}}$ that was performed on the same data that is the subject of discussion here.~\cite{ben_Abeta} \aside{have I defined the beta asymmetry yet in some previous chapter?  otherwise I have to do it here..}  
-%In order to facilitate a measurement of $A_{\mathrm{\beta}}$, great efforts were taken to polarize the atom cloud, and to quantify that polarization.  
-% %This resulted in a duty cycle in which the atoms were intermittently trapped in the AC-MOT, then optically pumped to polarize them.  
-While this is arguably less critical to a measurement of $b_{\mathrm{Fierz}}$,\aside{have I defined $b_{\mathrm{Fierz}}$ yet?} it can still be an asset for eliminating systematic effects.  We use only the polarized portion of the duty cycle in order to minimize other systematic errors, such as the scintillator energy calibration and overall trap position.  \note{What else does polarization get us?  The superratio, mostly.  Plus, it barely makes sense to measure $bFierz$ if you don't know $\Abeta$.  But also, trap position and scintillator calibration.}
-
-%\note{In order to eliminate systematic effects, the polarization direction is flipped every 16 seconds.}
 
 \note{Probably document things about the waveform and frequency used for the beamtime, since I don't think it's in my MSc.}
 
-The Magneto-Optical Trap is a well-known technique from atomic physics, used to confine and cool neutral atoms~\cite{raabprentiss}.  The technique is used predominantly with alkalis due to their simple orbital electron structure, and is quite robust, so is appropriate for use with $^{37}\textrm{K}$.  Once set up, the trapping force is specific to the isotope for which the trap has been tuned, which makes it ideal for use in radioactive decay experiments, since the daughters are unaffected by the trapping forces keeping the parent confined.
+
+As alluded to in the previous section~(\ref{section:overview}), the measurement in question required a spin-polarized sample of atoms, and a precise knowledge of what that polarization was.  This was primarily needed in order to facilitate a measurement of $A_{\mathrm{\beta}}$ that was performed on the same data that is the subject of discussion here.~\cite{ben_Abeta} \aside[color=org]{have I defined the beta asymmetry yet in some previous chapter?  otherwise I have to do it here..}  
+%In order to facilitate a measurement of $A_{\mathrm{\beta}}$, great efforts were taken to polarize the atom cloud, and to quantify that polarization.  
+% %This resulted in a duty cycle in which the atoms were intermittently trapped in the AC-MOT, then optically pumped to polarize them.  
+While this is arguably less critical to a measurement of $b_{\mathrm{Fierz}}$,\aside[color=org]{have I defined $b_{\mathrm{Fierz}}$ yet?} it can still be an asset for eliminating systematic effects.  We use only the polarized portion of the duty cycle in order to minimize other systematic errors, such as the scintillator energy calibration and overall trap position.  
+\note{Using polarized data also lets us use the superratio.  Plus, it barely makes sense to talk about measuring $\bFierz$ if you don't know $\Abeta$.}
+\note[color=org]{Somewhere, I have to discuss how using polarized data benefits this experiment in more detail.  But not in this chapter.}
+
+%\note{In order to eliminate systematic effects, the polarization direction is flipped every 16 seconds.}
+The Magneto-Optical Trap is a well-known technique from atomic physics, used to confine and cool neutral atoms~\cite{raabprentiss}, and it is also discussed in more detail in Chapter~\ref{atomicphysics_chapter}.\aside[color=org]{Should I move a bunch of this section's content over there, to live in Ch.3??  Should I move a bunch of content from Ch.3 to live here?  Current thinking:  It seems best to split the content up into a general picture of the MOT (Ch.3), and stuff that's unique to this experiment (here). }
+The technique is used predominantly with alkalis due to their simple orbital electron structure, so is appropriate for use with $^{37}\textrm{K}$.  Once set up, it is quite robust, and the trapping force is specific to the isotope for which the trap has been tuned. This feature makes it ideal for use in radioactive decay experiments, since the daughters are unaffected by the trapping forces keeping the parent confined.
+\note[color=org]{I think most of the above paragraph is also written/paraphrased elsewhere.  eg, the chapter on MOTs in general, and the previous section describing our 2-MOT system.  Do I need to move things around?}
 
 There are two primary components necessary for any MOT:  a laser, and a magnetic field.  The laser, which must be circularly polarized in the appropriate directions and tuned slightly to the red of an atomic resonance, is split into three perpendicular retroreflected beams, doppler cooling the atoms and (with the appropriate magnetic field) confining them in all three dimensions (see Figure~\ref{fig:mot}).  The TRINAT science chamber includes 6 `viewports' specifically designed to be used for the trapping laser.
 
@@ -101,9 +109,7 @@ One feature which makes our MOT unusual has been developed as a result of our ne
 \note{Note that because the atoms within a MOT can be treated as following a thermal distribution, some fraction of the fastest atoms continuously escape from the trap's potential well.  Even with the most carefully-tuned apparatus, the AC-MOT cannot quite match a similar standard MOT in terms of retaining atoms.  The TRINAT AC-MOT has a `trapping half-life' of around 6 seconds, and although that may not be particularly impressive by the standards of other MOTs, it is more than adequate for our purposes.  $^{37}\textrm{K}$ itself has a radioactive half-life of only 1.6 seconds 
 (cite someone), so our dominant loss mechanism is radioactive decay rather than thermal escape. }
 
-
-
-\note[color=green]{Anyway, here's some figures.  Or possibly one figure.  Whatever.  Also, here's a reference to a figure.  See Fig.~\ref*{fig:themot} (works -- currently ``3.4"), or also its subfigures, eg Fig.~\ref{fig:acmot} (works -- currently ``3.4b") and Fig.~\ref{fig:mot} (works -- currently ``3.4a").  Maybe I have to subref them?  Like, eg, Subfig.~\subref{fig:acmot} (works -- currently ``3.4b") and Subfig.~\subref*{fig:mot} (works -- currently ``3.4a").  What if we try to subref everything?  Consider, eg, Fig.~\subref{fig:themot} (doesn't work).  Yeah, ok, so fortunately the note cites like the text.  This gives an example of shit to do and not to do.  Also, can't do a linebreak within a note.}  
+\note[color=lgrey]{Anyway, here's some figures.  Or possibly one figure.  Whatever.  Also, here's a reference to a figure.  See Fig.~\ref*{fig:themot} (works -- currently ``3.4"), or also its subfigures, eg Fig.~\ref{fig:acmot} (works -- currently ``3.4b") and Fig.~\ref{fig:mot} (works -- currently ``3.4a").  Maybe I have to subref them?  Like, eg, Subfig.~\subref{fig:acmot} (works -- currently ``3.4b") and Subfig.~\subref*{fig:mot} (works -- currently ``3.4a").  What if we try to subref everything?  Consider, eg, Fig.~\subref{fig:themot} (doesn't work).  Yeah, ok, so fortunately the note cites like the text.  This gives an example of shit to do and not to do.  Also, can't do a linebreak within a note.}  
 
 \input{figure_theacmot_sidebyside}
 % fig:themot
