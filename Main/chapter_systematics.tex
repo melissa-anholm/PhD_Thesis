@@ -60,6 +60,7 @@ Please discuss this at the next meeting.  (ETA:  Done!)
 Indeed this is why you should avoid calling the events originating not from the trap 'scattered events.' More importantly, why it was so critical that you reduced the size of the correction by timing bad events out. I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
 
 
+%%%% --- * --- %%%%
 \section{Lineshape Reconstruction}
 	\note[color=jb]{This section should reference Clifford.~\cite{clifford}.}
 	\subsection{Motivation}
@@ -67,6 +68,14 @@ Indeed this is why you should avoid calling the events originating not from the 
 	
 	\subsection{What is it and how does it work?}
 	Mono-energetic beta decay events are generated in GEANT4, which outputs an energy spectrum for unscattered and forward-scattered beta events in the detector.  These spectra are fit to a function to model the scintillator resolution, as well as energy loss in materials that the beta passed through before arriving at the scintillator.  These spectrum fits are performed for a set of beta energies, and parameters are extrapolated to be applied to betas emitted at intermediate energies.  Thus, the whole spectrum can be modeled.  Pictures will make this clearer. 
+	
+    \begin{figure}[h!!!t]
+    	\centering
+    	\includegraphics[width=.999\linewidth]
+    	{Figures/LineshapeDemo_prelim.pdf}
+    	\caption[Lineshape Comparison]{I'm not actually sure if this picture shows what I want it to.  The point is, if I apply this rough lineshape to stuff that I SimpleMC-ed, then I can evaluate that way various systematic effects that would be time-consuming to actually simulate with G4.  This picture is  *supposed* to be a demonstration that this approach actually works...}	
+    	\label{fig:lineshape_demo}
+    \end{figure}
 	
 	\subsection{The Math-Specifics}
 	I'll write down the specific functions I'm using, and the parameter values I'm using.  (Maybe this should go in an appendix instead?)  I'll describe the adjustments I make to the spectrum so that it can work even for the dataset where the scintillators' resolutions have changed.
@@ -78,12 +87,29 @@ Trap position, size, sail velocity, temperature.  But then we varied the linesha
 	\note[color=jb]{JB:  yes, brems strahlung is 'braking radiation' so gets 2 ss's. 
 the lineshape tail in any scintillator also includes backscattered events -- we are not claiming the 2-pixel cut is complete}
 	
+	    \begin{figure}[h!!]
+    	\centering
+    	\includegraphics[width=.999\linewidth]
+    	{Figures/Position_Err_Abeta_prelim.pdf}
+    	\caption[$\Abeta$ Position Error]{Estimated uncertainty in $\Abeta$ resulting from uncertainty and variation in the cloud parameters.  Evaluated by the lineshape reconstruction method.}	
+    	\label{fig:Abeta_position_err}
+		\end{figure}
+
+	    \begin{figure}[h!!]
+    	\centering
+    	\includegraphics[width=.999\linewidth]
+    	{Figures/Position_Err_bFierz_prelim.pdf}
+    	\caption[$\bFierz$ Position Error]{Estimated uncertainty in $\bFierz$ resulting from uncertainty and variation in the cloud parameters.  Evaluated by the lineshape reconstruction method.}		
+    	\label{fig:bFierz_position_err}
+		\end{figure}
+
+	
 	\subsection{The low-energy tail uncertainty, and what it does}
 	Bremsstrahlung.  It does Bremsstrahlung.
 	\note[color=jb]{``I will write this up better soon."  (I think he already did that)}
 
 
-\section{Summary}
+\section{Summary of Data Collected}
 %\missingfigure{TBH, the thing that's missing is a table, not a figure.  Needs a table full of systematic errors.  And maybe statistical errors?  wev.}
 \note{Needs an error budget table.  Because of course it fucking does.}
 
