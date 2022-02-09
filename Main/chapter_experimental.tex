@@ -75,6 +75,8 @@ Immediately following each set of 100 optical pumping cycles, another set of ato
 
 \note{Probably document things about the waveform and frequency used for the beamtime, since I don't think it's in my MSc.}
 
+\note[color=org]{Some of the contents of this section should be removed from here and moved over to Ch-3.  Probably.}
+
 
 As alluded to in the previous section~(\ref{section:overview}), the measurement in question required a spin-polarized sample of atoms, and a precise knowledge of what that polarization was.  This was primarily needed in order to facilitate a measurement of $A_{\mathrm{\beta}}$ \aside[color=org]{have I defined the beta asymmetry yet in some previous chapter?  otherwise I have to do it here..} that was performed on the same data that is the subject of discussion here.~\cite{ben_Abeta}   
 %In order to facilitate a measurement of $A_{\mathrm{\beta}}$, great efforts were taken to polarize the atom cloud, and to quantify that polarization.  
@@ -110,15 +112,17 @@ One feature which makes our MOT unusual has been developed as a result of our ne
 \note{Note that because the atoms within a MOT can be treated as following a thermal distribution, some fraction of the fastest atoms continuously escape from the trap's potential well.  Even with the most carefully-tuned apparatus, the AC-MOT cannot quite match a similar standard MOT in terms of retaining atoms.  The TRINAT AC-MOT has a `trapping half-life' of around 6 seconds, and although that may not be particularly impressive by the standards of other MOTs, it is more than adequate for our purposes.  $^{37}\textrm{K}$ itself has a radioactive half-life of only 1.6 seconds 
 (cite someone), so our dominant loss mechanism is radioactive decay rather than thermal escape. }
 
-\note[color=lgrey]{Anyway, here's some figures.  Or possibly one figure.  Whatever.  Also, here's a reference to a figure.  See Fig.~\ref*{fig:themot} (works -- currently ``3.4"), or also its subfigures, eg Fig.~\ref{fig:acmot} (works -- currently ``3.4b") and Fig.~\ref{fig:mot} (works -- currently ``3.4a").  Maybe I have to subref them?  Like, eg, Subfig.~\subref{fig:acmot} (works -- currently ``3.4b") and Subfig.~\subref*{fig:mot} (works -- currently ``3.4a").  What if we try to subref everything?  Consider, eg, Fig.~\subref{fig:themot} (doesn't work).  Yeah, ok, so fortunately the note cites like the text.  This gives an example of shit to do and not to do.  Also, can't do a linebreak within a note.}  
+
+%\note[color=lgrey]{Anyway, here's some figures.  Or possibly one figure.  Whatever.  Also, here's a reference to a figure.  See Fig.~\ref*{fig:themot} (works -- currently ``3.4"), or also its subfigures, eg Fig.~\ref{fig:acmot} (works -- currently ``3.4b") and Fig.~\ref{fig:mot} (works -- currently ``3.4a").  Maybe I have to subref them?  Like, eg, Subfig.~\subref{fig:acmot} (works -- currently ``3.4b") and Subfig.~\subref*{fig:mot} (works -- currently ``3.4a").  What if we try to subref everything?  Consider, eg, Fig.~\subref{fig:themot} (doesn't work).  Yeah, ok, so fortunately the note cites like the text.  This gives an example of shit to do and not to do.  Also, can't do a linebreak within a note.}  
 
 %\input{figure_theacmot_sidebyside}
-\begin{figure}[ht]
-	\centering
-		\includegraphics[width=.999\linewidth]{acmot.png}
-		\caption{One cycle of trapping with the AC-MOT, followed by optical pumping to spin-polarize the atoms.  After atoms are transferred into the science chamber, this cycle is repeated 100 times before the next transfer.  The magnetic dipole field is created by running parallel (rather than anti-parallel as is needed for the MOT) currents through the two coils.}
-		\label{fig:acmot}
-\end{figure}
+
+%\begin{figure}[ht]
+%	\centering
+%		\includegraphics[width=.999\linewidth]{acmot.png}
+%		\caption{One cycle of trapping with the AC-MOT, followed by optical pumping to spin-polarize the atoms.  After atoms are transferred into the science chamber, this cycle is repeated 100 times before the next transfer.  The magnetic dipole field is created by running parallel (rather than anti-parallel as is needed for the MOT) currents through the two coils.}
+%		\label{fig:acmot}
+%\end{figure}
 
 
 We spin-polarize $^{37}\textrm{K}$ atoms within the trapping region by optical pumping~\cite{ben_OP}.  A circularly polarized laser is tuned to match the relevant atomic resonances, and is directed through the trapping region along the vertical axis in both directions.  When a photon is absorbed by an atom, the atom transitions to an excited state and its total angular momentum (electron spin + orbital + nuclear spin) along the vertical axis is incremented by one unit.  When the atom is de-excited a photon is emitted isotropically, 
@@ -128,7 +132,8 @@ so it follows that if there are available states of higher and lower angular mom
 %\missingfigure{Need a picture of the whole duty cycle.  Possibly combine with ~\ref{fig:acmot}.}
 
 
-In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  In particular, the magnetic field must be aligned along the polarization axis (otherwise the tendency will be to actually depolarize the atoms), and it must be uniform in magnitude over the region of interest (otherwise its divergencelessness will result in the field also having a non-uniform direction, which results in a spatially-dependent depolarization mechanism).  Note that this type of magnetic field is not compatible with the MOT, which requires a linear magnetic field gradient in all directions (characteristic of a quadrupolar field shape), and has necessitated our use of the AC-MOT as described in Section~\ref{section:acmot_and_polarization}.\aside{that's this section.  I should really describe the AC-MOT.}
+In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  In particular, the magnetic field must be aligned along the polarization axis (otherwise the tendency will be to actually depolarize the atoms), and it must be uniform in magnitude over the region of interest (otherwise its divergencelessness will result in the field also having a non-uniform direction, which results in a spatially-dependent depolarization mechanism).  Note that this type of magnetic field is not compatible with the MOT, which requires a linear magnetic field gradient in all directions (characteristic of a quadrupolar field shape), and has necessitated our use of the AC-MOT as described in (Sub-)Section~\ref{sec:acmot}. \aside[color=org]{At some point I have to decide if that's going to be a section or a subsection.}
+%\aside{that's this section.  I should really describe the AC-MOT.}
 
 
 
@@ -175,4 +180,13 @@ On opposing sides of the chamber, and perpendicular to the axis of polarization,
 In order to make best use of these MCPs, we create an electric field in order to draw positively charged particles into one MCP, while drawing negatively charged electrons into the other MCP.  Seven electrostatic hoops have been placed within the chamber (see Figure~\ref{fig:thechamber}), and are connected to a series of high voltage power supplies.  See Sections~\ref{photoions} and~\ref{pos_recoils} for a discussion of what sort of charged particles we expect to observe in these detectors and how they are created.  
   
 Scientific data has been collected at field strengths of 395 V/cm, 415 V/cm, and 535 V/cm.  It should be noted that these field strengths are too low to significantly perturb any but the least energetic of the (positively charged) betas from the decay process, and these low energy betas would already have been unable to reach the upper and lower beta detectors due to interactions with materials in the SiC mirror and Be foil vacuum seal.  
+
+\section{Summary of Data Collected}
+
+\note[color=org]{Arguably I should put this stuff in Ch-6.  Maybe that's better...}
+\note{Really, this is missing a table.  At least one table.  I could probably justify putting in a few of them.
+\\...\\
+Things I could list:  Electric field strengths, eMCP/rMCP data type, triggers.  Photoions/Photoelectrons, betas, beta+electron/beta+recoil.  
+}
+
 

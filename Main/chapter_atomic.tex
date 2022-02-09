@@ -30,6 +30,7 @@ The laser, which must be circularly polarized in the appropriate directions and 
 
 
 \subsection{Doppler Cooling}
+\note{Needs an equation.}
 \note{Needs work.}
 
 First, consider an atom in an optical molasses.  in 1D, that means there are two counter-propogating lasers, both tuned slightly to the red of an atomic transition.  Also, they're polarized s.t. ... something.  The point is, atoms moving against the direction of a red-detuned laser's propagation will see a doppler shifted laser frequency, tuned closer to the atomic transition, which makes a photon more likely to be absorbed.  Similarly, the opposite-propagating laser will appear to be further red-shifted away from resonance.  When a photon is absorbed, we require conservation of (linear) momentum, so the atom gets a ``push'' against the direction it was travelling.  This will slow the atom down, at least up to a limit related to the linewidth of the atomic transition and/or the laser.  There's something to look up.
@@ -39,6 +40,7 @@ Anyway, when you have two counter-propagating red-detuned lasers, the net effect
 
 \subsection{Zeeman Splitting}
 \note{Needs work.}
+\note{Needs an equation.}
 \note{Also needs a level diagram.  Maybe.}
 
 The Zeeman shift is what happens when you stick an atom in a magnetic field.  An atom's energy levels, which would have been degenerate before applying a field, split according the angular momentum.  At low fields (which is what is of interest to us here), the energy perturbation scales linearly with the strength of the magnetic field.  
@@ -48,6 +50,7 @@ When this is combined with a circularly polarized laser beam, the effect is to m
 They still get the optical molasses cooling effect for free.
 
 \subsection{Atom Trapping with a MOT}
+\note{Do I *have* an equation I can put here?  Surely there must be one somewhere, but I really don't want to dig it up, and I don't think it's really necessary.}
 \note{Needs work.}
 Really, at the end of the previous section, I described the MOT's trapping mechanism.  That's literally what it is.  You just need to do it in 3 dimensions, rather than only one.  Fortunately, an anti-helmholz(sp?) coil gives us a quadrupole-shaped magnetic field, which *actually* has a magnetic field that changes linearly along any axis in the region near the center.   
 
@@ -65,13 +68,27 @@ Optical molasses + zeeman splitting = magneto-optical trap.  Anyway, see Fig.~\r
 
 	
 \subsection{The AC-MOT}
+\label{sec:acmot}
 Citation for Harvey and Murray goes here~\cite{harveymurray}.  Also, myself~\cite{thesis}.
 \note{Needs work.}
+
+Here's a diagram of our AC-MOT running one AC-MOT/OP cycle, in Fig.~\ref{fig:acmot}.
+
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=.999\linewidth]{acmot.png}
+		\caption{One cycle of trapping with the AC-MOT, followed by optical pumping to spin-polarize the atoms.  After atoms are transferred into the science chamber, this cycle is repeated 100 times before the next transfer.  The magnetic dipole field is created by running parallel (rather than anti-parallel as is needed for the MOT) currents through the two coils.}
+		\label{fig:acmot}
+\end{figure}
+
+
 Normal MOTs are DC-MOTs.  They just sort-of go.  It's continuous.  We used an AC-MOT though!  The point of an AC-MOT is to shut off the magnetic field as quickly as possible.  With a well-controlled and uniform magnetic field, we can optically pump the atoms, which I think I'm going to describe in the upcoming section~(\ref{sec:op}).
 
 Sadly, this also removes our trapping mechanism.  We could keep the optical molasses after the field is off if we wanted to, but we don't, because we wouldn't be able to optically pump the atoms then.  But at least the atoms are cold-ish (we can measure!  I think it's done indirectly in that one table, or for realsies in Ben's thesis), so we can let them just chill for a little while before we have to re-trap them.  Don't lose too much.  \aside{How much do we lose?  Have we quantified that somewhere?  Probably.}
 
 Anyway, the idea of the AC-MOT is to run a sinusoidal current through your anti-Helmholtz coils.  You'll get eddy currents in your nearby metal *stuff* when you have a changing current, and those will *also* make a magnetic field. So, the idea with an AC-MOT is that with a sinusoid, you have clear control over what the eddy currents are actually doing, and you can just shut the current off when the eddy currents are zero (current in the anti-Helmholtz coils will be close to zero at this time too, depending on frequency of the sinusoid...), so you can reduce the size of the eddy currents by like an order of magnitude.  Eddy currents in general take a while to die away, so it's good to make them as small as possible.  ...Also, eddy currents making a magnetic field will screw up your optical pumping, because .... um, reasons?  I think it's not just the detuning, it's also something about the Larmor precession.  
+
+
 
 \section{Optical Pumping}
 \label{sec:op}
