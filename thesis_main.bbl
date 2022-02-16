@@ -1,14 +1,13 @@
 \begin{thebibliography}{10}
 
+\bibitem{thesis}
+Anholm, M., Characterizing the {AC-MOT}, Master's thesis, University of British
+  Columbia, 2014.
+
 \bibitem{hong_sternberg_garcia}
 Hong, R., Sternberg, M.~G. {\mdseries and} Garcia, A., \textit{Helicity and
   nuclear $\beta$ decay correlations}, American Journal of Physics, Vol.~85,
   No.~1, pp.~45--53, 2017.
-
-\bibitem{raabprentiss}
-Raab, E.~L., Prentiss, M., Cable, A., Chu, S. {\mdseries and} Pritchard, D.~E.,
-  \textit{Trapping of Neutral Sodium Atoms with Radiation Pressure}, Phys. Rev.
-  Lett., Vol.~59, pp.~2631--2634, Dec 1987.
 
 \bibitem{harveymurray}
 Harvey, M. {\mdseries and} Murray, A.~J., \textit{Cold Atom Trap with Zero
@@ -99,9 +98,14 @@ Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Coulomb
   elementary particle approach}}, Reviews of Modern Physics, Vol.~46, No.~4,
   pp.~789--814, Oct. 1974.
 
-\bibitem{thesis}
-Anholm, M., Characterizing the {AC-MOT}, Master's thesis, University of British
-  Columbia, 2014.
+\bibitem{raabprentiss}
+Raab, E.~L., Prentiss, M., Cable, A., Chu, S. {\mdseries and} Pritchard, D.~E.,
+  \textit{Trapping of Neutral Sodium Atoms with Radiation Pressure}, Phys. Rev.
+  Lett., Vol.~59, pp.~2631--2634, Dec 1987.
+
+\bibitem{corney}
+Corney, A., Atomic and Laser Spectroscopy, Oxford University Press, New York,
+  1977.
 
 \bibitem{Levinger}
 Levinger, J.~S., \textit{Effects of Radioactive Disintegrations on Inner

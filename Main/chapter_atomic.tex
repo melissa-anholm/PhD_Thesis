@@ -29,7 +29,48 @@ The laser, which must be circularly polarized in the appropriate directions and 
 %\note{``Since the magneto-optical trap (MOT) was first described in 1987 by Raab et. al.~\cite{raabprentiss}, it has become a standard technique for confining cold samples of neutral atoms.  These cold trapped atoms may subsequently be used in the measurement of a variety of physical quantities."}
 
 
+\subsection{Zeeman Splitting}
+In the presence of an external magnetic field $\vec{B}$, the Hamiltonian associated with an atom's orbital electrons will acquire an additional ``Zeeman Shift'' term, given by~\cite{corney}
+\bea
+\label{zeeman_hamiltonian}
+H_{\mathrm{\,Zeeman}} &=& - \vec{\mu}\cdot \vec{B},
+\eea
+where $\vec{\mu}$ is the magnetic moment associated with the orbital under consideration.  In the limit where the magnetic field is too weak to significantly disrupt the coupling between the electron's spin- and orbital angular momenta, $\vec{\mu}$ may be treated as being fixed with respect to changes in the magnetic field.  It is this weak field regime which will be primarily of interest to us in work with magneto-optical traps.
+
+
+With $\vec{\mu}$ fixed, it is clear that the magnitude of the energy shift must scale linearly with the strength of the magnetic field.  In considering the perturbation to the energy of a particular \emph{transition}, the perturbations to the initial and final states must of course be subtracted:
+\bea
+\Delta E_{\mathrm{\,transition}} &=& - \left( \vec{\mu}_f - \vec{\mu}_i \right) \cdot \vec{B}.
+\eea 
+
+
+
+%an atom's orbital energy levels take on a perturbation.  The perturbation to the Hamiltonian is given by
+%
+%the energy levels associated with an atom's electron orbitals are perturbed.  
+
+\note{Needs work.}
+%\note{Needs an equation.}
+\note{Also needs a level diagram.  Maybe.}
+
+%The Zeeman shift is what happens when you stick an atom in a magnetic field.  An atom's energy levels, which would have been degenerate before applying a field, split according the angular momentum.  At low fields (which is what is of interest to us here), the energy perturbation scales linearly with the strength of the magnetic field.  
+
+When this is combined with a circularly polarized laser beam, the effect is to move the atomic resonance closer to- or farther from- the frequency of the laser.  The circular polarization, combined with some selection rules, means a circularly polarized laser will only couple to one particular transition, w.r.t. angular momentum.  ie, for a $\sigma_+$ polarized laser, the atom's overall angular momentum projection (along some axis) will be incremented by $+1$.  The Zeeman shift means that in a magnetic field, this transition (M+=1) not be the same as the M-=1 transition.  So, if you have a magnetic field that changes linearly across space, you can make it so that in $+ B_z$ regions, the laser beam with one certain polarization is closer to resonance and therefore more likely to be absorbed -- and similarly, in $- B_z$ regions, a different laser with the opposite polarization will be more likely to be absorbed.  Again, if the B-field is linear in space, you can do it so that as the atoms get further and further from the `centre' region, the effect gets progressively stronger.  So, if you've done this right, you can make it so that the atoms get a stronger ``push'' back towards the center the farther away they've drifted.
+
+They still get the optical molasses cooling effect for free.
+
+
+
 \subsection{Doppler Cooling}
+
+%We consider first the interaction between a single atom and a single photon.  Suppose 
+
+Consider an atom in its ground state interacting with a single photon that has an energy close to that of a particular resonance in the atom.  If selection rules allow it, the photon will be absorbed and the atom will receive a ``push'' proportional to the detuning of the photon from the atomic resonance.  
+
+\note{``Such a setup is sometimes referred to as a one-dimensional “opti- cal molasses” due to the viscous drag force induced on atomic motion, which will be discussed in more detail shortly.''}
+\note{``In such a system, an incident photon can excite an atom from the ground state into the excited state, while simultaneously giving the atom a “push” proportional to the laser’s detuning from the atomic resonance.''}
+
+Consider an atom in one dimension in the midst of two counter-propagating laser beams which are otherwise identical.   ...Ugh.
 \note{Needs an equation.}
 \note{Needs work.}
 
@@ -37,17 +78,6 @@ First, consider an atom in an optical molasses.  in 1D, that means there are two
 
 Anyway, when you have two counter-propagating red-detuned lasers, the net effect will be to slow the atom's motion down a bunch.  It's called an optical molasses, because the photons are sticky or whatever.  By itself, it does not confine atoms, it only slows them down.
 
-
-\subsection{Zeeman Splitting}
-\note{Needs work.}
-\note{Needs an equation.}
-\note{Also needs a level diagram.  Maybe.}
-
-The Zeeman shift is what happens when you stick an atom in a magnetic field.  An atom's energy levels, which would have been degenerate before applying a field, split according the angular momentum.  At low fields (which is what is of interest to us here), the energy perturbation scales linearly with the strength of the magnetic field.  
-
-When this is combined with a circularly polarized laser beam, the effect is to move the atomic resonance closer to- or farther from- the frequency of the laser.  The circular polarization, combined with some selection rules, means a circularly polarized laser will only couple to one particular transition, w.r.t. angular momentum.  ie, for a $\sigma_+$ polarized laser, the atom's overall angular momentum projection (along some axis) will be incremented by $+1$.  The Zeeman shift means that in a magnetic field, this transition (M+=1) not be the same as the M-=1 transition.  So, if you have a magnetic field that changes linearly across space, you can make it so that in $+ B_z$ regions, the laser beam with one certain polarization is closer to resonance and therefore more likely to be absorbed -- and similarly, in $- B_z$ regions, a different laser with the opposite polarization will be more likely to be absorbed.  Again, if the B-field is linear in space, you can do it so that as the atoms get further and further from the `centre' region, the effect gets progressively stronger.  So, if you've done this right, you can make it so that the atoms get a stronger ``push'' back towards the center the farther away they've drifted.
-
-They still get the optical molasses cooling effect for free.
 
 \subsection{Atom Trapping with a MOT}
 \note{Do I *have* an equation I can put here?  Surely there must be one somewhere, but I really don't want to dig it up, and I don't think it's really necessary.}
@@ -116,10 +146,10 @@ But also, I should actually describe the optical pumping, too.  And point at Ben
 \note[color=purple]{JB says:  ``I would say you don't need an atomic level diagram.  You could just describe in words the semiclassical picture of atoms absorbing photons until they are nearly fully polarized, then they stop absorbing.  The optical pulmping + photoionization is then an in situ probe of the polarization. ... You would need to add in words that quantum mechanical corrections to this picture are in the optical Bloch equation approach in B. Fenker et al.  The depolarized states still have high nuclear polarization (1/2 for $F=2, M_F=1$, 5/6 for $F=1, M_F=1$) and determining the ratio of those two populations provides most of the info we need -- we model with the O.B.E, measure the optical pumping light polarization, and float an average transverse magnetic field.  This is adequate to determine the depolarized fraction to 10\% accuracy, which is all that is needed.'' }
 
 \section{Photoionization as a Probe}
-
+\label{sec:photoprobe}
 So, the photoionization laser.  It only ionizes a tiny fraction of the atoms\aside{1\% ?  John has told me *recently*.}, so it's *mostly* non-destructive.  
 
-For unpolarized atoms (eg, in a MOT), it can give a projection of the trap position.  At least, it can if you add some MCPs with delay lines, and an electric field.  
+For unpolarized atoms (eg, in a MOT), it can give a projection of the trap position.  At least, it can if you add some MCPs with delay lines, and an electric field.  Also, the atoms have to be excited or they don't get photoionized this way.
 
 For polarized or partially polarized atoms, absorption stops, because of selection rules.  We've intentionally polarized the laser to do this.  I think.  \aside[color=todoblue]{*Have* we even polarized the photoionization laser in any particular way?  I'm not sure we even have.  Why doesn't it absorb?  When it's stretched, it's not just all in the excited state!  It's...stretched.  Do angular momentum selection rules even apply if the electron is going into the continuum?}
 
@@ -132,16 +162,18 @@ Anyway, the probing only works if you have a detector to see what things.  We ha
 \section{Shake-off Electron Spectrum}
 Shake-off electrons:  where do they come from, and where do they go?  ~\cite{Levinger}.
 
+\note[color=org]{Really, just discuss the physics of what happens to cause SOEs to be a thing.  Talk about *our* SOE spectrum in some other chapter later.  Arguably this should go in the nuclear physics overview chapter?}
+
 John made some nice plots of these from the eMCP data.  I did *not* use it to make a cut on eMCP hit position in the end, despite the fact that it makes the spectrum more clean, because a lot of good events don't have full hit position information, and you lose an awful lot of statistics by making the cut.  I used this for modeling the background spectrum, but in the end it wasn't as elegant a result as I might have hoped.  Also, it's still an open question exactly which fraction of SOEs come from which atomic shell, but it doesn't change the resulting spectrum very much.
 
-%\missingfigure{SOE Spectrum goes here.}
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/Levinger_SOETOF_prelim.pdf}
-	\caption[Levinger TOF]{Shake-off electron TOF (w.r.t. beta TOA) spectrum, showing how the spectrum is different if one includes different sets of initial electrons to be shaken off.  I forget why some of them have 0 eV.  Maybe those are the ones from the $\isotope[37]{Ar}^+$. ... Levinger TOF spectra for some different sets of SOE initial orbitals before shake-off.  (At least that's what it's supposed to be, after I fix the picture).  It's reconstructed event-by-event with beta times-of-flight that would pass some basic `good event' cuts.  Anyway, it turns out, it doesn't much matter what orbitals you lose SOEs from.  That's nice.  In the end, I used 85+15.}	
-	\label{fig:levinger_TOF}
-\end{figure}
+\input{figure_SOE_spectrum.tex}
+%\begin{figure}[h!!t]
+%	\centering
+%	\includegraphics[width=.999\linewidth]
+%	{Figures/Levinger_SOETOF_prelim.pdf}
+%	\caption[Levinger TOF]{Shake-off electron TOF (w.r.t. beta TOA) spectrum, showing how the spectrum is different if one includes different sets of initial electrons to be shaken off.  I forget why some of them have 0 eV.  Maybe those are the ones from the $\isotope[37]{Ar}^+$. ... Levinger TOF spectra for some different sets of SOE initial orbitals before shake-off.  (At least that's what it's supposed to be, after I fix the picture).  It's reconstructed event-by-event with beta times-of-flight that would pass some basic `good event' cuts.  Anyway, it turns out, it doesn't much matter what orbitals you lose SOEs from.  That's nice.  In the end, I used 85+15.  \comment{(Need to re-plot this.)} }	
+%	\label{fig:levinger_TOF}
+%\end{figure}
 
 
 \note{``Until recently, one limitation of such samples was the necessity for the presence of a relatively large magnetic field, which is expected to partially destroy atomic polarization, limiting the precision of many types of measurements.  Here we discuss the construction of a newer type of MOT, the AC-MOT, which minimizes residual magnetic fields.  The guys in~\cite{harveymurray} came up with the idea of the AC-MOT.  They made it work and did some stuff with it.  Good for them.''}
