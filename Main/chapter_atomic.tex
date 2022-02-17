@@ -49,34 +49,80 @@ With $\vec{\mu}$ fixed, it is clear that the magnitude of the energy shift must 
 %
 %the energy levels associated with an atom's electron orbitals are perturbed.  
 
-\note{Needs work.}
+%\note{Needs work.}
 %\note{Needs an equation.}
-\note{Also needs a level diagram.  Maybe.}
+\note{Needs a level diagram.  Maybe.}
 
 %The Zeeman shift is what happens when you stick an atom in a magnetic field.  An atom's energy levels, which would have been degenerate before applying a field, split according the angular momentum.  At low fields (which is what is of interest to us here), the energy perturbation scales linearly with the strength of the magnetic field.  
 
+\note{
 When this is combined with a circularly polarized laser beam, the effect is to move the atomic resonance closer to- or farther from- the frequency of the laser.  The circular polarization, combined with some selection rules, means a circularly polarized laser will only couple to one particular transition, w.r.t. angular momentum.  ie, for a $\sigma_+$ polarized laser, the atom's overall angular momentum projection (along some axis) will be incremented by $+1$.  The Zeeman shift means that in a magnetic field, this transition (M+=1) not be the same as the M-=1 transition.  So, if you have a magnetic field that changes linearly across space, you can make it so that in $+ B_z$ regions, the laser beam with one certain polarization is closer to resonance and therefore more likely to be absorbed -- and similarly, in $- B_z$ regions, a different laser with the opposite polarization will be more likely to be absorbed.  Again, if the B-field is linear in space, you can do it so that as the atoms get further and further from the `centre' region, the effect gets progressively stronger.  So, if you've done this right, you can make it so that the atoms get a stronger ``push'' back towards the center the farther away they've drifted.
+\\
+They still get the optical molasses cooling effect for free.}
 
-They still get the optical molasses cooling effect for free.
 
-
-
-\subsection{Doppler Cooling}
-
+\subsection{Atom-Photon Interactions within a Laser}
+\note{This is a stupid subsection title.}
 %We consider first the interaction between a single atom and a single photon.  Suppose 
 
-Consider an atom in its ground state interacting with a single photon that has an energy close to that of a particular resonance in the atom.  If selection rules allow it, the photon will be absorbed and the atom will receive a ``push'' proportional to the detuning of the photon from the atomic resonance.  
+Consider a single two-level atom in its ground state interacting with a single photon with the same energy as that of a the atomic transition between the ground and excited states.  If angular momentum selection rules allow it\aside{Also, if the photon is tuned close enough to atomic resonance, with absorption being more likely the smaller the detuning is...}, the photon will be absorbed and the atom will receive a ``push'' 
+from the incident 
+%
+%proportional to the 
+%detuning\aside{Wait.  I don't think I got that right.  Detuning only affects absorption probability, right?  I guess it also has an effect on the size of the push, but that's really not the primary pushing effect going on here.} of the photon from the atomic resonance.  
+%
+photon's momentum.  
+After a time, the atom will spontaneously de-excite by emitting a photon in a random direction.  Conservation of momentum results in the atom receiving a second push from the emitted photon.  
 
-\note{``Such a setup is sometimes referred to as a one-dimensional “opti- cal molasses” due to the viscous drag force induced on atomic motion, which will be discussed in more detail shortly.''}
-\note{``In such a system, an incident photon can excite an atom from the ground state into the excited state, while simultaneously giving the atom a “push” proportional to the laser’s detuning from the atomic resonance.''}
+If one considers a cloud of many such atoms within the path of a correctly-tuned (low intensity) laser beam, then provided the atoms are constrained to remain within the beam path, the result of many such interactions is a biased random walk in physical space for each individual atom, and a net velocity change for the cloud as a whole.
+% such that the cloud as a whole receives a change in net velocity. 
 
-Consider an atom in one dimension in the midst of two counter-propagating laser beams which are otherwise identical.   ...Ugh.
-\note{Needs an equation.}
-\note{Needs work.}
+In contrast to the above description of absorption followed by spontaneous emission, a photon interacting with an atom in the excited state may cause the atom to de-excite by emitting a second photon.  This mechanism is negligible in the case of a sufficiently low intensity laser beam.  However, as the laser intensity increases, so too will the fraction of atoms in the excited state at any given time.  As it is only the excited state atoms that are able undergo stimulated emission, this effect becomes increasingly dominant as the intensity of the incident laser increases.  In the limit of infinite intensity, stimulated emission and absorption are equally likely to occur, and therefore the population is split evenly between the ground and excited states.  
 
-First, consider an atom in an optical molasses.  in 1D, that means there are two counter-propogating lasers, both tuned slightly to the red of an atomic transition.  Also, they're polarized s.t. ... something.  The point is, atoms moving against the direction of a red-detuned laser's propagation will see a doppler shifted laser frequency, tuned closer to the atomic transition, which makes a photon more likely to be absorbed.  Similarly, the opposite-propagating laser will appear to be further red-shifted away from resonance.  When a photon is absorbed, we require conservation of (linear) momentum, so the atom gets a ``push'' against the direction it was travelling.  This will slow the atom down, at least up to a limit related to the linewidth of the atomic transition and/or the laser.  There's something to look up.
+To describe the regime change between atomic interactions with low intensity- and high intensity lasers, we introduce the (on-resonance) saturation intensity, $I_{\mathrm{sat}}$, where 
+\bea
+I_{\mathrm{sat}} &=& \frac{\hbar \omega_0^3 \gamma}{12\pi c^2}
+\eea
+is the laser intensity at which the rates of decay by stimulated- and spontaneous emission are equal, $\hbar \omega_0$ is the energy of both the atomic transition %and also an individual photon, 
+and $\gamma$ describes the linewidth of the atomic transition and equivalently its rate of spontaneous decay from its excited state.  We may further define the on-resonance saturation parameter $s_0$, for a laser of intensity $I$ as,
+\bea
+s_0 &:=& \frac{I}{ I_{\mathrm{sat}} }.
+\eea
 
-Anyway, when you have two counter-propagating red-detuned lasers, the net effect will be to slow the atom's motion down a bunch.  It's called an optical molasses, because the photons are sticky or whatever.  By itself, it does not confine atoms, it only slows them down.
+In practice, for the project that is the topic of this thesis, most lasers operate in the high intensity regime -- the obvious exception being the photoionization laser (see Section whatever)\aside[color=org]{Where have I even decided to put the photoionization section, anyway?}  However, one can still gain a qualitative understanding of many aspects of atom-laser interaction while neglecting saturation concerns.  \aside{Clunky phrasing.} \aside[color=todoblue]{Do I need saturation to make an optical molasses?  I bet I do.}  
+\note{But yeah, it seems like I have to mention that saturation intensity is a thing that exists, before I proceed to neglect it forever.}
+% % % 
+
+\subsection{Doppler Cooling}
+% % % 
+We now consider a somewhat more general case in which a cloud of two-level atoms lies along the path of two counter-propagating laser beams, both detuned slightly to the red of resonance.  For simplicity, this cloud will be treated as being constrained in the other two dimensions such that it must within the laser's path.  With two counter-propagating laser beams of equal intensity and detuning,\aside{...and opposite polarization.  Or something.  I have to talk about the selection rules somewhere else.} the ``push'' from interaction with one beam is exactly counteracted by the push from the opposite-propagating beam, and there is no net velocity transfer to the cloud.  
+
+Detuning the laser from resonance will of course decrease absorption upon interacting with an atom at rest -- however the atoms within the cloud are not at rest, but rather are undergoing thermal motion.  As such, within the rest frame of each individual atom, the two laser beams will appear to be Doppler shifted in opposite directions, with the sign dependent on atomic motion.  In particular, atoms moving against a laser's direction of propagation will see that laser beam as being blueshifted.  Since the laser has been red-detuned within the lab frame, the blueshift moves the laser frequency as seen by the atom back toward resonance, and makes its photons more likely to be absorbed.  Similarly, for an atom moving in the same direction as a red-detuned laser beam, this laser will be seen as further red-shifted, and absorption likelihood is decreased.  Because of the difference in absorption, such an atom becomes more likely to receive a push back against its (lab frame) direction of motion, slowing it down, and less likely to recieve a push to increase its lab frame speed.   \aside{Optical molasses equation?  Maybe?}
+
+The overall effect on a one-dimensional cloud of atoms in the path of two counter-propagating red-detuned lasers is that the atoms will be slowed and cooled.  Such a setup is sometimes referred to as a one-dimensional ``optical molasses'' due to the viscous drag force induced on atomic motion.  It is straightforward to extend this model to three dimensions.  Although this setup will decrease atomic velocity, it does not include a confining force, so the atoms are still free to move out of the lasers' path, albeit at a decreased speed.  
+
+
+%The laser's red detuning with respect to the atomic resonance 
+
+%being used are of a sufficiently high intensity  
+%\note{``Such a setup is sometimes referred to as a one-dimensional “optical molasses” due to the viscous drag force induced on atomic motion, which will be discussed in more detail shortly.''}
+%\note{``In such a system, an incident photon can excite an atom from the ground state into the excited state, while simultaneously giving the atom a “push” proportional to the laser’s detuning from the atomic resonance.''}
+
+%Consider an atom in one dimension in the midst of two counter-propagating laser beams which are otherwise identical.   ...Ugh.
+\note{``...This will slow the atom down, at least up to a limit related to the linewidth of the atomic transition and/or the laser.  There's something to look up.''}
+%\note{Needs an equation. (?)}
+%\note{Needs work.}
+%\note[color=org]{I should really split these things back up into subsections.  Zeeman shift, saturation intensity, optical molasses/doppler cooling.  Then selection rules.}
+
+%First, consider an atom in an optical molasses.  in 1D, that means there are two counter-propogating lasers, both tuned slightly to the red of an atomic transition.  Also, they're polarized s.t. ... something.  The point is, atoms moving against the direction of a red-detuned laser's propagation will see a doppler shifted laser frequency, tuned closer to the atomic transition, which makes a photon more likely to be absorbed.  Similarly, the opposite-propagating laser will appear to be further red-shifted away from resonance.  When a photon is absorbed, we require conservation of (linear) momentum, so the atom gets a ``push'' against the direction it was travelling.  This will slow the atom down, at least up to a limit related to the linewidth of the atomic transition and/or the laser.  There's something to look up.
+%
+%Anyway, when you have two counter-propagating red-detuned lasers, the net effect will be to slow the atom's motion down a bunch.  It's called an optical molasses, because the photons are sticky or whatever.  By itself, it does not confine atoms, it only slows them down.
+
+\subsection{Angular Momentum and Selection Rules}
+\note{I mean.  I probably don't need to go too in-depth here.  But I haven't mentioned it at all yet, and it's a relevant thing.}
+Polarization matters.  You have to conserve angular momentum.  In fact, you have to conserve both total angular momentum *and* its projection on whatever axis.  Photons have spin-1, but because they literally go at the speed of light, they can't do $0 \rightarrow 0$ transitions.  
+
+This is related to why you need repumpers for your MOT, but also, I don't really want to get into that.  But also-also, why even *would* you?  You don't in the description I've already given.  Pretty sure it's because you can sometimes de-excite to a *stupid* set of energy levels.  And then, I don't think they really fall back down or something?  I've largely forgotten how it works.  Ugh.
 
 
 \subsection{Atom Trapping with a MOT}
@@ -88,35 +134,13 @@ Optical molasses + zeeman splitting = magneto-optical trap.  Anyway, see Fig.~\r
 
 \note{Do I *really* need to bring up the repumper?  I don't wanna.  Maybe I can just mention it and move on or something.}
 
-\begin{figure}[h!!!t!]
+\begin{figure}[h!!!!!t!]
 	\centering
 		\includegraphics[width=.999\linewidth]{mot.png}
 		\caption{Components of a magneto-optical trap, including current-carrying magnetic field coils and counterpropagating circularly polarized laser beams. Diagram taken from~\cite{thesis}}
 		\label{fig:mot}
     	\label{fig:themot}
 \end{figure}
-
-	
-\subsection{The AC-MOT}
-\label{sec:acmot}
-Citation for Harvey and Murray goes here~\cite{harveymurray}.  Also, myself~\cite{thesis}.
-\note{Needs work.}
-
-Here's a diagram of our AC-MOT running one AC-MOT/OP cycle, in Fig.~\ref{fig:acmot}.
-
-\begin{figure}[ht]
-	\centering
-		\includegraphics[width=.999\linewidth]{acmot.png}
-		\caption{One cycle of trapping with the AC-MOT, followed by optical pumping to spin-polarize the atoms.  After atoms are transferred into the science chamber, this cycle is repeated 100 times before the next transfer.  The magnetic dipole field is created by running parallel (rather than anti-parallel as is needed for the MOT) currents through the two coils.}
-		\label{fig:acmot}
-\end{figure}
-
-
-Normal MOTs are DC-MOTs.  They just sort-of go.  It's continuous.  We used an AC-MOT though!  The point of an AC-MOT is to shut off the magnetic field as quickly as possible.  With a well-controlled and uniform magnetic field, we can optically pump the atoms, which I think I'm going to describe in the upcoming section~(\ref{sec:op}).
-
-Sadly, this also removes our trapping mechanism.  We could keep the optical molasses after the field is off if we wanted to, but we don't, because we wouldn't be able to optically pump the atoms then.  But at least the atoms are cold-ish (we can measure!  I think it's done indirectly in that one table, or for realsies in Ben's thesis), so we can let them just chill for a little while before we have to re-trap them.  Don't lose too much.  \aside{How much do we lose?  Have we quantified that somewhere?  Probably.}
-
-Anyway, the idea of the AC-MOT is to run a sinusoidal current through your anti-Helmholtz coils.  You'll get eddy currents in your nearby metal *stuff* when you have a changing current, and those will *also* make a magnetic field. So, the idea with an AC-MOT is that with a sinusoid, you have clear control over what the eddy currents are actually doing, and you can just shut the current off when the eddy currents are zero (current in the anti-Helmholtz coils will be close to zero at this time too, depending on frequency of the sinusoid...), so you can reduce the size of the eddy currents by like an order of magnitude.  Eddy currents in general take a while to die away, so it's good to make them as small as possible.  ...Also, eddy currents making a magnetic field will screw up your optical pumping, because .... um, reasons?  I think it's not just the detuning, it's also something about the Larmor precession.  
 
 
 
@@ -144,6 +168,28 @@ But also, I should actually describe the optical pumping, too.  And point at Ben
 \end{figure}
 
 \note[color=purple]{JB says:  ``I would say you don't need an atomic level diagram.  You could just describe in words the semiclassical picture of atoms absorbing photons until they are nearly fully polarized, then they stop absorbing.  The optical pulmping + photoionization is then an in situ probe of the polarization. ... You would need to add in words that quantum mechanical corrections to this picture are in the optical Bloch equation approach in B. Fenker et al.  The depolarized states still have high nuclear polarization (1/2 for $F=2, M_F=1$, 5/6 for $F=1, M_F=1$) and determining the ratio of those two populations provides most of the info we need -- we model with the O.B.E, measure the optical pumping light polarization, and float an average transverse magnetic field.  This is adequate to determine the depolarized fraction to 10\% accuracy, which is all that is needed.'' }
+
+\section{The AC-MOT}
+\label{sec:acmot}
+Citation for Harvey and Murray goes here~\cite{harveymurray}.  Also, myself~\cite{thesis}.
+\note{Needs work.}
+
+Here's a diagram of our AC-MOT running one AC-MOT/OP cycle, in Fig.~\ref{fig:acmot}.
+
+\begin{figure}[ht]
+	\centering
+		\includegraphics[width=.999\linewidth]{acmot.png}
+		\caption{One cycle of trapping with the AC-MOT, followed by optical pumping to spin-polarize the atoms.  After atoms are transferred into the science chamber, this cycle is repeated 100 times before the next transfer.  The magnetic dipole field is created by running parallel (rather than anti-parallel as is needed for the MOT) currents through the two coils.}
+		\label{fig:acmot}
+\end{figure}
+
+
+Normal MOTs are DC-MOTs.  They just sort-of go.  It's continuous.  We used an AC-MOT though!  The point of an AC-MOT is to shut off the magnetic field as quickly as possible.  With a well-controlled and uniform magnetic field, we can optically pump the atoms, which I think I'm going to describe in the upcoming section~(\ref{sec:op}).
+
+Sadly, this also removes our trapping mechanism.  We could keep the optical molasses after the field is off if we wanted to, but we don't, because we wouldn't be able to optically pump the atoms then.  But at least the atoms are cold-ish (we can measure!  I think it's done indirectly in that one table, or for realsies in Ben's thesis), so we can let them just chill for a little while before we have to re-trap them.  Don't lose too much.  \aside{How much do we lose?  Have we quantified that somewhere?  Probably.}
+
+Anyway, the idea of the AC-MOT is to run a sinusoidal current through your anti-Helmholtz coils.  You'll get eddy currents in your nearby metal *stuff* when you have a changing current, and those will *also* make a magnetic field. So, the idea with an AC-MOT is that with a sinusoid, you have clear control over what the eddy currents are actually doing, and you can just shut the current off when the eddy currents are zero (current in the anti-Helmholtz coils will be close to zero at this time too, depending on frequency of the sinusoid...), so you can reduce the size of the eddy currents by like an order of magnitude.  Eddy currents in general take a while to die away, so it's good to make them as small as possible.  ...Also, eddy currents making a magnetic field will screw up your optical pumping, because .... um, reasons?  I think it's not just the detuning, it's also something about the Larmor precession.  
+
 
 \section{Photoionization as a Probe}
 \label{sec:photoprobe}
