@@ -7,9 +7,15 @@
 \chapter{Estimating Systematic Effects}
 \label{systematics_chapter}
 	\note{How do I even \emph{do} these estimations?}
-	\section{Low-energy Scintillator Threshold}
-	%\\*
+
+\section{Overview}	
+A summary of systematics goes here.  In words, yes, but also in table form.
+
+%	\section{Low-energy Scintillator Threshold}
+%	%\\*
 	Choice of low-energy scintillator threshold has a large systematic effect...  \aside{It's actually not nearly as big as I'd originally expected.  It's huge in the lineshape thing, but pretty tiny in everything else.}
+
+
 	\note[color=jb]{from John:  ``I used Ben's threshold when determining the uncertainty from the lineshape tail (UFTLT). 
 If you're saying the UFTLT depends on the threshold used, ok, of course it does. But if you're claimiing that UFTLT depends on the **uncertainty** of the threshold, that's manifestly smaller than the UFTLT itself, and I'm going to assert it isn't worth evaluating.''}
 	
@@ -50,7 +56,7 @@ The reason the correction is small is because of all your hard work.}
 \begin{figure}[h!!!t]
 	\centering
 	\includegraphics[width=.999\linewidth]
-	{Figures/toa_vs_costheta.pdf}
+	{Figures/toa_vs_costheta.png}
 	\caption[Simulated Beta TOA vs emission angle w.r.t. detector orientation]{Simulated Beta TOA vs emission angle w.r.t. detector orientation}	
 	\label{fig:toa_vs_costheta}
 \end{figure}
@@ -72,8 +78,8 @@ Indeed this is why you should avoid calling the events originating not from the 
     \begin{figure}[h!!!t]
     	\centering
     	\includegraphics[width=.999\linewidth]
-    	{Figures/LineshapeDemo_prelim.pdf}
-    	\caption[Lineshape Comparison]{I'm not actually sure if this picture shows what I want it to.  The point is, if I apply this rough lineshape to stuff that I SimpleMC-ed, then I can evaluate that way various systematic effects that would be time-consuming to actually simulate with G4.  This picture is  *supposed* to be a demonstration that this approach actually works...  \comment{(Need to re-plot this.  It's a `slow' picture.)}}	
+    	{Figures/LineshapeDemo_prelim.png}
+    	\caption[Lineshape Comparison]{I'm not actually sure if this picture shows what I want it to.  The point is, if I apply this rough lineshape to stuff that I SimpleMC-ed, then I can evaluate that way various systematic effects that would be time-consuming to actually simulate with G4.  This picture is  *supposed* to be a demonstration that this approach actually works... }	
     	\label{fig:lineshape_demo}
     \end{figure}
 	
@@ -90,16 +96,16 @@ the lineshape tail in any scintillator also includes backscattered events -- we 
 	    \begin{figure}[h!!]
     	\centering
     	\includegraphics[width=.999\linewidth]
-    	{Figures/Position_Err_Abeta_prelim.pdf}
-    	\caption[$\Abeta$ Position Error]{Estimated uncertainty in $\Abeta$ resulting from uncertainty and variation in the cloud parameters.  Evaluated by the lineshape reconstruction method.  \comment{(Need to re-plot this.  It's a `slow' picture.)} }	
+    	{Figures/Position_Err_Abeta_prelim.png}
+    	\caption[$\Abeta$ Position Error]{Estimated uncertainty in $\Abeta$ resulting from uncertainty and variation in the cloud parameters.  Evaluated by the lineshape reconstruction method.}	
     	\label{fig:Abeta_position_err}
 		\end{figure}
 
 	    \begin{figure}[h!!]
     	\centering
     	\includegraphics[width=.999\linewidth]
-    	{Figures/Position_Err_bFierz_prelim.pdf}
-    	\caption[$\bFierz$ Position Error]{Estimated uncertainty in $\bFierz$ resulting from uncertainty and variation in the cloud parameters.  Evaluated by the lineshape reconstruction method.  \comment{(Need to re-plot this.  It's a `slow' picture.)}}		
+    	{Figures/Position_Err_bFierz_prelim.png}
+    	\caption[$\bFierz$ Position Error]{Estimated uncertainty in $\bFierz$ resulting from uncertainty and variation in the cloud parameters.  Evaluated by the lineshape reconstruction method.}		
     	\label{fig:bFierz_position_err}
 		\end{figure}
 

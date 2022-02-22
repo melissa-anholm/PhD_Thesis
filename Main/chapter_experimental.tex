@@ -172,12 +172,45 @@ Because an electric field has been applied within this region (see Section~\ref{
 
 With this procedure, it is possible to produce a precise map of the cloud's position and size, both of which are necessary for the precision measurements of angular correlation parameters that are of interest to us here.  However, it also allows us to extract a third measurement:  the cloud's polarization.
 
-The key to the polarization measurement is that only atoms in the excited atomic state can be photoionized via the 355 nm laser.  While the MOT runs, atoms are constantly being pushed around and excited by the trapping lasers, so this period of time provides a lot of information for characterizing the trap size and position.  When the MOT is shut off, the atoms quickly return to their ground states and are no longer photoionized until the optical pumping laser is turned on.  As described in Section~\ref{op}, and in greater detail in~\cite{ben_OP}, the optical pumping process involves repeatedly exciting atoms from their ground states until the atoms finally cannot absorb any further angular momentum and remain in their fully-polarized (ground) state until they are perturbed.  Therefore, there is a sharp spike in excited-state atoms (and therefore photoions) when the optical pumping begins, and none once\aside[color=jb]{JB points out that this should be ``if", not ``once".} the cloud has been completely polarized.  The number of photoion events that occur once the sample has been maximally polarized, in comparison with the size and shape of the initial spike of photoions, provides a very precise characterization of the cloud's final polarization~\cite{ben_OP}.
+The key to the polarization measurement is that only atoms in the excited atomic state can be photoionized via the 355 nm laser.  While the MOT runs, atoms are constantly being pushed around and excited by the trapping lasers, so this period of time provides a lot of information for characterizing the trap size and position.  When the MOT is shut off, the atoms quickly return to their ground states and are no longer photoionized until the optical pumping laser is turned on.  As described in Section~\ref{op}, and in greater detail in~\cite{ben_OP}, the optical pumping process involves repeatedly exciting atoms from their ground states until the atoms finally cannot absorb any further angular momentum and remain in their fully-polarized (ground) state until they are perturbed.  Therefore, there is a sharp spike in excited-state atoms (and therefore photoions) when the optical pumping begins, and none if %\aside[color=jb]{JB points out that this should be ``if", not ``once".} 
+the cloud has been fully polarized.  The number of photoion events that occur once the sample has been maximally polarized, in comparison with the size and shape of the initial spike of photoions, provides a very precise characterization of the cloud's final polarization~\cite{ben_OP}.
 
 
 
-\input{figure_thechamber_sidebyside}
+%\begin{figure}[h!!]
+%	\centering
+%	\includegraphics[width=.999\linewidth]
+%	{Figures/DutyCycle_2014.pdf}
+%	\caption{The duty cycle used for transferring, cooling, trapping, and optically pumping $\isotope[37]{K}$ during the June 2014 experiment.  Not drawn to scale.  Question marks indicate timings that varied either as a result of electronic jitter or as a result of variable times to execute the control code.  Atoms are transferred during operation of the DC-MOT.  Though the push beam laser itself is only on for $30\,$ms, the bulk of the DC-MOT's operation time afterwards is needed to collect and cool the transferred atoms.  After 100 on/off cycles of optical pumping and the AC-MOT, the DC-MOT resumes and the next group of atoms is transferred in.  After 16 atom transfers, the polarization of the optical pumping laser is flipped to spin-polarize the atoms in the opposite direction, in order to minimize systematic errors.}	
+%	\label{fig:dutycycle}
+%\end{figure}
+
+
+%\input{figure_thechamber_sidebyside}
 % "fig:thechamber"
+
+%%%
+\begin{figure}[h!!!tb]
+	\centering
+%	\includegraphics[width=.999\linewidth]{Figures/chamber_decayevent3.png}
+	\includegraphics[width=.999\linewidth]{Figures/chamber_cross_section_with_event.png}
+	\caption{A decay event within the TRINAT science chamber.  After a decay, the daughter will be unaffected by forces from the MOT.  Positively charged recoils and negatively charged shake-off electrons are pulled towards detectors in opposite directions.  Although the $\beta^+$ is charged, it is also highly relativistic and escapes the electric field with minimal perturbation.}
+	%\comment{The pic is still kind-of fuzzy.}
+%	\note{The pic is still kind-of fuzzy.}
+%	\note{Mirrors are 275~$\mu$m thick, not the 254~$\mu$m shown in picture.}
+%	\note{Must separate these pictures.  Probably also adjust (a) to show *all* the apparatus stuff, and make a separate one to show the decay.}
+	\label{chamber_decayevent}
+\end{figure}
+
+
+%%%
+\begin{figure}[h!!!tb]
+	\centering
+	\includegraphics[width=.90\linewidth]{Figures/chamber_photo_2.png}
+	\caption{Inside the TRINAT science chamber.  This photo is taken from the vantage point of one of the microchannel plates, looking into the chamber towards the second microchannel plate.  The current-carrying copper Helmholtz coils and two beta telescopes are visible at the top and bottom.  The metallic piece near the center is one of the electrostatic `hoops' used to generate an electric field within the chamber.  The hoop's central circular hole allows access to the microchannel plate, and the two elongated holes on the sides allow the MOT's trapping lasers to pass unimpeded at an angle of 45 degress `out of the page'.}
+	\label{fig:thechamber}
+\end{figure}
+
 
 %\note{Below is pretty vague.  I could do better, even for just an overview-summary thing.  Obvs I have to describe it in detail later on *somewhere*, though maybe not in the overview-summary...} 
 Detectors are positioned about the second MOT for data collection.  The detection chamber 
