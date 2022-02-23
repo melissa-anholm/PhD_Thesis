@@ -115,13 +115,25 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 %%%% --- * --- %%%%	
 \section{Analysis}
 \label{analysis_chapter}
+
+\subsection{Data Selection}
+Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{whatever}), % to collect positively charged recoiling ions on the rMCP and negatively charged shake-off electrons on the eMCP 
+in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, we ended up running only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.   
+
+The data is further split up into four runsets:  A, B, C, and D based on when certain detection settings were adjusted, and each of these runsets contains both electron and recoil runs.  These four runsets were then treated separately for nearly all parts of the analysis.  In particular, Data Set A was neglected completely during analysis after it was determined that one scintillator had an improperly set hardware threshold such that lower energy betas weren't being detected at all.  \note{Also, the background was too noisy I think.  Also, pretty sure there isn't really that much data in Set A at all.}
+
+\note{What did I change between Runsets B and C?  Between Runsets C and D?  ...OP time, yes, but also and one point a PMT(?) blew out and we replaced it, so then the scintillator calibration was a bit different afterward.  Anyway, I should maybe just make a goddamn table.  Table goes here.}
+
+\input{table_runlist}
+
+\subsection{Bullet Points!}
 Right, so.  Here's how I processed the data into an answer.  In bullet point form, so I don't forget stuff while I'm obsessively trying to phrase everything well.  
 \newline
 
 With the Data:
 \begin{itemize}
 	\item Higher-level data cleaning.  Discard events during parts of the duty cycle when atoms weren't polarized.  Discard events near a recorded spark time.  Discard events when the photoionization laser fires.  Discard events when the LED pulser used to calibrate the scintillators fires.  
-	\item Split up runs into sets, to account for changing experimental conditions.  Possibly I should list what the differences between runs were somewhere.  But not in this section.
+	\item \greycomment{Split up runs into sets, to account for changing experimental conditions.  Possibly I should list what the differences between runs were somewhere.  But not in this section.  OTOH, ...maybe?}
 	\item Using the ``other'' data set with the rMCP:  Measure the trap position/size/velocity/expansion with the rMCP and with the camera.  Necessitates calibrating the rMCP, which is its own whole thing.  Also measure polarization.
 		\begin{itemize}
 		\item rMCP calibration probably goes in another section.  wev.
