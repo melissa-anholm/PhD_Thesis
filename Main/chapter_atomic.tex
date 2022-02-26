@@ -118,6 +118,7 @@ The overall effect on a one-dimensional cloud of atoms in the path of two counte
 %
 %Anyway, when you have two counter-propagating red-detuned lasers, the net effect will be to slow the atom's motion down a bunch.  It's called an optical molasses, because the photons are sticky or whatever.  By itself, it does not confine atoms, it only slows them down.
 
+%%% % % % %%%
 \subsection{Angular Momentum and Selection Rules}
 As in any other interaction, when a photon and an atom interact with one another, angular momentum must be conserved.
 %In any interaction, angular momentum must be conserved, and the interactions between atoms and photons are no exception.  
@@ -130,8 +131,37 @@ Polarization matters.  You have to conserve angular momentum.  In fact, you have
 
 This is related to why you need repumpers for your MOT, but also, I don't really want to get into that.  But also-also, why even *would* you?  You don't in the description I've already given.  Pretty sure it's because you can sometimes de-excite to a *stupid* set of energy levels.  And then, I don't think they really fall back down or something?  I've largely forgotten how it works.  Ugh.
 
+%%% % % % %%%
+\section{Optical Pumping}
+\label{sec:op}
+\note{Needs work.}
+\note{``Until recently, one limitation of such samples was the necessity for the presence of a relatively large magnetic field, which is expected to partially destroy atomic polarization, limiting the precision of many types of measurements.  Here we discuss the construction of a newer type of MOT, the AC-MOT, which minimizes residual magnetic fields.  The guys in~\cite{harveymurray} came up with the idea of the AC-MOT.  They made it work and did some stuff with it.  Good for them.''}
+Need a nice, uniform, constant magnetic field for your polarization to larmor precess around.  Then, however depolarized (from the axis of the magnetic field) you were to start out, you don't like precess in a way that changes the projection you care about.
 
-\subsection{Atom Trapping with a MOT}
+But also, I should actually describe the optical pumping, too.  And point at Ben's OP paper that we did~\cite{ben_OP}.
+
+\note[color=org]{Somewhere later, I can talk about photoionization?  Or should it be here, in this chapter?  Surely it should at least get a different section though.}
+
+%\missingfigure{I need \emph{at least} one atomic level diagram.  But possibly as many as 3 level diagrams.  Have to show energies for MOT, energies for OP, and energies for photoionization.  }
+
+%\note{Needs a better level diagram.  Or possibly no level diagrams at all.}
+%\note{Previous assertion:  I need \emph{at least} one atomic level diagram.  But possibly as many as 3 level diagrams.  Have to show energies for MOT, energies for OP, and energies for photoionization.}
+\note{Do I need a MOT level diagram too?}
+
+\begin{figure}[h!!t]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/OP_LevelDiagram_bf.png}
+	\note{Describe what's going on here!}
+	\caption{An atomic level diagram for the optical pumping of $\isotope[37]{K}$, taken from \cite{ben_OP}.  }	
+	\label{fig:op_leveldiagram}
+\end{figure}
+
+\note[color=purple]{JB says:  ``I would say you don't need an atomic level diagram.  You could just describe in words the semiclassical picture of atoms absorbing photons until they are nearly fully polarized, then they stop absorbing.  The optical pumping + photoionization is then an in situ probe of the polarization. ... You would need to add in words that quantum mechanical corrections to this picture are in the optical Bloch equation approach in B. Fenker et al.  The depolarized states still have high nuclear polarization (1/2 for $F=2, M_F=1$, 5/6 for $F=1, M_F=1$) and determining the ratio of those two populations provides most of the info we need -- we model with the O.B.E, measure the optical pumping light polarization, and float an average transverse magnetic field.  This is adequate to determine the depolarized fraction to 10\% accuracy, which is all that is needed.'' }
+
+
+%%% % % % %%%
+\section{Atom Trapping with a MOT}
 \note{Do I *have* an equation I can put here?  Surely there must be one somewhere, but I really don't want to dig it up, and I don't think it's really necessary.}
 \note{Needs work.}
 Really, at the end of the previous section, I described the MOT's trapping mechanism.  That's literally what it is.  You just need to do it in 3 dimensions, rather than only one.  Fortunately, an anti-helmholz(sp?) coil gives us a quadrupole-shaped magnetic field, which *actually* has a magnetic field that changes linearly along any axis in the region near the center.   
@@ -149,32 +179,7 @@ Optical molasses + zeeman splitting = magneto-optical trap.  Anyway, see Fig.~\r
 \end{figure}
 
 
-
-\section{Optical Pumping}
-\label{sec:op}
-\note{Needs work.}
-
-Need a nice, uniform, constant magnetic field for your polarization to larmor precess around.  Then, however depolarized (from the axis of the magnetic field) you were to start out, you don't like precess in a way that changes the projection you care about.
-
-But also, I should actually describe the optical pumping, too.  And point at Ben's OP paper that we did~\cite{ben_OP}.
-
-\note[color=org]{Somewhere later, I can talk about photoionization?  Or should it be here, in this chapter?  Surely it should at least get a different section though.}
-
-%\missingfigure{I need \emph{at least} one atomic level diagram.  But possibly as many as 3 level diagrams.  Have to show energies for MOT, energies for OP, and energies for photoionization.  }
-
-\note{Needs a better level diagram.  Or possibly no level diagrams at all.}
-\note{Previous assertion:  I need \emph{at least} one atomic level diagram.  But possibly as many as 3 level diagrams.  Have to show energies for MOT, energies for OP, and energies for photoionization.}
-
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/OP_LevelDiagram}
-	\caption{An atomic level diagram for the optical pumping of $\isotope[37]{K}$.  Also, this is a diagram for both the wrong isotope, and *probably* also the wrong transition.}	
-	\label{fig:op_leveldiagram}
-\end{figure}
-
-\note[color=purple]{JB says:  ``I would say you don't need an atomic level diagram.  You could just describe in words the semiclassical picture of atoms absorbing photons until they are nearly fully polarized, then they stop absorbing.  The optical pulmping + photoionization is then an in situ probe of the polarization. ... You would need to add in words that quantum mechanical corrections to this picture are in the optical Bloch equation approach in B. Fenker et al.  The depolarized states still have high nuclear polarization (1/2 for $F=2, M_F=1$, 5/6 for $F=1, M_F=1$) and determining the ratio of those two populations provides most of the info we need -- we model with the O.B.E, measure the optical pumping light polarization, and float an average transverse magnetic field.  This is adequate to determine the depolarized fraction to 10\% accuracy, which is all that is needed.'' }
-
+%%% % % % %%%
 \section{The AC-MOT}
 \label{sec:acmot}
 Citation for Harvey and Murray goes here~\cite{harveymurray}.  Also, myself~\cite{thesis}.
@@ -199,9 +204,9 @@ Anyway, the idea of the AC-MOT is to run a sinusoidal current through your anti-
 
 \section{Photoionization as a Probe}
 \label{sec:photoprobe}
-So, the photoionization laser.  It only ionizes a tiny fraction of the atoms\aside{1\% ?  John has told me *recently*.}, so it's *mostly* non-destructive.  
+So, the photoionization laser.  It ionizes only $\approx 1\%$ of the atoms, so it's mostly non-destructive.  
 
-For unpolarized atoms (eg, in a MOT), it can give a projection of the trap position.  At least, it can if you add some MCPs with delay lines, and an electric field.  Also, the atoms have to be excited or they don't get photoionized this way.
+For atoms in a MOT, it can give a projection of the trap position.  At least, it can if you add some MCPs with delay lines, and an electric field.  Also, the atoms have to be excited or they don't get photoionized this way.  That's because at any given time, a large fraction of the trapped atoms are in the excited state, so it works.
 
 For polarized or partially polarized atoms, absorption stops, because of selection rules.  We've intentionally polarized the laser to do this.  I think.  \aside[color=todoblue]{*Have* we even polarized the photoionization laser in any particular way?  I'm not sure we even have.  Why doesn't it absorb?  When it's stretched, it's not just all in the excited state!  It's...stretched.  Do angular momentum selection rules even apply if the electron is going into the continuum?}
 
@@ -210,22 +215,4 @@ For polarized or partially polarized atoms, absorption stops, because of selecti
 Anyway, the probing only works if you have a detector to see what things.  We have a photodiode(?) to observe what fraction of things get photoionized overall.  This gives us polarization.  We also have an MCP with delay lines, and an electric field to guide (positive) ions into it.  And another MCP with delay lines on the other side of the electric field, to collect the electrons removed by photoionization.  Also, the (orbital) electrons removed during beta decay.  The photoionization laser is pulsed.  So, when there's a pulse, we can check whether there was a hit detected in the ion detector and/or the electron detector.  It turns out, we can't check both at the same time, because our two detectors hate each other.  They're natural enemies, really.  Turns out, the ion detector is better at measuring the polarization, and the trap position.  Because reasons.  \aside[color=org]{But it's worse for $\Abeta$ and $\bFierz$, because .... reasons that probably shouldn't go in this chapter.}  Anyway, during the 2014 run, we spent like half of the beamtime collecting ions and half collecting electrons.  \aside[color=org]{This also doesn't go in this section.}
 
 
-%%%% --- * --- %%%%	
-\section{Shake-off Electron Spectrum}
-Shake-off electrons:  where do they come from, and where do they go?  ~\cite{Levinger}.
 
-\note[color=org]{Really, just discuss the physics of what happens to cause SOEs to be a thing.  Talk about *our* SOE spectrum in some other chapter later.  Arguably this should go in the nuclear physics overview chapter?}
-
-John made some nice plots of these from the eMCP data.  I did *not* use it to make a cut on eMCP hit position in the end, despite the fact that it makes the spectrum more clean, because a lot of good events don't have full hit position information, and you lose an awful lot of statistics by making the cut.  I used this for modeling the background spectrum, but in the end it wasn't as elegant a result as I might have hoped.  Also, it's still an open question exactly which fraction of SOEs come from which atomic shell, but it doesn't change the resulting spectrum very much.
-
-\input{figure_SOE_spectrum.tex}
-%\begin{figure}[h!!t]
-%	\centering
-%	\includegraphics[width=.999\linewidth]
-%	{Figures/Levinger_SOETOF_prelim.pdf}
-%	\caption[Levinger TOF]{Shake-off electron TOF (w.r.t. beta TOA) spectrum, showing how the spectrum is different if one includes different sets of initial electrons to be shaken off.  I forget why some of them have 0 eV.  Maybe those are the ones from the $\isotope[37]{Ar}^+$. ... Levinger TOF spectra for some different sets of SOE initial orbitals before shake-off.  (At least that's what it's supposed to be, after I fix the picture).  It's reconstructed event-by-event with beta times-of-flight that would pass some basic `good event' cuts.  Anyway, it turns out, it doesn't much matter what orbitals you lose SOEs from.  That's nice.  In the end, I used 85+15.  \comment{(Need to re-plot this.)} }	
-%	\label{fig:levinger_TOF}
-%\end{figure}
-
-
-\note{``Until recently, one limitation of such samples was the necessity for the presence of a relatively large magnetic field, which is expected to partially destroy atomic polarization, limiting the precision of many types of measurements.  Here we discuss the construction of a newer type of MOT, the AC-MOT, which minimizes residual magnetic fields.  The guys in~\cite{harveymurray} came up with the idea of the AC-MOT.  They made it work and did some stuff with it.  Good for them.''}

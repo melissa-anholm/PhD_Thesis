@@ -46,7 +46,12 @@ In the end, we get our results from the scintillator energy only, without summin
 	\\ ... \\
 The reason the correction is small is because of all your hard work.}
 	
-	So we model the beta TOF from the surfaces in G4, event by event.  This is necessary because scattered \aside[color=jb]{JB:  ``I wouldn't call these "scattered" events... that's very misleading.'' \\ ... \\ Yeah, I should really stop doing that.} events will have their TOF changed to account for a longer beta pathlength, and we're preferrentially cutting away the events that don't have a TOF in the appropriate range.  ....And then have COMSOL generate electron TOFs for SOEs starting from the start points picked by G4.  Ran COMSOL for 0 eV SOEs, and again for Levinger spectrum SOEs.  Used ~9\% 0eV SOEs in the end.  I forget which Levinger distribution I used in the end.  \aside[color=jb]{JB:  Please comment on whether or not it was important to have this energy distribution.}  The point is, for each event, you've simulated a beta TOF that may or may not be scattered off of something before it hits a detector, and you have a SOE TOF for an event originating at that same point, so you subtract them to model the TOF you'd measure in an experiment.  Also, because you've done the scattering with G4, you get the beta energy corrected for any scattering that happened.  This way, you know precisely \aside[color=jb]{JB:  `you know precisely' $\rightarrow$ `you can estimate'} how much "bad stuff" you're getting rid of with the TOF cut.
+	We model the beta TOF from the surfaces in G4, event by event.  This is necessary because scattered \aside[color=jb]{JB:  ``I wouldn't call these "scattered" events... that's very misleading.'' 
+	\\ ... \\ 
+	Yeah, I should really stop doing that.  
+	\\ ... \\ 
+	Wait no, scattered is what I mean!  But fine, my phrasing is really unclear.} events will have their TOF changed to account for a longer beta pathlength, and we're preferrentially cutting away the events that don't have a TOF in the appropriate range.  ....And then have COMSOL generate electron TOFs for SOEs starting from the start points picked by G4.  Ran COMSOL for 0 eV SOEs, and again for Levinger spectrum SOEs.  Used ~9\% 0eV SOEs in the end.  I forget which Levinger distribution I used in the end.  \aside[color=jb]{JB:  Please comment on whether or not it was important to have this energy distribution.}  The point is, for each event, you've simulated a beta TOF that may or may not be scattered off of something before it hits a detector, and you have a SOE TOF for an event originating at that same point, so you subtract them to model the TOF you'd measure in an experiment.  Also, because you've done the scattering with G4, you get the beta energy corrected for any scattering that happened.  This way, one can estimate %\aside[color=jb]{JB:  `you know precisely' $\rightarrow$ `you can estimate'} 
+how many ``bad" events are eliminated with the TOF cut, as well as the fraction of ``bad'' events left in what remains.
 	
 %	\subsection{Decay from Chamber Surfaces}
 
@@ -118,7 +123,7 @@ the lineshape tail in any scintillator also includes backscattered events -- we 
 	\note[color=jb]{JB:  ``I will write this up better soon."  (I think he already did that)}
 
 
-\section{Summary of Data Collected}
+%\section{Summary of Data Collected}
 %\missingfigure{TBH, the thing that's missing is a table, not a figure.  Needs a table full of systematic errors.  And maybe statistical errors?  wev.}
 %\note{Needs an error budget table.  Because of course it fucking does.}
 

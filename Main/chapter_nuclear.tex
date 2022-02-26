@@ -99,7 +99,30 @@ Talk about how great \isotope[37]{K} is for what we're doing with it.  Also, dro
 \end{figure}
 
 
-\note{Might be worth mentioning about the shake-off electrons too, and how many of them there are.  But then nobody will trust any of the numbers I measured (how did I do that measurement, anyway?), and will want me to just use Dan's that he measured forever ago with a different set of detectors.  (where are those numbers recorded anyway?)  I think I have to mention how many come off and how often at least briefly, because I use the Levinger spectrum for my background modeling.}
+
+%%%% --- * --- %%%%	
+\section{Shake-off Electron Spectrum}
+
+Shake-off electrons:  where do they come from, and where do they go?  ~\cite{Levinger}.
+
+\note[color=org]{Really, just discuss the physics of what happens to cause SOEs to be a thing.  Talk about *our* SOE spectrum in some other chapter later.  Should this go in the atomic physics chapter?  I can't decide whether it's more atomic or more nuclear.}
+
+John made some nice plots of these from the eMCP data.  I did *not* use it to make a cut on eMCP hit position in the end, despite the fact that it makes the spectrum more clean, because a lot of good events don't have full hit position information, and you lose an awful lot of statistics by making the cut.  I used this for modeling the background spectrum, but in the end it wasn't as elegant a result as I might have hoped.  Also, it's still an open question exactly which fraction of SOEs come from which atomic shell, but it doesn't change the resulting spectrum very much.
+
+\input{figure_SOE_spectrum.tex}
+
+\note{Should I talk about the distribution of how many SOEs come off in a decay?  I have measurements of the recoil charge distribution, which is related but not really the same thing.  From a theoretical POV, I don't know how many get shaken off.  Thankfully, it doesn't matter very much in the end.
+%But then nobody will trust any of the numbers I measured (how did I do that measurement, anyway?  At this point I wouldn't even trust it...), and will want me to just use Dan's that he measured forever ago with a different set of detectors.  (where are those numbers recorded anyway?)  
+%I think I have to mention how many come off and how often at least briefly, because I use the Levinger spectrum for my background modeling.
+}
+
+%\begin{figure}[h!!t]
+%	\centering
+%	\includegraphics[width=.999\linewidth]
+%	{Figures/Levinger_SOETOF_prelim.pdf}
+%	\caption[Levinger TOF]{Shake-off electron TOF (w.r.t. beta TOA) spectrum, showing how the spectrum is different if one includes different sets of initial electrons to be shaken off.  I forget why some of them have 0 eV.  Maybe those are the ones from the $\isotope[37]{Ar}^+$. ... Levinger TOF spectra for some different sets of SOE initial orbitals before shake-off.  (At least that's what it's supposed to be, after I fix the picture).  It's reconstructed event-by-event with beta times-of-flight that would pass some basic `good event' cuts.  Anyway, it turns out, it doesn't much matter what orbitals you lose SOEs from.  That's nice.  In the end, I used 85+15.  \comment{(Need to re-plot this.)} }	
+%	\label{fig:levinger_TOF}
+%\end{figure}
 
 
 
