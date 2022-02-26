@@ -75,19 +75,13 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 
 
 
-\section{Beta Detector Cuts}
-\label{section:calibrations_betadetectors}
-	Setup is as described in Section~\ref{section:betadetectors}.	 
-	\note{This is a stupid section name.  Also, I really do need to describe how the cuts were made here somewhere, because it's non-trivial in many cases, and possibly different than what Ben did in some cases.  But it won't make sense to describe what I did different if I don't describe the thing as a whole, at least a bit.  The point is, this is a set of cuts/systematics that isn't really that straightforward to understand.  }
+%\section{Beta Detector Cuts}
+%\label{section:calibrations_betadetectors}
+%	Setup is as described in Section~\ref{section:betadetectors}.	 
+%	\note{This is a stupid section name.  Also, I really do need to describe how the cuts were made here somewhere, because it's non-trivial in many cases, and possibly different than what Ben did in some cases.  But it won't make sense to describe what I did different if I don't describe the thing as a whole, at least a bit.  The point is, this is a set of cuts/systematics that isn't really that straightforward to understand.  }
 %\section{Plastic Scintillators}
-	\note[color=org]{Maybe this goes in Chapter~\ref{analysis_chapter}?}
-	\note{Energy calibration for the scintillator+PMT setup changed dramatically at one point.    Describe how calibration was done.  Like, one sentence or something.  Something about the endpoint energy, and something about the compton edge for 511s, IIRC.}
-	
-%	Also describe how the DSSD calibration was done, even though it wasn't implemented by me. 
-%	\note{How the fuck WERE these things done?!}
-	\note[color=jb]{JB:  ``You can describe anything you did differently or improved, but you can and should otherwise defer all details of the scintillator calibration and DSSD calibration to Ben's paper and his thesis and Spencer's.  E.g. Section~\ref{section:bb1_systematics} ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement."
-	\label{thesisconventionjb} }
-	\note[color=jb]{JB:  ``If you have some way of documenting the coding you used, that would be great."  ... yeah, it would, wouldn't it?}
+%	\note[color=org]{Maybe this goes in Chapter~\ref{analysis_chapter}?}
+%	\note{Energy calibration for the scintillator+PMT setup changed dramatically at one point.    Describe how calibration was done.  Like, one sentence or something.  Something about the endpoint energy, and something about the compton edge for 511s, IIRC.}
 %\section{Strip Detectors}
 %	\note{How the fuck WERE these things done?!}
 
@@ -130,9 +124,13 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 %%%% --- * --- %%%%	
 \clearpage
 \chapter{Analysis}
+%\chapter{Data Selection}
 \label{analysis_chapter}
+\note[color=org]{Do I actually want to combine this with Chapter~\ref{calibrations_chapter}?}
 
-\section{Data Selection and Pre-Processing}
+%\section{Data Selection and Pre-Processing}
+%\section{Run Parameters and Preliminary Cuts}
+\section{Data Selection and Preliminary Cuts}
 Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), % to collect positively charged recoiling ions on the rMCP and negatively charged shake-off electrons on the eMCP 
 in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, we ended up running only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  
 
@@ -145,7 +143,7 @@ The data is further split up into four runsets:  A, B, C, and D based on when ce
 
 \input{table_runlist}
 
-Before proceeding further, several basic cuts are performed on the data.  For the Electron Runs which are to be processed directly into a physical measurement, we consider only events in which there was a recorded hit \emph{both} on the eMCP \emph{and} on (at least) one of the scintillators.  The required scintillator hit, of course, is potentially a beta, and so it is obvious why this must be present.  The eMCP hit requirement -- particularly with the timing of the eMCP hit occuring within a certain time range relative to the scintillator hit -- is used to tag beta decay events originating from the cloud, as opposed to those originating from some other surface within the chamber.  The precise time interval to be used, and how its results should be evaluated,\aside{also discussed: how we decide what counts as an eMCP hit at all} is discussed in Section~\ref{something}, but for the first pass through the data it is good enough to simply require that an eMCP hit occurred.\aside{Awkward stupid phrasing.}  Although not every beta decay event from the cloud will produce a hit on the eMCP, this requirement eliminates a great deal of background that would otherwise be challenging to evaluate.  \aside{Also, we claim that it doesn't bias the data.  Much.  Didn't I try to evaluate how much it biased the data at one point?}  
+Before proceeding further, several basic cuts are performed on the data.  For the Electron Runs which are to be processed directly into a physical measurement, we consider only events in which there was a recorded hit \emph{both} on the eMCP \emph{and} on (at least) one of the scintillators.  The required scintillator hit, of course, is potentially a beta, and so it is obvious why this must be present.  The eMCP hit requirement -- particularly with the timing of the eMCP hit occuring within a certain time range relative to the scintillator hit -- is used to tag beta decay events originating from the cloud, as opposed to those originating from some other surface within the chamber.  The precise time interval to be used, and how its results should be evaluated,\aside{also discussed: how we decide what counts as an eMCP hit at all} is discussed in Section~\ref{section:emcp_cuts}, but for the first pass through the data it is good enough to simply require that an eMCP hit occurred.\aside{Awkward stupid phrasing.}  Although not every beta decay event from the cloud will produce a hit on the eMCP, this requirement eliminates a great deal of background that would otherwise be challenging to evaluate.  \aside{Also, we claim that it doesn't bias the data.  Much.  Didn't I try to evaluate how much it biased the data at one point?}  
  
 %The scintillator hit is considered to be potentially a beta from a decay
 Because the eMCP hit is required as a `tag' of good events, it is also necessary to remove from direct consideration any event which is coincident with a pulse of the photoionization laser.  When photoionization occurs within the atom cloud, an orbital electron is removed from the atom and will be accelerated by the electric field into the eMCP, just as a shake-off electron from a decay might be.  If, by chance, this photoelectron arrives in coincidence with a scintillator hit, it would be interpreted as a decay event from the trap -- unless we preemtively discard it.  
@@ -162,7 +160,8 @@ Finally, because this analysis depends heavily on energy measurements from the t
 	
 
 \section{Further Cuts Using the DSSD}
-\note[color=org]{Have I even defined `DSSD' yet?}
+%\note[color=org]{Have I even defined `DSSD' yet?}
+\note[color=org]{Pretty sure I'm repeating myself from Chapter~\ref{???}}
 Although it was not possible to use the DSSD in real-time analysis or event triggering, the DSSDs may be used, after the data has been collected, to distinguish between different types of particles incident on the detector, as more energy will be deposited by heavier particles.  When a scintillator hit is triggered by a particle originating within the experimental chamber, that particle will typically have passed through the DSSD before arriving at the scintillator.
 
 In the present experiment, the two primary particles that will concern us are $\beta^+$ particles originating from the decay of $\isotope[37]{K}$, and $\gamma$ rays, which may be produced through a variety of processes, e.g. directly from the $2\%$ decay branch, through annihilation of $\beta^+$ particles upon their interaction with regular-matter electrons, or bremsstrahlung radiation from emitted $\beta$s.  
@@ -172,6 +171,10 @@ We would like to look specifically at events involving $\beta^+$ particles arriv
 In order to proceed at this point, and because the DSSD readout records so much information, it is necessary to develop some criteria to determine whether or not we will accept any given DSSD readout as a $\beta$ hit.
 
 \note{How do I *say* that Ben was the one who did most of the DSSD calibration stuff?  I maybe don't need to describe all of it here, but I *could*, and maybe it's needed in order to understand like 4 rows in my error budget.}  
+
+\note[color=jb]{JB:  ``You can describe anything you did differently or improved, but you can and should otherwise defer all details of the scintillator calibration and DSSD calibration to Ben's paper and his thesis and Spencer's.  E.g. Section~\ref{section:bb1_systematics} ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement."
+\label{thesisconventionjb} }
+\note[color=jb]{JB:  ``If you have some way of documenting the coding you used, that would be great."  ... yeah, it would, wouldn't it?}
 
 
 We read out the full waveform for every strip at each event with a scintillator hit, but in post-processing take \emph{only} the `time' and `energy' from the peak waveform height and the time in the waveform at which that occurs. Each strip will have its own noise spectrum and energy calibration.  To classify an event as a good DSSD hit, we require at least one `x' strip and one `y' strip record an energy above the noise threshold.  We require that the x strip and the y strip agree (to within some number of standard deviations) in amount of energy deposited, and in the time at which that hit occurred.  In order to avoid problems resulting from the strips' non-uniform noise thresholds, we further require that the energy deposited be greater than some lower-end cutoff which is selected so as to be higher than every individual strip's noise threshold.  In this case, the DSSD's lower energy uniform threshold was set at 50 keV.  
@@ -184,42 +187,103 @@ We also elect to use only events where a beta hit the DSSD within a $15.5\,$mm r
 
 
 \section{Further Cuts Using the eMCP}
+\label{section:emcp_cuts}
 \note[color=org]{I described the HEX-75 somewhere in a previous chapter, right??}
+
+The eMCP features a set of three delay lines, intended to be used to record the position of a hit, as in Fig.~\ref{fig:emcp_position}.  \aside{Do I need to describe MCPs and delay lines somewhere?  Maybe not...}  Though only two delay lines is sufficient to determine the position within the plane of the MCP if they are both hit, the presence of a third delay line allows for some redundancy.  In practice, however, a large fraction of otherwise `good' events include a hit on the eMCP, but have insufficient information recorded on the delay line channels to reconstruct a position.  
 
 \begin{figure}[h!!!!t!]
 	\centering
 	\includegraphics[width=.999\linewidth]
+	{Figures/eMCP_position.pdf}
+	\caption{Position as measured on the eMCP, after some data cleaning.}	
+	\label{fig:emcp_position}
+\end{figure}
+
+Because a SOE from the trap is most likely to land in the centre of the plate, while the background from other sources is roughly constant across the plate, it might make sense to accept only events where the eMCP hit is within some radius of the central peak.  This methodology was seriously considered because the remaining data has a much lower fraction of background events polluting it -- however this results in a loss of around half of the events even for the most generous eMCP radius cuts (see Fig.~\ref{fig:soe_tof_positioncompare}).  Therefore, it was decided that no position cuts on the eMCP would be made in the final analysis.
+
+\begin{figure}[h!!!!t!]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/SOE_TOF_positioncompare.pdf}
+	\note{Um.  Did I for sure get the labels correct on this???  It seems really wrong.}
+	\caption{Beta-electron TOF, for events with and without eMCP hit position information.  A cut will eventually be taken to accept only events sufficiently near the largest peak -- in this case the number of events is `only' decreased by a factor of 2.}	
+	\label{fig:soe_tof_positioncompare}
+\end{figure}
+
+Several years after the data was initially collected, a problem was discovered with our low-level analyzer software, which we had been using to convert large and unwieldy MIDAS data sets into somewhat smaller and more manageable ROOT data sets.  In particular, for every timestamp recorded, our raw MIDAS data actually included both a timestamp for the leading edge (LE) of the pulse, and a timestamp for the trailing edge (TE).  The analyzer had--for years--been reporting the timestamp associated with the trailing edge of the pulse.  Initially it was unclear if there might have been a reason behind this choice, but a closer examination of the data showed less timing noise and a sharper distribution of timing pulses across the board (see Fig.~\ref{fig:LE_TE}), with some channels showing a larger effect than others.  This was corrected, and the entirety of this analysis has been performed now using the cleaner LE spectra.  
+
+\begin{figure}[h!!t!]
+	\centering
+	\includegraphics[width=.999\linewidth]
 	{Figures/LE_TE_peaks.pdf}
-	\caption{SOE TOF peaks (eMPC - Scintillator), using the leading edge (LE) and using the trailing edge (TE).}	
+	\caption{SOE TOF peaks (eMPC - Scintillator), using the leading edge (LE) and using the trailing edge (TE).  Data is sorted according to runset.  For each individual runset, the TE peak is broader than the LE peak.  The centroid of each runset is also more variable in the TE plots.}	
 	\label{fig:LE_TE}
 \end{figure}
 
+The place where this change between the TE and LE timestamps had the biggest impact on the analysis is in the shake-off electron time-of-flight spectra, on which a cut must eventually be taken. Although this problem was not discovered in time to be used in the previous measurement of $\Abeta$ using this same data~\cite{ben_Abeta}, it likely would have had a negligible effect on the final result, because the SOE TOF cut that was used there was comparatively loose, and the evaluation of the background that remained was not a dominant systematic effect. \aside[color=org]{This goes in that one appendix, if I haven't already put it there.}
 
-\section{Bullet Points!}
-Right, so.  Here's how I processed the data into an answer.  In bullet point form, so I don't forget stuff while I'm obsessively trying to phrase everything well.  
-\newline
+With the data reprocessed using the leading edge for timestamps, I wanted to eliminate as much background as possible from the SOE TOF spectrum.  With this goal in mind, the next step was to correct the scintillator timing for its low energy `walk' (see Fig.~\ref{fig:WalkAdjust}).  A quartic polynomial was fit to each of the 2D timing vs energy spectra (the top and bottom detectors were treated separately), and the result was used to produce a `straightened' SOE TOF spectrum with respect to measured scintillator energy, and as expected, the resulting SOE TOF spectrum was a bit more sharply peaked.  
 
-With the Data:
+
+\begin{figure}[h!!!!t!]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/WalkAdjust.png}
+	\caption{SOE TOF walk, before (left) and after (right) applying a quartic adjustment to straighten out the effective TOF.}	
+	\label{fig:WalkAdjust}
+\end{figure}
+
+At this point it becomes necessary to attempt to model the SOE TOF spectrum, as in Fig.~\ref{fig:soetof}.  To check the agreement of the model with reality, we compare the averaged superratio asymmetries from both, as in Fig.~\ref{fig:asymmetry_by_tof}.
+\note{Okay.  This needs more description.}
+
+\begin{figure}[h!!!!t!]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/SOE_TOF_Spectra.pdf}
+	\caption{SOE TOF, model and data.  In the end, I cut the data to use only events with a TOF between -0.928 ns and +1.416 ns.  Max. possible background is like a factor of two too big.  Similar quality results no matter how you distribute the Levinger spectra between 4S and 3P, however adding the 0 eV electrons makes a big improvement to the agreement. }	
+	\label{fig:soetof}
+\end{figure}
+
+
+\begin{figure}[h!!!!t!]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/asymmetry_by_tof.pdf}
+	\caption{The superratio asymmetry, averaged over all scintillator energies between 400-4800 keV, is used to compare the experimental data and simulated TOF model.  All other cuts have been applied.}	
+	\label{fig:asymmetry_by_tof}
+\end{figure}
+
+
+%\section{Bullet Points!}
+%Right, so.  Here's (more of) how I processed the data into an answer.  In bullet point form, so I don't forget stuff while I'm obsessively trying to phrase everything well.  
+%\newline
+%
+%With the Data:
+%\begin{itemize}
+%%	\item \greycomment{Lower-level data cleaning.  Discard events during parts of the duty cycle when atoms weren't polarized.  Discard events near a recorded spark time. Discard events when the photoionization laser fires.  Discard events when the LED pulser used to calibrate the scintillators fires.}
+%%	\item \greycomment{Split up runs into sets, to account for changing experimental conditions.  Possibly I should list what the differences between runs were somewhere.  But not in this section.  OTOH, ...maybe?}
+%	%
+%%	\item Make some more careful cuts to clean the data.  
+%	%	\begin{itemize}
+%%		\item \greycomment{Discard events without a ``good'' DSSD hit.  Eliminates vast majority of background 511s.  Necessitates having a definition of what a ``good'' DSSD hit is.  It's subtle enough that we'll want to leave some part of this definition of ``good'' to be varied as a systematic effect.  Notably, we consider energy agreement for each hit pixel, individual strip SNR, and overall DSSD energy threshold.  Also, hit radius w.r.t. center of detector.  This is a lot of stuff, all implemented by Ben -- and it needs to be done fairly early on in data processing in order to keep processing times for everything else manageable.  }
+%		\item Discard events where SOE-Beta TOF falls outside a certain range.  Necessitates picking a ``good'' range.  The precise definition of ``good'' is varied as a systematic.  
+%		\item \greycomment{There was a scintillator timing walk correction before taking the SOE-Beta TOF cut.}
+%		\item \greycomment{Before the scintillator walk correction, there was the thing where the data was re-processed using the leading edge pulse rather than the trailing edge pulse.  Makes it cleaner.  Ben just got stuck with the trailing edge.}
+%		\item \greycomment{Could have implemented an eMCP hit *position* requirement, but that kills too many stats.  It's like a factor of two.}
+%	%	\end{itemize}
+%\end{itemize}
+
+
+
+
+
+%\section{Simulations}
+\chapter{Simulations}
+\note[color=org]{Do I want this in a separate chapter?  Or maybe I want it to be combined with the stuff on data selection and analysis.  Surely that chapter is getting too big even without this stuff.}
+%With the Simulations:
 \begin{itemize}
-	\item \greycomment{Lower-level data cleaning.  Discard events during parts of the duty cycle when atoms weren't polarized.  Discard events near a recorded spark time. Discard events when the photoionization laser fires.  Discard events when the LED pulser used to calibrate the scintillators fires.}
-	\item \greycomment{Split up runs into sets, to account for changing experimental conditions.  Possibly I should list what the differences between runs were somewhere.  But not in this section.  OTOH, ...maybe?}
-	%
-%	\item Make some more careful cuts to clean the data.  
-	%	\begin{itemize}
-		\item \greycomment{Discard events without a ``good'' DSSD hit.  Eliminates vast majority of background 511s.  Necessitates having a definition of what a ``good'' DSSD hit is.  It's subtle enough that we'll want to leave some part of this definition of ``good'' to be varied as a systematic effect.  Notably, we consider energy agreement for each hit pixel, individual strip SNR, and overall DSSD energy threshold.  Also, hit radius w.r.t. center of detector.  This is a lot of stuff, all implemented by Ben -- and it needs to be done fairly early on in data processing in order to keep processing times for everything else manageable.  }
-		\item Discard events where SOE-Beta TOF falls outside a certain range.  Necessitates picking a ``good'' range.  The precise definition of ``good'' is varied as a systematic.  
-		\item There was a scintillator timing walk correction before taking the SOE-Beta TOF cut.
-		\item Before the scintillator walk correction, there was the thing where the data was re-processed using the leading edge pulse rather than the trailing edge pulse.  Makes it cleaner.  Ben just got stuck with the trailing edge.
-		\item Could have implemented an eMCP hit *position* requirement, but that kills too many stats.
-	%	\end{itemize}
-\end{itemize}
-
-
-
-\vspace{24pt}
-\vspace{12pt}
-With the Simulations:
-\begin{itemize}
+	\item Multithreading.  There was multithreading, and it took a stupidly long time to get working.
 	\item Update G4 event generator to be able to model non-zero scalar and tensor coupling.  These things show up in $\Abeta$ too, not just in $\bFierz$.  Though, the effects on $\Abeta$ are much smaller.
 	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
 	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change (much?) when we adjust BSM couplings.
@@ -237,15 +301,5 @@ With the Simulations:
 	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
 	\item Then there's the lineshape thing.  My god, this wasn't nearly as useful as I thought it was going to be.  Certainly not worth the whole goddamn year that I spent on it.
 \end{itemize}
-
-
-\begin{figure}[t!h]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/SOETOF_withmodel.pdf}
-	\caption{SOE TOF, model and data.  In the end, I cut the data to use only events with a TOF between \comment{A and B.\;\;}  Max. possible background is like a factor of two too big.}	
-	\label{fig:soetof}
-\end{figure}
-
 
 
