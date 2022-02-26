@@ -162,11 +162,37 @@ Finally, because this analysis depends heavily on energy measurements from the t
 	
 
 \section{Further Cuts Using the DSSD}
+\note[color=org]{Have I even defined `DSSD' yet?}
+Although it was not possible to use the DSSD in real-time analysis or event triggering, the DSSDs may be used, after the data has been collected, to distinguish between different types of particles incident on the detector, as more energy will be deposited by heavier particles.  When a scintillator hit is triggered by a particle originating within the experimental chamber, that particle will typically have passed through the DSSD before arriving at the scintillator.
 
+In the present experiment, the two primary particles that will concern us are $\beta^+$ particles originating from the decay of $\isotope[37]{K}$, and $\gamma$ rays, which may be produced through a variety of processes, e.g. directly from the $2\%$ decay branch, through annihilation of $\beta^+$ particles upon their interaction with regular-matter electrons, or bremsstrahlung radiation from emitted $\beta$s.  
+
+We would like to look specifically at events involving $\beta^+$ particles arriving direct from a decay within the atom cloud, and the DSSD may be used to eliminate events in which the scintillator is triggered by a $\gamma$.  An incident $\beta$ will typically deposit some portion of its energy in the DSSD as it passes through, however an incident $\gamma$ will deposit significantly less energy; for this setup the energy deposited by a $\gamma$ is generally indistinguishable from background on the DSSDs.  Therefore, we require that a `good' event must include a `good' hit to the DSSD as well as a hit to the associated scintillator.   
+
+In order to proceed at this point, and because the DSSD readout records so much information, it is necessary to develop some criteria to determine whether or not we will accept any given DSSD readout as a $\beta$ hit.
+
+\note{How do I *say* that Ben was the one who did most of the DSSD calibration stuff?  I maybe don't need to describe all of it here, but I *could*, and maybe it's needed in order to understand like 4 rows in my error budget.}  
+
+
+We read out the full waveform for every strip at each event with a scintillator hit, but in post-processing take \emph{only} the `time' and `energy' from the peak waveform height and the time in the waveform at which that occurs. Each strip will have its own noise spectrum and energy calibration.  To classify an event as a good DSSD hit, we require at least one `x' strip and one `y' strip record an energy above the noise threshold.  We require that the x strip and the y strip agree (to within some number of standard deviations) in amount of energy deposited, and in the time at which that hit occurred.  In order to avoid problems resulting from the strips' non-uniform noise thresholds, we further require that the energy deposited be greater than some lower-end cutoff which is selected so as to be higher than every individual strip's noise threshold.  In this case, the DSSD's lower energy uniform threshold was set at 50 keV.  
+
+\note{I think Ben might have selected 60 keV?  That's maybe something for the appendix.}
+
+We also elect to use only events where a beta hit the DSSD within a $15.5\,$mm radius of the center of the detector, so as to avoid scattering effects from the collimator walls. \aside{Did I even mention the collimator?  Like, in the previous chapter or something..?}
+
+%Look at all the events to determine how noisy each individual strip is.  Do that for all strips.  Is the energy higher than some noise threshold?  by like a few sigma?
 
 
 \section{Further Cuts Using the eMCP}
+\note[color=org]{I described the HEX-75 somewhere in a previous chapter, right??}
 
+\begin{figure}[h!!!!t!]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/LE_TE_peaks.pdf}
+	\caption{SOE TOF peaks (eMPC - Scintillator), using the leading edge (LE) and using the trailing edge (TE).}	
+	\label{fig:LE_TE}
+\end{figure}
 
 
 \section{Bullet Points!}
@@ -178,12 +204,17 @@ With the Data:
 	\item \greycomment{Lower-level data cleaning.  Discard events during parts of the duty cycle when atoms weren't polarized.  Discard events near a recorded spark time. Discard events when the photoionization laser fires.  Discard events when the LED pulser used to calibrate the scintillators fires.}
 	\item \greycomment{Split up runs into sets, to account for changing experimental conditions.  Possibly I should list what the differences between runs were somewhere.  But not in this section.  OTOH, ...maybe?}
 	%
-	\item Make some more careful cuts to clean the data.  
-		\begin{itemize}
-		\item Discard events without a ``good'' DSSD hit.  Eliminates vast majority of background 511s.  Necessitates having a definition of what a ``good'' DSSD hit is.  It's subtle enough that we'll want to leave some part of this definition of ``good'' to be varied as a systematic effect.  Notably, we consider energy agreement for each hit pixel, individual strip SNR, and overall DSSD energy threshold.  Also, hit radius w.r.t. center of detector.  This is a lot of stuff, all implemented by Ben -- and it needs to be done fairly early on in data processing in order to keep processing times for everything else manageable.  
-		\item Discard events where SOE-Beta TOF falls outside a certain range.  Necessitates picking a ``good'' range.  The precise definition of ``good'' is varied as a systematic.
-		\end{itemize}
+%	\item Make some more careful cuts to clean the data.  
+	%	\begin{itemize}
+		\item \greycomment{Discard events without a ``good'' DSSD hit.  Eliminates vast majority of background 511s.  Necessitates having a definition of what a ``good'' DSSD hit is.  It's subtle enough that we'll want to leave some part of this definition of ``good'' to be varied as a systematic effect.  Notably, we consider energy agreement for each hit pixel, individual strip SNR, and overall DSSD energy threshold.  Also, hit radius w.r.t. center of detector.  This is a lot of stuff, all implemented by Ben -- and it needs to be done fairly early on in data processing in order to keep processing times for everything else manageable.  }
+		\item Discard events where SOE-Beta TOF falls outside a certain range.  Necessitates picking a ``good'' range.  The precise definition of ``good'' is varied as a systematic.  
+		\item There was a scintillator timing walk correction before taking the SOE-Beta TOF cut.
+		\item Before the scintillator walk correction, there was the thing where the data was re-processed using the leading edge pulse rather than the trailing edge pulse.  Makes it cleaner.  Ben just got stuck with the trailing edge.
+		\item Could have implemented an eMCP hit *position* requirement, but that kills too many stats.
+	%	\end{itemize}
 \end{itemize}
+
+
 
 \vspace{24pt}
 \vspace{12pt}
