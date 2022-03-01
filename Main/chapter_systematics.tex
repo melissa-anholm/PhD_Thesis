@@ -99,7 +99,10 @@ how many ``bad" events are eliminated with the TOF cut, as well as the fraction 
 
 \section{Quantifying the Effects Backscatter with Geant4}
 	Beta decay (back-)scatter from surfaces within the experimental chamber is a significant systematic, and it must be evaluated, quantified, and corrected for.  This is done via a series of GEANT4 simulations.  While only a small fraction of events are affected, the process results in an energy loss in the beta that can, if not understood, be misinterpreted as the exact signal we're searching for.  It is therefore imperative that this be well understood. 
-	\aside{Oh god.  Have I even \emph{tried} to quantify the combined systematic that comes out of the TOF cut?  Do I need to, or is it double-counting?  Ugh, it would be such a headache to do this.  Maybe I can at least do it at the end -- because I might never get my code back to the way it was.}
+	
+%	\aside{Oh god.  Have I even \emph{tried} to quantify the combined systematic that comes out of the TOF cut?  Do I need to, or is it double-counting?  Ugh, it would be such a headache to do this.  Maybe I can at least do it at the end -- because I might never get my code back to the way it was.}
+
+\note[color=jb]{JB says: I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
 
 
 %	\missingfigure{Show simulated $\cos\theta$ vs TOF.  You can just make a lot of that go away with a properly selected cut.}
@@ -110,11 +113,11 @@ how many ``bad" events are eliminated with the TOF cut, as well as the fraction 
 	\caption[Simulated Beta TOA vs emission angle w.r.t. detector orientation]{Simulated Beta TOA vs emission angle w.r.t. detector orientation}	
 	\label{fig:toa_vs_costheta}
 \end{figure}
-\note[color=jb]{JB says:  
-Please discuss this at the next meeting.  (ETA:  Done!)
-\\
-Indeed this is why you should avoid calling the events originating not from the trap 'scattered events.' More importantly, why it was so critical that you reduced the size of the correction by timing bad events out. I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
 
+%\note[color=jb]{JB says:  
+%Please discuss this at the next meeting.  (ETA:  Done!)
+%\\
+%Indeed this is why you should avoid calling the events originating not from the trap 'scattered events.' More importantly, why it was so critical that you reduced the size of the correction by timing bad events out. I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
 
 %%%% --- * --- %%%%
 \section{Lineshape Reconstruction}
@@ -162,16 +165,12 @@ the lineshape tail in any scintillator also includes backscattered events -- we 
 	
 	\subsection{The low-energy tail uncertainty, and what it does}
 	Bremsstrahlung.  It does Bremsstrahlung.
-	\note[color=jb]{JB:  ``I will write this up better soon."  (I think he already did that)}
-\note[color=jb]{ Here is Subsection 9.5.5 "The low-energy tail uncerainty, and what it does''
-complete.
-There should be no figure.
-You cite the Clifford paper now in other sections-- please check if my \cite{} is right.
-(I cc: everyone as my summary of the situation that I showed Dec 1, 2021 at trinat.triumf.ca)
-}
-\note[color=jb]{
-*************************************
+%	\note[color=jb]{JB:  ``I will write this up better soon."  (I think he already did that)}
+\note[color=jb]{ Here is Subsection 9.5.5 ``The low-energy tail uncerainty, and what it does'' complete.  There should be no figure.
 \\
+Direct quote from John follows in the next two paragraphs.  Maybe I should paraphrase, but it's so nicely written! }
+
+\comment{
 This subsection has the collaboration's evaluation of the uncertainty from
 the scintillator detector's lineshape tail.
 The energy from a monoenergetic beta is not always fully absorbed
@@ -184,14 +183,12 @@ MC implementation.
 This lineshape tail will then effectively move events from higher to lower measured
 energy, artificially altering the lower-energy asymmetries and mimicking the effects of a
 Fierz term.
-\\
-...
-\\
+
 Since this detector effect is difficult to disentangle from the other scattering
 effects off volumes,
 the collaboration adds a linear function down to zero for the tail to
 a Gaussian for the peak,
-with linewidth varying by photon statistics~\cite{Clifford1984?}.
+with linewidth varying by photon statistics~\cite{clifford}.
 The convolution of this simple detector response function with v/c then scales the
 centroid MC, with the lineshape tail varied by $\pm$10\% of its value,
 a generic uncertainty accepted by the community for MC electromagnetic simulations.
@@ -199,9 +196,9 @@ The fit $b_{\rm Fierz}$ centroid changes by $\pm$ 0.0076, summarized
 as the 0.008 ``Low Energy Tail'' in the systematics table at the start of this chapter.
 Compared to other uncertainties of the present data set,
 this is small enough that the accuracy of this estimate is adequate.
-\\
-******************
 }
+
+%\note[color=jb]{End direct quote paragraphs from John.}
 
 %\section{Summary of Data Collected}
 %\missingfigure{TBH, the thing that's missing is a table, not a figure.  Needs a table full of systematic errors.  And maybe statistical errors?  wev.}

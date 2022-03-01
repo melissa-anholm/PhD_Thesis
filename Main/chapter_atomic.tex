@@ -107,23 +107,32 @@ and $\gamma$ describes the linewidth of the atomic transition and equivalently i
 s_0 &:=& \frac{I}{ I_{\mathrm{sat}} }.
 \eea
 
-In practice, for the project that is the topic of this thesis, most lasers operate in the high intensity regime -- the obvious exception being the photoionization laser (see Section whatever)\aside[color=org]{Where have I even decided to put the photoionization section, anyway?}  However, one can still gain a qualitative understanding of many aspects of atom-laser interaction while neglecting saturation concerns.  \aside{Clunky phrasing.} \aside[color=todoblue]{Do I need saturation to make an optical molasses?  I bet I do.}  
-\note{But yeah, it seems like I have to mention that saturation intensity is a thing that exists, before I proceed to neglect it forever.}
-
-\note[color=jb]{JB says:  "In practice, for the project that is the topic of this thesis,
-most lasers operate in the high intensity regime –
-the obvious exception being the photoionization laser (see Section whatever)
-However, one can still gain ..."
-\\
-change to ->
-\\
-"In practice, for the project that is the topic of this thesis,
-the MOT laser operates at about 1/2 of saturation intensity,
-while the optical pumping
+In practice, for the project that is the topic of this thesis, the MOT laser operates at about 1/2 of saturation intensity, while the optical pumping
 and photoionization lasers operate at considerably lower than saturation
-intensity.
-However, one can gain ..."}
+intensity. However, one can gain
+%most lasers operate in the high intensity regime -- the obvious exception being the photoionization laser (see Section whatever)
+%\aside[color=org]{Where have I even decided to put the photoionization section, anyway?}  
+%However, one can still gain 
+a qualitative understanding of many aspects of atom-laser interaction while neglecting saturation concerns.  
+\note[color=done]{Fixed description of which lasers are saturated.}
+%\aside{Clunky phrasing.} 
+%\aside[color=todoblue]{Do I need saturation to make an optical molasses?  I bet I do.}  
+\note{Do I need to mention saturation at all?  It's probably not really necessary, and I don't *think* anything else in this section is wrong per se.  But maybe better to just cut it.}
 
+%\note[color=jb]{JB says:  "In practice, for the project that is the topic of this thesis,
+%most lasers operate in the high intensity regime –
+%the obvious exception being the photoionization laser (see Section whatever)
+%However, one can still gain ..."
+%\\
+%change to ->
+%\\
+%"In practice, for the project that is the topic of this thesis,
+%the MOT laser operates at about 1/2 of saturation intensity,
+%while the optical pumping
+%and photoionization lasers operate at considerably lower than saturation
+%intensity.
+%However, one can gain ..."}
+%
 % % % 
 
 \subsection{Doppler Cooling}
@@ -151,25 +160,26 @@ The overall effect on a one-dimensional cloud of atoms in the path of two counte
 %
 %Anyway, when you have two counter-propagating red-detuned lasers, the net effect will be to slow the atom's motion down a bunch.  It's called an optical molasses, because the photons are sticky or whatever.  By itself, it does not confine atoms, it only slows them down.
 
-%%% % % % %%%
-\subsection{Angular Momentum and Selection Rules}
-\note[color=jb]{JB:  3.1.4 Angular Momentum and Selection Rules (that's this section!):
-\\
-Sorry, this section is almost entirely wrong, and you don't need it.
-Omit it please.}
-
-\note[color=jb]{JB:  Agreed it's ok to ignore the repumper laser.}
-
-As in any other interaction, when a photon and an atom interact with one another, angular momentum must be conserved.
-%In any interaction, angular momentum must be conserved, and the interactions between atoms and photons are no exception.  
-An individual photon has spin 1, and therefore when we consider an atom-photon interaction where the photon is absorbed, the atom's total angular momentum projection \comment{(I think on any axis???)} must also change by one unit.
-\note{Fuck.  What even *are* the other rules?  Have to change F too?  I think that's true.. Clearly I have to look this up.}
-On a macroscopic level, the polarization of a laser can be used as a stand-in to describe, in a probabilistic way, the spin orientation of the individual photons of which the beam consists.  
-
-\note{I mean.  I probably don't need to go too in-depth here.  But I haven't mentioned it at all yet, and it's a relevant thing.}
-Polarization matters.  You have to conserve angular momentum.  In fact, you have to conserve both total angular momentum *and* its projection on whatever axis.  Photons have spin-1, but because they literally go at the speed of light, they can't do $0 \rightarrow 0$ transitions.  
-
-This is related to why you need repumpers for your MOT, but also, I don't really want to get into that.  But also-also, why even *would* you?  You don't in the description I've already given.  Pretty sure it's because you can sometimes de-excite to a *stupid* set of energy levels.  And then, I don't think they really fall back down or something?  I've largely forgotten how it works.  Ugh.
+%%%% % % % %%%
+%\subsection{Angular Momentum and Selection Rules}
+%\note[color=jb]{JB:  3.1.4 Angular Momentum and Selection Rules (that's this section!):
+%\\
+%Sorry, this section is almost entirely wrong, and you don't need it.
+%Omit it please.}
+%
+%\note[color=jb]{JB:  Agreed it's ok to ignore the repumper laser.}
+%
+%As in any other interaction, when a photon and an atom interact with one another, angular momentum must be conserved.
+%%In any interaction, angular momentum must be conserved, and the interactions between atoms and photons are no exception.  
+%An individual photon has spin 1, and therefore when we consider an atom-photon interaction where the photon is absorbed, the atom's total angular momentum projection \comment{(I think on any axis???)} must also change by one unit.
+%\note{Fuck.  What even *are* the other rules?  Have to change F too?  I think that's true.. Clearly I have to look this up.}
+%On a macroscopic level, the polarization of a laser can be used as a stand-in to describe, in a probabilistic way, the spin orientation of the individual photons of which the beam consists.  
+%
+%\note{I mean.  I probably don't need to go too in-depth here.  But I haven't mentioned it at all yet, and it's a relevant thing.}
+%Polarization matters.  You have to conserve angular momentum.  In fact, you have to conserve both total angular momentum *and* its projection on whatever axis.  Photons have spin-1, but because they literally go at the speed of light, they can't do $0 \rightarrow 0$ transitions.  
+%
+%This is related to why you need repumpers for your MOT, but also, I don't really want to get into that.  But also-also, why even *would* you?  You don't in the description I've already given.  Pretty sure it's because you can sometimes de-excite to a *stupid* set of energy levels.  And then, I don't think they really fall back down or something?  I've largely forgotten how it works.  Ugh.
+\note[color=done]{Removed `Angular Momentum and Selection Rules' section.  Because it was super wrong.}
 
 %%% % % % %%%
 \section{Optical Pumping}
@@ -178,8 +188,8 @@ This is related to why you need repumpers for your MOT, but also, I don't really
 \\
 You cover what is needed for optical pumping well in "4.2 the AC MOT and Poalrization setup"
 Just say here indeed
-"The optical pumping process is describe in detail in our collaborations's
-Ref.~\cite{Ben_OP}. The main detail described here is that the
+"The optical pumping process is describe in detail in our collaboration's
+Ref.~\cite{ben_OP}. The main detail described here is that the
 optical pumping is distrubed by any component of magnetic field not along
 the quantization axis. (Ours is the vertical axis, defined by the direction
 of the optical pumping light, and along which the detectors are placed.)
@@ -269,40 +279,41 @@ Sadly, this also removes our trapping mechanism.  We could keep the optical mola
 Anyway, the idea of the AC-MOT is to run a sinusoidal current through your anti-Helmholtz coils.  You'll get eddy currents in your nearby metal *stuff* when you have a changing current, and those will *also* make a magnetic field. So, the idea with an AC-MOT is that with a sinusoid, you have clear control over what the eddy currents are actually doing, and you can just shut the current off when the eddy currents are zero (current in the anti-Helmholtz coils will be close to zero at this time too, depending on frequency of the sinusoid...), so you can reduce the size of the eddy currents by like an order of magnitude.  Eddy currents in general take a while to die away, so it's good to make them as small as possible.  ...Also, eddy currents making a magnetic field will screw up your optical pumping, because .... um, reasons?  I think it's not just the detuning, it's also something about the Larmor precession.  
 
 
-\section{Photoionization as a Probe}
-\label{sec:photoprobe}
-\note[color=jb]{JB on 3.5 `Photoionization as a probe' (that's this section!):
-\\
-You describe this well in 4.4 "Photoionization laser"
-\\
-So I recommend strongly you cut  the whole 3.5 section,
-because it's incomplete, and what you
-have contains errors.
-\\ ... \\
-Here are things there are not time to understand:
-\\ ... \\
-about 1/3 of the MOT atoms are excited, not 'a large fraction'
-\\ ... \\
-yes, we've intentionally polarized the OP laser to be circular so the
-atoms will be polarized. We've also picked the S 1/2 to P1/2 so that the
-fully stretched S1/2 $F=2$ $m_F=2$ state is dark. (Unlike the MOT, where we
-need the P3/2 state so that atoms never go dark,  or the force would stop.)
-But we agreed above not to talk about this.
-\\ ... \\
-"We have a photodiode(?) to observe what fraction of things get photoionized overall."
-\\ ... \\
-no, we look at the photoionization rate, for which we have the ion vs. photodiode TOF (`photodiode' looks at when the bursts of light occur)
-}
-
-So, the photoionization laser.  It ionizes only $\approx 1\%$ of the atoms, so it's mostly non-destructive.  
-
-For atoms in a MOT, it can give a projection of the trap position.  At least, it can if you add some MCPs with delay lines, and an electric field.  Also, the atoms have to be excited or they don't get photoionized this way.  That's because at any given time, a large fraction of the trapped atoms are in the excited state, so it works.
-
-For polarized or partially polarized atoms, absorption stops, because of selection rules.  We've intentionally polarized the laser to do this.  I think.  \aside[color=todoblue]{*Have* we even polarized the photoionization laser in any particular way?  I'm not sure we even have.  Why doesn't it absorb?  When it's stretched, it's not just all in the excited state!  It's...stretched.  Do angular momentum selection rules even apply if the electron is going into the continuum?}
-
-\note{Include a picture of the trap.  Possibly on both the rMCP and the eMCP.  Also, maybe a thing for the polarization as a function of time?  But I don't really need to do that, because it's in the paper.}
-
-Anyway, the probing only works if you have a detector to see what things.  We have a photodiode(?) to observe what fraction of things get photoionized overall.  This gives us polarization.  We also have an MCP with delay lines, and an electric field to guide (positive) ions into it.  And another MCP with delay lines on the other side of the electric field, to collect the electrons removed by photoionization.  Also, the (orbital) electrons removed during beta decay.  The photoionization laser is pulsed.  So, when there's a pulse, we can check whether there was a hit detected in the ion detector and/or the electron detector.  It turns out, we can't check both at the same time, because our two detectors hate each other.  They're natural enemies, really.  Turns out, the ion detector is better at measuring the polarization, and the trap position.  Because reasons.  \aside[color=org]{But it's worse for $\Abeta$ and $\bFierz$, because .... reasons that probably shouldn't go in this chapter.}  Anyway, during the 2014 run, we spent like half of the beamtime collecting ions and half collecting electrons.  \aside[color=org]{This also doesn't go in this section.}
+\note[color=done]{Removed `Photoionization as a Probe' section from the `Intro to Atomic Physics' section, because John says it's horribly wrong anyhow.  Plus, it's redundant with the `Photoionization Laser' section.}
+%\section{Photoionization as a Probe}
+%\label{sec:photoprobe}
+%\note[color=jb]{JB on 3.5 `Photoionization as a probe' (that's this section!):
+%\\
+%You describe this well in 4.4 "Photoionization laser"
+%\\
+%So I recommend strongly you cut  the whole 3.5 section,
+%because it's incomplete, and what you
+%have contains errors.
+%\\ ... \\
+%Here are things there are not time to understand:
+%\\ ... \\
+%about 1/3 of the MOT atoms are excited, not 'a large fraction'
+%\\ ... \\
+%yes, we've intentionally polarized the OP laser to be circular so the
+%atoms will be polarized. We've also picked the S 1/2 to P1/2 so that the
+%fully stretched S1/2 $F=2$ $m_F=2$ state is dark. (Unlike the MOT, where we
+%need the P3/2 state so that atoms never go dark,  or the force would stop.)
+%But we agreed above not to talk about this.
+%\\ ... \\
+%"We have a photodiode(?) to observe what fraction of things get photoionized overall."
+%\\ ... \\
+%no, we look at the photoionization rate, for which we have the ion vs. photodiode TOF (`photodiode' looks at when the bursts of light occur)
+%}
+%
+%So, the photoionization laser.  It ionizes only $\approx 1\%$ of the atoms, so it's mostly non-destructive.  
+%
+%For atoms in a MOT, it can give a projection of the trap position.  At least, it can if you add some MCPs with delay lines, and an electric field.  Also, the atoms have to be excited or they don't get photoionized this way.  That's because at any given time, a large fraction of the trapped atoms are in the excited state, so it works.
+%
+%For polarized or partially polarized atoms, absorption stops, because of selection rules.  We've intentionally polarized the laser to do this.  I think.  \aside[color=todoblue]{*Have* we even polarized the photoionization laser in any particular way?  I'm not sure we even have.  Why doesn't it absorb?  When it's stretched, it's not just all in the excited state!  It's...stretched.  Do angular momentum selection rules even apply if the electron is going into the continuum?}
+%
+%\note{Include a picture of the trap.  Possibly on both the rMCP and the eMCP.  Also, maybe a thing for the polarization as a function of time?  But I don't really need to do that, because it's in the paper.}
+%
+%Anyway, the probing only works if you have a detector to see what things.  We have a photodiode(?) to observe what fraction of things get photoionized overall.  This gives us polarization.  We also have an MCP with delay lines, and an electric field to guide (positive) ions into it.  And another MCP with delay lines on the other side of the electric field, to collect the electrons removed by photoionization.  Also, the (orbital) electrons removed during beta decay.  The photoionization laser is pulsed.  So, when there's a pulse, we can check whether there was a hit detected in the ion detector and/or the electron detector.  It turns out, we can't check both at the same time, because our two detectors hate each other.  They're natural enemies, really.  Turns out, the ion detector is better at measuring the polarization, and the trap position.  Because reasons.  \aside[color=org]{But it's worse for $\Abeta$ and $\bFierz$, because .... reasons that probably shouldn't go in this chapter.}  Anyway, during the 2014 run, we spent like half of the beamtime collecting ions and half collecting electrons.  \aside[color=org]{This also doesn't go in this section.}
 
 
 

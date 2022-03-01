@@ -91,7 +91,7 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 	I can describe the eMCP calibration here, even though it mostly wasn't implemented by me.  It is tangentially relevant to data selection and background estimation by providing an experimental energy spectrum for shake-off electrons.  It's actually a pretty neat algorithm that I basically wasn't involved with.
 	\note[color=jb]{JB:  eMCP.  You need to describe the timing information obtained.  You also need a statement of whether or not you used the position information in your cuts.}
 
-\missingfigure{Needs an SOE timing spectrum.  At least one of them.  Experimental and simulated.  Also, I have to describe how I did the simulating, and how I check that it's OK despite the fact that the simulated spectrum looks nothing like the experimental spectrum.}
+%\missingfigure{Needs an SOE timing spectrum.  At least one of them.  Experimental and simulated.  Also, I have to describe how I did the simulating, and how I check that it's OK despite the fact that the simulated spectrum looks nothing like the experimental spectrum.}
 
 
 \section{The rMCP}
@@ -130,9 +130,12 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 \note[color=org]{Do I actually want to combine this with Chapter~\ref{calibrations_chapter}?}
 \note[color=org]{from JB:  you ask at the start if you should combine it (Ch.7, `Analysis') with Ch.6 (`Calibrations'. I see no special reason either way.  I would say the topics seem distinct.}
 
-\note[color=jb]{JB:  Here is what I suggest for the intro the Analysis section:  (n.b.:  at the time of this comment, that was Ch.7)
-\\...\\
-7.0
+\note[color=jb]{John proposes an intro statement for this chapter.  The following two paragraphs are a direct quote from him:}
+
+%\note[color=jb]{JB:  Here is what I suggest for the intro the Analysis section:  (n.b.:  at the time of this comment, that was Ch.7)
+%\\...\\
+%7.0
+\comment{
 Analysis is critical to a precision measurement, as most of the research is in
 determining systematic uncertainties by self-consistent analysis and simulations.
 Each detector in this experiment is critical and has independent calibrations and cuts.
@@ -146,7 +149,8 @@ eMCP
 rMCP
 beta DSSD
 scintillator.
-\\...\\
+%\\...\\
+
 The collaboration has done an independent analysis fixing bFierz to zero.
 Differences with that analysis are interleaved in this section.
 Critical physics improvements concern
@@ -154,9 +158,10 @@ an emcp-beta timing walk correction which enabled an improved cut against backgr
 a more complete modelling of decay backgrounds from untrapped atoms.
 Technical corrections include a correct treatment of the polarization cycle.
 An arbitrary change in the deltaE radius cut is kept self-consistent.
-\\...\\
-Then Section 7.1...
 }
+%\\...\\
+%Then Section 7.1...
+%}
 
 %\section{Data Selection and Pre-Processing}
 %\section{Run Parameters and Preliminary Cuts}
@@ -167,7 +172,7 @@ in practice the two detectors produced quite a bit of feedback when operated at 
 While the beta asymmetry and Fierz interference are best evaluated using the electron runs, the recoil runs are best for evaluating the polarization (a dominant uncertainty in the beta asymmetry measurement) and the cloud position.  The polarization measurement is the subject of a recent publication (see~\cite{ben_OP}), and the cloud position evaluation is discussed in more detail in Chapter~\ref{calibrations_chapter}.
 
 The data is further split up into four runsets:  A, B, C, and D based on when certain detection settings were adjusted, and each of these runsets contains both electron and recoil runs.  These four runsets were then treated separately for nearly all parts of the analysis.  In particular, Data Set A was neglected completely during analysis after it was determined that one scintillator had an improperly set hardware threshold such that lower energy betas weren't being detected at all.  Additionally, there was a QDC module failure between Runsets B and C, resulting in an abrupt change in calibration for the two scintillators.  
-\note{Also, the background was too noisy in Set A I think.  Also, pretty sure there isn't really that much data in Set A at all.  Also-also, Set A has E=66.7, so can't use it for more stats on the other backgrounds. } 
+\note{Also, the background was too noisy in Set A I think.  Also, pretty sure there isn't really that much data in Set A at all.  Also-also, Set A has E=66.7, so can't use it for more stats on the other backgrounds. ... Maybe I should just look up what the deal even was with Set A, since I don't really remember.} 
 
 %\note{What did I change between Runsets B and C?  Between Runsets C and D?  ...OP time, yes, but also and one point a PMT(?) (eta:  it was a QDC) blew out and we replaced it, so then the scintillator calibration was a bit different afterward.  Anyway, I should maybe just make a goddamn table.  Table goes here.}
 
@@ -195,7 +200,12 @@ Finally, because this analysis depends heavily on energy measurements from the t
 \note[color=jb]{JB says: To repeat a comment, since the Appendix on analysis changes is being dispersed throughout, when you state somewhere (I think it's in Ch. 6) make sure you state clearly that the only change for BB1 cuts
 is the radius cut, e.g. that you took the same T and E from the waveforms (I'm not even sure whether the
 waveforms are recorded anyway). You  ask 'how can I state this' but there's no reason to be subtle.
-Just say upfront that Ben and Spencer's theses did all the groundwork on the BB1, and here you include selected details needed to understand the present analysis. If you need to include some redundant material, don't worry too much about that.}
+Just say upfront that Ben and Spencer's theses did all the groundwork on the BB1, and here you include selected details needed to understand the present analysis. If you need to include some redundant material, don't worry too much about that.
+\\ ... \\ 
+MJA:  In fact, I think the BB1 radius may have been the same.  The uniform energy threshold was different though.  But I get the point.
+\\ ... \\ 
+Also, yes, the waveforms are absolutely recorded in the MIDAS files but they haven't been saved to modern ntuples, because they made the files huge.  I think it's probably pretty easy to switch that on/off in the Analyzer though to generate a set of ntuples that has that info included.
+}
 
 Although it was not possible to use the DSSD in real-time analysis or event triggering, the DSSDs may be used, after the data has been collected, to distinguish between different types of particles incident on the detector, as more energy will be deposited by heavier particles.  When a scintillator hit is triggered by a particle originating within the experimental chamber, that particle will typically have passed through the DSSD before arriving at the scintillator.
 
