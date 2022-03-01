@@ -5,11 +5,21 @@
 \clearpage
 \chapter{The Experimental Setup}
 \label{setup_chapter}
+\note[color=jb]{JB:  First, I'm pretty sure you should combine Chs. 3 and 4.
+Ch 4 has good solid general description and details in situ about optical
+pumping and about the photoionization probe that are,
+unfortunately, wrong in Ch. 3.
+You could call the first half of such a chapter
+"General considerations of Atomic techniques used"
+and the 2nd half "Experimental Implementation of Atomic Techniques used"}
+
+
 \note{Remember the pulser LED!  To evaluate the stability of the scintillator gain!}
 
 %\color{oldcolor}
 \section{Overview of the Double MOT System and Duty Cycle}
 \label{section:overview}
+\note[color=jb]{JB says:  chapter 4.1 (this section) is really good, and in good shape for the committee}
 
 \note{
 We obtain a sample of neutral, cold, nuclear spin-polarized $^{37}\textrm{K}$ atoms with a known spatial position, via the TRIUMF accelerator facility, by intermittently running a magneto-optical trap (MOT) to confine and cool the atoms, then cycling the trap off to polarize the atoms.  With $\beta$ detectors placed opposite each other along the axis of polarization, we are able to directly observe the momenta of $\beta^+$ particles emitted into 1.4\% of the total solid angle nearest this axis.  We also are able to extract a great deal of information about the momentum of the recoiling $^{37\!}$Ar daughters by measuring their times of flight and hit positions on a microchannel plate detector with a delay line.  Because the nuclear polarization is known to within $<0.1\%$~\cite{ben_OP}, and we are able to account for many systematic effects by periodically reversing the polarization and by collecting unpolarized decay data while the atoms are trapped within the MOT, we expect to be well equipped to implement a test of `handedness' within the nuclear weak force.
@@ -72,6 +82,19 @@ Immediately following each set of 100 optical pumping cycles, another set of ato
 %%%% --- * --- %%%%	
 \section{The AC-MOT and Polarization Setup}
 \label{section:acmot_and_polarization}
+\note[color=jb]{JB on Chapter 4.2 "The AC-MOT and Polarization Setup" (that's this section!):
+\\...\\
+"We use only the polarized portion of the duty cycle in
+order to minimize other systematic errors, such as the scintillator energy calibration
+and overall trap position."
+\\ ... \\
+We need to fix this. We use the polarized portion of the cycle because the
+atoms are almost totally polarized during it, and almost totally unpolarized
+outside of it. You leave the impression we could measure bFierz during the
+rest of the cycle, during unpolarized time ? 
+\\ ... \\
+MJA:  Ugh, no, that's really not what I meant.  Oh well, time to rephrase.}
+
 %\\*
 
 \note{Probably document things about the waveform and frequency used for the beamtime, since I don't think it's in my MSc.}
@@ -144,6 +167,7 @@ In order to optimally polarize a sample of atoms by this method, it is necessary
 \section{Measurement Geometry and Detectors}
 \label{section:betadetectors}
 \label{section:mcps}
+\note[color=jb]{JB says of Chapter 4.3 (this section:  first few paragraphs are poorly phrased. You have to fix those.  Most of the rest looks really good.  }
 \note{This section is really disorganized.}
 \note{Possibly needs more diagrams?  Possibly just needs more words.}
 
@@ -204,6 +228,9 @@ Scientific data has been collected at field strengths of 66.7 V/cm, 150 V/cm, 39
 \label{cloud}
 \label{photoions}
 \note[color=org]{Some of this stuff is in Ch.3 (see Section~\ref{sec:photoprobe}) and/or Ch.6 (see Section~\ref{sec:cloud_calibration}).  Some of it *should* be.}
+\note[color=jb]{Chapter 4.4 (this section!) is very good and complete, showing you understand what is
+needed about photoionization. A good reason to omit 3.5 'photoionization as a aprobe' as I said above.}
+
 In order to measure properties of the trapped $^{37}\textrm{K}$ cloud, a 10\,kHz pulsed laser at 355\,nm is directed towards the cloud.  These photons have sufficient energy to photoionize neutral $^{37}\textrm{K}$ from its excited atomic state, which is populated by the trapping laser when the MOT is active, releasing 0.77\,eV of kinetic energy, but do not interact with ground state $^{37}\textrm{K}$ atoms.  The laser is of sufficiently low intensity that only $\sim 1\%$ of excited state atoms are photoionized, so the technique is only very minimally destructive.
 %The laser is of sufficiently low intensity that the great majority\aside[color=jb]{JB:  ``On order 1\% are photoionized."} of excited state atoms are \emph{not} photoionized, so the technique is only very minimally destructive.  
 \note{Probably worth mentioning that we test this stuff offline on stable \isotope[41]{K}. }

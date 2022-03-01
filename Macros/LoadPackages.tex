@@ -2,7 +2,9 @@
 
 % Misc. Formatting
 \usepackage[english]{babel}
+\usepackage[T1]{fontenc}    % for zero width space, like in John's emails.
 \usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{200B}{{\hskip 0pt}}  % for zero width space, like in John's emails.
 \usepackage{setspace}
 \onehalfspacing
 %\reversemarginpar

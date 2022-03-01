@@ -6,8 +6,49 @@
 \clearpage	
 \chapter{Estimating Systematic Effects}
 \label{systematics_chapter}
+
+\note[color=jb]{JB:  ``I doubt I will have further useful comments on the Ch. 5, 8, 9 as they are now.
+\\
+I've tried to email you the paragraphs on "collaboration determination of uncertainties" for Ch. 9.
+\\
+My intent of all that other advice  was to keep your time spent on Chs 1-4 concise, so you could concentrate on these real jobs.  (n.b.:  the advice he's already sent was almost all about chapters 1-4, which are the various intros/background info and experimental setup stuff)
+\\ ... \\
+I can only say that if you have an equal choice between including a detail or not, pick "not." ''
+}
+
+\note[color=jb]{JB:  I will try to schedule meeting with Dan for you to show us the final version of Ch. 9 Estimating systematic effects soon.}
+
 \note[color=org]{Do I want this chapter combined with the analysis chapter?  If that chapter includes all the stuff about G4, it's going to be unwieldy and huge.}
 %\note{How do I even \emph{do} these estimations?}
+
+\note[color=todoblue]{JB says:   
+\\
+A simple estimate from the collaboration that builds intuition for this result:
+Scatter in the SiC mirrors and DSSD actually produces an efficiency change at low
+beta energy. Energy loss is not minimally ionizing in these structures, and instead
+will have a long Landau tail that can take events below energy threshold in the scintillator.
+The collaboration has modelled explicitly the false asymmetry as a function
+of Kbeta between 600 and 1300 keV, producing roughly (K-0.6 MeV)/(0.7 MeV), i.e.
+50\% at Kbeta=0.95 MeV. This efficiency degradation would be distributed roughly equally
+between the SiC and DSSD.
+If completely ignored, this would introduce by inspection a false bFierz of approximately
+0.5.
+Scattering effects will vary between linear and sqrt of thickness, so assuming
+worst case of linear, the mechanical thickness uncertainty
+of 5 micron/300 micron and 6 micron /275 micron, an average of 2\%, making
+a random contribution of order 0.01 each.
+The Be window has larger mechanical thickness uncertainty of 23micron/229 micron, but
+energy loss and scattering in this material is 5x smaller, so the net effect would be similar.
+\\ ... \\
+To minimize this systematic for future experiments, the collaboration has
+implemented pellicle mirrors of negligible thickness, 100 nm Au on 4 micron
+kapton. The collaboration is also implementing Be-windowed wire chambers in
+place of the DSSD.
+\\
+...
+\\
+MJA:  .....huh?
+}
 
 \section{Overview}	
 A summary of systematics goes here.  In words, yes, but also in table form.
@@ -122,7 +163,45 @@ the lineshape tail in any scintillator also includes backscattered events -- we 
 	\subsection{The low-energy tail uncertainty, and what it does}
 	Bremsstrahlung.  It does Bremsstrahlung.
 	\note[color=jb]{JB:  ``I will write this up better soon."  (I think he already did that)}
-
+\note[color=jb]{ Here is Subsection 9.5.5 "The low-energy tail uncerainty, and what it does''
+complete.
+There should be no figure.
+You cite the Clifford paper now in other sections-- please check if my \cite{} is right.
+(I cc: everyone as my summary of the situation that I showed Dec 1, 2021 at trinat.triumf.ca)
+}
+\note[color=jb]{
+*************************************
+\\
+This subsection has the collaboration's evaluation of the uncertainty from
+the scintillator detector's lineshape tail.
+The energy from a monoenergetic beta is not always fully absorbed
+in a plastic scintillator.
+Although most backscattered betas are vetoed by the DSSD,
+some produce bremsstrahlung photons,
+and these frequently escape low-Z plastic scintillator-- all cross-sections
+are known to high accuracy, but there is always uncertainty entailed in  the
+MC implementation.
+This lineshape tail will then effectively move events from higher to lower measured
+energy, artificially altering the lower-energy asymmetries and mimicking the effects of a
+Fierz term.
+\\
+...
+\\
+Since this detector effect is difficult to disentangle from the other scattering
+effects off volumes,
+the collaboration adds a linear function down to zero for the tail to
+a Gaussian for the peak,
+with linewidth varying by photon statistics~\cite{Clifford1984?}.
+The convolution of this simple detector response function with v/c then scales the
+centroid MC, with the lineshape tail varied by $\pm$10\% of its value,
+a generic uncertainty accepted by the community for MC electromagnetic simulations.
+The fit $b_{\rm Fierz}$ centroid changes by $\pm$ 0.0076, summarized
+as the 0.008 ``Low Energy Tail'' in the systematics table at the start of this chapter.
+Compared to other uncertainties of the present data set,
+this is small enough that the accuracy of this estimate is adequate.
+\\
+******************
+}
 
 %\section{Summary of Data Collected}
 %\missingfigure{TBH, the thing that's missing is a table, not a figure.  Needs a table full of systematic errors.  And maybe statistical errors?  wev.}

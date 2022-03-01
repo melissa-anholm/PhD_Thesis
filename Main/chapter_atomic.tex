@@ -6,6 +6,16 @@
 \clearpage
 \chapter{Atomic Physics Overview}
 \label{atomicphysics_chapter}
+
+\note[color=jb]{First, I'm pretty sure you should combine Chs. 3 and 4.
+Ch 4 has good solid general description and details in situ about optical
+pumping and about the photoionization probe that are,
+unfortunately, wrong in Ch. 3.
+You could call the first half of such a chapter
+"General considerations of Atomic techniques used"
+and the 2nd half "Experimental Implementation of Atomic Techniques used"}
+\note[color=todoblue]{wtf could I possibly have gotten wrong in my Ch.3 description?  It's so vague!}
+
 \section{Magneto-Optical Traps}
 \note[color=org]{I need to organize the sections/subsections in this chapter better...}
 Since its initial description by Raab et. al. in 1987~\cite{raabprentiss}, the magneto-optical trap (MOT) has become a widely used technique in many atomic physics laboratories.  The MOT produces confined samples of cold, electrically neutral and isotopically pure atoms confined within a small spatial region.  It is these properties that make the MOT a valuable tool not only in atomic physics, but for precision measurements in nuclear physics as well, and the TRINAT lab \aside[color=org]{Have I defined TRINAT yet?} has adopted the technique wholeheartedly.
@@ -62,6 +72,14 @@ They still get the optical molasses cooling effect for free.}
 
 
 \subsection{Atom-Photon Interactions within a Laser}
+\note[color=jb]{JB says:  Chapter 3 (that's this chapter):
+Starting in Ch. 3 around p. 10, "Atom-Photon Interactions with a Laser" (that's this section):
+\\
+You need to do a careful pass through it and omit everything you don't
+understand and don't need.
+\\
+Sorry, there is no longer time to resolve your questions unless you need them.}
+
 \note{This is a stupid subsection title.}
 %We consider first the interaction between a single atom and a single photon.  Suppose 
 
@@ -91,6 +109,21 @@ s_0 &:=& \frac{I}{ I_{\mathrm{sat}} }.
 
 In practice, for the project that is the topic of this thesis, most lasers operate in the high intensity regime -- the obvious exception being the photoionization laser (see Section whatever)\aside[color=org]{Where have I even decided to put the photoionization section, anyway?}  However, one can still gain a qualitative understanding of many aspects of atom-laser interaction while neglecting saturation concerns.  \aside{Clunky phrasing.} \aside[color=todoblue]{Do I need saturation to make an optical molasses?  I bet I do.}  
 \note{But yeah, it seems like I have to mention that saturation intensity is a thing that exists, before I proceed to neglect it forever.}
+
+\note[color=jb]{JB says:  "In practice, for the project that is the topic of this thesis,
+most lasers operate in the high intensity regime –
+the obvious exception being the photoionization laser (see Section whatever)
+However, one can still gain ..."
+\\
+change to ->
+\\
+"In practice, for the project that is the topic of this thesis,
+the MOT laser operates at about 1/2 of saturation intensity,
+while the optical pumping
+and photoionization lasers operate at considerably lower than saturation
+intensity.
+However, one can gain ..."}
+
 % % % 
 
 \subsection{Doppler Cooling}
@@ -120,6 +153,13 @@ The overall effect on a one-dimensional cloud of atoms in the path of two counte
 
 %%% % % % %%%
 \subsection{Angular Momentum and Selection Rules}
+\note[color=jb]{JB:  3.1.4 Angular Momentum and Selection Rules (that's this section!):
+\\
+Sorry, this section is almost entirely wrong, and you don't need it.
+Omit it please.}
+
+\note[color=jb]{JB:  Agreed it's ok to ignore the repumper laser.}
+
 As in any other interaction, when a photon and an atom interact with one another, angular momentum must be conserved.
 %In any interaction, angular momentum must be conserved, and the interactions between atoms and photons are no exception.  
 An individual photon has spin 1, and therefore when we consider an atom-photon interaction where the photon is absorbed, the atom's total angular momentum projection \comment{(I think on any axis???)} must also change by one unit.
@@ -134,6 +174,19 @@ This is related to why you need repumpers for your MOT, but also, I don't really
 %%% % % % %%%
 \section{Optical Pumping}
 \label{sec:op}
+\note[color=jb]{3.2 (that's this section!):
+\\
+You cover what is needed for optical pumping well in "4.2 the AC MOT and Poalrization setup"
+Just say here indeed
+"The optical pumping process is describe in detail in our collaborations's
+Ref.~\cite{Ben_OP}. The main detail described here is that the
+optical pumping is distrubed by any component of magnetic field not along
+the quantization axis. (Ours is the vertical axis, defined by the direction
+of the optical pumping light, and along which the detectors are placed.)
+This required sophistication with an AC MOT described below.
+\\ ... \\
+Then you can refer to that in section 3.4, where you're trying to now but the phrasing is poor."}
+
 \note{Needs work.}
 \note{``Until recently, one limitation of such samples was the necessity for the presence of a relatively large magnetic field, which is expected to partially destroy atomic polarization, limiting the precision of many types of measurements.  Here we discuss the construction of a newer type of MOT, the AC-MOT, which minimizes residual magnetic fields.  The guys in~\cite{harveymurray} came up with the idea of the AC-MOT.  They made it work and did some stuff with it.  Good for them.''}
 Need a nice, uniform, constant magnetic field for your polarization to larmor precess around.  Then, however depolarized (from the axis of the magnetic field) you were to start out, you don't like precess in a way that changes the projection you care about.
@@ -162,6 +215,20 @@ But also, I should actually describe the optical pumping, too.  And point at Ben
 
 %%% % % % %%%
 \section{Atom Trapping with a MOT}
+\note[color=jb]{JB:  
+\\
+...Then you can refer to that (currently section 3.2, "Optical Pumping") in section 3.4, where you're trying to now but the phrasing is poor.
+\\
+3.3 Atom Trapping with a MOT
+\\
+and
+\\
+3.4 The AC-MOT
+\\
+The content and scope are ok, but the informal phrasing is going to
+confuse people. You have to pay some attention and rephrase these sections.
+}
+
 \note{Do I *have* an equation I can put here?  Surely there must be one somewhere, but I really don't want to dig it up, and I don't think it's really necessary.}
 \note{Needs work.}
 Really, at the end of the previous section, I described the MOT's trapping mechanism.  That's literally what it is.  You just need to do it in 3 dimensions, rather than only one.  Fortunately, an anti-helmholz(sp?) coil gives us a quadrupole-shaped magnetic field, which *actually* has a magnetic field that changes linearly along any axis in the region near the center.   
@@ -204,6 +271,29 @@ Anyway, the idea of the AC-MOT is to run a sinusoidal current through your anti-
 
 \section{Photoionization as a Probe}
 \label{sec:photoprobe}
+\note[color=jb]{JB on 3.5 `Photoionization as a probe' (that's this section!):
+\\
+You describe this well in 4.4 "Photoionization laser"
+\\
+So I recommend strongly you cut  the whole 3.5 section,
+because it's incomplete, and what you
+have contains errors.
+\\ ... \\
+Here are things there are not time to understand:
+\\ ... \\
+about 1/3 of the MOT atoms are excited, not 'a large fraction'
+\\ ... \\
+yes, we've intentionally polarized the OP laser to be circular so the
+atoms will be polarized. We've also picked the S 1/2 to P1/2 so that the
+fully stretched S1/2 $F=2$ $m_F=2$ state is dark. (Unlike the MOT, where we
+need the P3/2 state so that atoms never go dark,  or the force would stop.)
+But we agreed above not to talk about this.
+\\ ... \\
+"We have a photodiode(?) to observe what fraction of things get photoionized overall."
+\\ ... \\
+no, we look at the photoionization rate, for which we have the ion vs. photodiode TOF (`photodiode' looks at when the bursts of light occur)
+}
+
 So, the photoionization laser.  It ionizes only $\approx 1\%$ of the atoms, so it's mostly non-destructive.  
 
 For atoms in a MOT, it can give a projection of the trap position.  At least, it can if you add some MCPs with delay lines, and an electric field.  Also, the atoms have to be excited or they don't get photoionized this way.  That's because at any given time, a large fraction of the trapped atoms are in the excited state, so it works.

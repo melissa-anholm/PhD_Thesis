@@ -126,7 +126,37 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 \chapter{Analysis}
 %\chapter{Data Selection}
 \label{analysis_chapter}
+\note[color=jb]{JB says:  ``ch 7 looks fine to me.''  ...even in spite of the giant paragraph suggestions below, I guess.}
 \note[color=org]{Do I actually want to combine this with Chapter~\ref{calibrations_chapter}?}
+\note[color=org]{from JB:  you ask at the start if you should combine it (Ch.7, `Analysis') with Ch.6 (`Calibrations'. I see no special reason either way.  I would say the topics seem distinct.}
+
+\note[color=jb]{JB:  Here is what I suggest for the intro the Analysis section:  (n.b.:  at the time of this comment, that was Ch.7)
+\\...\\
+7.0
+Analysis is critical to a precision measurement, as most of the research is in
+determining systematic uncertainties by self-consistent analysis and simulations.
+Each detector in this experiment is critical and has independent calibrations and cuts.
+Full explanation is here (and in two following chapters) justifying choice of the deterministic cuts,
+because in the analysis in this thesis the data was not blinded.
+The main goal of blinding was nevertheless achieved-- to make sure all analysis is done
+completely with full redundancy of checks wherever possible-- so the discipline entailed must
+be described in full detail.
+Here there are details of detectors:
+eMCP
+rMCP
+beta DSSD
+scintillator.
+\\...\\
+The collaboration has done an independent analysis fixing bFierz to zero.
+Differences with that analysis are interleaved in this section.
+Critical physics improvements concern
+an emcp-beta timing walk correction which enabled an improved cut against background, also incorporating
+a more complete modelling of decay backgrounds from untrapped atoms.
+Technical corrections include a correct treatment of the polarization cycle.
+An arbitrary change in the deltaE radius cut is kept self-consistent.
+\\...\\
+Then Section 7.1...
+}
 
 %\section{Data Selection and Pre-Processing}
 %\section{Run Parameters and Preliminary Cuts}
@@ -162,6 +192,11 @@ Finally, because this analysis depends heavily on energy measurements from the t
 \section{Further Cuts Using the DSSD}
 %\note[color=org]{Have I even defined `DSSD' yet?}
 \note[color=org]{Pretty sure I'm repeating myself from Chapter~\ref{???}}
+\note[color=jb]{JB says: To repeat a comment, since the Appendix on analysis changes is being dispersed throughout, when you state somewhere (I think it's in Ch. 6) make sure you state clearly that the only change for BB1 cuts
+is the radius cut, e.g. that you took the same T and E from the waveforms (I'm not even sure whether the
+waveforms are recorded anyway). You  ask 'how can I state this' but there's no reason to be subtle.
+Just say upfront that Ben and Spencer's theses did all the groundwork on the BB1, and here you include selected details needed to understand the present analysis. If you need to include some redundant material, don't worry too much about that.}
+
 Although it was not possible to use the DSSD in real-time analysis or event triggering, the DSSDs may be used, after the data has been collected, to distinguish between different types of particles incident on the detector, as more energy will be deposited by heavier particles.  When a scintillator hit is triggered by a particle originating within the experimental chamber, that particle will typically have passed through the DSSD before arriving at the scintillator.
 
 In the present experiment, the two primary particles that will concern us are $\beta^+$ particles originating from the decay of $\isotope[37]{K}$, and $\gamma$ rays, which may be produced through a variety of processes, e.g. directly from the $2\%$ decay branch, through annihilation of $\beta^+$ particles upon their interaction with regular-matter electrons, or bremsstrahlung radiation from emitted $\beta$s.  
@@ -280,6 +315,7 @@ At this point it becomes necessary to attempt to model the SOE TOF spectrum, as 
 
 %\section{Simulations}
 \chapter{Simulations}
+\note[color=jb]{JB:  ``I doubt I will have further useful comments on the Ch. 5, 8, 9 as they are now.'' }
 \note[color=org]{Do I want this in a separate chapter?  Or maybe I want it to be combined with the stuff on data selection and analysis.  Surely that chapter is getting too big even without this stuff.}
 %With the Simulations:
 \begin{itemize}
