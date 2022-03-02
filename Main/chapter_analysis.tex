@@ -4,131 +4,11 @@
 %
 %%%% --- * --- %%%%	
 \clearpage
-%\chapter{Calibrations and Analysis}
-\chapter{Calibrations}
-
-\note[color=org]{I have some tables summarizing which types of data were measured.  Presently, that's in Ch-4, but probably I should move it here.}
-
-
-
-%%%% --- * --- %%%%	
-%\section{Calibrations}
-\label{calibrations_chapter}
-
-\section{Measurements of the Atom Cloud}
-\label{sec:cloud_calibration}
-
-\note[color=org]{Content that previously was in this subsection is now in Section~\ref{cloud}.  But also, see Section~\ref{sec:photoprobe}.  Probably in this section here, I need to just jump right in assuming everyone understands the physical principle of how the data works.  Then, I can talk about what the data *is*, and how it gets interpreted.}
-
-%\label{cloud}
-%\label{photoions}
-%\note[color=org]{Some of this stuff is in Ch.3 and/or Ch.4.  Some of it *should* be.}
-%In order to measure properties of the trapped $^{37}\textrm{K}$ cloud, a 10\,kHz pulsed laser at 355\,nm is directed towards the cloud.  These photons have sufficient energy to photoionize neutral $^{37}\textrm{K}$ from its excited atomic state, which is populated by the trapping laser when the MOT is active, releasing 0.77\,eV of kinetic energy, but do not interact with ground state $^{37}\textrm{K}$ atoms.  The laser is of sufficiently low intensity that the great majority\aside[color=jb]{JB:  ``On order 1\% are photoionized."} of excited state atoms are \emph{not} photoionized, so the technique is only very minimally destructive.  
-%\note{Probably worth mentioning that we test this stuff offline on stable \isotope[41]{K}. }
-%
-%
-%Because an electric field has been applied within this region (see Section~\ref{field})\aside[color=jb]{JB:  ``you could reference the letter for the value of the field 150V/cm.''} the $^{37}\textrm{K}^+$ ions are immediately pulled into the detector on one side of the chamber, while the freed $e^-$ is pulled towards the detector on the opposite side of the chamber.  Because  $^{37}\textrm{K}^+$ is quite heavy relative to its initial energy, it can be treated as moving in a straight line directly to the detector, where its hit position on the microchannel plate is taken as a 2D projection of its position within the cloud.  Similarly, given a sufficient understanding of the electric field, the time difference between the laser pulse and the microchannel plate hit allows for a calculation of the ion's initial position along the third axis.  
-%
-%\note{As a check:  the camera measurements for photons from de-excitation.  It's aimed 35 degrees from vertical, with its horizontal axis the same as ..... one of the other axes.  I think it's the TOF axis.  I can check this when my computer comes back.   Also, there's an unknown additional delay between some of our DAQ channels that can't be explained by accounting for cable lengths, so we really like having the check there.}
-%\note[color=jb]{JB says:  ``yes, camera x-axis is tof axis.''}
-%
-%
-%With this procedure, it is possible to produce a precise map of the cloud's position and size, both of which are necessary for the precision measurements of angular correlation parameters that are of interest to us here.  However, it also allows us to extract a third measurement:  the cloud's polarization.
-%
-%The key to the polarization measurement is that only atoms in the excited atomic state can be photoionized via the 355 nm laser.  While the MOT runs, atoms are constantly being pushed around and excited by the trapping lasers, so this period of time provides a lot of information for characterizing the trap size and position.  When the MOT is shut off, the atoms quickly return to their ground states and are no longer photoionized until the optical pumping laser is turned on.  As described in Section~\ref{op}, and in greater detail in~\cite{ben_OP}, the optical pumping process involves repeatedly exciting atoms from their ground states until the atoms finally cannot absorb any further angular momentum and remain in their fully-polarized (ground) state until they are perturbed.  Therefore, there is a sharp spike in excited-state atoms (and therefore photoions) when the optical pumping begins, and none once\aside[color=jb]{JB points out that this should be ``if", not ``once".} the cloud has been completely polarized.  The number of photoion events that occur once the sample has been maximally polarized, in comparison with the size and shape of the initial spike of photoions, provides a very precise characterization of the cloud's final polarization~\cite{ben_OP}.
-
-
-
-\note{Trap position -- Measured using the same dataset that was used to quantify the polarization.  The trap drifts slightly over the course of our data collection.  Describe the rMCP calibration needed to extract this info.}
-\note{Polarization measurement was conducted on a different set of data, collected in between the measurements used for $A_{\mathrm{\beta}}$ and $b_{\mathrm{Fierz}}$, and at a higher electric field, because we were unable to run both our MCP detectors simultaneously.  }
-
-\missingfigure{Need pictures of the cloud.  Possibly need projections of the cloud as a function of time, for AC/OP cycles.}
-%\note{Need to describe how polarization works.  Needs a level diagram.  Needs another(?) level diagram for the photoionization, and maybe a third for the MOT.  Can I combine them all?  idk.}
-
-Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, and I'll immediately reference it right now, as Table~\ref{table:cloudpositions}:
-
-\input{table_cloudpositions}
-
-
-\note{Also, we noticed the trap drifting after one of the runs, because one of the batteries on one of the thingies adjusting the laser frequency (I think) was failing. }
-\note[color=jb]{JB:  ``If we rejected the data with the MOT moving (indeed a battery determining the voltage controlled oscillator frequency offset between absorption in stable \isotope[41]{K} cell and the \isotope[37]{K} resonance) then that's all you need to say.''}
-\note{describe how you'd turn this into a physical description of the cloud, with like a temperature and a sail velocity and shit.  with equations.}
-
-
-
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/y_from_camera_electron_recoil.pdf}
-	\caption[Trap Position along TOF Axis]{Trap Position along the ``Time-of-Flight'' Axis.  Electron runs and recoil runs plotted by run number. \comment{(I should probably re-plot this.  Maybe combine info with Fig.~(\ref{fig:cameraposition_by_time}).) } }	
-	\label{fig:camera_electron_recoil}
-\end{figure}
-
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/TrapPosition_FromCamera.pdf}
-	\caption[Trap Position from Camera]{Trap Position along the ``Time-of-Flight'' Axis and the ``Vertical+30" Axis.  All runs plotted by time of run. \comment{(Need to re-plot this.)}}	
-	\label{fig:cameraposition_by_time}
-\end{figure}
-
-
-
-
-%\section{Beta Detector Cuts}
-%\label{section:calibrations_betadetectors}
-%	Setup is as described in Section~\ref{section:betadetectors}.	 
-%	\note{This is a stupid section name.  Also, I really do need to describe how the cuts were made here somewhere, because it's non-trivial in many cases, and possibly different than what Ben did in some cases.  But it won't make sense to describe what I did different if I don't describe the thing as a whole, at least a bit.  The point is, this is a set of cuts/systematics that isn't really that straightforward to understand.  }
-%\section{Plastic Scintillators}
-%	\note[color=org]{Maybe this goes in Chapter~\ref{analysis_chapter}?}
-%	\note{Energy calibration for the scintillator+PMT setup changed dramatically at one point.    Describe how calibration was done.  Like, one sentence or something.  Something about the endpoint energy, and something about the compton edge for 511s, IIRC.}
-%\section{Strip Detectors}
-%	\note{How the fuck WERE these things done?!}
-
-
-
-\section{The eMCP}
-	I can describe the eMCP calibration here, even though it mostly wasn't implemented by me.  It is tangentially relevant to data selection and background estimation by providing an experimental energy spectrum for shake-off electrons.  It's actually a pretty neat algorithm that I basically wasn't involved with.
-	\note[color=jb]{JB:  eMCP.  You need to describe the timing information obtained.  You also need a statement of whether or not you used the position information in your cuts.}
-
-%\missingfigure{Needs an SOE timing spectrum.  At least one of them.  Experimental and simulated.  Also, I have to describe how I did the simulating, and how I check that it's OK despite the fact that the simulated spectrum looks nothing like the experimental spectrum.}
-
-
-\section{The rMCP}
-	I did this, and they're absolutely needed to make any sense of the trap position data.  
-%\missingfigure{Needs two pictures from the rMCP with the grid lines -- before and after corrections are performed.  Just for fun, I could throw in one with the stupid stripes.}
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/rMCP_Calibration}
-	\caption[rMCP Calibration]{rMCP Calibration.  Definitely comment about how this calibration went here, in the figure caption. \comment{(Do I definitely want a picture with the stupid line-y runs?  Maybe it's better to just *not*...)}}	
-	\label{fig:rmcp_calibration}
-\end{figure}
-	These calibrations are done during AC-MOT time, and we're actually interested in the rMCP data taken during OP time.  Can I find pictures to estimate the size of the change resulting from the magnetic field?  In any case, the change is pretty small.  
-
-\subsection{rMCP Bullet Points!}
-%	\begin{itemize}
-%	\item 
-	Using the ``other'' data set with the rMCP:  Measure the trap position/size/velocity/expansion with the rMCP and with the camera.  Necessitates calibrating the rMCP, which is its own whole thing.  Also measure polarization.
-		\begin{itemize}
-		\item rMCP calibration probably gets its own section, if not its own chapter..
-		\item We took the mask off before the 2014 run, to give us more detector area.  Use previous reference calibration \emph{with the mask} during the test run in Nov 2013.  The delay line's non-linearities should be the same, assuming we can get the centering the same.  Cables have changed and stuff, so we have to re-center the pre-calibration image to where the old pre-calibration image was.  ...  So, center the new runs w.r.t the old run.
-		\item We'll want to make some sum cuts for these things.  We might like them to be identical, or at least identical-ish, but the peaks don't really look the same.  So we'll settle for ``decent sum cuts for all!".  ...  So, apply sum cuts to the new runs and old run.
-		\item Calibrate the old run, with the mask.  In fact, I don't remember which order I did things in.  But I have a record of it here, somewhere...
-		\end{itemize}
-%	\end{itemize}
-
-%\missingfigure{Position as a function of run number.  I have this somewhere.}
-
-
-%%%% --- * --- %%%%	
-\clearpage
 \chapter{Analysis}
-%\chapter{Data Selection}
 \label{analysis_chapter}
-\note[color=jb]{JB says:  ``ch 7 looks fine to me.''  ...even in spite of the giant paragraph suggestions below, I guess.}
+\note[color=jb]{JB says:  ``ch 7 (now ch.6) looks fine to me.''  ...even in spite of the giant paragraph suggestions below, I guess.}
 \note[color=org]{Do I actually want to combine this with Chapter~\ref{calibrations_chapter}?}
-\note[color=org]{from JB:  you ask at the start if you should combine it (Ch.7, `Analysis') with Ch.6 (`Calibrations'. I see no special reason either way.  I would say the topics seem distinct.}
+\note[color=org]{from JB:  you ask at the start if you should combine it (Ch.7 (now Ch.6), `Analysis') with Ch.6 (now Ch.5) `Calibrations'. I see no special reason either way.  I would say the topics seem distinct.}
 
 \note[color=jb]{John proposes an intro statement for this chapter.  The following two paragraphs are a direct quote from him:}
 
@@ -321,31 +201,5 @@ At this point it becomes necessary to attempt to model the SOE TOF spectrum, as 
 
 
 
-
-
-%\section{Simulations}
-\chapter{Simulations}
-\note[color=jb]{JB:  ``I doubt I will have further useful comments on the Ch. 5, 8, 9 as they are now.'' }
-\note[color=org]{Do I want this in a separate chapter?  Or maybe I want it to be combined with the stuff on data selection and analysis.  Surely that chapter is getting too big even without this stuff.}
-%With the Simulations:
-\begin{itemize}
-	\item Multithreading.  There was multithreading, and it took a stupidly long time to get working.
-	\item Update G4 event generator to be able to model non-zero scalar and tensor coupling.  These things show up in $\Abeta$ too, not just in $\bFierz$.  Though, the effects on $\Abeta$ are much smaller.
-	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
-	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change (much?) when we adjust BSM couplings.
-	\item Match cuts in simulated data up to the cuts on experimental data.  Obviously.  DSSD cut, DSSD energy, one hit DSSD, one hit scint.  TOF cut, which requires a whole extra model of background in the TOF spectrum..
-		\begin{itemize}
-		\item Suppose background in the TOF spectrum is coming from decays of atoms that have gotten themselves stuck to surfaces within the chamber...
-		\item Run G4 to get a beta TOF spectrum (w.r.t. the decay)
-		\item Run COMSOL (credit to Alexandre) to track low-energy SOEs through the electric field from wherever they started, into the detectors.  Energy spectra from Levinger.
-		\item Combine G4 and COMSOL spectra, event-by-event, while requiring that both the beta detector and the eMCP are hit according to the set of random numbers generated by each monte carlo separately.  Then, the beta and SOE will each have a TOF from decay to detector, and subtracting one from the other gives a timing spectrum that can be observed experimentally.  See Fig.~\ref{fig:soetof}.
-		\item Upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the trap not due to radioactive decay emerge isotropically from the trap and then stick to whatever chamber wall is in its path.  This upper limit is too big by a factor of 2.
-		\end{itemize}
-	\item For each of those 3 simulations, sort the ``good'' data according to emission angle relative to the detector.  Do each detector individually.  For both polarizations.
-	\item Assemble the (simulated) superratio asymmetry.  We'll compare it to data, and the $\chi^2$ from that comparison will be our figure of merit.  
-	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.
-	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
-	\item Then there's the lineshape thing.  My god, this wasn't nearly as useful as I thought it was going to be.  Certainly not worth the whole goddamn year that I spent on it.
-\end{itemize}
 
 

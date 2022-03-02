@@ -5,15 +5,15 @@
 \clearpage
 \chapter{Nuclear Physics and Beta Decay Overview}
 \label{nuclear_chapter}
-\note[color=jb]{JB says Chapter 1 sections 1.1 and 1.3 should get moved here into Chapter 2.}
-\note[color=jb]{JB on what (else) should change in Chapter 2:
-\\
-...
-\\
-cut "so we will simply provide the combined master equation here"
-\\
-Don't. The equation you have is all you need.
-}
+%\note[color=jb]{JB says Chapter 1 sections 1.1 and 1.3 should get moved here into Chapter 2.}
+%\note[color=jb]{JB on what (else) should change in Chapter 2 (soon to be chapter 1):
+%\\
+%...
+%\\
+%cut "so we will simply provide the combined master equation here"
+%\\
+%Don't. The equation you have is all you need.
+%}
 
 \section{The Basics of Beta Decay}
 	%\\*
@@ -68,15 +68,12 @@ Don't. The equation you have is all you need.
 \section{Mathematical Formalism}
 	In order to proceed with a measurement, we must find a master equation to describe the probability of beta decay events with any given distribution of energy and momenta among the daughter particles, as a function of the strength of the specific couplings of interest to us.  To do this, two sets of formalisms are combined -- the older formalism from Jackson, Treiman, and Wylde (JTW)~\cite{jtw},~\cite{jtw_coulomb}, which describes the effects of all types of Standard Model and exotic couplings of interest to us here, but which truncates its expression at first order in the (small) parameter of recoil energy, and a newer formalism from Holstein ~\cite{holstein}, which includes terms up to several orders higher in recoil energy, but which does not include any description of the exotic couplings of particular interest to us.  We note that because any exotic couplings present in nature have already been determined to be either small or nonexistant, it is sufficient to describe these parameters with expressions truncated at first order, despite the fact that it is still necessary to describe the larger Standard Model couplings with higher-order terms. 
 	
-	The procedure for combining the two formalisms is described in detail in Appendix~\ref{appendix_forthepeople}, so we will simply provide the combined master equation here:
-
+	The procedure for combining the two formalisms is described in detail in Appendix~\ref{appendix_forthepeople}.  
+%	, so we will simply provide the combined master equation here:
 \aside{Do it!  Do the master equation!}
-%\bea
-%\textrm{put  a master equation here.}
-%\eea
-
-
-In the mean time, here's what happens when we integrate JTW over neutrino direction:
+\aside[color=jb]{JB:  cut "so we will simply provide the combined master equation here"
+\\Don't. The equation you have is all you need.}
+Integrating the JTW expression over neutrino direction, we find:
 \input{equation_integratedjtw}
 where 
 \bea

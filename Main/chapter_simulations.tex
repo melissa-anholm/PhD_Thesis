@@ -1,0 +1,57 @@
+% !TEX root = ../thesis_main.tex
+
+%%%% --- * --- %%%%	
+%\section{Simulations}
+\chapter{Simulations}
+\label{simulations_chapter}
+\note[color=jb]{JB:  ``I doubt I will have further useful comments on the Ch. 5, 8, 9 as they are now.'' }
+\note[color=org]{Do I want this in a separate chapter?  Or maybe I want it to be combined with the stuff on data selection and analysis.  Surely that chapter is getting too big even without this stuff.}
+
+The TRINAT collaboration has created a Geant4 (G4) simulation which models the geometry and materials within the experimental chamber, and uses a monte carlo algorithm to describe generalized physical processes such as particle scattering and energy loss, within the geometry specific to the experiment.  This software library has been maintained and updated over several generations of graduate students.  
+
+\section{Software Upgrade Implementation}
+Prior to the simulations required for this particular experiment, two different sets of changes to the G4 code were needed -- the first to enable multithreading, and the second to introduce certain BSM interactions to the decay distribution.  
+
+Enabling multithreading allows for a single instance of the Geant4 simulation to run on several processors at once, effectively speeding up the overall simulation by a factor of the number of processors used.  In the years since the simulation was originally created, the Geant4 collaboration had created libraries intended specifically to support multithread usage, and since the running G4 simulations had historically been very time consuming for the TRINAT collaboration, the decision was made to implement multithreading within our own monte carlo software, on the hopes that this would enable faster progress in analysis. 
+
+Enabling multithreading support turned out to be quite time consuming, and in the end it might have been faster to have spent those months running simulations one processor at a time.  Perhaps the improvement will prove valuable for use in future TRINAT experiments.  
+
+%Throughout the history of this simulation package, 
+The TRINAT G4 monte carlo package had never been used to directly model interactions beyond the standard model within the decay physics.  
+\aside{because for $\Abeta$ even a BSM interaction will *basically* look like a SM interaction, and I think something somewhere isn't precise enough to distinguish it.}  
+It had  previously been set up by the collaboration to use a probability density function including most of the terms from Holstein's Eq. (51)~\cite{holstein}, which describes both electron and neutrino momenta from polarized beta decay.  This treatment is quite robust, and includes corrections at recoil-order, as well as certain other corrections of similar size.~\aside[color=bluetodo]{which other corrections?  coulomb and/or radiative corrections, but somehow when I say that, I'm apparently talking about a different thing than everyone else who uses those terms.  also, weak magnetism. also ... ???}
+
+Unfortunately, terms arising from interactions beyond the standard model are not included in Holstein's description of the decay process. \aside{Is this true?  Does it not include *any* BSM interactions?}  To understand the kinematic results of the exotic interactions of interest to us here, we turn to the classic JTW treatment of beta decay~\cite{jtw}~\cite{jtw_coulomb}.  In addition to the (expected) vector and axial interactions, JTW also describes the interaction in terms of (exotic) scalar and tensor interactions, should such be present.  Furthermore, although it is currently understood that the weak interaction is predominantly and perhaps entirely `left-handed', the JTW treatment leaves certain phase angles~\aside{It's several phase angles in JTW, but maybe it's fundamentally only like one angle on some level.  I think it's not actually a ``gauge freedom,'' per se.} unfixed, and is therefore able to accurately describe a decay which is, for example, partially `right-handed' -- however the latter feature is not directly relevant to the project at hand.
+
+
+\note{Surely I describe what recoil-order corrections even *are* in some appendix somewhere, right?  Oh well, here we go...
+\\...\\
+In beta decay, a proton(neutron) within a nucleus decays into a neutron(proton), and emits a positron(electron) and neutrino(anti-neutrino).  The new neutron(proton) remains bound within the nucleus.  As always, momentum and energy must both be conserved.  The distribution of energy and momenta is, of course, probabilistic rather than deterministic, and with three bodies involved, the full probability distribution for the momenta of outgoing particles cannot be written in closed form.  However, because the nucleus is significantly more massive than either of the other two outgoing particles, the great majority of the released kinetic energy is distributed between the leptons, while the nucleus receives only a tiny fraction of the total.  This feature lends itself to an approximation in which the energy of the recoiling nucleus (recoil) is neglected entirely, and the decay may be described only in terms of the momenta of the outgoing positron(electron) and neutrino(anti-neutrino), as in JTW~\cite{jtw}.  The terms that have been neglected in this treatment are sometimes called `recoil-order corrections'.
+\\..\\
+Unfortunately, the outgoing (anti-)neutrino is very difficult to detect directly, and we make no attempt to do so in this experiment.  Instead, we might look for coincidences between an outgoing beta and a recoiling nucleus, and use that information to reconstruct the kinematics of the neutrino.  
+}
+%\note{End description that probably doesn't go in this section.}
+
+
+%With the Simulations:
+\begin{itemize}
+	\item \greycomment{ Multithreading.  There was multithreading, and it took a stupidly long time to get working.}
+	\item Update G4 event generator to be able to model non-zero scalar and tensor coupling.  These things show up in $\Abeta$ too, not just in $\bFierz$.  Though, the effects on $\Abeta$ are much smaller.
+	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
+	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change (much?) when we adjust BSM couplings.
+	\item Match cuts in simulated data up to the cuts on experimental data.  Obviously.  DSSD cut, DSSD energy, one hit DSSD, one hit scint.  TOF cut, which requires a whole extra model of background in the TOF spectrum..
+		\begin{itemize}
+		\item Suppose background in the TOF spectrum is coming from decays of atoms that have gotten themselves stuck to surfaces within the chamber...
+		\item Run G4 to get a beta TOF spectrum (w.r.t. the decay)
+		\item Run COMSOL (credit to Alexandre) to track low-energy SOEs through the electric field from wherever they started, into the detectors.  Energy spectra from Levinger.
+		\item Combine G4 and COMSOL spectra, event-by-event, while requiring that both the beta detector and the eMCP are hit according to the set of random numbers generated by each monte carlo separately.  Then, the beta and SOE will each have a TOF from decay to detector, and subtracting one from the other gives a timing spectrum that can be observed experimentally.  See Fig.~\ref{fig:soetof}.
+		\item Upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the trap not due to radioactive decay emerge isotropically from the trap and then stick to whatever chamber wall is in its path.  This upper limit is too big by a factor of 2.
+		\end{itemize}
+	\item For each of those 3 simulations, sort the ``good'' data according to emission angle relative to the detector.  Do each detector individually.  For both polarizations.
+	\item Assemble the (simulated) superratio asymmetry.  We'll compare it to data, and the $\chi^2$ from that comparison will be our figure of merit.  
+	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.
+	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
+	\item Then there's the lineshape thing.  My god, this wasn't nearly as useful as I thought it was going to be.  Certainly not worth the whole goddamn year that I spent on it.
+\end{itemize}
+
+
