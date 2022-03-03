@@ -9,7 +9,8 @@
 
 The TRINAT collaboration has created a Geant4 (G4) simulation which models the geometry and materials within the experimental chamber, and uses a monte carlo algorithm to describe generalized physical processes such as particle scattering and energy loss, within the geometry specific to the experiment.  This software library has been maintained and updated over several generations of graduate students.  
 
-\section{Software Upgrade Implementation}
+\section{Considerations for Software Upgrade Implementation}
+\label{sec:software_upgrades}
 Prior to the simulations required for this particular experiment, two different sets of changes to the G4 code were needed -- the first to enable multithreading, and the second to introduce certain BSM interactions to the decay distribution.  
 
 Enabling multithreading allows for a single instance of the Geant4 simulation to run on several processors at once, effectively speeding up the overall simulation by a factor of the number of processors used.  In the years since the simulation was originally created, the Geant4 collaboration had created libraries intended specifically to support multithread usage, and since the running G4 simulations had historically been very time consuming for the TRINAT collaboration, the decision was made to implement multithreading within our own monte carlo software, on the hopes that this would enable faster progress in analysis. 
@@ -19,19 +20,35 @@ Enabling multithreading support turned out to be quite time consuming, and in th
 %Throughout the history of this simulation package, 
 The TRINAT G4 monte carlo package had never been used to directly model interactions beyond the standard model within the decay physics.  
 \aside{because for $\Abeta$ even a BSM interaction will *basically* look like a SM interaction, and I think something somewhere isn't precise enough to distinguish it.}  
-It had  previously been set up by the collaboration to use a probability density function including most of the terms from Holstein's Eq. (51)~\cite{holstein}, which describes both electron and neutrino momenta from polarized beta decay.  This treatment is quite robust, and includes corrections at recoil-order, as well as certain other corrections of similar size.~\aside[color=bluetodo]{which other corrections?  coulomb and/or radiative corrections, but somehow when I say that, I'm apparently talking about a different thing than everyone else who uses those terms.  also, weak magnetism. also ... ???}
+It had  previously been set up by the collaboration to use a probability density function (PDF) including most of the terms from Holstein's Eq. (51)~\cite{holstein}, which describes both electron and neutrino momenta from polarized beta decay.  This treatment is quite robust, and includes corrections at recoil-order, as well as certain other corrections of similar size.~\aside[color=bluetodo]{which other corrections?  coulomb and/or radiative corrections, but somehow when I say that, I'm apparently talking about a different thing than everyone else who uses those terms.  also, weak magnetism. also ... ???}
 
-Unfortunately, terms arising from interactions beyond the standard model are not included in Holstein's description of the decay process. \aside{Is this true?  Does it not include *any* BSM interactions?}  To understand the kinematic results of the exotic interactions of interest to us here, we turn to the classic JTW treatment of beta decay~\cite{jtw}~\cite{jtw_coulomb}.  In addition to the (expected) vector and axial interactions, JTW also describes the interaction in terms of (exotic) scalar and tensor interactions, should such be present.  Furthermore, although it is currently understood that the weak interaction is predominantly and perhaps entirely `left-handed', the JTW treatment leaves certain phase angles~\aside{It's several phase angles in JTW, but maybe it's fundamentally only like one angle on some level.  I think it's not actually a ``gauge freedom,'' per se.} unfixed, and is therefore able to accurately describe a decay which is, for example, partially `right-handed' -- however the latter feature is not directly relevant to the project at hand.
+Unfortunately, terms arising from interactions beyond the standard model are not included in Holstein's description of the decay process. \aside{Is this true?  Does it not include *any* BSM interactions?}  To understand the kinematic results of the exotic interactions of interest to us here, we turn to the classic JTW treatment of beta decay~\cite{jtw}~\cite{jtw_coulomb}.  In addition to the (expected) vector and axial interactions, JTW also describes the interaction in terms of (exotic) scalar and tensor interactions, should such be present.  Furthermore, although it is currently understood that the weak interaction is predominantly or perhaps entirely `left-handed', the JTW treatment leaves certain phase angles unfixed, and is therefore able to accurately describe a decay which is, for example, partially `right-handed' -- however the latter feature is not directly relevant to the project at hand.  ~\aside{It's several phase angles in JTW, but maybe it's fundamentally only like one angle on some level?  Also I think it's not actually a ``gauge freedom,'' per se.}  Despite JTW's broad ability to describe beta decay under a variety of physical models, this treatment includes only the leading-order terms, and smaller terms, such as recoil-order corrections, are neglected entirely.  
+\note[color=org]{Surely I describe what recoil-order corrections even *are* in some appendix somewhere, right?  Or, possibly, in Section~\ref{sec:math_formalism}.  Possibly the paragraphs above need to be moved...}
 
-\note{Surely I describe what recoil-order corrections even *are* in some appendix somewhere, right?  Or, possibly, in Section~\ref{sec:math_formalism}.}
+Because the present project is a precision measurement of the Fierz interference, a term which arises from scalar and tensor couplings, it was imperative to create an event generator for our G4 simulations that could account for these exotic interactions while also including in its PDF the higher-order effects which, in some cases, can mimic the effects of a scalar or tensor current.  
+
+While it might have been possible to directly combine JTW's result with Holstein's Eq. (51), it should be noted that JTW's expression is not compatible in general with the principle of conservation of momentum;  as recoil momentum is neglected entirely, the description is only of two leptons emerging from a nucleus in directions that do not directly oppose one another.  Therefore, the prospect of combining these two slightly incompatible expressions directly might be enough to give one pause.  On an experimental level, the mathematical description of an emerging neutrino is only of interest to us to the extent we can reconstruct it based on detecting both a beta and the recoiling nucleus from a single decay event, and within the present experiment we do not have simultaneous access to both a beta detector and a recoil detector.  
+
+In light of the above considerations, it was decided that an entirely new event generator must be created, based instead on Holstein's Eq.~(52), in which neutrino momentum has been integrated over and is therefore no longer an explicit part of the PDF~\cite{holstein}.  As one might guess, Holstein's Eq.~(52) is greatly simplified in comparison to Holstein's Eq.~(51).  A similar integration over all possible neutrino momenta can also be performed on the JTW PDF, causing several terms to vanish.  The result in both the Holstein and JTW cases is a PDF over only beta energy and direction as measured with respect to nuclear polarization, and the two expressions can be combined in a straightforward manner by comparing similar terms.  
+
+It is this combined Holstein+JTW expression that forms the basis of the new G4 event generator.  It must be noted that although the largest effect from any present scalar or tensor interactions would likely (depending on certain phase angles) be in a non-zero value of $\bFierz$, these interactions can also introduce a perturbation to $\Abeta$ at a higher order.  In order for any precision experimental measurement of $\bFierz$ to be generalized to limits on the parameter space of scalar and tensor currents, it is important to incorporate an accurate representation of the results of such exotic interactions on \emph{all} available observables, and the new G4 event generator does this.  
+
+\note{Things that the G4 simulation did that I kept include:  an accurate representation of the complex details of our experimental geometry.  Also, the noise spectra on the DSSDs.}
+
+%\begin{itemize}
+%	\item \greycomment{ Multithreading.  There was multithreading, and it took a stupidly long time to get working.}
+%	\item \greycomment{ Update G4 event generator to be able to model non-zero scalar and tensor coupling.  These things show up in $\Abeta$ too, not just in $\bFierz$.  Though, the effects on $\Abeta$ are much smaller. }
+%\end{itemize}
+
+\section{Specifics of the Simulations}
+\note{This is a stupid section title.}
 
 
 %With the Simulations:
 \begin{itemize}
-	\item \greycomment{ Multithreading.  There was multithreading, and it took a stupidly long time to get working.}
-	\item Update G4 event generator to be able to model non-zero scalar and tensor coupling.  These things show up in $\Abeta$ too, not just in $\bFierz$.  Though, the effects on $\Abeta$ are much smaller.
 	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
-	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change (much?) when we adjust BSM couplings.
+	\note[color=bluetodo]{How many events do we actually have?}
+	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change much when we adjust BSM couplings.  Just use the old event generator from Holstein Eq.~(51).
 	\item Match cuts in simulated data up to the cuts on experimental data.  Obviously.  DSSD cut, DSSD energy, one hit DSSD, one hit scint.  TOF cut, which requires a whole extra model of background in the TOF spectrum..
 		\begin{itemize}
 		\item Suppose background in the TOF spectrum is coming from decays of atoms that have gotten themselves stuck to surfaces within the chamber...
@@ -44,7 +61,31 @@ Unfortunately, terms arising from interactions beyond the standard model are not
 	\item Assemble the (simulated) superratio asymmetry.  We'll compare it to data, and the $\chi^2$ from that comparison will be our figure of merit.  
 	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.
 	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
+\end{itemize}
+
+
+\section{The Simple Monte Carlo and Lineshape}
+\label{sec:lineshape}
+\begin{itemize}
 	\item Then there's the lineshape thing.  My god, this wasn't nearly as useful as I thought it was going to be.  Certainly not worth the whole goddamn year that I spent on it.
+	\begin{itemize}
+		\item I wanted a way to cut down the amount of time spent waiting on big simulations to finish.  Lots of things to check before we get a final number.
+		\item Create a "Simple Monte Carlo" (SMC), using the same new generator to model beta decay kinematics, but without the time-consuming parts of a G4 simulation.  ie, no propagating particles through the experimental chamber.  They don't lose energy, and they don't scatter.  They just go where they were going and hit.  
+		\item SMC simulations run nice and fast!  Yay!
+		\item ...But, we can't just take them at face value.  We're neglecting very real physical processes to get these SMC results.  
+		\begin{itemize}
+			\item We should put that energy loss back in.  Probabilistically.
+			\item Also, we ``lose'' some betas due to scattering that were initally directed towards a beta detector.  
+			\item Also-also, we ``gain'' some particles due to scattering that were initially directed at some other surface.  
+			\item \note{Um.  Which of these things did I actually put in at the end?  I tried with/without .... scattering, I think?  and eventually decided not to do it.  for some reason.  I think it breaks normalization in some way that's more subtle than you would think.}
+		\end{itemize}
+		\item But where do we get the lineshape?  G4 simulation of lots of beta decays at a \emph{single} beta energy, but with an (initial) angular distribution representative of beta decays at that energy.  Do that at a bunch of beta energies.
+		\item For all these mono-energetic runs, you apply whatever set of cuts you selected to use on the data, and look only at the events that pass those cuts.  
+		\item For mono-energetic spectra events that pass the cuts, look at how much energy G4 thinks you would have measured just in the scintillator.  There'll be a distribution.  
+		\item \note{Needs a picture (several pictures) of the resulting energy distributions.}
+		\item \note{Which mono-energies did I use, again?  Maybe make a list/table.}
+		\item something something Landau distribution.  Something something Clifford.~\cite{clifford}
+	\end{itemize}
 \end{itemize}
 
 
