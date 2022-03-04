@@ -76,8 +76,18 @@ It is this combined Holstein+JTW expression that forms the basis of the new G4 e
 
 \section{The Simple Monte Carlo and Lineshape}
 \label{sec:lineshape}
+Because of the processor time required to run high statistics Geant4 simulations even after enabling multithreading support, it was desirable to develop a procedure by which it would be possible to evaluate certain systematic effects while avoiding the computationally intensive simulations that might traditionally be used.  To this end, a fast-running Simple Monte Carlo (SMC) was developed together with an empirical ``lineshape'' to describe probabilistic beta energy loss before its detection in a scintillator.  In the end, the lineshape description became quite involved, and it is unclear whether, in the end, any time was saved this way. 
+
+The purpose of the SMC was to probabilistically generate initial particle kinematics for beta decay events, and uses the very same event generator based on Holstein's Eq.~(52)~\cite{holstein} that was developed for use with the more sophisticated Geant4 simulations.  However, unlike in a G4 simulation, the SMC makes no attempt to track particles through the chamber, and instead simply calculates detector hits based on initial particle momentum.  This procedure obviously neglects scattering effects, which can (in differing regimes) both \emph{increase} and \emph{decrease} the number of beta particles incident on a beta detector.  This procedure similarly neglects any energy absorption in materials the beta passes through before hitting a detector -- and the beta \emph{must} pass through several such materials (see Fig.~\ref{chamber_decayevent}).  In particular, before hitting a scintillator, a beta must pass through a $275\,\mu m$ thick SiC mirror, a $229\,\mu m$ thick beryllium foil used to separate the inner portion of the vacuum chamber from the outside world, and finally, a set of $300\,\mu m$ thick Silicon strip detectors (DSSDs), before finally having its remaining energy absorbed within a scintillator.  
+
+\note{(Although the DSSDs are able in principle to record the amount of energy deposited by an incident particle, there have been some problems in achieving a uniform level of precision across the full surface of the DSSDs, so adding the DSSD energy back to the scintillator energy to produce a better estimate of the original beta energy has the potential to create some problems for the analysis.)}
+
+  %This of course means that scattering is ne 
+
+
+
 \begin{itemize}
-	\item Then there's the lineshape thing.  My god, this wasn't nearly as useful as I thought it was going to be.  Certainly not worth the whole goddamn year that I spent on it.
+	\item Then there's the lineshape thing.  This wasn't nearly as useful as I thought it was going to be.  Certainly not worth the whole goddamn year that I spent on it.
 	\begin{itemize}
 		\item I wanted a way to cut down the amount of time spent waiting on big simulations to finish.  Lots of things to check before we get a final number.
 		\item Create a "Simple Monte Carlo" (SMC), using the same new generator to model beta decay kinematics, but without the time-consuming parts of a G4 simulation.  ie, no propagating particles through the experimental chamber.  They don't lose energy, and they don't scatter.  They just go where they were going and hit.  
@@ -175,4 +185,8 @@ Here are some pictures.
 %	\label{fig:lineshape}
 \end{figure}
 
+\section{Simulating the Background}
+\label{sec:tof_bg}
+Our experiment has some background.  It's annoying and stupid, but as long as we can estimate how much of it there is and what it does, it's basically fine.
+\note{Reference Section~\ref{section:emcp_cuts}}
 

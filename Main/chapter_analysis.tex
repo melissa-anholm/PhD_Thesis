@@ -110,7 +110,10 @@ We read out the full waveform for every strip at each event with a scintillator 
 We also elect to use only events where a beta hit the DSSD within a $15.5\,$mm radius of the center of the detector, so as to avoid scattering effects from the collimator walls. \aside{Did I even mention the collimator?  Like, in the previous chapter or something..?}
 
 %Look at all the events to determine how noisy each individual strip is.  Do that for all strips.  Is the energy higher than some noise threshold?  by like a few sigma?
+\note{Also-also (did I mention it already?) look for events with only *one* DSSD hit (two could indicate the beta scattered back out of the detector in another pixel, or alternately an accidental coincidence of two beta decay events.  either way, no good for analysis.)  Also, only one scint hit, and it has to be the on the same detector with the DSSD.   (...A scintillator hit as indicated by a TDC readout, as well as a max. recorded scint energy for the ``extra'' scintillator at something stupidly tiny, like 10 keV.  Probably *actually* 10 keV.) }
 
+\note{After all other cuts -- not before!! -- we eventually use only events with scint energy between 400 - 4800 keV.  High cutoff is because of the low number of events, which makes the observable--the superratio asymmetry--poorly defined and poorly behaved.  Low cutoff is because it's really hard to model what's going on down there to the required level of precision.  The observable depends most heavily on low beta energy events, so it is imperative that the lower energy portion of the spectra be thoroughly understood if they are to be used for analysis. }
+\note{Somewhere I should list what the energy cutoff is for this spectrum.  Or semi-equivalently, the Q-value.}
 
 \section{Further Cuts Using the eMCP}
 \label{section:emcp_cuts}
@@ -122,6 +125,7 @@ The eMCP features a set of three delay lines, intended to be used to record the 
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/eMCP_position.pdf}
+	\note{This picture is `slow'.  Need to re-save it as a png.}
 	\caption{Position as measured on the eMCP, after some data cleaning.}	
 	\label{fig:emcp_position}
 \end{figure}
@@ -160,8 +164,16 @@ With the data reprocessed using the leading edge for timestamps, I wanted to eli
 	\label{fig:WalkAdjust}
 \end{figure}
 
-At this point it becomes necessary to attempt to model the SOE TOF spectrum, as in Fig.~\ref{fig:soetof}.  To check the agreement of the model with reality, we compare the averaged superratio asymmetries from both, as in Fig.~\ref{fig:asymmetry_by_tof}.
-\note{Okay.  This needs more description.}
+%At this point it becomes necessary to attempt to model the SOE TOF spectrum, as in Fig.~\ref{fig:soetof}.  
+With the SOE TOF spectra cleaned up, a cut can be taken to reduce the fraction of background events.  Informed by the model of background spectra described in Section~\ref{sec:tof_bg}, a was made to include only a 2.344 ns window around the primary peak in further analysis \aside{``...removing X fraction of the remaining events."}. (see Fig.~\ref{fig:soetof}).
+\note{Probably need to put that figure somewhere else.}
+
+%For this analysis, the decision was made to use only events within a 2.344 ns window around the primary peak (Fig.~\ref{fig:soetof})  
+%This part
+%To understand the events that remain after this cut, it is necessary to create a model of the background events represented therein.   This is discussed in Section~\ref{sec:tof_bg}.
+
+\note{``To check the agreement of the model with reality, we compare the averaged superratio asymmetries from both, as in Fig.~\ref{fig:asymmetry_by_tof}.'' .... probably goes in the other section.}
+%\note{Okay.  This needs more description.}
 
 \begin{figure}[h!!!!tb]
 	\centering
