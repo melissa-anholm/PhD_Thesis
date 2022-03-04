@@ -57,6 +57,7 @@ The data is further split up into four runsets:  A, B, C, and D based on when ce
 %\note{What did I change between Runsets B and C?  Between Runsets C and D?  ...OP time, yes, but also and one point a PMT(?) (eta:  it was a QDC) blew out and we replaced it, so then the scintillator calibration was a bit different afterward.  Anyway, I should maybe just make a goddamn table.  Table goes here.}
 
 \input{table_runlist}
+\input{table_runlist_electrons}
 
 Before proceeding further, several basic cuts are performed on the data.  For the Electron Runs which are to be processed directly into a physical measurement, we consider only events in which there was a recorded hit \emph{both} on the eMCP \emph{and} on (at least) one of the scintillators.  The required scintillator hit, of course, is potentially a beta, and so it is obvious why this must be present.  The eMCP hit requirement -- particularly with the timing of the eMCP hit occuring within a certain time range relative to the scintillator hit -- is used to tag beta decay events originating from the cloud, as opposed to those originating from some other surface within the chamber.  The precise time interval to be used, and how its results should be evaluated,\aside{also discussed: how we decide what counts as an eMCP hit at all} is discussed in Section~\ref{section:emcp_cuts}, but for the first pass through the data it is good enough to simply require that an eMCP hit occurred.\aside{Awkward stupid phrasing.}  Although not every beta decay event from the cloud will produce a hit on the eMCP, this requirement eliminates a great deal of background that would otherwise be challenging to evaluate.  \aside{Also, we claim that it doesn't bias the data.  Much.  Didn't I try to evaluate how much it biased the data at one point?}  
  
@@ -151,7 +152,7 @@ The place where this change between the TE and LE timestamps had the biggest imp
 With the data reprocessed using the leading edge for timestamps, I wanted to eliminate as much background as possible from the SOE TOF spectrum.  With this goal in mind, the next step was to correct the scintillator timing for its low energy `walk' (see Fig.~\ref{fig:WalkAdjust}).  A quartic polynomial was fit to each of the 2D timing vs energy spectra (the top and bottom detectors were treated separately), and the result was used to produce a `straightened' SOE TOF spectrum with respect to measured scintillator energy, and as expected, the resulting SOE TOF spectrum was a bit more sharply peaked.  
 
 
-\begin{figure}[h!!!!t!]
+\begin{figure}[h!!!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/WalkAdjust.png}
@@ -162,7 +163,7 @@ With the data reprocessed using the leading edge for timestamps, I wanted to eli
 At this point it becomes necessary to attempt to model the SOE TOF spectrum, as in Fig.~\ref{fig:soetof}.  To check the agreement of the model with reality, we compare the averaged superratio asymmetries from both, as in Fig.~\ref{fig:asymmetry_by_tof}.
 \note{Okay.  This needs more description.}
 
-\begin{figure}[h!!!!t!]
+\begin{figure}[h!!!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/SOE_TOF_Spectra.pdf}
@@ -170,8 +171,17 @@ At this point it becomes necessary to attempt to model the SOE TOF spectrum, as 
 	\label{fig:soetof}
 \end{figure}
 
+\begin{figure}[h!!!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/experimental_scintspectra_lin.png}
+	\caption[Experimental Scintillator Spectra]{Experimental Scintillator Spectra, for both detectors in both polarization states.  These spectra are what remain after all cuts have been taken.  All runsets are included.}	
+	\label{fig:scintspectra}
+\end{figure}
 
-\begin{figure}[h!!!!t!]
+
+
+\begin{figure}[h!!!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/asymmetry_by_tof.pdf}

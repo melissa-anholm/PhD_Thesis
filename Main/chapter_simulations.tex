@@ -48,6 +48,16 @@ It is this combined Holstein+JTW expression that forms the basis of the new G4 e
 \begin{itemize}
 	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
 	\note[color=bluetodo]{How many events do we actually have?}
+	\note{Total good events after all the cuts:
+	\\
+	Set B:  173,640
+	\\
+	Set C:  \:\,18,129
+	\\
+	Set D:  207,596
+	\\ --
+	All Runsets:  399,365
+	}
 	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change much when we adjust BSM couplings.  Just use the old event generator from Holstein Eq.~(51).
 	\item Match cuts in simulated data up to the cuts on experimental data.  Obviously.  DSSD cut, DSSD energy, one hit DSSD, one hit scint.  TOF cut, which requires a whole extra model of background in the TOF spectrum..
 		\begin{itemize}
@@ -95,6 +105,7 @@ Here are some pictures.
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/LineshapeParams_part1.png}
+	\note[color=bluetodo]{What even \emph{is} the thing plotted below E0 in the `residuals' spot?}
 	\caption[Lineshape Parameter Fits (Part 1)]{Lineshape Parameter Fits (Part 1)}	
 %	\label{fig:lineshape}
 \end{figure}
@@ -121,6 +132,40 @@ Here are some pictures.
 	\caption[Lineshape Parameter Fits (Part 4)]{Lineshape Parameter Fits (Part 4)}	
 %	\label{fig:lineshape}
 \end{figure}
+
+
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/MonoFit_5000.png}
+	\caption[Fit to Mono-Energetic Spectrum, 5000 keV]{Fit to Mono-Energetic Spectrum, 5000 keV (B-)}	
+\end{figure}
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/MonoFit_3000.png}
+	\caption[Fit to Mono-Energetic Spectrum, 3000 keV]{Fit to Mono-Energetic Spectrum, 3000 keV (B-)}	
+\end{figure}
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/MonoFit_1500.png}
+	\caption[Fit to Mono-Energetic Spectrum, 1500 keV]{Fit to Mono-Energetic Spectrum, 1500 keV (B-)}	
+\end{figure}
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/MonoFit_1000.png}
+	\caption[Fit to Mono-Energetic Spectrum, 1000 keV]{Fit to Mono-Energetic Spectrum, 1000 keV (B-)}	
+\end{figure}
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/MonoFit_750.png}
+	\note{I should probably put a few of these similar fit things together and smaller, somehow.}
+	\caption[Fit to Mono-Energetic Spectrum, 750 keV]{Fit to Mono-Energetic Spectrum, 750 keV (B-)}	
+\end{figure}
+
 
 \begin{figure}[h!!tb]
 	\centering
