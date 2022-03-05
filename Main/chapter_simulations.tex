@@ -4,7 +4,7 @@
 %\section{Simulations}
 \chapter{Simulations}
 \label{simulations_chapter}
-\note[color=jb]{JB:  ``I doubt I will have further useful comments on the Ch. 5, 8, 9 as they are now.'' }
+\note[color=jb]{JB:  ``I doubt I will have further useful comments on the Ch. 5, 8, 9 (now 4, 7, 8) as they are now.'' }
 \note[color=org]{Do I want this in a separate chapter?  Or maybe I want it to be combined with the stuff on data selection and analysis.  Surely that chapter is getting too big even without this stuff.}
 
 The TRINAT collaboration has created a Geant4 (G4) simulation which models the geometry and materials within the experimental chamber, and uses a monte carlo algorithm to describe generalized physical processes such as particle scattering and energy loss, within the geometry specific to the experiment.  This software library has been maintained and updated over several generations of graduate students.  
@@ -22,7 +22,10 @@ The TRINAT G4 monte carlo package had never been used to directly model interact
 \aside{because for $\Abeta$ even a BSM interaction will *basically* look like a SM interaction, and I think something somewhere isn't precise enough to distinguish it.}  
 It had  previously been set up by the collaboration to use a probability density function (PDF) including most of the terms from Holstein's Eq. (51)~\cite{holstein}, which describes both electron and neutrino momenta from polarized beta decay.  This treatment is quite robust, and includes corrections at recoil-order, as well as certain other corrections of similar size.~\aside[color=bluetodo]{which other corrections?  coulomb and/or radiative corrections, but somehow when I say that, I'm apparently talking about a different thing than everyone else who uses those terms.  also, weak magnetism. also ... ???}
 
-Unfortunately, terms arising from interactions beyond the standard model are not included in Holstein's description of the decay process. \aside{Is this true?  Does it not include *any* BSM interactions?}  To understand the kinematic results of the exotic interactions of interest to us here, we turn to the classic JTW treatment of beta decay~\cite{jtw}~\cite{jtw_coulomb}.  In addition to the (expected) vector and axial interactions, JTW also describes the interaction in terms of (exotic) scalar and tensor interactions, should such be present.  Furthermore, although it is currently understood that the weak interaction is predominantly or perhaps entirely `left-handed', the JTW treatment leaves certain phase angles unfixed, and is therefore able to accurately describe a decay which is, for example, partially `right-handed' -- however the latter feature is not directly relevant to the project at hand.  ~\aside{It's several phase angles in JTW, but maybe it's fundamentally only like one angle on some level?  Also I think it's not actually a ``gauge freedom,'' per se.}  Despite JTW's broad ability to describe beta decay under a variety of physical models, this treatment includes only the leading-order terms, and smaller terms, such as recoil-order corrections, are neglected entirely.  
+Unfortunately, terms arising from interactions beyond the standard model are not included in Holstein's description of the decay process. \aside{Is this true?  Does it not include *any* BSM interactions?}  To understand the kinematic results of the exotic interactions of interest to us here, we turn to the classic JTW treatment of beta decay~\cite{jtw}~\cite{jtw_coulomb}.  In addition to the (expected) vector and axial interactions, JTW also describes the interaction in terms of (exotic) scalar and tensor interactions, should such be present.  
+\note{Furthermore, although it is currently understood that the weak interaction is predominantly or perhaps entirely `left-handed', the JTW treatment leaves certain phase angles unfixed, and is therefore able to accurately describe a decay which is, for example, partially `right-handed' -- however the latter feature is not directly relevant to the project at hand.  [It's several phase angles in JTW, but maybe it's fundamentally only like one angle on some level?  Also I think it's not actually a ``gauge freedom,'' per se.  .... No, I'm pretty sure this `phase angle' description is all wrong.]  Also, consider time reversal!  Anyway, most of this paragraph probably goes better in Section~\ref{sec:math_formalism}.}
+Despite JTW's broad ability to describe beta decay under a variety of physical models, this treatment includes only the leading-order terms, and smaller terms, such as recoil-order corrections, are neglected entirely.  
+
 \note[color=org]{Surely I describe what recoil-order corrections even *are* in some appendix somewhere, right?  Or, possibly, in Section~\ref{sec:math_formalism}.  Possibly the paragraphs above need to be moved...}
 
 Because the present project is a precision measurement of the Fierz interference, a term which arises from scalar and tensor couplings, it was imperative to create an event generator for our G4 simulations that could account for these exotic interactions while also including in its PDF the higher-order effects which, in some cases, can mimic the effects of a scalar or tensor current.  
@@ -40,75 +43,50 @@ It is this combined Holstein+JTW expression that forms the basis of the new G4 e
 %	\item \greycomment{ Update G4 event generator to be able to model non-zero scalar and tensor coupling.  These things show up in $\Abeta$ too, not just in $\bFierz$.  Though, the effects on $\Abeta$ are much smaller. }
 %\end{itemize}
 
-\section{Specifics of the Simulations}
-\note{This is a stupid section title.}
-
-
-%With the Simulations:
-\begin{itemize}
-	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
-	\note[color=bluetodo]{How many events do we actually have?}
-	\note{Total good events after all the cuts:
-	\\
-	Set B:  173,640
-	\\
-	Set C:  \:\,18,129
-	\\
-	Set D:  207,596
-	\\ --
-	All Runsets:  399,365
-	}
-	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change much when we adjust BSM couplings.  Just use the old event generator from Holstein Eq.~(51).
-	\item Match cuts in simulated data up to the cuts on experimental data.  Obviously.  DSSD cut, DSSD energy, one hit DSSD, one hit scint.  TOF cut, which requires a whole extra model of background in the TOF spectrum..
-		\begin{itemize}
-		\item Suppose background in the TOF spectrum is coming from decays of atoms that have gotten themselves stuck to surfaces within the chamber...
-		\item Run G4 to get a beta TOF spectrum (w.r.t. the decay)
-		\item Run COMSOL (credit to Alexandre) to track low-energy SOEs through the electric field from wherever they started, into the detectors.  Energy spectra from Levinger.
-		\item Combine G4 and COMSOL spectra, event-by-event, while requiring that both the beta detector and the eMCP are hit according to the set of random numbers generated by each monte carlo separately.  Then, the beta and SOE will each have a TOF from decay to detector, and subtracting one from the other gives a timing spectrum that can be observed experimentally.  See Fig.~\ref{fig:soetof}.
-		\item Upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the trap not due to radioactive decay emerge isotropically from the trap and then stick to whatever chamber wall is in its path.  This upper limit is too big by a factor of 2.
-		\end{itemize}
-	\item For each of those 3 simulations, sort the ``good'' data according to emission angle relative to the detector.  Do each detector individually.  For both polarizations.
-	\item Assemble the (simulated) superratio asymmetry.  We'll compare it to data, and the $\chi^2$ from that comparison will be our figure of merit.  
-	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.
-	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
-\end{itemize}
-
 
 \section{The Simple Monte Carlo and Lineshape}
 \label{sec:lineshape}
-Because of the processor time required to run high statistics Geant4 simulations even after enabling multithreading support, it was desirable to develop a procedure by which it would be possible to evaluate certain systematic effects while avoiding the computationally intensive simulations that might traditionally be used.  To this end, a fast-running Simple Monte Carlo (SMC) was developed together with an empirical ``lineshape'' to describe probabilistic beta energy loss before its detection in a scintillator.  In the end, the lineshape description became quite involved, and it is unclear whether, in the end, any time was saved this way. 
+Because of the large number of systematic effects to be examined, and because of the processor time required to run a high statistics Geant4 simulation even after enabling multithreading support, it was desirable to develop a procedure by which it would be possible to evaluate certain systematic effects while avoiding the computationally intensive simulations that might traditionally be used.  To this end, a fast-running Simple Monte Carlo (SMC) was developed together with an empirical ``lineshape'' to describe probabilistic beta energy loss before its detection in a scintillator.  In the end, the lineshape description became quite involved, and it is unclear whether, in the end, any time was saved this way. 
 
-The purpose of the SMC was to probabilistically generate initial particle kinematics for beta decay events, and uses the very same event generator based on Holstein's Eq.~(52)~\cite{holstein} that was developed for use with the more sophisticated Geant4 simulations.  However, unlike in a G4 simulation, the SMC makes no attempt to track particles through the chamber, and instead simply calculates detector hits based on initial particle momentum.  This procedure obviously neglects scattering effects, which can (in differing regimes) both \emph{increase} and \emph{decrease} the number of beta particles incident on a beta detector.  This procedure similarly neglects any energy absorption in materials the beta passes through before hitting a detector -- and the beta \emph{must} pass through several such materials (see Fig.~\ref{chamber_decayevent}).  In particular, before hitting a scintillator, a beta must pass through a $275\,\mu m$ thick SiC mirror, a $229\,\mu m$ thick beryllium foil used to separate the inner portion of the vacuum chamber from the outside world, and finally, a set of $300\,\mu m$ thick Silicon strip detectors (DSSDs), before finally having its remaining energy absorbed within a scintillator.  
+The purpose of the SMC was to \emph{quickly} generate initial particle kinematics probabilistically for beta decay events, and uses the very same event generator based on Holstein's Eq.~(52)~\cite{holstein} that was developed for use with the more sophisticated Geant4 simulations.  However, unlike in a G4 simulation, the SMC makes no attempt to track particles through the chamber, and instead simply calculates detector hits based on initial particle momentum.  This procedure obviously neglects scattering effects, which can (in differing regimes) both \emph{increase} and \emph{decrease} the number of beta particles incident on a detector.  Furthermore, this procedure also neglects any energy absorption in materials through which the beta passes before hitting a scintillator -- and the beta \emph{must} pass through several such materials (see Fig.~\ref{chamber_decayevent}).
+%This procedure similarly neglects any energy absorption in materials the beta passes through before hitting a detector -- and the beta \emph{must} pass through several such materials (see Fig.~\ref{chamber_decayevent}).  
+%Because this energy loss is unaccounted for within the SMC itself, it is necessary to account for it 
 
-\note{(Although the DSSDs are able in principle to record the amount of energy deposited by an incident particle, there have been some problems in achieving a uniform level of precision across the full surface of the DSSDs, so adding the DSSD energy back to the scintillator energy to produce a better estimate of the original beta energy has the potential to create some problems for the analysis.)}
+To make the best use of the SMC for evaluating systematic errors, the energy lost before a beta hits a scintillator must be accounted for somehow in order to ensure all relevant physical effects are propagated through.  In particular, before hitting a scintillator, a beta must pass through a $275\,\mu m$ thick silicon carbide mirror, a $229\,\mu m$ thick beryllium foil, %used to separate the inner portion of the vacuum chamber from the outside world
+and finally a set of $300\,\mu m$ thick double-sided silicon strip detectors (DSSDs), before finally having its remaining energy absorbed within a scintillator.  Although the DSSDs are themselves detectors with the ability to record the amount of energy deposited by an incident particle, there have been some problems in achieving a uniform level of precision across the full surface of the DSSDs,\aside{See:  Some other section?  Maybe?} so adding the DSSD energy back to the scintillator energy to produce a better estimate of the original beta energy has the potential to create some problems for the analysis, and does not eliminate the need to estimate probabilistic energy loss in materials.  
 
-  %This of course means that scattering is ne 
+In order to quantitatively describe the effective lineshape~\aside{Have I *even* described what I mean by a ``lineshape''?  I'm pretty sure I haven't.  Ugh.} for betas emitted at all (relevant) energies, we use the TRINAT Geant4 simulation to generate a series of `mono-energetic' spectra.  That is, for each energy value under consideration, decay events are generated in which every outgoing beta initially has one particular amount of kinetic energy -- the same for all events -- and the angular distribution of these betas is physically appropriate for the polarization and beta energy under consideration.~\aside{Do I need the angular distribution in the end?  I think maybe I put in scattering later, and just used a cone for the first round.  I re-did this to do the opposite thing at some point.}  These mono-energetic betas are propagated through the experimental geometry via Geant4, and the resulting scintillator spectra are recorded.  
 
-
+%decay events with all betas initially given one specific amount of kinetic energy -- are generated with the appropriate angular pro   
+%propagate these events through the chamber geometry, and observe the scintillator energy spectrum that results.  
 
 \begin{itemize}
-	\item Then there's the lineshape thing.  This wasn't nearly as useful as I thought it was going to be.  Certainly not worth the whole goddamn year that I spent on it.
-	\begin{itemize}
-		\item I wanted a way to cut down the amount of time spent waiting on big simulations to finish.  Lots of things to check before we get a final number.
-		\item Create a "Simple Monte Carlo" (SMC), using the same new generator to model beta decay kinematics, but without the time-consuming parts of a G4 simulation.  ie, no propagating particles through the experimental chamber.  They don't lose energy, and they don't scatter.  They just go where they were going and hit.  
-		\item SMC simulations run nice and fast!  Yay!
-		\item ...But, we can't just take them at face value.  We're neglecting very real physical processes to get these SMC results.  
-		\begin{itemize}
-			\item We should put that energy loss back in.  Probabilistically.
-			\item Also, we ``lose'' some betas due to scattering that were initally directed towards a beta detector.  
-			\item Also-also, we ``gain'' some particles due to scattering that were initially directed at some other surface.  
-			\item \note{Um.  Which of these things did I actually put in at the end?  I tried with/without .... scattering, I think?  and eventually decided not to do it.  for some reason.  I think it breaks normalization in some way that's more subtle than you would think.}
-		\end{itemize}
-		\item But where do we get the lineshape?  G4 simulation of lots of beta decays at a \emph{single} beta energy, but with an (initial) angular distribution representative of beta decays at that energy.  Do that at a bunch of beta energies.
+%	\item \greycomment {Then there's the lineshape thing.  This wasn't nearly as useful as I thought it was going to be.  Certainly not worth the whole goddamn year that I spent on it.}
+%%	\begin{itemize}
+%		\item \greycomment{I wanted a way to cut down the amount of time spent waiting on big simulations to finish.  Lots of things to check before we get a final number.}
+%		\item \greycomment{ Create a "Simple Monte Carlo" (SMC), using the same new generator to model beta decay kinematics, but without the time-consuming parts of a G4 simulation.  ie, no propagating particles through the experimental chamber.  They don't lose energy, and they don't scatter.  They just go where they were going and hit.}
+%		\item \greycomment{ SMC simulations run nice and fast!  Yay!}
+%		\item \greycomment{ ...But, we can't just take them at face value.  We're neglecting very real physical processes to get these SMC results.  }
+%		\begin{itemize}
+%			\item \greycomment{ We should put that energy loss back in.  Probabilistically. }
+%			\item \greycomment{ Also, we ``lose'' some betas due to scattering that were initally directed towards a beta detector.  }
+%			\item \greycomment{ Also-also, we ``gain'' some particles due to scattering that were initially directed at some other surface.  }
+%		\end{itemize}
+		\item \greycomment{ But where do we get the lineshape?  G4 simulation of lots of beta decays at a \emph{single} beta energy, but with an (initial) angular distribution representative of beta decays at that energy.  Do that at a bunch of beta energies. }
 		\item For all these mono-energetic runs, you apply whatever set of cuts you selected to use on the data, and look only at the events that pass those cuts.  
 		\item For mono-energetic spectra events that pass the cuts, look at how much energy G4 thinks you would have measured just in the scintillator.  There'll be a distribution.  
-		\item \note{Needs a picture (several pictures) of the resulting energy distributions.}
-		\item \note{Which mono-energies did I use, again?  Maybe make a list/table.}
-		\item something something Landau distribution.  Something something Clifford.~\cite{clifford}
-	\end{itemize}
+		\item something something Landau distribution.  Something something Clifford~\cite{clifford}.  Something something Moyal.
+%	\end{itemize}
 \end{itemize}
 
-Here are some pictures.
+
+\note{Which mono-energies did I use, again?  Maybe make a list/table.}
+
+\note{Needs a picture of the *full* beta energy distributions that come out of the lineshape thing.  To compare with (a) data and (b) G4.  Probably a superratio in there somewhere too.}
+
+\note{Um.  Which of the scattering things did I actually put in at the end?  And when did I do it?  Like, how did I account for (back-)scattering?  I tried with/without .... scattering, I think?  and eventually decided not to do it.  for some reason.  I think it breaks normalization in some way that's more subtle than you would think.}
+
+Here are some pictures, scattered over many of the succeeding pages.
 
 
 \begin{figure}[h!!tb]
@@ -189,4 +167,51 @@ Here are some pictures.
 \label{sec:tof_bg}
 Our experiment has some background.  It's annoying and stupid, but as long as we can estimate how much of it there is and what it does, it's basically fine.
 \note{Reference Section~\ref{section:emcp_cuts}}
+
+\begin{itemize}
+		\item TOF cut requires a whole extra model of background in the TOF spectrum..
+	%	\begin{itemize}
+		\item Suppose background in the TOF spectrum is coming from decays of atoms that have gotten themselves stuck to surfaces within the chamber...
+		\item Run G4 to get a beta TOF spectrum (w.r.t. the decay)
+		\item Run COMSOL (credit to Alexandre) to track low-energy SOEs through the electric field from wherever they started, into the detectors.  Energy spectra from Levinger.
+		\item Combine G4 and COMSOL spectra, event-by-event, while requiring that both the beta detector and the eMCP are hit according to the set of random numbers generated by each monte carlo separately.  Then, the beta and SOE will each have a TOF from decay to detector, and subtracting one from the other gives a timing spectrum that can be observed experimentally.  See Fig.~\ref{fig:soetof}.
+		\item Upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the trap not due to radioactive decay emerge isotropically from the trap and then stick to whatever chamber wall is in its path.  This upper limit is too big by a factor of 2.
+	%	\end{itemize}
+	\item For each of those 3 simulations, sort the ``good'' data according to emission angle relative to the detector.  Do each detector individually.  For both polarizations.
+	\item Assemble the (simulated) superratio asymmetry.  We'll compare it to data, and the $\chi^2$ from that comparison will be our figure of merit.  
+	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.
+	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
+\end{itemize}
+
+
+\section{Comparing Simulations with Experimental Data}
+%\note{This is a stupid section title.}
+%With the Simulations:
+\begin{itemize}
+	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
+	\note[color=bluetodo]{How many events do we actually have?}
+	\note{Total good events after all the cuts:
+	\\
+	Set B:  173,640
+	\\
+	Set C:  \:\,18,129
+	\\
+	Set D:  207,596
+	\\ --
+	All Runsets:  399,365
+	}
+	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change much when we adjust BSM couplings.  Just use the old event generator from Holstein Eq.~(51).
+	\item Match cuts in simulated data up to the cuts on experimental data.  Obviously.  DSSD cut, DSSD energy, one hit DSSD, one hit scint.  TOF cut, which requires a whole extra model of background in the TOF spectrum (see Section~\ref{sec:tof_bg}).
+%		\begin{itemize}
+%		\item Suppose background in the TOF spectrum is coming from decays of atoms that have gotten themselves stuck to surfaces within the chamber...
+%		\item Run G4 to get a beta TOF spectrum (w.r.t. the decay)
+%		\item Run COMSOL (credit to Alexandre) to track low-energy SOEs through the electric field from wherever they started, into the detectors.  Energy spectra from Levinger.
+%		\item Combine G4 and COMSOL spectra, event-by-event, while requiring that both the beta detector and the eMCP are hit according to the set of random numbers generated by each monte carlo separately.  Then, the beta and SOE will each have a TOF from decay to detector, and subtracting one from the other gives a timing spectrum that can be observed experimentally.  See Fig.~\ref{fig:soetof}.
+%		\item Upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the trap not due to radioactive decay emerge isotropically from the trap and then stick to whatever chamber wall is in its path.  This upper limit is too big by a factor of 2.
+%		\end{itemize}
+%	\item For each of those 3 simulations, sort the ``good'' data according to emission angle relative to the detector.  Do each detector individually.  For both polarizations.
+%	\item Assemble the (simulated) superratio asymmetry.  We'll compare it to data, and the $\chi^2$ from that comparison will be our figure of merit.  
+%	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.
+%	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
+\end{itemize}
 
