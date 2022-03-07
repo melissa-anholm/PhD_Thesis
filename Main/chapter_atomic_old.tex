@@ -4,7 +4,8 @@
 %
 %%%% --- * --- %%%%	
 \clearpage
-\chapter{Atomic Physics Overview}
+%\chapter{Atomic Physics Overview}
+\chapter{General Considerations of Atomic Techniques Used}
 \label{atomicphysics_chapter}
 
 \note[color=jb]{JB:  First, I'm pretty sure you should combine Chs. 3 and 4 (now 2 and 3).
@@ -182,20 +183,14 @@ The overall effect on a one-dimensional cloud of atoms in the path of two counte
 %%% % % % %%%
 \section{Optical Pumping}
 \label{sec:op}
-\note[color=jb]{3.2 (that's this section!  now 2.2):
-\\
-You cover what is needed for optical pumping well in "4.2 (now 3.2) the AC MOT and Poalrization setup"
-Just say here indeed
-"The optical pumping process is describe in detail in our collaboration's
-Ref.~\cite{ben_OP}. The main detail described here is that the
-optical pumping is distrubed by any component of magnetic field not along
-the quantization axis. (Ours is the vertical axis, defined by the direction
-of the optical pumping light, and along which the detectors are placed.)
-This required sophistication with an AC MOT described below.
-\\ ... \\
-Then you can refer to that in section 3.4 (now 2.4), where you're trying to now but the phrasing is poor."}
+\note[color=jb]{Direct quote from John follows below:  }
+\comment{The optical pumping process is described in detail in our collaboration’s Ref.~\cite{ben_OP}. The main detail described here is that the optical pumping is distrubed by any component of magnetic field not along the quantization axis. (Ours is the vertical axis, defined by the direction of the optical pumping light, and along which the detectors are placed.) This required sophistication with an AC MOT described below.}
 
-\note{Needs work.}
+\note[color=jb]{End quote from John.  But also!:
+\\
+``...Then you can refer to that(Sec.~\ref{photoions}) in section 3.4 (now 2.4), where you're trying to now but the phrasing is poor.''}
+
+%\note{Needs work.}
 \note{``Until recently, one limitation of such samples was the necessity for the presence of a relatively large magnetic field, which is expected to partially destroy atomic polarization, limiting the precision of many types of measurements.  Here we discuss the construction of a newer type of MOT, the AC-MOT, which minimizes residual magnetic fields.  The guys in~\cite{harveymurray} came up with the idea of the AC-MOT.  They made it work and did some stuff with it.  Good for them.''}
 Need a nice, uniform, constant magnetic field for your polarization to larmor precess around.  Then, however depolarized (from the axis of the magnetic field) you were to start out, you don't like precess in a way that changes the projection you care about.
 
@@ -277,7 +272,7 @@ Sadly, this also removes our trapping mechanism.  We could keep the optical mola
 Anyway, the idea of the AC-MOT is to run a sinusoidal current through your anti-Helmholtz coils.  You'll get eddy currents in your nearby metal *stuff* when you have a changing current, and those will *also* make a magnetic field. So, the idea with an AC-MOT is that with a sinusoid, you have clear control over what the eddy currents are actually doing, and you can just shut the current off when the eddy currents are zero (current in the anti-Helmholtz coils will be close to zero at this time too, depending on frequency of the sinusoid...), so you can reduce the size of the eddy currents by like an order of magnitude.  Eddy currents in general take a while to die away, so it's good to make them as small as possible.  ...Also, eddy currents making a magnetic field will screw up your optical pumping, because .... um, reasons?  I think it's not just the detuning, it's also something about the Larmor precession.  
 
 
-\note[color=done]{Removed `Photoionization as a Probe' section from the `Intro to Atomic Physics' section, because John says it's horribly wrong anyhow.  Plus, it's redundant with the `Photoionization Laser' section.}
+\note[color=done]{Removed `Photoionization as a Probe' section from the `Intro to Atomic Physics' section, because John says it's horribly wrong anyhow.  Plus, it's redundant with the `Photoionization Laser' section~(\ref{photoions}).}
 %\section{Photoionization as a Probe}
 %\label{sec:photoprobe}
 %\note[color=jb]{JB on 3.5 `Photoionization as a probe' (that's this section!):
