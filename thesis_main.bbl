@@ -13,10 +13,20 @@ Fenker, B., Behr, J.~A., Melconian, D., Anderson, R. M.~A., Anholm, M., Ashery,
 Anholm, M., Characterizing the {AC-MOT}, Master's thesis, University of British
   Columbia, 2014.
 
+\bibitem{falkowski2021}
+Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
+  \textit{Comprehensive analysis of beta decays within and beyond the Standard
+  Model}, Journal of High Energy Physics, Vol.~2021, No.~4, pp.~1--36, 2021.
+
 \bibitem{hong_sternberg_garcia}
 Hong, R., Sternberg, M.~G. {\mdseries and} Garcia, A., \textit{Helicity and
   nuclear $\beta$ decay correlations}, American Journal of Physics, Vol.~85,
   No.~1, pp.~45--53, 2017.
+
+\bibitem{jtw}
+Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
+  Tests of Time Reversal Invariance in Beta Decay}, Phys. Rev., Vol.~106,
+  pp.~517--521, May 1957.
 
 \bibitem{Levinger}
 Levinger, J.~S., \textit{Effects of Radioactive Disintegrations on Inner
@@ -62,37 +72,8 @@ Saul, H., Roick, C., Abele, H., Mest, H., Klopf, M., Petukhov, A.~K., Soldner,
   Fierz Interference Term $b$ from a Measurement of the Beta Asymmetry in
   Neutron Decay}, Phys. Rev. Lett., Vol.~125, pp.~112501, Sep 2020.
 
-\bibitem{jtw}
-Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
-  Tests of Time Reversal Invariance in Beta Decay}, Phys. Rev., Vol.~106,
-  pp.~517--521, May 1957.
-
 \bibitem{deShalit1963}
 de~Shalit, A. {\mdseries and} Talmi, I., Nuclear Shell Theory.
-
-\bibitem{Falkowski2021}
-Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
-  \textit{Comprehensive analysis of beta decays within and beyond the Standard
-  Model}, Journal of High Energy Physics, Vol.~2021, No.~4, pp.~1--36, 2021.
-
-\bibitem{Jelley}
-Jelley, N.~A., Fundamentals of Nuclear Physics, Cambridge University Press,
-  1990.
-
-\bibitem{SeverijnsTandecki2008}
-Severijns, N., Tandecki, M., Phalet, T. {\mdseries and} Towner, I.~S.,
-  \textit{$\mathcal{F}t$ values of the $T=1/2$ mirror \ensuremath{\beta}
-  transitions}, Phys. Rev. C, Vol.~78, pp.~055501, Nov 2008.
-
-\bibitem{HayenSeverijns2019}
-{Hayen}, L. {\mdseries and} {Severijns}, N., \textit{{Radiative corrections to
-  Gamow-Teller decays}}, arXiv e-prints, p. arXiv:1906.09870, Jun. 2019.
-
-\bibitem{Combs2020}
-{Combs}, D., {Jones}, G., {Anderson}, W., {Calaprice}, F., {Hayen}, L.
-  {\mdseries and} {Young}, A., \textit{{A look into mirrors: A measurement of
-  the $\beta$-asymmetry in $^{19}$Ne decay and searches for new physics}},
-  arXiv e-prints, p. arXiv:2009.13700, Sep. 2020.
 
 \bibitem{krane}
 Krane, K.~S., Introductory Nuclear Physics, Wiley, New York, 1988.

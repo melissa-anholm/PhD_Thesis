@@ -6,10 +6,11 @@
 \clearpage
 \chapter{Analysis}
 \label{analysis_chapter}
-\note[color=jb]{JB says:  ``ch 7 (now ch.6) looks fine to me.''  ...even in spite of the giant paragraph suggestions below, I guess.}
+\note[color=org]{from JB, on whether to combine `Analysis' chapter with `Calibrations' chapter:  ``I see no special reason either way.  I would say the topics seem distinct.''}
+%
+\note[color=jb]{JB says:  ``ch 7 (now ch.6) ((Ch.5)) looks fine to me.''  ...even in spite of the giant paragraph suggestions below, I guess.}
 %\note[color=org]{Do I actually want to combine this with Chapter~\ref{calibrations_chapter}?}
-\note[color=org]{from JB:  you ask at the start if you should combine it (Ch.7 (now Ch.6), `Analysis') with Ch.6 (now Ch.5) `Calibrations'. I see no special reason either way.  I would say the topics seem distinct.}
-
+%\note[color=org]{from JB:  you ask at the start if you should combine it (Ch.7 (now Ch.6) ((Ch.5)), `Analysis') with Ch.6 (now Ch.5) `Calibrations'. I see no special reason either way.  I would say the topics seem distinct.}
 \note[color=jb]{John proposes an intro statement for this chapter.  The following two paragraphs are a direct quote from him:}
 
 %\note[color=jb]{JB:  Here is what I suggest for the intro the Analysis section:  (n.b.:  at the time of this comment, that was Ch.7)
@@ -52,7 +53,9 @@ in practice the two detectors produced quite a bit of feedback when operated at 
 While the beta asymmetry and Fierz interference are best evaluated using the electron runs, the recoil runs are best for evaluating the polarization (a dominant uncertainty in the beta asymmetry measurement) and the cloud position.  The polarization measurement is the subject of a recent publication (see~\cite{ben_OP}), and the cloud position evaluation is discussed in more detail in Chapter~\ref{calibrations_chapter}.
 
 The data is further split up into four runsets:  A, B, C, and D based on when certain detection settings were adjusted, and each of these runsets contains both electron and recoil runs.  These four runsets were then treated separately for nearly all parts of the analysis.  In particular, Data Set A was neglected completely during analysis after it was determined that one scintillator had an improperly set hardware threshold such that lower energy betas weren't being detected at all.  Additionally, there was a QDC module failure between Runsets B and C, resulting in an abrupt change in calibration for the two scintillators.  
-\note{Also, the background was too noisy in Set A I think.  Also, pretty sure there isn't really that much data in Set A at all.  Also-also, Set A has E=66.7, so can't use it for more stats on the other backgrounds. ... Maybe I should just look up what the deal even was with Set A, since I don't really remember.} 
+\note{`The observant reader may find it curious that the listed runsets start at ``B'' and continue alphabetically.  There was initially a ``Runset A'' collected as well, however it was determined later that this data could not be salvaged for use in the final analysis because one of the scinitillators had its hardware threshold set above the compton peak, and without that reference point an accurate calibration could not be performed.'}
+
+%\note{Also, the background was too noisy in Set A I think.  Also, pretty sure there isn't really that much data in Set A at all.  Also-also, Set A has E=66.7, so can't use it for more stats on the other backgrounds. ... Maybe I should just look up what the deal even was with Set A, since I don't really remember.} 
 
 %\note{What did I change between Runsets B and C?  Between Runsets C and D?  ...OP time, yes, but also and one point a PMT(?) (eta:  it was a QDC) blew out and we replaced it, so then the scintillator calibration was a bit different afterward.  Anyway, I should maybe just make a goddamn table.  Table goes here.}
 
@@ -78,7 +81,7 @@ Finally, because this analysis depends heavily on energy measurements from the t
 \section{Further Cuts Using the DSSD}
 %\note[color=org]{Have I even defined `DSSD' yet?}
 \note[color=org]{Pretty sure I'm repeating myself from Chapter~\ref{???}}
-\note[color=jb]{JB says: To repeat a comment, since the Appendix on analysis changes is being dispersed throughout, when you state somewhere (I think it's in Ch. 6) make sure you state clearly that the only change for BB1 cuts
+\note[color=jb]{JB says: To repeat a comment, since the Appendix on analysis changes is being dispersed throughout, when you state somewhere (I think it's in Ch. 6)((5?)) make sure you state clearly that the only change for BB1 cuts
 is the radius cut, e.g. that you took the same T and E from the waveforms (I'm not even sure whether the
 waveforms are recorded anyway). You  ask 'how can I state this' but there's no reason to be subtle.
 Just say upfront that Ben and Spencer's theses did all the groundwork on the BB1, and here you include selected details needed to understand the present analysis. If you need to include some redundant material, don't worry too much about that.
@@ -98,9 +101,9 @@ In order to proceed at this point, and because the DSSD readout records so much 
 
 \note{How do I *say* that Ben was the one who did most of the DSSD calibration stuff?  I maybe don't need to describe all of it here, but I *could*, and maybe it's needed in order to understand like 4 rows in my error budget.}  
 
-\note[color=jb]{JB:  ``You can describe anything you did differently or improved, but you can and should otherwise defer all details of the scintillator calibration and DSSD calibration to Ben's paper and his thesis and Spencer's.  E.g. Section~\ref{section:bb1_systematics} ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement."
+\note[color=jb]{JB:  ``You can describe anything you did differently or improved, but you can and should otherwise defer all details of the scintillator calibration and DSSD calibration to Ben's paper and his thesis and Spencer's.  E.g. Section~\ref{section:bb1_systematics} ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement.''
 \label{thesisconventionjb} }
-\note[color=jb]{JB:  ``If you have some way of documenting the coding you used, that would be great."  ... yeah, it would, wouldn't it?}
+\note[color=jb]{JB:  ``If you have some way of documenting the coding you used, that would be great.''  ... yeah, it would, wouldn't it?}
 
 
 We read out the full waveform for every strip at each event with a scintillator hit, but in post-processing take \emph{only} the `time' and `energy' from the peak waveform height and the time in the waveform at which that occurs. Each strip will have its own noise spectrum and energy calibration.  To classify an event as a good DSSD hit, we require at least one `x' strip and one `y' strip record an energy above the noise threshold.  We require that the x strip and the y strip agree (to within some number of standard deviations) in amount of energy deposited, and in the time at which that hit occurred.  In order to avoid problems resulting from the strips' non-uniform noise thresholds, we further require that the energy deposited be greater than some lower-end cutoff which is selected so as to be higher than every individual strip's noise threshold.  In this case, the DSSD's lower energy uniform threshold was set at 50 keV.  
