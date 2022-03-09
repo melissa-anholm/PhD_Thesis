@@ -1,5 +1,8 @@
 % !TEX root = ../thesis_main.tex
-
+% 
+% 
+% 
+% 
 %%%% --- * --- %%%%	
 %\section{Simulations}
 \chapter{Simulations}
@@ -44,23 +47,68 @@ It is this combined Holstein+JTW expression that forms the basis of the new G4 e
 %\end{itemize}
 
 
-\section{The Simple Monte Carlo and Lineshape}
+\section{The Simple Monte Carlo and Response Function}
 \label{sec:lineshape}
-Because of the large number of systematic effects to be examined, and because of the processor time required to run a high statistics Geant4 simulation even after enabling multithreading support, it was desirable to develop a procedure by which it would be possible to evaluate certain systematic effects while avoiding the computationally intensive simulations that might traditionally be used.  To this end, a fast-running Simple Monte Carlo (SMC) was developed together with an empirical ``lineshape'' to describe probabilistic beta energy loss before its detection in a scintillator.  In the end, the lineshape description became quite involved, and it is unclear whether, in the end, any time was saved this way. 
+\note{``Response Function''.  It's a ``response function.''}
+Because of the large number of systematic effects to be examined, and because of the processor time required to run a high statistics Geant4 simulation even after enabling multithreading support, it was desirable to develop a procedure by which it would be possible to evaluate certain systematic effects while avoiding the computationally intensive simulations that might traditionally be used.  To this end, a fast-running Simple Monte Carlo (SMC) was developed together with an empirical ``response function'' similar to the one described by Clifford et al~\cite{clifford} to describe probabilistic beta energy loss before its detection in a scintillator.  In the end, the lineshape description became quite involved, and it is unclear whether, in the end, any time was saved this way. 
 
-The purpose of the SMC was to \emph{quickly} generate initial particle kinematics probabilistically for beta decay events, and uses the very same event generator based on Holstein's Eq.~(52)~\cite{holstein} that was developed for use with the more sophisticated Geant4 simulations.  However, unlike in a G4 simulation, the SMC makes no attempt to track particles through the chamber, and instead simply calculates detector hits based on initial particle momentum.  This procedure obviously neglects scattering effects, which can (in differing regimes) both \emph{increase} and \emph{decrease} the number of beta particles incident on a detector.  Furthermore, this procedure also neglects any energy absorption in materials through which the beta passes before hitting a scintillator -- and the beta \emph{must} pass through several such materials (see Fig.~\ref{chamber_decayevent}).
+The purpose of the SMC was to \emph{quickly} generate initial particle kinematics probabilistically for beta decay events, and it uses the very same event generator based on Holstein's Eq.~(52)~\cite{holstein} that was developed for use with the more sophisticated Geant4 simulations.~\aside{Reference previous section where I discuss this, maybe?}  However, unlike in a G4 simulation, the SMC makes no attempt to track particles through the chamber, and instead simply calculates detector hits based on initial particle momentum.  This procedure obviously neglects scattering effects, which can (in differing regimes) both \emph{increase} and \emph{decrease} the number of beta particles incident on a detector.  Furthermore, this procedure also neglects any energy absorption in materials through which the beta passes before hitting a scintillator -- and the beta \emph{must} pass through several such materials (see Fig.~\ref{chamber_decayevent}).
 %This procedure similarly neglects any energy absorption in materials the beta passes through before hitting a detector -- and the beta \emph{must} pass through several such materials (see Fig.~\ref{chamber_decayevent}).  
 %Because this energy loss is unaccounted for within the SMC itself, it is necessary to account for it 
 
 To make the best use of the SMC for evaluating systematic errors, the energy lost before a beta hits a scintillator must be accounted for somehow in order to ensure all relevant physical effects are propagated through.  In particular, before hitting a scintillator, a beta must pass through a $275\,\mu m$ thick silicon carbide mirror, a $229\,\mu m$ thick beryllium foil, %used to separate the inner portion of the vacuum chamber from the outside world
-and finally a set of $300\,\mu m$ thick double-sided silicon strip detectors (DSSDs), before finally having its remaining energy absorbed within a scintillator.  Although the DSSDs are themselves detectors with the ability to record the amount of energy deposited by an incident particle, there have been some problems in achieving a uniform level of precision across the full surface of the DSSDs,\aside{See:  Some other section?  Maybe?} so adding the DSSD energy back to the scintillator energy to produce a better estimate of the original beta energy has the potential to create some problems for the analysis, and does not eliminate the need to estimate probabilistic energy loss in materials.  
+and finally a set of $300\,\mu m$ thick double-sided silicon strip detectors (DSSDs), before finally having its remaining energy absorbed within a scintillator.  Although the DSSDs are themselves detectors with the ability to record the amount of energy deposited by an incident particle, there are some known problems in achieving a uniform level of precision across the full surface of the DSSDs,\aside{See:  Some other section?  Maybe?} so adding the DSSD energy back to the scintillator energy to produce a better estimate of the original beta energy has the potential to create some problems for the analysis.  Furthermore, given the presence of the mirror, an object with a similar thickness and scattering properties to the DSSDs, re-adding the energy lost in the DSSDs would not eliminate the need to estimate probabilistic energy loss in similar materials.  
 
-In order to quantitatively describe the effective lineshape~\aside{Have I *even* described what I mean by a ``lineshape''?  I'm pretty sure I haven't.  Ugh.} for betas emitted at all (relevant) energies, we use the TRINAT Geant4 simulation to generate a series of `mono-energetic' spectra.  That is, for each energy value under consideration, decay events are generated in which every outgoing beta initially has one particular amount of kinetic energy -- the same for all events -- and the angular distribution of these betas is physically appropriate for the polarization and beta energy under consideration.~\aside{Do I need the angular distribution in the end?  I think maybe I put in scattering later, and just used a cone for the first round.  I re-did this to do the opposite thing at some point.}  These mono-energetic betas are propagated through the experimental geometry via Geant4, and the resulting scintillator spectra are recorded.  
+In order to create a quantitative description of the effective response function, which varies with initial beta energy, we have created an analytic function of 14 parameters for each of four detector and polarization combinations (56 parameters in total), to represent the final beta energy spectra in the scintillators.  The values of these parameters must be determined empirically, by a fit to simulated spectra.  Since the final response function is expected to be a function of initial beta energy, we must allow for these parameters to also vary as a function of initial beta energy.  To effect this result, 
+%~\aside{Have I *even* described what I mean by a ``lineshape''?  I'm pretty sure I haven't.  Ugh.}
+%for betas emitted at all (relevant) energies, 
+the TRINAT Geant4 simulation is used to generate a series of `mono-energetic' spectra.  That is, for each energy value under consideration (selected to span the energy range of betas in our decay), events are generated in which every outgoing beta initially has the same amount of kinetic energy, and the angular distribution of these betas is physically appropriate for the polarization and beta energy under consideration.  Both polarization states must be considered separately.  These mono-energetic betas are propagated through the experimental geometry via Geant4, and the resulting scintillator spectra are recorded.  Cuts identical to those imposed on the experimental data are implemented (see Chapter~\ref{analysis_chapter}).  \aside{somewhere I have to talk about the empirical noise spectrum etc. on the BB1s.  Or maybe I've already mentioned it somewhere.}  Several such spectra are shown for the Bottom Detector in the `-' polarization state, with their best fits and the residuals thereof in Figs.~\ref{fig:lineshape_5000},~\ref{fig:lineshape_3000},~\ref{fig:lineshape_1500},~\ref{fig:lineshape_1000}, and~\ref{fig:lineshape_750}.
 
-%decay events with all betas initially given one specific amount of kinetic energy -- are generated with the appropriate angular pro   
-%propagate these events through the chamber geometry, and observe the scintillator energy spectrum that results.  
+\aside{Do I need the angular distribution in the end?  I think maybe I put in scattering later, and just used a cone for the first round.  I re-did this to do the opposite thing at some point.}
+\note{It's clear that the model goes to shit at low energies.  I don't really get it.  Anyway, we'll never even *look* at events with scintillator energy below 400 keV, so at the very lowest energies it doesn't matter.  Though, it gets bad before we get that low in the spectrum.  Sadly.}
+\note[color=bluetodo]{Write down the full goddamn response function expression?}
+%\note{OK, now what?  We have some scintillator spectra, }
 
-\begin{itemize}
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/MonoFit_5000.png}
+	\note{I should probably do a thing to squish this set of 2 plots closer together.}
+	\caption[Fit to Mono-Energetic Spectrum, 5000 keV]{Fit to Mono-Energetic Spectrum, 5000 keV (B-)}	
+	\label{fig:lineshape_5000}
+\end{figure}
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/MonoFit_3000.png}
+	\caption[Fit to Mono-Energetic Spectrum, 3000 keV]{Fit to Mono-Energetic Spectrum, 3000 keV (B-)}	
+	\label{fig:lineshape_3000}
+\end{figure}
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/MonoFit_1500.png}
+	\caption[Fit to Mono-Energetic Spectrum, 1500 keV]{Fit to Mono-Energetic Spectrum, 1500 keV (B-)}	
+	\label{fig:lineshape_1500}
+\end{figure}
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/MonoFit_1000.png}
+	\caption[Fit to Mono-Energetic Spectrum, 1000 keV]{Fit to Mono-Energetic Spectrum, 1000 keV (B-)}	
+	\label{fig:lineshape_1000}
+\end{figure}
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/MonoFit_750.png}
+	\note{I should probably put a few of these similar fit things together and smaller, somehow.}
+	\caption[Fit to Mono-Energetic Spectrum, 750 keV]{Fit to Mono-Energetic Spectrum, 750 keV (B-)}	
+	\label{fig:lineshape_750}
+\end{figure}
+
+
+%\begin{itemize}
 %	\item \greycomment {Then there's the lineshape thing.  This wasn't nearly as useful as I thought it was going to be.  Certainly not worth the whole goddamn year that I spent on it.}
 %%	\begin{itemize}
 %		\item \greycomment{I wanted a way to cut down the amount of time spent waiting on big simulations to finish.  Lots of things to check before we get a final number.}
@@ -72,22 +120,25 @@ In order to quantitatively describe the effective lineshape~\aside{Have I *even*
 %			\item \greycomment{ Also, we ``lose'' some betas due to scattering that were initally directed towards a beta detector.  }
 %			\item \greycomment{ Also-also, we ``gain'' some particles due to scattering that were initially directed at some other surface.  }
 %		\end{itemize}
-		\item \greycomment{ But where do we get the lineshape?  G4 simulation of lots of beta decays at a \emph{single} beta energy, but with an (initial) angular distribution representative of beta decays at that energy.  Do that at a bunch of beta energies. }
-		\item For all these mono-energetic runs, you apply whatever set of cuts you selected to use on the data, and look only at the events that pass those cuts.  
-		\item For mono-energetic spectra events that pass the cuts, look at how much energy G4 thinks you would have measured just in the scintillator.  There'll be a distribution.  
-		\item something something Landau distribution.  Something something Clifford~\cite{clifford}.  Something something Moyal.
+%		\item \greycomment{ But where do we get the lineshape?  G4 simulation of lots of beta decays at a \emph{single} beta energy, but with an (initial) angular distribution representative of beta decays at that energy.  Do that at a bunch of beta energies. }
+%		\item \greycomment{For all these mono-energetic runs, you apply whatever set of cuts you selected to use on the data, and look only at the events that pass those cuts.  }
+%		\item \greycomment{For mono-energetic spectra events that pass the cuts, look at how much energy G4 thinks you would have measured just in the scintillator.  There'll be a distribution.}
+%		\item something something Landau distribution.  Something something Clifford~\cite{clifford}.  Something something Moyal.
 %	\end{itemize}
-\end{itemize}
+%\end{itemize}
 
-
+\note{Something something Landau distribution.  Something something Clifford~\cite{clifford}.  Something something Moyal.}
 \note{Which mono-energies did I use, again?  Maybe make a list/table.}
-
 \note{Needs a picture of the *full* beta energy distributions that come out of the lineshape thing.  To compare with (a) data and (b) G4.  Probably a superratio in there somewhere too.}
-
 \note{Um.  Which of the scattering things did I actually put in at the end?  And when did I do it?  Like, how did I account for (back-)scattering?  I tried with/without .... scattering, I think?  and eventually decided not to do it.  for some reason.  I think it breaks normalization in some way that's more subtle than you would think.}
+%Here are some pictures, scattered over many of the succeeding pages.
 
-Here are some pictures, scattered over many of the succeeding pages.
-
+\begin{itemize}
+	\item ... And then, you have values of all the parameters, as measured at a bunch of input energies.  Make sure all the fits converge and don't do something crazy.
+	\item Fit all the parameters as a function of energy to empirical functions.  Doesn't even matter what the form of the functions are, as long as it fits well.  
+	\item the parameters extracted from the mono-energetic beta spectrum fits, and empirical functions to model how these parameters vary with beta energy, are shown in Figs.~\ref{fig:lineshapeparams_part1}, ~\ref{fig:lineshapeparams_part2}, ~\ref{fig:lineshapeparams_part3}, and~\ref{fig:lineshapeparams_part4}.
+	\item How good are these fits, you ask?  See Fig.~\ref{fig:lineshape_redchi2}
+\end{itemize}
 
 \begin{figure}[h!!tb]
 	\centering
@@ -95,22 +146,21 @@ Here are some pictures, scattered over many of the succeeding pages.
 	{Figures/LineshapeParams_part1.png}
 	\note[color=bluetodo]{What even \emph{is} the thing plotted below E0 in the `residuals' spot?}
 	\caption[Lineshape Parameter Fits (Part 1)]{Lineshape Parameter Fits (Part 1)}	
-%	\label{fig:lineshape}
+	\label{fig:lineshapeparams_part1}
 \end{figure}
-
 \begin{figure}[h!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/LineshapeParams_part2.png}
-	\caption[Lineshape Parameter Fits (Part 2)]{Lineshape Parameter Fits (Part 2)}	
+	\caption[Lineshape Parameter Fits (Part 2)]{Lineshape Parameter Fits (Part 2)}
+	\label{fig:lineshapeparams_part2}
 \end{figure}
-
 \begin{figure}[h!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/LineshapeParams_part3.png}
 	\caption[Lineshape Parameter Fits (Part 3)]{Lineshape Parameter Fits (Part 3)}	
-%	\label{fig:lineshape}
+	\label{fig:lineshapeparams_part3}
 \end{figure}
 
 \begin{figure}[h!!tb]
@@ -118,50 +168,19 @@ Here are some pictures, scattered over many of the succeeding pages.
 	\includegraphics[width=.999\linewidth]
 	{Figures/LineshapeParams_part4.png}
 	\caption[Lineshape Parameter Fits (Part 4)]{Lineshape Parameter Fits (Part 4)}	
-%	\label{fig:lineshape}
+	\label{fig:lineshapeparams_part4}
 \end{figure}
-
-
-\begin{figure}[h!!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/MonoFit_5000.png}
-	\caption[Fit to Mono-Energetic Spectrum, 5000 keV]{Fit to Mono-Energetic Spectrum, 5000 keV (B-)}	
-\end{figure}
-\begin{figure}[h!!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/MonoFit_3000.png}
-	\caption[Fit to Mono-Energetic Spectrum, 3000 keV]{Fit to Mono-Energetic Spectrum, 3000 keV (B-)}	
-\end{figure}
-\begin{figure}[h!!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/MonoFit_1500.png}
-	\caption[Fit to Mono-Energetic Spectrum, 1500 keV]{Fit to Mono-Energetic Spectrum, 1500 keV (B-)}	
-\end{figure}
-\begin{figure}[h!!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/MonoFit_1000.png}
-	\caption[Fit to Mono-Energetic Spectrum, 1000 keV]{Fit to Mono-Energetic Spectrum, 1000 keV (B-)}	
-\end{figure}
-\begin{figure}[h!!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/MonoFit_750.png}
-	\note{I should probably put a few of these similar fit things together and smaller, somehow.}
-	\caption[Fit to Mono-Energetic Spectrum, 750 keV]{Fit to Mono-Energetic Spectrum, 750 keV (B-)}	
-\end{figure}
-
-
+%
 \begin{figure}[h!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/Lineshape_Chi2.png}
+	\note{How many DOF for these things?  I should put it on the picture.}
 	\caption[Goodness of Fit for Modeled Lineshapes]{Goodness of Fit for Modeled Lineshapes}	
-%	\label{fig:lineshape}
+	\label{fig:lineshape_redchi2}
 \end{figure}
+%
+
 
 \section{Simulating the Background}
 \label{sec:tof_bg}
