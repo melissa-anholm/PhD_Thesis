@@ -49,7 +49,7 @@ It is this combined Holstein+JTW expression that forms the basis of the new G4 e
 
 \section{The Simple Monte Carlo and Response Function}
 \label{sec:lineshape}
-\note{``Response Function''.  It's a ``response function.''}
+%\note{``Response Function''.  It's a ``response function.''}
 Because of the large number of systematic effects to be examined, and because of the processor time required to run a high statistics Geant4 simulation even after enabling multithreading support, it was desirable to develop a procedure by which it would be possible to evaluate certain systematic effects while avoiding the computationally intensive simulations that might traditionally be used.  To this end, a fast-running Simple Monte Carlo (SMC) was developed together with an empirical ``response function'' similar to the one described by Clifford et al~\cite{clifford} to describe probabilistic beta energy loss before its detection in a scintillator.  In the end, the lineshape description became quite involved, and it is unclear whether, in the end, any time was saved this way. 
 
 The purpose of the SMC was to \emph{quickly} generate initial particle kinematics probabilistically for beta decay events, and it uses the very same event generator based on Holstein's Eq.~(52)~\cite{holstein} that was developed for use with the more sophisticated Geant4 simulations.~\aside{Reference previous section where I discuss this, maybe?}  However, unlike in a G4 simulation, the SMC makes no attempt to track particles through the chamber, and instead simply calculates detector hits based on initial particle momentum.  This procedure obviously neglects scattering effects, which can (in differing regimes) both \emph{increase} and \emph{decrease} the number of beta particles incident on a detector.  Furthermore, this procedure also neglects any energy absorption in materials through which the beta passes before hitting a scintillator -- and the beta \emph{must} pass through several such materials (see Fig.~\ref{chamber_decayevent}).
@@ -64,16 +64,11 @@ In order to create a quantitative description of the effective response function
 %for betas emitted at all (relevant) energies, 
 the TRINAT Geant4 simulation is used to generate a series of `mono-energetic' spectra.  That is, for each energy value under consideration (selected to span the energy range of betas in our decay), events are generated in which every outgoing beta initially has the same amount of kinetic energy, and the angular distribution of these betas is physically appropriate for the polarization and beta energy under consideration.  Both polarization states must be considered separately.  These mono-energetic betas are propagated through the experimental geometry via Geant4, and the resulting scintillator spectra are recorded.  Cuts identical to those imposed on the experimental data are implemented (see Chapter~\ref{analysis_chapter}).  \aside{somewhere I have to talk about the empirical noise spectrum etc. on the BB1s.  Or maybe I've already mentioned it somewhere.}  Several such spectra are shown for the Bottom Detector in the `-' polarization state, with their best fits and the residuals thereof in Figs.~\ref{fig:lineshape_5000},~\ref{fig:lineshape_3000},~\ref{fig:lineshape_1500},~\ref{fig:lineshape_1000}, and~\ref{fig:lineshape_750}.
 
-\aside{Do I need the angular distribution in the end?  I think maybe I put in scattering later, and just used a cone for the first round.  I re-did this to do the opposite thing at some point.}
-\note{It's clear that the model goes to shit at low energies.  I don't really get it.  Anyway, we'll never even *look* at events with scintillator energy below 400 keV, so at the very lowest energies it doesn't matter.  Though, it gets bad before we get that low in the spectrum.  Sadly.}
-\note[color=bluetodo]{Write down the full goddamn response function expression?}
-%\note{OK, now what?  We have some scintillator spectra, }
-
 \begin{figure}[h!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/MonoFit_5000.png}
-	\note{I should probably do a thing to squish this set of 2 plots closer together.}
+%	\note{I should probably do a thing to squish this set of 2 plots closer together.}
 	\caption[Fit to Mono-Energetic Spectrum, 5000 keV]{Fit to Mono-Energetic Spectrum, 5000 keV (B-)}	
 	\label{fig:lineshape_5000}
 \end{figure}
@@ -102,10 +97,200 @@ the TRINAT Geant4 simulation is used to generate a series of `mono-energetic' sp
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/MonoFit_750.png}
-	\note{I should probably put a few of these similar fit things together and smaller, somehow.}
+%	\note{I should probably put a few of these similar fit things together and smaller, somehow.}
 	\caption[Fit to Mono-Energetic Spectrum, 750 keV]{Fit to Mono-Energetic Spectrum, 750 keV (B-)}	
 	\label{fig:lineshape_750}
 \end{figure}
+
+
+\aside{Do I need the angular distribution in the end?  I think maybe I put in scattering later, and just used a cone for the first round.  I re-did this to do the opposite thing at some point.}
+\note{It's clear that the model goes to shit at low energies.  I don't really get it.  Anyway, we'll never even *look* at events with scintillator energy below 400 keV, so at the very lowest energies it doesn't matter.  Though, it gets bad before we get that low in the spectrum.  Sadly.}
+%\note{Write down the full goddamn response function expression?}
+\note{Parameters alpha, beta, gamma, delta, W, k, and functions $f_1()$, $f_2()$, $f_3()$, $f_4()$, $f_5()$ are named that way because we're following Clifford.  Exact definitions of the functions aren't really identical though, and my parameters don't necessarily have the same normalization.  Qualitatively, all the same features are there though.  Also, the moyal function isn't from Clifford, because ... reasons.  
+\\ ...\\
+In particular, Clifford's treatment describes the measured energy (which in their case is a sum of scintillator energy and DeltaE energy) for beta particles interacting with a detector with a collimator, much like ours, however in our case, some energy is lost to the intervening SiC mirror and beryllium foil, and as we don't measure that directly, it can't be directly added back in.  Although we might add back in the energy from the BB1 detectors, we have to model other energy losses in similar materials anyway, and as previously mentioned, re-introducing the energy from the BB1s invites problems with maintaining a uniform energy threshold over the entire detector. 
+}
+%
+%%	R.SetParameter("00_E0",    4.19232e+03);  // just set it to a value.  I'll pre-set it according to monoenergy later.
+%	% "E0"
+%%	R.SetParameter("01_norm",  1.0e6);  // norm can't go negative.
+%	% "Norm"
+%%	R.SetParameter("02_scale", 1.5);  // scale can't go negative either.
+%	% "Scale"
+%%	R.SetParameter("03_alpha", 300.0);
+%	% "Alpha"
+%%	R.SetParameter("04_beta", 0.0);
+%	% "Beta"
+%%	R.SetParameter("05_gamma", 0.00100);
+%	% "Gamma"
+%%	R.SetParameter("06_delta", 7.06801e-02);
+%	% "Delta"
+%%	R.SetParameter("07_W",     380.0);
+%	% "W"
+%%	R.SetParameter("08_k", 4.3);
+%	% "k"
+%%	R.SetParameter("09_gfrac", 0.9);
+%	% "GausFrac"
+%%	R.SetParameter("10_toeres", 1.0);  // set it according to top and bottom detector later.  But keep it fixed initially.
+%	% "Toe Resolution"
+%%	R.SetParameter("11_lres", 0.006);  // as a fraction of toeres
+%	% "Landau Resolution"
+%%	R.SetParameter("12_gres", 1.0);
+%% 		12_gres = 1 (fixed).
+%	% "Gaussian `Resolution'" 
+%%	R.SetParameter("13_DgE",  0.0);
+%% 		13_DgE = Dgcenter = 0 (fixed).
+%	% "DgE"
+%%	R.SetParameter("14_dE0",  0.0);  
+%	% "dE0"
+%%
+%
+%% "PseudoE" ??  Pretty sure that's just E0 - (some linear offset).  Otherwise you wouldn't be able to see what was going on.
+%
+%
+%%\bea
+%%%	R() = [\mathrm{01\_norm}] * \left( f_{\mathrm{moyal}}() + f_1() + f_2() + f_3() + f_4() + f_5() \right) + f_{511}
+%%	R() &=& [\mathrm{Norm}] * \left( \phantom{\frac{1}{1} \!\!\!\!\! } %\phantom{1^1_1} \!\!\!\!
+%%		f_{\mathrm{moyal}}(E_0, p_\alpha, p_\beta, p_\Delta, p_\gamma, p_{\mathrm{gfrac}}, \right.
+%%		\\ && \;\;\;\; p_{W}, p_{\mathrm{dE0}}, p_{\mathrm{lres}}, )  
+%%		\\ && + 
+%%		f_1(E_0, p_\alpha, p_\beta, p_\Delta, p_\gamma, p_{\mathrm{gfrac}}, p_{W}, p_{\mathrm{dE0}}, 
+%%		\\ && \;\;\;\; p_{\textrm{toeres}}, )
+%%		\\ && + 
+%%		f_2(E_0, p_\alpha, p_{\textrm{toeres}}, ) + 
+%%		f_3(E_0, p_\beta, p_{\textrm{toeres}}, p_{\mathrm{k}}, ) 
+%%		\\ && + 
+%%		f_4(E_0, p_{W}, p_{\textrm{toeres}}, ) 
+%%		\\ && + \left. 
+%%		f_5(E_0, p_\Delta, p_\gamma, p_{W}, p_{\textrm{toeres}}, ) \phantom{\frac{1}{1} \!\!\!\!\! } \right) + 
+%%		f_{511}(), 
+%%\eea
+%
+%
+\bea
+	R(E_{0}, \textrm{Detector}, \mathrm{Polarization}) &=& p_{\textrm{norm}} \left( f_{\mathrm{moyal}} + f_1 + f_2 + f_3 
+%	\phantom{1^1_1} \right. \nonumber \\ && \left. \phantom{1^1_1}
+	+ f_4 + f_5 \right) + f_{511}
+	\nonumber \\
+\eea
+%\note{Re-check that I got things to be described as a function of the correct variables...  pretty sure I missed some.}
+where
+\bea
+	f_{\mathrm{moyal}}() &=& 
+	(1-p_{\mathrm{gfrac}}) \left( 1 + \frac{-p_\alpha - p_\beta }{\left| E_0 \right|} - \frac{p_\Delta}{ p_\gamma \, p_{W} } - p_\gamma \, p_{W} \right)  
+	\nonumber \\ && \times 
+	\left( 
+	\frac{ e^{ \left( \frac{ x-\left( E_0-\frac{1}{2}p_{\mathrm{dE0}} \right) }{ 2 \, p_{\mathrm{lres}}\left|E_0-\frac{1}{2}p_{\mathrm{dE0}}\right| } \right) }  e^{\left(-\frac{1}{2} e^{\left( \frac{x - \left(E_0-\frac{1}{2}p_{\mathrm{dE0}} \right) }{ p_{\mathrm{lres}} \left| E_0-\frac{1}{2}p_{\mathrm{dE0}} \right| } \right)} \right)} }{\sqrt{2\pi \, p_{\mathrm{lres}} \left| E_0-\frac{1}{2}p_{\mathrm{dE0}} \right| } } 
+	\right) 
+\eea
+\bea
+	f_1() &=& p_{\mathrm{gfrac}}  \left( 1 + \frac{-p_\alpha - p_\beta }{\left|E_0\right|} - \frac{p_\Delta}{ p_\gamma \, p_{W} } - p_\gamma \, p_{W} \right) 
+%	\nonumber \\ && \times 
+	\left( 
+	\frac{ e^{\left( - \frac{ \left(x-\left(E_0+\frac{1}{2}p_{\mathrm{dE0}}\right) \right)^2 }{ 2 \, p_{\textrm{toeres}} \left| E_0+\frac{1}{2}p_{\mathrm{dE0}} \right| } \right)} } { \sqrt{2\pi \, p_{\textrm{toeres}} \left|E_0+\frac{1}{2} p_{\mathrm{dE0}}\right|} }
+	\right)
+	\nonumber \\
+%\eea
+%\bea
+	f_2() &=& \frac{p_\alpha}{\left|E_0\right|} \left( \frac{1 - \Erf\left[ \frac{(x-\left|E_0\right|)}{\sqrt{2 \, p_{\textrm{toeres}} \left| E_0 \right| }} \right]}{2 \, \left| E_0\right| } \right)
+\eea
+\bea
+	f_3() &=& \frac{p_\beta}{\left|E_0\right|}  \left( 	\frac{ e^{ \frac{ p_{\mathrm{k}} *(x-E_0) }{ \left|E_0\right|} } * e^{ \frac{p_{\textrm{toeres}} \, p_{\mathrm{k}}^2 }{2 \left|E_0\right|} } }{ 2 (1-e^{-p_{\mathrm{k}}} ) } \right)
+%	\nonumber \\ && \times
+	\left(1 - \Erf\left[ \frac{ (x-E_0+p_{\textrm{toeres}} \, p_{\mathrm{k}} ) } {\sqrt{2 \,p_{\textrm{toeres}} \left|E_0\right| } } \right] \right) 
+%	\right. \nonumber \\ && \times \left. 
+	% \right)  
+	\\
+	f_4() &=& \frac{p_\gamma}{2}   \left( \Erf \left[ \frac{ x-E_0 }{ \sqrt{(2 \, p_{\textrm{toeres}} \left|E_0\right| )} }  \right]  
+%	\right. \nonumber \\ && \left. 
+	- \Erf \left[ \frac{ x-E_0-p_{W} }{ \sqrt{2 \, p_{\textrm{toeres}} \left| E_0+p_{W}\right| } } \right] \right)
+\eea
+%\note{f\_5() is a fucking mess.  I'll have to do it tomorrow.}
+
+
+%%%%%\bea
+%%%%%	f_5() &=& 
+%%%%%	\left( \frac{p_\Delta }{ 2 p_\gamma p_{W}^3 }\right) * 
+%%%%%	\left(
+%%%%%	(x-E_0) * \left( \Erf \left( \frac{x-E_0}{\sqrt{2p_{\textrm{toeres}}*\abs(E_0)} } \right) 
+%%%%%	\right. \right. \nonumber \\ && %\left. 
+%%%%%	- 2\, \Erf \left( \frac{x-E_0-p_{W} }{ \sqrt{ 2 p_{\textrm{toeres}} * \abs(E_0+p_{W}) } } \right) 
+%%%%%	%\right. 
+%%%%%	\nonumber \\ && 
+%%%%%	%\left. 
+%%%%%	+ \Erf( (x-E_0-2.0*p_{W})/(\sqrt{2 p_{\textrm{toeres}}*\abs(E_0+2p_{W}) } )) %\right)
+%%%%%	% 
+%%%%%	\right. \nonumber \\ && \left.
+%%%%%	+ (2.0*p_{W}) * ( \Erf( (x-E_0-p_{W})/(\sqrt{(2p_{\textrm{toeres}} * \abs(E_0+p_{W}) )} )) - \Erf( (x-E_0-2.0*p_{W})/(sqrt(2.0*p_{\textrm{toeres}} * \abs(E_0+2.0*p_{W}) ))) ) 
+%%%%%	+ (2.0*p_{\textrm{toeres}}*abs(E_0))*( (exp(-1.0*(x-E_0)^2/(4.0*p_{\textrm{toeres}}*abs(E_0))) / ( sqrt(2.0*pi*p_{\textrm{toeres}}*abs(E_0)))) -2.0*(exp(-1.0*(x-E_0-p_{W})^2/(4.0*p_{\textrm{toeres}}*abs(E_0+p_{W}) )) / ( \sqrt{2\pi*p_{\textrm{toeres}}*abs(E_0+p_{W})} )) + ( exp(-1.0*(x-E_0-2.0*p_{W})^2/(4.0*p_{\textrm{toeres}}*abs(E_0+2.0*p_{W}) )) / ( \sqrt{2 \pi*p_{\textrm{toeres}}*abs(E_0+2.0*p_{W})} ) ) ) \right) 
+%%%%%%%\right) 
+%%%%%%%\right)
+%%%%%\eea
+%
+
+%\bea
+%	f5a &=& (x-E_0) \,  \left( \Erf\left[ \frac{(x-E_0) }{ \sqrt{2 \, p_{\textrm{toeres}} \left|E_0\right| } } \right] - 2 \, \Erf\left[ \frac{ (x-E_0-p_{W}) }{ \sqrt{2 \, p_{\textrm{toeres}} \, \left| E_0+p_{W}\right| }} \right]
+%	\right. \nonumber \\ && \left. 
+%	+ \Erf\left[ \frac{(x - E_0 - 2 p_{W}) }{ \sqrt{2 \, p_{\textrm{toeres}} \, \left| E_0 + 2 p_{W}\right| }} \right] \right)
+%	\\
+%	f5b &=& (2 \, p_{W}) \,  \left( \Erf\left[ \frac{(x-E_0-p_{W})}{\sqrt{2 \, p_{\textrm{toeres}} \left|E_0+p_{W}\right| }}\right] - \Erf \left[ \frac{(x-E_0 - 2 p_{W})}{\sqrt{2 \, p_{\textrm{toeres}} \left| E_0+2 p_{W}\right| }} \right] \right)
+%	\\
+%	f5c &=& \left( 2\, p_{\textrm{toeres}} \left| E_0 \right| \right)  \left( \left( \frac{e^{\left(\frac{- (x-E_0)^2}{(4\,p_{\textrm{toeres}} \left| E_0\right| )} \right)} }{\sqrt{2 \pi \, p_{\textrm{toeres}} \left| E_0 \right| }}\right) 
+%%	\right. \nonumber \\ && \left. 
+%	+ \left( \frac{ - 2 e^{ \left(\frac{ - (x-E_0-p_{W})^2 }{(4 \, p_{\textrm{toeres}} \, \left| E_0+p_{W}\right| )} \right) } }{( \sqrt{2\pi \, p_{\textrm{toeres}}\left| E_0+p_{W}\right| } )} \right) 
+%	\right. \nonumber \\ && \left. 
+%	+ \left( \frac{e^{\left(\frac{ - (x-E_0 - 2 p_{W})^2}{(4 \, p_{\textrm{toeres}} \, \left| E_0 + 2 \, p_{W}\right| )} \right)}}{\sqrt{2 \pi \, p_{\textrm{toeres}} \left|E_0 + 2 \,p_{W}\right| }} \right) 
+%	\right)
+%\eea
+%%
+%\bea
+%	f5 &=& \frac{p_{\Delta}}{2 \, p_{\gamma} \, p_{W}^3 }*( f5a + f5b + f5c )  	%  // triangle
+%\eea
+%%
+%... Anyway, if we were to try to write all of those things into one giant equation for f5, we'd have:
+
+
+\bea
+	f5 &=& \frac{p_{\Delta}}{2 \, p_{\gamma} \, p_{W}^3 }  
+	\left[  
+	(x-E_0) \left( \Erf\left[ \frac{(x-E_0) }{ \sqrt{2 \, p_{\textrm{toeres}} \left|E_0\right| } } \right] 
+	- 2 \, \Erf\left[ \frac{ (x-E_0-p_{W}) }{ \sqrt{2 \, p_{\textrm{toeres}} \, \left| E_0+p_{W}\right| }} \right]
+	\right. 
+	\phantom{\left( \frac{e^{\left(\frac{ - (p_{W})^2}{(p_{\textrm{t}} \left| E_0 \right| )} \right)}}{\sqrt{2 p_{\textrm{t}} \left|E_0 \right| }} \right) } %% phantom to get to get bracket size right..
+	\right. \nonumber \\ && \left. \left.
+	+ \Erf\left[ \frac{(x - E_0 - 2 p_{W}) }{ \sqrt{2 \, p_{\textrm{toeres}} \, \left| E_0 + 2 p_{W}\right| }} \right] \right) 
+	+ (2 \, p_{W}) \left( \Erf\left[ \frac{(x-E_0-p_{W})}{\sqrt{2 \, p_{\textrm{toeres}} \left|E_0+p_{W}\right| }}\right] 
+	\right. \right. \nonumber \\ && \left. \left.
+	- \Erf \left[ \frac{(x-E_0 - 2 p_{W})}{\sqrt{2 \, p_{\textrm{toeres}} \left| E_0+2 p_{W}\right| }} \right] \right) 
+%	\right. \nonumber \\ && \left.	
+	+ \left( 2\, p_{\textrm{toeres}} \left| E_0 \right| \right)  \left( \left( \frac{e^{\left(\frac{- (x-E_0)^2}{(4\,p_{\textrm{toeres}} \left| E_0\right| )} \right)} }{\sqrt{2 \pi \, p_{\textrm{toeres}} \left| E_0 \right| }}\right) 
+	\right. \right. \nonumber \\ && \left. \left.
+	+ \left( \frac{ - 2 e^{ \left(\frac{ - (x-E_0-p_{W})^2 }{(4 \, p_{\textrm{toeres}} \, \left| E_0+p_{W}\right| )} \right) } }{( \sqrt{2\pi \, p_{\textrm{toeres}}\left| E_0+p_{W}\right| } )} \right) 
+%	\right. \nonumber \\ && \left. 
+	+ \left( \frac{e^{\left(\frac{ - (x-E_0 - 2 p_{W})^2}{(4 \, p_{\textrm{toeres}} \, \left| E_0 + 2 \, p_{W}\right| )} \right)}}{\sqrt{2 \pi \, p_{\textrm{toeres}} \left|E_0 + 2 \,p_{W}\right| }} \right) 
+	\right) 
+	\right]
+\eea
+
+\bea
+	f_{511} &=& %\sqrt{p_{\mathrm{scale}}*p_{\mathrm{scale}}} 
+	\left| p_{\mathrm{scale}} \right|
+	\left[ \left( \frac{195}{17} \sqrt{\frac{2}{\pi}} \, e^{\left(\frac{-(x - 308)^2}{578}\right) } \right)  
+	+ \left(40 + \frac{(x - 210)^2}{900} \right) \left( 1 - \Erf\left[\frac{x - 334}{30}\right] \right) 
+	\right. \nonumber \\ && \left.	
+	+ \left( \frac{ (x -505)^2 }{1440}\right) \left( 1 - \Erf\left[ \frac{x - 505}{30}\right] \right)  \left(1 + \Erf\left[\frac{x-334}{30}\right] \right)  
+	\phantom{e^{\left(\frac{(x)^2}{5}\right) \!\!\!\!\! \!\!\!\!\! \!\!\!\!\!  \!\!\!\!\! \!\!\!\!\! \!\! }}
+	\right]
+\eea
+
+
+\note{Obviously, from a physical standpoint, the initial beta energy $E_0$ must be positive, but the response function still includes several expressions of the form, $\left| E_0 \right|$.  This is not done by accident, but rather is an intentional adjustment used to encourage the parameters to behave well within a fit. }
+\note{... Similarly, Clifford doesn't include a compton edge.  I think.  But I want to.}
+
+%\codestyle{string complete_ff_string = "[01_norm]*("+fmoyal_string+" + "+f1_string+" + "+f2_string+" + "+f3_string+" + "+f4_string+" + "+f5_string+") + "+f511_string+";  // landau primary + modified compton toe + 511s.}
+%\note{OK, now what?  We have some scintillator spectra, }
+
+
 
 
 %\begin{itemize}
@@ -127,14 +312,14 @@ the TRINAT Geant4 simulation is used to generate a series of `mono-energetic' sp
 %	\end{itemize}
 %\end{itemize}
 
-\note{Something something Landau distribution.  Something something Clifford~\cite{clifford}.  Something something Moyal.}
-\note{Which mono-energies did I use, again?  Maybe make a list/table.}
+%\note{Something something Landau distribution.  Something something Clifford~\cite{clifford}.  Something something Moyal.}
+%\note{Which mono-energies did I use, again?  Maybe make a list/table.}
 \note{Needs a picture of the *full* beta energy distributions that come out of the lineshape thing.  To compare with (a) data and (b) G4.  Probably a superratio in there somewhere too.}
 \note{Um.  Which of the scattering things did I actually put in at the end?  And when did I do it?  Like, how did I account for (back-)scattering?  I tried with/without .... scattering, I think?  and eventually decided not to do it.  for some reason.  I think it breaks normalization in some way that's more subtle than you would think.}
 %Here are some pictures, scattered over many of the succeeding pages.
 
 \begin{itemize}
-	\item ... And then, you have values of all the parameters, as measured at a bunch of input energies.  Make sure all the fits converge and don't do something crazy.
+	\item \greycomment{... And then, you have values of all the parameters, as measured at a bunch of input energies.  Make sure all the fits converge and don't do something crazy.}
 	\item Fit all the parameters as a function of energy to empirical functions.  Doesn't even matter what the form of the functions are, as long as it fits well.  
 	\item the parameters extracted from the mono-energetic beta spectrum fits, and empirical functions to model how these parameters vary with beta energy, are shown in Figs.~\ref{fig:lineshapeparams_part1}, ~\ref{fig:lineshapeparams_part2}, ~\ref{fig:lineshapeparams_part3}, and~\ref{fig:lineshapeparams_part4}.
 	\item How good are these fits, you ask?  See Fig.~\ref{fig:lineshape_redchi2}
@@ -144,7 +329,7 @@ the TRINAT Geant4 simulation is used to generate a series of `mono-energetic' sp
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/LineshapeParams_part1.png}
-	\note[color=bluetodo]{What even \emph{is} the thing plotted below E0 in the `residuals' spot?}
+	\note[color=done]{What even \emph{is} the thing plotted below E0 in the `residuals' spot, you ask?  It's `PseudoE', which is describes the difference between the original input energy, $E_0$, and the energy where the output spectrum is maximal. Or something.  To `pretty good' order, it's a straight line.  the `PseudoE' plot shows what's left after you fit it to a straight line.  It's fucking weird that it's negative everywhere.  Like, what?}
 	\caption[Lineshape Parameter Fits (Part 1)]{Lineshape Parameter Fits (Part 1)}	
 	\label{fig:lineshapeparams_part1}
 \end{figure}
@@ -208,8 +393,8 @@ Our experiment has some background.  It's annoying and stupid, but as long as we
 %With the Simulations:
 \begin{itemize}
 	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
-	\note[color=bluetodo]{How many events do we actually have?}
-	\note{Total good events after all the cuts:
+%	\note[color=bluetodo]{How many events do we actually have?}
+	\note[color=done]{Total good events after all the cuts:
 	\\
 	Set B:  173,640
 	\\
