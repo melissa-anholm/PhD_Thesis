@@ -70,6 +70,13 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 \end{figure}
 
 
+\begin{figure}[h!!t]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/VerticalTrap_by_rMCP_prelim}
+	\caption[Vertical Trap Position from rMCP]{Trap Position along the Vertical Axis, plotted as a function of time of run (top) and run number (bottom).}	
+	\label{fig:vposition_by_run_rmcp}
+\end{figure}
 
 
 %\section{Beta Detector Cuts}
@@ -239,7 +246,9 @@ Because a SOE from the trap is most likely to land in the centre of the plate, w
 	\label{fig:soe_tof_positioncompare}
 \end{figure}
 
-Several years after the data was initially collected, a problem was discovered with our low-level analyzer software, which we had been using to convert large and unwieldy MIDAS data sets into somewhat smaller and more manageable ROOT data sets.  In particular, for every timestamp recorded, our raw MIDAS data actually included both a timestamp for the leading edge (LE) of the pulse, and a timestamp for the trailing edge (TE).  The analyzer had--for years--been reporting the timestamp associated with the trailing edge of the pulse.  Initially it was unclear if there might have been a reason behind this choice, but a closer examination of the data showed less timing noise and a sharper distribution of timing pulses across the board (see Fig.~\ref{fig:LE_TE}), with some channels showing a larger effect than others.  This was corrected, and the entirety of this analysis has been performed now using the cleaner LE spectra.  
+Several years after the data was initially collected, a problem was discovered with our low-level analyzer software, which we had been using to convert large and unwieldy MIDAS data sets into somewhat smaller and more manageable ROOT data sets.  In particular, for every timestamp recorded, our raw MIDAS data actually included both a timestamp for the leading edge (LE) of the pulse, and a timestamp for the trailing edge (TE).  The analyzer had--for years--been reporting the timestamp associated with the trailing edge of the pulse.  Initially it was unclear if there might have been a reason behind this choice, but a closer examination of the data showed that the LE data included less timing jitter and noise, as well as a sharper peak for timing pulses across the board (as in Fig.~\ref{fig:LE_TE}), with some channels showing a larger effect than others.  This was corrected, and the entirety of this analysis has been performed now using the cleaner LE spectra.  
+
+\note{The LE spectra allows for us to use a more precise model of the SOE TOFs, so that's nice.}
 
 \begin{figure}[h!!t!]
 	\centering

@@ -1,0 +1,260 @@
+% !TEX root = ../thesis_main.tex
+
+
+
+%%%% --- * --- %%%%	
+\clearpage
+%\chapter{Introduction}
+\chapter{Background and Introduction}
+\label{intro_chapter}
+\label{nuclear_chapter}
+
+%\note[color=jb]{JB on the contents of Chapter 1:  \\
+%Move what you have in 1.1 and 1.3 to the first section of Chapter 2, and otherwise omit Chapter 1.}
+
+\note[color=jb]{from JB on the contents of Chapter 1:
+%\\
+%With three changes:
+%\\ ... \\
+%1)"and we shall be interested especially in scalar (S) and tensor (T) couplings." -> "our observable is mostly sensitive to scalar (S) and tensor (T) couplings."
+\\ ...\\
+2)
+"These couplings all refer to parameters in a Lagrangian that takes the
+relativistic inner product of a current for the lepton with a current for the
+proton or neutron.
+The resulting Lagrangian must be a scalar under Lorentz transformations, so
+these currents must have transformations like these V,A,S, and T and be
+combined into a scalar."
+\\...\\
+3) Add one reference to the latest review:
+\\
+Adam Falkowski, Martín González-Alonso, Oscar Naviliat-Cuncic. Comprehensive analysis of beta
+decays within and beyond the Standard Model. Journal of High Energy Physics, Springer, 2021, 04,
+pp.126. 10.1007/JHEP04(2021)126.
+\\
+Here it is!~\cite{falkowski2021}.
+\\ ... \\
+You have time for nothing else.
+}
+
+
+%\section{Background and Motivation}
+\section{Motivation}
+The nuclear weak force is one of four fundamental forces described within physics.  It mediates the process of beta decay, which is of particular interest to us here.  Although beta decay is generally well understood, it presents a unique opportunity to search for physics beyond the Standard Model within the behaviour of the weak coupling.  By observing the kinematics and angular correlations involved in the decay process, one gains access to a wealth of information about the precise form of the operators mediating the decay.  
+
+According to the predictions of the Standard Model, beta decay involves only so-called vector (V) and axial-vector (A) couplings, with a relative phase angle producing the left-handed ``(V--A)'' form of the interaction.  \aside{Did I even get this right?  Is the phase angle really what makes it left-handed? \\ JB says:  \\ ... \\ Relative sign.  look at the quark-lepton Lagrangian, which has $(1 \pm \gamma_5)$ } There exists an extensive body of experimental evidence to demonstrate that this is overall a very good description of the beta decay process.  \aside{Cite a bunch of people here.  (Who?)  Might be nice to have a picture also.}  Despite the success of the (V--A) model, the additional presence of certain other ``exotic'' couplings cannot be entirely ruled out, and our observable is mostly sensitive to scalar (S) and tensor (T) couplings.  \aside[color=jb]{John wanted this change (now implemented), but I think the phrasing is unclear now. 
+\\ ... \\
+"and we shall be interested especially in scalar (S) and tensor (T) couplings." -> "our observable is mostly sensitive to scalar (S) and tensor (T) couplings."
+}
+
+\note{According to present limits, these couplings would have to be pretty small relative to the (V) and (A) couplings.}
+
+\bluetodo{Need to figure out how the exotic couplings actually work, mathematically.  What the fuck does ``$(V-A)$'' even *mean*?  IIRC John wants a brief mention of $\gamma_5$'s and $\gamma_\mu$'s, and probably a brief mention of whatever mumble-mumble group is mumble-mumble represented or something.
+\\
+...
+\\
+JB says:
+\\
+the current transforms like a Lorentz scalar or tensor -- this does not refer to the angular momentum.
+\\
+If you write down the Lagrangian for beta decay, that's eough. All these things refer to the structure of the Lagrangian. The theory considers all possible Lorentz transformations of the currents. 
+\\
+Please don't talk about SU(2)xU(1) for electroweak unification. It's textbook material that's beyond the scope.
+}
+
+\note[color=jb]{JB on intuitive concepts that are missing:  
+\\
+The SM couples to left-handed neutrinos and right-handed antineutrinos. Since the neutrinos only have weak interactions, there are no right-handed nu's nor left-handed antinu's in nature. The neutrino asymmetry $B_\nu$ is a number with no energy dependence. 
+\\
+Similarly, the SM weak interaction only couples to right-handed positrons and left-handed electrons. Since these are massive particles, the average helicity of positrons is not 1, but instead v/c. One can always boost to a frame where the positron keeps its circulation but is moving in the opposite direction. This is why the beta asymmetry is A v/c, not just A.
+\\
+The Fierz term's additional energy dependence of m/E also comes from helicity arguments, stemming from the fact that it still is coupling to SM nu's and antinu's only, so the beta's are generated with wrong handedness.  
+\\
+The details are built at 4th-year undergrad level in Garcia's paper with his student and postdoc~\cite{hong_sternberg_garcia}.
+\\
+The beta asymmetry dependence on the Fierz term only comes through the normalization of $W(\theta) = 1 + \bFierz m/E + \Abeta \cos(\theta)$.
+\\ i.e.:
+\\$W'(\theta) = 1 + \Abeta/(1+ \bFierz m/E) \cos(\theta)$.  (the angular distribution must be unity where cos(theta) vanishes, by definition).
+}
+
+
+\section{The Basics of Beta Decay}
+	%\\*
+	Standard Model beta decay is well understood.  The Fermi description of beta decay can be found in any nuclear physics textbook, but you have to dig slightly harder to understand Gamow-Teller or mixed decays, all of which are relevant here.  
+	
+	via Krane~\cite{krane}
+	Under the Allowed Approximation, we require that a beta decay may not carry away any orbital angular momentum, because we treat the nucleus as pointlike \aside{Is this even true?  The pointlike thing?  ...No.  No it's not.} and work in the CM frame.  An Allowed decay can, however, change the total nuclear angular momentum, because the outgoing leptons have spin$=1/2$ and therefore carry angular momentum.  Therefore, in an allowed decay, the total nuclear angular momentum must always change by either $0$ or $1$.  
+	\note[color=jb]{JB says:  The title of Holstein's review addresses this ``pointlike'' issue, and he describes the ``impulse approximation" in Section V.  The interaction is not pointlike, because all constants are a form factor expansion in $q^2$ -- finite size terms contribute to the Coulomb correction.}
+	
+	From a 2006 paper by Severijns et al ~\cite{severijns_beck_cuncic_2006}, the selection rules for an allowed transition are:
+	
+\bea
+\Delta I = I_f - I_i = \{0, \pm 1\} \\ 
+\hat{\Pi}_i \, \hat{\Pi}_f = +1
+\eea
+
+	Then, you can separate the allowed transitions into singlet (anti-parallel lepton spins, $S=0$ -- a Fermi transition) and triplet states (parallel lepton spins, $S=1$ -- a Gamow-Teller transition).
+	
+	
+	Fermi decays are so-called ``vector'' interactions, and happen when the spin of the two leptons involved are antiparallel, so there can be no change in angular momentum (at least in the case of the Allowed approximation).  
+	
+	Gamow-Teller decays involve two leptons with parallel spins, so the decay must change the projection of the nuclear angular momentum, $M_I$, by exactly one unit (in the case of the Allowed approximation).  They transition may or may not simultaneously change the total nuclear spin, $I$, by one unit.  These are ``axial-vector'' interactions.  (Note that $I=0 \rightarrow I=0$ interactions are never Gamow-Teller decays.  
+	
+	Probably everything in this section is yoinked from ~\cite{wong1990}, pg 212.  
+	
+	
+%\section{JTW Formalism}	
+%	%\\*
+%	Describes how to search for a variety of BSM terms within beta decay.  Does not account for certain well-understood effects of similar (or greater) magnitude.
+%	
+%	\input{equation_jtw_master}
+%	% equation:jtw_master
+%	
+%\note{Probably I should now give values for things, or expressions for letters, or something.  }
+%We haven't integrated out the neutrino momentum.  Neutrino energy itself is a redundant parameter, I think, because we are already using an endpoint energy and a beta energy, and we are not taking recoil-order effects into account.
+%
+%For ``convenience'', let's define a nuclear alignment term, $\Talign$, so that:
+%\bea
+%\Talign(\vecJ) &=& \TalignExpand
+%\eea
+%
+%
+%
+%\section{Holstein Formalism}
+%	An in-depth mathematical description of beta decay, including many smaller effects.  It does not include a description of the BSM physics of greatest interest to us.   Here, we've already integrated over neutrino momentum at least.  That's something.  Here's Holstein's Eq.~(52):
+%\input{equation_holstein52}
+%% equation:holstein52
+%
+%\section{Relation between JTW and Holstein Formalisms}
+%	%\\*
+%	To conduct a precision search for scalar and tensor couplings, it is necessary to combine the Holstein and JTW models into a single cohesive probability distribution.  
+\section{Mathematical Formalism}
+\label{sec:math_formalism}
+	In order to proceed with a measurement, we must find a master equation to describe the probability of beta decay events with any given distribution of energy and momenta among the daughter particles, as a function of the strength of the specific couplings of interest to us.  To do this, two sets of formalisms are combined -- the older formalism from Jackson, Treiman, and Wylde (JTW)~\cite{jtw},~\cite{jtw_coulomb}, which describes the effects of all types of Standard Model and exotic couplings of interest to us here, but which truncates its expression at first order in the (small) parameter of recoil energy, and a newer formalism from Holstein ~\cite{holstein}, which includes terms up to several orders higher in recoil energy, but which does not include any description of the exotic couplings of particular interest to us.  We note that because any exotic couplings present in nature have already been determined to be either small or nonexistant, it is sufficient to describe these parameters with expressions truncated at first order, despite the fact that it is still necessary to describe the larger Standard Model couplings with higher-order terms. 
+	
+\note{
+In beta decay, a proton(neutron) within a nucleus decays into a neutron(proton), and emits a positron(electron) and neutrino(anti-neutrino).  The new neutron(proton) remains bound within the nucleus.  As always, momentum and energy must both be conserved.  The distribution of energy and momenta is, of course, probabilistic rather than deterministic, and with three bodies involved, the full probability distribution for the momenta of outgoing particles cannot be written in closed form.  However, because the nucleus is significantly more massive than either of the other two outgoing particles, the great majority of the released kinetic energy is distributed between the leptons, while the nucleus receives only a tiny fraction of the total.  This feature lends itself to an approximation in which the energy of the recoiling nucleus (recoil) is neglected entirely, and the decay may be described only in terms of the momenta of the outgoing positron(electron) and neutrino(anti-neutrino), as in JTW~\cite{jtw}.  The terms that have been neglected in this treatment are sometimes called `recoil-order corrections'.
+\\..\\
+Unfortunately, the outgoing (anti-)neutrino is very difficult to detect directly, and we make no attempt to do so in this experiment.  Instead, we might look for coincidences between an outgoing beta and a recoiling nucleus, and use that information to reconstruct the kinematics of the neutrino.  
+}
+	
+	
+	The procedure for combining the two formalisms is described in detail in Appendix~\ref{appendix_forthepeople}.  
+%	, so we will simply provide the combined master equation here:
+\aside{Do it!  Do the master equation!}
+\aside[color=done]{JB:  cut "so we will simply provide the combined master equation here"
+\\Don't. The equation you have is all you need.}
+Integrating the JTW expression over neutrino direction, we find:
+\input{equation_integratedjtw}
+where 
+\bea
+\xi = G_v^2 \, \cos\theta_C \, f_1(E).
+\eea
+
+
+
+\section{Our Decay}
+\note[color=jb]{JB:  on 2.3 (now 1.4), "Our decay":  Just put the comments in. Keep the figure as-is.
+\\
+MJA:  Pretty sure the comments are literally copy-pasted from somewhere I shouldn't just plagiarize from.  Need to rephrase it at least.  ...No, it's fine, it's just from my old thesis proposal.  I think.  Removed now from that section, so it can go here..
+}
+
+%  \mbox{ $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$ }
+%\note{ ``Here, we focus on the decay $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$.  The angular correlations between the emerging daughter particles provide a rich source of information about the type of interaction that produced the decay.''  }
+Here, we focus on the decay $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$.  The angular correlations between the emerging daughter particles provide a rich source of information about the type of interaction that produced the decay.  Among other useful properties, this is is a `mirror' decay, meaning that the nuclear wavefunctions of the parent and daughter are identical up to their isospin quantum number.  This property allows us to place strong constraints on the size of the theoretical uncertainties for this decay process within the Standard Model.  
+
+%\note{ ``Of particular interest is the decay process: $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$.  Among other useful properties, this is is a `mirror' decay, meaning that the nuclear wavefunctions of the parent and daughter are identical up to their isospin quantum number.  
+%%the number of protons in the parent nucleus (19) is equal to the number of neutrons in the daughter, and the number of neutrons in the parent (18) is equal to the number of protons in the daughter.  
+%This property allows us to place strong constraints on the size of the theoretical uncertainties for this decay process within the Standard Model.   %We further exploit this property by noting that both the $^{37}\textrm{K}$ parent and the $^{37}\textrm{\!Ar}$ daughter have nuclear spin $I=3/2$, a fact which is key to this experiment.
+%''}
+
+
+\note{Talk about how great \isotope[37]{K} is for what we're doing with it.  Also, drop all the math-numbers to support those assertions.  Reference the level diagram within the text!}
+
+\note{Also, 37K is a really nice isotope for this, because 98\% + 2\%, also because it's a mirror decay, also because it's an alkali.  Also-also, its big $\Abeta$ value means we have a big thing to multiply any $\bFierz$ value there might be when we construct the superratio asymmetry to eliminate systematics.}
+
+%\missingfigure{This thing is going to need a nuclear level diagram for 37K.  Also, 37K is a really nice isotope for this, because 98\% + 2\%, also because it's a mirror decay, also because it's an alkali.  Also-also, its big $\Abeta$ value means we have a big thing to multiply any $\bFierz$ value there might be when we construct the superratio asymmetry to eliminate systematics.}
+
+\begin{figure}[h!!t]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/NuclearLevelDiagram_prelim}
+	\caption{A level diagram for the decay of $\isotope[37]{K}$.}	
+	\label{fig:nuclearleveldiagram}
+\end{figure}
+
+
+%\section{Exotic Couplings}
+%%	In particular, we're interested in so-called scalar and tensor couplings within the nuclear weak force. Standard model beta decay involves only vector and axial-vector couplings, combined with a ``$(V-A)$'' handedness (left-handed).  
+
+\section{Fierz Interference -- The Physical Signature}
+	The physical effects resulting from the presence of scalar or tensor couplings include a small perturbation to the energy spectrum of betas produced by radioactive decay.  
+
+\missingfigure{I need that simulated picture of the different beta energy spectra, with different values of $\bFierz$.}
+\note[color=jb]{JB on that missing figure:    ``A dependence of Abeta on beta energy is also introduced.
+\\
+UCNA fits energy spectrum and Abeta[Ebeta] simultaneously now."
+}
+
+%\section{Present Limits}
+%	A bit about other people's physics.
+
+%\section{A Toy Experiment}
+%	A quick overview of how an experiment like this one would be set up to extract the physics of interest, to keep the reader from getting too lost in the rest of the thesis.
+%\note{Do I really even *want* to include a toy experiment?  And would I want to do it here??  What even is the point?  I think in the past I decided it was easier to build up a description of .... something .... starting this way.  But why??  Possibly as I continue to add content, it will become obvious again why I originally wanted to do this.}
+%\note[color=jb]{JB says:  ``Your experiment is simple enough to describe without a toy.''  (He's said this twice now, so I should probably just kill this section.)}
+
+
+%%%% --- * --- %%%%	
+\section{Shake-off Electron Spectrum}
+\note[color=jb]{JB on 2.4 SOE:
+\\
+Say what you did, with as little info as possible now. Georg is a theoretical
+chemist, so he may be very curious about this.
+\\ ... \\
+"Atomic electrons with kinetic energies 0 to 100 eV are produced as part
+of the beta decay process.
+If their energy is below a certain value, our detection process is not perturbed,
+so we provide physics about the energy spectrum here.
+\\ ... \\ 
+Levinger~\cite{Levinger}, assuming the sudden approximation,
+calculated the overlap between an electron in the initial  atom with
+an outgoing electron or an electron in  the final atom. Levinger approximated
+everything with hydrogenic wavefunctions, so his calculations become
+analytic. The collaboration has found that Levinger's formulae
+fit our measurements of the position and TOF  info of our atomic electrons,
+so they are used in our simulations 
+\\
+OR
+\\
+but the precise energy spectrum was found to be unimportant, so we used X in our
+simulations.
+\\
+whichever is true.
+\\...\\
+This is then fine. You have most of the basics down.
+}
+
+
+Shake-off electrons:  where do they come from, and where do they go?  ~\cite{Levinger}.
+
+\note[color=org]{Really, just discuss the physics of what happens to cause SOEs to be a thing.  Talk about *our* SOE spectrum in some other chapter later.  Should this go in the atomic physics chapter?  I can't decide whether it's more atomic or more nuclear.}
+
+John made some nice plots of these from the eMCP data.  I did *not* use it to make a cut on eMCP hit position in the end, despite the fact that it makes the spectrum more clean, because a lot of good events don't have full hit position information, and you lose an awful lot of statistics by making the cut.  I used this for modeling the background spectrum, but in the end it wasn't as elegant a result as I might have hoped.  Also, it's still an open question exactly which fraction of SOEs come from which atomic shell, but it doesn't change the resulting spectrum very much.
+
+\input{figure_SOE_spectrum.tex}
+
+\note{Should I talk about the distribution of how many SOEs come off in a decay?  I have measurements of the recoil charge distribution, which is related but not really the same thing.  From a theoretical POV, I don't know how many get shaken off.  Thankfully, it doesn't matter very much in the end.
+%But then nobody will trust any of the numbers I measured (how did I do that measurement, anyway?  At this point I wouldn't even trust it...), and will want me to just use Dan's that he measured forever ago with a different set of detectors.  (where are those numbers recorded anyway?)  
+%I think I have to mention how many come off and how often at least briefly, because I use the Levinger spectrum for my background modeling.
+}
+
+%\begin{figure}[h!!t]
+%	\centering
+%	\includegraphics[width=.999\linewidth]
+%	{Figures/Levinger_SOETOF_prelim.pdf}
+%	\caption[Levinger TOF]{Shake-off electron TOF (w.r.t. beta TOA) spectrum, showing how the spectrum is different if one includes different sets of initial electrons to be shaken off.  I forget why some of them have 0 eV.  Maybe those are the ones from the $\isotope[37]{Ar}^+$. ... Levinger TOF spectra for some different sets of SOE initial orbitals before shake-off.  (At least that's what it's supposed to be, after I fix the picture).  It's reconstructed event-by-event with beta times-of-flight that would pass some basic `good event' cuts.  Anyway, it turns out, it doesn't much matter what orbitals you lose SOEs from.  That's nice.  In the end, I used 85+15.  \comment{(Need to re-plot this.)} }	
+%	\label{fig:levinger_TOF}
+%\end{figure}
+
+
