@@ -7,7 +7,10 @@
 %\chapter{Calibrations and Analysis}
 %\chapter{Calibrations}
 \chapter{Calibrations and Data Selection}
-\label{analysis_chapter}
+\label{calibrations_chapter}
+\label{dataselection_chapter}
+I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
+\missingfigure{Show individual beta energy spectra.  ...with a variety of different cuts, perhaps?}
 
 \note[color=org]{I have some tables summarizing which types of data were measured.  Presently, that's in Ch-4 (now ch.3), but probably I should move it here.}
 \label{calibrations_chapter}
@@ -84,21 +87,18 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 %	Setup is as described in Section~\ref{section:betadetectors}.	 
 %	\note{This is a stupid section name.  Also, I really do need to describe how the cuts were made here somewhere, because it's non-trivial in many cases, and possibly different than what Ben did in some cases.  But it won't make sense to describe what I did different if I don't describe the thing as a whole, at least a bit.  The point is, this is a set of cuts/systematics that isn't really that straightforward to understand.  }
 %\section{Plastic Scintillators}
-%	\note[color=org]{Maybe this goes in Chapter~\ref{analysis_chapter}?}
+%	\note[color=org]{Maybe this goes in Chapter~\ref{dataselection_chapter}?}
 %	\note{Energy calibration for the scintillator+PMT setup changed dramatically at one point.    Describe how calibration was done.  Like, one sentence or something.  Something about the endpoint energy, and something about the compton edge for 511s, IIRC.}
 %\section{Strip Detectors}
 %	\note{How the fuck WERE these things done?!}
 
-\note{Potential new subsection:  the camera?}
 
-\subsection{The eMCP}
-	I can describe the eMCP calibration here, even though it mostly wasn't implemented by me.  It is tangentially relevant to data selection and background estimation by providing an experimental energy spectrum for shake-off electrons.  It's actually a pretty neat algorithm that I basically wasn't involved with.
-	\note[color=jb]{JB:  eMCP.  You need to describe the timing information obtained.  You also need a statement of whether or not you used the position information in your cuts.}
 
 %\missingfigure{Needs an SOE timing spectrum.  At least one of them.  Experimental and simulated.  Also, I have to describe how I did the simulating, and how I check that it's OK despite the fact that the simulated spectrum looks nothing like the experimental spectrum.}
 
 
-\subsection{The rMCP}
+\subsection{Measurements with the rMCP}
+	\note{Potential new subsection:  the camera?  Otherwise it has to go here.}
 	I did this, and they're absolutely needed to make any sense of the trap position data.  
 %\missingfigure{Needs two pictures from the rMCP with the grid lines -- before and after corrections are performed.  Just for fun, I could throw in one with the stupid stripes.}
 \begin{figure}[h!!t]
@@ -110,9 +110,11 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 \end{figure}
 	These calibrations are done during AC-MOT time, and we're actually interested in the rMCP data taken during OP time.  Can I find pictures to estimate the size of the change resulting from the magnetic field?  In any case, the change is pretty small.  
 
-\subsection{rMCP Bullet Points!}
+%\subsection{rMCP Bullet Points!}
 %	\begin{itemize}
 %	\item 
+Now, the unsorted bullet points for the rMCP stuff!
+
 	Using the ``other'' data set with the rMCP:  Measure the trap position/size/velocity/expansion with the rMCP and with the camera.  Necessitates calibrating the rMCP, which is its own whole thing.  Also measure polarization.
 		\begin{itemize}
 		\item rMCP calibration probably gets its own section, if not its own chapter..
@@ -124,31 +126,35 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 
 %\missingfigure{Position as a function of run number.  I have this somewhere.}
 
+\subsection{Measurements with the eMCP}
+	I can describe the eMCP calibration here, even though it mostly wasn't implemented by me.  It is tangentially relevant to data selection and background estimation by providing an experimental energy spectrum for shake-off electrons.  It's actually a pretty neat algorithm that I basically wasn't involved with.
+	\note[color=jb]{JB:  eMCP.  You need to describe the timing information obtained.  You also need a statement of whether or not you used the position information in your cuts.}
 
 
 
 
-% !TEX root = ../thesis_main.tex
-%
-%
-%
-%%%% --- * --- %%%%	
-%%%% --- * --- %%%%	
-%%%% --- * --- %%%%	
-%\clearpage
-\section{Data Selection and Preliminary Cuts Mini-Intro from John}
-\note[color=org]{from JB, on whether to combine `Analysis' chapter with `Calibrations' chapter:  ``I see no special reason either way.  I would say the topics seem distinct.''}
-%
-\note[color=jb]{JB says:  ``((Ch.~\ref{analysis_chapter})) looks fine to me.''  ...even in spite of the giant paragraph suggestions below, I guess.}
-%\note[color=org]{Do I actually want to combine this with Chapter~\ref{calibrations_chapter}?}
-%\note[color=org]{from JB:  you ask at the start if you should combine it (Ch.7 (now Ch.6) ((Ch.5)), `Analysis') with Ch.6 (now Ch.5) `Calibrations'. I see no special reason either way.  I would say the topics seem distinct.}
-%\\...\\
-%Then Section 7.1...
-%}
+%%% !TEX root = ../thesis_main.tex
+%%%
+%%%
+%%%
+%%%%%% --- * --- %%%%	
+%%%%%% --- * --- %%%%	
+%%%%%% --- * --- %%%%	
+%%%\clearpage
+%%\section{Data Selection and Preliminary Cuts Mini-Intro from John}
+%%\note[color=org]{from JB, on whether to combine `Analysis' chapter with `Calibrations' chapter:  ``I see no special reason either way.  I would say the topics seem distinct.''}
+%%%
+%%\note[color=jb]{JB says:  ``((Ch.~\ref{dataselection_chapter})) looks fine to me.''  ...even in spite of the giant paragraph suggestions below, I guess.}
+%%%\note[color=org]{Do I actually want to combine this with Chapter~\ref{calibrations_chapter}?}
+%%%\note[color=org]{from JB:  you ask at the start if you should combine it (Ch.7 (now Ch.6) ((Ch.5)), `Analysis') with Ch.6 (now Ch.5) `Calibrations'. I see no special reason either way.  I would say the topics seem distinct.}
+%%%\\...\\
+%%%Then Section 7.1...
+%%%}
 
 %\section{Data Selection and Pre-Processing}
 %\section{Run Parameters and Preliminary Cuts}
 \section{Data Selection and Preliminary Cuts}
+\note{We now consider how to clean up our data.  We make some fairly obvious, intuitive cuts, and those are described here.  Later, we'll make less intuitively obvious cuts.}
 Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), % to collect positively charged recoiling ions on the rMCP and negatively charged shake-off electrons on the eMCP 
 in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, we ended up running only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  
 

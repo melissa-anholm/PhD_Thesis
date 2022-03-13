@@ -7,6 +7,11 @@
 %\section{Simulations}
 \chapter{Simulations}
 \label{simulations_chapter}
+
+I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
+\missingfigure{Show simulated spectra separated by scattering category.}
+\missingfigure{Show SimpleMC spectra, show the supersum, show the superratio, show the superratio asymmetry.  Maybe do some simple fits to show how much better the superratio asymmetry is than \emph{not} the superratio asymmetry.  }
+
 \note[color=done]{John says:  ``I doubt I will have further useful comments on the Ch. ((this chapter)) as they are now.'' -- Yeah, but *now* he will.}
 %\note[color=org]{Do I want this in a separate chapter?  Or maybe I want it to be combined with the stuff on data selection and analysis.  Surely that chapter is getting too big even without this stuff.}
 
@@ -62,7 +67,7 @@ and finally a set of $300\,\mu m$ thick double-sided silicon strip detectors (DS
 In order to create a quantitative description of the effective response function, which varies with initial beta energy, we have created an analytic function of 14 parameters for each of four detector and polarization combinations (56 parameters in total), to represent the final beta energy spectra in the scintillators.  The values of these parameters must be determined empirically, by a fit to simulated spectra.  Since the final response function is expected to be a function of initial beta energy, we must allow for these parameters to also vary as a function of initial beta energy.  To effect this result, 
 %~\aside{Have I *even* described what I mean by a ``lineshape''?  I'm pretty sure I haven't.  Ugh.}
 %for betas emitted at all (relevant) energies, 
-the TRINAT Geant4 simulation is used to generate a series of `mono-energetic' spectra.  That is, for each energy value under consideration (selected to span the energy range of betas in our decay), events are generated in which every outgoing beta initially has the same amount of kinetic energy, and the angular distribution of these betas is physically appropriate for the polarization and beta energy under consideration.  Both polarization states must be considered separately.  These mono-energetic betas are propagated through the experimental geometry via Geant4, and the resulting scintillator spectra are recorded.  Cuts identical to those imposed on the experimental data are implemented (see Chapter~\ref{analysis_chapter}).  \aside{somewhere I have to talk about the empirical noise spectrum etc. on the BB1s.  Or maybe I've already mentioned it somewhere.}  Several such spectra are shown for the Bottom Detector in the `-' polarization state, with their best fits and the residuals thereof in Figs.~\ref{fig:lineshape_5000},~\ref{fig:lineshape_3000},~\ref{fig:lineshape_1500},~\ref{fig:lineshape_1000}, and~\ref{fig:lineshape_750}.
+the TRINAT Geant4 simulation is used to generate a series of `mono-energetic' spectra.  That is, for each energy value under consideration (selected to span the energy range of betas in our decay), events are generated in which every outgoing beta initially has the same amount of kinetic energy, and the angular distribution of these betas is physically appropriate for the polarization and beta energy under consideration.  Both polarization states must be considered separately.  These mono-energetic betas are propagated through the experimental geometry via Geant4, and the resulting scintillator spectra are recorded.  Cuts identical to those imposed on the experimental data are implemented (see Chapter~\ref{dataselection_chapter}).  \aside{somewhere I have to talk about the empirical noise spectrum etc. on the BB1s.  Or maybe I've already mentioned it somewhere.}  Several such spectra are shown for the Bottom Detector in the `-' polarization state, with their best fits and the residuals thereof in Figs.~\ref{fig:lineshape_5000},~\ref{fig:lineshape_3000},~\ref{fig:lineshape_1500},~\ref{fig:lineshape_1000}, and~\ref{fig:lineshape_750}.
 
 \begin{figure}[h!!tb]
 	\centering
