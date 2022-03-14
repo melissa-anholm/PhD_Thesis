@@ -40,14 +40,34 @@ You have time for nothing else.
 
 %\section{Background and Motivation}
 \section{Motivation}
-The nuclear weak force is one of four fundamental forces described within physics.  It mediates the process of beta decay, which is of particular interest to us here.  Although beta decay is generally well understood, it presents a unique opportunity to search for physics beyond the Standard Model within the behaviour of the weak coupling.  By observing the kinematics and angular correlations involved in the decay process, one gains access to a wealth of information about the precise form of the operators mediating the decay.  
+The nuclear weak force is one of four fundamental forces described within physics.  It mediates the process of beta decay, which is of particular interest to us here.  Although beta decay is generally well understood, it presents a unique opportunity to search for physics beyond the Standard Model within the behaviour of the Weak coupling.  By observing the kinematics and angular correlations involved in the decay process, one gains access to a wealth of information about the precise form of the operators mediating the decay.  
 
-According to the predictions of the Standard Model, beta decay involves only so-called vector (V) and axial-vector (A) couplings, with a relative phase angle producing the left-handed ``(V--A)'' form of the interaction.  \aside{Did I even get this right?  Is the phase angle really what makes it left-handed? \\ JB says:  \\ ... \\ Relative sign.  look at the quark-lepton Lagrangian, which has $(1 \pm \gamma_5)$ } There exists an extensive body of experimental evidence to demonstrate that this is overall a very good description of the beta decay process.  \aside{Cite a bunch of people here.  (Who?)  Might be nice to have a picture also.}  Despite the success of the (V--A) model, the additional presence of certain other ``exotic'' couplings cannot be entirely ruled out, and our observable is mostly sensitive to scalar (S) and tensor (T) couplings.  \aside[color=jb]{John wanted this change (now implemented), but I think the phrasing is unclear now. 
-\\ ... \\
-"and we shall be interested especially in scalar (S) and tensor (T) couplings." -> "our observable is mostly sensitive to scalar (S) and tensor (T) couplings."
+According to the predictions of the Standard Model, beta decay involves only so-called vector (V) and axial-vector (A) couplings, with a relative sign within the quark-lepton Lagrangian producing the 
+%(experimentally observed) 
+left-handed ``(V--A)'' form of the interaction.  In terms of physical behaviour, this means that ``regular matter'' leptons emerge from a Weak interaction with left-handed chirality, while antimatter leptons emerge with right-handed chirality.  
+
+\note{ The general form of the weak interaction Hamiltonian is: \\
+\bea
+\hat{H}_{\mathrm{weak}} &=& \sum_{i=S,P,V,A,T} \left( {\bar{\psi}}_p {\mathcal O}^i \psi_n \right) \left( C_i \bar{\psi}_e {\mathcal O}_i \psi_\nu + C_i^\prime \bar{\psi}_e {\mathcal O}_i \gamma^5 \psi_\nu \right) + H.C.
+\eea
+\\
+It's from here:  ~\cite{hong_sternberg_garcia}.
+\\ 
+Also, unclear what subscripts $p,n,e,\nu$ mean.  I could guess/assume, but....
 }
 
+
+%\aside{Did I even get this right?  Is the phase angle really what makes it left-handed? \\ JB says:  \\ ... \\ Relative sign.  look at the quark-lepton Lagrangian, which has $(1 \pm \gamma_5)$ } 
+There exists an extensive body of experimental evidence \aside{Cite someone!} to demonstrate that this is overall a very good description of the beta decay process.  Despite the success of the (V--A) model, the additional presence of certain other ``exotic'' couplings cannot be entirely ruled out, and the search for physical interactions beyond the Standard Model (BSM) is an active field of research. \aside{cite someone?}  
+%, and our observable is mostly sensitive to scalar (S) and tensor (T) couplings.  
+\aside[color=done]{John wanted this change (now implemented), but I think the phrasing is unclear now. 
+\\ ... \\
+"and we shall be interested especially in scalar (S) and tensor (T) couplings." -> "our observable is mostly sensitive to scalar (S) and tensor (T) couplings."
+\\ ... \\
+Maybe I can tweak it to make it flow a bit better?}
+
 \note{According to present limits, these couplings would have to be pretty small relative to the (V) and (A) couplings.}
+\note[color=jb]{Me:  \\ Is a `phase angle' really what makes it left-handed? \\.\\ JB says:  \\ Relative sign.  look at the quark-lepton Lagrangian, which has $(1 \pm \gamma_5)$ }
 
 \bluetodo{Need to figure out how the exotic couplings actually work, mathematically.  What the fuck does ``$(V-A)$'' even *mean*?  IIRC John wants a brief mention of $\gamma_5$'s and $\gamma_\mu$'s, and probably a brief mention of whatever mumble-mumble group is mumble-mumble represented or something.
 \\
@@ -146,7 +166,7 @@ Unfortunately, the outgoing (anti-)neutrino is very difficult to detect directly
 \\Don't. The equation you have is all you need.}
 Integrating the JTW expression over neutrino direction, we find:
 \input{equation_integratedjtw}
-where 
+where a comparison with Holstein's treatment yields the relation,
 \bea
 \xi = G_v^2 \, \cos\theta_C \, f_1(E).
 \eea
@@ -155,13 +175,41 @@ where
 
 \section{Our Decay}
 \note[color=jb]{JB:  on 2.3 (now 1.4), "Our decay":  Just put the comments in. Keep the figure as-is.
-\\
-MJA:  Pretty sure the comments are literally copy-pasted from somewhere I shouldn't just plagiarize from.  Need to rephrase it at least.  ...No, it's fine, it's just from my old thesis proposal.  I think.  Removed now from that section, so it can go here..
+%\\
+%MJA:  Pretty sure the comments are literally copy-pasted from somewhere I shouldn't just plagiarize from.  Need to rephrase it at least.  ...No, it's fine, it's just from my old thesis proposal.  I think.  Removed now from that section, so it can go here..
 }
 
 %  \mbox{ $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$ }
 %\note{ ``Here, we focus on the decay $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$.  The angular correlations between the emerging daughter particles provide a rich source of information about the type of interaction that produced the decay.''  }
-Here, we focus on the decay $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$.  The angular correlations between the emerging daughter particles provide a rich source of information about the type of interaction that produced the decay.  Among other useful properties, this is is a `mirror' decay, meaning that the nuclear wavefunctions of the parent and daughter are identical up to their isospin quantum number.  This property allows us to place strong constraints on the size of the theoretical uncertainties for this decay process within the Standard Model.  
+Here, we will focus on the decay $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$, which is extremely well suited to the type of experiment to be the discussed in this thesis.  
+%this and other similar experiments -- both because of its suitability 
+The parent, $^{37}\textrm{K}$, is an isotope of potassium---an alkali.  Though this fact may initially seem unremarkable, it is their `hydrogen-like' single valence electron which allows alkalis to be readily trapped within a magneto-optical trap, a critical component of our experimental design (see Chapter~\ref{atomicphysics_chapter}).
+
+%critical to the operation of our experiment, because--as a result of their `hydrogen-like' single valence electron--alkali atoms may be readily trapped within a magneto-optical trap.
+%which is essential to our experimental design (see Chapter~\ref{section:mot}).  
+%our ability to hold the atoms within a magneto-optical trap 
+
+A potential concern in any experiment concerned with the angular correlations resulting from one particular decay branch is the background from competing decay branches.  As can be seen in Fig.~\ref{fig:nuclearleveldiagram}, the decay of $^{37}\textrm{K}$ is dominated by a single branch which contributes nearly $98\%$ of $^{37}\textrm{K}$ decay events, and the remaining events nearly all arise from a single branch contributing around $2\%$ of the decay events.  The other branches combined account for only around $0.04\%$ of decays.  Taken all together, this means that the background events which must be accounted for are both infrequent and well understood.
+
+%the result is a fairly clean decay spectrum dominated by the branch of interest to us, with  
+%to manage the background from other decay branches.  
+
+\begin{figure}[h!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/NuclearLevelDiagram.png}
+	\caption{A level diagram for the decay of $\isotope[37]{K}$.}	
+	\label{fig:nuclearleveldiagram}
+\end{figure}
+
+
+
+As in any decay, the angular correlations between the emerging daughter particles provide a rich source of information about the type of interaction that produced the decay.  
+This particular decay involves a set of `mirror' nuclei, meaning that the nuclear wavefunctions of the parent and daughter are identical up to their isospin quantum number and corresponding electrical charge.  Because the two wavefunctions are so similar, effects to the decay from nuclear structure corrections can be kept to a minimum, and it is therefore possible to place especially strong constraints on the size of the theoretical uncertainties associated with the decay.  \aside[color=bluetodo]{Is it definitely true that the nuclear structure corrections are *smaller*?  Or is it just that they're better understood?}
+
+
+%As a result, observations of this particular decay can be used to place especially strong constraints on 
+%This property allows us to place strong constraints on the size of the theoretical uncertainties for this decay process within the Standard Model.  
 
 %\note{ ``Of particular interest is the decay process: $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$.  Among other useful properties, this is is a `mirror' decay, meaning that the nuclear wavefunctions of the parent and daughter are identical up to their isospin quantum number.  
 %%the number of protons in the parent nucleus (19) is equal to the number of neutrons in the daughter, and the number of neutrons in the parent (18) is equal to the number of protons in the daughter.  
@@ -169,19 +217,16 @@ Here, we focus on the decay $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + 
 %''}
 
 
-\note{Talk about how great \isotope[37]{K} is for what we're doing with it.  Also, drop all the math-numbers to support those assertions.  Reference the level diagram within the text!}
+%\note{Talk about how great \isotope[37]{K} is for what we're doing with it.  Also, drop all the math-numbers to support those assertions.  Reference the level diagram within the text!}
 
-\note{Also, 37K is a really nice isotope for this, because 98\% + 2\%, also because it's a mirror decay, also because it's an alkali.  Also-also, its big $\Abeta$ value means we have a big thing to multiply any $\bFierz$ value there might be when we construct the superratio asymmetry to eliminate systematics.}
+\note{Also, 37K is a really nice isotope for this, because 
+%98\% + 2\%, 
+%also because it's a mirror decay, 
+%also because it's an alkali.  Also-
+%also, 
+its big $\Abeta$ value means we have a big thing to multiply any $\bFierz$ value there might be when we construct the superratio asymmetry to eliminate systematics.}
 
 %\missingfigure{This thing is going to need a nuclear level diagram for 37K.  Also, 37K is a really nice isotope for this, because 98\% + 2\%, also because it's a mirror decay, also because it's an alkali.  Also-also, its big $\Abeta$ value means we have a big thing to multiply any $\bFierz$ value there might be when we construct the superratio asymmetry to eliminate systematics.}
-
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/NuclearLevelDiagram.png}
-	\caption{A level diagram for the decay of $\isotope[37]{K}$.}	
-	\label{fig:nuclearleveldiagram}
-\end{figure}
 
 
 %\section{Exotic Couplings}

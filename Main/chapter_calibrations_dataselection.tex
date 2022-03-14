@@ -9,9 +9,59 @@
 \chapter{Calibrations and Data Selection}
 \label{calibrations_chapter}
 \label{dataselection_chapter}
-I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
-\missingfigure{Show individual beta energy spectra.  ...with a variety of different cuts, perhaps?}
 
+\note{Intro blurb goes here?}
+
+\section{Measurements with the rMCP}
+\label{sec:rmcp}
+\note{Potential new subsection:  the camera?  Otherwise that content has to go here.}
+
+As described in Chapter~\ref{section:mcps}, the science chamber features a series of electrostatic hoops to maintain an electric field to direct positively and negatively charged particles into MCP detectors on opposing sides of the chamber, but it was only possible to operate one MCP detector at a time, so it was necessary to alternate which detector was in use several times between runs so as to be able to collect both types of data.  Although the final analysis uses only the eMCP runs directly, the result could not have been obtained with the same precision had the rMCP data not been present.  
+
+As described in Chapter~\ref{photoions}, the primary function of the rMCP within the context of this experiment is as a probe of the atom cloud.  
+\note{the rMCP does both cloud position *and* cloud polarization, and it collects data faster than the camera can go, so we really kind-of need it for polarization I think?  Except we had that oscilloscope readout too, and that would have basically been fine I think.  Camera does position, but not quickly, so we'd just get an average over all the AC-MOT times or whatever, which isn't really what we want.  Though, turns out that's not a super big systematic anyway.  But whatever, the rMCP is useful, dammit!}
+
+\note{Some kind of segue into a description of what needed to be done to get the rMCP to do what we wanted.}
+
+\begin{figure}[h!!t]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/rMCP_sumcuts_447.pdf}
+%	\note{This figure needs to be discussed in text or whatever.}
+	\caption[Sumcuts for the rMCP, run 447.]{Sumcuts for the rMCP, run 447.}	
+%	\label{fig:vposition_by_run_rmcp}
+	\note{Step 1:  Make some cuts on the delay line timing sums!}
+\end{figure}
+
+
+
+\begin{figure}[h!!t]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/rMCP_Calibration}
+	\caption[rMCP Calibration]{rMCP Calibration.  Definitely comment about how this calibration went here, in the figure caption. \comment{(Do I definitely want a picture with the stupid line-y runs?  Maybe it's better to just *not*...)}}	
+	\label{fig:rmcp_calibration}
+\end{figure}
+	These calibrations are done during AC-MOT time, and we're actually interested in the rMCP data taken during OP time.  Can I find pictures to estimate the size of the change resulting from the magnetic field?  In any case, the change is pretty small.  
+
+%\subsection{rMCP Bullet Points!}
+%	\begin{itemize}
+%	\item 
+Now, the unsorted bullet points for the rMCP stuff!
+
+	Using the ``other'' data set with the rMCP:  Measure the trap position/size/velocity/expansion with the rMCP and with the camera.  Necessitates calibrating the rMCP, which is its own whole thing.  Also measure polarization.
+		\begin{itemize}
+		\item rMCP calibration probably gets its own section, if not its own chapter..
+		\item We took the mask off before the 2014 run, to give us more detector area.  Use previous reference calibration \emph{with the mask} during the test run in Nov 2013.  The delay line's non-linearities should be the same, assuming we can get the centering the same.  Cables have changed and stuff, so we have to re-center the pre-calibration image to where the old pre-calibration image was.  ...  So, center the new runs w.r.t the old run.
+		\item We'll want to make some sum cuts for these things.  We might like them to be identical, or at least identical-ish, but the peaks don't really look the same.  So we'll settle for ``decent sum cuts for all!".  ...  So, apply sum cuts to the new runs and old run.
+		\item Calibrate the old run, with the mask.  In fact, I don't remember which order I did things in.  But I have a record of it here, somewhere...
+		\end{itemize}
+%	\end{itemize}
+
+
+
+%I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
+\missingfigure{Show individual beta energy spectra.  ...with a variety of different cuts, perhaps?}
 Without further ado, I'm just going to put in several pictures.  Right here, right now.  They're likely to *actually* show up on subsequent pages mixed in with the other content.  I'll have to fix that at some point.
 \begin{figure}[h!!t]
 	\centering
@@ -32,14 +82,6 @@ Without further ado, I'm just going to put in several pictures.  Right here, rig
 \begin{figure}[h!!t]
 	\centering
 	\includegraphics[width=.999\linewidth]
-	{Figures/rMCP_sumcuts_447.pdf}
-	\note{This figure needs to be discussed in text or whatever.}
-	\caption[Sumcuts for the rMCP, run 447.]{Sumcuts for the rMCP, run 447.}	
-%	\label{fig:vposition_by_run_rmcp}
-\end{figure}
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
 	{Figures/rMCP_xyz_comparecuts447.pdf}
 	\note{This figure needs to be discussed in text or whatever.}
 	\caption[A projection along all three axes for run 447, with various cuts on the rMCP delay line timing sum.]{A projection along all three axes for run 447, with various cuts on the rMCP delay line timing sum.}	
@@ -54,8 +96,9 @@ Without further ado, I'm just going to put in several pictures.  Right here, rig
 
 \section{Measurements of the Atom Cloud}
 \label{sec:cloud_calibration}
+\note{Pretty sure this section needs to be merged with the previous section on rMCP measurements.}
 
-\note[color=org]{Content that previously was in this subsection is now in Section~\ref{cloud}.  But also, see Section~\ref{sec:photoprobe}.  Probably in this section here, I need to just jump right in assuming everyone understands the physical principle of how the data works.  Then, I can talk about what the data *is*, and how it gets interpreted.}
+\note[color=org]{Content that previously was in this subsection is now in Section~\ref{cloud}.  But also, see the section about the photoionization laser.  Probably in this section here, I need to just jump right in assuming everyone understands the physical principle of how the data works.  Then, I can talk about what the data *is*, and how it gets interpreted.}
 
 %\label{cloud}
 %\label{photoions}
@@ -133,35 +176,6 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 
 %\missingfigure{Needs an SOE timing spectrum.  At least one of them.  Experimental and simulated.  Also, I have to describe how I did the simulating, and how I check that it's OK despite the fact that the simulated spectrum looks nothing like the experimental spectrum.}
 
-
-\subsection{Measurements with the rMCP}
-	\note{Potential new subsection:  the camera?  Otherwise it has to go here.}
-	I did this, and they're absolutely needed to make any sense of the trap position data.  
-%\missingfigure{Needs two pictures from the rMCP with the grid lines -- before and after corrections are performed.  Just for fun, I could throw in one with the stupid stripes.}
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/rMCP_Calibration}
-	\caption[rMCP Calibration]{rMCP Calibration.  Definitely comment about how this calibration went here, in the figure caption. \comment{(Do I definitely want a picture with the stupid line-y runs?  Maybe it's better to just *not*...)}}	
-	\label{fig:rmcp_calibration}
-\end{figure}
-	These calibrations are done during AC-MOT time, and we're actually interested in the rMCP data taken during OP time.  Can I find pictures to estimate the size of the change resulting from the magnetic field?  In any case, the change is pretty small.  
-
-%\subsection{rMCP Bullet Points!}
-%	\begin{itemize}
-%	\item 
-Now, the unsorted bullet points for the rMCP stuff!
-
-	Using the ``other'' data set with the rMCP:  Measure the trap position/size/velocity/expansion with the rMCP and with the camera.  Necessitates calibrating the rMCP, which is its own whole thing.  Also measure polarization.
-		\begin{itemize}
-		\item rMCP calibration probably gets its own section, if not its own chapter..
-		\item We took the mask off before the 2014 run, to give us more detector area.  Use previous reference calibration \emph{with the mask} during the test run in Nov 2013.  The delay line's non-linearities should be the same, assuming we can get the centering the same.  Cables have changed and stuff, so we have to re-center the pre-calibration image to where the old pre-calibration image was.  ...  So, center the new runs w.r.t the old run.
-		\item We'll want to make some sum cuts for these things.  We might like them to be identical, or at least identical-ish, but the peaks don't really look the same.  So we'll settle for ``decent sum cuts for all!".  ...  So, apply sum cuts to the new runs and old run.
-		\item Calibrate the old run, with the mask.  In fact, I don't remember which order I did things in.  But I have a record of it here, somewhere...
-		\end{itemize}
-%	\end{itemize}
-
-%\missingfigure{Position as a function of run number.  I have this somewhere.}
 
 \subsection{Measurements with the eMCP}
 	I can describe the eMCP calibration here, even though it mostly wasn't implemented by me.  It is tangentially relevant to data selection and background estimation by providing an experimental energy spectrum for shake-off electrons.  It's actually a pretty neat algorithm that I basically wasn't involved with.
