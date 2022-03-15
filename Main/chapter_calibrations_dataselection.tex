@@ -12,37 +12,95 @@
 
 \note{Intro blurb goes here?}
 
-\section{Measurements with the rMCP}
+\section{Preliminary Data Selection with the rMCP}
 \label{sec:rmcp}
 \note{Potential new subsection:  the camera?  Otherwise that content has to go here.}
 
-As described in Chapter~\ref{section:mcps}, the science chamber features a series of electrostatic hoops to maintain an electric field to direct positively and negatively charged particles into MCP detectors on opposing sides of the chamber, but it was only possible to operate one MCP detector at a time, so it was necessary to alternate which detector was in use several times between runs so as to be able to collect both types of data.  Although the final analysis uses only the eMCP runs directly, the result could not have been obtained with the same precision had the rMCP data not been present.  
+As described in Chapter~\ref{section:mcps}, the science chamber features a series of electrostatic hoops to maintain an electric field to direct positively and negatively charged particles into MCP detectors on opposing sides of the chamber, but it was only possible to operate one MCP detector at a time, so it was necessary to alternate which detector was in use several times between runs so as to be able to collect both types of data.  Although the final analysis uses only the eMCP runs directly, the result could not have been obtained with the same degree of precision had the rMCP data not been present.  
 
-As described in Chapter~\ref{photoions}, the primary function of the rMCP within the context of this experiment is as a probe of the atom cloud.  
+As described in Chapter~\ref{photoions}, the primary function of the rMCP within the context of this experiment is as a probe of the atom cloud, and it provided a critical check of the cloud's position, size, and polarization state over the course of the beamtime.  The process of cleaning, calibrating, and analyzing this data is described here.  
+
+The two delay lines located just behind the rMCP provide information about hit position.  The principle behind a delay line's operation is relatively straightforward.  The delay line itself is made from a thin wire wound into a flattened coil that covers the area of the microchannel plate.  The second delay line is oriented perpendicular to the first and immediately behind it, but also covers the full area of the microchannel plate.  When a charged particle is incident on the stack of microchannel plates, an electron shower is initiated.  The shower gains strength as it propagates through the MCPs' microchannels, and emerges on the back side of the stack after having been greatly amplified.  This electron shower is then incident on a delay line, generating an electrical pulse that propagates from the hit point towards both ends of the wire.  Although the wire is conductive, the propagation speed is finite, and this fact is key to extracting the hit position.  The time of arrival for the electrical pulse is recorded at each end of the delay line wire, and it is the difference between the two times that tells where along the wire the original hit occurred.  In general, a single delay line is only precise enough to determine the hit position as projected along the direction perpendicular to its coil's wires.
+%and the initial hit position is determined in one dimension by comparing the difference in pulse arrival times at each end of the wire. 
+~\aside{how precise is the rMCP supposed to do?  in practice, it wasn't nearly that good.} 
+The electron shower continues past the first delay line to hit the delay line immediately behind, which again creates an electrical pulse that propagates towards the ends of that wire, and a similar procedure can be used to evaluate the hit position in the perpendicular direction.  Therefore, for an event~\aside{It's not really *every* event...} in which the rMCP is hit and an electron shower is triggered, we expect to have five timestamps associated with that hit -- one associated with the MCP stack itself, and two from each delay line.
+\note{A diagram of how delay lines work would really help here, but there's no time for that.  I'll put it in if someone asks.}
+\note[color=org]{Do I want the above section about how delay lines work to go in the other chapter?  Maybe.}
+
+This understanding of how delay lines work informs the initial stages of data processing for rMCP events.  To obtain the cleanest possible rMCP data, the first step is to simply throw out every event which doesn't have a complete set of five timestamps associated with it -- even though it would still be possible to make good use of many events which have only partial data.  Even though many ``real'' rMCP hit events came in under threshold in one or more channels, the detector as a whole was still fairly noisy -- and that noise varied in both quality and quantity over the course of the beamtime.  Therefore, it was decided to be more important for the rMCP data to be as clean as possible, despite the fact that its statistical power would be reduced. (Note that this step is \emph{not} done on the eMCP side -- more on that in Section~\ref{sec:emcp})~\aside{Fix the link.}  
+
+\note{At this stage I don't *really* do the thing where I throw out stuff that doesn't have a photodiode or scintillator hit in coincidence.  I think that comes later...}
+
+%It is useful to obtain the cleanest possible spectrum by eliminating events arising from detector noise, which was plentiful at many times during the collection of this data.  To that end, we construct the "timing sum" for 
+
+The next stage of rMCP data cleaning is to discard events with an aberrent set of timestamps.  A delay line is essentially just a long wire, and the time it takes to propagate a signal from one end of the wire to the other is fixed.  This means that no matter where along the delay line a pulse is generated, if one adds rather than subtracts the timestamps at which the pulse arrives at each of the two ends, that sum should be constant after accounting for the time of the original hit -- which we can determine from the timestamp associated with the MCP.  To that end, we construct delay line sums for the ``x'' and ``z'' delay lines,
+\small
+\bea
+\mathrm{DLA\_XSUM} &=& (\mathrm{TDC\_DL\_X1})\! + (\mathrm{TDC\_DL\_X2}) - 2(\mathrm{TDC\_ION\_MCP}) \,\,\,\,\,
+\\
+\mathrm{DLA\_ZSUM} &=& (\mathrm{TDC\_DL\_Z1}) + (\mathrm{TDC\_DL\_Z2}) - 2(\mathrm{TDC\_ION\_MCP}). \,\,\,\,\,
+\eea
+\normalsize
+For a perfectly operating detector, one would expect for a collection of many measurements of \small$\text{DLA\_XSUM}$\normalsize\, and \small$\text{DLA\_XSUM}$\normalsize\, should each look like an isolated delta spike.  In practice however, our distributions had a more complex set of features.  The shapes, widths, and even positions of these distributions changed from run to run, and not all of these changes could be attributed to a known cause (e.g. a change in detector settings).  Distributions from a single run are shown in Fig.~\ref{fig:sumcuts}.  
+
+%Ours are shown for a single run in Fig.~\ref{fig:sumcuts}.
+% but in practice, ours are a bit more broad and asymmetrical, as shown in Fig.~\ref{fig:sumcuts}.
+%  The distributions are shown in Fig.~\ref{fig:sumcuts} for a single run only.
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/rMCP_sumcuts_447.pdf}
+	\note{Are these things *definitely* in nanoseconds?  Check!}
+	\note{This algorithm does *not* discard $10\%$ of events!}
+	\caption[Timing sums for the rMCP, run 447.]{Timing sums and associated cuts for the rMCP detector, run 447.  The `$10\%$' cuts shown simply eliminate events in which the distribution's height at that value is less than `$10\%$' of that distribution's maximum, and the `$1\%$' cuts are performed in a similar manner.  This figure shows the results after cuts on \emph{both} distributions are taken.   
+	%  Only a single run is shown here because the shapes, widths, and positions of these distributions varied significantly over the course of the beamtime, and not all of the changes can be attributed to e.g. a change in settings.  
+	}	
+	\label{fig:sumcuts}
+\end{figure}
+
+Because the characteristics of these timing sum distributions varied from run to run, it didn't make sense to aggregate all the data before taking cuts, so any cuts had to be chosen on a run-by-run basis.  Because of the asymmetry and occasional bimodality of the distributions, it also didn't make sense to try to fit the distributions to a function such as a gaussian and then cut away some number of sigma from the fit function.  The algorithm that was used in the end was to determine the peak's maximum, then discard events from the portion of the distribution in which the distribution's height is less than $10\%$ of the maximum.  
+
+% and it also didn't make sense to try to fit a function such as a gaussian and then cut away some number of sigma from 
+%-- so all cuts on the rMCP delay line timing sums had to be taken on a run-by-run basis, and because of the asymmetry and occasional bimodality of the distributions,   
+%In particular, we consider the the signals
+
+\section{Calibrations with the rMCP}
+
+\note{This section must be re-phrased.}
+Right, so. We removed the mask before the run for some reason (did that happen when we had to open the chamber at the last minute?  I think it was probably actually planned...), so we had to rely on a calibration run we had taken months prior, using a calibration mask.  We only have a single calibration run.  I think we used an alpha source, but maybe I should check on that.  
+
+Using the offline run with the calibration mask, one can see that the lines aren't quite straight.  They're also not necessarily in the spot where they should go, either.  So, I just stretched the image out.  There were several steps in total.  I forget how they all worked.  There was a rotation, and the each row and column was individually stretched so that the line from the mask was put in the position where it was known to actually be located w.r.t. the center of the detector.
+
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/rMCP_Calibration}
+	\caption[rMCP Calibration]{rMCP Calibration.  The left images show the rMCP hit map with only a basic preliminary calibration; the images on the right are filled with the same hit data, but after the calibration has been performed.  The upper two images are from data collected offline in advance of the 2014 beamtime using an alpha source; the shadow from a calibration mask is clearly visible.  The lower images show rMCP data taken from a single online run, with the photoion image of the atom cloud visible in the centre.}
+	\note{Vertical stripes of seemingly varying gain can be seen on the lower images, as in most of the online rMCP data.  We can't be certain about what caused them, and it has not been possible to eliminate them in analysis.}
+	\label{fig:rmcp_calibration}
+\end{figure}
+
+
+The calibration involved:
+\begin{itemize}
+	\item rotate
+	\item cal\_slide
+	\item big\_squeeze
+	\item micro\_squeeze\_x and micro\_squeeze\_z
+	\item edge\_stretch
+\end{itemize}
+
+
+
 \note{the rMCP does both cloud position *and* cloud polarization, and it collects data faster than the camera can go, so we really kind-of need it for polarization I think?  Except we had that oscilloscope readout too, and that would have basically been fine I think.  Camera does position, but not quickly, so we'd just get an average over all the AC-MOT times or whatever, which isn't really what we want.  Though, turns out that's not a super big systematic anyway.  But whatever, the rMCP is useful, dammit!}
 
 \note{Some kind of segue into a description of what needed to be done to get the rMCP to do what we wanted.}
 
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/rMCP_sumcuts_447.pdf}
-%	\note{This figure needs to be discussed in text or whatever.}
-	\caption[Sumcuts for the rMCP, run 447.]{Sumcuts for the rMCP, run 447.}	
-%	\label{fig:vposition_by_run_rmcp}
-	\note{Step 1:  Make some cuts on the delay line timing sums!}
-\end{figure}
 
 
 
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/rMCP_Calibration}
-	\caption[rMCP Calibration]{rMCP Calibration.  Definitely comment about how this calibration went here, in the figure caption. \comment{(Do I definitely want a picture with the stupid line-y runs?  Maybe it's better to just *not*...)}}	
-	\label{fig:rmcp_calibration}
-\end{figure}
-	These calibrations are done during AC-MOT time, and we're actually interested in the rMCP data taken during OP time.  Can I find pictures to estimate the size of the change resulting from the magnetic field?  In any case, the change is pretty small.  
+
+These calibrations are done during AC-MOT time, and we're actually interested in the rMCP data taken during OP time.  Can I find pictures to estimate the size of the change resulting from the magnetic field?  In any case, the change is pretty small.  
 
 %\subsection{rMCP Bullet Points!}
 %	\begin{itemize}
@@ -50,18 +108,16 @@ As described in Chapter~\ref{photoions}, the primary function of the rMCP within
 Now, the unsorted bullet points for the rMCP stuff!
 
 	Using the ``other'' data set with the rMCP:  Measure the trap position/size/velocity/expansion with the rMCP and with the camera.  Necessitates calibrating the rMCP, which is its own whole thing.  Also measure polarization.
-		\begin{itemize}
-		\item rMCP calibration probably gets its own section, if not its own chapter..
-		\item We took the mask off before the 2014 run, to give us more detector area.  Use previous reference calibration \emph{with the mask} during the test run in Nov 2013.  The delay line's non-linearities should be the same, assuming we can get the centering the same.  Cables have changed and stuff, so we have to re-center the pre-calibration image to where the old pre-calibration image was.  ...  So, center the new runs w.r.t the old run.
-		\item We'll want to make some sum cuts for these things.  We might like them to be identical, or at least identical-ish, but the peaks don't really look the same.  So we'll settle for ``decent sum cuts for all!".  ...  So, apply sum cuts to the new runs and old run.
-		\item Calibrate the old run, with the mask.  In fact, I don't remember which order I did things in.  But I have a record of it here, somewhere...
-		\end{itemize}
-%	\end{itemize}
+\begin{itemize}
+	%	\item rMCP calibration probably gets its own section, if not its own chapter..
+	\item We took the mask off before the 2014 run, to give us more detector area.  Use previous reference calibration \emph{with the mask} during the test run in Nov 2013.  The delay line's non-linearities should be the same, assuming we can get the centering the same.  Cables have changed and stuff, so we have to re-center the pre-calibration image to where the old pre-calibration image was.  ...  So, center the new runs w.r.t the old run.
+%		\item We'll want to make some sum cuts for these things.  We might like them to be identical, or at least identical-ish, but the peaks don't really look the same.  So we'll settle for ``decent sum cuts for all!".  ...  So, apply sum cuts to the new runs and old run.
+%		\item Calibrate the old run, with the mask.  In fact, I don't remember which order I did things in.  But I have a record of it here, somewhere...
+\end{itemize}
 
 
 
 %I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
-\missingfigure{Show individual beta energy spectra.  ...with a variety of different cuts, perhaps?}
 Without further ado, I'm just going to put in several pictures.  Right here, right now.  They're likely to *actually* show up on subsequent pages mixed in with the other content.  I'll have to fix that at some point.
 \begin{figure}[h!!t]
 	\centering
@@ -249,6 +305,9 @@ MJA:  In fact, I think the BB1 radius may have been the same.  The uniform energ
 \\ ... \\ 
 Also, yes, the waveforms are absolutely recorded in the MIDAS files but they haven't been saved to modern ntuples, because they made the files huge.  I think it's probably pretty easy to switch that on/off in the Analyzer though to generate a set of ntuples that has that info included.
 }
+
+\missingfigure{Show individual beta energy spectra.  ...with a variety of different cuts, perhaps?}
+
 
 Although it was not possible to use the DSSD in real-time analysis or event triggering, the DSSDs may be used, after the data has been collected, to distinguish between different types of particles incident on the detector, as more energy will be deposited by heavier particles.  When a scintillator hit is triggered by a particle originating within the experimental chamber, that particle will typically have passed through the DSSD before arriving at the scintillator.
 
