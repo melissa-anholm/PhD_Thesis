@@ -65,11 +65,11 @@ Because the characteristics of these timing sum distributions varied from run to
 %In particular, we consider the the signals
 
 \section{Calibrations with the rMCP}
+A calibration mask was created for the rMCP, to eliminate any nonlinearities in the images produced.  Several months before the $\isotope[37]{K}$ beamtime was to occur, the mask was attached in front of the rMCP, and a test of the delay lines' ability to produce an image was performed using an alpha source to illuminate the full surface of the detector.~\aside{I *think* we used an alpha source?  Not sure what else we could have done, but I better check this!}  The mask was later removed in advance of the beamtime, in order to preserve the highest possible surface area, and calibrations were performed using the older mask data and subsequently applied to the online $\isotope[37]{K}$ data (see Fig.~\ref{fig:rmcp_calibration}).
 
-\note{This section must be re-phrased.}
-Right, so. We removed the mask before the run for some reason (did that happen when we had to open the chamber at the last minute?  I think it was probably actually planned...), so we had to rely on a calibration run we had taken months prior, using a calibration mask.  We only have a single calibration run.  I think we used an alpha source, but maybe I should check on that.  
+The calibration was performed over a number of steps.  The data was given a preliminary rough calibration, performed on each delay line separately, which simply involved taking the difference in pulse arrival times between each end of the delay line, scaling the result by a factor chosen to get the image to be the approximate correct size, and then subtracting an offset to center the image.  
 
-Using the offline run with the calibration mask, one can see that the lines aren't quite straight.  They're also not necessarily in the spot where they should go, either.  So, I just stretched the image out.  There were several steps in total.  I forget how they all worked.  There was a rotation, and the each row and column was individually stretched so that the line from the mask was put in the position where it was known to actually be located w.r.t. the center of the detector.
+With the preliminary calibration providing a visible image to work with, further adjustments were performed.  A rotation was applied, followed by a more precise centering algorithm. Following this, a linear stretching algorithm was applied to adjust the height and width of each row and column individually, while aligning the grid lines to their known position on the detector.  Finally, an additional radial stretch was applied to only the outer areas of the image.  This last adjustment can be justified by noting that it's expected for the outer parts of the image to be more distorted, and indeed the outer areas of the image did appear more `squished' relative to the rest.  See Fig.~\ref{fig:rmcp_calibration}.
 
 \begin{figure}[h!!tb]
 	\centering
@@ -80,27 +80,22 @@ Using the offline run with the calibration mask, one can see that the lines aren
 	\label{fig:rmcp_calibration}
 \end{figure}
 
+\note{For the actual beamtime, the image was clearly not centered correctly anymore, so this had to be re-estimated.  it's probably due to the addition or removal of cables creating or eliminating a delay in the readouts. }
 
-The calibration involved:
-\begin{itemize}
-	\item rotate
-	\item cal\_slide
-	\item big\_squeeze
-	\item micro\_squeeze\_x and micro\_squeeze\_z
-	\item edge\_stretch
-\end{itemize}
-
-
+%The calibration involved:
+%\begin{itemize}
+%	\item rotate
+%	\item cal\_slide
+%	\item big\_squeeze
+%	\item micro\_squeeze\_x and micro\_squeeze\_z
+%	\item edge\_stretch
+%\end{itemize}
 
 \note{the rMCP does both cloud position *and* cloud polarization, and it collects data faster than the camera can go, so we really kind-of need it for polarization I think?  Except we had that oscilloscope readout too, and that would have basically been fine I think.  Camera does position, but not quickly, so we'd just get an average over all the AC-MOT times or whatever, which isn't really what we want.  Though, turns out that's not a super big systematic anyway.  But whatever, the rMCP is useful, dammit!}
 
 \note{Some kind of segue into a description of what needed to be done to get the rMCP to do what we wanted.}
 
-
-
-
-
-These calibrations are done during AC-MOT time, and we're actually interested in the rMCP data taken during OP time.  Can I find pictures to estimate the size of the change resulting from the magnetic field?  In any case, the change is pretty small.  
+These calibrations are done during AC-MOT time (wait, is that even true?  I don't think so...), and we're actually interested in the rMCP data taken during OP time.  Can I find pictures to estimate the size of the change resulting from the magnetic field?  In any case, the change is pretty small.  
 
 %\subsection{rMCP Bullet Points!}
 %	\begin{itemize}
@@ -123,7 +118,7 @@ Without further ado, I'm just going to put in several pictures.  Right here, rig
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/rMCP_PI_2D_535.png}
-	\note{This figure needs to be discussed in text or whatever.}
+	\note{This figure needs to be discussed in text or whatever.  Does this thing even have a TOF cut?}
 	\caption[Photoion Hit Positions in 2D]{Photoion Hit Positions in 2D.  This is all of the data taken at 535 V/cm.}	
 %	\label{fig:vposition_by_run_rmcp}
 \end{figure}
