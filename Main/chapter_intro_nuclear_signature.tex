@@ -9,6 +9,8 @@
 \label{intro_chapter}
 \label{nuclear_chapter}
 
+%%\note{The TRIUMF Neutral Atom Trap (TRINAT) offers an experimental set-up which is uniquely suited to precision tests of Standard Model beta decay physics.  Radioactive ions are delivered from the ISAC beamline and neutralized before being trapped in the first of two magneto-optical traps (MOTs).  Approximately once per second, atoms from the first MOT are transferred to the second, where their decay products can be observed with significantly less background than would have been possible in the first trap (see Figure~\ref{fig:doublemot}).  The transfer methodology is discussed in some detail in a paper by Swanson et al~\cite{swanson}. (The point is that this eliminates background from the decays of other stuff.  Or the same stuff.  Stuff that's not centered at the trap.)}
+
 %\note[color=jb]{JB on the contents of Chapter 1:  \\
 %Move what you have in 1.1 and 1.3 to the first section of Chapter 2, and otherwise omit Chapter 1.}
 
@@ -185,12 +187,7 @@ Here, we will focus on the decay $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!A
 %this and other similar experiments -- both because of its suitability 
 The parent, $^{37}\textrm{K}$, is an isotope of potassium---an alkali.  Though this fact may initially seem unremarkable, it is their `hydrogen-like' single valence electron which allows alkalis to be readily trapped within a magneto-optical trap, a critical component of our experimental design (see Chapter~\ref{atomicphysics_chapter}).
 
-%critical to the operation of our experiment, because--as a result of their `hydrogen-like' single valence electron--alkali atoms may be readily trapped within a magneto-optical trap.
-%which is essential to our experimental design (see Chapter~\ref{section:mot}).  
-%our ability to hold the atoms within a magneto-optical trap 
-
 A potential concern in any experiment concerned with the angular correlations resulting from one particular decay branch is the background from competing decay branches.  As can be seen in Fig.~\ref{fig:nuclearleveldiagram}, the decay of $^{37}\textrm{K}$ is dominated by a single branch which contributes nearly $98\%$ of $^{37}\textrm{K}$ decay events, and the remaining events nearly all arise from a single branch contributing around $2\%$ of the decay events.  The other branches combined account for only around $0.04\%$ of decays.  Taken all together, this means that the background events which must be accounted for are both infrequent and well understood.
-
 %the result is a fairly clean decay spectrum dominated by the branch of interest to us, with  
 %to manage the background from other decay branches.  
 
@@ -201,7 +198,6 @@ A potential concern in any experiment concerned with the angular correlations re
 	\caption{A level diagram for the decay of $\isotope[37]{K}$.}	
 	\label{fig:nuclearleveldiagram}
 \end{figure}
-
 
 
 As in any decay, the angular correlations between the emerging daughter particles provide a rich source of information about the type of interaction that produced the decay.  
@@ -278,23 +274,11 @@ John made some nice plots of these from the eMCP data.  I did *not* use it to ma
 %I think I have to mention how many come off and how often at least briefly, because I use the Levinger spectrum for my background modeling.
 }
 
-%\begin{figure}[h!!t]
-%	\centering
-%	\includegraphics[width=.999\linewidth]
-%	{Figures/Levinger_SOETOF_prelim.pdf}
-%	\caption[Levinger TOF]{Shake-off electron TOF (w.r.t. beta TOA) spectrum, showing how the spectrum is different if one includes different sets of initial electrons to be shaken off.  I forget why some of them have 0 eV.  Maybe those are the ones from the $\isotope[37]{Ar}^+$. ... Levinger TOF spectra for some different sets of SOE initial orbitals before shake-off.  (At least that's what it's supposed to be, after I fix the picture).  It's reconstructed event-by-event with beta times-of-flight that would pass some basic `good event' cuts.  Anyway, it turns out, it doesn't much matter what orbitals you lose SOEs from.  That's nice.  In the end, I used 85+15.  \comment{(Need to re-plot this.)} }	
-%	\label{fig:levinger_TOF}
-%\end{figure}
-
-
-% !TEX root = ../thesis_main.tex
-
 
 %%%% --- * --- %%%%
-%\clearpage	
-%\chapter{The Experimental Signature}
 \section{Fierz Interference -- The Physical Signature}
 \label{signature_chapter}
+%\note[color=jb]{JB:  ``I doubt I will have further useful comments on the Ch. (((this chapter))) as they are now.'' }
 	The physical effects resulting from the presence of scalar or tensor couplings include a small perturbation to the energy spectrum of betas produced by radioactive decay.  
 
 %\missingfigure{I need that simulated picture of the different beta energy spectra, with different values of $\bFierz$.}
@@ -306,17 +290,6 @@ UCNA fits energy spectrum and Abeta[Ebeta] simultaneously now."
 %\section{Present Limits}
 %	A bit about other people's physics.
 
-%\section{A Toy Experiment}
-%	A quick overview of how an experiment like this one would be set up to extract the physics of interest, to keep the reader from getting too lost in the rest of the thesis.
-%\note{Do I really even *want* to include a toy experiment?  And would I want to do it here??  What even is the point?  I think in the past I decided it was easier to build up a description of .... something .... starting this way.  But why??  Possibly as I continue to add content, it will become obvious again why I originally wanted to do this.}
-%\note[color=jb]{JB says:  ``Your experiment is simple enough to describe without a toy.''  (He's said this twice now, so I should probably just kill this section.)}
-
-%\section{General Considerations Relating to the Experimental Signature}
-
-%\note[color=jb]{JB:  ``I doubt I will have further useful comments on the Ch. (((this chapter))) as they are now.'' }
-%\section{}
-%\note{Possibly this can be combined with the ``Background and Motivation'' or ``Theory'' chapters?  Why do I even *have* two of those chapters, if not for this? Anyway, surely I don't need *three* of them...}
-%\section{General Stuff}
 \note{The point is, the presence of either scalar or tensor interactions will produce a $\bFierz$ term in the decay PDF.  It has other effects on the PDF, but those come in at higher-order in the tiny scalar and tensor couplings.  So, the Fierz term would be by far the biggest thing that changes in the PDF.  The PDF describes the energy and momentum of the outgoing beta w.r.t. a variety of other things.  Notably, we can write an elegant-ish description of beta momentum w.r.t. nuclear polarization direction, and ignore the neutrino completely after integrating over it.  We have a PDF in beta \emph{direction} (w.r.t. polarization), and beta \emph{energy}.  To lowest order (and lowest order is best order) the distribution w.r.t. polarization direction doesn't change, but the distribution w.r.t. energy does change.  Or ... something?  The point is, it makes a change in the beta energy spectrum.  This change is most pronounced at low energies, because the Fierz term is scaled by $(1/\Ebeta)$.  However, the asymmetry is also a function of $\Ebeta$.  A different function of $\Ebeta$.  In fact, it is scaled by $(\pbeta/\Ebeta)$ within the PDF, which is distinctly different than $\bFierz$.  So, one might ask what effect a $\bFierz$ term would produce on a constructed asymmetry spectrum.  ....This explanation has gone way off track.}
 
 \note{Here's a reference to the picture that shows the result of a non-zero $\bFierz$ term.  It's Fig.~\ref{fig:FierzSignature}.}
@@ -330,14 +303,6 @@ UCNA fits energy spectrum and Abeta[Ebeta] simultaneously now."
 \end{figure}
 
 
-%\section{TBD}
-
-%I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
-%\missingfigure{Show individual beta energy spectra.  ...with a variety of different cuts, perhaps?}
-%\missingfigure{Show simulated spectra separated by scattering category.}
-%\missingfigure{Show SimpleMC spectra, show the supersum, show the superratio, show the superratio asymmetry.  Maybe do some simple fits to show how much better the superratio asymmetry is than \emph{not} the superratio asymmetry.  }
-
-
 \section{On the Superratio, the Supersum, and the Constructed Asymmetry}
 \note[color=jb]{JB:  You need to at some point say that the supersum is the beta energy spectrum.  There are experiments trying to do this method better, but they are very difficult.  UCNA published a combined energy spectrum and Abeta[Ebeta] analysis on the neutron in March 2020~\cite{NeutronbFierz_March2020}.}
 \note{I can't help but also notice the follow-up article from September 2020~\cite{NeutronbFierz_September2020}.  Ugh. }
@@ -345,9 +310,6 @@ UCNA fits energy spectrum and Abeta[Ebeta] simultaneously now."
 %\\*
 The data can be combined into a superratio asymmetry.  This has the benefit of causing many systematics to cancel themselves out at leading order.  It also will increase the fractional size of the effects we're looking for.  This can be shown by using math.  
 
-%\section{Signature of a Fierz Term in This Experiment}
-%\\*
-%\section{Comparative Merits of the Superratio and Supersum for Measurement}
 %\\*
 Not all systematics effects are eliminated.  We'll want to be careful to propagate through any effects that are relevant.  Using the superratio asymmetry as our physical observable makes this process a bit messier for the things that don't cancel out, but it's all just math.  
 %\\*

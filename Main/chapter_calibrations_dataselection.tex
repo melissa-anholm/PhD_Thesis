@@ -4,8 +4,6 @@
 %
 %%%% --- * --- %%%%	
 \clearpage
-%\chapter{Calibrations and Analysis}
-%\chapter{Calibrations}
 \chapter{Calibrations and Data Selection}
 \label{calibrations_chapter}
 \label{dataselection_chapter}
@@ -14,7 +12,6 @@
 
 \section{Preliminary Data Selection with the rMCP}
 \label{sec:rmcp}
-%\note{Potential new subsection:  the camera?  Otherwise that content has to go here.}
 
 As described in Chapter~\ref{section:mcps}, the science chamber features a series of electrostatic hoops to maintain an electric field to direct positively and negatively charged particles into MCP detectors on opposing sides of the chamber, but it was only possible to operate one MCP detector at a time, so it was necessary to alternate which detector was in use several times between runs so as to be able to collect both types of data.  Although the final analysis uses only the eMCP runs directly, the result could not have been obtained with the same degree of precision had the rMCP data not been present.  
 
@@ -27,11 +24,11 @@ The electron shower continues past the first delay line to hit the delay line im
 \note{A diagram of how delay lines work would really help here, but there's no time for that.  I'll put it in if someone asks.}
 \note[color=org]{Do I want the above section about how delay lines work to go in the other chapter?  Maybe.}
 
-This understanding of how delay lines work informs the initial stages of data processing for rMCP events.  To obtain the cleanest possible rMCP data, the first step is to simply throw out every event which doesn't have a complete set of five timestamps associated with it -- even though it would still be possible to make good use of many events which have only partial data.  Even though many ``real'' rMCP hit events came in under threshold in one or more channels, the detector as a whole was still fairly noisy -- and that noise varied in both quality and quantity over the course of the beamtime.  Therefore, it was decided to be more important for the rMCP data to be as clean as possible, despite the fact that its statistical power would be reduced. (Note that this step is \emph{not} done on the eMCP side -- more on that in Section~\ref{sec:emcp})~\aside{Fix the link.}  
+This understanding of how delay lines work informs the initial stages of data processing for rMCP events.  To obtain the cleanest possible rMCP data, the first step is to simply throw out every event which doesn't have a complete set of five timestamps associated with it -- even though it would still be possible to make good use of many events which have only partial data.  Even though many ``real'' rMCP hit events came in under threshold in one or more channels, detector noise was plentiful, 
+%the detector as a whole was still fairly noisy -- 
+and that noise varied in both quality and quantity over the course of the beamtime.  Therefore, it was decided to be more important for the rMCP data to be as clean as possible, despite the fact that its statistical power would be reduced. (Note that this step is \emph{not} done on the eMCP side -- more on that in Section~\ref{sec:emcp})~\aside{Fix the link.}  
 
 \note{At this stage I don't *really* do the thing where I throw out stuff that doesn't have a photodiode or scintillator hit in coincidence.  I think that comes later...}
-
-%It is useful to obtain the cleanest possible spectrum by eliminating events arising from detector noise, which was plentiful at many times during the collection of this data.  To that end, we construct the "timing sum" for 
 
 The next stage of rMCP data cleaning is to discard events with an aberrent set of timestamps.  A delay line is essentially just a long wire, and the time it takes to propagate a signal from one end of the wire to the other is fixed.  This means that no matter where along the delay line a pulse is generated, if one adds rather than subtracts the timestamps at which the pulse arrives at each of the two ends, that sum should be constant after accounting for the time of the original hit -- which we can determine from the timestamp associated with the MCP.  To that end, we construct delay line sums for the ``x'' and ``z'' delay lines,
 \small
@@ -43,26 +40,20 @@ The next stage of rMCP data cleaning is to discard events with an aberrent set o
 \normalsize
 For a perfectly operating detector, one would expect for a collection of many measurements of \small$\text{DLA\_XSUM}$\normalsize\, and \small$\text{DLA\_XSUM}$\normalsize\, should each look like an isolated delta spike.  In practice however, our distributions had a more complex set of features.  The shapes, widths, and even positions of these distributions changed from run to run, and not all of these changes could be attributed to a known cause (e.g. a change in detector settings).  Distributions from a single run are shown in Fig.~\ref{fig:sumcuts}.  
 
-%Ours are shown for a single run in Fig.~\ref{fig:sumcuts}.
-% but in practice, ours are a bit more broad and asymmetrical, as shown in Fig.~\ref{fig:sumcuts}.
-%  The distributions are shown in Fig.~\ref{fig:sumcuts} for a single run only.
 \begin{figure}[h!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/rMCP_sumcuts_447.pdf}
 	\note{Are these things *definitely* in nanoseconds?  Check!}
 	\note{This algorithm does *not* discard $10\%$ of events!}
-	\caption[Timing sums for the rMCP, run 447.]{Timing sums and associated cuts for the rMCP detector, run 447.  The `$10\%$' cuts shown simply eliminate events in which the distribution's height at that value is less than `$10\%$' of that distribution's maximum, and the `$1\%$' cuts are performed in a similar manner.  This figure shows the results after cuts on \emph{both} distributions are taken.   
-	%  Only a single run is shown here because the shapes, widths, and positions of these distributions varied significantly over the course of the beamtime, and not all of the changes can be attributed to e.g. a change in settings.  
+	\caption[Timing sums for the rMCP, run 447.]{Timing sums and associated cuts for the rMCP detector, run 447.  The `$10\%$' cuts shown simply eliminate events in which the distribution's height at that value is less than `$10\%$' of that distribution's maximum, and the `$1\%$' cuts are performed in a similar manner.  This figure shows the results after cuts on \emph{both} distributions are taken.  Only a single run is shown here because the characteristics of these spectra varied significantly over the courses of the beamtime, and not all of the changes can be attributed to a change in settings.
 	}	
 	\label{fig:sumcuts}
 \end{figure}
 
 Because the characteristics of these timing sum distributions varied from run to run, it didn't make sense to aggregate all the data before taking cuts, so any cuts had to be chosen on a run-by-run basis.  Because of the asymmetry and occasional bimodality of the distributions, it also didn't make sense to try to fit the distributions to a function such as a gaussian and then cut away some number of sigma from the fit function.  The algorithm that was used in the end was to determine the peak's maximum, then discard events from the portion of the distribution in which the distribution's height is less than $10\%$ of the maximum.  
 
-% and it also didn't make sense to try to fit a function such as a gaussian and then cut away some number of sigma from 
 %-- so all cuts on the rMCP delay line timing sums had to be taken on a run-by-run basis, and because of the asymmetry and occasional bimodality of the distributions,   
-%In particular, we consider the the signals
 
 \section{Calibrations with the rMCP}
 A calibration mask was created for the rMCP, to eliminate any nonlinearities in the images produced.  Several months before the $\isotope[37]{K}$ beamtime was to occur, the mask was attached in front of the rMCP, and a test of the delay lines' ability to produce an image was performed using an alpha source to illuminate the full surface of the detector.~\aside{I *think* we used an alpha source?  Not sure what else we could have done, but I better check this!}  The mask was later removed in advance of the beamtime, in order to preserve the highest possible surface area, and calibrations were performed using the older mask data and subsequently applied to the online $\isotope[37]{K}$ data (see Fig.~\ref{fig:rmcp_calibration}).
@@ -85,9 +76,6 @@ When the online rMCP data was eventually collected, it was found that the rMCP i
 But also, I really don't want to get into this, otherwise somebody will ask me to quantify the size of the effect.  Turns out:  it's tiny.}
 
 
-%\note{For the actual beamtime, the image was clearly not centered correctly anymore, so this had to be re-estimated.  it's probably due to the addition or removal of cables creating or eliminating a delay in the readouts. }
-
-
 %The calibration involved:
 %\begin{itemize}
 %	\item rotate
@@ -100,29 +88,10 @@ But also, I really don't want to get into this, otherwise somebody will ask me t
 %\note{the rMCP does both cloud position *and* cloud polarization, and it collects data faster than the camera can go, so we really kind-of need it for polarization I think?  Except we had that oscilloscope readout too, and that would have basically been fine I think.  Camera does position, but not quickly, so we'd just get an average over all the AC-MOT times or whatever, which isn't really what we want.  Though, turns out that's not a super big systematic anyway.  But whatever, the rMCP is useful, dammit!}
 %\note{ Using the ``other'' data set with the rMCP:  Measure the trap position/size/velocity/expansion with the rMCP and with the camera.  Necessitates calibrating the rMCP, which is its own whole thing.  Also measure polarization.}
 
-
 %These calibrations are done during AC-MOT time (wait, is that even true?  I don't think so...), and we're actually interested in the rMCP data taken during OP time.  Can I find pictures to estimate the size of the change resulting from the magnetic field?  In any case, the change is pretty small.  
-
-%\subsection{rMCP Bullet Points!}
-%	\begin{itemize}
-%	\item 
-%Now, the unsorted bullet points for the rMCP stuff!
-
-
-%\begin{itemize}
-	%	\item rMCP calibration probably gets its own section, if not its own chapter..
-%	\item We took the mask off before the 2014 run, to give us more detector area.  Use previous reference calibration \emph{with the mask} during the test run in Nov 2013.  The delay line's non-linearities should be the same, assuming we can get the centering the same.  Cables have changed and stuff, so we have to re-center the pre-calibration image to where the old pre-calibration image was.  ...  So, center the new runs w.r.t the old run.
-%		\item We'll want to make some sum cuts for these things.  We might like them to be identical, or at least identical-ish, but the peaks don't really look the same.  So we'll settle for ``decent sum cuts for all!".  ...  So, apply sum cuts to the new runs and old run.
-%		\item Calibrate the old run, with the mask.  In fact, I don't remember which order I did things in.  But I have a record of it here, somewhere...
-%\end{itemize}
-
-%\note[color=org]{I have some tables summarizing which types of data were measured.  Presently, that's in Ch-4 (now ch.3), but probably I should move it here.}
-
 
 \section{Measurements of the Atom Cloud}
 \label{sec:cloud_calibration}
-%\note{Pretty sure this section needs to be merged with the previous section on rMCP measurements.}
-%\note[color=org]{Content that previously was in this subsection is now in Section~\ref{cloud}.  But also, see the section about the photoionization laser.  Probably in this section here, I need to just jump right in assuming everyone understands the physical principle of how the data works.  Then, I can talk about what the data *is*, and how it gets interpreted.}
 With the rMCP detector calibrated (Section~\ref{sec:rmcp}), several types of data may be extracted.  It is possible to extract hit position and times-of-flight for the incident nuclear recoils, and an analysis of such data could be used to perform a test of right-handed currents within the nuclear weak force, as discussed in Chapter~\ref{section_rslow}.  However, we will focus here on what may be learned about the features of the atom cloud from rMCP events in coincidence with the photoionization laser.~\aside[color=org]{Also... does the camera data go in this section??}
 
 
@@ -131,37 +100,14 @@ With the rMCP detector calibrated (Section~\ref{sec:rmcp}), several types of dat
 	\includegraphics[width=.999\linewidth]
 	{Figures/rMCP_PI_2D_535.png}
 	\note{This figure needs to be discussed in text or whatever.  Does this thing even have a TOF cut?}
-%	\note{It wasn't possible to eliminate the stripes in analysis.}
 	\caption[Photoion Hit Positions in 2D]{Photoion Hit Positions in 2D.  This is the entirety of the good photoion data taken at 535 V/cm.  Vertical stripes of indeterminate cause can be seen across the face of the image -- it has not been possible to eliminate them in analysis, and it is unclear what result they may have with regard to estimates of the average trap position.}	
 	\label{fig:photoionhits_2D}
 \end{figure}
 
-
-
-%\label{cloud}
-%\label{photoions}
-%\note[color=org]{Some of this stuff is in Ch.3 and/or Ch.4.  Some of it *should* be.}
-%In order to measure properties of the trapped $^{37}\textrm{K}$ cloud, a 10\,kHz pulsed laser at 355\,nm is directed towards the cloud.  These photons have sufficient energy to photoionize neutral $^{37}\textrm{K}$ from its excited atomic state, which is populated by the trapping laser when the MOT is active, releasing 0.77\,eV of kinetic energy, but do not interact with ground state $^{37}\textrm{K}$ atoms.  The laser is of sufficiently low intensity that the great majority\aside[color=jb]{JB:  ``On order 1\% are photoionized."} of excited state atoms are \emph{not} photoionized, so the technique is only very minimally destructive.  
-%\note{Probably worth mentioning that we test this stuff offline on stable \isotope[41]{K}. }
 %
-%
-%Because an electric field has been applied within this region (see Section~\ref{field})\aside[color=jb]{JB:  ``you could reference the letter for the value of the field 150V/cm.''} the $^{37}\textrm{K}^+$ ions are immediately pulled into the detector on one side of the chamber, while the freed $e^-$ is pulled towards the detector on the opposite side of the chamber.  Because  $^{37}\textrm{K}^+$ is quite heavy relative to its initial energy, it can be treated as moving in a straight line directly to the detector, where its hit position on the microchannel plate is taken as a 2D projection of its position within the cloud.  Similarly, given a sufficient understanding of the electric field, the time difference between the laser pulse and the microchannel plate hit allows for a calculation of the ion's initial position along the third axis.  
-%
-%\note{As a check:  the camera measurements for photons from de-excitation.  It's aimed 35 degrees from vertical, with its horizontal axis the same as ..... one of the other axes.  I think it's the TOF axis.  I can check this when my computer comes back.   Also, there's an unknown additional delay between some of our DAQ channels that can't be explained by accounting for cable lengths, so we really like having the check there.}
-%\note[color=jb]{JB says:  ``yes, camera x-axis is tof axis.''}
-%
-%
-%With this procedure, it is possible to produce a precise map of the cloud's position and size, both of which are necessary for the precision measurements of angular correlation parameters that are of interest to us here.  However, it also allows us to extract a third measurement:  the cloud's polarization.
-%
-%The key to the polarization measurement is that only atoms in the excited atomic state can be photoionized via the 355 nm laser.  While the MOT runs, atoms are constantly being pushed around and excited by the trapping lasers, so this period of time provides a lot of information for characterizing the trap size and position.  When the MOT is shut off, the atoms quickly return to their ground states and are no longer photoionized until the optical pumping laser is turned on.  As described in Section~\ref{op}, and in greater detail in~\cite{ben_OP}, the optical pumping process involves repeatedly exciting atoms from their ground states until the atoms finally cannot absorb any further angular momentum and remain in their fully-polarized (ground) state until they are perturbed.  Therefore, there is a sharp spike in excited-state atoms (and therefore photoions) when the optical pumping begins, and none once\aside[color=jb]{JB points out that this should be ``if", not ``once".} the cloud has been completely polarized.  The number of photoion events that occur once the sample has been maximally polarized, in comparison with the size and shape of the initial spike of photoions, provides a very precise characterization of the cloud's final polarization~\cite{ben_OP}.
-
-
 
 \note{Trap position -- Measured using the same dataset that was used to quantify the polarization.  The trap drifts slightly over the course of our data collection.  Describe the rMCP calibration needed to extract this info.}
 \note{Polarization measurement was conducted on a different set of data, collected in between the measurements used for $A_{\mathrm{\beta}}$ and $b_{\mathrm{Fierz}}$, and at a higher electric field, because we were unable to run both our MCP detectors simultaneously.  }
-
-\missingfigure{Need pictures of the cloud.  Possibly need projections of the cloud as a function of time, for AC/OP cycles.}
-%\note{Need to describe how polarization works.  Needs a level diagram.  Needs another(?) level diagram for the photoionization, and maybe a third for the MOT.  Can I combine them all?  idk.}
 
 Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, and I'll immediately reference it right now, as Table~\ref{table:cloudpositions}:
 
@@ -218,22 +164,6 @@ Without further ado, I'm just going to put in several pictures.  Right here, rig
 	\label{fig:vposition_by_run_rmcp}
 \end{figure}
 
-
-%\section{Beta Detector Cuts}
-%\label{section:calibrations_betadetectors}
-%	Setup is as described in Section~\ref{section:betadetectors}.	 
-%	\note{This is a stupid section name.  Also, I really do need to describe how the cuts were made here somewhere, because it's non-trivial in many cases, and possibly different than what Ben did in some cases.  But it won't make sense to describe what I did different if I don't describe the thing as a whole, at least a bit.  The point is, this is a set of cuts/systematics that isn't really that straightforward to understand.  }
-%\section{Plastic Scintillators}
-%	\note[color=org]{Maybe this goes in Chapter~\ref{dataselection_chapter}?}
-%	\note{Energy calibration for the scintillator+PMT setup changed dramatically at one point.    Describe how calibration was done.  Like, one sentence or something.  Something about the endpoint energy, and something about the compton edge for 511s, IIRC.}
-%\section{Strip Detectors}
-%	\note{How the fuck WERE these things done?!}
-
-
-
-%\missingfigure{Needs an SOE timing spectrum.  At least one of them.  Experimental and simulated.  Also, I have to describe how I did the simulating, and how I check that it's OK despite the fact that the simulated spectrum looks nothing like the experimental spectrum.}
-
-
 \subsection{Measurements with the eMCP}
 	I can describe the eMCP calibration here, even though it mostly wasn't implemented by me.  It is tangentially relevant to data selection and background estimation by providing an experimental energy spectrum for shake-off electrons.  It's actually a pretty neat algorithm that I basically wasn't involved with.
 	\note[color=jb]{JB:  eMCP.  You need to describe the timing information obtained.  You also need a statement of whether or not you used the position information in your cuts.}
@@ -246,25 +176,11 @@ Without further ado, I'm just going to put in several pictures.  Right here, rig
 %%%
 %%%
 %%%%%% --- * --- %%%%	
-%%%%%% --- * --- %%%%	
-%%%%%% --- * --- %%%%	
-%%%\clearpage
 %%\section{Data Selection and Preliminary Cuts Mini-Intro from John}
-%%\note[color=org]{from JB, on whether to combine `Analysis' chapter with `Calibrations' chapter:  ``I see no special reason either way.  I would say the topics seem distinct.''}
-%%%
-%%\note[color=jb]{JB says:  ``((Ch.~\ref{dataselection_chapter})) looks fine to me.''  ...even in spite of the giant paragraph suggestions below, I guess.}
-%%%\note[color=org]{Do I actually want to combine this with Chapter~\ref{calibrations_chapter}?}
-%%%\note[color=org]{from JB:  you ask at the start if you should combine it (Ch.7 (now Ch.6) ((Ch.5)), `Analysis') with Ch.6 (now Ch.5) `Calibrations'. I see no special reason either way.  I would say the topics seem distinct.}
-%%%\\...\\
-%%%Then Section 7.1...
-%%%}
 
-%\section{Data Selection and Pre-Processing}
-%\section{Run Parameters and Preliminary Cuts}
 \section{Data Selection and Preliminary Cuts}
 \note{We now consider how to clean up our data.  We make some fairly obvious, intuitive cuts, and those are described here.  Later, we'll make less intuitively obvious cuts.}
-Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), % to collect positively charged recoiling ions on the rMCP and negatively charged shake-off electrons on the eMCP 
-in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, we ended up running only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  
+Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, we ended up running only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  
 
 While the beta asymmetry and Fierz interference are best evaluated using the electron runs, the recoil runs are best for evaluating the polarization (a dominant uncertainty in the beta asymmetry measurement) and the cloud position.  The polarization measurement is the subject of a recent publication (see~\cite{ben_OP}), and the cloud position evaluation is discussed in more detail in Chapter~\ref{calibrations_chapter}.
 
@@ -275,28 +191,32 @@ The data is further split up into four runsets:  A, B, C, and D based on when ce
 
 %\note{What did I change between Runsets B and C?  Between Runsets C and D?  ...OP time, yes, but also and one point a PMT(?) (eta:  it was a QDC) blew out and we replaced it, so then the scintillator calibration was a bit different afterward.  Anyway, I should maybe just make a goddamn table.  Table goes here.}
 
-%\input{table_runlist}
 \input{table_runlist_electrons}
 \input{table_runlist_recoils}
 
 Before proceeding further, several basic cuts are performed on the data.  For the Electron Runs which are to be processed directly into a physical measurement, we consider only events in which there was a recorded hit \emph{both} on the eMCP \emph{and} on (at least) one of the scintillators.  The required scintillator hit, of course, is potentially a beta, and so it is obvious why this must be present.  The eMCP hit requirement -- particularly with the timing of the eMCP hit occuring within a certain time range relative to the scintillator hit -- is used to tag beta decay events originating from the cloud, as opposed to those originating from some other surface within the chamber.  The precise time interval to be used, and how its results should be evaluated,\aside{also discussed: how we decide what counts as an eMCP hit at all} is discussed in Section~\ref{section:emcp_cuts}, but for the first pass through the data it is good enough to simply require that an eMCP hit occurred.\aside{Awkward stupid phrasing.}  Although not every beta decay event from the cloud will produce a hit on the eMCP, this requirement eliminates a great deal of background that would otherwise be challenging to evaluate.  \aside{Also, we claim that it doesn't bias the data.  Much.  Didn't I try to evaluate how much it biased the data at one point?}  
  
-%The scintillator hit is considered to be potentially a beta from a decay
 Because the eMCP hit is required as a `tag' of good events, it is also necessary to remove from direct consideration any event which is coincident with a pulse of the photoionization laser.  When photoionization occurs within the atom cloud, an orbital electron is removed from the atom and will be accelerated by the electric field into the eMCP, just as a shake-off electron from a decay might be.  If, by chance, this photoelectron arrives in coincidence with a scintillator hit, it would be interpreted as a decay event from the trap -- unless we preemtively discard it.  
 
 
 Over the course of the runtime, there were several instances where we noted an apparent electrical discharge within the experimental chamber, producing enormous backgrounds for a short time.  The detectors typically recovered quickly afterward, so it was neither necessary nor useful to stop an entire run to wait for the system to recover.  Instead, the time when the discharge occurred was recorded, and events within approximately one minute of the spark time were discarded.  
 
-%Because it is of the utmost importance to understand the nuclear spin-polarization immediately prior to a decay, 
 We use only the ``fully polarized'' events for which we have a detailed understanding of the nuclear polarization (described in more detail in ~\cite{ben_OP}).  This means we must use \emph{only} events from the ``optical pumping'' portion of the duty cycle (see Fig.~\ref{fig:dutycycle}), and discard events when the DC- or AC-MOT is active.  After the AC-MOT is shut off, there is a short delay before optical pumping begins (see Table~\ref{table:runlist}) to allow the magnetic field to decay, and it is only after $100\,\mu s$ of optical pumping that we consider the atoms to be fully polarized.  Furthermore, because the magnetic field from the DC-MOT is slow to decay (relative to the field from the AC-MOT), all events from the first five AC/OP cycles after every atom transfer are discarded.  A secondary benefit of our insistence on considering only polarized data is that the scintillators' gains are more stable in the presence of only the (small, stable) magnetic field used for optical pumping than they are in the presence of a larger oscillating magnetic field used for trapping.
 \note{change by 0.2\% of its value vs change by 0.5\% of its value, according to Ben's thesis pg 143.}
 
-%Another class of event that must be removed from direct analysis is 
 Finally, because this analysis depends heavily on energy measurements from the two scintillators as a proxy for beta energy, it is necessary to remove events in which the pulser LED fired.  Although the pulser LED is useful for evaluating the stability of the scintillators, in the case where an LED pulse occurs together with a true beta hit in the scintillator, it may change the measured energy.  Therefore, we discard all events that include an LED pulse.   
 	
 
+
+
+%\section{Beta Detector Cuts}
+%	Setup is as described in Section~\ref{section:betadetectors}.	 
+%	\note{This is a stupid section name.  Also, I really do need to describe how the cuts were made here somewhere, because it's non-trivial in many cases, and possibly different than what Ben did in some cases.  But it won't make sense to describe what I did different if I don't describe the thing as a whole, at least a bit.  The point is, this is a set of cuts/systematics that isn't really that straightforward to understand.  }
+%\section{Plastic Scintillators}
+%	\note[color=org]{Maybe this goes in Chapter~\ref{dataselection_chapter}?}
+%	\note{Energy calibration for the scintillator+PMT setup changed dramatically at one point.    Describe how calibration was done.  Like, one sentence or something.  Something about the endpoint energy, and something about the compton edge for 511s, IIRC.}
+
 \section{Further Cuts Using the DSSD}
-%\note[color=org]{Have I even defined `DSSD' yet?}
 \note[color=org]{Pretty sure I'm repeating myself from Chapter~\ref{???}}
 \note[color=jb]{JB says: To repeat a comment, since the Appendix on analysis changes is being dispersed throughout, when you state somewhere (I think it's in Ch. 6)((5?)) make sure you state clearly that the only change for BB1 cuts
 is the radius cut, e.g. that you took the same T and E from the waveforms (I'm not even sure whether the
@@ -389,16 +309,12 @@ With the data reprocessed using the leading edge for timestamps, I wanted to eli
 	\label{fig:WalkAdjust}
 \end{figure}
 
-%At this point it becomes necessary to attempt to model the SOE TOF spectrum, as in Fig.~\ref{fig:soetof}.  
 With the SOE TOF spectra cleaned up, a cut can be taken to reduce the fraction of background events.  Informed by the model of background spectra described in Section~\ref{sec:tof_bg}, a was made to include only a 2.344 ns window around the primary peak in further analysis \aside{``...removing X fraction of the remaining events."}. (see Fig.~\ref{fig:soetof}).
 \note{Probably need to put that figure somewhere else.}
 
-%For this analysis, the decision was made to use only events within a 2.344 ns window around the primary peak (Fig.~\ref{fig:soetof})  
-%This part
 %To understand the events that remain after this cut, it is necessary to create a model of the background events represented therein.   This is discussed in Section~\ref{sec:tof_bg}.
 
 \note{``To check the agreement of the model with reality, we compare the averaged superratio asymmetries from both, as in Fig.~\ref{fig:asymmetry_by_tof}.'' .... probably goes in the other section.}
-%\note{Okay.  This needs more description.}
 
 \begin{figure}[h!!!!tb]
 	\centering
@@ -428,21 +344,10 @@ With the SOE TOF spectra cleaned up, a cut can be taken to reduce the fraction o
 \end{figure}
 
 
-%\section{Bullet Points!}
-%Right, so.  Here's (more of) how I processed the data into an answer.  In bullet point form, so I don't forget stuff while I'm obsessively trying to phrase everything well.  
-%\newline
-%
-%With the Data:
-%\begin{itemize}
-%%	\item \greycomment{Lower-level data cleaning.  Discard events during parts of the duty cycle when atoms weren't polarized.  Discard events near a recorded spark time. Discard events when the photoionization laser fires.  Discard events when the LED pulser used to calibrate the scintillators fires.}
-%%	\item \greycomment{Split up runs into sets, to account for changing experimental conditions.  Possibly I should list what the differences between runs were somewhere.  But not in this section.  OTOH, ...maybe?}
-%	%
-%%	\item Make some more careful cuts to clean the data.  
+%With the Data:  Make some more careful cuts to clean the data.  
 %	%	\begin{itemize}
 %%		\item \greycomment{Discard events without a ``good'' DSSD hit.  Eliminates vast majority of background 511s.  Necessitates having a definition of what a ``good'' DSSD hit is.  It's subtle enough that we'll want to leave some part of this definition of ``good'' to be varied as a systematic effect.  Notably, we consider energy agreement for each hit pixel, individual strip SNR, and overall DSSD energy threshold.  Also, hit radius w.r.t. center of detector.  This is a lot of stuff, all implemented by Ben -- and it needs to be done fairly early on in data processing in order to keep processing times for everything else manageable.  }
 %		\item Discard events where SOE-Beta TOF falls outside a certain range.  Necessitates picking a ``good'' range.  The precise definition of ``good'' is varied as a systematic.  
-%		\item \greycomment{There was a scintillator timing walk correction before taking the SOE-Beta TOF cut.}
-%		\item \greycomment{Before the scintillator walk correction, there was the thing where the data was re-processed using the leading edge pulse rather than the trailing edge pulse.  Makes it cleaner.  Ben just got stuck with the trailing edge.}
 %		\item \greycomment{Could have implemented an eMCP hit *position* requirement, but that kills too many stats.  It's like a factor of two.}
 %	%	\end{itemize}
 %\end{itemize}

@@ -4,7 +4,6 @@
 % 
 % 
 %%%% --- * --- %%%%	
-%\section{Simulations}
 \chapter{Simulations}
 \label{simulations_chapter}
 
@@ -13,7 +12,6 @@ I really need an excuse to include more pictures of data.  Also, more pictures o
 \missingfigure{Show SimpleMC spectra, show the supersum, show the superratio, show the superratio asymmetry.  Maybe do some simple fits to show how much better the superratio asymmetry is than \emph{not} the superratio asymmetry.  }
 
 \note[color=done]{John says:  ``I doubt I will have further useful comments on the Ch. ((this chapter)) as they are now.'' -- Yeah, but *now* he will.}
-%\note[color=org]{Do I want this in a separate chapter?  Or maybe I want it to be combined with the stuff on data selection and analysis.  Surely that chapter is getting too big even without this stuff.}
 
 The TRINAT collaboration has created a Geant4 (G4) simulation which models the geometry and materials within the experimental chamber, and uses a monte carlo algorithm to describe generalized physical processes such as particle scattering and energy loss, within the geometry specific to the experiment.  This software library has been maintained and updated over several generations of graduate students.  
 
@@ -46,34 +44,23 @@ It is this combined Holstein+JTW expression that forms the basis of the new G4 e
 
 \note{Things that the G4 simulation did that I kept include:  an accurate representation of the complex details of our experimental geometry.  Also, the noise spectra on the DSSDs.}
 
-%\begin{itemize}
-%	\item \greycomment{ Multithreading.  There was multithreading, and it took a stupidly long time to get working.}
-%	\item \greycomment{ Update G4 event generator to be able to model non-zero scalar and tensor coupling.  These things show up in $\Abeta$ too, not just in $\bFierz$.  Though, the effects on $\Abeta$ are much smaller. }
-%\end{itemize}
-
 
 \section{The Simple Monte Carlo and Response Function}
-\label{sec:lineshape}
-%\note{``Response Function''.  It's a ``response function.''}
+%\label{sec:lineshape}
+\label{sec:responsefunction}
 Because of the large number of systematic effects to be examined, and because of the processor time required to run a high statistics Geant4 simulation even after enabling multithreading support, it was desirable to develop a procedure by which it would be possible to evaluate certain systematic effects while avoiding the computationally intensive simulations that might traditionally be used.  To this end, a fast-running Simple Monte Carlo (SMC) was developed together with an empirical ``response function'' similar to the one described by Clifford et al~\cite{clifford} to describe probabilistic beta energy loss before its detection in a scintillator.  In the end, the lineshape description became quite involved, and it is unclear whether, in the end, any time was saved this way. 
 
 The purpose of the SMC was to \emph{quickly} generate initial particle kinematics probabilistically for beta decay events, and it uses the very same event generator based on Holstein's Eq.~(52)~\cite{holstein} that was developed for use with the more sophisticated Geant4 simulations.~\aside{Reference previous section where I discuss this, maybe?}  However, unlike in a G4 simulation, the SMC makes no attempt to track particles through the chamber, and instead simply calculates detector hits based on initial particle momentum.  This procedure obviously neglects scattering effects, which can (in differing regimes) both \emph{increase} and \emph{decrease} the number of beta particles incident on a detector.  Furthermore, this procedure also neglects any energy absorption in materials through which the beta passes before hitting a scintillator -- and the beta \emph{must} pass through several such materials (see Fig.~\ref{chamber_decayevent}).
-%This procedure similarly neglects any energy absorption in materials the beta passes through before hitting a detector -- and the beta \emph{must} pass through several such materials (see Fig.~\ref{chamber_decayevent}).  
-%Because this energy loss is unaccounted for within the SMC itself, it is necessary to account for it 
 
 To make the best use of the SMC for evaluating systematic errors, the energy lost before a beta hits a scintillator must be accounted for somehow in order to ensure all relevant physical effects are propagated through.  In particular, before hitting a scintillator, a beta must pass through a $275\,\mu m$ thick silicon carbide mirror, a $229\,\mu m$ thick beryllium foil, %used to separate the inner portion of the vacuum chamber from the outside world
 and finally a set of $300\,\mu m$ thick double-sided silicon strip detectors (DSSDs), before finally having its remaining energy absorbed within a scintillator.  Although the DSSDs are themselves detectors with the ability to record the amount of energy deposited by an incident particle, there are some known problems in achieving a uniform level of precision across the full surface of the DSSDs,\aside{See:  Some other section?  Maybe?} so adding the DSSD energy back to the scintillator energy to produce a better estimate of the original beta energy has the potential to create some problems for the analysis.  Furthermore, given the presence of the mirror, an object with a similar thickness and scattering properties to the DSSDs, re-adding the energy lost in the DSSDs would not eliminate the need to estimate probabilistic energy loss in similar materials.  
 
-In order to create a quantitative description of the effective response function, which varies with initial beta energy, we have created an analytic function of 14 parameters for each of four detector and polarization combinations (56 parameters in total), to represent the final beta energy spectra in the scintillators.  The values of these parameters must be determined empirically, by a fit to simulated spectra.  Since the final response function is expected to be a function of initial beta energy, we must allow for these parameters to also vary as a function of initial beta energy.  To effect this result, 
-%~\aside{Have I *even* described what I mean by a ``lineshape''?  I'm pretty sure I haven't.  Ugh.}
-%for betas emitted at all (relevant) energies, 
-the TRINAT Geant4 simulation is used to generate a series of `mono-energetic' spectra.  That is, for each energy value under consideration (selected to span the energy range of betas in our decay), events are generated in which every outgoing beta initially has the same amount of kinetic energy, and the angular distribution of these betas is physically appropriate for the polarization and beta energy under consideration.  Both polarization states must be considered separately.  These mono-energetic betas are propagated through the experimental geometry via Geant4, and the resulting scintillator spectra are recorded.  Cuts identical to those imposed on the experimental data are implemented (see Chapter~\ref{dataselection_chapter}).  \aside{somewhere I have to talk about the empirical noise spectrum etc. on the BB1s.  Or maybe I've already mentioned it somewhere.}  Several such spectra are shown for the Bottom Detector in the `-' polarization state, with their best fits and the residuals thereof in Figs.~\ref{fig:lineshape_5000},~\ref{fig:lineshape_3000},~\ref{fig:lineshape_1500},~\ref{fig:lineshape_1000}, and~\ref{fig:lineshape_750}.
+In order to create a quantitative description of the effective response function, which varies with initial beta energy, we have created an analytic function of 14 parameters for each of four detector and polarization combinations (56 parameters in total), to represent the final beta energy spectra in the scintillators.  The values of these parameters must be determined empirically, by a fit to simulated spectra.  Since the final response function is expected to be a function of initial beta energy, we must allow for these parameters to also vary as a function of initial beta energy.  To effect this result, the TRINAT Geant4 simulation is used to generate a series of `mono-energetic' spectra.  That is, for each energy value under consideration (selected to span the energy range of betas in our decay), events are generated in which every outgoing beta initially has the same amount of kinetic energy, and the angular distribution of these betas is physically appropriate for the polarization and beta energy under consideration.  Both polarization states must be considered separately.  These mono-energetic betas are propagated through the experimental geometry via Geant4, and the resulting scintillator spectra are recorded.  Cuts identical to those imposed on the experimental data are implemented (see Chapter~\ref{dataselection_chapter}).  \aside{somewhere I have to talk about the empirical noise spectrum etc. on the BB1s.  Or maybe I've already mentioned it somewhere.}  Several such spectra are shown for the Bottom Detector in the `-' polarization state, with their best fits and the residuals thereof in Figs.~\ref{fig:lineshape_5000},~\ref{fig:lineshape_3000},~\ref{fig:lineshape_1500},~\ref{fig:lineshape_1000}, and~\ref{fig:lineshape_750}.
 
 \begin{figure}[h!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/MonoFit_5000.png}
-%	\note{I should probably do a thing to squish this set of 2 plots closer together.}
 	\caption[Fit to Mono-Energetic Spectrum, 5000 keV]{Fit to Mono-Energetic Spectrum, 5000 keV (B-)}	
 	\label{fig:lineshape_5000}
 \end{figure}
@@ -102,7 +89,6 @@ the TRINAT Geant4 simulation is used to generate a series of `mono-energetic' sp
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/MonoFit_750.png}
-%	\note{I should probably put a few of these similar fit things together and smaller, somehow.}
 	\caption[Fit to Mono-Energetic Spectrum, 750 keV]{Fit to Mono-Energetic Spectrum, 750 keV (B-)}	
 	\label{fig:lineshape_750}
 \end{figure}
@@ -115,70 +101,12 @@ the TRINAT Geant4 simulation is used to generate a series of `mono-energetic' sp
 \\ ...\\
 In particular, Clifford's treatment describes the measured energy (which in their case is a sum of scintillator energy and DeltaE energy) for beta particles interacting with a detector with a collimator, much like ours, however in our case, some energy is lost to the intervening SiC mirror and beryllium foil, and as we don't measure that directly, it can't be directly added back in.  Although we might add back in the energy from the BB1 detectors, we have to model other energy losses in similar materials anyway, and as previously mentioned, re-introducing the energy from the BB1s invites problems with maintaining a uniform energy threshold over the entire detector. 
 }
-%
-%%	R.SetParameter("00_E0",    4.19232e+03);  // just set it to a value.  I'll pre-set it according to monoenergy later.
-%	% "E0"
-%%	R.SetParameter("01_norm",  1.0e6);  // norm can't go negative.
-%	% "Norm"
-%%	R.SetParameter("02_scale", 1.5);  // scale can't go negative either.
-%	% "Scale"
-%%	R.SetParameter("03_alpha", 300.0);
-%	% "Alpha"
-%%	R.SetParameter("04_beta", 0.0);
-%	% "Beta"
-%%	R.SetParameter("05_gamma", 0.00100);
-%	% "Gamma"
-%%	R.SetParameter("06_delta", 7.06801e-02);
-%	% "Delta"
-%%	R.SetParameter("07_W",     380.0);
-%	% "W"
-%%	R.SetParameter("08_k", 4.3);
-%	% "k"
-%%	R.SetParameter("09_gfrac", 0.9);
-%	% "GausFrac"
-%%	R.SetParameter("10_toeres", 1.0);  // set it according to top and bottom detector later.  But keep it fixed initially.
-%	% "Toe Resolution"
-%%	R.SetParameter("11_lres", 0.006);  // as a fraction of toeres
-%	% "Landau Resolution"
-%%	R.SetParameter("12_gres", 1.0);
-%% 		12_gres = 1 (fixed).
-%	% "Gaussian `Resolution'" 
-%%	R.SetParameter("13_DgE",  0.0);
-%% 		13_DgE = Dgcenter = 0 (fixed).
-%	% "DgE"
-%%	R.SetParameter("14_dE0",  0.0);  
-%	% "dE0"
-%%
-%
-%% "PseudoE" ??  Pretty sure that's just E0 - (some linear offset).  Otherwise you wouldn't be able to see what was going on.
-%
-%
-%%\bea
-%%%	R() = [\mathrm{01\_norm}] * \left( f_{\mathrm{moyal}}() + f_1() + f_2() + f_3() + f_4() + f_5() \right) + f_{511}
-%%	R() &=& [\mathrm{Norm}] * \left( \phantom{\frac{1}{1} \!\!\!\!\! } %\phantom{1^1_1} \!\!\!\!
-%%		f_{\mathrm{moyal}}(E_0, p_\alpha, p_\beta, p_\Delta, p_\gamma, p_{\mathrm{gfrac}}, \right.
-%%		\\ && \;\;\;\; p_{W}, p_{\mathrm{dE0}}, p_{\mathrm{lres}}, )  
-%%		\\ && + 
-%%		f_1(E_0, p_\alpha, p_\beta, p_\Delta, p_\gamma, p_{\mathrm{gfrac}}, p_{W}, p_{\mathrm{dE0}}, 
-%%		\\ && \;\;\;\; p_{\textrm{toeres}}, )
-%%		\\ && + 
-%%		f_2(E_0, p_\alpha, p_{\textrm{toeres}}, ) + 
-%%		f_3(E_0, p_\beta, p_{\textrm{toeres}}, p_{\mathrm{k}}, ) 
-%%		\\ && + 
-%%		f_4(E_0, p_{W}, p_{\textrm{toeres}}, ) 
-%%		\\ && + \left. 
-%%		f_5(E_0, p_\Delta, p_\gamma, p_{W}, p_{\textrm{toeres}}, ) \phantom{\frac{1}{1} \!\!\!\!\! } \right) + 
-%%		f_{511}(), 
-%%\eea
-%
-%
+
 \bea
 	R(E_{0}, \textrm{Detector}, \mathrm{Polarization}) &=& p_{\textrm{norm}} \left( f_{\mathrm{moyal}} + f_1 + f_2 + f_3 
-%	\phantom{1^1_1} \right. \nonumber \\ && \left. \phantom{1^1_1}
 	+ f_4 + f_5 \right) + f_{511}
 	\nonumber \\
 \eea
-%\note{Re-check that I got things to be described as a function of the correct variables...  pretty sure I missed some.}
 where
 \bea
 	f_{\mathrm{moyal}}() &=& 
@@ -190,73 +118,22 @@ where
 \eea
 \bea
 	f_1() &=& p_{\mathrm{gfrac}}  \left( 1 + \frac{-p_\alpha - p_\beta }{\left|E_0\right|} - \frac{p_\Delta}{ p_\gamma \, p_{W} } - p_\gamma \, p_{W} \right) 
-%	\nonumber \\ && \times 
 	\left( 
 	\frac{ e^{\left( - \frac{ \left(x-\left(E_0+\frac{1}{2}p_{\mathrm{dE0}}\right) \right)^2 }{ 2 \, p_{\textrm{toeres}} \left| E_0+\frac{1}{2}p_{\mathrm{dE0}} \right| } \right)} } { \sqrt{2\pi \, p_{\textrm{toeres}} \left|E_0+\frac{1}{2} p_{\mathrm{dE0}}\right|} }
 	\right)
 	\nonumber \\
-%\eea
-%\bea
 	f_2() &=& \frac{p_\alpha}{\left|E_0\right|} \left( \frac{1 - \Erf\left[ \frac{(x-\left|E_0\right|)}{\sqrt{2 \, p_{\textrm{toeres}} \left| E_0 \right| }} \right]}{2 \, \left| E_0\right| } \right)
 \eea
 \bea
 	f_3() &=& \frac{p_\beta}{\left|E_0\right|}  \left( 	\frac{ e^{ \frac{ p_{\mathrm{k}} *(x-E_0) }{ \left|E_0\right|} } * e^{ \frac{p_{\textrm{toeres}} \, p_{\mathrm{k}}^2 }{2 \left|E_0\right|} } }{ 2 (1-e^{-p_{\mathrm{k}}} ) } \right)
-%	\nonumber \\ && \times
 	\left(1 - \Erf\left[ \frac{ (x-E_0+p_{\textrm{toeres}} \, p_{\mathrm{k}} ) } {\sqrt{2 \,p_{\textrm{toeres}} \left|E_0\right| } } \right] \right) 
-%	\right. \nonumber \\ && \times \left. 
-	% \right)  
 	\\
 	f_4() &=& \frac{p_\gamma}{2}   \left( \Erf \left[ \frac{ x-E_0 }{ \sqrt{(2 \, p_{\textrm{toeres}} \left|E_0\right| )} }  \right]  
-%	\right. \nonumber \\ && \left. 
 	- \Erf \left[ \frac{ x-E_0-p_{W} }{ \sqrt{2 \, p_{\textrm{toeres}} \left| E_0+p_{W}\right| } } \right] \right)
 \eea
-%\note{f\_5() is a fucking mess.  I'll have to do it tomorrow.}
-
-
-%%%%%\bea
-%%%%%	f_5() &=& 
-%%%%%	\left( \frac{p_\Delta }{ 2 p_\gamma p_{W}^3 }\right) * 
-%%%%%	\left(
-%%%%%	(x-E_0) * \left( \Erf \left( \frac{x-E_0}{\sqrt{2p_{\textrm{toeres}}*\abs(E_0)} } \right) 
-%%%%%	\right. \right. \nonumber \\ && %\left. 
-%%%%%	- 2\, \Erf \left( \frac{x-E_0-p_{W} }{ \sqrt{ 2 p_{\textrm{toeres}} * \abs(E_0+p_{W}) } } \right) 
-%%%%%	%\right. 
-%%%%%	\nonumber \\ && 
-%%%%%	%\left. 
-%%%%%	+ \Erf( (x-E_0-2.0*p_{W})/(\sqrt{2 p_{\textrm{toeres}}*\abs(E_0+2p_{W}) } )) %\right)
-%%%%%	% 
-%%%%%	\right. \nonumber \\ && \left.
-%%%%%	+ (2.0*p_{W}) * ( \Erf( (x-E_0-p_{W})/(\sqrt{(2p_{\textrm{toeres}} * \abs(E_0+p_{W}) )} )) - \Erf( (x-E_0-2.0*p_{W})/(sqrt(2.0*p_{\textrm{toeres}} * \abs(E_0+2.0*p_{W}) ))) ) 
-%%%%%	+ (2.0*p_{\textrm{toeres}}*abs(E_0))*( (exp(-1.0*(x-E_0)^2/(4.0*p_{\textrm{toeres}}*abs(E_0))) / ( sqrt(2.0*pi*p_{\textrm{toeres}}*abs(E_0)))) -2.0*(exp(-1.0*(x-E_0-p_{W})^2/(4.0*p_{\textrm{toeres}}*abs(E_0+p_{W}) )) / ( \sqrt{2\pi*p_{\textrm{toeres}}*abs(E_0+p_{W})} )) + ( exp(-1.0*(x-E_0-2.0*p_{W})^2/(4.0*p_{\textrm{toeres}}*abs(E_0+2.0*p_{W}) )) / ( \sqrt{2 \pi*p_{\textrm{toeres}}*abs(E_0+2.0*p_{W})} ) ) ) \right) 
-%%%%%%%\right) 
-%%%%%%%\right)
-%%%%%\eea
-%
-
-%\bea
-%	f5a &=& (x-E_0) \,  \left( \Erf\left[ \frac{(x-E_0) }{ \sqrt{2 \, p_{\textrm{toeres}} \left|E_0\right| } } \right] - 2 \, \Erf\left[ \frac{ (x-E_0-p_{W}) }{ \sqrt{2 \, p_{\textrm{toeres}} \, \left| E_0+p_{W}\right| }} \right]
-%	\right. \nonumber \\ && \left. 
-%	+ \Erf\left[ \frac{(x - E_0 - 2 p_{W}) }{ \sqrt{2 \, p_{\textrm{toeres}} \, \left| E_0 + 2 p_{W}\right| }} \right] \right)
-%	\\
-%	f5b &=& (2 \, p_{W}) \,  \left( \Erf\left[ \frac{(x-E_0-p_{W})}{\sqrt{2 \, p_{\textrm{toeres}} \left|E_0+p_{W}\right| }}\right] - \Erf \left[ \frac{(x-E_0 - 2 p_{W})}{\sqrt{2 \, p_{\textrm{toeres}} \left| E_0+2 p_{W}\right| }} \right] \right)
-%	\\
-%	f5c &=& \left( 2\, p_{\textrm{toeres}} \left| E_0 \right| \right)  \left( \left( \frac{e^{\left(\frac{- (x-E_0)^2}{(4\,p_{\textrm{toeres}} \left| E_0\right| )} \right)} }{\sqrt{2 \pi \, p_{\textrm{toeres}} \left| E_0 \right| }}\right) 
-%%	\right. \nonumber \\ && \left. 
-%	+ \left( \frac{ - 2 e^{ \left(\frac{ - (x-E_0-p_{W})^2 }{(4 \, p_{\textrm{toeres}} \, \left| E_0+p_{W}\right| )} \right) } }{( \sqrt{2\pi \, p_{\textrm{toeres}}\left| E_0+p_{W}\right| } )} \right) 
-%	\right. \nonumber \\ && \left. 
-%	+ \left( \frac{e^{\left(\frac{ - (x-E_0 - 2 p_{W})^2}{(4 \, p_{\textrm{toeres}} \, \left| E_0 + 2 \, p_{W}\right| )} \right)}}{\sqrt{2 \pi \, p_{\textrm{toeres}} \left|E_0 + 2 \,p_{W}\right| }} \right) 
-%	\right)
-%\eea
-%%
-%\bea
-%	f5 &=& \frac{p_{\Delta}}{2 \, p_{\gamma} \, p_{W}^3 }*( f5a + f5b + f5c )  	%  // triangle
-%\eea
-%%
-%... Anyway, if we were to try to write all of those things into one giant equation for f5, we'd have:
-
 
 \bea
-	f5 &=& \frac{p_{\Delta}}{2 \, p_{\gamma} \, p_{W}^3 }  
+	f_5 &=& \frac{p_{\Delta}}{2 \, p_{\gamma} \, p_{W}^3 }  
 	\left[  
 	(x-E_0) \left( \Erf\left[ \frac{(x-E_0) }{ \sqrt{2 \, p_{\textrm{toeres}} \left|E_0\right| } } \right] 
 	- 2 \, \Erf\left[ \frac{ (x-E_0-p_{W}) }{ \sqrt{2 \, p_{\textrm{toeres}} \, \left| E_0+p_{W}\right| }} \right]
@@ -278,7 +155,7 @@ where
 \eea
 
 \bea
-	f_{511} &=& %\sqrt{p_{\mathrm{scale}}*p_{\mathrm{scale}}} 
+	f_{511} &=& 
 	\left| p_{\mathrm{scale}} \right|
 	\left[ \left( \frac{195}{17} \sqrt{\frac{2}{\pi}} \, e^{\left(\frac{-(x - 308)^2}{578}\right) } \right)  
 	+ \left(40 + \frac{(x - 210)^2}{900} \right) \left( 1 - \Erf\left[\frac{x - 334}{30}\right] \right) 
@@ -293,35 +170,13 @@ where
 \note{... Similarly, Clifford doesn't include a compton edge.  I think.  But I want to.}
 
 %\codestyle{string complete_ff_string = "[01_norm]*("+fmoyal_string+" + "+f1_string+" + "+f2_string+" + "+f3_string+" + "+f4_string+" + "+f5_string+") + "+f511_string+";  // landau primary + modified compton toe + 511s.}
-%\note{OK, now what?  We have some scintillator spectra, }
 
 
-
-
-%\begin{itemize}
-%	\item \greycomment {Then there's the lineshape thing.  This wasn't nearly as useful as I thought it was going to be.  Certainly not worth the whole goddamn year that I spent on it.}
-%%	\begin{itemize}
-%		\item \greycomment{I wanted a way to cut down the amount of time spent waiting on big simulations to finish.  Lots of things to check before we get a final number.}
-%		\item \greycomment{ Create a "Simple Monte Carlo" (SMC), using the same new generator to model beta decay kinematics, but without the time-consuming parts of a G4 simulation.  ie, no propagating particles through the experimental chamber.  They don't lose energy, and they don't scatter.  They just go where they were going and hit.}
-%		\item \greycomment{ SMC simulations run nice and fast!  Yay!}
-%		\item \greycomment{ ...But, we can't just take them at face value.  We're neglecting very real physical processes to get these SMC results.  }
-%		\begin{itemize}
-%			\item \greycomment{ We should put that energy loss back in.  Probabilistically. }
-%			\item \greycomment{ Also, we ``lose'' some betas due to scattering that were initally directed towards a beta detector.  }
-%			\item \greycomment{ Also-also, we ``gain'' some particles due to scattering that were initially directed at some other surface.  }
-%		\end{itemize}
-%		\item \greycomment{ But where do we get the lineshape?  G4 simulation of lots of beta decays at a \emph{single} beta energy, but with an (initial) angular distribution representative of beta decays at that energy.  Do that at a bunch of beta energies. }
-%		\item \greycomment{For all these mono-energetic runs, you apply whatever set of cuts you selected to use on the data, and look only at the events that pass those cuts.  }
-%		\item \greycomment{For mono-energetic spectra events that pass the cuts, look at how much energy G4 thinks you would have measured just in the scintillator.  There'll be a distribution.}
-%		\item something something Landau distribution.  Something something Clifford~\cite{clifford}.  Something something Moyal.
-%	\end{itemize}
-%\end{itemize}
 
 %\note{Something something Landau distribution.  Something something Clifford~\cite{clifford}.  Something something Moyal.}
 %\note{Which mono-energies did I use, again?  Maybe make a list/table.}
 \note{Needs a picture of the *full* beta energy distributions that come out of the lineshape thing.  To compare with (a) data and (b) G4.  Probably a superratio in there somewhere too.}
 \note{Um.  Which of the scattering things did I actually put in at the end?  And when did I do it?  Like, how did I account for (back-)scattering?  I tried with/without .... scattering, I think?  and eventually decided not to do it.  for some reason.  I think it breaks normalization in some way that's more subtle than you would think.}
-%Here are some pictures, scattered over many of the succeeding pages.
 
 \begin{itemize}
 	\item \greycomment{... And then, you have values of all the parameters, as measured at a bunch of input energies.  Make sure all the fits converge and don't do something crazy.}
@@ -379,48 +234,34 @@ Our experiment has some background.  It's annoying and stupid, but as long as we
 
 \begin{itemize}
 		\item TOF cut requires a whole extra model of background in the TOF spectrum..
-	%	\begin{itemize}
 		\item Suppose background in the TOF spectrum is coming from decays of atoms that have gotten themselves stuck to surfaces within the chamber...
 		\item Run G4 to get a beta TOF spectrum (w.r.t. the decay)
 		\item Run COMSOL (credit to Alexandre) to track low-energy SOEs through the electric field from wherever they started, into the detectors.  Energy spectra from Levinger.
 		\item Combine G4 and COMSOL spectra, event-by-event, while requiring that both the beta detector and the eMCP are hit according to the set of random numbers generated by each monte carlo separately.  Then, the beta and SOE will each have a TOF from decay to detector, and subtracting one from the other gives a timing spectrum that can be observed experimentally.  See Fig.~\ref{fig:soetof}.
 		\item Upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the trap not due to radioactive decay emerge isotropically from the trap and then stick to whatever chamber wall is in its path.  This upper limit is too big by a factor of 2.
-	%	\end{itemize}
 	\item For each of those 3 simulations, sort the ``good'' data according to emission angle relative to the detector.  Do each detector individually.  For both polarizations.
 	\item Assemble the (simulated) superratio asymmetry.  We'll compare it to data, and the $\chi^2$ from that comparison will be our figure of merit.  
 	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.
 	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
 \end{itemize}
 
-
-\section{Comparing Simulations with Experimental Data}
-%\note{This is a stupid section title.}
-%With the Simulations:
+\clearpage
+\section{Comparing Simulations to Experimental Data}
+\note{This section shouldn't get a clearpage (or...should it?), but it's just really hard to read my bulletpoint list without it.}
 \begin{itemize}
 	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
-%	\note[color=bluetodo]{How many events do we actually have?}
-	\note[color=done]{Total good events after all the cuts:
-	\\
-	Set B:  173,640
-	\\
-	Set C:  \:\,18,129
-	\\
-	Set D:  207,596
-	\\ --
-	All Runsets:  399,365
-	}
 	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change much when we adjust BSM couplings.  Just use the old event generator from Holstein Eq.~(51).
 	\item Match cuts in simulated data up to the cuts on experimental data.  Obviously.  DSSD cut, DSSD energy, one hit DSSD, one hit scint.  TOF cut, which requires a whole extra model of background in the TOF spectrum (see Section~\ref{sec:tof_bg}).
-%		\begin{itemize}
-%		\item Suppose background in the TOF spectrum is coming from decays of atoms that have gotten themselves stuck to surfaces within the chamber...
-%		\item Run G4 to get a beta TOF spectrum (w.r.t. the decay)
-%		\item Run COMSOL (credit to Alexandre) to track low-energy SOEs through the electric field from wherever they started, into the detectors.  Energy spectra from Levinger.
-%		\item Combine G4 and COMSOL spectra, event-by-event, while requiring that both the beta detector and the eMCP are hit according to the set of random numbers generated by each monte carlo separately.  Then, the beta and SOE will each have a TOF from decay to detector, and subtracting one from the other gives a timing spectrum that can be observed experimentally.  See Fig.~\ref{fig:soetof}.
-%		\item Upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the trap not due to radioactive decay emerge isotropically from the trap and then stick to whatever chamber wall is in its path.  This upper limit is too big by a factor of 2.
-%		\end{itemize}
-%	\item For each of those 3 simulations, sort the ``good'' data according to emission angle relative to the detector.  Do each detector individually.  For both polarizations.
-%	\item Assemble the (simulated) superratio asymmetry.  We'll compare it to data, and the $\chi^2$ from that comparison will be our figure of merit.  
-%	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.
-%	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
+	\begin{itemize}
+		\item Suppose background in the TOF spectrum is coming from decays of atoms that have gotten themselves stuck to surfaces within the chamber...
+		\item Run G4 to get a beta TOF spectrum (w.r.t. the decay)
+		\item Run COMSOL (credit to Alexandre) to track low-energy SOEs through the electric field from wherever they started, into the detectors.  Energy spectra from Levinger.
+		\item Combine G4 and COMSOL spectra, event-by-event, while requiring that both the beta detector and the eMCP are hit according to the set of random numbers generated by each monte carlo separately.  Then, the beta and SOE will each have a TOF from decay to detector, and subtracting one from the other gives a timing spectrum that can be observed experimentally.  See Fig.~\ref{fig:soetof}.
+		\item Upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the trap not due to radioactive decay emerge isotropically from the trap and then stick to whatever chamber wall is in its path.  This upper limit is too big by a factor of 2.
+	\end{itemize}
+	\item For each of those 3 simulations, sort the ``good'' data according to emission angle relative to the detector.  Do each detector individually.  For both polarizations.
+	\item Assemble the (simulated) superratio asymmetry.  We'll compare it to data, and the $\chi^2$ from that comparison will be our figure of merit.  
+	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.
+	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
 \end{itemize}
 
