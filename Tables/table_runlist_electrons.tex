@@ -1,36 +1,49 @@
 % !TEX root = ../thesis_main.tex
 
 
-\begin{table}[h!!!!t]
+\begin{table}[h!!!!tb]
 	\begin{center}
-	\begin{tabular}{ c || p{1.2cm} | p{5cm} | r | }
+	\begin{tabular}{ c || p{1.2cm} | r | l | p{5.8cm} | }
+		\multicolumn{4}{l}{Electron Runs} %& \multicolumn{1}{l}{Electron Runs} 
+		\\
+		\cline{1-3}
+		\multicolumn{5}{c}{ }
+		\\
 			\multicolumn{1}{  c  }{ } & 
-				\multicolumn{1}{  c  } { OP Delay } & \multicolumn{1}{   c  }{ \!\!Electric Field\!\! } &  \multicolumn{1}{ c  }{ \!\!Usable Events\!\! }  \\
-			\cline{2-4}
+				\multicolumn{1}{  c  } { \!\!OP Delay\!\! } &  \multicolumn{1}{ c }{ \!\!Events\!\! }  
+				& \multicolumn{1}{ c }{ \!\!Electric Field\!\! } & \multicolumn{1}{ c }{ Runs } 
+				\\
+			\cline{2-5}
 			\multirow{1}{*}{Runset A}	& $300\,\mu s$
-										& $66.67$ V/cm
 										& 0
+										& \,\,\,$66.67$ V/cm
+										& 314, 362, 363, 383-386, 393. %, 420.
 										\\
-			\cline{2-4}
+			\cline{2-5}
 			\multirow{1}{*}{Runset B}	& $300\,\mu s$
-										& $150.0$ V/cm
 										& 173,640
+										& $150.0$\,\, V/cm
+										& 428-437, 440-445.
 										\\
-			\cline{2-4}
+			\cline{2-5}
 			\multirow{1}{*}{Runset C}	& $700\,\mu s$
-										& $150.0$ V/cm
 										& 18,129
+										& $150.0$\,\, V/cm
+										& 476, 477.
 										\\
-			\cline{2-4}
+			\cline{2-5}
 			\multirow{1}{*}{Runset D}	& $400\,\mu s$
-										& $150.0$ V/cm
 										& 207,596
+										& $150.0$\,\, V/cm
+										& 478-489, 502-505, 510, 513.
 										\\
-			\cline{2-4}
+			\cline{2-5}
 	\end{tabular}
 	\end{center}
-	\caption[List of Electron Runs]{Electron Runs and Parameters.}
-	\note{This table might eventually go away.  Mostly I just want a record of the total `good' counts.  In total, $N=399,365$.}
+	\note{A list of 2014 online runs with potentially usable data.  Runset A was discarded completely due to problems with hardware threshold settings.  There was a QDC module failure before Run 450, so it and all subsequent runs were performed using a different module, and as a result the scintillator calibrations changed slightly at this time.  Anyway, the point of this thing is to show which electron runs and recoil runs go together, for the purposes of evaluating polarization and cloud attributes.}
+	\note{Ben doesn't seem to include Runs 436 and 437 in *any* set of good runs.  Is it an oversight?  I think they're perfectly legit electron runs.  They're fairly long runs...}
+	\caption[List of Electron Runs]{A list of electron runs and associated parameters.  The ``Events'' column includes only the number of events that passed all cuts.}
+%	\note{This table might eventually go away.  Mostly I just want a record of the total `good' counts.  In total, $N=399,365$.}
 	\label{table:runlist_electrons}
 \end{table}
 
