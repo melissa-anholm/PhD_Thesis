@@ -122,6 +122,7 @@ where
 	\frac{ e^{\left( - \frac{ \left(x-\left(E_0+\frac{1}{2}p_{\mathrm{dE0}}\right) \right)^2 }{ 2 \, p_{\textrm{toeres}} \left| E_0+\frac{1}{2}p_{\mathrm{dE0}} \right| } \right)} } { \sqrt{2\pi \, p_{\textrm{toeres}} \left|E_0+\frac{1}{2} p_{\mathrm{dE0}}\right|} }
 	\right)
 	\nonumber \\
+	\\
 	f_2() &=& \frac{p_\alpha}{\left|E_0\right|} \left( \frac{1 - \Erf\left[ \frac{(x-\left|E_0\right|)}{\sqrt{2 \, p_{\textrm{toeres}} \left| E_0 \right| }} \right]}{2 \, \left| E_0\right| } \right)
 \eea
 \bea
@@ -140,20 +141,20 @@ where
 	\right. 
 	\phantom{\left( \frac{e^{\left(\frac{ - (p_{W})^2}{(p_{\textrm{t}} \left| E_0 \right| )} \right)}}{\sqrt{2 p_{\textrm{t}} \left|E_0 \right| }} \right) } %% phantom to get to get bracket size right..
 	\right. \nonumber \\ && \left. \left.
+	%
 	+ \Erf\left[ \frac{(x - E_0 - 2 p_{W}) }{ \sqrt{2 \, p_{\textrm{toeres}} \, \left| E_0 + 2 p_{W}\right| }} \right] \right) 
 	+ (2 \, p_{W}) \left( \Erf\left[ \frac{(x-E_0-p_{W})}{\sqrt{2 \, p_{\textrm{toeres}} \left|E_0+p_{W}\right| }}\right] 
 	\right. \right. \nonumber \\ && \left. \left.
+	%
 	- \Erf \left[ \frac{(x-E_0 - 2 p_{W})}{\sqrt{2 \, p_{\textrm{toeres}} \left| E_0+2 p_{W}\right| }} \right] \right) 
-%	\right. \nonumber \\ && \left.	
 	+ \left( 2\, p_{\textrm{toeres}} \left| E_0 \right| \right)  \left( \left( \frac{e^{\left(\frac{- (x-E_0)^2}{(4\,p_{\textrm{toeres}} \left| E_0\right| )} \right)} }{\sqrt{2 \pi \, p_{\textrm{toeres}} \left| E_0 \right| }}\right) 
 	\right. \right. \nonumber \\ && \left. \left.
+	%
 	+ \left( \frac{ - 2 e^{ \left(\frac{ - (x-E_0-p_{W})^2 }{(4 \, p_{\textrm{toeres}} \, \left| E_0+p_{W}\right| )} \right) } }{( \sqrt{2\pi \, p_{\textrm{toeres}}\left| E_0+p_{W}\right| } )} \right) 
-%	\right. \nonumber \\ && \left. 
 	+ \left( \frac{e^{\left(\frac{ - (x-E_0 - 2 p_{W})^2}{(4 \, p_{\textrm{toeres}} \, \left| E_0 + 2 \, p_{W}\right| )} \right)}}{\sqrt{2 \pi \, p_{\textrm{toeres}} \left|E_0 + 2 \,p_{W}\right| }} \right) 
-	\right) 
-	\right]
+	\right) \right] 
 \eea
-
+\note{I don't know *why* the equation number for ``$f_5$'' comes out so shittily aligned.  }
 \bea
 	f_{511} &=& 
 	\left| p_{\mathrm{scale}} \right|
@@ -227,10 +228,12 @@ where
 %
 
 
+\clearpage
 \section{Simulating the Background}
 \label{sec:tof_bg}
-Our experiment has some background.  It's annoying and stupid, but as long as we can estimate how much of it there is and what it does, it's basically fine.
+%\note{Shouldn't have a clearpage here in the end.  I think.}
 \note{Reference Section~\ref{section:emcp_cuts}}
+Our experiment has some background.  It's annoying and stupid, but as long as we can estimate how much of it there is and what it does, it's basically fine.
 
 \begin{itemize}
 		\item TOF cut requires a whole extra model of background in the TOF spectrum..

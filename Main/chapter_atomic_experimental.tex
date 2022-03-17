@@ -355,17 +355,39 @@ In order to optimally polarize a sample of atoms by this method, it is necessary
 \section{Measurement Geometry and Detectors}
 \label{sec:geometry}
 
-\note[color=done]{JB says of ((Sec.~\ref{sec:geometry})):  first few paragraphs are poorly phrased. You have to fix those.  Most of the rest looks really good.  -- Fixed!}
+%\note[color=done]{JB says of ((Sec.~\ref{sec:geometry})):  first few paragraphs are poorly phrased. You have to fix those.  Most of the rest looks really good.  -- Fixed!}
 %Detectors are positioned about the second MOT for data collection.  
 
 The TRINAT detection chamber operates at ultra-high vacuum (UHV) and provides not only the apparatus necessary to intermittently confine and then spin-polarize atoms, but also the variety of detectors and implements required to quantify their position, temperature, and polarization.  The detection chamber further boasts an array of electrostatic hoops to collect both positively and negatively charged low energy particles into two opposing microchannel plate (MCP) detectors, each backed by a set of delay lines to measure hit position, and a further set of two beta detectors positioned across from each other along the polarization axis, each of which consists of a 40x40 pixel double-sided silicon strip detector (DSSD) and a scintillator coupled to a photomultiplier tube (PMT) (see Fig.~\ref{chamber_decayevent}). 
-\note[color=org]{I think I've already described the atomic stuff in one of those previous sections.  Don't try to do it again here.}
+%\note[color=org]{I think I've already described the atomic stuff in one of those previous sections.  Don't try to do it again here.}
 
 \subsection{Microchannel Plates and Electrostatic Hoops}
 \label{section:mcps}
-\note{I guess I could describe how delay lines work, but I don't really want to.  Might be useful for in the next chapter though.}
+Two stacks of microchannel plates (MCPs) have been placed on opposing sides of the chamber, and perpendicular to the axis of polarization.  Each stack of MCPs is a relatively large detector backed by a series of delay lines for position sensitivity.  These two MCP detectors are designed to operate in conjuction with a series of seven electrostatic `hoops' positioned within the chamber and connected to a series of high voltage power supplies.  The hoops are designed in such a way as to maintain a constant and (roughly) uniform electric field across the space between the two MCP detectors, without blocking either the path of particles originating from the central cloud, or necessary laser beams.  The resulting electric field acts to pull positively charged ions towards one MCP detector and negatively charged electrons towards the other (see Figs.~\ref{chamber_decayevent} and~\ref{fig:thechamber}).  
 
-\begin{figure}[h!b!!t]
+
+%\note{These paragraphs go here somewhere if I can find anything that's not redundant:
+%\\...\\
+%On opposing sides of the chamber, and perpendicular to the axis of polarization, two stacks of $\sim$ 80\,mm diameter microchannel plates (MCPs) have been placed (see Figure~\ref{fig:thechamber}) as detectors, 
+%... providing a time stamp when a particle is incident on their surfaces.  Behind each stack of MCPs there is a set of delay lines, which provide  position sensitivity for these detectors.   
+%\\...\\
+%In order to make best use of these MCPs, we create an electric field in order to draw positively charged particles into one MCP, while drawing negatively charged electrons into the other MCP.
+%Seven electrostatic hoops have been placed within the chamber (see Figure~\ref{fig:thechamber}), and are connected to a series of high voltage power supplies.  See Sections~\ref{photoions} and~\ref{pos_recoils} for a discussion of what sort of charged particles we expect to observe in these detectors and how they are created.  
+%\\...\\
+%Scientific data has been collected at field strengths of 66.7 V/cm, 150 V/cm, 395 V/cm, 415 V/cm, and 535 V/cm.  It should be noted that these field strengths are too low to significantly perturb any but the least energetic of the (positively charged) betas from the decay process, and these low energy betas would already have been unable to reach the upper and lower beta detectors due to interactions with materials in the SiC mirror and Be foil vacuum seal.  
+%}
+
+%Behind each stack of MCPs there is a set of delay lines, which provide position sensitivity for these detectors.  
+%
+%On opposing sides of the chamber, and perpendicular to the axis of polarization, two stacks of %$\sim$ 80\,mm diameter 
+%microchannel plates (MCPs) have been placed (see Figure~\ref{fig:thechamber}) to act as detectors.  
+%
+%In order to make best use of these MCPs, seven electrostatic hoops an electric field is created in order to draw positively charged particles into one MCP, while drawing negatively charged particles into the other.  
+%
+%The field is generated 
+%The two sets of MCPs are positioned across the chamber from one another and designed to operate in conjuction with a series of seven electrostatic hoops.  
+
+\begin{figure}[h!tb]
 	\centering
 	\includegraphics[width=.9\linewidth]{Figures/chamber_cross_section_with_event.png}
 	\caption{A scale diagram of the interior of the TRINAT detection chamber, shown edge-on with a decay event. After a decay, the daughter will be unaffected by forces from the MOT.  Positively charged recoils and negatively charged shake-off electrons are pulled towards detectors in opposite directions.  Although the $\beta^+$ is charged, it is also highly relativistic and escapes the electric field with minimal perturbation.}
@@ -374,31 +396,24 @@ The TRINAT detection chamber operates at ultra-high vacuum (UHV) and provides no
 \end{figure}
 %In addition to the components required for the trapping mechanism and optical pumping (discussed in greater detail in Section~\ref{section:acmot_and_polarization}), the chamber also features 
 
-The two sets of MCPs are positioned across the chamber from one another and designed to operate in conjuction with a series of seven electrostatic hoops.  These hoops are designed to maintain a constant and roughly uniform electric field across the space between the two MCP detectors without blocking the path of necessary laser beams, and thereby to pull positively charged ions towards one MCP detector and negatively charged electrons towards the other (see Figs.~\ref{chamber_decayevent} and~\ref{fig:thechamber}).  
-
 %%%
-\begin{figure}[h!!b!!t]
+\begin{figure}[h!b!t]
 	\centering
 	\includegraphics[width=.80\linewidth]{Figures/chamber_photo_2.png}
-	\caption{Inside the TRINAT science chamber.  This photo is taken from the vantage point of one of the microchannel plates, looking into the chamber towards the second microchannel plate.  The current-carrying copper Helmholtz coils and two beta telescopes are visible at the top and bottom.  The metallic piece near the center is one of the electrostatic `hoops' used to generate an electric field within the chamber.  The hoop's central circular hole allows access to the microchannel plate, and the two elongated holes on the sides allow the MOT's trapping lasers to pass unimpeded at an angle of 45 degress `out of the page'.}
+	\caption{Inside the TRINAT science chamber.  This photo is taken from the vantage point of one of the microchannel plates, looking into the chamber towards the second microchannel plate.  The current-carrying copper Helmholtz coils and two beta telescopes are visible at the top and bottom.  The metallic piece in the foreground is one of the electrostatic hoops used to generate an electric field within the chamber.  The hoop's central circular hole allows access to the microchannel plate, and the two elongated holes on the sides allow the MOT's trapping lasers to pass unimpeded at an angle of 45 degress `out of the page'.}
 	\label{fig:thechamber}
 \end{figure}
 
+%Each set of MCPs is a relatively large detector backed by a series of delay lines for position sensitivity.  
+The detector intended to collect the negatively charged electrons (the ``eMCP'') has an active area of $75.0\,$mm, and is positioned 
+%is 75 mm in diameter~\aside{No, it's 86.6 mm in diameter, but the active area is only 75 mm.}and positioned 
+$100.0\,$mm from the chamber centre.  It features a Z-stack configuration of three plates, and it is backed by a set of three separate delay lines in a ``hexagonal'' arrangement for redundant position sensitivity (the ``HEX75'').  The detector used to collect positively charged ions (the ``iMCP,'' or equivalently the ``rMCP'' since many of the ions collected are recoils from decay) is $80.0\,$mm in diameter and positioned $101.4\,$mm from the chamber centre.  It features only two plates arranged in a chevron configuration, and it is backed by a set of two separate delay lines (the ``DLD80'') for position sensitivity.  In the context of the present work, the rMCP data is used primarily in conjuction with the photoionization laser to characterize the atom cloud (Section~\ref{photoions}), while the eMCP data is used, together with the beta detectors, as a ``tag'' for decay events originating from the cloud. \aside{Do I talk about how this works somewhere?  Probably in that section on cuts.}
 
-Each set of MCPs is a relatively large detector backed by a series of delay lines for position sensitivity.  The detector intended to collect negatively charged electrons (the ``eMCP'') is 75 mm in diameter~\aside{No, it's 86.6 mm in diameter, but the active area is only 75 mm.}and positioned 100 mm from the chamber centre.  It features a Z-stack configuration of three plates, and it is backed by a set of three separate delay lines in a ``hexagonal'' arrangement for redundant position sensitivity (the "HEX75").  The detector used to collect positively charged ions (the ``iMCP,'' or equivalently the ``rMCP'' since many of the ions collected are recoils from decay) is 80 mm in diameter and positioned 101.4 mm from the chamber centre.  It features only two plates arranged in a chevron configuration, and it is backed by a set of two separate delay lines (the "DLD80") for position sensitivity.  
+Due to an unfortunate interaction between the two MCP detectors, during the 2014 beamtime it was not possible to run both the eMCP and the rMCP simultaneously without producing a large background on at least one detector (there seemed to be no consistency as to which detector was most affected at a given time).  As a result, data was instead collected with only one MCP detector biased at a time, and the active detector was alternated every few hours to spend approximately equal time collecting data with the eMCP and rMCP.~\aside{Reference that one table.}  Online scientific data has been collected with the eMCP at electric field strengths of 66.7 V/cm and 150.0 V/cm, while rMCP data has been collected at 395 V/cm, 415 V/cm, and 535 V/cm.  Note that these field strengths are all too low to significantly perturb any but the least energetic of the (positively charged) betas from the decay process, and these low energy betas would already have been unable to reach the upper and lower beta detectors due to interactions with materials in the SiC mirror and Be foil vacuum seal.
 
-Due to an unfortunate interaction between the two MCP detectors, during the 2014 beamtime it was not possible to run both the eMCP and the rMCP simultaneously without producing a large background on at least one detector (there seemed to be no consistency as to which detector was most affected at a given time).  As a result, data was instead collected with only one MCP detector biased at a time, and the active detector was alternated every few hours to spend approximately equal time collecting data with the eMCP and rMCP.~\aside{Reference that one table.}
-
-\note{These paragraphs go here somewhere if I can find anything that's not redundant:
-\\...\\
-On opposing sides of the chamber, and perpendicular to the axis of polarization, two stacks of $\sim$ 80\,mm diameter microchannel plates (MCPs) have been placed (see Figure~\ref{fig:thechamber}) as detectors, providing a time stamp when a particle is incident on their surfaces.  Behind each stack of MCPs there is a set of delay lines, which provide  position sensitivity for these detectors.   
-\\...\\
-In order to make best use of these MCPs, we create an electric field in order to draw positively charged particles into one MCP, while drawing negatively charged electrons into the other MCP.  Seven electrostatic hoops have been placed within the chamber (see Figure~\ref{fig:thechamber}), and are connected to a series of high voltage power supplies.  See Sections~\ref{photoions} and~\ref{pos_recoils} for a discussion of what sort of charged particles we expect to observe in these detectors and how they are created.  
-\\...\\
-Scientific data has been collected at field strengths of 66.7 V/cm, 150 V/cm, 395 V/cm, 415 V/cm, and 535 V/cm.  It should be noted that these field strengths are too low to significantly perturb any but the least energetic of the (positively charged) betas from the decay process, and these low energy betas would already have been unable to reach the upper and lower beta detectors due to interactions with materials in the SiC mirror and Be foil vacuum seal.  
-}
-
-\note{ Back-to-back MCPs in an electric field to tag events from the trap, and to measure the trap position and polarization. }
+%\note{Back-to-back MCPs in an electric field to tag events from the trap, and to measure the trap position and polarization.}
+\note[color=org]{I guess I could describe how delay lines work, but I don't really want to.  Might be useful for in the next chapter though. ...actually, I think I've done it as well as is needed over there.}
+\note[color=org]{At some point I probably have to mention how decays lose orbital electrons.  Do I do it in another section somewhere?}
 
 \subsection{Beta Detectors}
 \label{section:betadetectors}
