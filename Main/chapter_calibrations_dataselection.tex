@@ -194,7 +194,7 @@ The data is further split up into four runsets:  A, B, C, and D based on when ce
 \input{table_runlist_electrons}
 \input{table_runlist_recoils}
 
-Before proceeding further, several basic cuts are performed on the data.  For the Electron Runs which are to be processed directly into a physical measurement, we consider only events in which there was a recorded hit \emph{both} on the eMCP \emph{and} on (at least) one of the scintillators.  The required scintillator hit, of course, is potentially a beta, and so it is obvious why this must be present.  The eMCP hit requirement -- particularly with the timing of the eMCP hit occuring within a certain time range relative to the scintillator hit -- is used to tag beta decay events originating from the cloud, as opposed to those originating from some other surface within the chamber.  The precise time interval to be used, and how its results should be evaluated,\aside{also discussed: how we decide what counts as an eMCP hit at all} is discussed in Section~\ref{section:emcp_cuts}, but for the first pass through the data it is good enough to simply require that an eMCP hit occurred.\aside{Awkward stupid phrasing.}  Although not every beta decay event from the cloud will produce a hit on the eMCP, this requirement eliminates a great deal of background that would otherwise be challenging to evaluate.  \aside{Also, we claim that it doesn't bias the data.  Much.  Didn't I try to evaluate how much it biased the data at one point?}  
+Before proceeding further, several basic cuts are performed on the data.  For the Electron Runs which are to be processed directly into a physical measurement, we consider only events in which there was a recorded hit \emph{both} on the eMCP \emph{and} on (at least) one of the scintillators.  The required scintillator hit, of course, is potentially a beta, and so it is obvious why this must be present.  The eMCP hit requirement -- particularly with the timing of the eMCP hit occuring within a certain time range relative to the scintillator hit -- is used to tag beta decay events originating from the cloud, as opposed to those originating from some other surface within the chamber. \aside{Do I *ever* describe how this even works?  Where do we get the SOEs from?? }  The precise time interval to be used, and how its results should be evaluated,\aside{also discussed: how we decide what counts as an eMCP hit at all} is discussed in Section~\ref{section:emcp_cuts}, but for the first pass through the data it is good enough to simply require that an eMCP hit occurred.\aside{Awkward stupid phrasing.}  Although not every beta decay event from the cloud will produce a hit on the eMCP, this requirement eliminates a great deal of background that would otherwise be challenging to evaluate.  \aside{Also, we claim that it doesn't bias the data.  Much.  Didn't I try to evaluate how much it biased the data at one point?}  
  
 Because the eMCP hit is required as a `tag' of good events, it is also necessary to remove from direct consideration any event which is coincident with a pulse of the photoionization laser.  When photoionization occurs within the atom cloud, an orbital electron is removed from the atom and will be accelerated by the electric field into the eMCP, just as a shake-off electron from a decay might be.  If, by chance, this photoelectron arrives in coincidence with a scintillator hit, it would be interpreted as a decay event from the trap -- unless we preemtively discard it.  
 
@@ -267,6 +267,8 @@ We also elect to use only events where a beta hit the DSSD within a $15.5\,$mm r
 \section{Further Cuts Using the eMCP}
 \label{section:emcp_cuts}
 \note[color=org]{I described the HEX-75 somewhere in a previous chapter, right??}
+\note[color=org]{I dislike how this section is organized..  should discuss the cut we *didn't* make at the end.}
+Much like the rMCP, the eMCP is backed by a set of delay lines for position sensitivity.  .......
 
 The eMCP features a set of three delay lines, intended to be used to record the position of a hit, as in Fig.~\ref{fig:emcp_position}.  \aside{Do I need to describe MCPs and delay lines somewhere?  Maybe not...}  Though only two delay lines is sufficient to determine the position within the plane of the MCP if they are both hit, the presence of a third delay line allows for some redundancy.  In practice, however, a large fraction of otherwise `good' events include a hit on the eMCP, but have insufficient information recorded on the delay line channels to reconstruct a position.  
 
@@ -279,7 +281,7 @@ The eMCP features a set of three delay lines, intended to be used to record the 
 	\label{fig:emcp_position}
 \end{figure}
 
-Because a SOE from the trap is most likely to land in the centre of the plate, while the background from other sources is roughly constant across the plate, it might make sense to accept only events where the eMCP hit is within some radius of the central peak.  This methodology was seriously considered because the remaining data has a much lower fraction of background events polluting it -- however this results in a loss of around half of the events even for the most generous eMCP radius cuts (see Fig.~\ref{fig:soe_tof_positioncompare}).  Therefore, it was decided that no position cuts on the eMCP would be made in the final analysis.
+Because a SOE from the trap is most likely to land in the centre of the plate, while the background from other sources is roughly constant across the plate, \aside{Wait, what?} it might make sense to accept only events where the eMCP hit is within some radius of the central peak.  This methodology was seriously considered because the remaining data has a much lower fraction of background events polluting it -- however this results in a loss of around half of the events even for the most generous eMCP radius cuts (see Fig.~\ref{fig:soe_tof_positioncompare}).  Therefore, it was decided that no position cuts on the eMCP would be made in the final analysis.
 
 \begin{figure}[h!!!!t!]
 	\centering
@@ -322,13 +324,6 @@ With the SOE TOF spectra cleaned up, a cut can be taken to reduce the fraction o
 
 \note{``To check the agreement of the model with reality, we compare the averaged superratio asymmetries from both, as in Fig.~\ref{fig:asymmetry_by_tof}.'' .... probably goes in the other section.}
 
-\begin{figure}[h!!!!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/SOE_TOF_Spectra.pdf}
-	\caption{SOE TOF, model and data.  In the end, I cut the data to use only events with a TOF between -0.928 ns and +1.416 ns.  Max. possible background is like a factor of two too big.  Similar quality results no matter how you distribute the Levinger spectra between 4S and 3P, however adding the 0 eV electrons makes a big improvement to the agreement. }	
-	\label{fig:soetof}
-\end{figure}
 
 \begin{figure}[h!!!!tb]
 	\centering
@@ -338,16 +333,6 @@ With the SOE TOF spectra cleaned up, a cut can be taken to reduce the fraction o
 	\label{fig:scintspectra}
 \end{figure}
 
-
-
-\begin{figure}[h!!!!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/asymmetry_by_tof.pdf}
-	\note{I think I want this picture to go in some other section.}
-	\caption{The superratio asymmetry, averaged over all scintillator energies between 400-4800 keV, is used to compare the experimental data and simulated TOF model as a proxy for the quality of the model to estimate the background.  All other cuts have been applied.}	
-	\label{fig:asymmetry_by_tof}
-\end{figure}
 
 
 %With the Data:  Make some more careful cuts to clean the data.  

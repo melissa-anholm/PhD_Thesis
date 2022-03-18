@@ -6,8 +6,7 @@
 %%%% --- * --- %%%%	
 \chapter{Simulations}
 \label{simulations_chapter}
-
-I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
+%I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
 \missingfigure{Show simulated spectra separated by scattering category.}
 \missingfigure{Show SimpleMC spectra, show the supersum, show the superratio, show the superratio asymmetry.  Maybe do some simple fits to show how much better the superratio asymmetry is than \emph{not} the superratio asymmetry.  }
 
@@ -232,6 +231,22 @@ where
 \section{Simulating the Background}
 \label{sec:tof_bg}
 %\note{Shouldn't have a clearpage here in the end.  I think.}
+%For this experiment, precise knowledge of the nuclear polarization ....
+%The largest source of background events is  ........
+One of the largest sources of background events in this experiment is from decaying $\isotope[37]{K}$ atoms that have escaped from the trap and become stuck on the other surfaces within the chamber.  The majority of these events can be eliminated simply by taking a time-of-flight cut on the eMCP relative to a scintillator hit time (as described in Section ~\ref{section:emcp_cuts}).  Unfortunately, this procedure cannot remove the entirety of the background, so what remains must be modeled and understood.  
+
+
+
+\begin{figure}[h!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/SOE_TOF_Spectra.pdf}
+	\note{Rephrase.}
+	\caption{SOE TOF, model and data.  In the end, the data was cut to use only events with a TOF between -0.928 ns and +1.416 ns.  Max. possible background is like a factor of two too big.  Similar quality results no matter how you distribute the Levinger spectra between 4S and 3P, however adding the 0 eV electrons makes a big improvement to the agreement. }	
+	\label{fig:soetof}
+\end{figure}
+
+
 \note{Reference Section~\ref{section:emcp_cuts}}
 Our experiment has some background.  It's annoying and stupid, but as long as we can estimate how much of it there is and what it does, it's basically fine.
 
@@ -247,6 +262,21 @@ Our experiment has some background.  It's annoying and stupid, but as long as we
 	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.
 	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
 \end{itemize}
+
+\begin{figure}[h!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/asymmetry_by_tof.pdf}
+	\note{I think I want this picture to go in some other section.}
+	\caption{The superratio asymmetry, averaged over all scintillator energies between 400-4800 keV, is used to compare the experimental data and simulated TOF model as a proxy for the quality of the model to estimate the background.  All other cuts have been applied.}	
+	\label{fig:asymmetry_by_tof}
+\end{figure}
+
+
+
+
+
+
 
 \clearpage
 \section{Comparing Simulations to Experimental Data}
