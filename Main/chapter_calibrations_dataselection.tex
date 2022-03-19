@@ -7,14 +7,39 @@
 \chapter{Calibrations and Data Selection}
 \label{calibrations_chapter}
 \label{dataselection_chapter}
-
 \note{Intro blurb goes here?}
+\section{An Overview of Available Data}
+\label{sec:data_overview}
+\note{This section must be consolidated and de-Frankenstein-ed.}
+Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, we ended up running only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  The data is further split up into several runsets based on when certain settings were adjusted, and the individual runsets have been treated separately for nearly all parts of the analysis.
 
-\section{Preliminary Data Selection with the rMCP}
-\label{sec:rmcp}
+While the beta asymmetry and Fierz interference are best evaluated using the electron runs, the recoil runs are best for evaluating the polarization (a dominant uncertainty in the beta asymmetry measurement) and the cloud position.  The polarization measurement is the subject of a recent publication (see~\cite{ben_OP}), and the cloud position evaluation is discussed in more detail in Chapter~\ref{calibrations_chapter}.
 
+%, and each of these runsets contains both electron and recoil runs.  
+%These runsets were then treated separately for nearly all parts of the analysis.  
+In particular, Data Set A was neglected completely during analysis after it was determined that one scintillator had an improperly set hardware threshold such that lower energy betas weren't being detected at all.  Additionally, there was a QDC module failure between Runsets B and C, resulting in an abrupt change in calibration for the two scintillators.  
+\note{`The observant reader may find it curious that the listed runsets start at ``B'' and continue alphabetically.  There was initially a ``Runset A'' collected as well, however it was determined later that this data could not be salvaged for use in the final analysis because one of the scinitillators had its hardware threshold set above the compton peak, and without that reference point an accurate calibration could not be performed.'}
+\note{Reference the two tables in text.  re-phrase the stupid thing about runset names.}
+%
+
+%\note{Also, the background was too noisy in Set A I think.  Also, pretty sure there isn't really that much data in Set A at all.  Also-also, Set A has E=66.7, so can't use it for more stats on the other backgrounds. ... Maybe I should just look up what the deal even was with Set A, since I don't really remember.} 
+
+%\note{What did I change between Runsets B and C?  Between Runsets C and D?  ...OP time, yes, but also and one point a PMT(?) (eta:  it was a QDC) blew out and we replaced it, so then the scintillator calibration was a bit different afterward.  Anyway, I should maybe just make a goddamn table.  Table goes here.}
+
+\input{table_runlist_electrons}
+\input{table_runlist_recoils}
+%
+
+\note{begin imported chunk.}
 As described in Chapter~\ref{section:mcps}, the science chamber features a series of electrostatic hoops to maintain an electric field to direct positively and negatively charged particles into MCP detectors on opposing sides of the chamber, but it was only possible to operate one MCP detector at a time, so it was necessary to alternate which detector was in use several times between runs so as to be able to collect both types of data.  Although the final analysis uses only the eMCP runs directly, the result could not have been obtained with the same degree of precision had the rMCP data not been present.  
+\note{end imported paragraph.}
 
+
+%\clearpage
+%\afterpage{\clearpage}
+\FloatBarrier
+\section{Preliminary Data Selection with the rMCP}
+\label{sec:rmcp_cuts}
 As described in Chapter~\ref{photoions}, the primary function of the rMCP within the context of this experiment is as a probe of the atom cloud, and it provided a critical check of the cloud's position, size, and polarization state over the course of the beamtime.  The process of cleaning, calibrating, and analyzing this data is described here.  
 
 The two delay lines located just behind the rMCP provide information about hit position.  The principle behind a delay line's operation is relatively straightforward.  The delay line itself is made from a thin wire wound into a flattened coil that covers the area of the microchannel plate.  The second delay line is oriented perpendicular to the first and immediately behind it, but also covers the full area of the microchannel plate.  When a charged particle is incident on the stack of microchannel plates, an electron shower is initiated.  The shower gains strength as it propagates through the MCPs' microchannels, and emerges on the back side of the stack after having been greatly amplified.  This electron shower is then incident on a delay line, generating an electrical pulse that propagates from the hit point towards both ends of the wire.  Although the wire is conductive, the propagation speed is finite, and this fact is key to extracting the hit position.  The time of arrival for the electrical pulse is recorded at each end of the delay line wire, and it is the difference between the two times that tells where along the wire the original hit occurred.  In general, a single delay line is only precise enough to determine the hit position as projected along the direction perpendicular to its coil's wires.
@@ -56,6 +81,7 @@ Because the characteristics of these timing sum distributions varied from run to
 %-- so all cuts on the rMCP delay line timing sums had to be taken on a run-by-run basis, and because of the asymmetry and occasional bimodality of the distributions,   
 
 \section{Calibrations with the rMCP}
+\label{sec:rmcp_cals}
 A calibration mask was created for the rMCP, to eliminate any nonlinearities in the images produced.  Several months before the $\isotope[37]{K}$ beamtime was to occur, the mask was attached in front of the rMCP, and a test of the delay lines' ability to produce an image was performed using an alpha source to illuminate the full surface of the detector.~\aside{I *think* we used an alpha source?  Not sure what else we could have done, but I better check this!}  The mask was later removed in advance of the beamtime, in order to preserve the highest possible surface area, and calibrations were performed using the older mask data and subsequently applied to the online $\isotope[37]{K}$ data (see Fig.~\ref{fig:rmcp_calibration}).
 
 The calibration was performed over a number of steps.  The data was given a preliminary rough calibration, performed on each delay line separately, which simply involved taking the difference in pulse arrival times between each end of the delay line, scaling the result by a factor chosen to get the image to be the approximate correct size, and then subtracting an offset to center the image.  
@@ -92,7 +118,7 @@ But also, I really don't want to get into this, otherwise somebody will ask me t
 
 \section{Measurements of the Atom Cloud}
 \label{sec:cloud_calibration}
-With the rMCP detector calibrated (Section~\ref{sec:rmcp}), several types of data may be extracted.  It is possible to extract hit position and times-of-flight for the incident nuclear recoils, and an analysis of such data could be used to perform a test of right-handed currents within the nuclear weak force, as discussed in Chapter~\ref{section_rslow}.  However, we will focus here on what may be learned about the features of the atom cloud from rMCP events in coincidence with the photoionization laser.~\aside[color=org]{Also... does the camera data go in this section??}
+With the rMCP detector calibrated (Section~\ref{sec:rmcp_cals}), several types of data may be extracted.  It is possible to extract hit position and times-of-flight for the incident nuclear recoils, and an analysis of such data could be used to perform a test of right-handed currents within the nuclear weak force, as discussed in Chapter~\ref{section_rslow}.  However, we will focus here on what may be learned about the features of the atom cloud from rMCP events in coincidence with the photoionization laser.~\aside[color=org]{Also... does the camera data go in this section??}
 
 
 \begin{figure}[h!tb]
@@ -180,19 +206,19 @@ Without further ado, I'm just going to put in several pictures.  Right here, rig
 
 \section{Data Selection and Preliminary Cuts}
 \note{We now consider how to clean up our data.  We make some fairly obvious, intuitive cuts, and those are described here.  Later, we'll make less intuitively obvious cuts.}
-Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, we ended up running only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  
-
-While the beta asymmetry and Fierz interference are best evaluated using the electron runs, the recoil runs are best for evaluating the polarization (a dominant uncertainty in the beta asymmetry measurement) and the cloud position.  The polarization measurement is the subject of a recent publication (see~\cite{ben_OP}), and the cloud position evaluation is discussed in more detail in Chapter~\ref{calibrations_chapter}.
-
-The data is further split up into four runsets:  A, B, C, and D based on when certain detection settings were adjusted, and each of these runsets contains both electron and recoil runs.  These four runsets were then treated separately for nearly all parts of the analysis.  In particular, Data Set A was neglected completely during analysis after it was determined that one scintillator had an improperly set hardware threshold such that lower energy betas weren't being detected at all.  Additionally, there was a QDC module failure between Runsets B and C, resulting in an abrupt change in calibration for the two scintillators.  
-\note{`The observant reader may find it curious that the listed runsets start at ``B'' and continue alphabetically.  There was initially a ``Runset A'' collected as well, however it was determined later that this data could not be salvaged for use in the final analysis because one of the scinitillators had its hardware threshold set above the compton peak, and without that reference point an accurate calibration could not be performed.'}
-
-%\note{Also, the background was too noisy in Set A I think.  Also, pretty sure there isn't really that much data in Set A at all.  Also-also, Set A has E=66.7, so can't use it for more stats on the other backgrounds. ... Maybe I should just look up what the deal even was with Set A, since I don't really remember.} 
-
-%\note{What did I change between Runsets B and C?  Between Runsets C and D?  ...OP time, yes, but also and one point a PMT(?) (eta:  it was a QDC) blew out and we replaced it, so then the scintillator calibration was a bit different afterward.  Anyway, I should maybe just make a goddamn table.  Table goes here.}
-
-\input{table_runlist_electrons}
-\input{table_runlist_recoils}
+%%%%Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, we ended up running only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  
+%%%%
+%%%%While the beta asymmetry and Fierz interference are best evaluated using the electron runs, the recoil runs are best for evaluating the polarization (a dominant uncertainty in the beta asymmetry measurement) and the cloud position.  The polarization measurement is the subject of a recent publication (see~\cite{ben_OP}), and the cloud position evaluation is discussed in more detail in Chapter~\ref{calibrations_chapter}.
+%%%%
+%%%%The data is further split up into four runsets:  A, B, C, and D based on when certain detection settings were adjusted, and each of these runsets contains both electron and recoil runs.  These four runsets were then treated separately for nearly all parts of the analysis.  In particular, Data Set A was neglected completely during analysis after it was determined that one scintillator had an improperly set hardware threshold such that lower energy betas weren't being detected at all.  Additionally, there was a QDC module failure between Runsets B and C, resulting in an abrupt change in calibration for the two scintillators.  
+%%%%\note{`The observant reader may find it curious that the listed runsets start at ``B'' and continue alphabetically.  There was initially a ``Runset A'' collected as well, however it was determined later that this data could not be salvaged for use in the final analysis because one of the scinitillators had its hardware threshold set above the compton peak, and without that reference point an accurate calibration could not be performed.'}
+%%%%
+%%%%%\note{Also, the background was too noisy in Set A I think.  Also, pretty sure there isn't really that much data in Set A at all.  Also-also, Set A has E=66.7, so can't use it for more stats on the other backgrounds. ... Maybe I should just look up what the deal even was with Set A, since I don't really remember.} 
+%%%%
+%%%%%\note{What did I change between Runsets B and C?  Between Runsets C and D?  ...OP time, yes, but also and one point a PMT(?) (eta:  it was a QDC) blew out and we replaced it, so then the scintillator calibration was a bit different afterward.  Anyway, I should maybe just make a goddamn table.  Table goes here.}
+%%%%
+%%%%\input{table_runlist_electrons}
+%%%%\input{table_runlist_recoils}
 
 Before proceeding further, several basic cuts are performed on the data.  For the Electron Runs which are to be processed directly into a physical measurement, we consider only events in which there was a recorded hit \emph{both} on the eMCP \emph{and} on (at least) one of the scintillators.  The required scintillator hit, of course, is potentially a beta, and so it is obvious why this must be present.  The eMCP hit requirement -- particularly with the timing of the eMCP hit occuring within a certain time range relative to the scintillator hit -- is used to tag beta decay events originating from the cloud, as opposed to those originating from some other surface within the chamber. \aside{Do I *ever* describe how this even works?  Where do we get the SOEs from?? }  The precise time interval to be used, and how its results should be evaluated,\aside{also discussed: how we decide what counts as an eMCP hit at all} is discussed in Section~\ref{section:emcp_cuts}, but for the first pass through the data it is good enough to simply require that an eMCP hit occurred.\aside{Awkward stupid phrasing.}  Although not every beta decay event from the cloud will produce a hit on the eMCP, this requirement eliminates a great deal of background that would otherwise be challenging to evaluate.  \aside{Also, we claim that it doesn't bias the data.  Much.  Didn't I try to evaluate how much it biased the data at one point?}  
  

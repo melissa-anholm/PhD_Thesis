@@ -227,10 +227,10 @@ where
 %
 
 
-\clearpage
+%\clearpage
+\FloatBarrier
 \section{Simulating the Background}
 \label{sec:tof_bg}
-%\note{Shouldn't have a clearpage here in the end.  I think.}
 %For this experiment, precise knowledge of the nuclear polarization ....
 %The largest source of background events is  ........
 One of the largest sources of background events in this experiment is from decaying $\isotope[37]{K}$ atoms that have escaped from the trap and become stuck on the other surfaces within the chamber.  The majority of these events can be eliminated simply by taking a time-of-flight cut on the eMCP relative to a scintillator hit time (as described in Section ~\ref{section:emcp_cuts}).  Unfortunately, this procedure cannot remove the entirety of the background, so what remains must be modeled and understood.  
@@ -278,9 +278,10 @@ Our experiment has some background.  It's annoying and stupid, but as long as we
 
 
 
-\clearpage
+%\clearpage
+\FloatBarrier
 \section{Comparing Simulations to Experimental Data}
-\note{This section shouldn't get a clearpage (or...should it?), but it's just really hard to read my bulletpoint list without it.}
+%\note{This section shouldn't get a clearpage (or...should it?), but it's just really hard to read my bulletpoint list without it.}
 \begin{itemize}
 	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
 	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change much when we adjust BSM couplings.  Just use the old event generator from Holstein Eq.~(51).

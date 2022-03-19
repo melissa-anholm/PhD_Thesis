@@ -242,9 +242,10 @@ Although the beta decay process is primarily concerned with the emission of beta
 
 We will amend Eq.~\ref{eq:ourdecay} to reflect the presence of $N$ such `shake-off electrons' (SOEs), as
 \bea
-^{37}\textrm{K} &\rightarrow& \,^{37}\textrm{\!Ar}^{+(N-1)} + \beta^{+} + \nu_e + N \, e_{\textrm{SO}}, 
+^{37}\textrm{K} &\rightarrow& \,^{37}\textrm{\!Ar}^{(N-1)+} + \beta^{+} + \nu_e + N \, e_{\textrm{SO}}, 
 \label{eq:ourdecay_withsoe}
 \eea
+\aside{Do I want to re-assign N somehow so the notation works better?}
 where it is clear that, since the parent $^{37}\textrm{K}$ atom was electrically neutral before ($\beta^+$) decay, the daughter $^{37}\textrm{\!Ar}$ will initially have an `extra' orbital electron if none are shaken off.  We also note that the outer electron in an $^{37}\textrm{\!Ar}^{-}$ ion is \emph{not bound},~\aside[color=bluetodo]{cite someone!!  I don't know who.} and in an electric field such as is present within our experimental chamber, this outer electron is removed immediately to be accelerated through the field, leaving behind a neutral $^{37}\textrm{\!Ar}$ atom.
 
 It is useful to consider the energy spectrum of these shake-off electrons.  Guiding our understanding, Levinger~\cite{Levinger} assumes the sudden approximation and simply calculates the overlap in wavefunctions between an electron in the initial atom and an electron in the final state -- either outgoing or bound within the atom.  Analytic expressions can be obtained if the atom can be treated as being hydrogenic.
@@ -330,8 +331,10 @@ UCNA fits energy spectrum and Abeta[Ebeta] simultaneously now."
 
 
 \section{On the Superratio, the Supersum, and the Constructed Asymmetry}
-\note[color=jb]{JB:  You need to at some point say that the supersum is the beta energy spectrum.  There are experiments trying to do this method better, but they are very difficult.  UCNA published a combined energy spectrum and Abeta[Ebeta] analysis on the neutron in March 2020~\cite{NeutronbFierz_March2020}.}
-\note{I can't help but also notice the follow-up article from September 2020~\cite{NeutronbFierz_September2020}.  Ugh. }
+\note[color=jb]{JB:  You need to at some point say that the supersum is the beta energy spectrum.  There are experiments trying to do this method better, but they are very difficult.  UCNA published a combined energy spectrum and Abeta[Ebeta] analysis on the neutron in March 2020~\cite{NeutronbFierz_March2020}.
+\\...\\
+MJA:  I can't help but also notice the follow-up article from September 2020~\cite{Saul2020}.  Ugh. 
+}
 
 %\\*
 The data can be combined into a superratio asymmetry.  This has the benefit of causing many systematics to cancel themselves out at leading order.  It also will increase the fractional size of the effects we're looking for.  This can be shown by using math.  

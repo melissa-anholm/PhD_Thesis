@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{thesis}
+Anholm, M., Characterizing the {AC-MOT}, Master's thesis, University of British
+  Columbia, 2014.
+
 \bibitem{ben_OP}
 Fenker, B., Behr, J.~A., Melconian, D., Anderson, R. M.~A., Anholm, M., Ashery,
   D., Behling, R.~S., Cohen, I., Craiciu, I., Donohue, J.~M., Farfan, C.,
@@ -8,10 +12,6 @@ Fenker, B., Behr, J.~A., Melconian, D., Anderson, R. M.~A., Anholm, M., Ashery,
   \textit{Precision measurement of the nuclear polarization in laser-cooled,
   optically pumped $^{37}\textrm{K}$}, New Journal of Physics, Vol.~18, No.~7,
   pp.~073028, 2016.
-
-\bibitem{thesis}
-Anholm, M., Characterizing the {AC-MOT}, Master's thesis, University of British
-  Columbia, 2014.
 
 \bibitem{falkowski2021}
 Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
@@ -32,11 +32,6 @@ Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
 Levinger, J.~S., \textit{Effects of Radioactive Disintegrations on Inner
   Electrons of the Atom}, Phys. Rev., Vol.~90, pp.~11--25, Apr 1953.
 
-\bibitem{harveymurray}
-Harvey, M. {\mdseries and} Murray, A.~J., \textit{Cold Atom Trap with Zero
-  Residual Magnetic Field: The AC Magneto-Optical Trap}, Phys. Rev. Lett.,
-  Vol.~101, pp.~173201, Oct 2008.
-
 \bibitem{NeutronbFierz_March2020}
 Sun, X., Adamek, E., Allgeier, B., Bagdasarova, Y., Berguno, D.~B., Blatnik,
   M., Bowles, T.~J., Broussard, L.~J., Brown, M. A.-P., Carr, R., Clayton, S.,
@@ -53,24 +48,16 @@ Sun, X., Adamek, E., Allgeier, B., Bagdasarova, Y., Berguno, D.~B., Blatnik,
   from the Ultracold Neutron Asymmetry (UCNA) experiment}, Phys. Rev. C,
   Vol.~101, pp.~035503, Mar 2020.
 
-\bibitem{NeutronbFierz_September2020}
-Saul, H., Roick, C., Abele, H., Mest, H., Klopf, M., Petukhov, A.~K., Soldner,
-  T., Wang, X., Werder, D. {\mdseries and} M\"arkisch, B., \textit{Limit on the
-  Fierz Interference Term $b$ from a Measurement of the Beta Asymmetry in
-  Neutron Decay}, Phys. Rev. Lett., Vol.~125, pp.~112501, Sep 2020.
-
-\bibitem{clifford}
-Clifford, E., Hagberg, E., Koslowsy, V., Hardy, J., Schmeing, H. {\mdseries
-  and} Azuma, R., \textit{Measurements of the response of a hybrid detector
-  telescope to mono-energetic beams of positrons and electrons in the energy
-  range 0.8–3.8 MeV}, Nuclear Instruments and Methods in Physics Research,
-  Vol.~224, No.~3, pp.~440--447, 1984.
-
 \bibitem{Saul2020}
 Saul, H., Roick, C., Abele, H., Mest, H., Klopf, M., Petukhov, A.~K., Soldner,
   T., Wang, X., Werder, D. {\mdseries and} M\"arkisch, B., \textit{Limit on the
   Fierz Interference Term $b$ from a Measurement of the Beta Asymmetry in
   Neutron Decay}, Phys. Rev. Lett., Vol.~125, pp.~112501, Sep 2020.
+
+\bibitem{harveymurray}
+Harvey, M. {\mdseries and} Murray, A.~J., \textit{Cold Atom Trap with Zero
+  Residual Magnetic Field: The AC Magneto-Optical Trap}, Phys. Rev. Lett.,
+  Vol.~101, pp.~173201, Oct 2008.
 
 \bibitem{deShalit1963}
 de~Shalit, A. {\mdseries and} Talmi, I., Nuclear Shell Theory.
@@ -133,10 +120,12 @@ Audi, G., Wapstra, A. {\mdseries and} Thibault, C., \textit{The {AME2003}
   Atomic Mass Evaluation}, Nuclear Physics A, Vol.~729, No.~1, pp.~337 -- 676,
   2003.
 
-\bibitem{holstein_errata}
-Holstein, B.~R., \textit{Erratum: Recoil effects in allowed beta decay: The
-  elementary particle approach}, Rev. Mod. Phys., Vol.~48, pp.~673--673, Oct
-  1976.
+\bibitem{clifford}
+Clifford, E., Hagberg, E., Koslowsy, V., Hardy, J., Schmeing, H. {\mdseries
+  and} Azuma, R., \textit{Measurements of the response of a hybrid detector
+  telescope to mono-energetic beams of positrons and electrons in the energy
+  range 0.8–3.8 MeV}, Nuclear Instruments and Methods in Physics Research,
+  Vol.~224, No.~3, pp.~440--447, 1984.
 
 \bibitem{severijns_cuncic_2011}
 Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
@@ -147,5 +136,10 @@ Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
 Melconian, D.~G., Measurement of the Neutrino Asymmetry in the Beta Decay of
   Laser-Cooled, Polarized $^{37}\textrm{K}$, Ph.D. thesis, Simon Fraser
   University, 2005.
+
+\bibitem{holstein_errata}
+Holstein, B.~R., \textit{Erratum: Recoil effects in allowed beta decay: The
+  elementary particle approach}, Rev. Mod. Phys., Vol.~48, pp.~673--673, Oct
+  1976.
 
 \end{thebibliography}
