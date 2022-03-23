@@ -65,37 +65,31 @@ In order to create a quantitative description of the effective response function
 where $p_{\textrm{norm}}$ is one parameter, and the other terms within the expression are themselves functions of multiple parameters and are given by,
 
 \input{equation_fmoyal}
+\note{Obviously, from a physical standpoint, the initial beta energy $E_0$ must be positive, but the response function still includes several expressions of the form, $\left| E_0 \right|$.  This is not done by accident, but rather is an intentional adjustment used to encourage the parameters to behave well within a fit. }
 \input{equation_f1f2}
+\note[color=bluetodo]{In these response functions, $x=$?}
 \input{equation_f3f4}
+\note{To evaluate $\Erf\left[\right]$ for parameter fits, root's built-in function was used.  Root also includes a built-in Landau function, but it makes everything very slow if we use it.}
 \input{equation_f5} and
 \input{equation_f511}where a $p$ with any subscript is taken to be a variable parameter that must be evaluated.  The expressions $f_1$, $f_2$, $f_3$, $f_4$, and $f_5$ are motivated by or taken directly from expressions of the same name within Clifford's description, and the individual parameters $p_\alpha$, $p_\beta$, $p_\gamma$, $p_\Delta$, $p_W$, and $p_k$ are closely related to their counterparts of similar name~\cite{clifford}.  The expressions $f_{\mathrm{moyal}}$ and $f_{511}$ represent a departure from the published treatment, however, and arise from physical behaviours within this experiment which are not described within Clifford's treatment.
 
 In particular, $f_{511}$ is a rather inelegant representation of the annihilation radiation compton edge within our geometry.  Although the DSSD provides an effective veto for the overwhelming majority of these events--and indeed within Clifford's treatment this veto is treated as being perfect in its discernment--it is clear both from experimental spectra and the Geant4 simulations intended to represent them that there exist a small number of such events within our scintillator spectra that cannot be vetoed in this manner.  These events must be understood and adequately accounted for.  
+
+It should be noted that no attempt is made to derive the expression for $f_{511}$ from first principles; the expression was chosen only because of its visual similarity to the spectrum's fit residuals before its inclusion.  This expression's contribution to the overall function is negligible at all but the lowest initial beta energies (Eq.~\ref{eq:f511}'s $p_{\mathrm{scale}}$ parameter, showing the absolute normalization of $f_{511}$, is plotted in the top right of Fig.~\ref{fig:lineshapeparams_scale}.), and is always negligible at scintillator energies above $\sim 500\,$keV, as can be seen in Fig.~\ref{fig:lineshape_750}.  We note that within the final analysis, all scintillator spectra will be given a low energy cutoff at 400\,keV, so the only the higher energy tail of $f_{511}$ will make any contribution.  \aside{Also, I think for this particular part of analysis, the cutoff was like 600 keV.} \aside[color=org]{Some of this content needs to go somewhere else.}
 
 The expression $f_{\mathrm{moyal}}$ arises from the beta particles' energy loss within materials (i.e. the mirror, the beryllium foil, and the DSSD itself, as in Fig.~\ref{fig:thechamber}) before its eventual absorption within the scintillator.  Although Clifford's treatment does include a $\Delta E$ detector (our DSSD would be the equivalent), the energy absorbed in this detector is added back in to the total before Clifford's final spectra are modeled.  Although it would be possible to do something similar with our DSSD spectra, \aside[color=org]{We never attempt to do this, because reasons.  Don't I talk about this somewhere?} we would still be left with the problem of accounting for the similarly-shaped energy loss within the mirror and foil. 
 
 The distribution for energy deposition within a thin material by an energetic charged particle, first described by Lev Landau in 1944~\cite{landaudistribution}, is now known as a Landau distribution.  This distribution has a variety of properties that make it challenging to work with -- notably its mean, variance, and all higher moments are undefined, and the distribution itself cannot be written in closed form.  Its primary redeeming mathematical feature, however, is the fact that the convolution of a Landau distribution with another Landau distribution is, itself, a Landau distribution, and this means that we can represent the sum total of energy absorption within three successive thin materials as a single Landau distribution.  
 
 Within the present context, an expression for energy absorption that can be evaluated and re-evaluated quickly by computer with adjusted parameters is needed, as this must be used within a fit function.  To this end, we employ a so-called `Moyal function', which was developed in 1955 to be used as a closed form approximation to the Landau distribution~\cite{moyal}.  Indeed, Eq.~\ref{eq:fmoyal} is little more than a Moyal function.  
+\note{...as previously mentioned, re-introducing the energy from the BB1s invites problems with maintaining a uniform energy threshold over the entire detector. }
+\note{somewhere I have to talk about the empirical noise spectrum etc. on the BB1s.  Or maybe I've already mentioned it somewhere.}  
 
-%The energy deposited as a charged particle passes through a thin material was first described by Landau in 1944~\cite{landaudistribution}
+The values of these parameters are allowed to vary with initial beta energy, and must be determined empirically by a series of fits to simulated spectra.  
+%Since the final response function is expected to be a function of initial beta energy, we must allow for these parameters to also vary as a function of initial beta energy.  
+To effect this result, the TRINAT Geant4 simulation is used to generate a series of `mono-energetic' spectra.  That is, for each energy value under consideration (with discrete values selected to span the energy range of betas in our decay), events are generated in which every outgoing beta initially has the same amount of kinetic energy, and the angular distribution of these betas is physically appropriate for the polarization and beta energy under consideration.  These mono-energetic betas are propagated through the experimental geometry via Geant4, and the resulting scintillator spectra are recorded.  Each polarization state must be considered separately, but spectra for both detectors are generated simultaneously, as it is necessary to generate events into a full $4\pi$ steradians in order to fully account for betas scattered into- or away from the detectors.  Cuts identical to those imposed on the experimental data are applied (see Chapter~\ref{dataselection_chapter}).  Several such spectra are shown for the Bottom Detector in the `-' polarization state, with their best fit response functions, components thereof, and residuals of the fit, in Figs.~\ref{fig:lineshape_5000},~\ref{fig:lineshape_3000},~\ref{fig:lineshape_1500},~\ref{fig:lineshape_1000}, and~\ref{fig:lineshape_750}.
 
-\note[color=bluetodo]{In these response functions, $x=$?}
-\note{Obviously, from a physical standpoint, the initial beta energy $E_0$ must be positive, but the response function still includes several expressions of the form, $\left| E_0 \right|$.  This is not done by accident, but rather is an intentional adjustment used to encourage the parameters to behave well within a fit. }
-%\note{... Similarly, Clifford doesn't include a compton edge.  I think.  But I want to.}
-
-\aside{Do I need the angular distribution in the end?  I think maybe I put in scattering later, and just used a cone for the first round.  I re-did this to do the opposite thing at some point.}
-\note{It's clear that the model goes to shit at low energies.  I don't really get it.  Anyway, we'll never even *look* at events with scintillator energy below 400 keV, so at the very lowest energies it doesn't matter.  Though, it gets bad before we get that low in the spectrum.  Sadly.}
-%\note{Write down the full goddamn response function expression?}
-\note{
-%Parameters alpha, beta, gamma, delta, W, k, and functions $f_1()$, $f_2()$, $f_3()$, $f_4()$, $f_5()$ are named that way because we're following Clifford.  Exact definitions of the functions aren't really identical though, and my parameters don't necessarily have the same normalization.  Qualitatively, all the same features are there though.  Also, the moyal function isn't from Clifford, because ... reasons.  
-%\\ ...\\
-In particular, Clifford's treatment describes the measured energy (which in their case is a sum of scintillator energy and DeltaE energy) for beta particles interacting with a detector with a collimator, much like ours, however in our case, some energy is lost to the intervening SiC mirror and beryllium foil, and as we don't measure that directly, it can't be directly added back in.  Although we might add back in the energy from the BB1 detectors, we have to model other energy losses in similar materials anyway, and as previously mentioned, re-introducing the energy from the BB1s invites problems with maintaining a uniform energy threshold over the entire detector. 
-}
-
-The values of these parameters must be determined empirically by a fit to simulated spectra.  Since the final response function is expected to be a function of initial beta energy, we must allow for these parameters to also vary as a function of initial beta energy.  To effect this result, the TRINAT Geant4 simulation is used to generate a series of `mono-energetic' spectra.  That is, for each energy value under consideration (selected to span the energy range of betas in our decay), events are generated in which every outgoing beta initially has the same amount of kinetic energy, and the angular distribution of these betas is physically appropriate for the polarization and beta energy under consideration.  Both polarization states must be considered separately.  These mono-energetic betas are propagated through the experimental geometry via Geant4, and the resulting scintillator spectra are recorded.  Cuts identical to those imposed on the experimental data are implemented (see Chapter~\ref{dataselection_chapter}).  \aside{somewhere I have to talk about the empirical noise spectrum etc. on the BB1s.  Or maybe I've already mentioned it somewhere.}  Several such spectra are shown for the Bottom Detector in the `-' polarization state, with their best fits and the residuals thereof in Figs.~\ref{fig:lineshape_5000},~\ref{fig:lineshape_3000},~\ref{fig:lineshape_1500},~\ref{fig:lineshape_1000}, and~\ref{fig:lineshape_750}.
-
-\begin{figure}[h!!tb]
+\begin{figure}[htb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/MonoFit_5000.png}
@@ -130,26 +124,9 @@ The values of these parameters must be determined empirically by a fit to simula
 	\caption[Fit to Mono-Energetic Spectrum, 750 keV]{Fit to Mono-Energetic Spectrum, 750 keV (B-)}	
 	\label{fig:lineshape_750}
 \end{figure}
+\FloatBarrier  % this will have to go in the end, but it's really hard to edit this thing without it.
 
-It should be noted that no attempt is made to derive the expression for $f_{511}$ from first principles; the expression was chosen only because of its visual similarity to the spectrum's fit residuals before its inclusion.  This expression's contribution to the overall function is negligible at all but the lowest initial beta energies (Eq.~\ref{eq:f511}'s $p_{\mathrm{scale}}$ parameter, showing the absolute normalization of $f_{511}$, is plotted in the top right of Fig.~\ref{fig:lineshapeparams_scale}.), and is always negligible at scintillator energies above $\sim 500\,$keV, as can be seen in Fig.~\ref{fig:lineshape_750}.  We note that within the final analysis, all scintillator spectra will be given a low energy cutoff at 400\,keV, so the only the higher energy tail of $f_{511}$ will make any contribution.  \aside[color=org]{Some of this content needs to go somewhere else.}
-
-
-
-%\codestyle{string complete_ff_string = "[01_norm]*("+fmoyal_string+" + "+f1_string+" + "+f2_string+" + "+f3_string+" + "+f4_string+" + "+f5_string+") + "+f511_string+";  // landau primary + modified compton toe + 511s.}
-
-
-
-%\note{Something something Landau distribution.  Something something Clifford~\cite{clifford}.  Something something Moyal.}
-%\note{Which mono-energies did I use, again?  Maybe make a list/table.}
-\note{Needs a picture of the *full* beta energy distributions that come out of the lineshape thing.  To compare with (a) data and (b) G4.  Probably a superratio in there somewhere too.}
-\note{Um.  Which of the scattering things did I actually put in at the end?  And when did I do it?  Like, how did I account for (back-)scattering?  I tried with/without .... scattering, I think?  and eventually decided not to do it.  for some reason.  I think it breaks normalization in some way that's more subtle than you would think.}
-
-\begin{itemize}
-	\item \greycomment{... And then, you have values of all the parameters, as measured at a bunch of input energies.  Make sure all the fits converge and don't do something crazy.}
-	\item \greycomment{ Fit all the parameters as a function of energy to empirical functions.  Doesn't even matter what the form of the functions are, as long as it fits well. }
-	\item the parameters extracted from the mono-energetic beta spectrum fits, and empirical functions to model how these parameters vary with beta energy, are shown in Figs.~\ref{fig:lineshapeparams_part1}, ~\ref{fig:lineshapeparams_part2}, ~\ref{fig:lineshapeparams_part3}, and~\ref{fig:lineshapeparams_part4}.
-	\item How good are these fits, you ask?  See Fig.~\ref{fig:lineshape_redchi2}
-\end{itemize}
+The values of the individual parameters contributing to the fit functions in, eg, Figs.~\ref{fig:lineshape_5000},~\ref{fig:lineshape_3000},~\ref{fig:lineshape_1500},~\ref{fig:lineshape_1000}, and~\ref{fig:lineshape_750} are allowed to vary with initial beta energy, and the energy dependence of each parameter must be modeled in order to extrapolate the shape of the response function to intermediate initial beta kinetic energy values that are not explicitly modeled.  For each parameter, the energy dependence is modeled by an analytic function selected to have similar characteristics.  Each of these analytic functions is itself a function of several parameters which can be adjusted to optimize its fit to the true best-fit energy dependence of the parameter it models.  Because some parameters are only weakly independent, it is necessary to perform these fits iteratively on only a single parameter at a time, revisiting earlier parameter fits after fixing other parameters to updated models.  The results of this process are shown in Figs.~\ref{fig:lineshapeparams_part1}, ~\ref{fig:lineshapeparams_part2}, ~\ref{fig:lineshapeparams_part3}, and~\ref{fig:lineshapeparams_part4}.
 
 \begin{figure}[h!!tb]
 	\centering
@@ -174,7 +151,6 @@ It should be noted that no attempt is made to derive the expression for $f_{511}
 	\caption[Lineshape Parameter Fits (Part 3)]{Lineshape Parameter Fits (Part 3)}	
 	\label{fig:lineshapeparams_part3}
 \end{figure}
-
 \begin{figure}[h!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
@@ -183,15 +159,31 @@ It should be noted that no attempt is made to derive the expression for $f_{511}
 	\label{fig:lineshapeparams_part4}
 \end{figure}
 %
+%\FloatBarrier  % this will have to go in the end, but it's really hard to edit this thing without it.
+It is useful to consider how well this empirical response function works to model the spectra.  One can see clearly from Figs.~\ref{fig:lineshape_5000}, ~\ref{fig:lineshape_3000}, ~\ref{fig:lineshape_1500}, ~\ref{fig:lineshape_1000}, and~\ref{fig:lineshape_750} that the fit residuals appear noticeably \emph{worse} at lower initial beta energies.  Fig.~\ref{fig:lineshape_redchi2} shows the reduced $\chi^2$ values arising from comparing mono-energetic G4 spectra to the empirical response functions described above, for all four detector and polarization combinations.
+
 \begin{figure}[h!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/Lineshape_Chi2.png}
 	\note{How many DOF for these things?  I should put it on the picture.}
-	\caption[Goodness of Fit for Modeled Lineshapes]{Goodness of Fit for Modeled Lineshapes}	
+	\caption[Goodness of Fit for Modeled Response Functions]{Goodness of fit for modeled response functions, for all four detector+polarization combinations.  The models are clearly much better behaved at initial energies above $\sim 1200\,$keV.}	
 	\label{fig:lineshape_redchi2}
 \end{figure}
-%
+
+
+With the energy dependence for each of the response function's parameters carefully modeled, it becomes possible to make proper use of the full response function.  Given a decay event with a known beta energy from a nucleus with its initial polarization known, we can now predict a probabilistic response from \emph{both} scintillator detectors.  Obviously, for a single decay event, the full spectrum cannot be realized -- however in aggregate the modeled response function agrees well with results from the full Geant4 simulation, particularly at higher beta energies.  
+
+\note{Needs a picture of the *full* beta energy distributions that come out of the lineshape thing.  To compare with (a) data and (b) G4.  Probably a superratio in there somewhere too.}
+\note{Um.  Which of the scattering things did I actually put in at the end?  And when did I do it?  Like, how did I account for (back-)scattering?  I tried with/without .... scattering, I think?  and eventually decided not to do it.  for some reason.  I think it breaks normalization in some way that's more subtle than you would think.
+\\ ... \\
+Do I need the angular distribution in the end?  I think maybe I put in scattering later, and just used a cone for the first round.  I re-did this to do the opposite thing at some point.}
+
+%%%\begin{itemize}
+%%%	\item the parameters extracted from the mono-energetic beta spectrum fits, and empirical functions to model how these parameters vary with beta energy, are shown in Figs.~\ref{fig:lineshapeparams_part1}, ~\ref{fig:lineshapeparams_part2}, ~\ref{fig:lineshapeparams_part3}, and~\ref{fig:lineshapeparams_part4}.
+%%%	\item How good are these fits, you ask?  See Fig.~\ref{fig:lineshape_redchi2}
+%%%\end{itemize}
+
 
 
 %\clearpage
