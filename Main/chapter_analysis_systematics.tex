@@ -167,26 +167,7 @@ In the end, we get our results from the scintillator energy only, without summin
 
 %
 \section{Quantifying the Effects of Backscatter with Geant4}
-	Beta decay (back-)scatter from surfaces within the experimental chamber is a significant systematic, and it must be evaluated, quantified, and corrected for.  This is done via a series of GEANT4 simulations.  While only a small fraction of events are affected, the process results in an energy loss in the beta that can, if not understood, be misinterpreted as the exact signal we're searching for.  It is therefore imperative that this be well understood. 
-	
-%	\aside{Oh god.  Have I even \emph{tried} to quantify the combined systematic that comes out of the TOF cut?  Do I need to, or is it double-counting?  Ugh, it would be such a headache to do this.  Maybe I can at least do it at the end -- because I might never get my code back to the way it was.}
-
-\note[color=jb]{JB says: I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
-
-
-%	\missingfigure{Show simulated $\cos\theta$ vs TOF.  You can just make a lot of that go away with a properly selected cut.}
-\begin{figure}[h!!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/toa_vs_costheta.png}
-	\caption[Simulated Beta TOA vs emission angle w.r.t. detector orientation]{Simulated Beta TOA vs emission angle w.r.t. detector orientation}	
-	\label{fig:toa_vs_costheta}
-\end{figure}
-
-%\note[color=jb]{JB says:  
-%Please discuss this at the next meeting.  (ETA:  Done!)
-%\\
-%Indeed this is why you should avoid calling the events originating not from the trap 'scattered events.' More importantly, why it was so critical that you reduced the size of the correction by timing bad events out. I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
+\note[color=org]{This content got moved over *there*.  (ie, Section~\ref{sec:bs}.)}
 
 %%%% --- * --- %%%%
 \section{Lineshape Reconstruction}

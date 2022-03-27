@@ -98,7 +98,7 @@ With the preliminary calibration providing a visible image to work with, further
 When the online rMCP data was eventually collected, it was found that the rMCP image appeared offset by several centimeters relative to the previous calibration.  Therefore, a new offset had to be estimated by eye, then entered into the correct step in the calibration before the stretching occurred.  Since the stretching algorithm itself changed the apparent centering too, this was an interative process.  The most likely cause for this is a change in cable lengths between the readout and data acquisition in the months between the calibration and online data collection.
 
 \note{It is worth mentioning that the mask calibration data was collected without the presence of the magnetic fields involved in trapping and optical pumping, but these were of course present in the online data to which it was being compared.  Since a magnetic field can change the trajectory of a charged particle, one might suspect that there could be some effect on the resulting image.  There are two stages at which this might occur:  while the ion is accelerating through the electric field within the experimental chamber before impacting the rMCP, and while the electron shower is emerging from the back of the MCP stack before it is incident on the delay lines.  
-\\...\\
+...
 But also, I really don't want to get into this, otherwise somebody will ask me to quantify the size of the effect.  Turns out:  it's tiny.}
 
 
@@ -118,7 +118,9 @@ But also, I really don't want to get into this, otherwise somebody will ask me t
 
 \section{Measurements of the Atom Cloud}
 \label{sec:cloud_calibration}
-With the rMCP detector calibrated (Section~\ref{sec:rmcp_cals}), several types of data may be extracted.  It is possible to extract hit position and times-of-flight for the incident nuclear recoils, and an analysis of such data could be used to perform a test of right-handed currents within the nuclear weak force, as discussed in Chapter~\ref{section_rslow}.  However, we will focus here on what may be learned about the features of the atom cloud from rMCP events in coincidence with the photoionization laser.~\aside[color=org]{Also... does the camera data go in this section??}
+With the rMCP detector calibrated (Section~\ref{sec:rmcp_cals}), several types of data may be extracted.  It is possible to extract the hit positions and times-of-flight for the incident nuclear recoils, and an analysis of such data could be used to perform a test of right-handed currents within the nuclear weak force, as discussed in Chapter~\ref{section_rslow}.  However, we will focus here on what may be learned about the \emph{atom cloud} from rMCP events in coincidence with the photoionization laser.~\aside[color=org]{Also... does the camera data go in this section??}  
+
+This class of data (events with both an rMCP hit and a photoionization laser hit in coincidence) can be used to measure cloud polarization, and the methodology and results of that process as it applies to this particular experiment are discussed in a recent publication~\cite{ben_OP}.  We are also interested in the cloud's position and size during the periods of time where decay data is collected, since this represents a potential systematic effect that must be accounted for within our models.  The latter will be the primary focus of this section.  
 
 
 \begin{figure}[h!tb]

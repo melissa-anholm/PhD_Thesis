@@ -193,11 +193,13 @@ Do I need the angular distribution in the end?  I think maybe I put in scatterin
 
 %\clearpage
 \FloatBarrier
-\section{Simulating the Background and Time of Flight}
-\label{sec:tof_bg}
-One of the largest sources of background events in this experiment is from decaying $\isotope[37]{K}$ atoms that have escaped from the trap and become stuck on the other surfaces within the chamber.  The majority of these events can be eliminated simply by taking a time-of-flight cut on the eMCP relative to a scintillator hit time (as described in Section ~\ref{section:emcp_cuts}).  Unfortunately, this procedure cannot remove the entirety of the background, so what remains--both background events from chamber surfaces, and `good' events from the atom cloud itself--must be modeled and understood.  
-
-A second source of error, which turns out to be closely related in terms of how it must be treated within the analysis, is from scattered events.  This refers, in particular, to events in which the \emph{beta} is scattered from a surface within the chamber.  That is, a beta will lose a portion of its kinetic energy, and its trajectory is changed.  This can result both in a beta that was initially directed away from the detectors being scattered \emph{into} a detector, or a beta that was initially going towards a detector being scattered \emph{away} from it. Since this is a polarized decay and the beta asymmetry is not zero, the relative likelihoods of each of these two scenarios depends on whether the nuclear polarization vector is directed toward- or away from the detector in question.  In either case, it is clear that some events will be removed, and other events will be added in.  As a further complication, betas that have been scattered into a detector will necessarily have a very different energy spectrum than unscattered betas, and neither are the betas that are scattered away from a detector removed uniformly from the original energy spectrum.  With the four beta energy spectra comprising the essence of our observable, it is imperative that these scattering effects be understood.  
+\section{Quantifying the Effects of Scattering}
+\label{sec:bs}
+%	Beta (back-)scatter 
+	Scattering from surfaces within the experimental chamber is a significant systematic, and it must be evaluated, quantified, and corrected for.  While only a small fraction of events are affected, the process results in a change to the beta energy spectrum that can easily be misinterpreted as the exact signal we are searching for.  It is therefore imperative that this be well understood. 
+%	This is done via a series of GEANT4 simulations.  While only a small fraction of events are affected, the process results in an energy loss in the beta that can, if not understood, be misinterpreted as the exact signal we're searching for.  It is therefore imperative that this be well understood.
+%A second source of error, which turns out to be closely related in terms of how it must be treated within the analysis, is from scattered events.  
+This refers, in particular, to events in which the \emph{beta} is scattered from a surface within the chamber.  That is, a beta will lose a portion of its kinetic energy, and its trajectory is changed.  This can result both in a beta that was initially directed away from the detectors being scattered \emph{into} a detector, or a beta that was initially going towards a detector being scattered \emph{away} from it. Since this is a polarized decay and the beta asymmetry is not zero, the relative likelihoods of each of these two scenarios depends on whether the nuclear polarization vector is directed toward- or away from the detector in question.  In either case, it is clear that some events will be removed, and other events will be added in.  As a further complication, betas that have been scattered into a detector will necessarily have a very different energy spectrum than unscattered betas, and neither are the betas that are scattered away from a detector removed uniformly from the original energy spectrum.  With the four beta energy spectra comprising the essence of our observable, it is imperative that these scattering effects be understood.  
 
 Despite these complications, it is clear that for events in which the beta is scattered from a surface prior to its incidence on a detector, the beta particle will take longer to travel from the position of its initial creation to the detector.  Although it is not possible to fully separate scattered and non-scattered events from one another, a judicious choice of cut within the SOE-Beta TOF spectrum can still be used to lower the fraction of scattered events, improve our signal-to-noise ratio, and decrease the overall size of any systematic uncertainties associated with scattering.
 
@@ -208,33 +210,88 @@ It is useful to remember in the discussion that follows that a beta particle eme
 
 Within this section, however, where the experimental SOE TOF spectra are examined in detail, the above assumption is insufficient, as it is necessary to consider effects from beta scattering -- both to the observed beta energy spectra, and also to the observed beta time-of-flight spectra (which, of course, are only experimentally meaningful in comparison with another timed observation).  
 
-Using Geant4, a set of beta time-of-flight spectra is generated for decays originating from within the atom cloud for all four detector+polarization combinations, and it is clear that there is a small but non-negligible fraction of such events that arise from beta scattering events.  Even within Geant4, where is \emph{is} possible to measure the beta time of flight with respect to the initial time of decay, the scattered and unscattered spectra cannot be fully separated from one another.  
+Using Geant4, a set of beta time-of-flight spectra is generated for decays originating from within the atom cloud for all four detector+polarization combinations, and it is clear that there is a small but non-negligible fraction of such events that arise from beta scattering events.  Even within Geant4, where is \emph{is} possible to measure the beta time of flight with respect to the initial time of decay, the scattered and unscattered spectra cannot be fully separated from one another (see Fig.~\ref{fig:toa_vs_costheta}).  
+
+%\note{To be added:  point to Fig.~\ref{fig:toa_vs_costheta}.  }
+\begin{figure}[h!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/toa_vs_costheta.png}
+	\caption[Simulated Beta TOA vs emission angle w.r.t. detector orientation]{Simulated Beta TOA vs emission angle w.r.t. detector orientation}	
+	\label{fig:toa_vs_costheta}
+\end{figure}
+
 
 %Since the experimental observable on which we intend
-In order to produce something which can be directly compared with experimental data, a TOF spectrum for SOEs must also be produced and merged with the beta TOF spectrum.  Experimentally, this is done as an event-by-event subtraction, so that is also what is done for the simulations.  Unfortunately, these two time-of-flight spectra cannot easily be produced within a single type of simulation.  Because scattering is an important effect within the beta time of flight spectra (and resulting beta energy spectra), Geant4 is the tool of choice.  For shake-off electrons, which are emitted with little energy and accelerated through the electric field within the chamber, it is much more important to have an accurate model of the electric field and its effects on charged particles.  The shake-off electrons' time of flight is evaluated by the TRINAT collaboration using COMSOL to model the electric field within the experimental chamber, which is generated by a series of electrodes held at a constant voltage.  
+In order to produce something which can be directly compared with experimental data, a TOF spectrum for SOEs must also be produced and merged with the beta TOF spectrum.  Experimentally, this is done as an event-by-event subtraction, so that is also what is done for the simulations.  Unfortunately, these two time-of-flight spectra cannot easily be produced within a single type of simulation.  Because scattering is an important effect within the beta time of flight spectra (and resulting beta energy spectra), Geant4 is the tool of choice.  For shake-off electrons, which are emitted with little energy and accelerated through the electric field within the chamber, it is much more important to have an accurate model of the electric field and its effects on charged particles.  The shake-off electrons' time of flight is evaluated by the TRINAT collaboration using COMSOL to track individual electrons through a model of the electric field within the experimental chamber, which is generated by a series of electrodes held at a constant voltage.  
+\note{We do the COMSOL thing here too, but it becomes much more useful for the background events, because that's where the electric field is really non-uniform.}
 
-The SOEs are treated as being emitted isotropically, with their points of origin distributed according to the density of the central atom cloud.  Three separate TOF spectra are generated, with each corresponding to a different initial distribution of kinetic energy.  The origin of these SOE energy distributions is discussed in Section~\ref{section:soe_intro}.\note[color=org]{I don't think I ever even *say* which spectra are the best for us!  That's ... definitely a thing I should say over there.  We want:  0eV, 0.85*Levinger's XX, 0.15*Levinger's YY.  Ugh, which ones even are they?} 
+The SOEs are treated as being emitted isotropically, with their points of origin distributed according to the density of the central atom cloud.  Three separate TOF spectra are generated, with each corresponding to a different initial distribution of kinetic energy.  The origin of these SOE energy distributions is discussed in Section~\ref{section:soe_intro}.
 
-%The energy distributions which were considered w
-% to correspond with three distributions of initial energy.  
-%, with initial energies taken from 
-
-%initial energy is given by 
-%Geant4 is an appropriate tool to evaluate beta times of flight, as sc
-%The Geant4 treatment for betas is optimal
+\note[color=bluetodo]{In the end, we used $(0.09)*(\textrm{0eV}) + (0.91)*(0.85*(\textrm{4S}) + 0.15*(\textrm{3P}))$.   I will (eventually) say that *here*, not in the intro section.  Also, John used Eq.20 for the 4S, and Eq.24 for the 3P.}
 
 
-%We have already required 
-%\ref{sec:preliminary_cuts}
+%%%%%%%%
+\note{The collaboration has found that Levinger's formulae fit our measurements of SOE hit position and time-of-flight, in that the distributions are maximal at low energy somewhere, but extend out to higher energies with greatly diminished probabilities.  For our measurement, it turns out to be very important that these distributions not be truncated at too low an energy, however it is much less important which orbital shell the SOEs originated from.  In the case where no electrons are shaken off, we use the model that these electrons are removed instantly from the $^{37}\textrm{\!Ar}$ daughter with no kinetic energy within the lab frame.  Or possibly within their own rest frame.  But we used the lab frame.
+\\...\\
+Really, this stuff goes in a different chapter somewhere.}
 
-%it is necessary to produce a sha
-%the simulated beta TOF spectra must be  
-%That is, when a be
-%That is, at its time of creation, the beta being observed
-%We note in particular that there is a fraction of beta hit events
-%In particular, we note that a fraction of beta hit events arise
-%we cannot take the above assumption about using beta hit times as a proxy for 
- 
+John made some nice plots of these from the eMCP data.  I did *not* use it to make a cut on eMCP hit position in the end, despite the fact that it makes the spectrum more clean, because a lot of good events don't have full hit position information, and you lose an awful lot of statistics by making the cut.  I used this for modeling the background spectrum, but in the end it wasn't as elegant a result as I might have hoped.  Also, it's still an open question exactly which fraction of SOEs come from which atomic shell, but it doesn't change the resulting spectrum very much.
+
+\note[color=jb]{JB on 2.4 SOE:
+\\
+Say what you did, with as little info as possible now. Georg is a theoretical
+chemist, so he may be very curious about this.
+\\ ... \\
+"Atomic electrons with kinetic energies 0 to 100 eV are produced as part
+of the beta decay process.
+If their energy is below a certain value, our detection process is not perturbed,
+so we provide physics about the energy spectrum here.
+\\ ... \\ 
+Levinger~\cite{Levinger}, assuming the sudden approximation,
+calculated the overlap between an electron in the initial  atom with
+an outgoing electron or an electron in  the final atom. Levinger approximated
+everything with hydrogenic wavefunctions, so his calculations become
+analytic. The collaboration has found that Levinger's formulae
+fit our measurements of the position and TOF  info of our atomic electrons,
+so they are used in our simulations 
+\\
+OR
+\\
+but the precise energy spectrum was found to be unimportant, so we used X in our
+simulations.
+\\
+whichever is true.
+\\...\\
+This is then fine. You have most of the basics down.
+}
+
+
+\subsection{Imported:  Quantifying the Effects of Backscatter with Geant4}
+	Beta decay (back-)scatter from surfaces within the experimental chamber is a significant systematic, and it must be evaluated, quantified, and corrected for.  This is done via a series of GEANT4 simulations.  While only a small fraction of events are affected, the process results in an energy loss in the beta that can, if not understood, be misinterpreted as the exact signal we're searching for.  It is therefore imperative that this be well understood. 
+	
+%	\aside{Oh god.  Have I even \emph{tried} to quantify the combined systematic that comes out of the TOF cut?  Do I need to, or is it double-counting?  Ugh, it would be such a headache to do this.  Maybe I can at least do it at the end -- because I might never get my code back to the way it was.}
+
+\note[color=jb]{JB says: I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
+
+
+%	\missingfigure{Show simulated $\cos\theta$ vs TOF.  You can just make a lot of that go away with a properly selected cut.}
+
+%\note[color=jb]{JB says:  
+%Please discuss this at the next meeting.  (ETA:  Done!)
+%\\
+%Indeed this is why you should avoid calling the events originating not from the trap 'scattered events.' More importantly, why it was so critical that you reduced the size of the correction by timing bad events out. I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+\section{Simulating the Background and Time of Flight}
+%\section{Scattering and Background within the SOE TOF}
+\label{sec:tof_bg}
+One of the largest sources of background events in this experiment is from decaying $\isotope[37]{K}$ atoms that have escaped from the trap and become stuck on the other surfaces within the chamber.  The majority of these events can be eliminated simply by taking a time-of-flight cut on the eMCP relative to a scintillator hit time (as described in Section ~\ref{section:emcp_cuts}).  Unfortunately, this procedure cannot remove the entirety of the background, so what remains--both background events from chamber surfaces, and `good' events from the atom cloud itself--must be modeled and understood.  
+
+%%%%%%%%
 To this end, spectra for both the beta time of flight and shake-off electron time of flight (calculated with respect to the time of decay) are generated, both for events originating from the cloud and for events originating from surfaces within the chamber.  The beta TOF and SOE TOF spectra are combined by an event-by-event `subtraction', producing the simulated equivalent of an ``experimental SOE TOF'' spectrum (which, of course, is only a \emph{true} time-of-flight spectrum in the limit where the beta travel time is zero -- that is, since we cannot know the true time of decay, 
 
 %not a true time-of-flight spectrum, since it simply subtracts the beta hit time from the SOE hit time).  
@@ -308,16 +365,12 @@ The reason the correction is small is because of all your hard work.}
 %	\missingfigure{Show modelled TOF spectra in comparison with real TOF spectra.  Show the cut we made on that. }
 %	\note[color=jb]{JB on figures that might go here:  Figure 6.4 (currently that picture of the TOF spectrum) could either be here, or you could reference it from here. The TOF histogram is a great start. Adding the asymmetry[TOF] indeed would be vital.}
 
-	
-	
+
 %	\subsection{Decay from Chamber Surfaces}
 
 
 
-
-
-
-%\clearpage
-%\FloatBarrier
-\section{OldSection -- ``Comparing Simulations to Experimental Data''}
-\note[color=org]{This content got moved to Ch.~\ref{sec:comparing_data_sims}.}
+%%%%\clearpage
+%%%%\FloatBarrier
+%%%\section{OldSection -- ``Comparing Simulations to Experimental Data''}
+%%%\note[color=org]{This content got moved to Ch.~\ref{sec:comparing_data_sims}.}

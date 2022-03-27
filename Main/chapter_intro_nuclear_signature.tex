@@ -240,66 +240,29 @@ its big $\Abeta$ value means we have a big thing to multiply any $\bFierz$ value
 \label{section:soe_intro}
 Although the beta decay process is primarily concerned with the emission of beta particles (electrons or positrons) from a Weak interaction that occurs within the nucleus, it is common for one or more \emph{orbital} electrons to also be lost in the process.  Although beta particles are emitted over a continuous energy spectrum, they commonly carry several MeV of kinetic energy.  By contrast, an atomic electron that becomes unbound in this process is likely to only carry a few eV of kinetic energy, and we say that they are `shaken' off.  
 
-We will amend Eq.~\ref{eq:ourdecay} to reflect the presence of $N$ such `shake-off electrons' (SOEs), as
+We will amend Eq.~\ref{eq:ourdecay} to reflect the presence of $N$ such `shake-off electrons' (SOEs) within each decay event, as
 \bea
 ^{37}\textrm{K} &\rightarrow& \,^{37}\textrm{\!Ar}^{(N-1)+} + \beta^{+} + \nu_e + N \, e_{\textrm{SO}}, 
 \label{eq:ourdecay_withsoe}
 \eea
 \aside{Do I want to re-assign N somehow so the notation works better?}
-where it is clear that, since the parent $^{37}\textrm{K}$ atom was electrically neutral before ($\beta^+$) decay, the daughter $^{37}\textrm{\!Ar}$ will initially have an `extra' orbital electron if none are shaken off.  We also note that the outer electron in an $^{37}\textrm{\!Ar}^{-}$ ion is \emph{not bound},~\aside[color=bluetodo]{cite someone!!  I don't know who.} and in an electric field such as is present within our experimental chamber, this outer electron is removed immediately to be accelerated through the field, leaving behind a neutral $^{37}\textrm{\!Ar}$ atom.
+where it is clear that, since the parent $^{37}\textrm{K}$ atom was electrically neutral before its decay by $\beta^+$ emission, the daughter $^{37}\textrm{\!Ar}$ will initially have an `extra' orbital electron (and therefore a negative net charge) if no electrons are shaken off.  We also note that it is common for multiple SOEs to be created in a given decay event.  
 
-It is useful to consider the energy spectrum of these shake-off electrons.  Guiding our understanding, Levinger~\cite{Levinger} assumes the sudden approximation and simply calculates the overlap in wavefunctions between an electron in the initial atom and an electron in the final state -- either outgoing or bound within the atom.  Analytic expressions can be obtained if the atom can be treated as being hydrogenic.
+A further consideration is that the outer electron in an $^{37}\textrm{\!Ar}^{-}$ ion is \emph{not bound},~\aside[color=bluetodo]{cite someone!!  I don't know who.} and in an electric field such as is present within our experimental chamber, this outer electron is removed immediately to be accelerated through the field, leaving behind a neutral $^{37}\textrm{\!Ar}$ atom.  Although this is in principle a different physical loss mechanism, we will refer to unbound electrons resulting from either process as SOEs.  
 
-\note[color=bluetodo]{Where the fuck in Levinger even *are* the equations?  I remember I had this problem before.  Ain't nobody wants to do a contour integral to figure it out.  I think John or Alexandre or someone just fucking wrote them out at some point.  I'd like to just write them down here, otherwise it's weird to talk about some characteristics of the spectrum being more important than others.}
-%If the atom is treated as being hydrogenic, analytic expressions can be found.  
+It is useful to consider the energy spectrum of these shake-off electrons.  The most straightforward component of the SOE energy spectrum arises from the electrons that are lost immediately following decay, and we take these to initially have 0eV in kinetic energy.  
 
-\note{The collaboration has found that Levinger's formulae fit our measurements of SOE hit position and time-of-flight, in that the distributions are maximal at low energy somewhere, but extend out to higher energies with greatly diminished probabilities.  For our measurement, it turns out to be very important that these distributions not be truncated at too low an energy, however it is much less important which orbital shell the SOEs originated from.  In the case where no electrons are shaken off, we use the model that these electrons are removed instantly from the $^{37}\textrm{\!Ar}$ daughter with no kinetic energy within the lab frame.  Or possibly within their own rest frame.  But we used the lab frame.
-\\...\\
-Really, this stuff goes in a different chapter somewhere.}
+For the shake-off electrons arising from the Weak process itself, the initial energy spectra for SOEs originating in a particular orbital shell can be estimated according to the procedure outlined by Levinger~\cite{Levinger}.  The strategy is to assume that the sudden approximation holds, and simply calculate the overlap in electron wavefunctions between the initial and final states, where the final state may be either an outgoing electron or one bound within the atom.  Analytic expressions can be obtained if the atom is treated as being hydrogenic -- an excellent approximation here, as $^{37}\textrm{K}$ is an alkali.  
 
- 
+Unfortunately, this treatment cannot determine the fractional contribution of each orbital to the total, nor can it determine the \emph{number} of electrons likely to be removed in a single decay event.  The implications of the SOE energy spectrum to the present experiment are discussed further in Section~\ref{sec:tof_bg} 
 
-
-\note[color=jb]{JB on 2.4 SOE:
-\\
-Say what you did, with as little info as possible now. Georg is a theoretical
-chemist, so he may be very curious about this.
-\\ ... \\
-"Atomic electrons with kinetic energies 0 to 100 eV are produced as part
-of the beta decay process.
-If their energy is below a certain value, our detection process is not perturbed,
-so we provide physics about the energy spectrum here.
-\\ ... \\ 
-Levinger~\cite{Levinger}, assuming the sudden approximation,
-calculated the overlap between an electron in the initial  atom with
-an outgoing electron or an electron in  the final atom. Levinger approximated
-everything with hydrogenic wavefunctions, so his calculations become
-analytic. The collaboration has found that Levinger's formulae
-fit our measurements of the position and TOF  info of our atomic electrons,
-so they are used in our simulations 
-\\
-OR
-\\
-but the precise energy spectrum was found to be unimportant, so we used X in our
-simulations.
-\\
-whichever is true.
-\\...\\
-This is then fine. You have most of the basics down.
-}
+\note[color=bluetodo]{In the end, we used $(0.09)*(\textrm{0eV}) + (0.91)*(0.85*(\textrm{4S}) + 0.15*(\textrm{3P}))$.  But I say that in the other section.  Also, John used Eq.20 for the 4S, and Eq.24 for the 3P.}
 
 
-%Shake-off electrons:  where do they come from, and where do they go?  ~\cite{Levinger}.
-%\note[color=org]{Really, just discuss the physics of what happens to cause SOEs to be a thing.  Talk about *our* SOE spectrum in some other chapter later.  Should this go in the atomic physics chapter?  I can't decide whether it's more atomic or more nuclear.}
-
-John made some nice plots of these from the eMCP data.  I did *not* use it to make a cut on eMCP hit position in the end, despite the fact that it makes the spectrum more clean, because a lot of good events don't have full hit position information, and you lose an awful lot of statistics by making the cut.  I used this for modeling the background spectrum, but in the end it wasn't as elegant a result as I might have hoped.  Also, it's still an open question exactly which fraction of SOEs come from which atomic shell, but it doesn't change the resulting spectrum very much.
+%\note{Should I talk about the distribution of how many SOEs come off in a decay?  I have measurements of the recoil charge distribution, which is related but not really the same thing.  From a theoretical POV, I don't know how many get shaken off.  Thankfully, it doesn't matter very much in the end.}
 
 \input{figure_SOE_spectrum.tex}
 
-\note{Should I talk about the distribution of how many SOEs come off in a decay?  I have measurements of the recoil charge distribution, which is related but not really the same thing.  From a theoretical POV, I don't know how many get shaken off.  Thankfully, it doesn't matter very much in the end.
-%But then nobody will trust any of the numbers I measured (how did I do that measurement, anyway?  At this point I wouldn't even trust it...), and will want me to just use Dan's that he measured forever ago with a different set of detectors.  (where are those numbers recorded anyway?)  
-%I think I have to mention how many come off and how often at least briefly, because I use the Levinger spectrum for my background modeling.
-}
 
 
 %%%% --- * --- %%%%
