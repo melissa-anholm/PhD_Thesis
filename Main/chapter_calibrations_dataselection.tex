@@ -11,6 +11,9 @@
 \section{An Overview of Available Data}
 \label{sec:data_overview}
 \note{This section must be consolidated and de-Frankenstein-ed.}
+
+\note{Polarization measurement was conducted on a different set of data, collected in between the measurements used for $A_{\mathrm{\beta}}$ and $b_{\mathrm{Fierz}}$, and at a higher electric field, because we were unable to run both our MCP detectors simultaneously.  }
+
 Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, we ended up running only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  The data is further split up into several runsets based on when certain settings were adjusted, and the individual runsets have been treated separately for nearly all parts of the analysis.
 
 While the beta asymmetry and Fierz interference are best evaluated using the electron runs, the recoil runs are best for evaluating the polarization (a dominant uncertainty in the beta asymmetry measurement) and the cloud position.  The polarization measurement is the subject of a recent publication (see~\cite{ben_OP}), and the cloud position evaluation is discussed in more detail in Chapter~\ref{calibrations_chapter}.
@@ -37,7 +40,7 @@ As described in Chapter~\ref{section:mcps}, the science chamber features a serie
 
 %\clearpage
 %\afterpage{\clearpage}
-\FloatBarrier
+%\FloatBarrier
 \section{Preliminary Data Selection with the rMCP}
 \label{sec:rmcp_cuts}
 As described in Chapter~\ref{photoions}, the primary function of the rMCP within the context of this experiment is as a probe of the atom cloud, and it provided a critical check of the cloud's position, size, and polarization state over the course of the beamtime.  The process of cleaning, calibrating, and analyzing this data is described here.  
@@ -65,21 +68,31 @@ The next stage of rMCP data cleaning is to discard events with an aberrent set o
 \normalsize
 For a perfectly operating detector, one would expect for a collection of many measurements of \small$\text{DLA\_XSUM}$\normalsize\, and \small$\text{DLA\_XSUM}$\normalsize\, should each look like an isolated delta spike.  In practice however, our distributions had a more complex set of features.  The shapes, widths, and even positions of these distributions changed from run to run, and not all of these changes could be attributed to a known cause (e.g. a change in detector settings).  Distributions from a single run are shown in Fig.~\ref{fig:sumcuts}.  
 
-\begin{figure}[h!!tb]
+\begin{figure}[h!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/rMCP_sumcuts_447.pdf}
 	\note{Are these things *definitely* in nanoseconds?  Check!}
-	\note{This algorithm does *not* discard $10\%$ of events!}
-	\caption[Timing sums for the rMCP, run 447.]{Timing sums and associated cuts for the rMCP detector, run 447.  The `$10\%$' cuts shown simply eliminate events in which the distribution's height at that value is less than `$10\%$' of that distribution's maximum, and the `$1\%$' cuts are performed in a similar manner.  This figure shows the results after cuts on \emph{both} distributions are taken.  Only a single run is shown here because the characteristics of these spectra varied significantly over the courses of the beamtime, and not all of the changes can be attributed to a change in settings.
+%	\note{This algorithm does *not* discard $10\%$ of events!}
+	\caption[Timing sums for the rMCP, run 447.]{Timing sums and associated cuts for the rMCP detector, run 447.  The `$10\%$' cuts shown simply eliminate events in which the distribution's height at that value is less than `$10\%$' of that distribution's maximum, and the `$1\%$' cuts are performed in a similar manner.  Note that this is \emph{not} the equivalent of eliminating $10\%$ ($1\%$) of events. The above distributions each show the results within their own distribution after cuts are taken on the \emph{other} distribution.  Only a single run is shown here to avoid washing out features -- because the characteristics of these spectra varied significantly over the course of the beamtime, and not all of the changes can be attributed to a change in settings.
 	}	
 	\label{fig:sumcuts}
 \end{figure}
 
-Because the characteristics of these timing sum distributions varied from run to run, it didn't make sense to aggregate all the data before taking cuts, so any cuts had to be chosen on a run-by-run basis.  Because of the asymmetry and occasional bimodality of the distributions, it also didn't make sense to try to fit the distributions to a function such as a gaussian and then cut away some number of sigma from the fit function.  The algorithm that was used in the end was to determine the peak's maximum, then discard events from the portion of the distribution in which the distribution's height is less than $10\%$ of the maximum.  
+Because the characteristics of these timing sum distributions varied from run to run, it didn't make sense to aggregate all the data before taking cuts, so any cuts had to be chosen on a run-by-run basis.  Because of the asymmetry and occasional bimodality of the distributions, it also didn't make sense to try to fit the distributions to a function such as a gaussian and then cut away some number of sigma from the fit function.  The algorithm that was used in the end was to determine the peak's maximum, then discard events from the portion of the distribution in which the distribution's height is less than $10\%$ of the maximum.  Fig.~\ref{fig:position_with_sumcuts} shows the effect of these cuts on the measured cloud position within a single run.
+
+\begin{figure}[h!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/rMCP_xyz_comparecuts447.pdf}
+%	\note{This figure needs to be discussed in text or whatever.}
+	\caption[Cloud Position for run 447 for various rMCP timing sum cuts]{Cloud Position for run 447 for rMCP timing sum cuts as shown in Fig.~\ref{fig:sumcuts}.}	
+	\label{fig:position_with_sumcuts}
+\end{figure}
 
 %-- so all cuts on the rMCP delay line timing sums had to be taken on a run-by-run basis, and because of the asymmetry and occasional bimodality of the distributions,   
 
+\FloatBarrier  % I think this has to go away eventually.
 \section{Calibrations with the rMCP}
 \label{sec:rmcp_cals}
 A calibration mask was created for the rMCP, to eliminate any nonlinearities in the images produced.  Several months before the $\isotope[37]{K}$ beamtime was to occur, the mask was attached in front of the rMCP, and a test of the delay lines' ability to produce an image was performed using an alpha source to illuminate the full surface of the detector.~\aside{I *think* we used an alpha source?  Not sure what else we could have done, but I better check this!}  The mask was later removed in advance of the beamtime, in order to preserve the highest possible surface area, and calibrations were performed using the older mask data and subsequently applied to the online $\isotope[37]{K}$ data (see Fig.~\ref{fig:rmcp_calibration}).
@@ -122,6 +135,10 @@ With the rMCP detector calibrated (Section~\ref{sec:rmcp_cals}), several types o
 
 This class of data (events with both an rMCP hit and a photoionization laser hit in coincidence) can be used to measure cloud polarization, and the methodology and results of that process as it applies to this particular experiment are discussed in a recent publication~\cite{ben_OP}.  We are also interested in the cloud's position and size during the periods of time where decay data is collected, since this represents a potential systematic effect that must be accounted for within our models.  The latter will be the primary focus of this section.  
 
+The first step in such a measurement is to try to eliminate as much background as possible.  We have already required that every event considered here must include both an rMCP hit and a photoionization laser pulse.  As we are interested in a measurement of trap position, it makes sense to also require a \emph{complete} set of position data recorded on the rMCP's delay lines.   This is further trimmed by a `$10\%$ cut' on the timing sums, as described in Sec.~\ref{sec:rmcp_cuts}.  Finally, any event including a scintillator hit is rejected, as these events have an increased likelihood for a recoiling ion to be detected on the rMCP instead of- or in addition to the photoion we expect.  
+
+%may have also produced a recoiling ion which could be detected on the rMCP instead of- or in addition to the photoion we expect.  
+%To that end, we immediately discard any event in which a scintillator recorded a hit 
 
 \begin{figure}[h!tb]
 	\centering
@@ -133,9 +150,7 @@ This class of data (events with both an rMCP hit and a photoionization laser hit
 \end{figure}
 
 %
-
 \note{Trap position -- Measured using the same dataset that was used to quantify the polarization.  The trap drifts slightly over the course of our data collection.  Describe the rMCP calibration needed to extract this info.}
-\note{Polarization measurement was conducted on a different set of data, collected in between the measurements used for $A_{\mathrm{\beta}}$ and $b_{\mathrm{Fierz}}$, and at a higher electric field, because we were unable to run both our MCP detectors simultaneously.  }
 
 Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, and I'll immediately reference it right now, as Table~\ref{table:cloudpositions}:
 
@@ -155,14 +170,6 @@ Without further ado, I'm just going to put in several pictures.  Right here, rig
 	{Figures/rMCP_xyz_vs_acmottime.png}
 	\note{This figure needs to be discussed in text or whatever.}
 	\caption[Photoion Hit Positions at 535 V/cm, as a function of AC-MOT Time]{Photoion Hit Positions at 535 V/cm, as a function of AC-MOT Time}	
-%	\label{fig:vposition_by_run_rmcp}
-\end{figure}
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/rMCP_xyz_comparecuts447.pdf}
-	\note{This figure needs to be discussed in text or whatever.}
-	\caption[A projection along all three axes for run 447, with various cuts on the rMCP delay line timing sum.]{A projection along all three axes for run 447, with various cuts on the rMCP delay line timing sum.}	
 %	\label{fig:vposition_by_run_rmcp}
 \end{figure}
 
@@ -192,11 +199,6 @@ Without further ado, I'm just going to put in several pictures.  Right here, rig
 	\label{fig:vposition_by_run_rmcp}
 \end{figure}
 
-\subsection{Measurements with the eMCP}
-	I can describe the eMCP calibration here, even though it mostly wasn't implemented by me.  It is tangentially relevant to data selection and background estimation by providing an experimental energy spectrum for shake-off electrons.  It's actually a pretty neat algorithm that I basically wasn't involved with.
-	\note[color=jb]{JB:  eMCP.  You need to describe the timing information obtained.  You also need a statement of whether or not you used the position information in your cuts.}
-
-
 
 
 %%% !TEX root = ../thesis_main.tex
@@ -205,7 +207,7 @@ Without further ado, I'm just going to put in several pictures.  Right here, rig
 %%%
 %%%%%% --- * --- %%%%	
 %%\section{Data Selection and Preliminary Cuts Mini-Intro from John}
-
+\FloatBarrier
 \section{Data Selection and Preliminary Cuts}
 \label{sec:preliminary_cuts}
 \note{We now consider how to clean up our data.  We make some fairly obvious, intuitive cuts, and those are described here.  Later, we'll make less intuitively obvious cuts.}
@@ -295,6 +297,12 @@ We also elect to use only events where a beta hit the DSSD within a $15.5\,$mm r
 % % % % %%% % %%% % % % %
 \section{Further Cuts Using the eMCP}
 \label{section:emcp_cuts}
+\note[color=jb]{MJA:  I can describe the eMCP calibration here, even though it mostly wasn't implemented by me.  It is tangentially relevant to data selection and background estimation by providing an experimental energy spectrum for shake-off electrons.  It's actually a pretty neat algorithm that I basically wasn't involved with.
+\\...\\
+JB:  eMCP.  You need to describe the timing information obtained.  You also need a statement of whether or not you used the position information in your cuts.
+\\...\\
+MJA:  Wait.  So have I done that yet in this section?}
+
 \note[color=org]{I described the HEX-75 somewhere in a previous chapter, right??}
 \note[color=org]{I dislike how this section is organized..  should discuss the cut we *didn't* make at the end.}
 \note[color=org]{Really, should title this section according to the LE thing that is actually its primary topic.  In practice, the change only gets used on the SOE TOF cuts though.}
@@ -362,6 +370,8 @@ With the SOE TOF spectra cleaned up, a cut can be taken to reduce the fraction o
 	\caption[Experimental Scintillator Spectra]{Experimental Scintillator Spectra, for both detectors in both polarization states.  These spectra are what remain after all cuts have been taken.  All runsets are included.}	
 	\label{fig:scintspectra}
 \end{figure}
+
+
 
 
 
