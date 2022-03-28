@@ -13,7 +13,7 @@ Fenker, B., Behr, J.~A., Melconian, D., Anderson, R. M.~A., Anholm, M., Ashery,
   optically pumped $^{37}\textrm{K}$}, New Journal of Physics, Vol.~18, No.~7,
   pp.~073028, 2016.
 
-\bibitem{falkowski2021}
+\bibitem{Falkowski2021}
 Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
   \textit{Comprehensive analysis of beta decays within and beyond the Standard
   Model}, Journal of High Energy Physics, Vol.~2021, No.~4, pp.~1--36, 2021.
@@ -27,10 +27,6 @@ Hong, R., Sternberg, M.~G. {\mdseries and} Garcia, A., \textit{Helicity and
 Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
   Tests of Time Reversal Invariance in Beta Decay}, Phys. Rev., Vol.~106,
   pp.~517--521, May 1957.
-
-\bibitem{Levinger}
-Levinger, J.~S., \textit{Effects of Radioactive Disintegrations on Inner
-  Electrons of the Atom}, Phys. Rev., Vol.~90, pp.~11--25, Apr 1953.
 
 \bibitem{NeutronbFierz_March2020}
 Sun, X., Adamek, E., Allgeier, B., Bagdasarova, Y., Berguno, D.~B., Blatnik,
@@ -58,6 +54,10 @@ Saul, H., Roick, C., Abele, H., Mest, H., Klopf, M., Petukhov, A.~K., Soldner,
 Harvey, M. {\mdseries and} Murray, A.~J., \textit{Cold Atom Trap with Zero
   Residual Magnetic Field: The AC Magneto-Optical Trap}, Phys. Rev. Lett.,
   Vol.~101, pp.~173201, Oct 2008.
+
+\bibitem{Levinger}
+Levinger, J.~S., \textit{Effects of Radioactive Disintegrations on Inner
+  Electrons of the Atom}, Phys. Rev., Vol.~90, pp.~11--25, Apr 1953.
 
 \bibitem{deShalit1963}
 de~Shalit, A. {\mdseries and} Talmi, I., Nuclear Shell Theory.
@@ -119,6 +119,10 @@ Fenker, B., Gorelov, A., Melconian, D., Behr, J.~A., Anholm, M., Ashery, D.,
 Audi, G., Wapstra, A. {\mdseries and} Thibault, C., \textit{The {AME2003}
   Atomic Mass Evaluation}, Nuclear Physics A, Vol.~729, No.~1, pp.~337 -- 676,
   2003.
+
+\bibitem{ben_thesis}
+Fenker, B.~B., Precise measurement of the $\beta$-asymmetry in the decay of
+  magneto-optically trapped, spin-polarized 37K, Ph.D. thesis, 2016.
 
 \bibitem{clifford}
 Clifford, E., Hagberg, E., Koslowsy, V., Hardy, J., Schmeing, H. {\mdseries
