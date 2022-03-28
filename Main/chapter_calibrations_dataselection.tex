@@ -295,7 +295,8 @@ We also elect to use only events where a beta hit the DSSD within a $15.5\,$mm r
 
 
 % % % % %%% % %%% % % % %
-\section{Further Cuts Using the eMCP}
+%\section{Further Cuts Using the eMCP}
+\section{Timing Improvements with the Leading Edge and Scintillator Walk Correction}
 \label{section:emcp_cuts}
 \note[color=jb]{MJA:  I can describe the eMCP calibration here, even though it mostly wasn't implemented by me.  It is tangentially relevant to data selection and background estimation by providing an experimental energy spectrum for shake-off electrons.  It's actually a pretty neat algorithm that I basically wasn't involved with.
 \\...\\
@@ -313,7 +314,8 @@ The eMCP features a set of three delay lines, intended to be used to record the 
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/eMCP_position.pdf}
-	\note{This picture is `slow'.  Need to re-save it as a png.}
+%	\note{This picture is `slow'.  Need to re-save it as a png.}
+	\note{Is this picture even useful here?}
 	\caption{Position as measured on the eMCP, after some data cleaning.}	
 	\label{fig:emcp_position}
 \end{figure}
@@ -342,7 +344,7 @@ Several years after the data was initially collected, a problem was discovered w
 	\label{fig:LE_TE}
 \end{figure}
 
-The place where this change between the TE and LE timestamps had the biggest impact on the analysis is in the shake-off electron time-of-flight spectra, on which a cut must eventually be taken. Although this problem was not discovered in time to be used in the previous measurement of $\Abeta$ using this same data~\cite{ben_Abeta}, it likely would have had a negligible effect on the final result, because the SOE TOF cut that was used there was comparatively loose, and the evaluation of the background that remained was not a dominant systematic effect. \aside[color=org]{This goes in that one appendix, if I haven't already put it there.}
+The place where this change between the TE and LE timestamps had the biggest impact on the analysis is in the shake-off electron time-of-flight spectra, on which a cut must eventually be taken. Although this problem was not discovered in time to be used in the previous measurement of $\Abeta$ using this same data~\cite{ben_Abeta}, it likely would have had a negligible effect on the final result, because the SOE TOF cut that was used there was comparatively loose, and the evaluation of the background that remained was not a dominant systematic effect. \aside[color=org]{This goes in that one appendix, if I haven't already put it there.  ...Also, is this even fucking true?!?}
 
 With the data reprocessed using the leading edge for timestamps, I wanted to eliminate as much background as possible from the SOE TOF spectrum.  With this goal in mind, the next step was to correct the scintillator timing for its low energy `walk' (see Fig.~\ref{fig:WalkAdjust}).  A quartic polynomial was fit to each of the 2D timing vs energy spectra (the top and bottom detectors were treated separately), and the result was used to produce a `straightened' SOE TOF spectrum with respect to measured scintillator energy, and as expected, the resulting SOE TOF spectrum was a bit more sharply peaked.  
 
