@@ -13,15 +13,19 @@ Fenker, B., Behr, J.~A., Melconian, D., Anderson, R. M.~A., Anholm, M., Ashery,
   optically pumped $^{37}\textrm{K}$}, New Journal of Physics, Vol.~18, No.~7,
   pp.~073028, 2016.
 
-\bibitem{Falkowski2021}
-Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
-  \textit{Comprehensive analysis of beta decays within and beyond the Standard
-  Model}, Journal of High Energy Physics, Vol.~2021, No.~4, pp.~1--36, 2021.
-
 \bibitem{hong_sternberg_garcia}
 Hong, R., Sternberg, M.~G. {\mdseries and} Garcia, A., \textit{Helicity and
   nuclear $\beta$ decay correlations}, American Journal of Physics, Vol.~85,
   No.~1, pp.~45--53, 2017.
+
+\bibitem{wu}
+Wu, C.~S., Ambler, E., Hayward, R.~W., Hoppes, D.~D. {\mdseries and} Hudson,
+  R.~P., \textit{Experimental Test of Parity Conservation in Beta Decay}, Phys.
+  Rev., Vol.~105, pp.~1413--1415, Feb 1957.
+
+\bibitem{LeeYang}
+Lee, T.-D. {\mdseries and} Yang, C.-N., \textit{Question of parity conservation
+  in weak interactions}, Physical Review, Vol.~104, No.~1, pp.~254, 1956.
 
 \bibitem{jtw}
 Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
@@ -60,7 +64,13 @@ Levinger, J.~S., \textit{Effects of Radioactive Disintegrations on Inner
   Electrons of the Atom}, Phys. Rev., Vol.~90, pp.~11--25, Apr 1953.
 
 \bibitem{deShalit1963}
-de~Shalit, A. {\mdseries and} Talmi, I., Nuclear Shell Theory.
+de~Shalit, A. {\mdseries and} Talmi, I., Nuclear Shell Theory, Nuclear Shell
+  Theory, Academic Press, 1963.
+
+\bibitem{Falkowski2021}
+Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
+  \textit{Comprehensive analysis of beta decays within and beyond the Standard
+  Model}, Journal of High Energy Physics, Vol.~2021, No.~4, pp.~1--36, 2021.
 
 \bibitem{krane}
 Krane, K.~S., Introductory Nuclear Physics, Wiley, New York, 1988.
