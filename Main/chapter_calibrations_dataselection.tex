@@ -10,32 +10,38 @@
 \note{Intro blurb goes here?}
 \section{An Overview of Available Data}
 \label{sec:data_overview}
-\note{This section must be consolidated and de-Frankenstein-ed.}
+%\note{This section must be consolidated and de-Frankenstein-ed.}
+%\note{Polarization measurement was conducted on a different set of data, collected in between the measurements used for $A_{\mathrm{\beta}}$ and $b_{\mathrm{Fierz}}$, and at a higher electric field, because we were unable to run both our MCP detectors simultaneously.  }
+Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, it was necessary to run only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector (see Tables~\ref{table:runlist_electrons} and~\ref{table:runlist_recoils}).  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  The data is further split up into several runsets based on when certain settings were adjusted, and the individual runsets have been treated separately for nearly all parts of the analysis.  
 
-\note{Polarization measurement was conducted on a different set of data, collected in between the measurements used for $A_{\mathrm{\beta}}$ and $b_{\mathrm{Fierz}}$, and at a higher electric field, because we were unable to run both our MCP detectors simultaneously.  }
+\input{table_runlist_electrons}
+\input{table_runlist_recoils}
 
-Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, we ended up running only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  The data is further split up into several runsets based on when certain settings were adjusted, and the individual runsets have been treated separately for nearly all parts of the analysis.
+While the beta asymmetry and Fierz interference are best evaluated using the electron runs, the polarization (a dominant uncertainty in the beta asymmetry measurement) and cloud position are best evaluated with recoil runs.  The polarization measurement is the subject of a recent publication (see~\cite{ben_OP}), and the evaluation of cloud position is discussed in Section~\ref{sec:cloud_calibration}.  
+%Because the recoil and electron runs are completely separate, there is no danger of statistical double-counting within the polarization and position measurements.  
+The recoil runs may also be analyzed in the future as part of a search for right-handed Weak interactions (described further in Chapter~\ref{section_rslow}).
 
-While the beta asymmetry and Fierz interference are best evaluated using the electron runs, the recoil runs are best for evaluating the polarization (a dominant uncertainty in the beta asymmetry measurement) and the cloud position.  The polarization measurement is the subject of a recent publication (see~\cite{ben_OP}), and the cloud position evaluation is discussed in more detail in Chapter~\ref{calibrations_chapter}.
+In considering Tables~\ref{table:runlist_electrons} and~\ref{table:runlist_recoils}, we note that Runsets EA and RA were neglected completely during analysis after it was determined that one scintillator had an improperly set hardware threshold such that lower energy betas weren't being detected at all.  Additionally, there was a QDC module failure before Run 450, resulting in an abrupt change in calibration for the two scintillators.  The electric field is larger during recoil runs in an attempt to maximize the fraction of nuclear recoils collected, as well as the separation in TOF between different charge states.  For electron runs, although not all SOEs were collected, the lower electric fields were preferred in order to decrease background events and the sparking incidents.   Although the final analysis uses only the eMCP runs directly, the result could not have been obtained with the same degree of precision had the rMCP data not been present.  
+
+%Runset EA was discarded completely due to problems with hardware threshold settings.  There was a QDC module failure before Run 450, so it and all subsequent runs were performed using a different module, and as a result the scintillator calibrations changed slightly at this time.
 
 %, and each of these runsets contains both electron and recoil runs.  
 %These runsets were then treated separately for nearly all parts of the analysis.  
-In particular, Data Set A was neglected completely during analysis after it was determined that one scintillator had an improperly set hardware threshold such that lower energy betas weren't being detected at all.  Additionally, there was a QDC module failure between Runsets B and C, resulting in an abrupt change in calibration for the two scintillators.  
-\note{`The observant reader may find it curious that the listed runsets start at ``B'' and continue alphabetically.  There was initially a ``Runset A'' collected as well, however it was determined later that this data could not be salvaged for use in the final analysis because one of the scinitillators had its hardware threshold set above the compton peak, and without that reference point an accurate calibration could not be performed.'}
-\note{Reference the two tables in text.  re-phrase the stupid thing about runset names.}
-%
+
+%Runsets A were not used for analysis because it
+%In particular, Data Set A was neglected completely during analysis after it was determined that one scintillator had an improperly set hardware threshold such that lower energy betas weren't being detected at all.  Additionally, there was a QDC module failure between Runsets B and C, resulting in an abrupt change in calibration for the two scintillators. 
+ 
+%\note{`The observant reader may find it curious that the listed runsets start at ``B'' and continue alphabetically.  There was initially a ``Runset A'' collected as well, however it was determined later that this data could not be salvaged for use in the final analysis because one of the scinitillators had its hardware threshold set above the compton peak, and without that reference point an accurate calibration could not be performed.'}
 
 %\note{Also, the background was too noisy in Set A I think.  Also, pretty sure there isn't really that much data in Set A at all.  Also-also, Set A has E=66.7, so can't use it for more stats on the other backgrounds. ... Maybe I should just look up what the deal even was with Set A, since I don't really remember.} 
 
 %\note{What did I change between Runsets B and C?  Between Runsets C and D?  ...OP time, yes, but also and one point a PMT(?) (eta:  it was a QDC) blew out and we replaced it, so then the scintillator calibration was a bit different afterward.  Anyway, I should maybe just make a goddamn table.  Table goes here.}
-
-\input{table_runlist_electrons}
-\input{table_runlist_recoils}
 %
 
-\note{begin imported chunk.}
-As described in Chapter~\ref{section:mcps}, the science chamber features a series of electrostatic hoops to maintain an electric field to direct positively and negatively charged particles into MCP detectors on opposing sides of the chamber, but it was only possible to operate one MCP detector at a time, so it was necessary to alternate which detector was in use several times between runs so as to be able to collect both types of data.  Although the final analysis uses only the eMCP runs directly, the result could not have been obtained with the same degree of precision had the rMCP data not been present.  
-\note{end imported paragraph.}
+%%%%%%%%%\note{imported chunk:
+%%%%%%%%%\\
+%%%%%%%%%As described in Chapter~\ref{section:mcps}, the science chamber features a series of electrostatic hoops to maintain an electric field to direct positively and negatively charged particles into MCP detectors on opposing sides of the chamber, but it was only possible to operate one MCP detector at a time, so it was necessary to alternate which detector was in use several times between runs so as to be able to collect both types of data.  Although the final analysis uses only the eMCP runs directly, the result could not have been obtained with the same degree of precision had the rMCP data not been present.  
+%%%%%%%%%}
 
 
 %\clearpage
@@ -54,9 +60,9 @@ The electron shower continues past the first delay line to hit the delay line im
 
 This understanding of how delay lines work informs the initial stages of data processing for rMCP events.  To obtain the cleanest possible rMCP data, the first step is to simply throw out every event which doesn't have a complete set of five timestamps associated with it -- even though it would still be possible to make good use of many events which have only partial data.  Even though many ``real'' rMCP hit events came in under threshold in one or more channels, detector noise was plentiful, 
 %the detector as a whole was still fairly noisy -- 
-and that noise varied in both quality and quantity over the course of the beamtime.  Therefore, it was decided to be more important for the rMCP data to be as clean as possible, despite the fact that its statistical power would be reduced. (Note that this step is \emph{not} done on the eMCP side -- more on that in Section~\ref{sec:emcp})~\aside{Fix the link.}  
+and that noise varied in both quality and quantity over the course of the beamtime.  Therefore, it was decided to be more important for the rMCP data to be as clean as possible, despite the fact that its statistical power would be reduced. (Note that this step is \emph{not} done on the eMCP side -- more on that in Section~\ref{section:emcp_cuts})~\aside[color=org]{OK, I have to *actually* discuss this a bit somewhere though.  }  
 
-\note{At this stage I don't *really* do the thing where I throw out stuff that doesn't have a photodiode or scintillator hit in coincidence.  I think that comes later...}
+%\note{At this stage I don't *really* do the thing where I throw out stuff that doesn't have a photodiode or scintillator hit in coincidence.  I think that comes later...}
 
 The next stage of rMCP data cleaning is to discard events with an aberrent set of timestamps.  A delay line is essentially just a long wire, and the time it takes to propagate a signal from one end of the wire to the other is fixed.  This means that no matter where along the delay line a pulse is generated, if one adds rather than subtracts the timestamps at which the pulse arrives at each of the two ends, that sum should be constant after accounting for the time of the original hit -- which we can determine from the timestamp associated with the MCP.  To that end, we construct delay line sums for the ``x'' and ``z'' delay lines,
 \small
