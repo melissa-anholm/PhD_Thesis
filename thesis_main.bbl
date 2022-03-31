@@ -13,11 +13,6 @@ Fenker, B., Behr, J.~A., Melconian, D., Anderson, R. M.~A., Anholm, M., Ashery,
   optically pumped $^{37}\textrm{K}$}, New Journal of Physics, Vol.~18, No.~7,
   pp.~073028, 2016.
 
-\bibitem{hong_sternberg_garcia}
-Hong, R., Sternberg, M.~G. {\mdseries and} Garcia, A., \textit{Helicity and
-  nuclear $\beta$ decay correlations}, American Journal of Physics, Vol.~85,
-  No.~1, pp.~45--53, 2017.
-
 \bibitem{wu}
 Wu, C.~S., Ambler, E., Hayward, R.~W., Hoppes, D.~D. {\mdseries and} Hudson,
   R.~P., \textit{Experimental Test of Parity Conservation in Beta Decay}, Phys.
@@ -26,6 +21,11 @@ Wu, C.~S., Ambler, E., Hayward, R.~W., Hoppes, D.~D. {\mdseries and} Hudson,
 \bibitem{LeeYang}
 Lee, T.-D. {\mdseries and} Yang, C.-N., \textit{Question of parity conservation
   in weak interactions}, Physical Review, Vol.~104, No.~1, pp.~254, 1956.
+
+\bibitem{hong_sternberg_garcia}
+Hong, R., Sternberg, M.~G. {\mdseries and} Garcia, A., \textit{Helicity and
+  nuclear $\beta$ decay correlations}, American Journal of Physics, Vol.~85,
+  No.~1, pp.~45--53, 2017.
 
 \bibitem{jtw}
 Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
@@ -133,6 +133,10 @@ Audi, G., Wapstra, A. {\mdseries and} Thibault, C., \textit{The {AME2003}
 \bibitem{ben_thesis}
 Fenker, B.~B., Precise measurement of the $\beta$-asymmetry in the decay of
   magneto-optically trapped, spin-polarized 37K, Ph.D. thesis, 2016.
+
+\bibitem{spencer_thesis}
+Behling, R.~S., Measurement of the Standard Model Beta Asymmetry Parameter,
+  \ensuremath{\beta}, in 37K, Ph.D. thesis, 2015.
 
 \bibitem{clifford}
 Clifford, E., Hagberg, E., Koslowsy, V., Hardy, J., Schmeing, H. {\mdseries

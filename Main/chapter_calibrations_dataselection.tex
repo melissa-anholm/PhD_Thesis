@@ -101,11 +101,23 @@ Because the characteristics of these timing sum distributions varied from run to
 \FloatBarrier  % I think this has to go away eventually.
 \section{Calibrations with the rMCP}
 \label{sec:rmcp_cals}
-A calibration mask was created for the rMCP, to eliminate any nonlinearities in the images produced.  Several months before the $\isotope[37]{K}$ beamtime was to occur, the mask was attached in front of the rMCP, and a test of the delay lines' ability to produce an image was performed using an alpha source to illuminate the full surface of the detector.~\aside{I *think* we used an alpha source?  Not sure what else we could have done, but I better check this!}  The mask was later removed in advance of the beamtime, in order to preserve the highest possible surface area, and calibrations were performed using the older mask data and subsequently applied to the online $\isotope[37]{K}$ data (see Fig.~\ref{fig:rmcp_calibration}).
+A calibration mask was created for the rMCP, to eliminate any nonlinearities in the images produced.  Several months before the $\isotope[37]{K}$ beamtime was to occur, the mask was attached in front of the rMCP, and a test of the delay lines' ability to produce an image was performed using an alpha source to illuminate the full surface of the detector.~\aside{I *think* we used an alpha source?  Not sure what else we could have done, but I better check this!}  The mask was later removed in advance of the beamtime, in order to preserve the highest possible surface area, and calibrations were performed using the older mask data and subsequently applied to the online $\isotope[37]{K}$ data.% (see Fig.~\ref{fig:rmcp_calibration}).
 
-The calibration was performed over a number of steps.  The data was given a preliminary rough calibration, performed on each delay line separately, which simply involved taking the difference in pulse arrival times between each end of the delay line, scaling the result by a factor chosen to get the image to be the approximate correct size, and then subtracting an offset to center the image.  
+The calibration to the offline data with a visible mask was performed over a number of steps.  The data was given a preliminary rough calibration, performed on each delay line separately, which simply involved taking the difference in pulse arrival times between each end of the delay line, scaling the result by a factor chosen to get the image to be the approximate correct size, and then subtracting an offset to center the image.  
 
-With the preliminary calibration providing a visible image to work with, further adjustments were performed.  A rotation was applied, followed by a more precise centering algorithm. Following this, a linear stretching algorithm was applied to adjust the height and width of each row and column individually, while aligning the grid lines to their known position on the detector.  Finally, an additional radial stretch was applied to only the outer areas of the image.  This last adjustment can be justified by noting that it's expected for the outer parts of the image to be more distorted, and indeed the outer areas of the image did appear more `squished' relative to the rest.  See Fig.~\ref{fig:rmcp_calibration}.  
+With the preliminary calibration providing a visible image to work with, the `$10\%$' cuts as described in Section~\ref{sec:rmcp_cuts} were applied, significantly sharpening the visual mask lines and overall image border. Next, a small rotation was applied, followed by a more precise centering algorithm. Following this, a linear stretching algorithm was applied to adjust the height and width of each row and column individually, while aligning the grid lines to their known position on the detector.  Finally, an additional radial stretch was applied to only the outer areas of the image.  This last adjustment can be justified by noting that it's expected for the outer parts of the detector to produce a more distorted image, and that appeared to be the case here.  See Fig.~\ref{fig:rmcp_calibration}.
+%indeed the outer areas of the image did appear more `squished' relative to the rest.  See Fig.~\ref{fig:rmcp_calibration}.  
+
+When the online rMCP data was eventually collected, it was found that the rMCP image appeared offset by several centimeters relative to the previous calibration, which necessarily affected the location of the timing sum peaks (similar to those shown in Fig.~\ref{fig:sumcuts}).  The most likely cause for this is a change in cable lengths between the readout and data acquisition in the months between the calibration and online data collection, but it meant a new set of `$10\%$' cuts needed to be established for the online data, and also cast some doubt on the validity of the established calibrations.  In the end, these cuts were established on a run-by-run basis due to the varying shape of the timing sum peaks.  
+
+%In the end, a new set of `$10\%$' cuts was established for each individual run, since the peaks' characteristics seemed to change over time.  
+Our ability to confidently accurately apply the old offline calibration to the new online data depended on our ability to center the image correctly, as different parts of the image are stretched and squeezed differently.  The appearance of the plate edge--the only remaining indicator of the quality of the centering or overall calibration--changed shape slightly from run to run.  Despite this, images from the online data were all summed together after applying run-by-run cuts, and the resulting image was centered by eye.  
+
+The centering was performed iteratively, because the subsequent steps in the calibration will distort the image differently depending on how accurately it was centered beforehand.  These subsequent steps in which the image is stretched and squished will also change the apparent centering of the overall image.  Calibrated and uncalibrated images are shown in Fig.~\ref{fig:rmcp_calibration} for both offline and online data.
+
+%it's necessary to perform the subsequent steps in the calibration 
+%Therefore, a new offset had to be estimated by eye, then entered into the correct step in the calibration \emph{before} the stretching occurred.  Since the stretching algorithm itself changed the apparent centering too, this was an interative process.  
+
 \begin{figure}[h!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
@@ -114,11 +126,24 @@ With the preliminary calibration providing a visible image to work with, further
 	\label{fig:rmcp_calibration}
 \end{figure}
 
-When the online rMCP data was eventually collected, it was found that the rMCP image appeared offset by several centimeters relative to the previous calibration.  Therefore, a new offset had to be estimated by eye, then entered into the correct step in the calibration before the stretching occurred.  Since the stretching algorithm itself changed the apparent centering too, this was an interative process.  The most likely cause for this is a change in cable lengths between the readout and data acquisition in the months between the calibration and online data collection.
+The lower plots in Fig.~\ref{fig:rmcp_calibration} show an unfortunate pattern of vertical stripes across the full surface of the rMCP.  These stripes persisted over many (but not all) of the online runs.  They can still be clearly seen in Fig.~\ref{fig:photoionhits_2D}, which is a sum of all Runset RB's photoion events. The cause for these stripes could not be determined, and they could not be removed in post-processing analysis.  
+
+\begin{figure}[h!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/rMCP_PI_2D_535.png}
+	\note{You know, I think this one is flipped relative to the previous image.  Bleh.  Probably this one is the correct one, but who wants to deal with that?  Also .... did we switch MCP plates between calibration and the run?  I think possibly we did!  I'll have to ask the eLog.}
+	\note{Does this thing even have a TOF cut?}
+	\caption[Photoion Hit Positions in 2D]{Photoion Hit Positions in 2D.  This is the entirety of the good photoion data taken at 535 V/cm.  The central bright spot is an image of the atom cloud arising from photoionization events of unpolarized atoms; the rest is background.  Vertical stripes of indeterminate cause can be seen across the face of the image -- it has not been possible to eliminate them in analysis. %, and it is unclear what result they may have with regard to estimates of the average trap position and size.
+	}	
+	\label{fig:photoionhits_2D}
+\end{figure}
+
+
 
 \note{It is worth mentioning that the mask calibration data was collected without the presence of the magnetic fields involved in trapping and optical pumping, but these were of course present in the online data to which it was being compared.  Since a magnetic field can change the trajectory of a charged particle, one might suspect that there could be some effect on the resulting image.  There are two stages at which this might occur:  while the ion is accelerating through the electric field within the experimental chamber before impacting the rMCP, and while the electron shower is emerging from the back of the MCP stack before it is incident on the delay lines.  
 ...
-But also, I really don't want to get into this, otherwise somebody will ask me to quantify the size of the effect.  Turns out:  it's tiny.}
+But also, I really don't want to get into this, otherwise somebody will ask me to quantify the size of the effect.  Turns out:  it's tiny, but it will be really annoying to demonstrate that.}
 
 
 %The calibration involved:
@@ -135,31 +160,33 @@ But also, I really don't want to get into this, otherwise somebody will ask me t
 
 %These calibrations are done during AC-MOT time (wait, is that even true?  I don't think so...), and we're actually interested in the rMCP data taken during OP time.  Can I find pictures to estimate the size of the change resulting from the magnetic field?  In any case, the change is pretty small.  
 
+\FloatBarrier
 \section{Measurements of the Atom Cloud}
 \label{sec:cloud_calibration}
 With the rMCP detector calibrated (Section~\ref{sec:rmcp_cals}), several types of data may be extracted.  It is possible to extract the hit positions and times-of-flight for the incident nuclear recoils, and an analysis of such data could be used to perform a test of right-handed currents within the nuclear weak force, as discussed in Chapter~\ref{section_rslow}.  However, we will focus here on what may be learned about the \emph{atom cloud} from rMCP events in coincidence with the photoionization laser.~\aside[color=org]{Also... does the camera data go in this section??}  
 
 This class of data (events with both an rMCP hit and a photoionization laser hit in coincidence) can be used to measure cloud polarization, and the methodology and results of that process as it applies to this particular experiment are discussed in a recent publication~\cite{ben_OP}.  We are also interested in the cloud's position and size during the periods of time where decay data is collected, since this represents a potential systematic effect that must be accounted for within our models.  The latter will be the primary focus of this section.  
 
-The first step in such a measurement is to try to eliminate as much background as possible.  We have already required that every event considered here must include both an rMCP hit and a photoionization laser pulse.  As we are interested in a measurement of trap position, it makes sense to also require a \emph{complete} set of position data recorded on the rMCP's delay lines.   This is further trimmed by a `$10\%$ cut' on the timing sums, as described in Sec.~\ref{sec:rmcp_cuts}.  Finally, any event including a scintillator hit is rejected, as these events have an increased likelihood for a recoiling ion to be detected on the rMCP instead of- or in addition to the photoion we expect.  
+The first step in such a measurement is to try to eliminate as much background as possible.  We have already required that every event considered here must include both an rMCP hit and a photoionization laser pulse.  As we are interested in measurements of trap position, it makes sense to also require a \emph{complete} set of position data recorded on the rMCP's delay lines.   This is further trimmed by a `$10\%$ cut' on the timing sums, as described in Sec.~\ref{sec:rmcp_cuts}.  Any event including a scintillator hit is rejected, as these events have an increased likelihood for a recoiling ion to be detected on the rMCP instead of- or in addition to the photoion we expect (It is at this stage of the process that Fig.~\ref{fig:photoionhits_2D} is created.).  Finally, some fairly loose cuts are applied about the central x- and z-positions, as well as the ion's time of flight (measured with respect to the arrival of a photoionization laser pulse).
 
-%may have also produced a recoiling ion which could be detected on the rMCP instead of- or in addition to the photoion we expect.  
-%To that end, we immediately discard any event in which a scintillator recorded a hit 
+With these basic cuts performed, the cloud position and size must be measured.  In particular, we are interested in measurements of the cloud \emph{during the time when it is considered to be polarized} -- however the great majority of photoionization events occur when the cloud is \emph{not} polarized.  We plot the projection of the cloud's position on the x- and z-axes, and its TOF (indicative of position along the y-axis) as a function of `AC-MOT Time' in Fig.~\ref{fig:position_v_acmottime_3axes}.
 
 \begin{figure}[h!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
-	{Figures/rMCP_PI_2D_535.png}
-	\note{This figure needs to be discussed in text or whatever.  Does this thing even have a TOF cut?}
-	\caption[Photoion Hit Positions in 2D]{Photoion Hit Positions in 2D.  This is the entirety of the good photoion data taken at 535 V/cm.  Vertical stripes of indeterminate cause can be seen across the face of the image -- it has not been possible to eliminate them in analysis, and it is unclear what result they may have with regard to estimates of the average trap position.}	
-	\label{fig:photoionhits_2D}
+	{Figures/rMCP_xyz_vs_acmottime.png}
+%	\note{This figure needs to be discussed in text or whatever.}
+	\caption[Photoion Hit Positions at 535 V/cm, as a function of AC-MOT Time]{Projections of Photoion x- and z- Hit Positions and TOF at 535 V/cm, as a function of time since the start of the last AC-MOT cycle.  The photoionization laser only acts on excited atomic states, which are readily available during the operation of the MOT.  When the MOT is shut off, the atoms quickly de-excite.  At the start of optical pumping 300$\,\mu$s later, there is a short burst of photoions due to the atoms being temporarily placed into an excited state as part of the optical pumping process.  The photoion burst falls away rapidly as atoms are optically pumped into the stretched state and can no longer be excited by the optical pumping laser.}	
+	\label{fig:position_v_acmottime_3axes}
 \end{figure}
+\FloatBarrier %%% this will have to go.
 
-%
+%With these basic cuts performed, the 
+%may have also produced a recoiling ion which could be detected on the rMCP instead of- or in addition to the photoion we expect.  
+%To that end, we immediately discard any event in which a scintillator recorded a hit 
+
+%Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, and I'll immediately reference it right now, as Table~\ref{table:cloudpositions}:
 \note{Trap position -- Measured using the same dataset that was used to quantify the polarization.  The trap drifts slightly over the course of our data collection.  Describe the rMCP calibration needed to extract this info.}
-
-Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, and I'll immediately reference it right now, as Table~\ref{table:cloudpositions}:
-
 \input{table_cloudpositions}
 
 
@@ -169,15 +196,8 @@ Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, a
 
 
 %I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
-Without further ado, I'm just going to put in several pictures.  Right here, right now.  They're likely to *actually* show up on subsequent pages mixed in with the other content.  I'll have to fix that at some point.
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/rMCP_xyz_vs_acmottime.png}
-	\note{This figure needs to be discussed in text or whatever.}
-	\caption[Photoion Hit Positions at 535 V/cm, as a function of AC-MOT Time]{Photoion Hit Positions at 535 V/cm, as a function of AC-MOT Time}	
-%	\label{fig:vposition_by_run_rmcp}
-\end{figure}
+%Without further ado, I'm just going to put in several pictures.  Right here, right now.  They're likely to *actually* show up on subsequent pages mixed in with the other content.  I'll have to fix that at some point.
+
 
 
 \begin{figure}[h!!t]
