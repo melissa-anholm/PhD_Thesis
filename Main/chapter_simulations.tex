@@ -201,7 +201,8 @@ Do I need the angular distribution in the end?  I think maybe I put in scatterin
 %\note[color=jb]{JB says: I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
 %
 %
-\note[color=bluetodo]{Events from the trap aren't generated with the same position in G4 and comsol!  ugh.}
+\note{Events from the trap aren't generated with the same position in G4 and comsol!  ugh.  ...but it's fine, because the betas are fast.  Comsol gets the position right, which is where it actually matters.}
+\note{A `timing resolution' is *absolutely* applied to these things.  Taken from the width of the prompt peak in the SOE TOF.  It's believed to come from betas that hit the eMCP then scatter into a scintillator.  The phase space where this could even happen isn't very big, but you can still see the peak.  Probably not the other way around, because it's hard to scatter out of the whole scintillator, and if it just scattered off the DSSD then you wouldn't see it in the scintillator.}
 %
 	Beta scattering from surfaces within the experimental chamber is a significant systematic, and it must be evaluated, quantified, and corrected for.  While only a small fraction of events are affected, the process results in a change to the beta energy spectrum that can easily be misinterpreted as the exact signal we are searching for.  It is therefore imperative that this be well understood. 
 This refers, in particular, to events in which a beta is emitted by a decay \emph{within the atom cloud}and travels across the chamber to be scattered from a surface.  Upon its incidence on a surface, the beta will lose a portion of its kinetic energy, and its trajectory is also changed.  
