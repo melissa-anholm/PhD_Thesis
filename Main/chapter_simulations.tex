@@ -201,6 +201,8 @@ Do I need the angular distribution in the end?  I think maybe I put in scatterin
 %\note[color=jb]{JB says: I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
 %
 %
+\note[color=bluetodo]{Events from the trap aren't generated with the same position in G4 and comsol!  ugh.}
+%
 	Beta scattering from surfaces within the experimental chamber is a significant systematic, and it must be evaluated, quantified, and corrected for.  While only a small fraction of events are affected, the process results in a change to the beta energy spectrum that can easily be misinterpreted as the exact signal we are searching for.  It is therefore imperative that this be well understood. 
 This refers, in particular, to events in which a beta is emitted by a decay \emph{within the atom cloud}and travels across the chamber to be scattered from a surface.  Upon its incidence on a surface, the beta will lose a portion of its kinetic energy, and its trajectory is also changed.  
 
@@ -215,17 +217,29 @@ It is useful to remember in the discussion that follows that a beta particle eme
 
 Within this section, however, where the experimental SOE TOF spectra are examined in detail, the above assumption is insufficient, as it is necessary to consider effects from beta scattering -- both to the observed beta energy spectra, and also to the observed beta time-of-flight spectra (which, of course, are only experimentally meaningful in comparison with another timed observation).  
 
-Using Geant4, a set of beta time-of-flight spectra is generated for decays originating from within the atom cloud for all four detector+polarization combinations, and it is clear that there is a small but non-negligible fraction of such events that arise from beta scattering events, as shown in Fig.~\ref{fig:toa_vs_costheta}.  Even within Geant4, where is \emph{is} possible to measure the beta time of flight with respect to the initial time of decay, the scattered and unscattered spectra cannot be fully separated from one another.  The strong correlation between emission angle and time-of-flight does, however, suggest that the signal-to-noise ratio could be improved by a judicious cut on the TOF spectra. 
+Using Geant4, a set of beta time-of-flight spectra is generated for decays originating from within the atom cloud for all four detector+polarization combinations, and it is clear that there is a small but non-negligible fraction of such events that arise from beta scattering events, as shown in Figs.~\ref{fig:soe_tof_vs_costheta_levinger} and~\ref{fig:soe_tof_vs_costheta_0eV}.  Even within Geant4, where is \emph{is} possible to measure the beta time of flight with respect to the initial time of decay, the scattered and unscattered spectra cannot be fully separated from one another.  The strong correlation between emission angle and time-of-flight does, however, suggest that the signal-to-noise ratio could be improved by a judicious cut on the TOF spectra. 
 
 %\note{To be added:  point to Fig.~\ref{fig:toa_vs_costheta}.  }
 \begin{figure}[h!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
-	{Figures/toa_vs_costheta.png}
-	\note{This is probably just for the one polarization?  idk.  also, it might be for both detectors, but summed in a non-stupid way.  I have to fix this goddamn picture.}
-	\caption[Simulated Beta TOA vs emission angle w.r.t. detector orientation]{Simulated Beta TOA vs emission angle w.r.t. detector orientation.  For betas that eventually hit the top detector, this plot shows the relative angle at which they were originally emitted on the horizontal axis, and on the vertical axis, the travel time from generation to arrival at the detector.  The majority of events observed in the top detector are emitted with initial momentum directed towards this detector.  For events initially directed elsewhere but scattered in, the times of flight grow longer for larger angular deviations.  These events cannot be entirely eliminated in a TOF cut.}	
-	\label{fig:toa_vs_costheta}
+	{Figures/fig_2D_SOE_TOF_Lev.png}
+	\caption[Simulated Beta emission angle w.r.t. the detector vs adjusted Levinger SOE TOF]{Simulated Beta emission angle w.r.t. the detector vs adjusted TOF for Levinger SOEs.  %For betas that eventually hit the top detector, this plot shows the relative angle at which they were originally emitted on the horizontal axis, and on the vertical axis, the travel time from generation to arrival at the detector.  The majority of events observed in the top detector are emitted with initial momentum directed towards this detector.  For events initially directed elsewhere but scattered in, the times of flight grow longer for larger angular deviations.  These events cannot be entirely eliminated in a TOF cut.
+	}	
+%	\label{fig:toa_vs_costheta}  %old.  Is this even referenced anywhere now?
+	\label{fig:soe_tof_vs_costheta_levinger}
 \end{figure}
+\begin{figure}[h!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/fig_2D_SOE_TOF_0eV.png}
+	\caption[Simulated Beta emission angle w.r.t. the detector vs adjusted 0eV SOE TOF]{Simulated Beta emission angle w.r.t. the detector vs adjusted TOF for 0eV SOEs.  %For betas that eventually hit the top detector, this plot shows the relative angle at which they were originally emitted on the horizontal axis, and on the vertical axis, the travel time from generation to arrival at the detector.  The majority of events observed in the top detector are emitted with initial momentum directed towards this detector.  For events initially directed elsewhere but scattered in, the times of flight grow longer for larger angular deviations.  These events cannot be entirely eliminated in a TOF cut.
+	}	
+%	\label{fig:toa_vs_costheta}  %old.  Is this even referenced anywhere now?
+	\label{fig:soe_tof_vs_costheta_0eV}
+\end{figure}
+
+
 
 %
 In order to produce something which can be directly compared with experimental data, a TOF spectrum for SOEs must also be produced and merged with the beta TOF spectrum.  Experimentally, this is done as an event-by-event subtraction, so that is also what must be done for the simulations.  Unfortunately, these two time-of-flight spectra cannot easily be produced within a single type of simulation.  Because scattering is an important effect within the beta time of flight spectra (and resulting beta energy spectra), Geant4 is the tool of choice for this type of particle.  For shake-off electrons, which are emitted with little energy and accelerated through the electric field within the chamber, it is much more important to have an accurate model of the electric field and its effects on charged particles.  The shake-off electrons' time of flight is evaluated by the TRINAT collaboration using COMSOL to track individual electrons through a model of the electric field within the experimental chamber.  

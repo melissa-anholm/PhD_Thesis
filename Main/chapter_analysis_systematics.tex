@@ -104,9 +104,33 @@ If you're saying the UFTLT depends on the threshold used, ok, of course it does.
 
 
 \FloatBarrier
-\section{Imported Section: ``Comparing Simulations to Experimental Data''}
+\section{Comparing Simulations to Experimental Data}
 \label{sec:comparing_data_sims}
+A new list, ready to evolve as I do that one systematic!  
+\begin{itemize}
+	\item Beryllium foil.  It's the beryllium foil.  
+	\item I've already run the whole set of 3 G4 sims for it.  And I'm multitupled.  
+	\item What the fuck code to I run it through now?!
+	\begin{itemize}
+		\item Was it in Sim\_to\_Asym ?  Like perhaps DoMoreOfTheThings3.cpp (most recent) or DoMoreOfTheThings4.cpp ?
+		\item "Do...4.cpp" makes pizza.  ...out of the MakeHarderMulti's.
+		\item But actually, it looks like the MakeHarderMulti's comes out of the JustPlotAsym...() functions in Do...3.cpp.
+		\item No, the MakeHarderMulti's come out of Do...4.  From the MakeHarderMulti...() functions.  And *not* out of the thing in Do...3.cpp
+	\end{itemize}
+\end{itemize}
 
+\begin{figure}[h!!!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/ScatteringEstimate.png}
+	\note{I got it out of the Sim\_to\_Asym directory, so that's where I have to go looking to see how I made it and/or make a new one.}
+	\caption[Scattering Effects in the Asymmetry]{Here's what happens to the asymmetry when you adjust the scattering by the amount we decided on in the thingy.  I think it's actually $\pm$ (one sigma), despite the titles on this thing.  }	
+	\label{fig:asymmetry_scattering}
+\end{figure}
+
+
+
+That old list:
 \begin{itemize}
 	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
 	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change much when we adjust BSM couplings.  Just use the old event generator from Holstein Eq.~(51).
