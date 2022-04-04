@@ -7,54 +7,57 @@
 
 \begin{table}[h!!!!t]
 	\begin{center}
-	\begin{tabular}{ | l || c | c || c | c | }
-		\multicolumn{1}{c}{ } 					& \multicolumn{2}{c}{ $\bFierz$ }   									& \multicolumn{2}{c}{ $\Abeta$ }   
+	\begin{tabular}{ l  c  c  }
+		\multicolumn{1}{l}{ Source} 		& \multicolumn{2}{c}{ \;\;\; \;\;\; Uncertainty \;\;\; \;\;\; }   
 		\\
-		\multicolumn{1}{l}{Source} 				& \multicolumn{1}{c}{Uncertainty}   & \multicolumn{1}{c}{Correction}	& \multicolumn{1}{c}{Uncertainty}   & \multicolumn{1}{c}{Correction}	
+		\multicolumn{1}{l}{ } 				& \multicolumn{1}{c}{\;\; $\bFierz$}   & \multicolumn{1}{c}{$\Abeta$}   	
 		\\  \hline
 		%%% % %%%
-		Scintillator Calibration 				& 0.003							 	& -									& 0.0003							& -									
+		Scintillator Calibration 			& 0.003								& 0.0003											
 		\\
-		Scintillator Threshold  				& 0.004 							& -									& 0.0004 							& -	
-		\\
-		%%% % %%%
-		DSSD Individual Strip SNR 				& 0.006							 	& -									& 0.0007							& -									
-		\\
-		DSSD Energy Agreement	  				& 0.005 							& -									& 0.0006 							& -	
-		\\
-		DSSD Detection Radius	  				& 0.006 							& -									& 0.0017 							& -	
-		\\
-		DSSD Energy Threshold	  				& 0.005 							& -									& 0.0005 							& -	
+		Scintillator Threshold  			& 0.004 							& 0.0004 						
 		\\
 		%%% % %%%
-		Atomic Cloud			  				& 0.002 							& (...)								& 0.0002 							& (...)	
+		DSSD Individual Strip SNR 			& 0.006								& 0.0007													
+		\\
+		DSSD Energy Agreement	  			& 0.005 							& 0.0006 						
+		\\
+		DSSD Detection Radius	  			& 0.006 							& 0.0017 						
+		\\
+		DSSD Energy Threshold	  			& 0.005 							& 0.0005 						
 		\\
 		%%% % %%%
-		Background				  				& 0.004 							& (...)								& 0.0003 							& (...)	
+		Atomic Cloud			  			& 0.002 							& 0.0002 						
 		\\
 		%%% % %%%
-		Beta Scattering				  			& 0.031 							& (...)								& 0.0025 							& (...)	
+		Background				  			& 0.004 							& 0.0003 						
 		\\
 		%%% % %%%
-		Low Energy Tail				  			& 0.008 							& -									& 0.0007 							& -	
+		Beta Scattering				  		& 0.031 							& 0.0025 						
 		\\
 		%%% % %%%
-		Mirror Thickness				  		& 0.026 							& -									& 0.0025 							& -	
+		Low Energy Tail				  		& 0.008 							& 0.0007 						
 		\\
-		DSSD Thickness				 	 		& 0.026 							& -									& 0.0025 							& -	
+		%%% % %%%
+		Mirror Thickness				  	& 0.013 							& 0.0017 						
 		\\
-		\comment{Be Foil Thickness}				& \comment{\,\,\, 0.026 }			& -									& \comment{\,  0.0025} 				& -	
+		DSSD Thickness				 	 	& 0.013 							& 0.0017 						
+		\\
+		Beryllium Foil Thickness			& 0.004								& $\!\!\!\!\!\! < 0.0001$ 			
 	%	\\
 		%%% % %%%
 		\\  \hline
-		Total Systematics				  		& 0.056 							& -									& 0.0055 							& -	
+		\multicolumn{1}{l}{ Total Systematics} & \multicolumn{1}{c}{0.039}  & \multicolumn{1}{c}{0.0041}
+%		Total Systematics			  		& 0.056 							& 0.0055 						
 		\\
-		Statistics				  				& 0.084 							& -									& 0.0082 							& -	
-		\\  \hline
+		\multicolumn{1}{l}{ Statistics} 	   & \multicolumn{1}{c}{0.084}  & \multicolumn{1}{c}{0.0082}
+%		Statistics				  			& 0.084 							& 0.0082 						
+	%	\\  \hline
 		%%% % %%%
 	\end{tabular}
 	\end{center}
-	\caption[Error Budget]{Error Budget goes here.}
+	\caption[Error Budget]{Error budget for the two-parameter analysis.  Final results: 
+	$\mbox{ $\bFierz = 0.0313 \pm 0.084(\textrm{stat}) \pm 0.039(\textrm{syst})$ }$ and $\mbox{ $\Abeta = -0.5743 \pm 0.0082(\textrm{stat}) \pm 0.0041(\textrm{syst})$ }$ }
 	\label{table:budget}
 \end{table}
 
