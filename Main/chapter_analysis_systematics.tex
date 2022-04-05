@@ -103,27 +103,29 @@ A summary of systematics goes here.  In words, yes, but also in table form.
 If you're saying the UFTLT depends on the threshold used, ok, of course it does. But if you're claiming that UFTLT depends on the **uncertainty** of the threshold, that's manifestly smaller than the UFTLT itself, and I'm going to assert it isn't worth evaluating.''}
 
 
+%%%% --- * --- %%%%
+%%%% --- * --- %%%%
 \FloatBarrier
 \section{Comparing Simulations to Experimental Data}
 \label{sec:comparing_data_sims}
-A new list, ready to evolve as I do that one systematic!  
-\begin{itemize}
-	\item Beryllium foil.  It's the beryllium foil.  
-	\item I've already run the whole set of 3 G4 sims for it.  And I'm multitupled.  
-	\item What the fuck code to I run it through now?!
-	\begin{itemize}
-		\item Was it in Sim\_to\_Asym ?  Like perhaps DoMoreOfTheThings3.cpp (most recent) or DoMoreOfTheThings4.cpp ?
-		\item "Do...4.cpp" makes pizza.  ...out of the MakeHarderMulti's.
-		\item But actually, it looks like the MakeHarderMulti's comes out of the JustPlotAsym...() functions in Do...3.cpp.
-		\item No, the MakeHarderMulti's come out of Do...4.  From the MakeHarderMulti...() functions.  And *not* out of the thing in Do...3.cpp
-		\item Somehow, the mirror thing uses Do...3, but uses MakeHarderMulti files and GenEnergyAsym files that have already been created.
-		\item Oh.  I don't think Do...3 includes the two percent branch.  That seems important.  I wonder if I did the thicknesses thing correctly including that?  I feel like I .... might not have.
-		\item Also, the background.... do I actually only scale it to Set B?  WTF do I do for the other runs? My comment says it's normalized to Set B.
-		\item recombine\_bg\_spectra() outputs to CombinationSpectra.root.
-		\item Do I ever even smear the background out?  I feel like I must have, but I can't find it.
-		\item Background *really is* only normalized to Set B.  I think.
-	\end{itemize}
-\end{itemize}
+%%%A new list, ready to evolve as I do that one systematic!  
+%%%\begin{itemize}
+%%%	\item Beryllium foil.  It's the beryllium foil.  
+%%%	\item I've already run the whole set of 3 G4 sims for it.  And I'm multitupled.  
+%%%	\item What the fuck code to I run it through now?!
+%%%%%%%	\begin{itemize}
+%%%%%%%		\item Was it in Sim\_to\_Asym ?  Like perhaps DoMoreOfTheThings3.cpp (most recent) or DoMoreOfTheThings4.cpp ?
+%%%%%%%		\item "Do...4.cpp" makes pizza.  ...out of the MakeHarderMulti's.
+%%%%%%%		\item But actually, it looks like the MakeHarderMulti's comes out of the JustPlotAsym...() functions in Do...3.cpp.
+%%%%%%%		\item No, the MakeHarderMulti's come out of Do...4.  From the MakeHarderMulti...() functions.  And *not* out of the thing in Do...3.cpp
+%%%%%%%		\item Somehow, the mirror thing uses Do...3, but uses MakeHarderMulti files and GenEnergyAsym files that have already been created.
+%%%%%%%		\item Oh.  I don't think Do...3 includes the two percent branch.  That seems important.  I wonder if I did the thicknesses thing correctly including that?  I feel like I .... might not have.
+%%%%%%%		\item Also, the background.... do I actually only scale it to Set B?  WTF do I do for the other runs? My comment says it's normalized to Set B.
+%%%%%%%		\item recombine\_bg\_spectra() outputs to CombinationSpectra.root.
+%%%%%%%		\item Do I ever even smear the background out?  I feel like I must have, but I can't find it.
+%%%%%%%		\item Background *really is* only normalized to Set B.  I think.
+%%%%%%%	\end{itemize}
+%%%\end{itemize}
 
 \begin{figure}[h!!!!tb]
 	\centering
@@ -140,14 +142,17 @@ That old list:
 \begin{itemize}
 	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
 	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change much when we adjust BSM couplings.  Just use the old event generator from Holstein Eq.~(51).
-	\item Match cuts in simulated data up to the cuts on experimental data.  Obviously.  DSSD cut, DSSD energy, one hit DSSD, one hit scint.  TOF cut, which requires a whole extra model of background in the TOF spectrum (see Section~\ref{sec:tof_bg}).
-	\begin{itemize}
-		\item Suppose background in the TOF spectrum is coming from decays of atoms that have gotten themselves stuck to surfaces within the chamber...
-		\item Run G4 to get a beta TOF spectrum (w.r.t. the decay)
-		\item Run COMSOL (credit to Alexandre) to track low-energy SOEs through the electric field from wherever they started, into the detectors.  Energy spectra from Levinger.
-		\item Combine G4 and COMSOL spectra, event-by-event, while requiring that both the beta detector and the eMCP are hit according to the set of random numbers generated by each monte carlo separately.  Then, the beta and SOE will each have a TOF from decay to detector, and subtracting one from the other gives a timing spectrum that can be observed experimentally.  See Fig.~\ref{fig:soetof}.
-		\item Upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the trap not due to radioactive decay emerge isotropically from the trap and then stick to whatever chamber wall is in its path.  This upper limit is too big by a factor of 2.
-	\end{itemize}
+	\item generate beta-SOE TOF spectra for simulated data.  
+	\item generate background spectra and the TOF spectra to go with them.
+	\item make the same TOF cut on the simulated data and the experimental data.  
+	\item In fact, make all the same cuts on the experimental and simulated data.  DSSD cut, DSSD energy, one hit DSSD, one hit scint.  TOF cut, which requires a whole extra model of background in the TOF spectrum (see Section~\ref{sec:tof_bg}).
+%%%	\begin{itemize}
+%%%		\item Suppose background in the TOF spectrum is coming from decays of atoms that have gotten themselves stuck to surfaces within the chamber...
+%%%		\item Run G4 to get a beta TOF spectrum (w.r.t. the decay)
+%%%		\item Run COMSOL (credit to Alexandre) to track low-energy SOEs through the electric field from wherever they started, into the detectors.  Energy spectra from Levinger.
+%%%		\item Combine G4 and COMSOL spectra, event-by-event, while requiring that both the beta detector and the eMCP are hit according to the set of random numbers generated by each monte carlo separately.  Then, the beta and SOE will each have a TOF from decay to detector, and subtracting one from the other gives a timing spectrum that can be observed experimentally.  See Fig.~\ref{fig:soetof}.
+%%%		\item Upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the trap not due to radioactive decay emerge isotropically from the trap and then stick to whatever chamber wall is in its path.  This upper limit is too big by a factor of 2.
+%%%	\end{itemize}
 	\item For each of those 3 simulations, sort the ``good'' data according to emission angle relative to the detector.  Do each detector individually.  For both polarizations.
 	\item Assemble the (simulated) superratio asymmetry.  We'll compare it to data, and the $\chi^2$ from that comparison will be our figure of merit.  
 	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.

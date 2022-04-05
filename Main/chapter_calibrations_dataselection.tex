@@ -132,7 +132,7 @@ The lower plots in Fig.~\ref{fig:rmcp_calibration} show an unfortunate pattern o
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/rMCP_PI_2D_535.png}
-	\note{You know, I think this one is flipped relative to the previous image.  Bleh.  Probably this one is the correct one, but who wants to deal with that?  Also .... did we switch MCP plates between calibration and the run?  I think possibly we did!  I'll have to ask the eLog.}
+	\note[color=bluetodo]{You know, I think this one is flipped relative to the previous image.  Bleh.  Probably this one is the correct one, but who wants to deal with that?  Also .... did we switch MCP plates between calibration and the run?  I think possibly we did!  I'll have to ask the eLog.}
 	\note{Does this thing even have a TOF cut?}
 	\caption[Photoion Hit Positions in 2D]{Photoion Hit Positions in 2D.  This is the entirety of the good photoion data taken at 535 V/cm.  The central bright spot is an image of the atom cloud arising from photoionization events of unpolarized atoms; the rest is background.  Vertical stripes of indeterminate cause can be seen across the face of the image -- it has not been possible to eliminate them in analysis. %, and it is unclear what result they may have with regard to estimates of the average trap position and size.
 	}	
@@ -234,7 +234,7 @@ With these basic cuts performed, the cloud position and size must be measured.  
 %%%%%% --- * --- %%%%	
 %%\section{Data Selection and Preliminary Cuts Mini-Intro from John}
 \FloatBarrier
-\section{Data Selection and Preliminary Cuts}
+\section{Electron Run Data Selection and Preliminary Cuts}
 \label{sec:preliminary_cuts}
 \note{We now consider how to clean up our data.  We make some fairly obvious, intuitive cuts, and those are described here.  Later, we'll make less intuitively obvious cuts.}
 %%%%Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, we ended up running only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  
@@ -301,7 +301,7 @@ Finally, because this analysis depends heavily on energy measurements from the t
 %	\note{Energy calibration for the scintillator+PMT setup changed dramatically at one point.    Describe how calibration was done.  Like, one sentence or something.  Something about the endpoint energy, and something about the compton edge for 511s, IIRC.}
 
 \section{Further Cuts Using the DSSD}
-\note[color=org]{Pretty sure I'm repeating myself from Chapter~\ref{???}}
+%\note[color=org]{Pretty sure I'm repeating myself from Chapter~\ref{???}}
 \note[color=jb]{JB says: To repeat a comment, since the Appendix on analysis changes is being dispersed throughout, when you state somewhere (I think it's in Ch. 6)((5?)) make sure you state clearly that the only change for BB1 cuts
 is the radius cut, e.g. that you took the same T and E from the waveforms (I'm not even sure whether the
 waveforms are recorded anyway). You  ask 'how can I state this' but there's no reason to be subtle.
@@ -359,7 +359,7 @@ MJA:  Wait.  So have I done that yet in this section?}
 
 \note[color=org]{I described the HEX-75 somewhere in a previous chapter, right??}
 \note[color=org]{I dislike how this section is organized..  should discuss the cut we *didn't* make at the end.}
-\note[color=org]{Really, should title this section according to the LE thing that is actually its primary topic.  In practice, the change only gets used on the SOE TOF cuts though.}
+%\note[color=org]{Really, should title this section according to the LE thing that is actually its primary topic.  In practice, the change only gets used on the SOE TOF cuts though.}
 %Much like the rMCP, the eMCP is backed by a set of delay lines for position sensitivity.  .......
 The eMCP features a set of three delay lines, intended to be used to record the position of a hit, as in Fig.~\ref{fig:emcp_position}.  \aside{Do I need to describe MCPs and delay lines somewhere?  Maybe not...}  Though only two delay lines is sufficient to determine the position within the plane of the MCP if they are both hit, the presence of a third delay line allows for some redundancy.  In practice, however, a large fraction of otherwise `good' events include a hit on the eMCP, but have insufficient information recorded on the delay line channels to reconstruct a position.  
 
@@ -368,7 +368,7 @@ The eMCP features a set of three delay lines, intended to be used to record the 
 	\includegraphics[width=.999\linewidth]
 	{Figures/eMCP_position.pdf}
 %	\note{This picture is `slow'.  Need to re-save it as a png.}
-	\note{Is this picture even useful here?}
+	\note[color=org]{This pic is probably better used in an SOE section somewhere.}
 	\caption{Position as measured on the eMCP, after some data cleaning.}	
 	\label{fig:emcp_position}
 \end{figure}
@@ -380,6 +380,7 @@ Because a SOE from the trap is most likely to land in the centre of the plate, w
 	\includegraphics[width=.999\linewidth]
 	{Figures/SOE_TOF_positioncompare.pdf}
 	\note{Um.  Did I for sure get the labels correct on this???  It seems really wrong.}
+	\note[color=org]{Surely this thing goes somewhere else instead.}
 	\caption{Beta-electron TOF, for events with and without eMCP hit position information.  A cut will eventually be taken to accept only events sufficiently near the largest peak -- in this case the number of events is `only' decreased by a factor of 2.}	
 	\label{fig:soe_tof_positioncompare}
 	\label{fig:experimental_soe_tof}
