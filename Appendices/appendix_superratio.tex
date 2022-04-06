@@ -14,7 +14,7 @@ Recall the integrated JTW probability distribution for outgoing beta particles f
 \bea
 	\textrm{d}^3 \Gamma ( \Ebeta, \mathbf{ \hat{\Omega}}_\beta ) \, \dEe \, \dOmegae
 	&=& 
-	\frac{2}{(2\pi)^4} \, \FF \, \pe \Ee (E_0 - \Ee)^2 \, \dEe \, \dOmegae \, \xi \nonumber\\ 
+	\frac{2}{(2\pi)^4} \, \FF \, \xi \, \pe \Ee (E_0 - \Ee)^2 \, \dEe \, \dOmegae \,  \nonumber\\ 
 	&& \times \left[
 		1 + \bFierz \frac{\m c^2}{\Ee} + 
 		\A  
@@ -44,16 +44,18 @@ We note that the only angular dependence remaining in this equation is the dot p
 \eea
 where $\theta$ is the angle between the beta emission direction and the polarization direction, and is the only angular dependence that remains.  Here, we have grouped the overall energy dependence into $W(\Ebeta)$, so that
 \beq
-W(\Ebeta) = \frac{2}{(2\pi)^3} \, \FF \, \pe \Ee (E_0 - \Ee)^2.
+W(\Ebeta) = \frac{2}{(2\pi)^3} \, \FF \, \xi \, \pe \Ee (E_0 - \Ee)^2, 
+\label{eq:overallenergydependence}
 \eeq
-\note{We could also use this with the Holstein formulation, at least some of it.  The point is, we can put *anything* that only depends on beta energy into $W(\Ebeta)$.  It doesn't matter, because it's already only integrable through numerical methods anyway -- so we can't possibly make it worse.}
+where we note that the Fermi functions in the above make Eq.~\ref{eq:overallenergydependence} integrable only by numerical methods.  Because it would be difficult to make this expression \emph{more} challenging to work with, it is therefore easy enough to include in this expression any small corrections to overall energy dependence that might arise from e.g.\! recoil-order corrections, as described by Holstein~\cite{holstein}.
+%\note{We could also use this with the Holstein formulation, at least some of it.  The point is, we can put *anything* that only depends on beta energy into $W(\Ebeta)$.  It doesn't matter, because it's already only integrable through numerical methods anyway -- so we can't possibly make it worse.}
 
 In the TRINAT geometry with two polarization states (+/-) and two detectors (T/B) aligned along the axis of polarization, we are able to describe four different count rates, with different combinations of polarization states and detectors.  Thus, neglecting beta scattering effects, we have:
 \bea
-r_{\mathrm T+}(\Ebeta) &=& \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm T+} \right] \label{eq:r1} \\
-r_{\mathrm B+}(\Ebeta) &=& \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm B+} \right] \label{eq:r2}\\
-r_{\mathrm T-}(\Ebeta) &=& \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T} \, N_- \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_-| \langle \cos\theta \rangle_{\mathrm T-} \right] \label{eq:r3}\\
-r_{\mathrm B-}(\Ebeta) &=& \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_- \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_-| \langle \cos\theta \rangle_{\mathrm B-} \right],\label{eq:r4}
+r_{\mathrm T+}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm T+} \right] \label{eq:r1} \\
+r_{\mathrm B+}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm B+} \right] \label{eq:r2}\\
+r_{\mathrm T-}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T} \, N_- \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_-| \langle \cos\theta \rangle_{\mathrm T-} \right] \label{eq:r3}\\
+r_{\mathrm B-}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_- \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_-| \langle \cos\theta \rangle_{\mathrm B-} \right],\label{eq:r4}
 \eea
 where $\varepsilon_{\mathrm T / \mathrm B}(\Ebeta)$ are the (top/bottom) detector efficiencies, $\Omega_{\mathrm T / \mathrm B}$ are the fractional solid angles for the (top/bottom) detector from the trap position, $N_{+/-}$ are the number of atoms trapped in each (+/-) polarization state, and $|\vec{P}_{+/-}|$ are the magnitudes of the polarization along the detector axis for each polarization state.  $\langle \cos\theta \rangle_{\mathrm T/ \mathrm B, +/-} $ is the average of $\cos\theta$ for \emph{observed} outgoing betas, for each detector and polarization state combination.  This latter term is approximately $\pm 1$ as a result of our detector geometry, but contains important sign information.  For a pointlike trap in the center of the chamber, 103.484 mm from either (DSSSD) detector,~\aside{Does this even agree with whatever I wrote about the geometry in the other section?} each of which is taken to be circular with a radius of 15.5 mm, we find that $\langle | \cos\theta | \rangle_{\mathrm T/ \mathrm B, +/-} \approx 0.994484$, and is the same for all four cases.
 \aside{Not quite true.  Some strips are missing.}
@@ -61,3 +63,195 @@ where $\varepsilon_{\mathrm T / \mathrm B}(\Ebeta)$ are the (top/bottom) detecto
 \aside{This is only true if we neglect (back-)scatter.  This is not actually a good approximation.  But we have pretty good simulations to give us the real numbers, anyway. } Note that a horizontally displaced trap will decrease the magnitude of $\langle | \cos\theta | \rangle $, but as it is an expectation value of an absolute value, all four will remain equal to one another.  In the case of a vertically displaced trap, these four values will no longer all be equal, however it will still be the case that $\langle | \cos\theta | \rangle_{\mathrm T +} = \langle | \cos\theta | \rangle_{\mathrm T -}$, and $\langle | \cos\theta | \rangle_{\mathrm B+} = \langle | \cos\theta | \rangle_{\mathrm B -}$.  \aside{Is that definitely true, or is it only true to lowest order?}
 
 In the case of the present experiment, we note that $|\vec{P}_+| = |\vec{P}_-|$ is correct to a high degree of precision.
+
+We define the `superratio', $s$, to be:
+\bea
+%s \;\;=\;\; s(\Ebeta) \;\;:=\;\; \frac{ r_{\mathrm T-}\, r_{\mathrm B+} }{ r_{\mathrm T+}\, r_{\mathrm B-} }, 
+s \;\;=\;\; s(\Ebeta) \;\;:=\;\; \frac{ r_{\mathrm T+}\, r_{\mathrm B-} }{ r_{\mathrm T-}\, r_{\mathrm B+} }, 
+\eea
+and the `superratio asymmetry', $A_{\mathrm{super}}$, as
+\bea
+A_{\mathrm{super}} &=& A_{\mathrm{super}}(\Ebeta) \;\;:=\;\; \frac{1-\sqrt{s}}{1+\sqrt{s}}.
+\eea
+This is explicitly an experimental quantity that is measured directly by the above combination of count rates, however it is obvious that it reduces, under appropriate limits, to be equivalent to a naive asymmetry.  In particular, if we require that the physical conditions and relative detector positions and sensitivities are identical when the polarization is flipped, then we have $r_{\mathrm T+}(\Ebeta) = r_{\mathrm B-}(\Ebeta)$ and $r_{\mathrm T-}(\Ebeta) = r_{\mathrm B+}(\Ebeta)$.
+%%\bea
+%%r_{\mathrm T+}(\Ebeta) &=& r_{\mathrm B-}(\Ebeta) \\ 
+%%r_{\mathrm T-}(\Ebeta) &=& r_{\mathrm B+}(\Ebeta)
+%%\eea
+It follows that we can simplify the superratio asymmetry into a more intuitive quantity that we might use for a measurement with only a single polarization state, e.g.,  
+\bea
+%A_{\mathrm{super}, +} &\rightarrow& \frac{ r_{\mathrm B}\, - \,r_{\mathrm T} }{r_{\mathrm B}\, +\, r_{\mathrm T} }. 
+A_{\mathrm{super}, +} &\rightarrow& \frac{ r_{\mathrm T}\, - \,r_{\mathrm B} }{r_{\mathrm T}\, +\, r_{\mathrm B} }. 
+\label{eq:singlepol_asymmetry}
+\eea
+%\bea 
+%A_{\mathrm{super}} &=& \frac{(r_{\mathrm T-}\, r_{\mathrm B+})^{1/2} - (r_{\mathrm T+}\, r_{\mathrm B-})^{1/2} }{(r_{\mathrm T-}\, r_{\mathrm B+})^{1/2} + (r_{\mathrm T+}\, r_{\mathrm B-})^{1/2} }.
+%\eea
+
+While Eq.~\ref{eq:singlepol_asymmetry} is conceptually encouraging, the assumptions that gave rise to that expression are too simplifying.  We will introduce some more limited assumptions for what follows, along with shorthand notation for improved readability.  First, we require that the magnitude of the polarization vector is the same for both polarization states, and also that the average of the magnitude of $\cos\theta$ for a given detector does not change when the polarization is flipped (equivalent to a requirement that the trap position doesn't change when the polarization is flipped).  Then: 
+\bea
+P &:=& |\vec{P}_+| = |\vec{P}_-|  \\
+\langle |\cos\theta | \rangle_T &:=& \langle |\cos\theta | \rangle_{\mathrm T+} \, = \, \langle |\cos\theta | \rangle_{\mathrm T-} \\
+\langle |\cos\theta | \rangle_B &:=& \langle |\cos\theta | \rangle_{\mathrm B+} \, = \, \langle |\cos\theta | \rangle_{\mathrm B-},
+\eea
+and we can further define
+\bea
+c &=& \,\,\,\,\, \langle | \cos\theta | \rangle :=  \frac{1}{2} \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle_T + \langle |\cos\theta | \rangle_B \, \right) \\
+\Delta c &=& \Delta \langle | \cos\theta | \rangle := \frac{1}{2} \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle_T - \langle |\cos\theta | \rangle_B \, \right)
+\eea
+and 
+\bea
+\tilde{A} &=\;\; \tilde{A}(\Ebeta) &:=\;\; A_\beta \frac{v}{c} \\ 
+\tilde{b} &=\;\; \tilde{b}(\Ebeta) &:=\;\;  \bFierz \frac{mc^2}{\Ebeta}, \\
+%%A^\prime  &=\;\; A^\prime(\Ebeta) &:=\;\; P \, c \, \tilde{A}  \\
+%%%A^\prime &= A^\prime(\Ebeta) &:=\;\; \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \\
+\tilde{r} &=\;\; \tilde{r}(\Ebeta) &:=\;\; 1+\tilde{b}. %+ \tilde{A} \, \Delta P \, \Delta \langle | \cos\theta | \rangle
+\eea
+
+With this new set of variables defined, we can re-write Eqs.~(\ref{eq:r1}-\ref{eq:r4}) as
+\bea
+r_{\mathrm T+}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T}\, N_+ \left[\tilde{r}  \,+\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c + \Delta c \, \right) \right] \\
+r_{\mathrm B+}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B}\, N_+ \left[\tilde{r}  \,-\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c - \Delta c \, \right) \right] \\
+r_{\mathrm T-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T}\, N_- \left[\tilde{r}  \,-\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c + \Delta c \, \right) \right] \\
+r_{\mathrm B-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B}\, N_- \left[\tilde{r}  \,+\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c - \Delta c \, \right) \right], 
+\eea
+%%%%%\bea
+%%%%%r_{\mathrm T+}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T}\, N_+ \left[1 + \tilde{b}  + \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c + \Delta c \, \right) \right] \\
+%%%%%r_{\mathrm B+}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B}\, N_+ \left[1 + \tilde{b}  - \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c - \Delta c \, \right) \right] \\
+%%%%%r_{\mathrm T-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T}\, N_- \left[1 + \tilde{b}  - \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c + \Delta c \, \right) \right] \\
+%%%%%r_{\mathrm B-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B}\, N_- \left[1 + \tilde{b}  + \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c - \Delta c \, \right) \right], 
+%%%%%\eea
+and the superratio becomes
+\bea
+s 
+%%%&=& 
+%%%\frac{ \left( \phantom{\frac{2_2}{2}}\!\!\!\! 
+%%%\tilde{r} + \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c + \Delta c \, \right) \right) 
+%%%\left( \phantom{\frac{2_2}{2}}\!\!\!\! 
+%%%\tilde{r} + \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c - \Delta c \, \right) \right) 
+%%%}{ 
+%%%\left( \phantom{\frac{2_2}{2}}\!\!\!\!
+%%%\tilde{r} - \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c + \Delta c \, \right) \right) 
+%%%\left( \phantom{\frac{2_2}{2}}\!\!\!\! 
+%%%\tilde{r} - \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c - \Delta c \, \right) \right)} \\
+&=& 
+\frac{ 
+\left(
+\tilde{r} + \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 
+}{ 
+\left(
+\tilde{r} - \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 
+} 
+%\;\;=\;\;
+\eea
+where all factors of $W(\Ebeta)$, $\varepsilon_{\mathrm T/B}(\Ebeta)$, $\Omega_{\mathrm T/B}$, and $N_{+/-}$ have been cancelled out entirely.  
+
+For simplicity we take $\Delta c = 0$ in what follows.  Although this is not strictly accurate within the present experiment, this assumption greatly simplifies the expressions that follow.  Then, absent other corrections (\emph{e.g.} backscattering, unpolarized background, ...), it is clear that if $\tilde{b} = 0$ as in the Standard Model, %it follows that 
+\bea
+A_{\mathrm{super}} &=\;\; \tilde{A} P c &=\;\; \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle
+\eea
+%$A_{\mathrm{super}} = \tilde{A} P c $.  
+
+In the case where $\tilde{b} \neq 0$, we find that 
+\bea
+A_{\mathrm{super}} &=& \frac{\tilde{A} P c}{1+\tilde{b}} \\
+&\approx&  \tilde{A} P c \, (1 - \tilde{b} + {\tilde{b}}^2),
+\eea
+where we have utilized the assumption that $\tilde{b} \ll 1$.
+Thus, to leading order in terms of $\tilde{b}$, 
+\bea
+A_{\mathrm{super}} &\approx& \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \left( 1 - \bFierz \frac{mc^2}{\Ebeta} \right).
+\eea
+%\Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \left( \bFierz \frac{mc^2}{\Ebeta}\right) 
+%+ \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \left(\bFierz \frac{mc^2}{\Ebeta}\right)^{\!\!2}.
+%\nonumber \\
+%%%%\bea
+%%%%A_{\mathrm{super}} &\approx& \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle - \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \left( \bFierz \frac{mc^2}{\Ebeta}\right) + \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \left(\bFierz \frac{mc^2}{\Ebeta}\right)^{\!\!2}.
+%%%%\nonumber \\
+%%%%\eea
+
+
+
+%%%%%We now add the assumption that $|\Delta c|$ must be small.  In particular, 
+%%%%%\bea
+%%%%%\frac{ \left| \Delta c \right| }{
+%%%%%\left( \tilde{r} \pm \tilde{A} P c \right) } 
+%%%%%&\ll& 1, 
+%%%%%%%%\frac{ \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 }{\left(
+%%%%%%%%\tilde{r} \pm \tilde{A} P c \right)^2} 
+%%%%%%%%&\ll& 1, 
+%%%%%\eea
+%%%%%where $( \tilde{r} \pm \tilde{A} P c ) $ is a \emph{rate} and must always be positive.  This suggests a Taylor series expansion that might be useful here.
+%%%%%
+%%%%%The superratio asymmetry becomes, 
+%%%%%\bea
+%%%%%A_{\mathrm{super}} 
+%%%%%&=& \frac{1-\sqrt{s}}{1+\sqrt{s}} \nonumber \\
+%%%%%&=& 
+%%%%%\frac{ \sqrt{\left(
+%%%%%\tilde{r} - \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2} - \sqrt{ \left(
+%%%%%\tilde{r} + \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 }
+%%%%%}{
+%%%%%\sqrt{\left(
+%%%%%\tilde{r} - \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2} + \sqrt{ \left(
+%%%%%\tilde{r} + \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 }
+%%%%%}
+%%%%%\nonumber \\
+%%%%%%%%%&=& 
+%%%%%%%%%\frac{ \left[ \sqrt{\left(
+%%%%%%%%%\tilde{r} - \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2} - \sqrt{ \left(
+%%%%%%%%%\tilde{r} + \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 } \right]^2
+%%%%%%%%%}{
+%%%%%%%%%\left(
+%%%%%%%%%\tilde{r} - \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 +  \left(
+%%%%%%%%%\tilde{r} + \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2
+%%%%%%%%%} \\
+%%%%%%
+%%%%%%%%&=& 
+%%%%%%%%\frac{ 
+%%%%%%%%%\left[ 
+%%%%%%%%\tilde{r\,}^2 + 
+%%%%%%%%\left( \tilde{A} P c \right)^2 - \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2  - \sqrt{ \left( \left(
+%%%%%%%%\tilde{r} - \tilde{A} P c \right)^2 - \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 \right) 
+%%%%%%%%%\times 
+%%%%%%%%\left( \left(
+%%%%%%%%\tilde{r} + \tilde{A} P c \right)^2 - \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 \right) }
+%%%%%%%%%\right]
+%%%%%%%%}{
+%%%%%%%%\left[
+%%%%%%%%\tilde{r\,}^2 + \left(\tilde{A} P c \right)^2\!  -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2  \right]
+%%%%%%%%}
+%%%%%%%%\nonumber\\
+%%%%%&=& 
+%%%%%1 - 
+%%%%%\frac{ 
+%%%%%\sqrt{ \left( \left(
+%%%%%\tilde{r} - \tilde{A} P c \right)^2 - \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 \right) 
+%%%%%\left( \left(
+%%%%%\tilde{r} + \tilde{A} P c \right)^2 - \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 \right) }
+%%%%%}{
+%%%%%\left[
+%%%%%\tilde{r\,}^2 + \left(\tilde{A} P c \right)^2\!  -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2  \right]
+%%%%%} \\ 
+%%%%%&=& 
+%%%%%1 - 
+%%%%%\frac{ 
+%%%%%\sqrt{ \left( \tilde{r}^2 + \left(\tilde{A} P c \right)^2 - \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 \right)^2 - \left( 2 \tilde{r} \tilde{A} P c \right)^2 }
+%%%%%}{
+%%%%%\left[
+%%%%%\tilde{r\,}^2 + \left(\tilde{A} P c \right)^2\!  -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2  \right]
+%%%%%} \\
+%%%%%&=& 
+%%%%%1 - 
+%%%%%\sqrt{ 1 - 
+%%%%%\frac{\left( 2 \tilde{r} \tilde{A} P c \right)^2 
+%%%%%}{
+%%%%%\left[
+%%%%%\tilde{r\,}^2 + \left(\tilde{A} P c \right)^2\!  -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2  \right]^2
+%%%%%} } 
+%%%%%\eea
+%%%%%...which is not enlightening at all.
+%%%%%
+%%%%%
+
+
