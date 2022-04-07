@@ -201,11 +201,10 @@ Do I need the angular distribution in the end?  I think maybe I put in scatterin
 %\note[color=jb]{JB says: I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
 %
 %
-\note{Events from the trap aren't generated with the same position in G4 and comsol!  ugh.  ...but it's fine, because the betas are fast.  Comsol gets the position right, which is where it actually matters.}
-\note{A `timing resolution' is *absolutely* applied to these things.  Taken from the width of the prompt peak in the SOE TOF.  It's believed to come from betas that hit the eMCP then scatter into a scintillator.  The phase space where this could even happen isn't very big, but you can still see the peak.  Probably not the other way around, because it's hard to scatter out of the whole scintillator, and if it just scattered off the DSSD then you wouldn't see it in the scintillator.}
-\note{Generate a CDF for Lev and a CDF for 0eV.  For events from the trap, G4 is pointlike but COMSOL has the correct cloud distribution.}
-\note{For every "good" beta hit event, pick whether to use 0eV($9\%$) or Levinger($91\%$).  Then, select an SOE TOF (from decay time) from the CDF.  Subtract this instance of SOE TOF from this instance of beta TOF to get a thing like an experimental spectrum.  Apply a detector resolution (just a gaussian) to this result. *then* we can make basically whatever spectra we like out of this.  e.g., beta energy within the cut we're using.  ....this all happens in MakeHarderMulti(...) and also MakeHarderer(...).   ...also, we still haven't used the two percent branch on this.}
-\note{Because there's an offset for the data that we can't measure directly to the precision needed, we simply recenter the whole SOE TOF spectrum to be centered on zero.  In this way, we can more easily match it up to simulations.}
+%\note{Events from the trap aren't generated with the same position in G4 and comsol!  ugh.  ...but it's fine, because the betas are fast.  Comsol gets the position right, which is where it actually matters.}
+%%%%\note{Generate a CDF for Lev and a CDF for 0eV.  For events from the trap, G4 is pointlike but COMSOL has the correct cloud distribution.}
+%%%%\note{For every "good" beta hit event, pick whether to use 0eV($9\%$) or Levinger($91\%$).  Then, select an SOE TOF (from decay time) from the CDF.  Subtract this instance of SOE TOF from this instance of beta TOF to get a thing like an experimental spectrum.  Apply a detector resolution (just a gaussian) to this result. *then* we can make basically whatever spectra we like out of this.  e.g., beta energy within the cut we're using.  ....this all happens in MakeHarderMulti(...) and also MakeHarderer(...).   ...also, we still haven't used the two percent branch on this.}
+%%%%\note{Because there's an offset for the data that we can't measure directly to the precision needed, we simply re-center the whole SOE TOF spectrum to be centered on zero.  In this way, we can more easily match it up to simulations.}
 %
 	Beta scattering --- in which a beta originating within the atom cloud is incident on a surface within the chamber and changes its trajectory, losing some if its energy in the process --- is a significant systematic within this experiment, and it must be evaluated, quantified, and corrected for.  While only a small fraction of events are affected, the process results in a change to the beta energy spectrum that can easily be misinterpreted as the exact signal we are searching for.  It is therefore imperative that this be well understood. 
 	%This refers, in particular, to events in which a beta is emitted by a decay \emph{within the atom cloud} and travels across the chamber to be scattered from a surface.  Upon its incidence on a surface, the beta will lose a portion of its kinetic energy, and its trajectory is also changed.  
@@ -222,7 +221,26 @@ It is useful to remember in the discussion that follows that a beta particle eme
 
 Within this section, however, where the experimental SOE TOF spectra are examined in detail, the above assumption is insufficient, as it is necessary to consider effects from beta scattering -- both to the observed beta energy spectra, and also to the observed beta time-of-flight spectra (which, of course, are only experimentally meaningful in comparison with another timed observation).  
 
-Using Geant4, a set of beta time-of-flight spectra is generated for decays originating from within the atom cloud for all four detector+polarization combinations, and it is clear that there is a small but non-negligible fraction of such events that arise from beta scattering events, as shown in Figs.~\ref{fig:soe_tof_vs_costheta_levinger} and~\ref{fig:soe_tof_vs_costheta_0eV}.~\aside[color=org]{No, don't reference these pictures yet -- we haven't discussed the SOE TOF.}  Even within Geant4, where is \emph{is} possible to measure the beta time of flight with respect to the initial time of decay, the scattered and unscattered spectra cannot be fully separated from one another.  The strong correlation between emission angle and time-of-flight does, however, suggest that the signal-to-noise ratio could be improved by a judicious cut on the TOF spectra. 
+Using Geant4, a set of beta time-of-flight spectra is generated for decays originating from within the atom cloud for all four detector+polarization combinations, and it is clear that there is a small but non-negligible fraction of such events that arise from beta scattering events.
+%~\aside[color=org]{No, don't reference these pictures yet -- we haven't discussed the SOE TOF.}  
+Even within Geant4, where is \emph{is} possible to measure the beta time of flight with respect to the initial time of decay, the scattered and unscattered spectra cannot be fully separated from one another.  The strong correlation between emission angle and time-of-flight does, however, suggest that the signal-to-noise ratio could be improved by a judicious cut on the TOF spectra. 
+%
+In order to produce something which can be directly compared with experimental data, a TOF spectrum for SOEs must also be produced and merged with the beta TOF spectrum.  Experimentally, this is done as an event-by-event subtraction, so that is also what must be done for the simulations.  Unfortunately, these two time-of-flight spectra cannot easily be produced within a single type of simulation.  Because scattering is an important effect within the beta time of flight spectra (and resulting beta energy spectra), Geant4 is the tool of choice for this type of particle.  For shake-off electrons, which are emitted with little energy and accelerated through the electric field within the chamber, it is much more important to have an accurate model of the electric field and its effects on charged particles.  The shake-off electrons' time of flight is therefore evaluated by the TRINAT collaboration using COMSOL to track individual electrons through a model of the electric field within the experimental geometry.   
+
+The COMSOL SOEs were generated with starting positions taken from a 3D gaussian distribution near the chamber centre, with the precise position and size parameters taken from measurements using the rMCP, as in Table~\ref{table:cloudpositions}.  They are emitted with initial trajectories distributed isotropically.  Three sets of SOE events are created: two with initial energies taken from the Levinger $4S$ and $3P$ spectra in the range of 0--100\,eV, and the third with no initial kinetic energy.  The origin of these SOE energy distributions is discussed in Section~\ref{section:soe_intro}.
+%The SOEs are treated as being emitted isotropically, with their points of origin distributed according to the density of the central atom cloud.  Three separate TOF spectra are generated, with each corresponding to a different initial distribution of kinetic energy.  
+%The origin of these SOE energy distributions is discussed in Section~\ref{section:soe_intro}.  
+A final simulated SOE TOF spectrum (relative to the time of decay) was produced as a linear combination of these spectra, comprised of $9\%$ 0\,eV events, $77\%$ $4S$ events, and $14\%$ $3P$ events.  The relative contributions of each of these components arose from a comparison with experimental data, and the collaboration found that the distribution of hit positions on the eMCP was well modeled by Levinger's formulae. There was only a very weak dependence on the relative number of SOEs removed from the $4S$ and $3P$ shells, though it turned out to be very important that the distributions not be truncated at too low an energy---a surprising result given the fact that both distributions are strongly peaked at much lower energies, and many of the higher energy SOEs are able to escape the central electric field region and therefore escape detection.     The addition of the 0\,eV events from $^{37}$Ar$^{-}$ ions to the spectrum also greatly improved the fit.
+
+%\note{The SOE events were generated only up to 100 eV.  That smaller number of eV (20??) wasn't enough, even though the tail gets tiny.  Also, for higher energy SOEs, we observe a smaller fraction of the ones that are generated anyway.}
+
+%\note{We do the COMSOL thing here too, but it becomes much more useful for the background events, because that's where the electric field is really non-uniform.}
+%\note[color=bluetodo]{In the end, we used $(0.09)*(\textrm{0eV}) + (0.91)*(0.85*(\textrm{4S}) + 0.15*(\textrm{3P}))$.   That's $9+77+14$.  I will (eventually) say that *here*, not in the intro section.  Also, John used Eq.20 for the 4S, and Eq.24 for the 3P.}
+
+With both a SOE TOF spectrum generated by COMSOL and a beta TOF spectrum generated by Geant4, the two spectra were combined event-by-event to produce a simulated ``SOE -- Beta'' TOF spectrum to match the form of the data collected from the experiment. Note that although the simulated SOEs were generated from a model of the atom cloud, the betas generated by Geant4 were simply treated as originating from a pointlike distribution at the chamber centre.  Since the betas are relativistic and the cloud is small, any changes to the beta spectrum as a result of this model would be too small to be seen given the timing resolution of our detectors ($\sim 0.1\,$ns).  
+
+This ``SOE -- Beta'' spectrum is convoluted with a gaussian of width $\sigma=0.443\,$ns to model the timing jitter within our detectors.  The width of this gaussian is taken from a measurement of the ``prompt'' peak (betas incident on the eMCP before scattering into a scintillator)~\aside{Is this even what these events are?} within the equivalent experimental spectrum.  Results for Levinger SOEs and 0eV SOEs are shown in Figs.~\ref{fig:soe_tof_vs_costheta_levinger} and~\ref{fig:soe_tof_vs_costheta_0eV}, respectively.
+
 
 %\note{To be added:  point to Fig.~\ref{fig:toa_vs_costheta}.  }
 \begin{figure}[h!tb]
@@ -243,25 +261,6 @@ Using Geant4, a set of beta time-of-flight spectra is generated for decays origi
 %	\label{fig:toa_vs_costheta}  %old.  Is this even referenced anywhere now?
 	\label{fig:soe_tof_vs_costheta_0eV}
 \end{figure}
-
-
-
-%
-In order to produce something which can be directly compared with experimental data, a TOF spectrum for SOEs must also be produced and merged with the beta TOF spectrum.  Experimentally, this is done as an event-by-event subtraction, so that is also what must be done for the simulations.  Unfortunately, these two time-of-flight spectra cannot easily be produced within a single type of simulation.  Because scattering is an important effect within the beta time of flight spectra (and resulting beta energy spectra), Geant4 is the tool of choice for this type of particle.  For shake-off electrons, which are emitted with little energy and accelerated through the electric field within the chamber, it is much more important to have an accurate model of the electric field and its effects on charged particles.  The shake-off electrons' time of flight is therefore evaluated by the TRINAT collaboration using COMSOL to track individual electrons through a model of the electric field within the experimental geometry.   
-
-The COMSOL SOEs were generated with starting positions taken from a 3D gaussian distribution near the chamber centre, with the precise position and size parameters taken from measurements using the rMCP, as in Table~\ref{table:cloudpositions}.  They are emitted with initial trajectories distributed isotropically.  Three sets of SOE events are created: two with initial energies taken from the Levinger $4S$ and $3P$ spectra in the range of 0--100\,eV, and the third with no initial kinetic energy.  The origin of these SOE energy distributions is discussed in Section~\ref{section:soe_intro}.
-%The SOEs are treated as being emitted isotropically, with their points of origin distributed according to the density of the central atom cloud.  Three separate TOF spectra are generated, with each corresponding to a different initial distribution of kinetic energy.  
-%The origin of these SOE energy distributions is discussed in Section~\ref{section:soe_intro}.  
-A final simulated SOE TOF spectrum (relative to the time of decay) was produced as a linear combination of these spectra, comprised of $9\%$ 0\,eV events, $77\%$ $4S$ events, and $14\%$ $3P$ events.  The relative contributions of each of these components arose from a comparison with experimental data, and the collaboration found that the distribution of hit positions on the eMCP was well modeled by Levinger's formulae. There was only a very weak dependence on the relative number of SOEs removed from the $4S$ and $3P$ shells, though it turned out to be very important that the distributions not be truncated at too low an energy---a surprising result given the fact that both distributions are strongly peaked at much lower energies, and many of the higher energy SOEs are able to escape the central electric field region and therefore escape detection.     The addition of the 0\,eV events from $^{37}$Ar$^{-}$ ions to the spectrum also greatly improved the fit.
-
-%\note{The SOE events were generated only up to 100 eV.  That smaller number of eV (20??) wasn't enough, even though the tail gets tiny.  Also, for higher energy SOEs, we observe a smaller fraction of the ones that are generated anyway.}
-
-%\note{We do the COMSOL thing here too, but it becomes much more useful for the background events, because that's where the electric field is really non-uniform.}
-%\note[color=bluetodo]{In the end, we used $(0.09)*(\textrm{0eV}) + (0.91)*(0.85*(\textrm{4S}) + 0.15*(\textrm{3P}))$.   That's $9+77+14$.  I will (eventually) say that *here*, not in the intro section.  Also, John used Eq.20 for the 4S, and Eq.24 for the 3P.}
-
-With both a SOE TOF spectrum generated by COMSOL and a beta TOF spectrum generated by Geant4, the two spectra were combined event-by-event to produce a simulated ``SOE -- Beta'' TOF spectrum to match the form of the data collected from the experiment. Note that although the simulated SOEs were generated from a model of the atom cloud, the betas generated by Geant4 were simply treated as originating from a pointlike distribution at the chamber centre.  Since the betas are relativistic and the cloud is small, any changes to the beta spectrum as a result of this model would be too small to be seen given the timing resolution of our detectors ($\sim 0.1\,$ns).  
-
-This ``SOE -- Beta'' spectrum is convoluted with a gaussian of width $\sigma=0.443\,$ns to model the timing jitter within our detectors.  The width of this gaussian is taken from a measurement of the ``prompt'' peak (betas incident on the eMCP before scattering into a scintillator)~\aside{Is this even what these events are?} within the equivalent experimental spectrum.  
 
 
 %%%\begin{itemize}
@@ -329,6 +328,7 @@ This ``SOE -- Beta'' spectrum is convoluted with a gaussian of width $\sigma=0.4
 \section{Simulating the Background and Time of Flight}
 %\section{Scattering and Background within the SOE TOF}
 \label{sec:tof_bg}
+\note{A `timing resolution' is *absolutely* applied to these things.  Taken from the width of the prompt peak in the SOE TOF.  It's believed to come from betas that hit the eMCP then scatter into a scintillator.  The phase space where this could even happen isn't very big, but you can still see the peak.  Probably not the other way around, because it's hard to scatter out of the whole scintillator, and if it just scattered off the DSSD then you wouldn't see it in the scintillator.}
 One of the largest sources of background events in this experiment is from decaying $\isotope[37]{K}$ atoms that have escaped from the trap and become stuck on the other surfaces within the chamber.  The majority of these events can be eliminated simply by taking a time-of-flight cut on the eMCP relative to a scintillator hit time (as described in Section ~\ref{section:emcp_cuts}).  Unfortunately, this procedure cannot remove the entirety of the background, so what remains--both background events from chamber surfaces, and events from the atom cloud itself--must be modeled and understood.  
 
 The model used for events originating from the atom cloud is described in Section~\ref{sec:bs}, and this section will discuss events originating from other surfaces within the chamber.  The methodology used is very similar.  
@@ -336,12 +336,52 @@ The model used for events originating from the atom cloud is described in Sectio
 %%%%%%%%
 Spectra for both the beta time of flight and shake-off electron time of flight (calculated with respect to the time of decay) were generated, using Geant4 and COMSOL, respectively.  For these background events, the SOE and beta were both generated to originate on certain surfaces within the experimental chamber.  Because the surfaces from which generated SOEs had a viable path through the electric field onto the eMCP is relatively large, the SOE and beta spectrum must be generated, event-by-event, to originate at the same position.  This procedure not only allows us to account for differing beta times of flight resulting from different distances to either detector, it also captures the differing energy loss from scattering for observed betas originating at different positions.
 
-To model the distribution of atoms stuck to various chamber surfaces, we suppose that all escaped atoms were lost from the trap at the center of the chamber in an isotropic manner, so that the number of atoms on an object's (infinitesimal) surface element is given by the (infinitesimal) solid angle spanned by it.  Then a set of Geant4 events are generated starting from, e.g., the surface of an electrostatic hoop, and the betas are tracked through the geometry.  Only events in which a beta is incident on a scintillator are saved. 
-\note{Upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the trap not due to radioactive decay emerge isotropically from the trap and then stick to whatever chamber wall is in its path.  This upper limit is too big by a factor of 2.}
+To model the distribution of atoms stuck to surfaces within the chamber, we suppose that all escaped atoms were lost from the central cloud in an isotropic manner, so that the number of atoms on an object's (infinitesimal) surface element is given by the (infinitesimal) solid angle spanned by it.  This principle is used both to normalize the relative number of decay events between different surfaces, and also to produce the distribution of events on a given surface.  Then, for each surface of interest to us, a set of Geant4 beta decay events are generated from starting points on that surface, with those starting points distributed as described above.  The beta particles are tracked through the geometry, and only events in which a beta is incident on a scintillator are saved.
+%Then, for each surface of interest to us, a set of Geant4 beta decay events are generated, distributed
+% a set of Geant4 events are generated starting from, e.g., the surface of an electrostatic hoop, and the betas are tracked through the geometry.  O 
 
-For Geant4 events in which a scintillator hit is recorded, these events' start positions are fed into COMSOL and used as start positions for SOE events, generated with the same energy spectrum that was used for events from within the cloud, as described in Sec.~\ref{sec:bs}.~\aside{Alexandre did this.} For these events, only the ones in which an SOE was incident on the eMCP were preserved.  This process serves to provide a normalization for the relative number of events from each surface, and for the relative number of events on each part of a surface.  With a ``SOE -- Beta'' TOF spectrum to compare with experimental data, it is possible to estimate how many such events remain (and what their energy distribution looks like) after a cut on the experimental spectrum is performed. The results are shown in Fig.~\ref{fig:soetof}.
+For Geant4 events in which a scintillator hit is recorded, these events' start positions are then fed into COMSOL and used as start positions for SOE events, generated by the collaboration with the same energy spectrum that was used for events from within the cloud, as described in Sec.~\ref{sec:bs}.  %~\aside{Alexandre did this.} 
+For these events, only the ones in which an SOE was incident on the eMCP were preserved.  
+An event-by-event subtraction is then performed on the timing results of the Geant4 and COMSOL Monte Carlo spectra, such that for every event that is preserved, the SOE in COMSOL and the beta in Geant4 will have originated from the same starting position.  The results are then convoluted with a $\sigma=0.443\,$ns width gaussian to model timing jitter, as in the case of events originating from the cloud (Sec.~\ref{sec:bs}).  
+
+With a simulated ``SOE -- Beta'' TOF spectrum to compare with experimental data, it is possible to estimate how many such events remain (and what their energy distribution looks like) after a cut on the experimental spectrum is performed. The results are shown in Fig.~\ref{fig:soetof}.  An upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the cloud not attributable to radioactive decay must emerge isotropically and then stick to whatever object is in its path.  This method overestimates the amount of background by around a factor of 2. 
+
 
 In order to check this model's performance, the energy-averaged superratio asymmetry is asembled for each time-of-flight bin within both our simulated and experimental spectra, as in Fig.~\ref{fig:asymmetry_by_tof}.  Although the two plots diverge rapidly outside this TOF range, an evaluation of the $\chi^2$ statistic within this range produces a result that fits almost \emph{too} well.  
+
+
+\begin{figure}[h!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/SOE_TOF_Spectra.pdf}
+	\note{Rephrase.}
+	\note{Reference Section~\ref{section:emcp_cuts}, probably.}
+	\caption[SOE TOF -- Model and Data]{SOE TOF, with both model and data.  In the end, the data was cut to use only events with a TOF between -0.928 ns and +1.416 ns.  Max. possible background is like a factor of two too big.  Similar quality results no matter how you distribute the Levinger spectra between 4S and 3P, however adding the 0 eV electrons makes a big improvement to the agreement. }	
+	\label{fig:soetof}
+\end{figure}
+
+\begin{figure}[h!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/asymmetry_by_tof.pdf}
+%	\note{I think I want this picture to go in some other section.}
+	\note{Show the "average asymmetry" (all energies) as a function of TOF, with real data, best model normalization, and extrema of model normalizations.  Show our cut.  Turns out, it's a lot of work for a really tiny correction.  Oh well.}
+	\note[color=jb]{JB on the *actual* figure I had been planning to put here, and my remarks about it:  Indeed it will be critical to show a clear compelling version of this figure in thesis and in a paper.  It was vital to minimize and determine this background to avoid fitting a polynomial to it from the wings,  even more so for the energy dependence of A than for its average -- you should say so.
+	\\ ... \\
+The reason the correction is small is because of all your hard work.}
+	\caption{The superratio asymmetry, averaged over all scintillator energies between 400-4800 keV, is used to compare the experimental data and simulated TOF model as a proxy for the quality of the model to estimate the background.  All other cuts have been applied.}	
+	\label{fig:asymmetry_by_tof}
+\end{figure}
+
+
+%This upper limit is too big by a factor of 2.
+%This gives us a ``SOE -- Beta'' TOF spectrum to compare with experimental data, so for any place in this spec
+%s are then subtracted from each other, on an event-by-event basis, so that every event that is re
+%is convoluted with a gaussian of width $\sigma=0.443\,$ns
+%This process serves to provide a normalization for the relative number of events from each surface, and for the relative number of events on each part of a surface.  
+
+
+%\note{Upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the trap not due to radioactive decay emerge isotropically from the trap and then stick to whatever chamber wall is in its path.  This upper limit is too big by a factor of 2.}
 
 % first, with positions sampled from, e.g., the surface of an electrostatic hoop....
 %generated, event-by-event, from the same locations.  
@@ -363,16 +403,6 @@ In order to check this model's performance, the energy-averaged superratio asymm
 %%%%%how many ``bad" events are eliminated with the TOF cut, as well as the fraction of ``bad'' events left in what remains.
 %%%%%
 
-\begin{figure}[h!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/SOE_TOF_Spectra.pdf}
-	\note{Rephrase.}
-	\note{Reference Section~\ref{section:emcp_cuts}, probably.}
-	\caption[SOE TOF -- Model and Data]{SOE TOF, with both model and data.  In the end, the data was cut to use only events with a TOF between -0.928 ns and +1.416 ns.  Max. possible background is like a factor of two too big.  Similar quality results no matter how you distribute the Levinger spectra between 4S and 3P, however adding the 0 eV electrons makes a big improvement to the agreement. }	
-	\label{fig:soetof}
-\end{figure}
-
 %Our experiment has some background.  It's annoying and stupid, but as long as we can estimate how much of it there is and what it does, it's basically fine.
 
 %%%%\begin{itemize}
@@ -388,19 +418,6 @@ In order to check this model's performance, the energy-averaged superratio asymm
 %%%%	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.
 %%%%	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
 %%%%\end{itemize}
-
-\begin{figure}[h!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/asymmetry_by_tof.pdf}
-%	\note{I think I want this picture to go in some other section.}
-	\note{Show the "average asymmetry" (all energies) as a function of TOF, with real data, best model normalization, and extrema of model normalizations.  Show our cut.  Turns out, it's a lot of work for a really tiny correction.  Oh well.}
-	\note[color=jb]{JB on the *actual* figure I had been planning to put here, and my remarks about it:  Indeed it will be critical to show a clear compelling version of this figure in thesis and in a paper.  It was vital to minimize and determine this background to avoid fitting a polynomial to it from the wings,  even more so for the energy dependence of A than for its average -- you should say so.
-	\\ ... \\
-The reason the correction is small is because of all your hard work.}
-	\caption{The superratio asymmetry, averaged over all scintillator energies between 400-4800 keV, is used to compare the experimental data and simulated TOF model as a proxy for the quality of the model to estimate the background.  All other cuts have been applied.}	
-	\label{fig:asymmetry_by_tof}
-\end{figure}
 
 
 %\subsection{Begin Imported Section!  ``Background Modeling -- Decay from Surfaces within the Chamber''}
