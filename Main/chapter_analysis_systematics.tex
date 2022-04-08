@@ -86,6 +86,13 @@ MJA:  .....huh?
 
 \section{Overview}	
 A summary of systematics goes here.  In words, yes, but also in table form.
+\note[color=jb]{JB on simple things still missing:
+\\
+I see no statement near Table ~\ref{table:budget} that you are adding the uncertainties in
+quadrature. As part of that you need a simple summary
+statement that all uncertainties are
+uncorrelated and, after the corrections applied, believed to be random. 
+}
 
 
 \input{table_budget}
@@ -181,6 +188,20 @@ In the end, we get our results from the scintillator energy only, without summin
 %
 \section{Background Modeling -- Decay from Surfaces within the Chamber}
 \note[color=org]{This content got moved to Ch.~\ref{sec:tof_bg}.}
+
+\note[color=jb]{
+John on Section 5.4 Background Modeling – Decay from Surfaces within
+the Chamber:
+\\...\\
+Either add here, or omit this section and add to preamble of chapter 5:
+\\
+"The background modelling is coverered comprehensively in
+Section 4.4 ``Simulating the Background and Time of Flight''
+Since the background was reduced greatly by the improved time-of-flight
+analysis, this uncertainty makes a relatively small contribution to the
+final result.
+}
+
 %%%	So many surfaces, all of which can get stray 37K atoms stuck to them.  Then they decay from a place that isn't the actual trap center, and it contaminates our stuff.
 %%%	
 %%%%	\missingfigure{Show modelled TOF spectra in comparison with real TOF spectra.  Show the cut we made on that. }
@@ -202,11 +223,39 @@ In the end, we get our results from the scintillator energy only, without summin
 %
 \section{Quantifying the Effects of Backscatter with Geant4}
 \note[color=org]{This content got moved over *there*.  (ie, Section~\ref{sec:bs}.)}
+\note[color=jb]{John on Section 5.5 ``Quantifying the Effects of Backscatter with Geant4'':
+\\...\\
+Fig. 5.1 illustrates the distortions in the energy dependence of Abeta
+that mimics effects of bFierz. A generic 10\% uncertainty assigned to
+the GEANT4 similation of backscatter produces the largest systematic
+uncertainty in bFierz. Based on this result, the collaboration is
+attempting to improve the
+experimental design to use lower-Z materials to improve this systematic.
+\\
+\[I.e. that's all you need to say. The figure tells the story.\]
+}
 
 %%%% --- * --- %%%%
 \section{Lineshape Reconstruction}
 \label{sec:lineshape_results}
 	\note[color=org]{A lot of this content has gone into (Section~\ref{sec:responsefunction}) instead.  I really need to just mention it here (Sec.~\ref{sec:lineshape_results}) and give an indication of how good the result is.  Then evaluate stuff.}
+\note[color=jb]{John on Ch.5.6 ``Lineshape Reconstruction'':
+\\...\\
+I can only recommend now including what you've written (your extensive work on the rest you
+documented well in your TRINAT meeting reports have):
+\\...\\
+Keep the details you have in 5.6 and Fig. 5.2. Fix Fig. 5.2 caption.
+\\...\\
+Keep 5.6.2 as the conclusion of 5.6.1, omitting the final sentence
+on bremsstrahlung which is evaluated analytically now in 5.6.3.
+State clearly something like
+"The goal of the simple MC was fine-- a method to evaluate uncertainties
+without extensive simulation.
+However, difficulties including parameterizing the lineshape made its implementation less general, and
+extensive running of the full GEANT4 simulation for many small variations
+proved necessary."
+}	
+	
 %	\note[color=jb]{This section should reference Clifford.~\cite{clifford}.}
 	Clifford tells us what to do.~\cite{clifford}.
 %	\subsection{Motivation}
