@@ -51,7 +51,9 @@ In considering Tables~\ref{table:runlist_electrons} and~\ref{table:runlist_recoi
 \label{sec:rmcp_cuts}
 As described in Chapter~\ref{photoions}, the primary function of the rMCP within the context of this experiment is as a probe of the atom cloud, and it provided a critical check of the cloud's position, size, and polarization state over the course of the beamtime.  The process of cleaning, calibrating, and analyzing this data is described here.  
 
-The two delay lines located just behind the rMCP provide information about hit position.  The principle behind a delay line's operation is relatively straightforward.  The delay line itself is made from a thin wire wound into a flattened coil that covers the area of the microchannel plate.  The second delay line is oriented perpendicular to the first and immediately behind it, but also covers the full area of the microchannel plate.  When a charged particle is incident on the stack of microchannel plates, an electron shower is initiated.  The shower gains strength as it propagates through the MCPs' microchannels, and emerges on the back side of the stack after having been greatly amplified.  This electron shower is then incident on a delay line, generating an electrical pulse that propagates from the hit point towards both ends of the wire.  Although the wire is conductive, the propagation speed is finite, and this fact is key to extracting the hit position.  The time of arrival for the electrical pulse is recorded at each end of the delay line wire, and it is the difference between the two times that tells where along the wire the original hit occurred.  In general, a single delay line is only precise enough to determine the hit position as projected along the direction perpendicular to its coil's wires.
+The two delay lines located just behind the rMCP provide information about hit position.  The principle behind a delay line's operation is relatively straightforward.  The delay line itself is made from a thin wire wound into a flattened coil that covers the area of the microchannel plate.  The second delay line is oriented perpendicular to the first and immediately behind it, but also covers the full area of the microchannel plate.  When a charged particle is incident on the stack of microchannel plates, an electron shower is initiated.  The shower gains strength as it propagates through the MCPs' microchannels, and emerges on the back side of the stack after having been greatly amplified.  
+
+After emerging from the back of the MCP stack, the electron shower is then incident on a delay line, generating an electrical pulse that propagates from the hit point towards both ends of the wire.  Although the wire is conductive, the propagation speed is finite, and this fact is key to extracting the hit position.  The time of arrival for the electrical pulse is recorded at each end of the delay line wire, and it is the difference between the two times that tells where along the wire the original hit occurred.  In general, a single delay line is only precise enough to determine the hit position as projected along the direction perpendicular to its coil's wires.
 %and the initial hit position is determined in one dimension by comparing the difference in pulse arrival times at each end of the wire. 
 ~\aside{how precise is the rMCP supposed to do?  in practice, it wasn't nearly that good.} 
 The electron shower continues past the first delay line to hit the delay line immediately behind, which again creates an electrical pulse that propagates towards the ends of that wire, and a similar procedure can be used to evaluate the hit position in the perpendicular direction.  Therefore, for an event~\aside{It's not really *every* event...} in which the rMCP is hit and an electron shower is triggered, we expect to have five timestamps associated with that hit -- one associated with the MCP stack itself, and two from each delay line.
@@ -163,6 +165,7 @@ But also, I really don't want to get into this, otherwise somebody will ask me t
 \FloatBarrier
 \section{Measurements of the Atom Cloud}
 \label{sec:cloud_calibration}
+\note[color=cleanup]{Write that final paragraph about measuring the atom cloud before and after OP.}
 With the rMCP detector calibrated (Section~\ref{sec:rmcp_cals}), several types of data may be extracted.  It is possible to extract the hit positions and times-of-flight for the incident nuclear recoils, and an analysis of such data could be used to perform a test of right-handed currents within the nuclear weak force, as discussed in Chapter~\ref{section_rslow}.  However, we will focus here on what may be learned about the \emph{atom cloud} from rMCP events in coincidence with the photoionization laser.~\aside[color=org]{Also... does the camera data go in this section??}  
 
 This class of data (events with both an rMCP hit and a photoionization laser hit in coincidence) can be used to measure cloud polarization, and the methodology and results of that process as it applies to this particular experiment are discussed in a recent publication~\cite{ben_OP}.  We are also interested in the cloud's position and size during the periods of time where decay data is collected, since this represents a potential systematic effect that must be accounted for within our models.  The latter will be the primary focus of this section.  
@@ -199,7 +202,7 @@ With these basic cuts performed, the cloud position and size must be measured.  
 %Without further ado, I'm just going to put in several pictures.  Right here, right now.  They're likely to *actually* show up on subsequent pages mixed in with the other content.  I'll have to fix that at some point.
 
 
-
+\note[color=tag]{Get rid of at least like two out of the three stupid camera plots.}
 \begin{figure}[h!!t]
 	\centering
 	\includegraphics[width=.999\linewidth]
@@ -292,7 +295,6 @@ Finally, because this analysis depends heavily on energy measurements from the t
 	
 
 
-
 %\section{Beta Detector Cuts}
 %	Setup is as described in Section~\ref{section:betadetectors}.	 
 %	\note{This is a stupid section name.  Also, I really do need to describe how the cuts were made here somewhere, because it's non-trivial in many cases, and possibly different than what Ben did in some cases.  But it won't make sense to describe what I did different if I don't describe the thing as a whole, at least a bit.  The point is, this is a set of cuts/systematics that isn't really that straightforward to understand.  }
@@ -302,6 +304,7 @@ Finally, because this analysis depends heavily on energy measurements from the t
 
 \section{Further Cuts Using the DSSD}
 %\note[color=org]{Pretty sure I'm repeating myself from Chapter~\ref{???}}
+\note{Add 2D DSSD plots?}
 \note[color=jb]{JB says: To repeat a comment, since the Appendix on analysis changes is being dispersed throughout, when you state somewhere (I think it's in Ch. 6)((5?)) make sure you state clearly that the only change for BB1 cuts
 is the radius cut, e.g. that you took the same T and E from the waveforms (I'm not even sure whether the
 waveforms are recorded anyway). You  ask 'how can I state this' but there's no reason to be subtle.
@@ -371,6 +374,7 @@ The eMCP features a set of three delay lines, intended to be used to record the 
 	\note[color=org]{This pic is probably better used in an SOE section somewhere.}
 	\caption{Position as measured on the eMCP, after some data cleaning.}	
 	\label{fig:emcp_position}
+	\note[color=tag]{Delete eMCP image, or possibly move to the intro to describe Levinger.  Otherwise I have to talk about it here.}
 \end{figure}
 
 Because a SOE from the trap is most likely to land in the centre of the plate, while the background from other sources is roughly constant across the plate, \aside{Wait, what?} it might make sense to accept only events where the eMCP hit is within some radius of the central peak.  This methodology was seriously considered because the remaining data has a much lower fraction of background events polluting it -- however this results in a loss of around half of the events even for the most generous eMCP radius cuts (see Fig.~\ref{fig:soe_tof_positioncompare}).  Therefore, it was decided that no position cuts on the eMCP would be made in the final analysis.
@@ -384,6 +388,7 @@ Because a SOE from the trap is most likely to land in the centre of the plate, w
 	\caption{Beta-electron TOF, for events with and without eMCP hit position information.  A cut will eventually be taken to accept only events sufficiently near the largest peak -- in this case the number of events is `only' decreased by a factor of 2.}	
 	\label{fig:soe_tof_positioncompare}
 	\label{fig:experimental_soe_tof}
+	\note[color=tag]{Get a better set of experimental SOE TOF with/without position plots.  I think this one is wrong.}
 \end{figure}
 
 Several years after the data was initially collected, a problem was discovered with our low-level analyzer software, which we had been using to convert large and unwieldy MIDAS data sets into somewhat smaller and more manageable ROOT data sets.  In particular, for every timestamp recorded, our raw MIDAS data actually included both a timestamp for the leading edge (LE) of the pulse, and a timestamp for the trailing edge (TE).  The analyzer had--for years--been reporting the timestamp associated with the trailing edge of the pulse.  Initially it was unclear if there might have been a reason behind this choice, but a closer examination of the data showed that the LE data included less timing jitter and noise, as well as a sharper peak for timing pulses across the board (as in Fig.~\ref{fig:LE_TE}), with some channels showing a larger effect than others.  This was corrected, and the entirety of this analysis has been performed now using the cleaner LE spectra.  
@@ -411,7 +416,7 @@ With the data reprocessed using the leading edge for timestamps, I wanted to eli
 	\label{fig:WalkAdjust}
 \end{figure}
 
-With the SOE TOF spectra cleaned up, a cut can be taken to reduce the fraction of background events.  Informed by the model of background spectra described in Section~\ref{sec:tof_bg}, a was made to include only a 2.344 ns window around the primary peak in further analysis \aside{``...removing X fraction of the remaining events."}. (see Fig.~\ref{fig:soetof}).
+With the SOE TOF spectra cleaned up, a cut can be taken to reduce the fraction of background events.  Informed by the model of background spectra described in Section~\ref{sec:tof_bg}, a cut was made to include only a 2.344 ns window around the primary peak in further analysis \aside{``...removing X fraction of the remaining events."}. (see Fig.~\ref{fig:soetof}).
 \note{Probably need to put that figure somewhere else.}
 
 %To understand the events that remain after this cut, it is necessary to create a model of the background events represented therein.   This is discussed in Section~\ref{sec:tof_bg}.
@@ -425,6 +430,7 @@ With the SOE TOF spectra cleaned up, a cut can be taken to reduce the fraction o
 	{Figures/experimental_scintspectra_lin.png}
 	\caption[Experimental Scintillator Spectra]{Experimental Scintillator Spectra, for both detectors in both polarization states.  These spectra are what remain after all cuts have been taken.  All runsets are included.}	
 	\label{fig:scintspectra}
+	\note[color=tag]{Experimental scint. spectra plot needs to be referenced in text.}
 \end{figure}
 
 

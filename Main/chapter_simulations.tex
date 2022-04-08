@@ -179,6 +179,9 @@ It is useful to consider how well this empirical response function works to mode
 
 With the energy dependence for each of the response function's parameters carefully modeled, it becomes possible to make proper use of the full response function.  Given a decay event with a known beta energy from a nucleus with its initial polarization known, we can now predict a probabilistic response from \emph{both} scintillator detectors.  Obviously, for a single decay event, the full spectrum cannot be realized -- however in aggregate the modeled response function agrees well with results from the full Geant4 simulation, particularly at higher beta energies.  
 
+
+\missingfigure{Show SimpleMC spectra, and show SimpleMC+Lineshape spectra with RealData.}
+
 \note{Needs a picture of the *full* beta energy distributions that come out of the lineshape thing.  To compare with (a) data and (b) G4.  Probably a superratio in there somewhere too.}
 \note{Um.  Which of the scattering things did I actually put in at the end?  And when did I do it?  Like, how did I account for (back-)scattering?  I tried with/without .... scattering, I think?  and eventually decided not to do it.  for some reason.  I think it breaks normalization in some way that's more subtle than you would think.
 \\ ... \\
@@ -260,6 +263,7 @@ This ``SOE -- Beta'' spectrum is convoluted with a gaussian of width $\sigma=0.4
 	}	
 %	\label{fig:toa_vs_costheta}  %old.  Is this even referenced anywhere now?
 	\label{fig:soe_tof_vs_costheta_0eV}
+	\note[color=tag]{For the two cos(theta) vs TOF plots, label the cutoff cos(theta) values and label scattering categories.  Comment briefly on it in text.}
 \end{figure}
 
 
@@ -354,7 +358,8 @@ In order to check this model's performance, the energy-averaged superratio asymm
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/SOE_TOF_Spectra.pdf}
-	\note{Rephrase.}
+	\note{In SOE TOF Sim+Data plot, re-make the label.}
+	\note[color=tag]{Rephrase description of SOE TOF Sim+Data plot.}
 	\note{Reference Section~\ref{section:emcp_cuts}, probably.}
 	\caption[SOE TOF -- Model and Data]{SOE TOF, with both model and data.  In the end, the data was cut to use only events with a TOF between -0.928 ns and +1.416 ns.  Max. possible background is like a factor of two too big.  Similar quality results no matter how you distribute the Levinger spectra between 4S and 3P, however adding the 0 eV electrons makes a big improvement to the agreement. }	
 	\label{fig:soetof}
@@ -365,8 +370,8 @@ In order to check this model's performance, the energy-averaged superratio asymm
 	\includegraphics[width=.999\linewidth]
 	{Figures/asymmetry_by_tof.pdf}
 %	\note{I think I want this picture to go in some other section.}
-	\note{Show the "average asymmetry" (all energies) as a function of TOF, with real data, best model normalization, and extrema of model normalizations.  Show our cut.  Turns out, it's a lot of work for a really tiny correction.  Oh well.}
-	\note[color=jb]{JB on the *actual* figure I had been planning to put here, and my remarks about it:  Indeed it will be critical to show a clear compelling version of this figure in thesis and in a paper.  It was vital to minimize and determine this background to avoid fitting a polynomial to it from the wings,  even more so for the energy dependence of A than for its average -- you should say so.
+%	\note{Show the "average asymmetry" (all energies) as a function of TOF, with real data, best model normalization, and extrema of model normalizations.  Show our cut.  Turns out, it's a lot of work for a really tiny correction.  Oh well.}
+	\note[color=done]{JB on the *actual* figure I had been planning to put here, and my remarks about it:  Indeed it will be critical to show a clear compelling version of this figure in thesis and in a paper.  It was vital to minimize and determine this background to avoid fitting a polynomial to it from the wings,  even more so for the energy dependence of A than for its average -- you should say so.
 	\\ ... \\
 The reason the correction is small is because of all your hard work.}
 	\caption{The superratio asymmetry, averaged over all scintillator energies between 400-4800 keV, is used to compare the experimental data and simulated TOF model as a proxy for the quality of the model to estimate the background.  All other cuts have been applied.}	
