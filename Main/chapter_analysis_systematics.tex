@@ -10,35 +10,21 @@
 \label{analysis_chapter} 
 %I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
 %\missingfigure{Show simulated spectra separated by scattering category.}
-\note[color=tag]{Re-phrase (or at least un-pinken) Analysis Chapter intro blurb from John.}
-\note[color=jb]{John proposes an intro statement for this chapter (by which I really mean that other chapter, but I'm pretty sure it goes here now).  But anyway, the following two paragraphs are a direct quote from him:  }
+%\note[color=tag]{Re-phrase (or at least un-pinken) Analysis Chapter intro blurb from John.}
+\note[color=jb]{John proposes the following intro statement for this Ch.~\ref{analysis_chapter} The following two(one) paragraphs are (almost) a direct quote from him:  }
 %\note[color=jb]{JB:  Here is what I suggest for the intro the Analysis section:  (n.b.:  at the time of this comment, that was Ch.7)
 %\\...\\
 %7.0
-\comment{
-Analysis is critical to a precision measurement, as most of the research is in
-determining systematic uncertainties by self-consistent analysis and simulations.
-Each detector in this experiment is critical and has independent calibrations and cuts.
-Full explanation is here (and in two following chapters) justifying choice of the deterministic cuts,
-because in the analysis in this thesis the data was not blinded.
-The main goal of blinding was nevertheless achieved-- to make sure all analysis is done
-completely with full redundancy of checks wherever possible-- so the discipline entailed must
-be described in full detail.
-Here there are details of detectors:
-eMCP
-rMCP
-beta DSSD
-scintillator.
+%\comment{
 %\\...\\
 
-The collaboration has done an independent analysis fixing bFierz to zero.
-Differences with that analysis are interleaved in this section.
-Critical physics improvements concern
-an emcp-beta timing walk correction which enabled an improved cut against background, also incorporating
-a more complete modelling of decay backgrounds from untrapped atoms.
-Technical corrections include a correct treatment of the polarization cycle.
-An arbitrary change in the deltaE radius cut is kept self-consistent.
-}
+The collaboration has performed an independent analysis using (mostly) the same set of data to measure $\Abeta$, fixing $\bFierz$ to zero.
+Differences with that analysis are interleaved in this section and summarized in Appendix~\ref{ch:differences_data}.
+Critical physics improvements concern an eMCP-beta timing walk correction which enabled an improved cut against background, also incorporating a more complete modelling of decay backgrounds from untrapped atoms. Technical corrections include a correct treatment of the polarization cycle.
+An arbitrary change in the DSSD
+%deltaE 
+radius cut is kept self-consistent.
+%}
 
 
 %\note[color=jb]{JB:  ``I doubt I will have further useful comments on the Ch. (((this chapter))) as they are now.}
@@ -49,8 +35,7 @@ My intent of all that other advice  was to keep your time spent on Chs 1-4 ((Now
 \\ ... \\
 I can only say that if you have an equal choice between including a detail or not, pick "not." ''
 }
-
-\note[color=jb]{JB:  I will try to schedule meeting with Dan for you to show us the final version of (((Ch.~\ref{systematics_chapter}))) Estimating systematic effects soon.}
+%\note[color=jb]{JB:  I will try to schedule meeting with Dan for you to show us the final version of (((Ch.~\ref{systematics_chapter}))) Estimating systematic effects soon.}
 
 %\note[color=org]{Do I want this chapter combined with the analysis chapter?  If that chapter includes all the stuff about G4, it's going to be unwieldy and huge.}
 %\note{How do I even \emph{do} these estimations?}
@@ -99,9 +84,9 @@ uncorrelated and, after the corrections applied, believed to be random.
 %\label{table:budget}
 
 %	\section{Low-energy Scintillator Threshold}
-%	%\\*
-	Choice of low-energy scintillator threshold has a large systematic effect...  \aside{It's actually not nearly as big as I'd originally expected.  It's huge in the lineshape thing, but pretty tiny in everything else.}
-
+%\aside{Choice of low-energy scintillator threshold has a large systematic effect...  
+%\\...\\
+%It's actually not nearly as big as I'd originally expected.  It's huge in the lineshape thing, but pretty tiny in everything else.}
 
 	\note[color=jb]{from John:  ``I used Ben's threshold when determining the uncertainty from the lineshape tail (UFTLT). 
 If you're saying the UFTLT depends on the threshold used, ok, of course it does. But if you're claiming that UFTLT depends on the **uncertainty** of the threshold, that's manifestly smaller than the UFTLT itself, and I'm going to assert it isn't worth evaluating.''}
@@ -110,8 +95,50 @@ If you're saying the UFTLT depends on the threshold used, ok, of course it does.
 %%%% --- * --- %%%%
 %%%% --- * --- %%%%
 \FloatBarrier
-\section{Comparing Simulations to Experimental Data}
+\section{Comparing Simulations to Experimental Data:  The General Methodology}
 \label{sec:comparing_data_sims}
+The primary parameter measurement strategy in this project involved comparing the experimental data to a 2D parameter space of simulations, and this is true both for evaluation of the best parameter values, and also for evaluations of the uncertainties.  
+
+As described in Section~\ref{signature_chapter}, and in more detail in Appendix~\ref{appendix:superratio}, the primary experimental observable is the superratio asymmetry, which is constructed from four experimental \emph{rates} of beta detection:
+\bea
+A_{\mathrm{super}}(\Ebeta) 
+&=& 
+\frac{ \sqrt{r_{\mathrm T-}\, r_{\mathrm B+} \phantom{ (\!\!\!\!\!) } }\; -\, \sqrt{ r_{\mathrm T+}\, r_{\mathrm B-}\phantom{ (\!\!\!\!\!) }} }{ \sqrt{r_{\mathrm T-}\, r_{\mathrm B+}\phantom{ (\!\!\!\!\!) }} \;+\, \sqrt{r_{\mathrm T+}\, r_{\mathrm B-} \phantom{ (\!\!\!\!\!) }} }.
+\eea
+This quantity is closely related to the two fundamental parameters we hope to extract, 
+%$\Abeta$ and $\bFierz$, 
+and in the absence of certain systematic effects, we can cleanly describe a relationship between the observable
+%, $A_{\mathrm{super}}(\Ebeta)$, 
+and the two physical parameters ($\Abeta$ and $\bFierz$) that we might use to describe the shape of an experimentally measured $A_{\mathrm{super}}(\Ebeta)$ curve:
+\bea
+A_{\mathrm{super}}(\Ebeta) 
+&=&
+%&\approx& 
+\frac{\Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle
+}{
+1 + \bFierz \frac{mc^2}{\Ebeta}
+}.
+\label{eq:AsuperAbetabFierz}
+\eea
+
+Of course, when all systematics are properly accounted for, Eq.~\ref{eq:AsuperAbetabFierz} is no longer an adequate description of the full relationship between the observable and physical parameters.  Therefore, to compare experimental and simulated data, a series of Geant4 simulations are performed, and the superratio asymmetries constructed, using identical cuts to those used with the experimental data.  The degree to which the simulations and experiment match is evaluated by using a $\chi^2$ comparison as the figure of merit.  This is repeated for a range of $\Abeta$ and $\bFierz$ values, and a $\chi^2$ mapping of the 2D parameter space is produced.  
+
+A major caveat to the above description is that running a high statistics G4 simulation of our experiment is a computationally expensive process, so it was not possible to perform a separate simulation at every `pixel' within the parameter space.  Instead, to evaluate the central values of $\Abeta$ and $\bFierz$, only three simulations were performed for different values of $\bFierz$, all using the same nominal value for $\Abeta$.  The $A_{\mathrm{super}}(\Ebeta)$ spectra representing intermediate $\bFierz$ values were created from a linear combination of spectra generated at the two closest values of $\bFierz$.
+
+To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$ spectrum was simply scaled.  From Eq.~\ref{eq:AsuperAbetabFierz} it is clear that this works well so long as $\bFierz$ is small and any systematics are evaluated separately.  
+
+This method allows for an arbitrarily finely pixellated 2D $\chi^2$ map to be created.  It is done separately for each of the three experimental data sets so as to facilitate evaluation of systematic effects that changed between runsets.  
+
+
+%, with the results used to construct a superratio asymmetry ...
+%, and split into four beta energy spectra.  The same is done with the experimental data.
+
+
+
+%both in terms of evaluating the ``best'' parameter values, and also in terms of evaluating the uncertainties involved.  
+
+%For every `pixel' in the parameter space, a set of simulated data was compared to the three (B, C, D) sets of experimental data, and 
+
 \note[color=tag]{Actually write the section on comparing simulatons to experimental data.}
 %%%A new list, ready to evolve as I do that one systematic!  
 %%%\begin{itemize}
@@ -147,11 +174,12 @@ If you're saying the UFTLT depends on the threshold used, ok, of course it does.
 That old list:
 \begin{itemize}
 	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
+	\item We used $C_S = C_S^\prime$ for this thing, and varied that.  In fact, $g_S = \frac{1}{\sqrt{2}}(C_S+C_S^\prime)$.
 	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change much when we adjust BSM couplings.  Just use the old event generator from Holstein Eq.~(51).
 	\item generate beta-SOE TOF spectra for simulated data.  
 	\item generate background spectra and the TOF spectra to go with them.
-	\item make the same TOF cut on the simulated data and the experimental data.  
-	\item In fact, make all the same cuts on the experimental and simulated data.  DSSD cut, DSSD energy, one hit DSSD, one hit scint.  TOF cut, which requires a whole extra model of background in the TOF spectrum (see Section~\ref{sec:tof_bg}).
+%	\item make the same TOF cut on the simulated data and the experimental data.  
+%	\item In fact, make all the same cuts on the experimental and simulated data.  DSSD cut, DSSD energy, one hit DSSD, one hit scint.  TOF cut, which requires a whole extra model of background in the TOF spectrum (see Section~\ref{sec:tof_bg}).
 %%%	\begin{itemize}
 %%%		\item Suppose background in the TOF spectrum is coming from decays of atoms that have gotten themselves stuck to surfaces within the chamber...
 %%%		\item Run G4 to get a beta TOF spectrum (w.r.t. the decay)
@@ -160,8 +188,8 @@ That old list:
 %%%		\item Upper limit for the fraction of events generated this way can be estimated by assuming that all losses from the trap not due to radioactive decay emerge isotropically from the trap and then stick to whatever chamber wall is in its path.  This upper limit is too big by a factor of 2.
 %%%	\end{itemize}
 	\item For each of those 3 simulations, sort the ``good'' data according to emission angle relative to the detector.  Do each detector individually.  For both polarizations.
-	\item Assemble the (simulated) superratio asymmetry.  We'll compare it to data, and the $\chi^2$ from that comparison will be our figure of merit.  
-	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.
+%	\item Assemble the (simulated) superratio asymmetry.  We'll compare it to data, and the $\chi^2$ from that comparison will be our figure of merit.  
+%	\item We can make a whole 2D parameter space for different values of $\Abeta$ and $\bFierz$, and compare them all (via their superratio asymmetries) to the experimental data.  We get the ``best'' values of $\Abeta$ and $\bFierz$, where $\chi^2$ is minimized.
 	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
 \end{itemize}
 
@@ -225,21 +253,21 @@ final result.
 \note[color=org]{This content got moved over *there*.  (ie, Section~\ref{sec:bs}.)}
 \note[color=jb]{John on Section 5.5 ``Quantifying the Effects of Backscatter with Geant4'':
 \\...\\
-Fig. 5.1 illustrates the distortions in the energy dependence of Abeta
+Fig.~\ref{fig:asymmetry_scattering} illustrates the distortions in the energy dependence of Abeta
 that mimics effects of bFierz. A generic 10\% uncertainty assigned to
 the GEANT4 similation of backscatter produces the largest systematic
 uncertainty in bFierz. Based on this result, the collaboration is
 attempting to improve the
 experimental design to use lower-Z materials to improve this systematic.
 \\
-\[I.e. that's all you need to say. The figure tells the story.\]
+(I.e. that's all you need to say. The figure tells the story.)
 }
 
 %%%% --- * --- %%%%
 \section{Lineshape Reconstruction}
 \label{sec:lineshape_results}
 	\note[color=org]{A lot of this content has gone into (Section~\ref{sec:responsefunction}) instead.  I really need to just mention it here (Sec.~\ref{sec:lineshape_results}) and give an indication of how good the result is.  Then evaluate stuff.}
-\note[color=jb]{John on Ch.5.6 ``Lineshape Reconstruction'':
+\note[color=jb]{John on Ch.~\ref{sec:lineshape_results} ``Lineshape Reconstruction'':
 \\...\\
 I can only recommend now including what you've written (your extensive work on the rest you
 documented well in your TRINAT meeting reports have):

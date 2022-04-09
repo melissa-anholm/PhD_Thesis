@@ -32,7 +32,7 @@ Unfortunately, terms arising from interactions beyond the standard model are not
 \note{Furthermore, although it is currently understood that the weak interaction is predominantly or perhaps entirely `left-handed', the JTW treatment leaves certain phase angles unfixed, and is therefore able to accurately describe a decay which is, for example, partially `right-handed' -- however the latter feature is not directly relevant to the project at hand.  [It's several phase angles in JTW, but maybe it's fundamentally only like one angle on some level?  Also I think it's not actually a ``gauge freedom,'' per se.  .... No, I'm pretty sure this `phase angle' description is all wrong.]  Also, consider time reversal!  Anyway, most of this paragraph probably goes better in Section~\ref{sec:math_formalism}.}
 Despite JTW's broad ability to describe beta decay under a variety of physical models, this treatment includes only the leading-order terms, and smaller terms, such as recoil-order corrections, are neglected entirely.  
 
-\note[color=org]{Surely I describe what recoil-order corrections even *are* in some appendix somewhere, right?  Or, possibly, in Section~\ref{sec:math_formalism}.  Possibly the paragraphs above need to be moved...}
+%\note[color=org]{Surely I describe what recoil-order corrections even *are* in some appendix somewhere, right?  Or, possibly, in Section~\ref{sec:math_formalism}.  Possibly the paragraphs above need to be moved...}
 
 Because the present project is a precision measurement of the Fierz interference, a term which arises from scalar and tensor couplings, it was imperative to create an event generator for our G4 simulations that could account for these exotic interactions while also including in its PDF the higher-order effects which, in some cases, can mimic the effects of a scalar or tensor current.  
 
@@ -43,7 +43,7 @@ In light of the above considerations, it was decided that an entirely new event 
 It is this combined Holstein+JTW expression that forms the basis of the new G4 event generator.  It must be noted that although the largest effect from any present scalar or tensor interactions would likely (depending on certain phase angles) be in a non-zero value of $\bFierz$, these interactions can also introduce a perturbation to $\Abeta$ at a higher order.  In order for any precision experimental measurement of $\bFierz$ to be generalized to limits on the parameter space of scalar and tensor currents, it is important to incorporate an accurate representation of the results of such exotic interactions on \emph{all} available observables, and the new G4 event generator does this.  
 
 \note{Things that the G4 simulation did that I kept include:  an accurate representation of the complex details of our experimental geometry.  Also, the noise spectra on the DSSDs.}
-
+\note{OK, somewhere I really have to say specifically the parameter that I varied and chi-squared-ed...  it's some sort of pseudo-Holstein-eque $g_S$, which combines "left handed" and "right handed" scalar couplings.  Also, no tensors.  Pretty sure it comes out equivalent to looking for tensors within bFierz, but gives a slightly different value of Abeta. But maybe this goes in the Analysis chapter?}
 
 \FloatBarrier
 \section{The Simple Monte Carlo and Response Function}
