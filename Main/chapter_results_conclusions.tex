@@ -40,54 +40,8 @@ Results go here, with measured limits described and quantified in all formats an
 \note[color=jb]{John says to just skip doing the $C_S$ and $C_T$ stuff, for now.  No time.  Really, $C_S$ is already basically done, but then that'll lead to awkward questions about $C_T$.}
 
 %
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/BestAsymmetry_SetB.png}
-	\caption[SetB Superratio Asymmetry]{A superratio asymmetry from Dataset B, and the best fits from simulations.}	
-	\label{fig:asymmetryB}
-\end{figure}
-%
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/BestAsymmetry_SetC.png}
-	\caption[SetC Superratio Asymmetry]{A superratio asymmetry from Dataset C, and the best fits from simulations.}	
-	\label{fig:asymmetryC}
-\end{figure}
-%	
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/BestAsymmetry_SetD.png}
-	\caption[SetD Superratio Asymmetry]{A superratio asymmetry from Dataset D, and the best fits from simulations.}	
-	\label{fig:asymmetryD}
-\end{figure}
 
 %%%
-\begin{figure}[h!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/Chi2_2D_SetB.png}
-	\caption[$\chi^2$ Map for Runset B]{A $\chi^2$ map to compare data from Runset B to a parameter space of $\Abeta$ and $\bFierz$ values.}	
-	\label{fig:2dchi2_setB}
-\end{figure}
-%
-\begin{figure}[h!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/Chi2_2D_SetC.png}
-	\caption[$\chi^2$ Map for Runset C]{A $\chi^2$ map to compare data from Runset C to a parameter space of $\Abeta$ and $\bFierz$ values.}	
-	\label{fig:2dchi2_setC}
-\end{figure}
-%
-\begin{figure}[h!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/Chi2_2D_SetD.png}
-	\caption[$\chi^2$ Map for Runset D]{A $\chi^2$ map to compare data from Runset D to a parameter space of $\Abeta$ and $\bFierz$ values.}	
-	\label{fig:2dchi2_setD}
-\end{figure}
 %
 \begin{figure}[h!tb]
 	\centering
@@ -104,6 +58,27 @@ Info on the $\Abeta$ measurement goes here too.  In particular, you set $\bFierz
 %%% %%%%%%% %%%
 \section{Discussion of Corrections and Uncertainties}
 \label{sec:discussion_corrections_uncertainties}
+%\section{Overview}	
+%A summary of systematics goes here.  In words, yes, but also in table form.
+\note[color=jb]{JB on simple things still missing:
+\\
+I see no statement near Table ~\ref{table:budget} that you are adding the uncertainties in
+quadrature. As part of that you need a simple summary
+statement that all uncertainties are
+uncorrelated and, after the corrections applied, believed to be random. 
+}
+
+A list of uncertainties is provided in Table~\ref{table:budget}.
+\input{table_budget}  %\label{table:budget}
+
+%	\section{Low-energy Scintillator Threshold}
+%\aside{Choice of low-energy scintillator threshold has a large systematic effect...  
+%\\...\\
+%It's actually not nearly as big as I'd originally expected.  It's huge in the lineshape thing, but pretty tiny in everything else.}
+
+%%%%\note[color=jb]{from John:  ``I used Ben's threshold when determining the uncertainty from the lineshape tail (UFTLT). 
+%%%%If you're saying the UFTLT depends on the threshold used, ok, of course it does. But if you're claiming that UFTLT depends on the **uncertainty** of the threshold, that's manifestly smaller than the UFTLT itself, and I'm going to assert it isn't worth evaluating.''}
+
 \note[color=jb]{JB on Ch. \ref{sec:discussion_corrections_uncertainties} -- `discussion of corrections and uncertainties':
 \\...\\
 could be as simple as

@@ -5,7 +5,7 @@
 %%%% --- * --- %%%%	
 \chapter[Notation]{Comparing Notation between Holstein and JTW}
 \label{appendix_notation}
-
+%%%%%\note[color=tag]{Un-pinken the pink things in Tables~\ref{table:compare_notation_angularmomentum}, \ref{table:compare_notation_multipoles}.  Probably rephrase the descriptions for Tables~\ref{table:compare_notation_kinematic}, \ref{table:compare_notation_multipoles}. }
 %\note[color=jb]{JB on how to triage Appendix C:   
 %\\
 %keep after: 
@@ -15,13 +15,47 @@
 %   C.2 Remove subsection title, replace by one sentence 'This section includes handwritten notes.' without further apology. We can't pay you anymore
 %to make nice Latex. If the committee or Gerald objects to complex handwritten notes, App. C -> internal.}
 
-\note{I see some stuff in my old Appendix D that needs to be moved (in here?  Or maybe in Old Appendix E) before it goes away forever.}
-\note[color=jb]{JB:  Appendix C has some redundancies with B. You will have to sort that out.  (n.b.:  from context, it's less clear which appendices he's actually talking about, but whatever, there's certainly redundancies all around.}
+%%%%%\note{I see some stuff in my old Appendix D that needs to be moved (in here?  Or maybe in Old Appendix E) before it goes away forever.}
+%%%%%\note[color=jb]{JB:  Appendix C has some redundancies with B. You will have to sort that out.  (n.b.:  from context, it's less clear which appendices he's actually talking about, but whatever, there's certainly redundancies all around.}
 
-%\section{Comparing Notation between Holstein and JTW}
-\section{Comparison Guide}
-	This is a short guide to differences in notation, sign convention, and normalization.  There are several tables here, chosen to aid in conversion between the two conventions.  %In the mean time, here's a bunch of old handwritten notes on the topic, that I'll eventually have to typeset and process into something intelligible.  
-This section also includes handwritten notes.
+%%%%%%\section{Comparing Notation between Holstein and JTW}
+%%%%%\FloatBarrier
+%%%%%\section{Relations between Terms within the PDFs}
+%%%%%\label{sec:imported_equations}
+%%%%%\note[color=tag]{Rephrase the descriptive paragraph in Sec.~\ref{sec:imported_equations}.  Is this content redundant?}
+%%%%%Here are some equations.  I want to keep these somewhere in this chapter.  For the equations below, I am intentionally not including the ROC terms.  We take only enough Holstein terms to construct the expressions JTW gives us.
+%%%%%%\note{In fact, 
+%%%%%%\beq 
+%%%%%%\xi = G_v^2 \, \cos\theta_C \, f_1(E)
+%%%%%%\eeq  
+%%%%%%}
+%%%%%
+
+%\section{Comparison Guide}
+	This section provides several equations and tables intended to be used as a quick reference for comparing differences in notation, sign convention, and normalization between two different descriptions of the beta decay probability distribution.  This section also includes several pages of handwritten notes.
+
+%	 a short guide to differences in notation, sign convention, and normalization.  There are several tables here, chosen to aid in conversion between the two conventions.  
+%In the mean time, here's a bunch of old handwritten notes on the topic, that I'll eventually have to typeset and process into something intelligible.  
+
+The following equations provide a term-by-term comparison between the Holstein and JTW conventions, intentionally neglecting ROC terms.  % i.e., we take only enough Holstein terms to construct the expressions JTW gives us.
+\bea
+\xi &=& G_v^2 \, \cos\theta_C \, f_1(E) \\
+a_{\beta\nu} &=& f_2(E) \: / \: f_1(E) \\
+\frac{\langle\vec{J}\rangle}{J} \cdot \frac{\vec{p}}{E} \,\, A_\beta 
+  &=& \Lambda_1 \hat{n}\cdot \frac{\vec{p}}{E} \, f_4(E) \:/\: f_1(E) \\
+\frac{\langle\vec{J}\rangle}{J} \cdot \frac{\vec{p}_\nu}{E_\nu} B_\nu  
+  &=& \Lambda_1 \hat{n} \cdot \vec{k} \;\;\, f_6(E) \:/\: f_1(E) \\
+\frac{\langle\vec{J}\rangle}{J} \cdot \frac{\left( \vec{p} \times \vec{p}_\nu \right)}{E_{} E_\nu} D_{\mathrm{TR}} 
+  &=& \Lambda_1 \hat{n} \cdot ( \frac{\vec{p}}{E} \times \hat{k} \,) \;\; f_8(E) \:/\: f_1(E)
+\end{eqnarray}
+\begin{eqnarray}
+&& \!\!\!\! \!\!\!\! 
+\left[ \frac{J(J+1) - 3\langle (\vec{J}\cdot\hat{j})^2 \rangle}{J(2J-1)} \right] \!\!\!
+\left[\frac{1}{3} \frac{\vec{p}\cdot\vec{p}_\nu }{E_{} E_\nu} - \frac{ (\vec{p}\cdot\hat{j}) (\vec{p}_\nu \cdot\hat{j} ) }{E_{} E_\nu} \right]c_{\mathrm{align}}
+\nonumber\\
+&& \;\;\;\; \;\;=\;\; \Lambda_2 \! \left[(\hat{n}\cdot\frac{\vec{p}}{E})(\hat{n}\cdot\hat{k})  - \frac{1}{3} (\frac{\vec{p}}{E}\cdot\hat{k} \,)\right] \; f_{12}(E) \:/\: f_1(E)
+\end{eqnarray}
+
 
 %Here's a table.
 \input{table_comparenotation_kinematic}        % table:compare_notation_kinematic
@@ -37,7 +71,9 @@ This section also includes handwritten notes.
 
 
 
-%\section{Some old handwritten notes.}
+\FloatBarrier
+%\section{Some Handwritten Notes}
+%This section includes handwritten notes.
 %One day, these will go away and be replaced by nice clean latex.
 \begin{figure}[htb]
 	\centering
@@ -88,25 +124,3 @@ This section also includes handwritten notes.
 \end{figure}
 
 
-\section{Imported from Another Appendix}
-Here are some equations.  I want to keep these somewhere in this chapter.  For the equations below, I am intentionally not including the ROC terms.  We take only enough Holstein terms to construct the expressions JTW gives us.
-%\note{In fact, 
-%\beq 
-%\xi = G_v^2 \, \cos\theta_C \, f_1(E)
-%\eeq  
-%}
-\bea
-\xi &=& G_v^2 \, \cos\theta_C \, f_1(E) \\
-a_{\beta\nu} &=& f_2(E) \: / \: f_1(E) \\
-\frac{\langle\vec{J}\rangle}{J} \cdot \frac{\vec{p}}{E} \,\, A_\beta 
-  &=& \Lambda_1 \hat{n}\cdot \frac{\vec{p}}{E} \, f_4(E) \:/\: f_1(E) \\
-\frac{\langle\vec{J}\rangle}{J} \cdot \frac{\vec{p}_\nu}{E_\nu} B_\nu  
-  &=& \Lambda_1 \hat{n} \cdot \vec{k} \;\;\, f_6(E) \:/\: f_1(E) \\
-\frac{\langle\vec{J}\rangle}{J} \cdot \frac{\left( \vec{p} \times \vec{p}_\nu \right)}{E_{} E_\nu} D_{\mathrm{TR}} 
-  &=& \Lambda_1 \hat{n} \cdot ( \frac{\vec{p}}{E} \times \hat{k} \,) \;\; f_8(E) \:/\: f_1(E)
-\end{eqnarray}
-\begin{eqnarray}
-&& \left[ \frac{J(J+1) - 3\langle (\vec{J}\cdot\hat{j})^2 \rangle}{J(2J-1)} \right] \!\!\!
-\left[\frac{1}{3} \frac{\vec{p}\cdot\vec{p}_\nu }{E_{} E_\nu} - \frac{ (\vec{p}\cdot\hat{j}) (\vec{p}_\nu \cdot\hat{j} ) }{E_{} E_\nu} \right]c_{\mathrm{align}} \nonumber\\
-&& = \Lambda_2 \! \left[(\hat{n}\cdot\frac{\vec{p}}{E})(\hat{n}\cdot\hat{k})  - \frac{1}{3} (\frac{\vec{p}}{E}\cdot\hat{k} \,)\right] \; f_{12}(E) \:/\: f_1(E)
-\end{eqnarray}

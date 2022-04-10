@@ -8,6 +8,8 @@
 \chapter{Analysis and Estimates of Systematic Effects}
 \label{systematics_chapter}
 \label{analysis_chapter} 
+\note[color=tag]{Write the whole damn Analysis chapter.}
+\note[color=tag]{Go through and change all instances of ``Beta - SOE''/``Beta---SOE''/etc to ``SOE -  Beta''/etc.}
 %I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
 %\missingfigure{Show simulated spectra separated by scattering category.}
 %\note[color=tag]{Re-phrase (or at least un-pinken) Analysis Chapter intro blurb from John.}
@@ -19,7 +21,7 @@
 %\\...\\
 
 The collaboration has performed an independent analysis using (mostly) the same set of data to measure $\Abeta$, fixing $\bFierz$ to zero.
-Differences with that analysis are interleaved in this section and summarized in Appendix~\ref{ch:differences_data}.
+Differences with that analysis are interleaved in this section~\aside{Are they even though??} and summarized in Appendix~\ref{ch:differences_data}.
 Critical physics improvements concern an eMCP-beta timing walk correction which enabled an improved cut against background, also incorporating a more complete modelling of decay backgrounds from untrapped atoms. Technical corrections include a correct treatment of the polarization cycle.
 An arbitrary change in the DSSD
 %deltaE 
@@ -69,27 +71,6 @@ place of the DSSD.
 MJA:  .....huh?
 }
 
-\section{Overview}	
-A summary of systematics goes here.  In words, yes, but also in table form.
-\note[color=jb]{JB on simple things still missing:
-\\
-I see no statement near Table ~\ref{table:budget} that you are adding the uncertainties in
-quadrature. As part of that you need a simple summary
-statement that all uncertainties are
-uncorrelated and, after the corrections applied, believed to be random. 
-}
-
-
-\input{table_budget}
-%\label{table:budget}
-
-%	\section{Low-energy Scintillator Threshold}
-%\aside{Choice of low-energy scintillator threshold has a large systematic effect...  
-%\\...\\
-%It's actually not nearly as big as I'd originally expected.  It's huge in the lineshape thing, but pretty tiny in everything else.}
-
-	\note[color=jb]{from John:  ``I used Ben's threshold when determining the uncertainty from the lineshape tail (UFTLT). 
-If you're saying the UFTLT depends on the threshold used, ok, of course it does. But if you're claiming that UFTLT depends on the **uncertainty** of the threshold, that's manifestly smaller than the UFTLT itself, and I'm going to assert it isn't worth evaluating.''}
 
 
 %%%% --- * --- %%%%
@@ -121,14 +102,64 @@ A_{\mathrm{super}}(\Ebeta)
 \label{eq:AsuperAbetabFierz}
 \eea
 
-Of course, when all systematics are properly accounted for, Eq.~\ref{eq:AsuperAbetabFierz} is no longer an adequate description of the full relationship between the observable and physical parameters.  Therefore, to compare experimental and simulated data, a series of Geant4 simulations are performed, and the superratio asymmetries constructed, using identical cuts to those used with the experimental data.  The degree to which the simulations and experiment match is evaluated by using a $\chi^2$ comparison as the figure of merit.  This is repeated for a range of $\Abeta$ and $\bFierz$ values, and a $\chi^2$ mapping of the 2D parameter space is produced.  
+Of course, when all systematics are properly accounted for, Eq.~\ref{eq:AsuperAbetabFierz} is no longer an adequate description of the full relationship between the observable and physical parameters and a comparison to monte carlo must be used.  A series of Geant4 simulations are performed and the results are (re-)processed with slightly different cuts and calibrations so as to match with the experimental conditions in each of the three electron datasets, and the superratio asymmetries are constructed.  The degree to which the simulations and experiment match is evaluated by using a $\chi^2$ comparison of the superratio asymmetries as the figure of merit (see Figs.~\ref{fig:asymmetryB},\ref{fig:asymmetryC},\ref{fig:asymmetryD}).  This is repeated for a range of $\Abeta$ and $\bFierz$ values, and a $\chi^2$ mapping of the 2D parameter space is produced.  
 
-A major caveat to the above description is that running a high statistics G4 simulation of our experiment is a computationally expensive process, so it was not possible to perform a separate simulation at every `pixel' within the parameter space.  Instead, to evaluate the central values of $\Abeta$ and $\bFierz$, only three simulations were performed for different values of $\bFierz$, all using the same nominal value for $\Abeta$.  The $A_{\mathrm{super}}(\Ebeta)$ spectra representing intermediate $\bFierz$ values were created from a linear combination of spectra generated at the two closest values of $\bFierz$.
+%
+\begin{figure}[h!t!b!]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/BestAsymmetry_SetB.png}
+	\caption[SetB Superratio Asymmetry]{A superratio asymmetry from Dataset B, and the best fits from simulations.}	
+	\label{fig:asymmetryB}
+\end{figure}
+%
+\begin{figure}[h!t!b!]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/BestAsymmetry_SetC.png}
+	\caption[SetC Superratio Asymmetry]{A superratio asymmetry from Dataset C, and the best fits from simulations.}	
+	\label{fig:asymmetryC}
+\end{figure}
+%	
+\begin{figure}[h!t!b!]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/BestAsymmetry_SetD.png}
+	\caption[SetD Superratio Asymmetry]{A superratio asymmetry from Dataset D, and the best fits from simulations.}	
+	\label{fig:asymmetryD}
+\end{figure}
+%
 
-To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$ spectrum was simply scaled.  From Eq.~\ref{eq:AsuperAbetabFierz} it is clear that this works well so long as $\bFierz$ is small and any systematics are evaluated separately.  
+For each superratio asymmetry constructed from simulated spectra, the scintillator spectra from which the superratio asymmetry is comprised are created as a linear combination of Geant4 beta decay events originating from the atom cloud and from surfaces within the chamber.  Both components of the spectra are combined event-by-event with SOE events generated in COMSOL, as described in Sections~\ref{sec:bs} and~\ref{sec:tof_bg}, as this is necessary for the critical time-of-flight cut on the ``SOE -- Beta'' spectra.  For decays originating within the atom cloud, both the primary decay branch and the subdominant `two percent' branch are allowed to contribute events, and only the dominant branch is varied as a function of BSM couplings.  For background events, only the Standard Model primary branch is simulated.  
 
-This method allows for an arbitrarily finely pixellated 2D $\chi^2$ map to be created.  It is done separately for each of the three experimental data sets so as to facilitate evaluation of systematic effects that changed between runsets.  
+A major caveat to the above description is that running a high statistics G4 simulation of our experiment is a computationally expensive process, so it was not possible to perform a separate simulation at every `pixel' within the parameter space.  Instead, to evaluate how well the experimental data matched to the expectation for varying values of $\Abeta$ and $\bFierz$, only three simulations were performed for different values of $\bFierz$, all using the same nominal value for $\Abeta$.  The $A_{\mathrm{super}}(\Ebeta)$ spectra representing intermediate $\bFierz$ values were created from a linear combination of spectra generated at the two closest values of $\bFierz$.
 
+To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$ spectrum was simply scaled.  From Eq.~\ref{eq:AsuperAbetabFierz} it is clear that this works well so long as $\bFierz$ is small and any systematics are evaluated separately.  This method allows for an arbitrarily finely pixellated 2D $\chi^2$ map to be created.  It is done separately for each of the three experimental data sets so as to facilitate evaluation of systematic effects that changed between runsets.  See Figs.~\ref{fig:2dchi2_setB},\ref{fig:2dchi2_setC},\ref{fig:2dchi2_setD}.
+
+\begin{figure}[h!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/Chi2_2D_SetB.png}
+	\note{The circles show 1 sigma, 90\%, and 95\% confidence intervals.  But also, only statistical uncertainty is represented here, while systematic uncertainties are evaluated by adjusting parameters and creating a new (set of) chi2 maps very much like this one.}
+	\caption[$\chi^2$ Map for Runset B]{A $\chi^2$ map to compare data from Runset B to a parameter space of $\Abeta$ and $\bFierz$ values.}	
+	\label{fig:2dchi2_setB}
+\end{figure}
+%
+\begin{figure}[h!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/Chi2_2D_SetC.png}
+	\caption[$\chi^2$ Map for Runset C]{A $\chi^2$ map to compare data from Runset C to a parameter space of $\Abeta$ and $\bFierz$ values.}	
+	\label{fig:2dchi2_setC}
+\end{figure}
+%
+\begin{figure}[h!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/Chi2_2D_SetD.png}
+	\caption[$\chi^2$ Map for Runset D]{A $\chi^2$ map to compare data from Runset D to a parameter space of $\Abeta$ and $\bFierz$ values.}	
+	\label{fig:2dchi2_setD}
+\end{figure}
 
 %, with the results used to construct a superratio asymmetry ...
 %, and split into four beta energy spectra.  The same is done with the experimental data.
@@ -139,7 +170,7 @@ This method allows for an arbitrarily finely pixellated 2D $\chi^2$ map to be cr
 
 %For every `pixel' in the parameter space, a set of simulated data was compared to the three (B, C, D) sets of experimental data, and 
 
-\note[color=tag]{Actually write the section on comparing simulatons to experimental data.}
+%\note[color=tag]{Actually write the section on comparing simulatons to experimental data.}
 %%%A new list, ready to evolve as I do that one systematic!  
 %%%\begin{itemize}
 %%%	\item Beryllium foil.  It's the beryllium foil.  
@@ -159,6 +190,8 @@ This method allows for an arbitrarily finely pixellated 2D $\chi^2$ map to be cr
 %%%%%%%	\end{itemize}
 %%%\end{itemize}
 
+
+\FloatBarrier
 \begin{figure}[h!!!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
@@ -173,11 +206,11 @@ This method allows for an arbitrarily finely pixellated 2D $\chi^2$ map to be cr
 
 That old list:
 \begin{itemize}
-	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
-	\item We used $C_S = C_S^\prime$ for this thing, and varied that.  In fact, $g_S = \frac{1}{\sqrt{2}}(C_S+C_S^\prime)$.
-	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change much when we adjust BSM couplings.  Just use the old event generator from Holstein Eq.~(51).
-	\item generate beta-SOE TOF spectra for simulated data.  
-	\item generate background spectra and the TOF spectra to go with them.
+%%	\item Run 3 sets of G4 simulations with a bunch of statistics (N events, for data with like N/10 events).  Each one has the same nominal value of $\Abeta$, but with 3 different values of the scalar coupling $C_S$:  zero, and +/-(whatever).  Keep $C_T=0$.  Because reasons, we're not really able to distinguish between $C_S$ and $C_T$ in this experiment anyway, so might as well keep the analysis simple.
+%%	\item We used $C_S = C_S^\prime$ for this thing, and varied that.  In fact, $g_S = \frac{1}{\sqrt{2}}(C_S+C_S^\prime)$.
+%%	\item Just run one set of 0.02*N events for the two percent branch.  We can't neglect it, but it isn't going to change much when we adjust BSM couplings.  Just use the old event generator from Holstein Eq.~(51).
+%%	\item generate beta-SOE TOF spectra for simulated data.  
+%%	\item generate background spectra and the TOF spectra to go with them.
 %	\item make the same TOF cut on the simulated data and the experimental data.  
 %	\item In fact, make all the same cuts on the experimental and simulated data.  DSSD cut, DSSD energy, one hit DSSD, one hit scint.  TOF cut, which requires a whole extra model of background in the TOF spectrum (see Section~\ref{sec:tof_bg}).
 %%%	\begin{itemize}
