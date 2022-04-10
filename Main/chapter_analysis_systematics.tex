@@ -9,7 +9,7 @@
 \label{systematics_chapter}
 \label{analysis_chapter} 
 \note[color=tag]{Write the whole damn Analysis chapter.}
-\note[color=tag]{Go through and change all instances of ``Beta - SOE''/``Beta---SOE''/etc to ``SOE -  Beta''/etc.}
+\note[color=tag]{Go through and change all instances of ``Beta - SOE''/``Beta---SOE''/etc to ``SOE -  Beta''/etc., *within the whole thesis*.}
 %I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
 %\missingfigure{Show simulated spectra separated by scattering category.}
 %\note[color=tag]{Re-phrase (or at least un-pinken) Analysis Chapter intro blurb from John.}
@@ -141,6 +141,7 @@ To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$
 	\includegraphics[width=.999\linewidth]
 	{Figures/Chi2_2D_SetB.png}
 	\note{The circles show 1 sigma, 90\%, and 95\% confidence intervals.  But also, only statistical uncertainty is represented here, while systematic uncertainties are evaluated by adjusting parameters and creating a new (set of) chi2 maps very much like this one.}
+	\note[color=tag]{On the per-dataset $\chi^2$ maps and SR asymmetries, go through and write descriptions for the goddamn pictures.}
 	\caption[$\chi^2$ Map for Runset B]{A $\chi^2$ map to compare data from Runset B to a parameter space of $\Abeta$ and $\bFierz$ values.}	
 	\label{fig:2dchi2_setB}
 \end{figure}
@@ -229,9 +230,14 @@ That old list:
 
 
 \FloatBarrier
-\section{BB1 Radius, Energy Threshold, Agreement}
+\section{Evaluation of Systematic Effects}
+\label{section:systematics}
+\subsection{Detector Calibrations and Thresholds}
+\subsubsection{Scintillators}
+...
+\subsubsection{DSSD Radius, Energy Threshold, Agreement}
+%\section{BB1 Radius, Energy Threshold, Agreement}
 \label{section:bb1_systematics}
-	%\\*
 BB1 radius cut can help to eliminate scattered events.  Energy threshold selection and statistical agreement between BB1 detectors' energies only makes a small effect on results.  BB1 radius itself has a pretty big effect on the result, but we can at least just G4 it away.  The remaining systematic effect is pretty small.  
 \note[color=jb]{JB:  I hope the discussion is clear in your head.  Any effect that relies on scattering computation in G4 should have an uncertainty on order 10\% of the correction -- hopefully you are keeping a distinction here between the finite geometry acceptance (which I guess is exact) scattering off the collimator.}
 \note[color=jb]{As per JB's comment in section~\ref{thesisconventionjb}:   ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement."}
@@ -243,63 +249,11 @@ BB1 radius cut can help to eliminate scattered events.  Energy threshold selecti
 In the end, we get our results from the scintillator energy only, without summing the BB1 energy back in.  Energy absorbed in DSSDs is only used as (a) a tag for events, and (b) contributing to the total beta energy loss before the beta arrives at the scintillator.
 \note[color=jb]{JB:  The simulations of course include it event-by-event, not just a minimally ionizing average loss.}
 
-
-
-
-%
-\section{Background Modeling -- Decay from Surfaces within the Chamber}
-\note[color=org]{This content got moved to Ch.~\ref{sec:tof_bg}.}
-
-\note[color=jb]{
-John on Section 5.4 Background Modeling – Decay from Surfaces within
-the Chamber:
-\\...\\
-Either add here, or omit this section and add to preamble of chapter 5:
-\\
-"The background modelling is coverered comprehensively in
-Section 4.4 ``Simulating the Background and Time of Flight''
-Since the background was reduced greatly by the improved time-of-flight
-analysis, this uncertainty makes a relatively small contribution to the
-final result.
-}
-
-%%%	So many surfaces, all of which can get stray 37K atoms stuck to them.  Then they decay from a place that isn't the actual trap center, and it contaminates our stuff.
-%%%	
-%%%%	\missingfigure{Show modelled TOF spectra in comparison with real TOF spectra.  Show the cut we made on that. }
-%%%	\note[color=jb]{JB on figures that might go here:  Figure 6.4 (currently that picture of the TOF spectrum) could either be here, or you could reference it from here. The TOF histogram is a great start. Adding the asymmetry[TOF] indeed would be vital.}
-%%%	\missingfigure{Show the "average asymmetry" (all energies) as a function of TOF, with real data, best model normalization, and extrema of model normalizations.  Show our cut.  Turns out, it's a lot of work for a really tiny correction.  Oh well.}
-%%%	\note[color=jb]{JB on the *actual* figure I had been planning to put here, and my remarks about it:  Indeed it will be critical to show a clear compelling version of this figure in thesis and in a paper.  It was vital to minimize and determine this background to avoid fitting a polynomial to it from the wings,  even more so for the energy dependence of A than for its average -- you should say so.
-%%%	\\ ... \\
-%%%The reason the correction is small is because of all your hard work.}
-%%%	
-%%%	We model the beta TOF from the surfaces in G4, event by event.  This is necessary because scattered \aside[color=jb]{JB:  ``I wouldn't call these "scattered" events... that's very misleading.'' 
-%%%	\\ ... \\ 
-%%%	Yeah, I should really stop doing that.  
-%%%	\\ ... \\ 
-%%%	Wait no, scattered is what I mean!  But fine, my phrasing is really unclear.} events will have their TOF changed to account for a longer beta pathlength, and we're preferrentially cutting away the events that don't have a TOF in the appropriate range.  ....And then have COMSOL generate electron TOFs for SOEs starting from the start points picked by G4.  Ran COMSOL for 0 eV SOEs, and again for Levinger spectrum SOEs.  Used ~9\% 0eV SOEs in the end.  I forget which Levinger distribution I used in the end.  \aside[color=jb]{JB:  Please comment on whether or not it was important to have this energy distribution.}  The point is, for each event, you've simulated a beta TOF that may or may not be scattered off of something before it hits a detector, and you have a SOE TOF for an event originating at that same point, so you subtract them to model the TOF you'd measure in an experiment.  Also, because you've done the scattering with G4, you get the beta energy corrected for any scattering that happened.  This way, one can estimate %\aside[color=jb]{JB:  `you know precisely' $\rightarrow$ `you can estimate'} 
-%%%how many ``bad" events are eliminated with the TOF cut, as well as the fraction of ``bad'' events left in what remains.
-%%%	
-%%%%	\subsection{Decay from Chamber Surfaces}
-
-%
-\section{Quantifying the Effects of Backscatter with Geant4}
-\note[color=org]{This content got moved over *there*.  (ie, Section~\ref{sec:bs}.)}
-\note[color=jb]{John on Section 5.5 ``Quantifying the Effects of Backscatter with Geant4'':
-\\...\\
-Fig.~\ref{fig:asymmetry_scattering} illustrates the distortions in the energy dependence of Abeta
-that mimics effects of bFierz. A generic 10\% uncertainty assigned to
-the GEANT4 similation of backscatter produces the largest systematic
-uncertainty in bFierz. Based on this result, the collaboration is
-attempting to improve the
-experimental design to use lower-Z materials to improve this systematic.
-\\
-(I.e. that's all you need to say. The figure tells the story.)
-}
-
 %%%% --- * --- %%%%
-\section{Lineshape Reconstruction}
+\subsection{The Atomic Cloud}
+%\section{Lineshape Reconstruction}
 \label{sec:lineshape_results}
-	\note[color=org]{A lot of this content has gone into (Section~\ref{sec:responsefunction}) instead.  I really need to just mention it here (Sec.~\ref{sec:lineshape_results}) and give an indication of how good the result is.  Then evaluate stuff.}
+\note[color=org]{A lot of this content has gone into (Section~\ref{sec:responsefunction}) instead.  I really need to just mention it here (Sec.~\ref{sec:lineshape_results}) and give an indication of how good the result is.  Then evaluate stuff.}
 \note[color=jb]{John on Ch.~\ref{sec:lineshape_results} ``Lineshape Reconstruction'':
 \\...\\
 I can only recommend now including what you've written (your extensive work on the rest you
@@ -318,49 +272,55 @@ proved necessary."
 }	
 	
 %	\note[color=jb]{This section should reference Clifford.~\cite{clifford}.}
-	Clifford tells us what to do.~\cite{clifford}.
+Clifford tells us what to do.~\cite{clifford}.
 %	\subsection{Motivation}
 %	This process is used because the (back-)scatter, which it itself an important systematic, is largely independent of a wide variety of other experimental effects.  These other effects must all be evaluated, but it is computationally prohibitive to re-evaluate the scattering with every other effect under consideration.
 	
-	\subsection{What is it and how does it work?}
-	Mono-energetic beta decay events are generated in GEANT4, which outputs an energy spectrum for unscattered and forward-scattered beta events in the detector.  These spectra are fit to a function to model the scintillator resolution, as well as energy loss in materials that the beta passed through before arriving at the scintillator.  These spectrum fits are performed for a set of beta energies, and parameters are extrapolated to be applied to betas emitted at intermediate energies.  Thus, the whole spectrum can be modeled.  Pictures will make this clearer. 
+\subsubsection{The Response Function -- What It Is and How It Works}
+Mono-energetic beta decay events are generated in GEANT4, which outputs an energy spectrum for unscattered and forward-scattered beta events in the detector.  These spectra are fit to a function to model the scintillator resolution, as well as energy loss in materials that the beta passed through before arriving at the scintillator.  These spectrum fits are performed for a set of beta energies, and parameters are extrapolated to be applied to betas emitted at intermediate energies.  Thus, the whole spectrum can be modeled.  Pictures will make this clearer. 
 	
-    \begin{figure}[h!!!t]
-    	\centering
-    	\includegraphics[width=.999\linewidth]
-    	{Figures/LineshapeDemo_prelim.png}
-    	\caption[Lineshape Comparison]{I'm not actually sure if this picture shows what I want it to.  The point is, if I apply this rough lineshape to stuff that I SimpleMC-ed, then I can evaluate that way various systematic effects that would be time-consuming to actually simulate with G4.  This picture is  *supposed* to be a demonstration that this approach actually works... }    	\label{fig:lineshape_demo}
-    \end{figure}
+\begin{figure}[h!!!t]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/LineshapeDemo_prelim.png}
+	\caption[Lineshape Comparison]{I'm not actually sure if this picture shows what I want it to.  The point is, if I apply this rough lineshape to stuff that I SimpleMC-ed, then I can evaluate that way various systematic effects that would be time-consuming to actually simulate with G4.  This picture is  *supposed* to be a demonstration that this approach actually works... }    	
+	\label{fig:lineshape_demo}
+\end{figure}
 	
 %	\subsection{The Math-Specifics}
 %	I'll write down the specific functions I'm using, and the parameter values I'm using.  (Maybe this should go in an appendix instead?)  I'll describe the adjustments I make to the spectrum so that it can work even for the dataset where the scintillators' resolutions have changed.
 	
-	\subsection{The Results -- Things That Got Evaluated This Way}
-	As it turns out, only cloud parameters were evaluated this way. \aside[color=jb]{JB:  so it's still critical to write down more of the lineshape work.}
+\subsubsection{Cloud Parameter Uncertainty Evaluations with the Response Function}
+As it turns out, only cloud parameters were evaluated this way. \aside[color=jb]{JB:  so it's still critical to write down more of the lineshape work.}
 Trap position, size, sail velocity, temperature.  But then we varied the lineshape anyhow, to account for G4 doing a bad job of modelling the bremsstrahlung (sp?).
-	%Thicknesses of the SiC mirror, the Be foil, and the DSSD.  Scintillator calibration.  
-	\note[color=jb]{JB:  yes, brems strahlung is 'braking radiation' so gets 2 ss's. 
+%Thicknesses of the SiC mirror, the Be foil, and the DSSD.  Scintillator calibration.  
+\note[color=jb]{JB:  yes, brems strahlung is 'braking radiation' so gets 2 ss's. 
 the lineshape tail in any scintillator also includes backscattered events -- we are not claiming the 2-pixel cut is complete}
 	
-	    \begin{figure}[h!!]
-    	\centering
-    	\includegraphics[width=.999\linewidth]
-    	{Figures/Position_Err_Abeta.png}
-    	\caption[$\Abeta$ Position Error]{Estimated uncertainty in $\Abeta$ resulting from uncertainty and variation in the cloud parameters.  Evaluated by the lineshape reconstruction method.}	
-    	\label{fig:Abeta_position_err}
-		\end{figure}
+\begin{figure}[h!!]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/Position_Err_Abeta.png}
+	\caption[$\Abeta$ Position Error]{Estimated uncertainty in $\Abeta$ resulting from uncertainty and variation in the cloud parameters.  Evaluated by the lineshape reconstruction method.}	
+	\label{fig:Abeta_position_err}
+\end{figure}
 
-	    \begin{figure}[h!!]
-    	\centering
-    	\includegraphics[width=.999\linewidth]
-    	{Figures/Position_Err_bFierz.png}
-    	\caption[$\bFierz$ Position Error]{Estimated uncertainty in $\bFierz$ resulting from uncertainty and variation in the cloud parameters.  Evaluated by the lineshape reconstruction method.}		
-    	\label{fig:bFierz_position_err}
-		\end{figure}
+\begin{figure}[h!!]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/Position_Err_bFierz.png}
+	\caption[$\bFierz$ Position Error]{Estimated uncertainty in $\bFierz$ resulting from uncertainty and variation in the cloud parameters.  Evaluated by the lineshape reconstruction method.}		
+	\label{fig:bFierz_position_err}
+\end{figure}
 
-	
-	\subsection{The low-energy tail uncertainty, and what it does}
-	Bremsstrahlung.  It does Bremsstrahlung.
+
+
+
+%%%% --- * --- %%%%
+\FloatBarrier
+\subsection{Low Energy Lineshape Tail}
+%\subsubsection{The low-energy tail uncertainty, and what it does}
+Bremsstrahlung.  It does Bremsstrahlung.
 %	\note[color=jb]{JB:  ``I will write this up better soon."  (I think he already did that)}
 \note[color=jb]{ Here is Subsection 9.5.5 ``The low-energy tail uncerainty, and what it does'' complete.  There should be no figure.
 \\
@@ -393,6 +353,70 @@ as the 0.008 ``Low Energy Tail'' in the systematics table at the start of this c
 Compared to other uncertainties of the present data set,
 this is small enough that the accuracy of this estimate is adequate.
 }
+
+\subsection{Background Events}
+\label{section:background_events_systematics}
+%\section{Background Modeling -- Decay from Surfaces within the Chamber}
+\note[color=org]{This content got moved to Ch.~\ref{sec:tof_bg}.}
+
+\note[color=jb]{
+John on Section 5.4 Background Modeling – Decay from Surfaces within
+the Chamber:
+\\...\\
+Either add here, or omit this section and add to preamble of chapter 5:
+\\
+"The background modelling is coverered comprehensively in
+Section 4.4 ``Simulating the Background and Time of Flight''
+Since the background was reduced greatly by the improved time-of-flight
+analysis, this uncertainty makes a relatively small contribution to the
+final result.
+}
+
+\subsection{Scattering}
+%\section{Quantifying the Effects of Backscatter with Geant4}
+\label{section:scattering_systematics}
+\note[color=org]{This content got moved over *there*.  (ie, Section~\ref{sec:bs}.)}
+\note[color=jb]{John on Section 5.5 ``Quantifying the Effects of Backscatter with Geant4'':
+\\...\\
+Fig.~\ref{fig:asymmetry_scattering} illustrates the distortions in the energy dependence of Abeta
+that mimics effects of bFierz. A generic 10\% uncertainty assigned to
+the GEANT4 similation of backscatter produces the largest systematic
+uncertainty in bFierz. Based on this result, the collaboration is
+attempting to improve the
+experimental design to use lower-Z materials to improve this systematic.
+\\
+(I.e. that's all you need to say. The figure tells the story.)
+}
+
+
+\subsection{Material Thicknesses}
+\note{Write this section.  Remove casual phrasing.}
+We just ran Geant4 some more.  It's an inelegant but reasonably stupid-proof way to evaluate these things.  Also, we didn't even bother varying the DSSD thickness.  tbh, I think it would be really hard to vary that without doing something weird to the dssd energy absorption such that the G4 DSSD spectra would no longer match the experimental spectra.  The G4-experiment calibration was done using the assumption that the DSSD thickness was *what it is*. 
+
+Hmm, I wonder how Ben did this...
+
+%
+
+%%%	So many surfaces, all of which can get stray 37K atoms stuck to them.  Then they decay from a place that isn't the actual trap center, and it contaminates our stuff.
+%%%	
+%%%%	\missingfigure{Show modelled TOF spectra in comparison with real TOF spectra.  Show the cut we made on that. }
+%%%	\note[color=jb]{JB on figures that might go here:  Figure 6.4 (currently that picture of the TOF spectrum) could either be here, or you could reference it from here. The TOF histogram is a great start. Adding the asymmetry[TOF] indeed would be vital.}
+%%%	\missingfigure{Show the "average asymmetry" (all energies) as a function of TOF, with real data, best model normalization, and extrema of model normalizations.  Show our cut.  Turns out, it's a lot of work for a really tiny correction.  Oh well.}
+%%%	\note[color=jb]{JB on the *actual* figure I had been planning to put here, and my remarks about it:  Indeed it will be critical to show a clear compelling version of this figure in thesis and in a paper.  It was vital to minimize and determine this background to avoid fitting a polynomial to it from the wings,  even more so for the energy dependence of A than for its average -- you should say so.
+%%%	\\ ... \\
+%%%The reason the correction is small is because of all your hard work.}
+%%%	
+%%%	We model the beta TOF from the surfaces in G4, event by event.  This is necessary because scattered \aside[color=jb]{JB:  ``I wouldn't call these "scattered" events... that's very misleading.'' 
+%%%	\\ ... \\ 
+%%%	Yeah, I should really stop doing that.  
+%%%	\\ ... \\ 
+%%%	Wait no, scattered is what I mean!  But fine, my phrasing is really unclear.} events will have their TOF changed to account for a longer beta pathlength, and we're preferrentially cutting away the events that don't have a TOF in the appropriate range.  ....And then have COMSOL generate electron TOFs for SOEs starting from the start points picked by G4.  Ran COMSOL for 0 eV SOEs, and again for Levinger spectrum SOEs.  Used ~9\% 0eV SOEs in the end.  I forget which Levinger distribution I used in the end.  \aside[color=jb]{JB:  Please comment on whether or not it was important to have this energy distribution.}  The point is, for each event, you've simulated a beta TOF that may or may not be scattered off of something before it hits a detector, and you have a SOE TOF for an event originating at that same point, so you subtract them to model the TOF you'd measure in an experiment.  Also, because you've done the scattering with G4, you get the beta energy corrected for any scattering that happened.  This way, one can estimate %\aside[color=jb]{JB:  `you know precisely' $\rightarrow$ `you can estimate'} 
+%%%how many ``bad" events are eliminated with the TOF cut, as well as the fraction of ``bad'' events left in what remains.
+%%%	
+%%%%	\subsection{Decay from Chamber Surfaces}
+
+%
+
 
 %\note[color=jb]{End direct quote paragraphs from John.}
 
