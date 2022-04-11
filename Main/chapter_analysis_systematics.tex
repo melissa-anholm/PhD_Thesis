@@ -164,13 +164,14 @@ To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$
 
 
 
+\note{We can do this whole chi2 map thing again for real- and simulated data sets with different values of parameters that we vary as *systematics.*  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.}
 
-That old list:
-\begin{itemize}
-	\item For each of those 3 simulations, sort the ``good'' data according to emission angle relative to the detector.  Do each detector individually.  For both polarizations.
-	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
-\end{itemize}
-
+%%%%That old list:
+%%%%\begin{itemize}
+%%%%	\item For each of those 3 simulations, sort the ``good'' data according to emission angle relative to the detector.  Do each detector individually.  For both polarizations.
+%%%%	\item We can do this whole thing again for simulated data sets with different values of parameters that we vary as systematics.  Note how the best values of $\Abeta$ and $\bFierz$ change when each of the systematics are varied.
+%%%%\end{itemize}
+%%%%
 
 
 \FloatBarrier
@@ -183,12 +184,12 @@ That old list:
 To evaluate the systematic effects arising from incomplete knowledge of how much beta scattering is present, two sets of $\chi^2$ maps very much like those in Section~\ref{sec:comparing_data_sims} are created, with the amount of scattering varied by one standard deviation.  This does not require a new simulation;  instead, for the three high statistics G4 simulations varying the BSM scalar coupling, all events passing the cuts are categorized into `unscattered and forward-scattered' events, `sidescattered' events, and `backscattered' events, depending on a comparison of the beta's emission angle to the detector in which it was eventually observed, as shown in Fig.~\ref{fig:soe_tof_vs_costheta}.
 
 The contribution from unscattered and forward scattered events is not allowed to vary, but the weights attributed to sidescattered and backscattered events was varied by $\pm 10\%$ and $\pm 5.1\%$ (respectively) relative to their `best' values.  Fig.~\ref{fig:asymmetry_scattering} clearly shows the change in superratio asymmetry produced by this variation in the amount of scattering.  The method by which it was determined how much the scattering weights should be allowed to vary is described in the supplementary material of a recent publication by the collaboration~\cite{ben_Abeta}.
-\begin{figure}[h!!!!tb]
+\begin{figure}[h!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/ScatteringEstimate.png}
-	\note{I got it out of the Sim\_to\_Asym directory, so that's where I have to go looking to see how I made it and/or make a new one.}
-	\note[color=tag]{Re-make the plot with the asymmetries from different amounts of scattering.}
+%	\note{I got it out of the Sim\_to\_Asym directory, so that's where I have to go looking to see how I made it and/or make a new one. .... nope, the new one is from Fit_2D.}
+	\note[color=tag]{Fix description of this plot.}
 	\note[color=jb]{John on Section~\ref{section:scattering_systematics} ``Quantifying the Effects of Backscatter with Geant4'':
 \\...\\
 Fig.~\ref{fig:asymmetry_scattering} illustrates the distortions in the energy dependence of Abeta
