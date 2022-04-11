@@ -212,8 +212,29 @@ Since errors in evaluating both side-scatter and backscatter arise from limitati
 
 \subsection{Detector Calibrations and Thresholds}
 \subsubsection{Scintillators}
-...
+The two plastic scintillators were calibrated by the collaboration using online data, with reference points from the beta spectrum endpoint and the compton edge arising from annihilation radiation.  Calibration was performed using only \emph{polarized} data, because the final measurements use only polarized data, and the scintillator gain is more stable in the absence of the stronger oscillating magnetic fields from the AC-MOT.  
+
+A linear calibration is used, with
+\bea
+E_{\textrm{scint}} &=& \frac{1}{m}(Q_{\textrm{QDC}} - b), 
+\eea
+and the detector resolution arising from photon counting statistics is given by
+\bea
+\sigma &=& \sqrt{\lambda E_{\textrm{scint}}}.
+\eea
+
+During online data collection, one QDC module failed abruptly and had to be replaced.  As a result, the collected data is calibrated separately before and after the module failure, and the calibrations change slightly at this time. The methodology used is described in detail within~\cite{ben_thesis}, so the results will simply be stated here in Table~\ref{table:scintcal}.
+\input{table_scintcal}
+
+To evaluate the systematic effects associated with the scintillators' calibrations, the calibration for each scintillator is adjusted independently to produce energy measurements that are higher by one standard deviation, and lower by one standard deviation, and the resulting changes to the $\chi^2$ map's $\Abeta$ and $\bFierz$ centroids is measured.  For this, the datasets corresponding to both sets of calibration numbers have their calibrations adjusted simultaneously, but each individual scintillator is treated separately.  There is no reason to think the two scintillators' calibration accuracies should be correlated, so errors resulting from a changed scintillator calibration are added to one another in quadrature.
+
+%%%%Uncertainties resulting from an inaccurate scintillator calibration are added in quadrature for the final result, because there is no reason to think the two scintillators' calibration inaccuracies should be correlated.
+%%%%
+%%%%Because it is not immediately intuitively obvious how different a calibration mistake on both scintillators might change the resulting measurement of $\bFierz$, 
+%%%%There is no reason to believe the errors in calibration should be correlated, so 
+
 \subsubsection{DSSD Radius, Energy Threshold, Agreement}
+\note[color=tag]{Write section dssd systematics evaluation.}
 %\section{BB1 Radius, Energy Threshold, Agreement}
 \label{section:bb1_systematics}
 BB1 radius cut can help to eliminate scattered events.  Energy threshold selection and statistical agreement between BB1 detectors' energies only makes a small effect on results.  BB1 radius itself has a pretty big effect on the result, but we can at least just G4 it away.  The remaining systematic effect is pretty small.  
@@ -231,6 +252,7 @@ In the end, we get our results from the scintillator energy only, without summin
 \subsection{The Atomic Cloud}
 %\section{Lineshape Reconstruction}
 \label{sec:lineshape_results}
+\note[color=tag]{(Re-)Write sections systematics from the cloud.}
 \note[color=org]{A lot of this content has gone into (Section~\ref{sec:responsefunction}) instead.  I really need to just mention it here (Sec.~\ref{sec:lineshape_results}) and give an indication of how good the result is.  Then evaluate stuff.}
 \note[color=jb]{John on Ch.~\ref{sec:lineshape_results} ``Lineshape Reconstruction'':
 \\...\\
@@ -297,6 +319,7 @@ the lineshape tail in any scintillator also includes backscattered events -- we 
 %%%% --- * --- %%%%
 \FloatBarrier
 \subsection{Low Energy Lineshape Tail}
+\note[color=tag]{Un-pinken/re-write section on the low energy lineshape tail.}
 %\subsubsection{The low-energy tail uncertainty, and what it does}
 \note{Bremsstrahlung.  It does Bremsstrahlung.}
 %	\note[color=jb]{JB:  ``I will write this up better soon."  (I think he already did that)}
@@ -334,6 +357,7 @@ this is small enough that the accuracy of this estimate is adequate.
 
 \subsection{Background Events}
 \label{section:background_events_systematics}
+\note[color=tag]{Write the section about evaluating *systematics* from background events.}
 %\section{Background Modeling -- Decay from Surfaces within the Chamber}
 \note[color=org]{This content got moved to Ch.~\ref{sec:tof_bg}.}
 
@@ -351,10 +375,20 @@ final result.
 }
 
 \subsection{Material Thicknesses}
-\note{Write this section.  Remove casual phrasing.}
-We just ran Geant4 some more.  It's an inelegant but reasonably stupid-proof way to evaluate these things.  Also, we didn't even bother varying the DSSD thickness.  tbh, I think it would be really hard to vary that without doing something weird to the dssd energy absorption such that the G4 DSSD spectra would no longer match the experimental spectra.  The G4-experiment calibration was done using the assumption that the DSSD thickness was *what it is*. 
+%%%\note[color=tag]{Write/re-write section on material thickness systematics.  Remove casual phrasing.}
+There are three distinct objects a beta emitted from the central atom cloud must pass through before arriving at a scintillator:  a $(275 \pm 6) \mu$m silicon carbide mirror, a $(229 \pm 23) \mu$m beryllium foil, and a $(295 \pm 5) \mu$m double-sided silicon strip detector, as shown in Fig.~\ref{chamber_decayevent}.~\aside{These numbers are really *not* what's shown in that picture.  The ones *here* are what I got from notes in my G4 scripts.  I don't know where the uncertainties came from before that.}
 
-Hmm, I wonder how Ben did this...
+The propagated uncertainties are treated as uncorrelated (added in quadrature), and evaluated by running high-statistics Geant4 simulations with a parameter adjusted, then propagating the result through the analysis pipeline to compare against superratio asymmetries constructed to span the 2D BSM parameter space.  Because of the processor time required for this, certain simplifying assumptions were used to reduce the necessary number of simulations.  In particular, the top and bottom for each type of object were treated as producing the same size propagated uncertainty, though the top and bottom errors were not treated as being correlated.  Simulations were run to ensure there would not be any large nonlinear effects when combining a change in thickness for one type of object.  
+
+Furthermore, since the DSSD and the mirror have a similar density of silicon, which is the dominant material in causing scattering from the mirrors, and because the two have as a similar thicknesses and thickness uncertainties, the the propagated uncertainties from the DSSDs and mirrors were assumed to produce similar size effects on the result.  Thus, the uncertainties arising from uncertainties in the beryllium foil and mirror thicknesses were the only ones evaluated directly within Geant4.  The propagated uncertainty arising from DSSD thickness was assumed to be the same size as the uncertainty arising from mirror thicknesses.  
+
+All uncertainties from material thicknesses are believed to be uncorrelated, and are added in quadrature to the final systematic uncertainty.  
+
+
+ 
+
+%%%We just ran Geant4 some more.  It's an inelegant but reasonably stupid-proof way to evaluate these things.  Also, we didn't even bother varying the DSSD thickness.  tbh, I think it would be really hard to vary that without doing something weird to the dssd energy absorption such that the G4 DSSD spectra would no longer match the experimental spectra.  The G4-experiment calibration was done using the assumption that the DSSD thickness was *what it is*. 
+%%%Hmm, I wonder how Ben did this...
 
 %
 
