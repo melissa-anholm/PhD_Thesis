@@ -13,6 +13,18 @@ Fenker, B., Behr, J.~A., Melconian, D., Anderson, R. M.~A., Anholm, M., Ashery,
   optically pumped $^{37}\textrm{K}$}, New Journal of Physics, Vol.~18, No.~7,
   pp.~073028, 2016.
 
+\bibitem{krane}
+Krane, K.~S., Introductory Nuclear Physics, Wiley, New York, 1988.
+
+\bibitem{wong1990}
+Wong, S., Introductory Nuclear Physics, Prentice Hall Advanced Reference Series
+  Prentice Hall Labora, Prentice Hall, 1990.
+
+\bibitem{severijns_beck_cuncic_2006}
+Severijns, N., Beck, M. {\mdseries and} Naviliat-Cuncic, O., \textit{Tests of
+  the standard electroweak model in nuclear beta decay}, Rev. Mod. Phys.,
+  Vol.~78, pp.~991--1040, September 2006.
+
 \bibitem{wu}
 Wu, C.~S., Ambler, E., Hayward, R.~W., Hoppes, D.~D. {\mdseries and} Hudson,
   R.~P., \textit{Experimental Test of Parity Conservation in Beta Decay}, Phys.
@@ -22,67 +34,15 @@ Wu, C.~S., Ambler, E., Hayward, R.~W., Hoppes, D.~D. {\mdseries and} Hudson,
 Lee, T.-D. {\mdseries and} Yang, C.-N., \textit{Question of parity conservation
   in weak interactions}, Physical Review, Vol.~104, No.~1, pp.~254, 1956.
 
-\bibitem{hong_sternberg_garcia}
-Hong, R., Sternberg, M.~G. {\mdseries and} Garcia, A., \textit{Helicity and
-  nuclear $\beta$ decay correlations}, American Journal of Physics, Vol.~85,
-  No.~1, pp.~45--53, 2017.
-
-\bibitem{jtw}
-Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
-  Tests of Time Reversal Invariance in Beta Decay}, Phys. Rev., Vol.~106,
-  pp.~517--521, May 1957.
-
-\bibitem{NeutronbFierz_March2020}
-Sun, X., Adamek, E., Allgeier, B., Bagdasarova, Y., Berguno, D.~B., Blatnik,
-  M., Bowles, T.~J., Broussard, L.~J., Brown, M. A.-P., Carr, R., Clayton, S.,
-  Cude-Woods, C., Currie, S., Dees, E.~B., Ding, X., Filippone, B.~W.,
-  Garc\'{\i}a, A., Geltenbort, P., Hasan, S., Hickerson, K.~P., Hoagland, J.,
-  Hong, R., Holley, A.~T., Ito, T.~M., Knecht, A., Liu, C.-Y., Liu, J., Makela,
-  M., Mammei, R., Martin, J.~W., Melconian, D., Mendenhall, M.~P., Moore,
-  S.~D., Morris, C.~L., Nepal, S., Nouri, N., Pattie, R.~W., P\'erez~G\'alvan,
-  A., Phillips, D.~G., Picker, R., Pitt, M.~L., Plaster, B., Salvat, D.~J.,
-  Saunders, A., Sharapov, E.~I., Sjue, S., Slutsky, S., Sondheim, W., Swank,
-  C., Tatar, E., Vogelaar, R.~B., VornDick, B., Wang, Z., Wei, W., Wexler,
-  J.~W., Womack, T., Wrede, C., Young, A.~R. {\mdseries and} Zeck, B.~A.,
-  \textit{Improved limits on Fierz interference using asymmetry measurements
-  from the Ultracold Neutron Asymmetry (UCNA) experiment}, Phys. Rev. C,
-  Vol.~101, pp.~035503, Mar 2020.
-
-\bibitem{Saul2020}
-Saul, H., Roick, C., Abele, H., Mest, H., Klopf, M., Petukhov, A.~K., Soldner,
-  T., Wang, X., Werder, D. {\mdseries and} M\"arkisch, B., \textit{Limit on the
-  Fierz Interference Term $b$ from a Measurement of the Beta Asymmetry in
-  Neutron Decay}, Phys. Rev. Lett., Vol.~125, pp.~112501, Sep 2020.
-
-\bibitem{harveymurray}
-Harvey, M. {\mdseries and} Murray, A.~J., \textit{Cold Atom Trap with Zero
-  Residual Magnetic Field: The AC Magneto-Optical Trap}, Phys. Rev. Lett.,
-  Vol.~101, pp.~173201, Oct 2008.
-
-\bibitem{Levinger}
-Levinger, J.~S., \textit{Effects of Radioactive Disintegrations on Inner
-  Electrons of the Atom}, Phys. Rev., Vol.~90, pp.~11--25, Apr 1953.
-
-\bibitem{deShalit1963}
-de~Shalit, A. {\mdseries and} Talmi, I., Nuclear Shell Theory, Nuclear Shell
-  Theory, Academic Press, 1963.
-
 \bibitem{Falkowski2021}
 Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
   \textit{Comprehensive analysis of beta decays within and beyond the Standard
   Model}, Journal of High Energy Physics, Vol.~2021, No.~4, pp.~1--36, 2021.
 
-\bibitem{krane}
-Krane, K.~S., Introductory Nuclear Physics, Wiley, New York, 1988.
-
-\bibitem{severijns_beck_cuncic_2006}
-Severijns, N., Beck, M. {\mdseries and} Naviliat-Cuncic, O., \textit{Tests of
-  the standard electroweak model in nuclear beta decay}, Rev. Mod. Phys.,
-  Vol.~78, pp.~991--1040, September 2006.
-
-\bibitem{wong1990}
-Wong, S., Introductory Nuclear Physics, Prentice Hall Advanced Reference Series
-  Prentice Hall Labora, Prentice Hall, 1990.
+\bibitem{jtw}
+Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
+  Tests of Time Reversal Invariance in Beta Decay}, Phys. Rev., Vol.~106,
+  pp.~517--521, May 1957.
 
 \bibitem{jtw_coulomb}
 Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Coulomb
@@ -93,6 +53,10 @@ Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Coulomb
 {Holstein}, B.~R., \textit{{Recoil effects in allowed beta decay: The
   elementary particle approach}}, Reviews of Modern Physics, Vol.~46, No.~4,
   pp.~789--814, Oct. 1974.
+
+\bibitem{Levinger}
+Levinger, J.~S., \textit{Effects of Radioactive Disintegrations on Inner
+  Electrons of the Atom}, Phys. Rev., Vol.~90, pp.~11--25, Apr 1953.
 
 \bibitem{raabprentiss}
 Raab, E.~L., Prentiss, M., Cable, A., Chu, S. {\mdseries and} Pritchard, D.~E.,
@@ -116,6 +80,11 @@ Gorelov, A., Behr, J., Melconian, D., Trinczek, M., Dub{\'e}, P., H{\"a}usser,
 Swanson, T.~B., Asgeirsson, D., Behr, J.~A., Gorelov, A. {\mdseries and}
   Melconian, D., \textit{Efficient transfer in a double magneto-optical trap
   system}, J. Opt. Soc. Am. B, Vol.~15, No.~11, pp.~2641--2645, Nov 1998.
+
+\bibitem{harveymurray}
+Harvey, M. {\mdseries and} Murray, A.~J., \textit{Cold Atom Trap with Zero
+  Residual Magnetic Field: The AC Magneto-Optical Trap}, Phys. Rev. Lett.,
+  Vol.~101, pp.~173201, Oct 2008.
 
 \bibitem{ben_Abeta}
 Fenker, B., Gorelov, A., Melconian, D., Behr, J.~A., Anholm, M., Ashery, D.,
