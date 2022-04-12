@@ -181,33 +181,37 @@ But also, I really don't want to get into this, otherwise somebody will ask me t
 \FloatBarrier
 \section{Measurements of the Atom Cloud}
 \label{sec:cloud_calibration}
-\note[color=cleanup]{Write that final paragraph about measuring the atom cloud before and after OP.}
+%\note[color=cleanup]{Write that final paragraph about measuring the atom cloud before and after OP.}
 With the rMCP detector calibrated (Section~\ref{sec:rmcp_cals}), several types of data may be extracted.  It is possible to extract the hit positions and times-of-flight for the incident nuclear recoils, and an analysis of such data could be used to perform a test of right-handed currents within the nuclear weak force, as discussed in Chapter~\ref{section_rslow}.  However, we will focus here on what may be learned about the \emph{atom cloud} from rMCP events in coincidence with the photoionization laser.~\aside[color=org]{Also... does the camera data go in this section??}  
 
 This class of data (events with both an rMCP hit and a photoionization laser hit in coincidence) can be used to measure cloud polarization, and the methodology and results of that process as it applies to this particular experiment are discussed in a recent publication~\cite{ben_OP}.  We are also interested in the cloud's position and size during the periods of time where decay data is collected, since this represents a potential systematic effect that must be accounted for within our models.  The latter will be the primary focus of this section.  
 
 The first step in such a measurement is to try to eliminate as much background as possible.  We have already required that every event considered here must include both an rMCP hit and a photoionization laser pulse.  As we are interested in measurements of trap position, it makes sense to also require a \emph{complete} set of position data recorded on the rMCP's delay lines.   This is further trimmed by a `$10\%$ cut' on the timing sums, as described in Sec.~\ref{sec:rmcp_cuts}.  Any event including a scintillator hit is rejected, as these events have an increased likelihood for a recoiling ion to be detected on the rMCP instead of- or in addition to the photoion we expect (It is at this stage of the process that Fig.~\ref{fig:photoionhits_2D} is created.).  Finally, some fairly loose cuts are applied about the central x- and z-positions, as well as the ion's time of flight (measured with respect to the arrival of a photoionization laser pulse).
 
-With these basic cuts performed, the cloud position and size must be measured.  In particular, we are interested in measurements of the cloud \emph{during the time when it is considered to be polarized} -- however the great majority of photoionization events occur when the cloud is \emph{not} polarized.  We plot the projection of the cloud's position on the x- and z-axes, and its TOF (indicative of position along the y-axis) as a function of `AC-MOT Time' in Fig.~\ref{fig:position_v_acmottime_3axes}.
+With these basic cuts performed, the cloud position and size must be measured.  We are particularly interested in measurements of the cloud during the time when it is considered to be \emph{polarized} --- however the great majority of photoionization events occur when the cloud is \emph{not polarized} (see Fig.~\ref{fig:position_v_acmottime_3axes}).  This is because the photoionization laser acts only on excited atomic states, which are readily available during the operation of the MOT.  When the MOT is shut off, the atoms quickly de-excite.  At the start of optical pumping 300$\,\mu$s later (in the case of the 535 V/cm data), there is a short burst of photoions due to the atoms being temporarily placed into an excited state as part of the optical pumping process.  The photoion burst falls away rapidly as atoms are optically pumped into the stretched state and can no longer be excited by the optical pumping laser.  
 
 \begin{figure}[h!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/rMCP_xyz_vs_acmottime.png}
-%	\note{This figure needs to be discussed in text or whatever.}
-	\caption[Photoion Hit Positions at 535 V/cm, as a function of AC-MOT Time]{Projections of Photoion x- and z- Hit Positions and TOF at 535 V/cm, as a function of time since the start of the last AC-MOT cycle.  The photoionization laser only acts on excited atomic states, which are readily available during the operation of the MOT.  When the MOT is shut off, the atoms quickly de-excite.  At the start of optical pumping 300$\,\mu$s later, there is a short burst of photoions due to the atoms being temporarily placed into an excited state as part of the optical pumping process.  The photoion burst falls away rapidly as atoms are optically pumped into the stretched state and can no longer be excited by the optical pumping laser.}	
+	\caption[Photoion Hit Positions at 535 V/cm, as a function of AC-MOT Time]{Projections of photoion hit positions and TOF at 535 V/cm, as a function of time since the start of the last AC-MOT cycle.  The trap's periodic motion can be seen in sync with the AC-MOT's cycles, and it is clear that the cloud is also being compressed during this time, before being allowed to expand ballistically when the MOT is shut off.  The photoion burst at the start of optical pumping 300$\,\mu$s after the AC-MOT is shut off can be seen on the lower two plots. 	}	
 	\label{fig:position_v_acmottime_3axes}
 \end{figure}
-\FloatBarrier %%% this will have to go.
 
+A projection of the cloud's position on the x- and z-axes, and its TOF (indicative of position along the y-axis) is plotted over the course of the repeating AC-MOT/OP cycle in Fig.~\ref{fig:position_v_acmottime_3axes}. The mysterious vertical stripes seen Fig.~\ref{fig:photoionhits_2D} are clearly evident in the top plot of Fig.~\ref{fig:position_v_acmottime_3axes}, and their positions do not change over the AC-MOT cycle, even though cloud motion is clearly visible.  
+ 
 %With these basic cuts performed, the 
 %may have also produced a recoiling ion which could be detected on the rMCP instead of- or in addition to the photoion we expect.  
 %To that end, we immediately discard any event in which a scintillator recorded a hit 
 
 %Anyway, here is a nice table describing the atom cloud, for each of 3 runsets, and I'll immediately reference it right now, as Table~\ref{table:cloudpositions}:
-\note{Trap position -- Measured using the same dataset that was used to quantify the polarization.  The trap drifts slightly over the course of our data collection.  Describe the rMCP calibration needed to extract this info.}
-\input{table_cloudpositions}
+To extract the size and position of the atom cloud as projected onto all three axes, time slices of several hundred $\mu$s are taken from the beginning of the AC-MOT cycle, and from the part of the AC-MOT cycle immediately before the MOT is turned off.  A gaussian is fitted to the cloud projection, with its parameters describing the trap's size and position during these parts of the cycle.  A linear interpolation applied to describe the cloud's 3D size and position during polarized times, as functions of time since the AC-MOT cycle started.  Results are shown in Table~\ref{table:cloudpositions}.
 
+%%\note{Trap position -- Measured using the same dataset that was used to quantify the polarization.  The trap drifts slightly over the course of our data collection.  Describe the rMCP calibration needed to extract this info.}
+
+\input{table_cloudpositions}  %  \label{table:cloudpositions}
+
+\FloatBarrier %%% this will have to go.
 
 \note{Also, we noticed the trap drifting after one of the runs, because one of the batteries on one of the thingies adjusting the laser frequency (I think) was failing. }
 \note[color=jb]{JB:  ``If we rejected the data with the MOT moving (indeed a battery determining the voltage controlled oscillator frequency offset between absorption in stable \isotope[41]{K} cell and the \isotope[37]{K} resonance) then that's all you need to say.''}
@@ -217,33 +221,32 @@ With these basic cuts performed, the cloud position and size must be measured.  
 %I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
 %Without further ado, I'm just going to put in several pictures.  Right here, right now.  They're likely to *actually* show up on subsequent pages mixed in with the other content.  I'll have to fix that at some point.
 
-
-\note[color=tag]{Get rid of at least like two out of the three stupid camera plots.}
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/y_from_camera_electron_recoil.pdf}
-	\caption[Trap Position along TOF Axis]{Trap Position along the ``Time-of-Flight'' Axis.  Electron runs and recoil runs plotted by run number. \comment{(I should probably re-plot this.  Maybe combine info with Fig.~(\ref{fig:cameraposition_by_time}).) } }	
-	\label{fig:camera_electron_recoil}
-\end{figure}
-
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/TrapPosition_FromCamera.pdf}
-	\caption[Trap Position from Camera]{Trap Position along the ``Time-of-Flight'' Axis and the ``Vertical+30" Axis.  All runs plotted by time of run. \comment{(Need to re-plot this.)}}	
-	\label{fig:cameraposition_by_time}
-\end{figure}
-
-
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/VerticalTrap_by_rMCP_prelim}
-	\caption[Vertical Trap Position from rMCP]{Trap Position along the Vertical Axis, plotted as a function of time of run (top) and run number (bottom).}	
-	\label{fig:vposition_by_run_rmcp}
-\end{figure}
-
+%%%%%%\note[color=tag]{Get rid of at least like two out of the three stupid camera plots.}
+%%%%%%\begin{figure}[h!!t]
+%%%%%%	\centering
+%%%%%%	\includegraphics[width=.999\linewidth]
+%%%%%%	{Figures/y_from_camera_electron_recoil.pdf}
+%%%%%%	\caption[Trap Position along TOF Axis]{Trap Position along the ``Time-of-Flight'' Axis.  Electron runs and recoil runs plotted by run number. \comment{(I should probably re-plot this.  Maybe combine info with Fig.~(\ref{fig:cameraposition_by_time}).) } }	
+%%%%%%	\label{fig:camera_electron_recoil}
+%%%%%%\end{figure}
+%%%%%%
+%%%%%%\begin{figure}[h!!t]
+%%%%%%	\centering
+%%%%%%	\includegraphics[width=.999\linewidth]
+%%%%%%	{Figures/TrapPosition_FromCamera.pdf}
+%%%%%%	\caption[Trap Position from Camera]{Trap Position along the ``Time-of-Flight'' Axis and the ``Vertical+30" Axis.  All runs plotted by time of run. \comment{(Need to re-plot this.)}}	
+%%%%%%	\label{fig:cameraposition_by_time}
+%%%%%%\end{figure}
+%%%%%%
+%%%%%%
+%%%%%%\begin{figure}[h!!t]
+%%%%%%	\centering
+%%%%%%	\includegraphics[width=.999\linewidth]
+%%%%%%	{Figures/VerticalTrap_by_rMCP_prelim}
+%%%%%%	\caption[Vertical Trap Position from rMCP]{Trap Position along the Vertical Axis, plotted as a function of time of run (top) and run number (bottom).}	
+%%%%%%	\label{fig:vposition_by_run_rmcp}
+%%%%%%\end{figure}
+%%%%%%
 
 
 %%% !TEX root = ../thesis_main.tex
@@ -255,7 +258,9 @@ With these basic cuts performed, the cloud position and size must be measured.  
 \FloatBarrier
 \section{Electron Run Data Selection and Preliminary Cuts}
 \label{sec:preliminary_cuts}
-\note{We now consider how to clean up our data.  We make some fairly obvious, intuitive cuts, and those are described here.  Later, we'll make less intuitively obvious cuts.}
+%\note{We now consider how to clean up our data.  We make some fairly obvious, intuitive cuts, and those are described here.  Later, we'll make less intuitively obvious cuts.}
+%
+%
 %%%%Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, we ended up running only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  
 %%%%
 %%%%While the beta asymmetry and Fierz interference are best evaluated using the electron runs, the recoil runs are best for evaluating the polarization (a dominant uncertainty in the beta asymmetry measurement) and the cloud position.  The polarization measurement is the subject of a recent publication (see~\cite{ben_OP}), and the cloud position evaluation is discussed in more detail in Chapter~\ref{calibrations_chapter}.
