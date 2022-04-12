@@ -5,14 +5,14 @@
 \clearpage	
 \chapter{Results and Conclusions}
 \label{results_chapter}
-\note[color=jb]{Me:
-\\
-My value of Abeta with bFierz=0 (which I see now that I haven't *actually* included in the text yet.  That clearly needs to happen.) is consistent with Ben's when you account for the fact that Ben's data is, on average, less polarized than he thought.  I think I mention this somewhere, but I probably need to make it more obvious, and located in the 'Conclusions' chapter.  
-\\ ... \\
-JB:
-\\
-thanks. Spot-on in your first paragraph--  you know what to do, you just need to write it down.
-}
+%%%\note[color=jb]{Me:
+%%%\\
+%%%My value of Abeta with bFierz=0 (which I see now that I haven't *actually* included in the text yet.  That clearly needs to happen.) is consistent with Ben's when you account for the fact that Ben's data is, on average, less polarized than he thought.  I think I mention this somewhere, but I probably need to make it more obvious, and located in the 'Conclusions' chapter.  
+%%%\\ ... \\
+%%%JB:
+%%%\\
+%%%thanks. Spot-on in your first paragraph--  you know what to do, you just need to write it down.
+%%%}
 \note[color=jb]{JB:  Dan and I independently discussed (((Ch.~\ref{results_chapter}))) yesterday, and he has suggestions to
 help. So I will also schedule a meeting with Dan and you to discuss
 (((Ch.~\ref{results_chapter}))) Results and whether the S,T part must be deleted and left to a paper.
@@ -20,7 +20,7 @@ You don't have enough time, and although this should be quite straightforward,
 it is not your critical result and it's the only thing that can go.}
 \note[color=jb]{JB on simple things still missing:
 \\
-The final answers with uncertainties are only stated in the caption of Fig. 5.1.
+%The final answers with uncertainties are only stated in the caption of Fig. 5.1.
 I would have expected a separate uncertainty for b and Abeta for each data set,
 either on each 2D figure in ch. 6, are collected in a table in Ch. 6.
 }
@@ -35,38 +35,53 @@ either on each 2D figure in ch. 6, are collected in a table in Ch. 6.
 you just have to summarize the figures. Point out the natural dilution
 of Abeta result if energy-dependent new physics is allowed to float.
 }
-Results go here, with measured limits described and quantified in all formats anyone could ever care about.
-	
-\note[color=jb]{John says to just skip doing the $C_S$ and $C_T$ stuff, for now.  No time.  Really, $C_S$ is already basically done, but then that'll lead to awkward questions about $C_T$.}
+%Results go here, with measured limits described and quantified in all formats anyone could ever care about.
+\note[color=jb]{John says to just skip doing the $C_S$ and $C_T$ stuff, for now.  No time.  ... Really, $C_S$ is already basically done, but then that'll lead to awkward questions about $C_T$.}
 
-%
-
-%%%
+After corrections have been applied and uncertainties evaluated, statistical confidence intervals for the 2D $\Abeta$ vs $\bFierz$ parameter space are shown in Fig.~\ref{fig:2dchi2_alldata} for all datasets combined.  The final estimates of $\Abeta$ and $\bFierz$ with uncertainties at the $1\sigma$ level are given by:
+\bea
+\bFierz =& \,0.033  &\!\!\! \pm\, 0.084(\textrm{stat})\;\, \pm\, 0.039(\textrm{sys})  \\
+\Abeta  =& -0.5738 &\!\!\! \pm\, 0.0082(\textrm{stat})    \pm\, 0.0041(\textrm{sys}).
+\eea
 %
 \begin{figure}[h!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/Chi2_2D_AllData.png}
-	\caption[$\chi^2$ Map for All Data]{A $\chi^2$ map to compare all data to a parameter space of $\Abeta$ and $\bFierz$ values.}	
+	\caption[$\chi^2$ Map for All Data]{A $\chi^2$ map to compare all data to a parameter space of $\Abeta$ and $\bFierz$ values.  All corrections have been included, however only statistical confidence intervals are shown.}	
 	\label{fig:2dchi2_alldata}
 \end{figure}
 %
 
-Info on the $\Abeta$ measurement goes here too.  In particular, you set $\bFierz=0$ and see what happens to $\Abeta$.
+The uncertainty associated with this measurement of $\Abeta$ is significantly larger than the collaboration's previous measurement of using the same data, in which the final result was $\mbox{$\Abeta = -0.5707 \pm 0.0013(\textrm{stat}) \pm 0.0013(\textrm{sys}) \pm 0.0005(\textrm{pol})$}$.  However, it must be noted that the present measurement is a two-parameter measurement rather than a one-parameter measurement, so it is expected to that the uncertainty associated with a single parameter should be larger.
+
+To evaluate whether the two measurements are consistent, a thin vertical slice of Fig.~\ref{fig:2dchi2_alldata} can be extracted at $\bFierz=0$, and its projection will provide the centroid (including systematic offsets) and statistical error associated with a one-parameter analysis for $\Abeta$ -- though this method cannot produce an estimate of the extent to which systematic uncertainties might be reduced.  This `check' gives a one-parameter measurement of $\Abeta = -0.5714 \pm 0.0020(\textrm{stat})$.
+
+The above one-parameter result for $\Abeta$ is consistent with the collaboration's prior result, even after one accounts for the fact that the previous result suffered from an oversight in which some partially polarized data was not removed from the final analysis for $\Abeta$, despite the fact that this cut \emph{was} implemented in the associated polarization measurement.  This accounts for $5\%$ of the data used in that analysis, and is estimated to decrease the average polarization by approximately $0.3\%$.  
+
+An estimate of the size of the effect on the previous measurement of $\Abeta$ suggests that the true value of $\Abeta$ is likely to be $\sim 0.0016$ more negative than reported.  
+%Furthermore, there is no uncertainty associated with polarization described within the present analysis, simply because to leading order there is no effect on $\bFierz$, although it strongly affects a measurement of $\Abeta$.  
+Accounting for this, a more accurate one-parameter measurement might produce the result, $\mbox{$\Abeta \approx -0.5723 \pm 0.0014(\textrm{stat}) \pm 0.0013(\textrm{sys}) \pm 0.0005(\textrm{pol})$}$.
+
+
+%%an oversight in data cut
+%%when one accounts for the fact that an oversight in the previous analysis led to 
+%Info on the $\Abeta$ measurement goes here too.  In particular, you set $\bFierz=0$ and see what happens to $\Abeta$.
 
 
 %%% %%%%%%% %%%
 \section{Discussion of Corrections and Uncertainties}
+\note[color=tag]{Write Discussion Section.}
 \label{sec:discussion_corrections_uncertainties}
 %\section{Overview}	
 %A summary of systematics goes here.  In words, yes, but also in table form.
-\note[color=jb]{JB on simple things still missing:
-\\
-I see no statement near Table ~\ref{table:budget} that you are adding the uncertainties in
-quadrature. As part of that you need a simple summary
-statement that all uncertainties are
-uncorrelated and, after the corrections applied, believed to be random. 
-}
+%%%\note[color=jb]{JB on simple things still missing:
+%%%\\
+%%%I see no statement near Table ~\ref{table:budget} that you are adding the uncertainties in
+%%%quadrature. As part of that you need a simple summary
+%%%statement that all uncertainties are
+%%%uncorrelated and, after the corrections applied, believed to be random. 
+%%%}
 
 A list of uncertainties is provided in Table~\ref{table:budget}.
 \input{table_budget}  %\label{table:budget}
@@ -79,27 +94,15 @@ A list of uncertainties is provided in Table~\ref{table:budget}.
 %%%%\note[color=jb]{from John:  ``I used Ben's threshold when determining the uncertainty from the lineshape tail (UFTLT). 
 %%%%If you're saying the UFTLT depends on the threshold used, ok, of course it does. But if you're claiming that UFTLT depends on the **uncertainty** of the threshold, that's manifestly smaller than the UFTLT itself, and I'm going to assert it isn't worth evaluating.''}
 
-\note[color=jb]{JB on Ch. \ref{sec:discussion_corrections_uncertainties} -- `discussion of corrections and uncertainties':
-\\...\\
-could be as simple as
-"The bFierz result in Table 5.1 is dominated by statistical uncertainty.
-Largely because of this result,
-the collaboration is working to reduce the largest systematics,
-using lower-Z materials to reduce backscattering, and changing the silicon
-delta-E to a multi-wire proportional chamber with very thin windows.
-The collaboration has already implemented very thin pellicle mirrors.
-The projected systematic uncertainty could approach 0.01 in a future
-experment, which would then likely continue to be limited by statistics."
-\\...\\
-or all of that could go at the end of Chapter 5.
-}
 %
 \note{Just write a blurb to qualitatively summarize a bunch of the stuff in Ch.~\ref{systematics_chapter}.  Do I want to put my error budget table here?  If not, here it is! (~\ref{table:budget}). }
 \note{Other things to discuss here:  which things are dominant error sources, and how viable it would be to improve those for future experiments.}
-	
-\section{Relation to Other Measurements and New Overall Limits}
-\label{sec:relation_to_other_measurements}
-\note[color=jb]{JB on Ch.~\ref{sec:relation_to_other_measurements}:
+
+
+%%%\section{Relation to Other Measurements and New Overall Limits}
+%%%\label{sec:relation_to_other_measurements}
+\note[color=org]{I have legit just deleted a section in Ch.6:  "Relation to Other Measurements and New Overall Limits".  It's gone now.  Because it was stupid.  Only John's comments about what it might do in the future remain.}
+\note[color=jb]{JB on Ch.~\ref{sec:relation_to_other_measurements}:  "Relation to Other Measurements and New Overall Limits"
 \\
 6.3 might be better left to a collaboration memo. You have to decide what to do here,
 and decide it quickly.
@@ -117,8 +120,8 @@ beta-nu scalar limit. I think the constraints on Lorentz scalars are hard to
 compete with.)
 }
 %
-In which I'll show exclusion plots and write down new limits, combining my result with results from the literature.
-Or, y'know, maybe I'll just talk about doing that.
+%%%%In which I'll show exclusion plots and write down new limits, combining my result with results from the literature.
+%%%%Or, y'know, maybe I'll just talk about doing that.
 \note[color=jb]{JB says:   To put your work in context, please add at the end of that minimal S,T section, or at the end of "Our Decay" section
 \\ ... \\
 The best existing measurement of $\bFierz$ is in the decay of the neutron~\cite{Saul2020},
@@ -129,7 +132,6 @@ In terms on non-Standard Model Lorentz current structures, to lowest order in th
 $\bFierz$ = $\pm$ $(C_S +C_S' + (C_T - C_T') \lambda^2)/( 1 + \lambda^2)$
 \\
 (the plus is for $\beta^-$ decay and the - for $\beta^+$ decay)~\cite{jtw}.  [to be continued...] }
-
 \note[color=jb]{[...continued from prev.]
 \\
 In our $^{37}$K case, $\lambda^2$ = $|M_{\rm GT}|^2$/$|M_{\rm F}|^2$ is close to 3/5 (the expected value j/(j+1) for a single j=3/2 d3/2 nucleon)~\cite{deShalit1963},
@@ -141,6 +143,7 @@ Full considerations would require a weighted fit of $\bFierz$ experiments and si
 The info from this thesis, values of $\Abeta$ and $\bFierz$ with their uncertainties, can together with the known $fT$ value (lifetime and
 branching ratio) allow the community and/or the collaboration to include the results in a future constraint or discovery of scalar and tensor Lorentz currents
 contributing to $\beta$ decay.}
+\note[color=org]{End of John's comments on the section I deleted.}
 
 
 
@@ -154,7 +157,9 @@ contributing to $\beta$ decay.}
 \note[color=jb]{John says the whole $R_{\textrm{slow}}$ thing should go in here somewhere.}
 \note[color=jb]{Appendix I  keep, it's excellent. It should be moved as is to Conclusions under "Future Experiment for the collaboration"! so people know you worked so hard on it!!}
 %\section{An Old Rslow Abstract}
-The nuclear weak force is known to be a predominantly left-handed vector and axial-vector (V-A) interaction.  An experiment is proposed to further test that observation, constraining the strength of right-handed (V+A) currents by exploiting the principle of conservation of angular momentum within a spin-polarized beta decay process.  \comment{Here, we focus on the decay \mbox{$^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$}.  The angular correlations between the emerging daughter particles provide a rich source of information about the type of interaction that produced the decay.}
+The nuclear weak force is known to be a predominantly left-handed vector and axial-vector (V-A) interaction.  An experiment is proposed to further test that observation, constraining the strength of right-handed (V+A) currents by exploiting the principle of conservation of angular momentum within a spin-polarized beta decay process.  %\comment{
+Here, we focus on the decay \mbox{$^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$}.  The angular correlations between the emerging daughter particles provide a rich source of information about the type of interaction that produced the decay.
+%}
 
 %, meaning that \comment{the fuck does it even mean?}, but limits are \comment{something something dark side}.  However, we are able to describe the probability distribution for the kinematics of the daughter particles in a beta decay reaction in terms of both right- and left-handed interactions, and scalar, tensor, vector, and axial couplings.  
 %It is therefore possible to perform tests of the Standard Model by precisely measuring the kinematics within a beta decay process.  
@@ -432,18 +437,43 @@ A fit to simulation has shown that the data that has already been collected has 
 
 %%%%%% %%%%%%% %%%%%%%
 \section{Conclusions}
-\note[color=jb]{JB on simple things still missing:  
-\\
-In Conclusions:
+This two-parameter analysis to measure $\Abeta$ and $\bFierz$ has produced the results:
+\bea
+\bFierz =& \,0.033  &\!\!\! \pm\, 0.084(\textrm{stat})\;\, \pm\, 0.039(\textrm{sys})  \\
+\Abeta  =& -0.5738 &\!\!\! \pm\, 0.0082(\textrm{stat})    \pm\, 0.0041(\textrm{sys}),
+\eea
+where uncertainties are evaluated at 1$\sigma$.  This measurement of $\bFierz$ is consistent with the Standard Model value of $\bFierz=0$, and $\Abeta$ is consistent both with the collaboration's prior measurement of $\Abeta$, as well as with the value predicted by the Standard Model at $\Abeta=-0.5706\pm0.0007$.
+
+The result for $\bFierz$ is dominated by statistical uncertainty, suggesting that the measurement could be improved simply by counting longer.  There is also room for improvement in the systematic uncertainty, which is dominated by scattering and the related measurements of material thicknesses.  
+
+\note[color=jb]{JB on Ch. \ref{sec:discussion_corrections_uncertainties} -- `discussion of corrections and uncertainties':
 \\...\\
-Comparing bFierz to theory value of 0,  bFierz is (in)consistent with SM
-at Z sigma.
+could be as simple as
+"The bFierz result in Table 5.1 is dominated by statistical uncertainty.
+Largely because of this result,
+the collaboration is working to reduce the largest systematics,
+using lower-Z materials to reduce backscattering, and changing the silicon
+delta-E to a multi-wire proportional chamber with very thin windows.
+The collaboration has already implemented very thin pellicle mirrors.
+The projected systematic uncertainty could approach 0.01 in a future
+experment, which would then likely continue to be limited by statistics."
 \\...\\
-Comparing Abeta  and Abeta(theory) the result is (in)consistent with SM at X\% and Y sigma.
+or all of that could go at the end of Chapter 5.
 }
 
-Conclusions go here.
 
+%%%%%\note[color=jb]{JB on simple things still missing:  
+%%%%%\\
+%%%%%In Conclusions:
+%%%%%\\...\\
+%%%%%Comparing bFierz to theory value of 0,  bFierz is (in)consistent with SM
+%%%%%at Z sigma.
+%%%%%\\...\\
+%%%%%Comparing Abeta  and Abeta(theory) the result is (in)consistent with SM at X\% and Y sigma.
+%%%%%}
+%%%%%
+%%%%%%%%Conclusions go here.
+%%%%%
 
 
 
