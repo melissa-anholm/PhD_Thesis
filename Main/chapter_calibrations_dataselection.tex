@@ -325,19 +325,21 @@ Finally, because this analysis depends heavily on energy measurements from the t
 
 \section{Further Cuts Using the DSSD}
 %\note[color=org]{Pretty sure I'm repeating myself from Chapter~\ref{???}}
+\note[color=tag]{Which cuts did I use by default on the DSSD?  Also, which did Ben use?}
 \note{Add 2D DSSD plots?}
-\note[color=jb]{JB says: To repeat a comment, since the Appendix on analysis changes is being dispersed throughout, when you state somewhere (I think it's in Ch. 6)((5?)) make sure you state clearly that the only change for BB1 cuts
-is the radius cut, e.g. that you took the same T and E from the waveforms (I'm not even sure whether the
-waveforms are recorded anyway). You  ask 'how can I state this' but there's no reason to be subtle.
-Just say upfront that Ben and Spencer's theses did all the groundwork on the BB1, and here you include selected details needed to understand the present analysis. If you need to include some redundant material, don't worry too much about that.
-\\ ... \\ 
-MJA:  In fact, I think the BB1 radius may have been the same.  The uniform energy threshold was different though.  But I get the point.
-\\ ... \\ 
-Also, yes, the waveforms are absolutely recorded in the MIDAS files but they haven't been saved to modern ntuples, because they made the files huge.  I think it's probably pretty easy to switch that on/off in the Analyzer though to generate a set of ntuples that has that info included.
-}
+%%%%\note[color=jb]{JB says: To repeat a comment, since the Appendix on analysis changes is being dispersed throughout, when you state somewhere (I think it's in Ch. 6)((5?)) make sure you state clearly that the only change for BB1 cuts
+%%%%is the radius cut, e.g. that you took the same T and E from the waveforms (I'm not even sure whether the
+%%%%waveforms are recorded anyway). You  ask 'how can I state this' but there's no reason to be subtle.
+%%%%Just say upfront that Ben and Spencer's theses did all the groundwork on the BB1, and here you include selected details needed to understand the present analysis. If you need to include some redundant material, don't worry too much about that.
+%%%%\\ ... \\ 
+%%%%MJA:  In fact, I think the BB1 radius may have been the same.  The uniform energy threshold was different though.  But I get the point.
+%%%%\\ ... \\ 
+%%%%Also, yes, the waveforms are absolutely recorded in the MIDAS files but they haven't been saved to modern ntuples, because they made the files huge.  I think it's probably pretty easy to switch that on/off in the Analyzer though to generate a set of ntuples that has that info included.
+%%%%}
 
 \missingfigure{Show individual beta energy spectra.  ...with a variety of different cuts, perhaps?}
 
+The DSSDs are critical to our ability to veto background events in which the particle incident on the detector is a gamma ray rather than a beta --- e.g., from annihilation radiation --- however, they must be properly calibrated in order to be useful.  The calibration was performed by other members of the collaboration, and the methodology is described in detail in~\cite{ben_thesis}.  It is summarized here for clarity.
 
 Although it was not possible to use the DSSD in real-time analysis or event triggering, the DSSDs may be used, after the data has been collected, to distinguish between different types of particles incident on the detector, as more energy will be deposited by heavier particles.  When a scintillator hit is triggered by a particle originating within the experimental chamber, that particle will typically have passed through the DSSD before arriving at the scintillator.
 
@@ -347,27 +349,44 @@ We would like to look specifically at events involving $\beta^+$ particles arriv
 
 In order to proceed at this point, and because the DSSD readout records so much information, it is necessary to develop some criteria to determine whether or not we will accept any given DSSD readout as a $\beta$ hit.
 
-\note{How do I *say* that Ben was the one who did most of the DSSD calibration stuff?  I maybe don't need to describe all of it here, but I *could*, and maybe it's needed in order to understand like 4 rows in my error budget.}  
-
-\note[color=jb]{JB:  ``You can describe anything you did differently or improved, but you can and should otherwise defer all details of the scintillator calibration and DSSD calibration to Ben's paper and his thesis and Spencer's.  E.g. Section~\ref{section:bb1_systematics} ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement.''
-\label{thesisconventionjb} }
+%%\note{How do I *say* that Ben was the one who did most of the DSSD calibration stuff?  I maybe don't need to describe all of it here, but I *could*, and maybe it's needed in order to understand like 4 rows in my error budget.}  
+%%\note[color=jb]{JB:  ``You can describe anything you did differently or improved, but you can and should otherwise defer all details of the scintillator calibration and DSSD calibration to Ben's paper and his thesis and Spencer's.  E.g. Section~\ref{section:bb1_systematics} ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement.''
+%%\label{thesisconventionjb} }
 \note[color=jb]{JB:  ``If you have some way of documenting the coding you used, that would be great.''  ... yeah, it would, wouldn't it?}
 
 
-We read out the full waveform for every strip at each event with a scintillator hit, but in post-processing take \emph{only} the `time' and `energy' from the peak waveform height and the time in the waveform at which that occurs. Each strip will have its own noise spectrum and energy calibration.  To classify an event as a good DSSD hit, we require at least one `x' strip and one `y' strip record an energy above the noise threshold.  We require that the x strip and the y strip agree (to within some number of standard deviations) in amount of energy deposited, and in the time at which that hit occurred.  In order to avoid problems resulting from the strips' non-uniform noise thresholds, we further require that the energy deposited be greater than some lower-end cutoff which is selected so as to be higher than every individual strip's noise threshold.  In this case, the DSSD's lower energy uniform threshold was set at 50 keV.  
+We read out the full waveform for every strip at each event with a scintillator hit, but in post-processing take \emph{only} the `time' and `energy' from the waveform's peak.
+% and the time in the waveform at which that occurs. 
+Each strip will have its own noise spectrum, energy calibration, and energy resolution.  To classify an event as a good DSSD hit, we first require a good scintillator hit (as determined by the associated TDC readout) with energy above a nominal 10 keV to eliminate pedestal events, and no pulser LED.
 
-\note{I think Ben might have selected 60 keV?  That's maybe something for the appendix.}
+	We further require at least one `x' strip and one `y' strip within that same detector record an energy above the `noise threshold', which is determined individually for each strip, and is defined according to the signal-to-noise (SNR) ratio.  In other words, for each individual strip, the energy at which a certain fraction of events are `real' events (as opposed to electronic noise) defines a particular `noise threshold'.  Values are tabulated for each strip at SNRs of 0.25, 0.5, 0.75, 1.0, and 2.0.  As a default, the strip-by-strip SNR of 0.25 is used.~\aside{In Ben's thesis, he says it's *actually* an SNR of 0.17 ...}  
 
-We also elect to use only events where a beta hit the DSSD within a $15.5\,$mm radius of the center of the detector, so as to avoid scattering effects from the collimator walls. \aside{Did I even mention the collimator?  Like, in the previous chapter or something..?}
+%That is, for events where a particular amount of energy is recorded 
+%strip records a certain amount of energy
+%by requiring that the signal-to-noise ratio for events with 
+
+	We require that the x strip and the y strip agree (to within some number of standard deviations --- this is a parameter that can be varied) in amount of energy deposited, and in the time at which that hit occurred.  In order to avoid problems resulting from the strips' non-uniform noise thresholds, we further require that the energy deposited be greater than some lower-end cutoff which is selected so as to be higher than every individual strip's noise threshold.  In this case, the DSSDs' lower energy uniform threshold was set at 50 keV, a departure from the choice of 60 keV in an earlier analysis~\cite{ben_Abeta}~\cite{ben_thesis}.
+
+%\note{I think Ben might have selected 60 keV?  That's maybe something for the appendix.}
+
+We also elect to use only events where a beta hit the DSSD within a $15.5\,$mm radius of the center of the detector, as a large fraction of the DSSD hits at larger radii are from betas that have scattered from the collimator walls.~\aside{Did I even mention the collimator?  Like, in the previous chapter or something..?} Furthermore, events with more than \emph{one} DSSD hit are rejected, as these events are likely either accidental coincidences of two beta decays, or else the result of betas scattering out of a scintillator before their energy can be fully absorbed.  
+\note{In Ben's thesis, he says he uses $r=10.0$ for the DSSDs, but in the PRL, $r=15.5^{+3.5}_{-5.5}$ is the range.}
+%so as to avoid scattering effects from the collimator walls. 
 
 %Look at all the events to determine how noisy each individual strip is.  Do that for all strips.  Is the energy higher than some noise threshold?  by like a few sigma?
-\note{Also-also (did I mention it already?) look for events with only *one* DSSD hit (two could indicate the beta scattered back out of the detector in another pixel, or alternately an accidental coincidence of two beta decay events.  either way, no good for analysis.)  Also, only one scint hit, and it has to be the on the same detector with the DSSD.   (...A scintillator hit as indicated by a TDC readout, as well as a max. recorded scint energy for the ``extra'' scintillator at something stupidly tiny, like 10 keV.  Probably *actually* 10 keV.) }
-
-\note{After all other cuts -- not before!! -- we eventually use only events with scint energy between 400 - 4800 keV.  High cutoff is because of the low number of events, which makes the observable--the superratio asymmetry--poorly defined and poorly behaved.  Low cutoff is because it's really hard to model what's going on down there to the required level of precision.  The observable depends most heavily on low beta energy events, so it is imperative that the lower energy portion of the spectra be thoroughly understood if they are to be used for analysis. }
-\note{Somewhere I should list what the energy cutoff is for this spectrum.  Or semi-equivalently, the Q-value.}
-
+%%\note{
+%%Also-also (did I mention it already?) look for events with only *one* DSSD hit (two could indicate the beta scattered back out of the detector in another pixel, or alternately an accidental coincidence of two beta decay events.  either way, no good for analysis.)  
+%%Also, only one scint hit, and it has to be the on the same detector with the DSSD.   (...A scintillator hit as indicated by a TDC readout, as well as a max. recorded scint energy for the ``extra'' scintillator at something stupidly tiny, like 10 keV.  Probably *actually* 10 keV.) }
 
 
+
+\section{Further Cuts Using the Scintillators}
+After all other cuts have been performed, a further cut is made on scintillator energy.  It is important that this cut must be performed \emph{after} event vetoes from more than one scintillator being hit are applied, and after the DSSD event vetoes have also been applied, in order to avoid unexpected behaviour in which we fail to reject certain classes of events that we had intended to reject.  
+
+For both scintillators, only events where the absorbed energy is between 400 and 4800 keV are accepted.  The high energy cutoff is selected so far below the beta cutoff energy ($Q=5.125\,$MeV) because the low counting statistics at higher energies result in our observable, the superratio asymmetry, being poorly defined and poorly behaved.  In later evaluating the systematic error associated with that cut, spectra with lower cutoffs ranging from 300 to 600 keV are considered, and spectra with upper energy cutoffs between 4600 and 5100 keV are considered separately.  
+
+\note{Should I calculate somewhere what the cutoff energy even is?  Ugh.}
+\note{Low cutoff is because it's really hard to model what's going on down there to the required level of precision.  The observable depends most heavily on low beta energy events, so it is imperative that the lower energy portion of the spectra be thoroughly understood if they are to be used for analysis. }
 
 
 

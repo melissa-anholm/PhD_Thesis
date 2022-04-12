@@ -224,7 +224,7 @@ Do I need the angular distribution in the end?  I think maybe I put in scatterin
 
 %\clearpage
 \FloatBarrier
-\section{Evaluating Scattering Effects from the Cloud}
+\section{Modeling the Scattering Effects from the Cloud}
 \label{sec:bs}
 %\subsection{Imported:  Quantifying the Effects of Backscatter with Geant4}
 %	Beta decay (back-)scatter from surfaces within the experimental chamber is a significant systematic, and it must be evaluated, quantified, and corrected for.  This is done via a series of GEANT4 simulations.  While only a small fraction of events are affected, the process results in an energy loss in the beta that can, if not understood, be misinterpreted as the exact signal we're searching for.  It is therefore imperative that this be well understood. 
@@ -389,9 +389,14 @@ In order to check this model's performance, the energy-averaged superratio asymm
 	\includegraphics[width=.999\linewidth]
 	{Figures/SOE_TOF_Spectra.pdf}
 	\note{In SOE TOF Sim+Data plot, re-make the label.}
-	\note[color=tag]{Rephrase description of SOE TOF Sim+Data plot.}
+%	\note[color=tag]{Rephrase description of SOE TOF Sim+Data plot.}
 	\note{Reference Section~\ref{section:emcp_cuts}, probably.}
-	\caption[SOE TOF -- Model and Data]{SOE TOF, with both model and data.  In the end, the data was cut to use only events with a TOF between -0.928 ns and +1.416 ns.  Max. possible background is like a factor of two too big.  Similar quality results no matter how you distribute the Levinger spectra between 4S and 3P, however adding the 0 eV electrons makes a big improvement to the agreement. }	
+	\caption[(SOE--Beta) TOF]{(SOE--Beta) TOF, with both model and experimental data shown.  Spectra from simulations are separated according to their source, and the final TOF cut is drawn on.  The background spectra have been scaled down by about a factor of 2 from their estimated maximum in order to match experimental data.  Similar quality results are achieved no matter how the Levinger SOEs are distributed between 4S and 3P orbital shells, however adding the 0 eV electrons to the spectrum produces a large improvement to the agreement between the model and experiment.
+%	by approximately a factor of 2.	
+%	The final TOF cut is shown.  
+%	In the end, the data was cut to use only events with a TOF between -0.928 ns and +1.416 ns.  
+%%%	Max. possible background is like a factor of two too big.  Similar quality results no matter how you distribute the Levinger spectra between 4S and 3P, however adding the 0 eV electrons makes a big improvement to the agreement. 
+	}	
 	\label{fig:soetof}
 \end{figure}
 
@@ -401,9 +406,9 @@ In order to check this model's performance, the energy-averaged superratio asymm
 	{Figures/asymmetry_by_tof.pdf}
 %	\note{I think I want this picture to go in some other section.}
 %	\note{Show the "average asymmetry" (all energies) as a function of TOF, with real data, best model normalization, and extrema of model normalizations.  Show our cut.  Turns out, it's a lot of work for a really tiny correction.  Oh well.}
-	\note[color=done]{JB on the *actual* figure I had been planning to put here, and my remarks about it:  Indeed it will be critical to show a clear compelling version of this figure in thesis and in a paper.  It was vital to minimize and determine this background to avoid fitting a polynomial to it from the wings,  even more so for the energy dependence of A than for its average -- you should say so.
-	\\ ... \\
-The reason the correction is small is because of all your hard work.}
+%%%	\note[color=done]{JB on the *actual* figure I had been planning to put here, and my remarks about it:  Indeed it will be critical to show a clear compelling version of this figure in thesis and in a paper.  It was vital to minimize and determine this background to avoid fitting a polynomial to it from the wings,  even more so for the energy dependence of A than for its average -- you should say so.
+%%%	\\ ... \\
+%%%The reason the correction is small is because of all your hard work.}
 	\caption{The superratio asymmetry, averaged over all scintillator energies between 400-4800 keV, is used to compare the experimental data and simulated TOF model as a proxy for the quality of the model to estimate the background.  All other cuts have been applied.}	
 	\label{fig:asymmetry_by_tof}
 \end{figure}
