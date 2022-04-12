@@ -118,7 +118,7 @@ Although this setup will decrease atomic velocity, it does not create a confinin
 
 %%% % % % %%%
 \subsection{Atom Trapping with a MOT}
-\note[color=cleanup]{Write the MOT section.}
+%\note[color=cleanup]{Write the MOT section.}
 A Magneto-optical trap (MOT) combines the slowing features of an optical molasses (Sec.~\ref{sec:dopplercooling}) with the Zeeman splitting (Sec.~\ref{sec:zeemansplitting}) arising from a quadrupolar magnetic field, to produce a robust and isotope-specific trapping force in all three dimensions.  The quadrupolar magnetic field is typically generated using a Helmholtz coil surrounding the space in which the trap is formed.  The quadrupole shape of the field implies that it must be zero at some central point between the two coils, and in the space nearby, the magnitude of the magnetic field increases linearly in every direction as one moves away from the centre.  
 
 The retroreflecting lasers are red-detuned and circularly polarized in a direction selected to couple to the Zeeman shifted energy level which will push a given atom towards the centre.  This provides a restoring force in all three dimensions to atoms that have moved too far from the centre.  See Fig.~\ref{fig:mot}.
@@ -126,10 +126,12 @@ The retroreflecting lasers are red-detuned and circularly polarized in a directi
 \begin{figure}[h!!!!!t!b]
 	\centering
 		\includegraphics[width=.999\linewidth]{mot.png}
-		\caption{Components of a magneto-optical trap, including current-carrying magnetic field coils and counterpropagating circularly polarized laser beams. Diagram taken from~\cite{thesis}}
+		\caption[Components of a Magneto-Optical Trap]{Components of a magneto-optical trap, including current-carrying magnetic field coils and counterpropagating circularly polarized laser beams. Diagram taken from~\cite{thesis}}
 		\label{fig:mot}
     	\label{fig:themot}
 \end{figure}
+
+\note{Upon decay, atoms literally aren't trapped anymore by the trap.  No trapping forces, no slowing forces, because it's all isotope-specific.  This is super useful for us.}
 
 %%\note{The laser, which must be circularly polarized in the appropriate directions and tuned slightly to the red of an atomic resonance, is split into three perpendicular retroreflected beams, doppler cooling the atoms and (with the appropriate magnetic field) confining them in all three dimensions (see Figure~\ref{fig:mot}).  }
 
@@ -143,8 +145,6 @@ The retroreflecting lasers are red-detuned and circularly polarized in a directi
 %%%%%%Really, at the end of the previous section, I described the MOT's trapping mechanism.  That's literally what it is.  You just need to do it in 3 dimensions, rather than only one.  Fortunately, an anti-helmholz(sp?) coil gives us a quadrupole-shaped magnetic field, which *actually* has a magnetic field that changes linearly along any axis in the region near the center.   
 %%%%%%
 %%%%%%Optical molasses + zeeman splitting = magneto-optical trap.  Anyway, see Fig.~\ref{fig:mot}.
-
-\note{Upon decay, atoms literally aren't trapped anymore by the trap.  No trapping forces, no slowing forces, because it's all isotope-specific.  This is super useful for us.}
 
 %\note[color=done]{Ignore the repumper.}
 %\note{Do I *really* need to bring up the repumper?  I don't wanna.  Maybe I can just mention it and move on or something. --> Nope!  JB says don't bother with the repumper.}
@@ -223,13 +223,6 @@ But also, I should actually describe the optical pumping, too.  And point at Ben
 
 
 
-
-
-% !TEX root = ../thesis_main.tex
-% 
-% 
-% 
-% 
 %%%% --- * --- %%%%	
 %\clearpage
 \section{An Overview of the Double MOT System and Duty Cycle}
@@ -261,7 +254,7 @@ several related experiments using other isotopes.
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/doublemot4.pdf}
-	\caption{The TRINAT experimental set-up, viewed from above.  The two MOT system reduces background in the detection chamber.  Funnel beams along the atom transfer path keep the atoms focused.}	
+	\caption[The TRINAT experimental set-up, viewed from above]{The TRINAT experimental set-up, viewed from above.  The two MOT system reduces background in the detection chamber.  Funnel beams along the atom transfer path keep the atoms focused.}	
 	\label{fig:doublemot}
 \note{Figure was originally created by Alexandre, modified by ... someone else?  Or Alexandre?  And I got it from ... probably an experimental proposal?  I should figure out how to cite a proposal...}
 \end{figure}
@@ -311,7 +304,7 @@ Here's a diagram of our AC-MOT running one AC-MOT/OP cycle, in Fig.~\ref{fig:acm
 \begin{figure}[ht]
 	\centering
 		\includegraphics[width=.999\linewidth]{acmot.png}
-		\caption{One cycle of trapping with the AC-MOT, followed by optical pumping to spin-polarize the atoms.  After atoms are transferred into the science chamber, this cycle is repeated 100 times before the next transfer.  The magnetic dipole field is created by running parallel (rather than anti-parallel as is needed for the MOT) currents through the two coils.}
+		\caption[The AC-MOT and Optical Pumping Cycle]{One cycle of trapping with the AC-MOT, followed by optical pumping to spin-polarize the atoms.  After atoms are transferred into the science chamber, this cycle is repeated 100 times before the next transfer.  The magnetic dipole field is created by running parallel (rather than anti-parallel as is needed for the MOT) currents through the two coils.}
 		\label{fig:acmot}
 \end{figure}
 

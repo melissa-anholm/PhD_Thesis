@@ -324,6 +324,7 @@ Finally, because this analysis depends heavily on energy measurements from the t
 %	\note{Energy calibration for the scintillator+PMT setup changed dramatically at one point.    Describe how calibration was done.  Like, one sentence or something.  Something about the endpoint energy, and something about the compton edge for 511s, IIRC.}
 
 \section{Further Cuts Using the DSSD}
+\label{sec:dssd_cuts}
 %\note[color=org]{Pretty sure I'm repeating myself from Chapter~\ref{???}}
 \note[color=tag]{Which cuts did I use by default on the DSSD?  Also, which did Ben use?}
 \note{Add 2D DSSD plots?}
@@ -404,32 +405,38 @@ MJA:  Wait.  So have I done that yet in this section?}
 \note[color=org]{I dislike how this section is organized..  should discuss the cut we *didn't* make at the end.}
 %\note[color=org]{Really, should title this section according to the LE thing that is actually its primary topic.  In practice, the change only gets used on the SOE TOF cuts though.}
 %Much like the rMCP, the eMCP is backed by a set of delay lines for position sensitivity.  .......
-The eMCP features a set of three delay lines, intended to be used to record the position of a hit, as in Fig.~\ref{fig:emcp_position}.  \aside{Do I need to describe MCPs and delay lines somewhere?  Maybe not...}  Though only two delay lines is sufficient to determine the position within the plane of the MCP if they are both hit, the presence of a third delay line allows for some redundancy.  In practice, however, a large fraction of otherwise `good' events include a hit on the eMCP, but have insufficient information recorded on the delay line channels to reconstruct a position.  
+The eMCP features a set of three delay lines, intended to be used to record the position of a hit.
+%, as in Fig.~\ref{fig:emcp_position}.  
+%\aside{Do I need to describe MCPs and delay lines somewhere?  Maybe not...}  
+Though only two delay lines is sufficient to determine the position within the plane of the MCP if they are both hit, the presence of a third delay line allows for some redundancy.  In practice, however, a large fraction of otherwise `good' events include a hit on the eMCP, but have insufficient information recorded on the delay line channels to reconstruct a position.  
 
-\begin{figure}[h!!!!t!]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/eMCP_position.pdf}
-%	\note{This picture is `slow'.  Need to re-save it as a png.}
-	\note[color=org]{This pic is probably better used in an SOE section somewhere.}
-	\caption{Position as measured on the eMCP, after some data cleaning.}	
-	\label{fig:emcp_position}
-	\note[color=tag]{Delete eMCP image, or possibly move to the intro to describe Levinger.  Otherwise I have to talk about it here.}
-\end{figure}
+%%\begin{figure}[h!!!!t!]
+%%	\centering
+%%	\includegraphics[width=.999\linewidth]
+%%	{Figures/eMCP_position.pdf}
+%%%	\note{This picture is `slow'.  Need to re-save it as a png.}
+%%	\note[color=org]{This pic is probably better used in an SOE section somewhere.}
+%%	\note[color=tag]{Delete eMCP image, or possibly move to the intro to describe Levinger.  Otherwise I have to talk about it here.}
+%%	\caption{Position as measured on the eMCP, after some data cleaning.}	
+%%	\label{fig:emcp_position}
+%%\end{figure}
 
-Because a SOE from the trap is most likely to land in the centre of the plate, while the background from other sources is roughly constant across the plate, \aside{Wait, what?} it might make sense to accept only events where the eMCP hit is within some radius of the central peak.  This methodology was seriously considered because the remaining data has a much lower fraction of background events polluting it -- however this results in a loss of around half of the events even for the most generous eMCP radius cuts (see Fig.~\ref{fig:soe_tof_positioncompare}).  Therefore, it was decided that no position cuts on the eMCP would be made in the final analysis.
+Because a SOE from the trap is most likely to land in the centre of the plate, while \emph{a priori} the background from other sources not expected to have any particular spatial distribution,  it might make sense to accept only events where the eMCP hit is within some radius of the central peak.  This methodology was seriously considered because the remaining data after this cut is taken has a much lower fraction of background events polluting it -- however even for the most generous eMCP radius cuts, this results in a loss of about half of the events.  The overall measurement is limited by statistics rather than systematics, so it was decided that no cuts on eMCP hit position would be taken in the final analysis.
+%(see Fig.~\ref{fig:soe_tof_positioncompare}).  
+%Therefore, it was decided that no position cuts on the eMCP would be made in the final analysis.
 
-\begin{figure}[h!!!!t!]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/SOE_TOF_positioncompare.pdf}
-	\note{Um.  Did I for sure get the labels correct on this???  It seems really wrong.}
-	\note[color=org]{Surely this thing goes somewhere else instead.}
-	\caption{Beta-electron TOF, for events with and without eMCP hit position information.  A cut will eventually be taken to accept only events sufficiently near the largest peak -- in this case the number of events is `only' decreased by a factor of 2.}	
-	\label{fig:soe_tof_positioncompare}
-	\label{fig:experimental_soe_tof}
-	\note[color=tag]{Get a better set of experimental SOE TOF with/without position plots.  I think this one is wrong.}
-\end{figure}
+%%%%\begin{figure}[h!!!!t!]
+%%%%	\centering
+%%%%	\includegraphics[width=.999\linewidth]
+%%%%	{Figures/SOE_TOF_positioncompare.pdf}
+\note{A shitty TOF spectrum plot used to be here.  It was supposed to compare TOFs with and without position cuts.  It's gone, but not forgotten.}
+%%%%	\note{Um.  Did I for sure get the labels correct on this???  It seems really wrong.}
+%%%%	\note[color=org]{Surely this thing goes somewhere else instead.}
+%%%%	\caption{Beta-electron TOF, for events with and without eMCP hit position information.  A cut will eventually be taken to accept only events sufficiently near the largest peak -- in this case the number of events is `only' decreased by a factor of 2.}	
+%%%%	\label{fig:soe_tof_positioncompare}
+%%%%	\label{fig:experimental_soe_tof}
+%%%%	\note[color=tag]{Get a better set of experimental SOE TOF with/without position plots.  I think this one is wrong.}
+%%%%\end{figure}
 
 Several years after the data was initially collected, a problem was discovered with our low-level analyzer software, which we had been using to convert large and unwieldy MIDAS data sets into somewhat smaller and more manageable ROOT data sets.  In particular, for every timestamp recorded, our raw MIDAS data actually included both a timestamp for the leading edge (LE) of the pulse, and a timestamp for the trailing edge (TE).  The analyzer had--for years--been reporting the timestamp associated with the trailing edge of the pulse.  Initially it was unclear if there might have been a reason behind this choice, but a closer examination of the data showed that the LE data included less timing jitter and noise, as well as a sharper peak for timing pulses across the board (as in Fig.~\ref{fig:LE_TE}), with some channels showing a larger effect than others.  This was corrected, and the entirety of this analysis has been performed now using the cleaner LE spectra.  
 
@@ -439,7 +446,7 @@ Several years after the data was initially collected, a problem was discovered w
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/LE_TE_peaks.pdf}
-	\caption{SOE TOF peaks (eMPC - Scintillator), using the leading edge (LE) and using the trailing edge (TE).  Data is sorted according to runset.  For each individual runset, the TE peak is broader than the LE peak.  The centroid of each runset is also more variable in the TE plots.}	
+	\caption[LE and TE Timing Peaks]{SOE TOF peaks (eMPC - Scintillator), using the leading edge (LE) and using the trailing edge (TE).  Data is sorted according to runset.  For each individual runset, the TE peak is broader than the LE peak.  The centroid of each runset is also more variable in the TE plots.}	
 	\label{fig:LE_TE}
 \end{figure}
 
@@ -448,31 +455,25 @@ The place where this change between the TE and LE timestamps had the biggest imp
 With the data reprocessed using the leading edge for timestamps, I wanted to eliminate as much background as possible from the SOE TOF spectrum.  With this goal in mind, the next step was to correct the scintillator timing for its low energy `walk' (see Fig.~\ref{fig:WalkAdjust}).  A quartic polynomial was fit to each of the 2D timing vs energy spectra (the top and bottom detectors were treated separately), and the result was used to produce a `straightened' SOE TOF spectrum with respect to measured scintillator energy, and as expected, the resulting SOE TOF spectrum was a bit more sharply peaked.  
 
 
-\begin{figure}[h!!!!tb]
+\begin{figure}[h!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/WalkAdjust.png}
-	\caption{SOE TOF walk, before (left) and after (right) applying a quartic adjustment to straighten out the effective TOF.}	
+	\caption[SOE TOF Walk and Correction]{SOE TOF walk, before (left) and after (right) applying a quartic adjustment to straighten out the effective TOF.}	
 	\label{fig:WalkAdjust}
 \end{figure}
 
-With the SOE TOF spectra cleaned up, a cut can be taken to reduce the fraction of background events.  Informed by the model of background spectra described in Section~\ref{sec:tof_bg}, a cut was made to include only a 2.344 ns window around the primary peak in further analysis \aside{``...removing X fraction of the remaining events."}. (see Fig.~\ref{fig:soetof}).
-\note{Probably need to put that figure somewhere else.}
 
-%To understand the events that remain after this cut, it is necessary to create a model of the background events represented therein.   This is discussed in Section~\ref{sec:tof_bg}.
-
-\note{``To check the agreement of the model with reality, we compare the averaged superratio asymmetries from both, as in Fig.~\ref{fig:asymmetry_by_tof}.'' .... probably goes in the other section.}
-
-
-\begin{figure}[h!!!!tb]
+\begin{figure}[h!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/experimental_scintspectra_lin.png}
-	\caption[Experimental Scintillator Spectra]{Experimental Scintillator Spectra, for both detectors in both polarization states.  These spectra are what remain after all cuts have been taken.  All runsets are included.}	
+	\caption[Experimental Scintillator Spectra]{Experimental scintillator spectra, for both detectors in both polarization states.  These spectra are what remain after all cuts have been taken, and all runsets are included.  Binning is selected to match the convention used for the final analysis.}	
 	\label{fig:scintspectra}
 	\note[color=tag]{Experimental scint. spectra plot needs to be referenced in text.}
 \end{figure}
 
+With the SOE TOF spectra cleaned up, a cut can be taken to reduce the fraction of background events.  Informed by the model of background spectra described in Section~\ref{sec:tof_bg}, a cut was made to include only a 2.344 ns window around the primary peak in further analysis~\aside{``...removing X fraction of the remaining events."} (see Fig.~\ref{fig:soetof}).  With all cuts included, the four cleaned scintillator spectra corresponding to combinations of detector and polarization direction are plotted in Fig.~\ref{fig:scintspectra}.
 
 
 

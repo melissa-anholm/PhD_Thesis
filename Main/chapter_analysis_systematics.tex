@@ -238,10 +238,17 @@ To evaluate the systematic effects associated with the scintillators' calibratio
 %%%%There is no reason to believe the errors in calibration should be correlated, so 
 
 \subsubsection{DSSD Radius, Energy Threshold, Agreement}
-\note[color=tag]{Write section dssd systematics evaluation.}
 %\section{BB1 Radius, Energy Threshold, Agreement}
 \label{section:bb1_systematics}
-BB1 radius cut can help to eliminate scattered events.  Energy threshold selection and statistical agreement between BB1 detectors' energies only makes a small effect on results.  BB1 radius itself has a pretty big effect on the result, but we can at least just G4 it away.  The remaining systematic effect is pretty small.  
+%\note[color=tag]{Write section dssd systematics evaluation.}
+Several parameters relating to our choice of cuts relating to DSSD calibrations are varied within both the experimental data and the simulated data to which it is compared.  The detection radius, the overall energy threshold, the strip-by-strip SNR, and the energy and timing agreement (See Ch.~\ref{sec:dssd_cuts}) are each adjusted separately at the start of data processing, and the changes are propagated through to a final $\chi^2$ map.  
+
+The changes to measured values of $\bFierz$ and $\Abeta$ from these adjustments are comparatively small, and the errors are believed to be uncorrelated, so they are added in quadrature to the total systematic uncertainty.
+
+%Although they don't all have an intuitively clear name, 
+
+%%
+%%BB1 radius cut can help to eliminate scattered events.  Energy threshold selection and statistical agreement between BB1 detectors' energies only makes a small effect on results.  BB1 radius itself has a pretty big effect on the result, but we can at least just G4 it away.  The remaining systematic effect is pretty small.  
 \note[color=jb]{JB:  I hope the discussion is clear in your head.  Any effect that relies on scattering computation in G4 should have an uncertainty on order 10\% of the correction -- hopefully you are keeping a distinction here between the finite geometry acceptance (which I guess is exact) scattering off the collimator.}
 \note[color=jb]{As per JB's comment in section~\ref{thesisconventionjb}:   ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement."}
 	
@@ -249,14 +256,14 @@ BB1 radius cut can help to eliminate scattered events.  Energy threshold selecti
 \note[color=jb]{JB on missing figure:  ``if you used such an image as part of your uncertainty estimate, yes [include it]''}
 
 \note{Remember:  There's noise applied to simulated BB1s, matching some spectrum.}
-In the end, we get our results from the scintillator energy only, without summing the BB1 energy back in.  Energy absorbed in DSSDs is only used as (a) a tag for events, and (b) contributing to the total beta energy loss before the beta arrives at the scintillator.
+\note{This probably should go somewhere else:  "In the end, we get our results from the scintillator energy only, without summing the BB1 energy back in.  Energy absorbed in DSSDs is only used as (a) a tag for events, and (b) contributing to the total beta energy loss before the beta arrives at the scintillator."}
 \note[color=jb]{JB:  The simulations of course include it event-by-event, not just a minimally ionizing average loss.}
 
 %%%% --- * --- %%%%
 \subsection{The Atomic Cloud}
 %\section{Lineshape Reconstruction}
 \label{sec:lineshape_results}
-\note[color=tag]{(Re-)Write sections systematics from the cloud.}
+%\note[color=tag]{(Re-)Write sections systematics from the cloud.}
 \note[color=org]{A lot of this content has gone into (Section~\ref{sec:responsefunction}) instead.  I really need to just mention it here (Sec.~\ref{sec:lineshape_results}) and give an indication of how good the result is.  Then evaluate stuff.}
 Uncertainties relating to the position, size, motion, and expansion of the atomic cloud are evaluated using the response function, which is implemented as described in Ch.~\ref{sec:responsefunction}. To evaluate how well the simple monte carlo + response function (SMC+RF) performs in evaluating uncertainties, the relationship between how the SMC+RF and the full G4 simulation changes when a BSM parameter is adjusted is considered in Fig.~\ref{fig:lineshape_demo}.
 
