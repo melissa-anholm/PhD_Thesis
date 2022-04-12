@@ -1,17 +1,9 @@
 \begin{thebibliography}{10}
 
-\bibitem{thesis}
-Anholm, M., Characterizing the {AC-MOT}, Master's thesis, University of British
-  Columbia, 2014.
-
-\bibitem{ben_OP}
-Fenker, B., Behr, J.~A., Melconian, D., Anderson, R. M.~A., Anholm, M., Ashery,
-  D., Behling, R.~S., Cohen, I., Craiciu, I., Donohue, J.~M., Farfan, C.,
-  Friesen, D., Gorelov, A., McNeil, J., Mehlman, M., Norton, H., Olchanski, K.,
-  Smale, S., Th\'{e}riault, O., Vantyghem, A.~N. {\mdseries and} Warner, C.~L.,
-  \textit{Precision measurement of the nuclear polarization in laser-cooled,
-  optically pumped $^{37}\textrm{K}$}, New Journal of Physics, Vol.~18, No.~7,
-  pp.~073028, 2016.
+\bibitem{severijns_beck_cuncic_2006}
+Severijns, N., Beck, M. {\mdseries and} Naviliat-Cuncic, O., \textit{Tests of
+  the standard electroweak model in nuclear beta decay}, Rev. Mod. Phys.,
+  Vol.~78, pp.~991--1040, September 2006.
 
 \bibitem{krane}
 Krane, K.~S., Introductory Nuclear Physics, Wiley, New York, 1988.
@@ -19,11 +11,6 @@ Krane, K.~S., Introductory Nuclear Physics, Wiley, New York, 1988.
 \bibitem{wong1990}
 Wong, S., Introductory Nuclear Physics, Prentice Hall Advanced Reference Series
   Prentice Hall Labora, Prentice Hall, 1990.
-
-\bibitem{severijns_beck_cuncic_2006}
-Severijns, N., Beck, M. {\mdseries and} Naviliat-Cuncic, O., \textit{Tests of
-  the standard electroweak model in nuclear beta decay}, Rev. Mod. Phys.,
-  Vol.~78, pp.~991--1040, September 2006.
 
 \bibitem{wu}
 Wu, C.~S., Ambler, E., Hayward, R.~W., Hoppes, D.~D. {\mdseries and} Hudson,
@@ -38,6 +25,11 @@ Lee, T.-D. {\mdseries and} Yang, C.-N., \textit{Question of parity conservation
 Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
   \textit{Comprehensive analysis of beta decays within and beyond the Standard
   Model}, Journal of High Energy Physics, Vol.~2021, No.~4, pp.~1--36, 2021.
+
+\bibitem{hong_sternberg_garcia}
+Hong, R., Sternberg, M.~G. {\mdseries and} Garcia, A., \textit{Helicity and
+  nuclear $\beta$ decay correlations}, American Journal of Physics, Vol.~85,
+  No.~1, pp.~45--53, 2017.
 
 \bibitem{jtw}
 Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
@@ -66,6 +58,19 @@ Raab, E.~L., Prentiss, M., Cable, A., Chu, S. {\mdseries and} Pritchard, D.~E.,
 \bibitem{corney}
 Corney, A., Atomic and Laser Spectroscopy, Oxford University Press, New York,
   1977.
+
+\bibitem{thesis}
+Anholm, M., Characterizing the {AC-MOT}, Master's thesis, University of British
+  Columbia, 2014.
+
+\bibitem{ben_OP}
+Fenker, B., Behr, J.~A., Melconian, D., Anderson, R. M.~A., Anholm, M., Ashery,
+  D., Behling, R.~S., Cohen, I., Craiciu, I., Donohue, J.~M., Farfan, C.,
+  Friesen, D., Gorelov, A., McNeil, J., Mehlman, M., Norton, H., Olchanski, K.,
+  Smale, S., Th\'{e}riault, O., Vantyghem, A.~N. {\mdseries and} Warner, C.~L.,
+  \textit{Precision measurement of the nuclear polarization in laser-cooled,
+  optically pumped $^{37}\textrm{K}$}, New Journal of Physics, Vol.~18, No.~7,
+  pp.~073028, 2016.
 
 \bibitem{gorelov2000}
 Gorelov, A., Behr, J., Melconian, D., Trinczek, M., Dub{\'e}, P., H{\"a}usser,
