@@ -274,7 +274,7 @@ Unfortunately, the outgoing (anti-)neutrino is very difficult to detect directly
 \aside[color=done]{JB:  cut "so we will simply provide the combined master equation here"
 \\Don't. The equation you have is all you need.}
 Integrating the JTW expression over neutrino direction, we find:
-\input{equation_integratedjtw}
+\input{equation_integratedjtw} % \label{equation:integrated_jtw}
 where a comparison with Holstein's treatment yields the relation,
 \bea
 \xi = G_v^2 \, \cos\theta_C \, f_1(E).
@@ -390,7 +390,23 @@ Unfortunately, this treatment cannot determine the fractional contribution of ea
 \FloatBarrier  % This will have to go away later.
 \section{Fierz Interference -- The Physical Signature}
 \label{signature_chapter}
-\note[color=clean]{Cleanup the "Physical Signature" section.  ie, write it.}
+The physical effects resulting from the presence of scalar or tensor couplings include a small perturbation to the energy spectrum of betas produced by radioactive decay, labeled $\bFierz$ in Eq.~\ref{equation:integrated_jtw}.  Within the Standard Model, the parameter $\bFierz$ is identically zero, and a departure from that would be indicative of (BSM) scalar or tensor couplings.  
+
+The measured value of $\bFierz$ can be evaluated by using a simple beta energy spectrum, as in the top plot of Fig.~\ref{fig:FierzSignature}, but by constructing a so-called ``superratio asymmetry'' instead (bottom plot in Fig.~\ref{fig:FierzSignature}), these small changes to the overall spectrum are amplified, and many systematic effects cancel out entirely.  This result comes at the cost of an increased statistical uncertainty.
+\begin{figure}[h!!t]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/Fierz_Signature.png}
+	\caption[Naive Beta Energy Spectrum and Superratio Asymmetry to Measure $\bFierz$]{A naive beta energy spectrum (top) and superratio asymmetry (bottom) are constructed to measure $\bFierz$.}	
+	\label{fig:FierzSignature}
+\end{figure}
+
+The superratio and superratio asymmetry are discussed in detail in Appendix~\ref{appendix:superratio}.  The discussion includes details on which sort of systematic errors will cancel out entirely, or to leading order, with this treatment -- however it must be noted that for this project, higher-order corrections are included in all simulations, and the effects are propagated through to the end of the analysis.  Therefore, measured values of $\Abeta$ (and $\bFierz$, though that is trivial) may be directly compared to theoretical predictions.  
+
+%%%, and the sort of systematic errors that cancel out under this treatment are discussed in detail in Appendix~\ref{appendix:superratio}.
+
+
+\note{the "Physical Signature" section probably needs more work, but it's not getting it tonight.}
 \note[color=jb]{JB on simple things still missing:
 \\
 Intro or theory section:
@@ -404,7 +420,7 @@ chapters) are included in the simulation,
 so you are extracting b and Abeta in this
 equation to be compared with theory
 \\...\\
-\{This is a simple but vital statement-- some people actually extract Abeta\[Ebeta=0\] without recoil-order corrections, which is not the same parameter.\}
+\{This is a simple but vital statement-- some people actually extract Abeta(Ebeta$=$0) without recoil-order corrections, which is not the same parameter.\}
 \\...\\
 The theory prediction for Abeta (citing Fenker PRL) is X.
 \\
@@ -412,7 +428,6 @@ The theory prediction for bFierz is 0 (maybe you have that already).
 }
 
 %\note[color=jb]{JB:  ``I doubt I will have further useful comments on the Ch. (((this chapter))) as they are now.'' }
-	The physical effects resulting from the presence of scalar or tensor couplings include a small perturbation to the energy spectrum of betas produced by radioactive decay.  
 
 %\missingfigure{I need that simulated picture of the different beta energy spectra, with different values of $\bFierz$.}
 \note[color=jb]{JB on that missing figure that I've now put in:    ``A dependence of Abeta on beta energy is also introduced.
@@ -427,17 +442,11 @@ UCNA fits energy spectrum and Abeta[Ebeta] simultaneously now."
 
 \note{Here's a reference to the picture that shows the result of a non-zero $\bFierz$ term.  It's Fig.~\ref{fig:FierzSignature}.}
 
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/Fierz_Signature.png}
-	\caption{Here's why it's better to extract $\bFierz$ from an asymmetry, in this case.}	
-	\label{fig:FierzSignature}
-\end{figure}
 
 
-\section{On the Superratio, the Supersum, and the Constructed Asymmetry}
-\note[color=clean]{Clean Superratio,Supersum,Super-Asymmetry section.  Prolly merge w/ bFierz section.}
+\note{Kludge-deleted section:  ``On the Superratio, the Supersum, and the Constructed Asymmetry''}
+%\section{On the Superratio, the Supersum, and the Constructed Asymmetry}
+\note{Clean Superratio,Supersum,Super-Asymmetry section.  Prolly merge w/ bFierz section.}
 \note[color=jb]{JB:  You need to at some point say that the supersum is the beta energy spectrum.  There are experiments trying to do this method better, but they are very difficult.  UCNA published a combined energy spectrum and Abeta[Ebeta] analysis on the neutron in March 2020~\cite{NeutronbFierz_March2020}.
 \\...\\
 MJA:  I can't help but also notice the follow-up article from September 2020~\cite{Saul2020}.  Ugh. 

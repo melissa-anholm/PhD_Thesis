@@ -193,28 +193,29 @@ The retroreflecting lasers are red-detuned and circularly polarized in a directi
 \label{sec:op}
 \note[color=cleanup]{Fix OP section's phrasing.  Also/instead, maybe summarize it a little.}
 \note[color=jb]{Direct quote from John follows below:  }
-\comment{The optical pumping process is described in detail in our collaboration’s Ref.~\cite{ben_OP}. The main detail described here is that the optical pumping is distrubed by any component of magnetic field not along the quantization axis. (Ours is the vertical axis, defined by the direction of the optical pumping light, and along which the detectors are placed.) This required sophistication with an AC MOT described below.}
+The optical pumping process is described in detail within our collaboration's Ref.~\cite{ben_OP}. The primary detail described here is that the optical pumping is disturbed by any component of magnetic field not along the quantization axis. (Ours is the vertical axis, defined by the direction of the optical pumping light, and along which the detectors are placed.) This required sophistication with an AC-MOT described in Section~\ref{sec:acmot} below.
 
-\note[color=jb]{End quote from John.  But also!:
-\\
-``...Then you can refer to that (ie, John's red quoted mini-blurb about optical pumping, (which I may relocate to Sec.~\ref{photoions}?  Or not?) in section 3.4 (now 2.4, about the AC-MOT -- ie, Sec.~\ref{sec:acmot}, (even though I might remove that section entirely and put all its content into Sec.~\ref{section:acmot_and_polarization}) ), where you're trying to now but the phrasing is poor.''}
+\note[color=jb]{End quote from John.}
+%%%But also!:
+%%%\\
+%%%``...Then you can refer to that (ie, John's red quoted mini-blurb about optical pumping, (which I may relocate to Sec.~\ref{photoions}?  Or not?) in section 3.4 (now 2.4, about the AC-MOT -- ie, Sec.~\ref{sec:acmot}, (even though I might remove that section entirely and put all its content into Sec.~\ref{section:acmot_and_polarization}) ), where you're trying to now but the phrasing is poor.''}
 
-\note{``Until recently, one limitation of such samples was the necessity for the presence of a relatively large magnetic field, which is expected to partially destroy atomic polarization, limiting the precision of many types of measurements.  Here we discuss the construction of a newer type of MOT, the AC-MOT, which minimizes residual magnetic fields.  The guys in~\cite{harveymurray} came up with the idea of the AC-MOT.  They made it work and did some stuff with it.  Good for them.''}
-Need a nice, uniform, constant magnetic field for your polarization to larmor precess around.  Then, however depolarized (from the axis of the magnetic field) you were to start out, you don't like precess in a way that changes the projection you care about.
-
-But also, I should actually describe the optical pumping, too.  And point at Ben's OP paper that we did~\cite{ben_OP}.
+%%%%\note{``Until recently, one limitation of such samples was the necessity for the presence of a relatively large magnetic field, which is expected to partially destroy atomic polarization, limiting the precision of many types of measurements.  Here we discuss the construction of a newer type of MOT, the AC-MOT, which minimizes residual magnetic fields.  The guys in~\cite{harveymurray} came up with the idea of the AC-MOT.  They made it work and did some stuff with it.  Good for them.''}
+%%%%Need a nice, uniform, constant magnetic field for your polarization to larmor precess around.  Then, however depolarized (from the axis of the magnetic field) you were to start out, you don't like precess in a way that changes the projection you care about.
+%%%%
+%%%%But also, I should actually describe the optical pumping, too.  And point at Ben's OP paper that we did~\cite{ben_OP}.
 
 %\note[color=org]{Somewhere later, I can talk about photoionization?  Or should it be here, in this chapter?  Surely it should at least get a different section though.}
 %\note{Do I need a MOT level diagram too?}
 
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/OP_LevelDiagram_bf.png}
-	\note{Describe what's going on here!  Alternately, cut the whole image.  It's from that paper anyway.}
-	\caption{An atomic level diagram for the optical pumping of $\isotope[37]{K}$, taken from \cite{ben_OP}.  }	
-	\label{fig:op_leveldiagram}
-\end{figure}
+%%%\begin{figure}[h!!t]
+%%%	\centering
+%%%	\includegraphics[width=.999\linewidth]
+%%%	{Figures/OP_LevelDiagram_bf.png}
+%%%	\note{Describe what's going on here!  Alternately, cut the whole image.  It's from that paper anyway.}
+%%%	\caption{An atomic level diagram for the optical pumping of $\isotope[37]{K}$, taken from \cite{ben_OP}.  }	
+%%%	\label{fig:op_leveldiagram}
+%%%\end{figure}
 
 \note[color=purple]{JB says:  ``I would say you don't need an atomic level diagram.  You could just describe in words the semiclassical picture of atoms absorbing photons until they are nearly fully polarized, then they stop absorbing.  The optical pumping + photoionization is then an in situ probe of the polarization. ... You would need to add in words that quantum mechanical corrections to this picture are in the optical Bloch equation approach in B. Fenker et al.  The depolarized states still have high nuclear polarization (1/2 for $F=2, M_F=1$, 5/6 for $F=1, M_F=1$) and determining the ratio of those two populations provides most of the info we need -- we model with the O.B.E, measure the optical pumping light polarization, and float an average transverse magnetic field.  This is adequate to determine the depolarized fraction to 10\% accuracy, which is all that is needed.'' }
 
@@ -288,18 +289,8 @@ Immediately following each set of 100 optical pumping cycles, another set of ato
 \section{The AC-MOT and Polarization Setup}
 \label{sec:acmot}
 \label{section:acmot_and_polarization}
-\note[color=cleanup]{Fix the phrasing of AC-MOT/OP experimental section.}
-\note[color=jb]{JB on Ch. 3.4 (now 2.4) ((now Ch.~\ref{sec:acmot})) ``The AC-MOT'' (that's this section!):
-The content and scope are ok, but the informal phrasing is going to
-confuse people. You have to pay some attention and rephrase these sections.}
-\note[color=jb]{John suggests that maybe I should just refer directly to his red, quoted OP blurb in the chapter about the AC-MOT.}
-
-\note{This content *came from* that other section, and needs to go in here somewhere:  ``Many laser ports to make the MOT functional, and for optical pumping.  Fancy mirror geometry to combine optical pumping and trapping light along the vertical axis.  Water-cooled (anti-)Helmholz coils within the chamber for the AC-MOT, fast switching to produce an optical pumping field.''  }
-
-Citation for Harvey and Murray goes here~\cite{harveymurray}.  Also, myself~\cite{thesis}.
-\note[color=jb]{``...where you're trying to now but the phrasing is poor.''}
-
-Here's a diagram of our AC-MOT running one AC-MOT/OP cycle, in Fig.~\ref{fig:acmot}.
+\note{Fix the phrasing of AC-MOT/OP experimental section.  It's not passable, but still kind-of a mess.}
+The AC-MOT was first described by Harvey and Murray~\cite{harveymurray}, but the TRINAT collaboration has adopted its use because it enables the polarization-destroying magnetic field to be eliminated quickly after the MOT is shut off.~\cite{thesis}.  A diagram of showing the operation phases of several key components in our AC-MOT/optical pumping duty cycle is shown in Fig.~\ref{fig:acmot}.
 
 \begin{figure}[ht]
 	\centering
@@ -308,12 +299,34 @@ Here's a diagram of our AC-MOT running one AC-MOT/OP cycle, in Fig.~\ref{fig:acm
 		\label{fig:acmot}
 \end{figure}
 
+A standard DC-MOT operates continuously, and in the presence of electrically conductive materials especially, the magnetic field can take a (comparatively) long time to dissipate.  This is problematic for an experiment such as this one, because the atoms do not remain confined while the magnetic field dissipates due to potential anomalies in the magnetic field shape arising from induced eddy currents, and for similar reasons, they cannot be successfully optically pumped during this time period either.  Therefore, it is important to waste as little time as possible switching between the MOT and the  optical pumping phases in the duty cycle.  For optical pumping, a weak, dipole-shaped magnetic field is preferred, and this is not possible while the quadrupole field has not dissipated.
 
-Normal MOTs are DC-MOTs.  They just sort-of go.  It's continuous.  We used an AC-MOT though!  The point of an AC-MOT is to shut off the magnetic field as quickly as possible.  With a well-controlled and uniform magnetic field, we can optically pump the atoms, which I think I'm going to describe in the upcoming section~(\ref{sec:op}).
+The principle behind the AC-MOT is to simply run a sinusoidal current through one's anti-Helmholtz coils while flipping the laser polarization to remain in sync.  
 
-Sadly, this also removes our trapping mechanism.  We could keep the optical molasses after the field is off if we wanted to, but we don't, because we wouldn't be able to optically pump the atoms then.  But at least the atoms are cold-ish (we can measure!  I think it's done indirectly in that one table, or for realsies in Ben's thesis), so we can let them just chill for a little while before we have to re-trap them.  Don't lose too much.  \aside{How much do we lose?  Have we quantified that somewhere?  Probably.}
+\note{Eddy currents in your nearby metal objects will still be produced, and these changing eddy currents will \emph{also} create a sinusoidally oscillating magnetic field.  If correctly timed, it is possible to eliminate the current in the anti-Helmholtz coils at the precise time when the eddy currents are also eliminated.  This process can easily reduce the size of any eddy currents still produced by around an order of magnitude or more, and these remaining eddy currents decay more rapidly as well.}
 
-Anyway, the idea of the AC-MOT is to run a sinusoidal current through your anti-Helmholtz coils.  You'll get eddy currents in your nearby metal *stuff* when you have a changing current, and those will *also* make a magnetic field. So, the idea with an AC-MOT is that with a sinusoid, you have clear control over what the eddy currents are actually doing, and you can just shut the current off when the eddy currents are zero (current in the anti-Helmholtz coils will be close to zero at this time too, depending on frequency of the sinusoid...), so you can reduce the size of the eddy currents by like an order of magnitude.  Eddy currents in general take a while to die away, so it's good to make them as small as possible.  ...Also, eddy currents making a magnetic field will screw up your optical pumping, because .... um, reasons?  I think it's not just the detuning, it's also something about the Larmor precession.  
+%% when you have a changing current, and those will *also* make a magnetic field. So, the idea with an AC-MOT is that with a sinusoid, you have clear control over what the eddy currents are actually doing, and you can just shut the current off when the eddy currents are zero (current in the anti-Helmholtz coils will be close to zero at this time too, depending on frequency of the sinusoid...), so you can reduce the size of the eddy currents by like an order of magnitude.  Eddy currents in general take a while to die away, so it's good to make them as small as possible.  ...Also, eddy currents making a magnetic field will screw up your optical pumping, because .... um, reasons?  I think it's not just the detuning, it's also something about the Larmor precession.  
+%
+%(weak, dipole-shaped) magnetic field 
+
+%%\note[color=jb]{JB on Ch. 3.4 (now 2.4) ((now Ch.~\ref{sec:acmot})) ``The AC-MOT'' (that's this section!):
+%%The content and scope are ok, but the informal phrasing is going to
+%%confuse people. You have to pay some attention and rephrase these sections.}
+%%\note[color=jb]{John suggests that maybe I should just refer directly to his red, quoted OP blurb in the chapter about the AC-MOT.}
+
+
+\note{This content *came from* that other section, and needs to go in here somewhere:  ``Many laser ports to make the MOT functional, and for optical pumping.  Fancy mirror geometry to combine optical pumping and trapping light along the vertical axis.  Water-cooled (anti-)Helmholz coils within the chamber for the AC-MOT, fast switching to produce an optical pumping field.''  }
+
+%Citation for Harvey and Murray goes here~\cite{harveymurray}.  Also, myself~\cite{thesis}.
+%%\note[color=jb]{``...where you're trying to now but the phrasing is poor.''}
+
+%%Here's a diagram of our AC-MOT running one AC-MOT/OP cycle, in Fig.~\ref{fig:acmot}.
+
+%%Normal MOTs are DC-MOTs.  They just sort-of go.  It's continuous.  We used an AC-MOT though!  The point of an AC-MOT is to shut off the magnetic field as quickly as possible.  With a well-controlled and uniform magnetic field, we can optically pump the atoms, which I think I'm going to describe in the upcoming section~(\ref{sec:op}).
+
+\note{... Sadly, this also removes our trapping mechanism.  We could keep the optical molasses after the field is off if we wanted to, but we don't, because we wouldn't be able to optically pump the atoms then.  But at least the atoms are cold-ish (we can measure!  I think it's done indirectly in that one table, or for realsies in Ben's thesis), so we can let them just chill for a little while before we have to re-trap them.  Don't lose too much.  (How much do we lose?  Have we quantified that somewhere?  Probably.).  ...}
+
+
 
 %	
 \note{begin content of the historical other AC-MOT+Polarization section.}
@@ -334,25 +347,32 @@ Anyway, the idea of the AC-MOT is to run a sinusoidal current through your anti-
 \note{Probably document things about the waveform and frequency used for the beamtime, since I don't think it's in my MSc.}
 
 % 
-\note[color=cleanup]{Fix that paragraph that implies you could do our bFierz measurement with unpolarized data.}
-\note[color=jb]{John objects to the phrasing of the following paragraph, because you fundamentally need polarized atoms to measure $\bFierz$.}
+%\note[color=cleanup]{Fix that paragraph that implies you could do our bFierz measurement with unpolarized data.}
+%%%\note[color=jb]{John objects to the phrasing of the following paragraph, because you fundamentally need polarized atoms to measure $\bFierz$.}
+
 % Below:  John objects to this phrasing.  Admittedly, it gives the wrong impression. 
-As alluded to in the previous section~(\ref{section:overview}), the measurement in question required a spin-polarized sample of atoms, and a precise knowledge of what that polarization was.  This was primarily needed in order to facilitate a measurement of $A_{\mathrm{\beta}}$ 
-%\aside[color=org]{have I defined the beta asymmetry yet in some previous chapter?  otherwise I have to do it here..} 
-that was performed on the same data that is the subject of discussion here.~\cite{ben_Abeta}   
-%In order to facilitate a measurement of $A_{\mathrm{\beta}}$, great efforts were taken to polarize the atom cloud, and to quantify that polarization.  
-% %This resulted in a duty cycle in which the atoms were intermittently trapped in the AC-MOT, then optically pumped to polarize them.  
-While this is arguably less critical to a measurement of $b_{\mathrm{Fierz}}$, it can still be an asset for eliminating systematic effects.  \aside{Plus, it barely makes sense to talk about measuring $\bFierz$ if you don't know $\Abeta$.}  
-We use only the polarized portion of the duty cycle in order to minimize other systematic errors, such as the scintillator energy calibration and overall trap position.  It also makes for a more straightforward interpretation of the relationship of the measured values of $\Abeta$ and $\bFierz$ when the systematic effects are the same for both measurements. Finally, using only polarized data allows us to make use of the `superratio' construction in data analysis, a powerful tool for reducing (many) systematic errors at the expense of statistical precision (see Chapter~\ref{signature_chapter}).
-\note[color=jb]{End paragraph that John hates.}
+As alluded to in the previous section~(\ref{section:overview}), the measurements in question required a spin-polarized sample of atoms, and a precise knowledge of what that polarization was.  This is needed in order to make best use of the superratio asymmetry for both $\Abeta$ and $\bFierz$ measurements.~\cite{ben_Abeta}\cite{ben_OP}.
+
+
+%%%This was primarily needed in order to facilitate a measurement of $A_{\mathrm{\beta}}$ 
+%%%%\aside[color=org]{have I defined the beta asymmetry yet in some previous chapter?  otherwise I have to do it here..} 
+%%%that was performed on the same data that is the subject of discussion here.~\cite{ben_Abeta}   
+%%%%In order to facilitate a measurement of $A_{\mathrm{\beta}}$, great efforts were taken to polarize the atom cloud, and to quantify that polarization.  
+%%%% %This resulted in a duty cycle in which the atoms were intermittently trapped in the AC-MOT, then optically pumped to polarize them.  
+%%%%While this is arguably less critical to a measurement of $b_{\mathrm{Fierz}}$, it can still be an asset for eliminating systematic effects.  \aside{Plus, it barely makes sense to talk about measuring $\bFierz$ if you don't know $\Abeta$.}  
+
+%We use only the polarized portion of the duty cycle for analysis.
+
+%%%%in order to minimize other systematic errors, such as the scintillator energy calibration and overall trap position.  It also makes for a more straightforward interpretation of the relationship of the measured values of $\Abeta$ and $\bFierz$ when the systematic effects are the same for both measurements. Finally, using only polarized data allows us to make use of the `superratio' construction in data analysis, a powerful tool for reducing (many) systematic errors at the expense of statistical precision (see Chapter~\ref{signature_chapter}).
+%%%%\note[color=jb]{End paragraph that John hates.}
 
 %\note[color=jb]{JB says:  ``Since you worked hard on the logic triggers, a photoion spectrum with duty cycle would be appropriate if you want."}
 
 %\note[color=jb]{JB says:  all polarization details could be deferred to ~\cite{ben_OP}.  (be sure to list all authors including [me]).  )}
 
-A MOT also requires a quadrupolar magnetic field, which we generate with two current-carrying anti-Helmholtz coils located within the vacuum chamber itself.  The coils themselves are hollow, and are cooled continuously by pumping temperature-controlled water through them.   
+A MOT requires a quadrupolar magnetic field, and we generate ours with two current-carrying anti-Helmholtz coils located within the vacuum chamber itself.  Since these coils are expected to run an alternating current, heat is produced and cannot be dissipated in the vacuum.  Therefore the coils themselves are hollow copper tubes, and they are continuously cooled by pumping temperature-controlled water through them.   
 
-One feature which makes our MOT unusual has been developed as a result of our need to rapidly cycle the MOT on and off -- that is, it is an ``AC-MOT''.  Rather than running the trap with one particular magnetic field and one set of laser polarizations to match, we run a sinusoidal AC current in the magnetic field coils, and so the sign and magnitude of the magnetic field alternate smoothly between two extrema, and the trapping laser polarizations are rapidly swapped to remain in sync with the field~\cite{harveymurray}\cite{thesis}.  See Figure~\ref{fig:acmot}.  
+%%%One feature which makes our MOT unusual has been developed as a result of our need to rapidly cycle the MOT on and off -- that is, it is an ``AC-MOT''.  Rather than running the trap with one particular magnetic field and one set of laser polarizations to match, we run a sinusoidal AC current in the magnetic field coils, and so the sign and magnitude of the magnetic field alternate smoothly between two extrema, and the trapping laser polarizations are rapidly swapped to remain in sync with the field~\cite{harveymurray}\cite{thesis}.  See Figure~\ref{fig:acmot}.  
 
 \note{Note that because the atoms within a MOT can be treated as following a thermal distribution, some fraction of the fastest atoms continuously escape from the trap's potential well.  Even with the most carefully-tuned apparatus, the AC-MOT cannot quite match a similar standard MOT in terms of retaining atoms.  The TRINAT AC-MOT has a `trapping half-life' of around 6 seconds, and although that may not be particularly impressive by the standards of other MOTs, it is more than adequate for our purposes.  $^{37}\textrm{K}$ itself has a radioactive half-life of only 1.6 seconds 
 (cite someone), so our dominant loss mechanism is radioactive decay rather than thermal escape. }
