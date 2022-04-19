@@ -42,8 +42,8 @@ With $\vec{\mu}$ fixed, it is clear that the magnitude of the energy shift must 
 \Delta E_{\mathrm{\,transition}} &=& - \left( \vec{\mu}_f - \vec{\mu}_i \right) \cdot \vec{B}.
 \eea 
 
-\note{Needs a level diagram.  Maybe.}
-
+%\note{Needs a level diagram.  Maybe.}
+%
 %The Zeeman shift is what happens when you stick an atom in a magnetic field.  An atom's energy levels, which would have been degenerate before applying a field, split according the angular momentum.  At low fields (which is what is of interest to us here), the energy perturbation scales linearly with the strength of the magnetic field.  
 
 \note{
@@ -191,7 +191,7 @@ The retroreflecting lasers are red-detuned and circularly polarized in a directi
 %%% % % % %%%
 \section{Optical Pumping}
 \label{sec:op}
-\note[color=cleanup]{Fix OP section's phrasing.  Also/instead, maybe summarize it a little.}
+%\note[color=cleanup]{Fix OP section's phrasing.  Also/instead, maybe summarize it a little.}
 \note[color=jb]{Direct quote from John follows below:  }
 The optical pumping process is described in detail within our collaboration's Ref.~\cite{ben_OP}. The primary detail described here is that the optical pumping is disturbed by any component of magnetic field not along the quantization axis. (Ours is the vertical axis, defined by the direction of the optical pumping light, and along which the detectors are placed.) This required sophistication with an AC-MOT described in Section~\ref{sec:acmot} below.
 
@@ -230,17 +230,12 @@ The optical pumping process is described in detail within our collaboration's Re
 \label{section:overview}
 \label{experimental_chapter}
 \label{setup_chapter}
-
 \note{put this in!  ``....and is designed to operate at ultra-high vacuum (UHV) to minimize trap losses from collisions.''  Also, I think it helps prevent sparking?}
-
-\note[color=jb]{JB:  
-...You could call the first half of such a chapter "General considerations of Atomic techniques used" and the 2nd half "Experimental Implementation of Atomic Techniques used"}
-
-\note{Supersection:  Experimental Implementation of Atomic Techniques Used}
-
+%
+%\note[color=jb]{JB:  ...You could call the first half of such a chapter "General considerations of Atomic techniques used" and the 2nd half "Experimental Implementation of Atomic Techniques used"}
+%\note{Supersection:  Experimental Implementation of Atomic Techniques Used}
 \note{Remember the pulser LED!  To evaluate the stability of the scintillator gain!}
-
-\note[color=done]{JB says:  chapter (((this section))) is really good, and in good shape for the committee}
+%\note[color=done]{JB says:  chapter (((this section))) is really good, and in good shape for the committee}
 
 \note{
 We obtain a sample of neutral, cold, nuclear spin-polarized $^{37}\textrm{K}$ atoms with a known spatial position, via the TRIUMF accelerator facility, by intermittently running a magneto-optical trap (MOT) to confine and cool the atoms, then cycling the trap off to polarize the atoms.  With $\beta$ detectors placed opposite each other along the axis of polarization, we are able to directly observe the momenta of $\beta^+$ particles emitted into 1.4\% of the total solid angle nearest this axis.  We also are able to extract a great deal of information about the momentum of the recoiling $^{37\!}$Ar daughters by measuring their times of flight and hit positions on a microchannel plate detector with a delay line.  Because the nuclear polarization is known to within $<0.1\%$~\cite{ben_OP}, and we are able to account for many systematic effects by periodically reversing the polarization and by collecting unpolarized decay data while the atoms are trapped within the MOT, we expect to be well equipped to implement a test of `handedness' within the nuclear weak force.
@@ -463,7 +458,7 @@ The beta detectors, located above and below the atom cloud along the axis of pol
 	The two sets of beta detectors were positioned directly along the axis of polarization.  Each beta detector consists of a plastic scintillator and photo-multiplier tube (PMT) \aside{There's gotta be a better way to describe it} placed directly behind a 40$\times$40-pixel double-sided silicon strip detector (DSSD).  \aside{what's the open area of the detector?  how big is each pixel?}  The scintillator is used to measure the overall energy of the incoming particles, as well as to assign a timestamp to these events, while the DSSD is used both to localize the hit position to one (or in some cases, two) individual pixel(s), and also to discriminate between different types of incoming particles.  In particular, though the scintillator will measure the energy of an incoming beta or an incoming gamma with similar efficiency, the beta will lose a portion of its kinetic energy as it passes through the DSSD into the scintillator.  By contrast, an incident gamma will deposit only a very small amount of energy in the DSSD layer, making it possible to reject events with insufficient energy deposited in the DSSD as likely gamma ray events.  Given that the decay of interest to us emits positrons, we expect a persistent background 511 keV gamma rays that are not of interest to us, so it is extremely important that we are able to clean these background events from our spectrum. 
 
 
-It must be noted that the path between the cloud of trapped atoms and either beta detector is blocked by two objects:  a 275$\,\mu$m silicon carbide mirror (necessary for both trapping and optical pumping), and a 229$\,\mu$m beryllium foil (separating the UHV vacuum within the chamber from the outside world).  In order to minimize beta scattering and energy attenuation, these objects have had their materials selected to use the lightest nuclei with the desired material properties, and have been manufactured to be as thin as possible without compromising the experiment.  As the $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$ decay proceess releases $Q=5.125$\,MeV of kinetic energy~\cite{Q_value}, the great majority of betas are energetic enough to punch through both obstacles without significant energy loss before being collected by the beta detectors.  
+It must be noted that the path between the cloud of trapped atoms and either beta detector is blocked by two objects:  a 275$\,\mu$m silicon carbide mirror (necessary for both trapping and optical pumping), and a 229$\,\mu$m beryllium foil (separating the UHV vacuum within the chamber from the outside world).  In order to minimize beta scattering and energy attenuation, these objects have had their materials selected to use the lightest nuclei with the desired material properties, and have been manufactured to be as thin as possible without compromising the experiment.  As the $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$ decay process releases $Q=5.125$\,MeV of kinetic energy~\cite{Q_value}, the great majority of betas are energetic enough to punch through both obstacles without significant energy loss before being collected by the beta detectors.  
 
 
 
@@ -472,12 +467,13 @@ It must be noted that the path between the cloud of trapped atoms and either bet
 \subsection{The Photoionization Laser}
 \label{cloud}
 \label{photoions}
-\note[color=done]{John says:  Chapter (((\ref{photoions}))) is very good and complete, showing you understand what isneeded about photoionization.}
-
+%%%%\note[color=done]{John says:  Chapter (((\ref{photoions}))) is very good and complete, showing you understand what isneeded about photoionization.}
 In order to measure properties of the trapped $^{37}\textrm{K}$ cloud, a 10\,kHz pulsed laser at 355\,nm is directed towards the cloud.  These photons have sufficient energy to photoionize neutral $^{37}\textrm{K}$ from its excited atomic state, which is populated by the trapping laser when the MOT is active, releasing 0.77\,eV of kinetic energy, but do not interact with ground state $^{37}\textrm{K}$ atoms.  The laser is of sufficiently low intensity that only $\sim 1\%$ of excited state atoms are photoionized, so the technique is only very minimally destructive.
 \note{Probably worth mentioning that we test this stuff offline on stable \isotope[41]{K}. But also, surely it should be mentioned in like the AC-MOT/Polarization section too.}
 
-Because an electric field has been applied within this region (Section~\ref{section:field})\aside[color=jb]{JB:  ``you could reference the letter for the value of the field 150V/cm.''} the $^{37}\textrm{K}^+$ ions are immediately pulled into the detector on one side of the chamber, while the freed $e^-$ is pulled towards the detector on the opposite side of the chamber.  Because  $^{37}\textrm{K}^+$ is quite heavy relative to its initial energy, it can be treated as moving in a straight line directly to the detector, where its hit position on the microchannel plate is taken as a 2D projection of its position within the cloud.  Similarly, given a sufficient understanding of the electric field, the time difference between the laser pulse and the microchannel plate hit allows for a calculation of the ion's initial position along the third axis.  
+Because an electric field has been applied within this region (Section~\ref{section:field})
+%\aside[color=jb]{JB:  ``you could reference the letter for the value of the field 150V/cm.''} 
+the $^{37}\textrm{K}^+$ ions are immediately pulled into the detector on one side of the chamber, while the freed $e^-$ is pulled towards the detector on the opposite side of the chamber.  Because  $^{37}\textrm{K}^+$ is quite heavy relative to its initial energy, it can be treated as moving in a straight line directly to the detector, where its hit position on the microchannel plate is taken as a 2D projection of its position within the cloud.  Similarly, given a sufficient understanding of the electric field, the time difference between the laser pulse and the microchannel plate hit allows for a calculation of the ion's initial position along the third axis.  
 
 \note{As a check:  the camera measurements for photons from de-excitation.  It's aimed 35 degrees from vertical, with its horizontal axis the same as ..... one of the other axes.  I think it's the TOF axis.  I can check this when my computer comes back.   Also, there's an unknown additional delay between some of our DAQ channels that can't be explained by accounting for cable lengths, so we really like having the check there.}
 \note[color=jb]{JB says:  ``yes, camera x-axis is tof axis.''}

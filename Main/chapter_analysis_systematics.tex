@@ -8,8 +8,7 @@
 \chapter{Analysis and Estimates of Systematic Effects}
 \label{systematics_chapter}
 \label{analysis_chapter} 
-\note[color=tag]{Write the whole damn Analysis chapter.}
-\note[color=tag]{Go through and change all instances of ``Beta - SOE''/``Beta---SOE''/etc to ``SOE -  Beta''/etc., *within the whole thesis*.}
+\note{Go through and change all instances of ``Beta - SOE''/``Beta---SOE''/etc to ``SOE -  Beta''/etc., *within the whole thesis*.}
 %I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
 %\missingfigure{Show simulated spectra separated by scattering category.}
 %\note[color=tag]{Re-phrase (or at least un-pinken) Analysis Chapter intro blurb from John.}
@@ -42,35 +41,35 @@ I can only say that if you have an equal choice between including a detail or no
 %\note[color=org]{Do I want this chapter combined with the analysis chapter?  If that chapter includes all the stuff about G4, it's going to be unwieldy and huge.}
 %\note{How do I even \emph{do} these estimations?}
 
-\note[color=todoblue]{JB says:   
-\\
-A simple estimate from the collaboration that builds intuition for this result:
-Scatter in the SiC mirrors and DSSD actually produces an efficiency change at low
-beta energy. Energy loss is not minimally ionizing in these structures, and instead
-will have a long Landau tail that can take events below energy threshold in the scintillator.
-The collaboration has modelled explicitly the false asymmetry as a function
-of Kbeta between 600 and 1300 keV, producing roughly (K-0.6 MeV)/(0.7 MeV), i.e.
-50\% at Kbeta=0.95 MeV. This efficiency degradation would be distributed roughly equally
-between the SiC and DSSD.
-If completely ignored, this would introduce by inspection a false bFierz of approximately
-0.5.
-Scattering effects will vary between linear and sqrt of thickness, so assuming
-worst case of linear, the mechanical thickness uncertainty
-of 5 micron/300 micron and 6 micron /275 micron, an average of 2\%, making
-a random contribution of order 0.01 each.
-The Be window has larger mechanical thickness uncertainty of 23micron/229 micron, but
-energy loss and scattering in this material is 5x smaller, so the net effect would be similar.
-\\ ... \\
-To minimize this systematic for future experiments, the collaboration has
-implemented pellicle mirrors of negligible thickness, 100 nm Au on 4 micron
-kapton. The collaboration is also implementing Be-windowed wire chambers in
-place of the DSSD.
-\\
-...
-\\
-MJA:  .....huh?
-}
-
+%%%%\note[color=todoblue]{JB says:   
+%%%%\\
+%%%%A simple estimate from the collaboration that builds intuition for this result:
+%%%%Scatter in the SiC mirrors and DSSD actually produces an efficiency change at low
+%%%%beta energy. Energy loss is not minimally ionizing in these structures, and instead
+%%%%will have a long Landau tail that can take events below energy threshold in the scintillator.
+%%%%The collaboration has modelled explicitly the false asymmetry as a function
+%%%%of Kbeta between 600 and 1300 keV, producing roughly (K-0.6 MeV)/(0.7 MeV), i.e.
+%%%%50\% at Kbeta=0.95 MeV. This efficiency degradation would be distributed roughly equally
+%%%%between the SiC and DSSD.
+%%%%If completely ignored, this would introduce by inspection a false bFierz of approximately
+%%%%0.5.
+%%%%Scattering effects will vary between linear and sqrt of thickness, so assuming
+%%%%worst case of linear, the mechanical thickness uncertainty
+%%%%of 5 micron/300 micron and 6 micron /275 micron, an average of 2\%, making
+%%%%a random contribution of order 0.01 each.
+%%%%The Be window has larger mechanical thickness uncertainty of 23micron/229 micron, but
+%%%%energy loss and scattering in this material is 5x smaller, so the net effect would be similar.
+%%%%\\ ... \\
+%%%%To minimize this systematic for future experiments, the collaboration has
+%%%%implemented pellicle mirrors of negligible thickness, 100 nm Au on 4 micron
+%%%%kapton. The collaboration is also implementing Be-windowed wire chambers in
+%%%%place of the DSSD.
+%%%%\\
+%%%%...
+%%%%\\
+%%%%MJA:  .....huh?
+%%%%}
+%%%%
 
 
 %%%% --- * --- %%%%
@@ -140,9 +139,9 @@ To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/Chi2_2D_SetB.png}
-	\note{The circles show 1 sigma, 90\%, and 95\% confidence intervals.  But also, only statistical uncertainty is represented here, while systematic uncertainties are evaluated by adjusting parameters and creating a new (set of) chi2 maps very much like this one.}
-	\note[color=tag]{On the per-dataset $\chi^2$ maps and SR asymmetries, go through and write descriptions for the goddamn pictures.}
-	\caption[$\chi^2$ Map for Runset B]{A $\chi^2$ map to compare data from Runset B to a parameter space of $\Abeta$ and $\bFierz$ values.}	
+	\note{Systematic uncertainties are evaluated by adjusting parameters and creating a new (set of) chi2 maps very much like this one.}
+%	\note[color=tag]{On the per-dataset $\chi^2$ maps and SR asymmetries, go through and write descriptions for the goddamn pictures.}
+	\caption[$\chi^2$ Map for Runset B]{A $\chi^2$ map to compare data from Runset B to a parameter space of $\Abeta$ and $\bFierz$ values.  The contours show 1$\sigma$, 90\%, and 95\% statistical confidence intervals.}	
 	\label{fig:2dchi2_setB}
 \end{figure}
 %
@@ -150,7 +149,7 @@ To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/Chi2_2D_SetC.png}
-	\caption[$\chi^2$ Map for Runset C]{A $\chi^2$ map to compare data from Runset C to a parameter space of $\Abeta$ and $\bFierz$ values.}	
+	\caption[$\chi^2$ Map for Runset C]{A $\chi^2$ map to compare data from Runset C to a parameter space of $\Abeta$ and $\bFierz$ values.  The contours show 1$\sigma$, 90\%, and 95\% statistical confidence intervals.}	
 	\label{fig:2dchi2_setC}
 \end{figure}
 %
@@ -158,7 +157,7 @@ To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/Chi2_2D_SetD.png}
-	\caption[$\chi^2$ Map for Runset D]{A $\chi^2$ map to compare data from Runset D to a parameter space of $\Abeta$ and $\bFierz$ values.}	
+	\caption[$\chi^2$ Map for Runset D]{A $\chi^2$ map to compare data from Runset D to a parameter space of $\Abeta$ and $\bFierz$ values.  The contours show 1$\sigma$, 90\%, and 95\% statistical confidence intervals.}	
 	\label{fig:2dchi2_setD}
 \end{figure}
 
