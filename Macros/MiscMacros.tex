@@ -21,14 +21,13 @@
 \newcommand{\margintodo}[2][]  % small note in the margin.
 	{\todo[caption={#2}, size=\scriptsize, color=orange, #1]{\renewcommand{\baselinestretch}{1.0}\selectfont#2\par}}  % default spacing seems to be like 1.2.  Change to 1.0.  This also allows you to override the color selection.
 
-\newcommand{\note}[2][]{\todo[inline, color=orange, #1]{#2}}  % Can override color.
-%\newcommand{\note}[2][]{\todo[inline, color=#1]{#2}}  %
+\newcommand{\note}[2][orange]{\todo[inline, color=#1]{#2}}  % Can still override color.
 
 
 \newcommand{\bluetodo}[2][]{\todo[inline, color=todoblue, #1]{#2}}  % Can override color.
 
-\newcommand{\aside}[2][]  % small note in the margin.
-	{\todo[caption={#2}, size=\scriptsize, color=orange, #1]{\renewcommand{\baselinestretch}{1.0}\selectfont#2\par}}  % default spacing seems to be like 1.2.  Change to 1.0.  This also allows you to override the color selection.
+\newcommand{\aside}[2][orange]  % small note in the margin.
+	{\todo[caption={#2}, size=\scriptsize, color=#1]{\renewcommand{\baselinestretch}{1.0}\selectfont#2\par}}  % default spacing seems to be like 1.2.  Change to 1.0.  This also allows you to override the color selection.
 
 
 

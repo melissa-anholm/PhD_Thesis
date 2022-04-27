@@ -74,11 +74,11 @@ After emerging from the back of the MCP stack, the electron shower is then incid
 ~\aside{how precise is the rMCP supposed to do?  in practice, it wasn't nearly that good.} 
 The electron shower continues past the first delay line to hit the delay line immediately behind, which again creates an electrical pulse that propagates towards the ends of that wire, and a similar procedure can be used to evaluate the hit position in the perpendicular direction.  Therefore, for an event~\aside{It's not really *every* event...} in which the rMCP is hit and an electron shower is triggered, we expect to have five timestamps associated with that hit -- one associated with the MCP stack itself, and two from each delay line.
 \note{A diagram of how delay lines work would really help here, but there's no time for that.  I'll put it in if someone asks.}
-\note[color=org]{Do I want the above section about how delay lines work to go in the other chapter?  Maybe.}
+\note[org]{Do I want the above section about how delay lines work to go in the other chapter?  Maybe.}
 
 This understanding of how delay lines work informs the initial stages of data processing for rMCP events.  To obtain the cleanest possible rMCP data, the first step is to simply throw out every event which doesn't have a complete set of five timestamps associated with it -- even though it would still be possible to make good use of many events which have only partial data.  Even though many ``real'' rMCP hit events came in under threshold in one or more channels, detector noise was plentiful, 
 %the detector as a whole was still fairly noisy -- 
-and that noise varied in both quality and quantity over the course of the beamtime.  Therefore, it was decided to be more important for the rMCP data to be as clean as possible, despite the fact that its statistical power would be reduced. (Note that this step is \emph{not} done on the eMCP side -- more on that in Section~\ref{section:emcp_cuts})~\aside[color=org]{OK, I have to *actually* discuss this a bit somewhere though.  }  
+and that noise varied in both quality and quantity over the course of the beamtime.  Therefore, it was decided to be more important for the rMCP data to be as clean as possible, despite the fact that its statistical power would be reduced. (Note that this step is \emph{not} done on the eMCP side -- more on that in Section~\ref{section:emcp_cuts})~\aside[org]{OK, I have to *actually* discuss this a bit somewhere though.  }  
 
 %\note{At this stage I don't *really* do the thing where I throw out stuff that doesn't have a photodiode or scintillator hit in coincidence.  I think that comes later...}
 
@@ -150,7 +150,7 @@ The lower plots in Fig.~\ref{fig:rmcp_calibration} show an unfortunate pattern o
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/rMCP_PI_2D_535.png}
-	\note[color=bluetodo]{You know, I think this one is flipped relative to the previous image.  Bleh.  Probably this one is the correct one, but who wants to deal with that?  Also .... did we switch MCP plates between calibration and the run?  I think possibly we did!  I'll have to ask the eLog.}
+	\note[bluetodo]{You know, I think this one is flipped relative to the previous image.  Bleh.  Probably this one is the correct one, but who wants to deal with that?  Also .... did we switch MCP plates between calibration and the run?  I think possibly we did!  I'll have to ask the eLog.}
 	\note{Does this thing even have a TOF cut?}
 	\caption[Photoion Hit Positions in 2D]{Photoion Hit Positions in 2D.  This is the entirety of the good photoion data taken at 535 V/cm.  The central bright spot is an image of the atom cloud arising from photoionization events of unpolarized atoms; the rest is background.  Vertical stripes of indeterminate cause can be seen across the face of the image -- it has not been possible to eliminate them in analysis. %, and it is unclear what result they may have with regard to estimates of the average trap position and size.
 	}	
@@ -181,8 +181,8 @@ But also, I really don't want to get into this, otherwise somebody will ask me t
 \FloatBarrier
 \section{Measurements of the Atom Cloud}
 \label{sec:cloud_calibration}
-%\note[color=cleanup]{Write that final paragraph about measuring the atom cloud before and after OP.}
-With the rMCP detector calibrated (Section~\ref{sec:rmcp_cals}), several types of data may be extracted.  It is possible to extract the hit positions and times-of-flight for the incident nuclear recoils, and an analysis of such data could be used to perform a test of right-handed currents within the nuclear weak force, as discussed in Chapter~\ref{section_rslow}.  However, we will focus here on what may be learned about the \emph{atom cloud} from rMCP events in coincidence with the photoionization laser.~\aside[color=org]{Also... does the camera data go in this section??}  
+%\note[cleanup]{Write that final paragraph about measuring the atom cloud before and after OP.}
+With the rMCP detector calibrated (Section~\ref{sec:rmcp_cals}), several types of data may be extracted.  It is possible to extract the hit positions and times-of-flight for the incident nuclear recoils, and an analysis of such data could be used to perform a test of right-handed currents within the nuclear weak force, as discussed in Chapter~\ref{section_rslow}.  However, we will focus here on what may be learned about the \emph{atom cloud} from rMCP events in coincidence with the photoionization laser.~\aside[org]{Also... does the camera data go in this section??}  
 
 This class of data (events with both an rMCP hit and a photoionization laser hit in coincidence) can be used to measure cloud polarization, and the methodology and results of that process as it applies to this particular experiment are discussed in a recent publication~\cite{ben_OP}.  We are also interested in the cloud's position and size during the periods of time where decay data is collected, since this represents a potential systematic effect that must be accounted for within our models.  The latter will be the primary focus of this section.  
 
@@ -214,14 +214,14 @@ To extract the size and position of the atom cloud as projected onto all three a
 \FloatBarrier %%% this will have to go.
 
 \note{Also, we noticed the trap drifting after one of the runs, because one of the batteries on one of the thingies adjusting the laser frequency (I think) was failing. }
-\note[color=jb]{JB:  ``If we rejected the data with the MOT moving (indeed a battery determining the voltage controlled oscillator frequency offset between absorption in stable \isotope[41]{K} cell and the \isotope[37]{K} resonance) then that's all you need to say.''}
+\note[jb]{JB:  ``If we rejected the data with the MOT moving (indeed a battery determining the voltage controlled oscillator frequency offset between absorption in stable \isotope[41]{K} cell and the \isotope[37]{K} resonance) then that's all you need to say.''}
 \note{describe how you'd turn this into a physical description of the cloud, with like a temperature and a sail velocity and shit.  with equations.}
 
 
 %I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
 %Without further ado, I'm just going to put in several pictures.  Right here, right now.  They're likely to *actually* show up on subsequent pages mixed in with the other content.  I'll have to fix that at some point.
 
-%%%%%%\note[color=tag]{Get rid of at least like two out of the three stupid camera plots.}
+%%%%%%\note[tag]{Get rid of at least like two out of the three stupid camera plots.}
 %%%%%%\begin{figure}[h!!t]
 %%%%%%	\centering
 %%%%%%	\includegraphics[width=.999\linewidth]
@@ -320,15 +320,15 @@ Finally, because this analysis depends heavily on energy measurements from the t
 %	Setup is as described in Section~\ref{section:betadetectors}.	 
 %	\note{This is a stupid section name.  Also, I really do need to describe how the cuts were made here somewhere, because it's non-trivial in many cases, and possibly different than what Ben did in some cases.  But it won't make sense to describe what I did different if I don't describe the thing as a whole, at least a bit.  The point is, this is a set of cuts/systematics that isn't really that straightforward to understand.  }
 %\section{Plastic Scintillators}
-%	\note[color=org]{Maybe this goes in Chapter~\ref{dataselection_chapter}?}
+%	\note[org]{Maybe this goes in Chapter~\ref{dataselection_chapter}?}
 %	\note{Energy calibration for the scintillator+PMT setup changed dramatically at one point.    Describe how calibration was done.  Like, one sentence or something.  Something about the endpoint energy, and something about the compton edge for 511s, IIRC.}
 
 \section{Further Cuts Using the DSSD}
 \label{sec:dssd_cuts}
-%\note[color=org]{Pretty sure I'm repeating myself from Chapter~\ref{???}}
-\note[color=tag]{Which cuts did I use by default on the DSSD?  Also, which did Ben use?}
+%\note[org]{Pretty sure I'm repeating myself from Chapter~\ref{???}}
+\note[tag]{Which cuts did I use by default on the DSSD?  Also, which did Ben use?}
 \note{Add 2D DSSD plots?}
-%%%%\note[color=jb]{JB says: To repeat a comment, since the Appendix on analysis changes is being dispersed throughout, when you state somewhere (I think it's in Ch. 6)((5?)) make sure you state clearly that the only change for BB1 cuts
+%%%%\note[jb]{JB says: To repeat a comment, since the Appendix on analysis changes is being dispersed throughout, when you state somewhere (I think it's in Ch. 6)((5?)) make sure you state clearly that the only change for BB1 cuts
 %%%%is the radius cut, e.g. that you took the same T and E from the waveforms (I'm not even sure whether the
 %%%%waveforms are recorded anyway). You  ask 'how can I state this' but there's no reason to be subtle.
 %%%%Just say upfront that Ben and Spencer's theses did all the groundwork on the BB1, and here you include selected details needed to understand the present analysis. If you need to include some redundant material, don't worry too much about that.
@@ -351,9 +351,9 @@ We would like to look specifically at events involving $\beta^+$ particles arriv
 In order to proceed at this point, and because the DSSD readout records so much information, it is necessary to develop some criteria to determine whether or not we will accept any given DSSD readout as a $\beta$ hit.
 
 %%\note{How do I *say* that Ben was the one who did most of the DSSD calibration stuff?  I maybe don't need to describe all of it here, but I *could*, and maybe it's needed in order to understand like 4 rows in my error budget.}  
-%%\note[color=jb]{JB:  ``You can describe anything you did differently or improved, but you can and should otherwise defer all details of the scintillator calibration and DSSD calibration to Ben's paper and his thesis and Spencer's.  E.g. Section~\ref{section:bb1_systematics} ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement.''
+%%\note[jb]{JB:  ``You can describe anything you did differently or improved, but you can and should otherwise defer all details of the scintillator calibration and DSSD calibration to Ben's paper and his thesis and Spencer's.  E.g. Section~\ref{section:bb1_systematics} ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement.''
 %%\label{thesisconventionjb} }
-\note[color=jb]{JB:  ``If you have some way of documenting the coding you used, that would be great.''  ... yeah, it would, wouldn't it?}
+\note[jb]{JB:  ``If you have some way of documenting the coding you used, that would be great.''  ... yeah, it would, wouldn't it?}
 
 
 We read out the full waveform for every strip at each event with a scintillator hit, but in post-processing take \emph{only} the `time' and `energy' from the waveform's peak.
@@ -395,15 +395,15 @@ For both scintillators, only events where the absorbed energy is between 400 and
 %\section{Further Cuts Using the eMCP}
 \section{Timing Improvements with the Leading Edge and Scintillator Walk Correction}
 \label{section:emcp_cuts}
-\note[color=jb]{MJA:  I can describe the eMCP calibration here, even though it mostly wasn't implemented by me.  It is tangentially relevant to data selection and background estimation by providing an experimental energy spectrum for shake-off electrons.  It's actually a pretty neat algorithm that I basically wasn't involved with.
+\note[jb]{MJA:  I can describe the eMCP calibration here, even though it mostly wasn't implemented by me.  It is tangentially relevant to data selection and background estimation by providing an experimental energy spectrum for shake-off electrons.  It's actually a pretty neat algorithm that I basically wasn't involved with.
 \\...\\
 JB:  eMCP.  You need to describe the timing information obtained.  You also need a statement of whether or not you used the position information in your cuts.
 \\...\\
 MJA:  Wait.  So have I done that yet in this section?}
 
-\note[color=org]{I described the HEX-75 somewhere in a previous chapter, right??}
-\note[color=org]{I dislike how this section is organized..  should discuss the cut we *didn't* make at the end.}
-%\note[color=org]{Really, should title this section according to the LE thing that is actually its primary topic.  In practice, the change only gets used on the SOE TOF cuts though.}
+\note[org]{I described the HEX-75 somewhere in a previous chapter, right??}
+\note[org]{I dislike how this section is organized..  should discuss the cut we *didn't* make at the end.}
+%\note[org]{Really, should title this section according to the LE thing that is actually its primary topic.  In practice, the change only gets used on the SOE TOF cuts though.}
 %Much like the rMCP, the eMCP is backed by a set of delay lines for position sensitivity.  .......
 The eMCP features a set of three delay lines, intended to be used to record the position of a hit.
 %, as in Fig.~\ref{fig:emcp_position}.  
@@ -415,8 +415,8 @@ Though only two delay lines is sufficient to determine the position within the p
 %%	\includegraphics[width=.999\linewidth]
 %%	{Figures/eMCP_position.pdf}
 %%%	\note{This picture is `slow'.  Need to re-save it as a png.}
-%%	\note[color=org]{This pic is probably better used in an SOE section somewhere.}
-%%	\note[color=tag]{Delete eMCP image, or possibly move to the intro to describe Levinger.  Otherwise I have to talk about it here.}
+%%	\note[org]{This pic is probably better used in an SOE section somewhere.}
+%%	\note[tag]{Delete eMCP image, or possibly move to the intro to describe Levinger.  Otherwise I have to talk about it here.}
 %%	\caption{Position as measured on the eMCP, after some data cleaning.}	
 %%	\label{fig:emcp_position}
 %%\end{figure}
@@ -431,11 +431,11 @@ Because a SOE from the trap is most likely to land in the centre of the plate, w
 %%%%	{Figures/SOE_TOF_positioncompare.pdf}
 \note{A shitty TOF spectrum plot used to be here.  It was supposed to compare TOFs with and without position cuts.  It's gone, but not forgotten.}
 %%%%	\note{Um.  Did I for sure get the labels correct on this???  It seems really wrong.}
-%%%%	\note[color=org]{Surely this thing goes somewhere else instead.}
+%%%%	\note[org]{Surely this thing goes somewhere else instead.}
 %%%%	\caption{Beta-electron TOF, for events with and without eMCP hit position information.  A cut will eventually be taken to accept only events sufficiently near the largest peak -- in this case the number of events is `only' decreased by a factor of 2.}	
 %%%%	\label{fig:soe_tof_positioncompare}
 %%%%	\label{fig:experimental_soe_tof}
-%%%%	\note[color=tag]{Get a better set of experimental SOE TOF with/without position plots.  I think this one is wrong.}
+%%%%	\note[tag]{Get a better set of experimental SOE TOF with/without position plots.  I think this one is wrong.}
 %%%%\end{figure}
 
 Several years after the data was initially collected, a problem was discovered with our low-level analyzer software, which we had been using to convert large and unwieldy MIDAS data sets into somewhat smaller and more manageable ROOT data sets.  In particular, for every timestamp recorded, our raw MIDAS data actually included both a timestamp for the leading edge (LE) of the pulse, and a timestamp for the trailing edge (TE).  The analyzer had--for years--been reporting the timestamp associated with the trailing edge of the pulse.  Initially it was unclear if there might have been a reason behind this choice, but a closer examination of the data showed that the LE data included less timing jitter and noise, as well as a sharper peak for timing pulses across the board (as in Fig.~\ref{fig:LE_TE}), with some channels showing a larger effect than others.  This was corrected, and the entirety of this analysis has been performed now using the cleaner LE spectra.  
@@ -450,7 +450,7 @@ Several years after the data was initially collected, a problem was discovered w
 	\label{fig:LE_TE}
 \end{figure}
 
-The place where this change between the TE and LE timestamps had the biggest impact on the analysis is in the shake-off electron time-of-flight spectra, on which a cut must eventually be taken. Although this problem was not discovered in time to be used in the previous measurement of $\Abeta$ using this same data~\cite{ben_Abeta}, it likely would have had a negligible effect on the final result, because the SOE TOF cut that was used there was comparatively loose, and the evaluation of the background that remained was not a dominant systematic effect. \aside[color=org]{This goes in that one appendix, if I haven't already put it there.  ...Also, is this even fucking true?!?}
+The place where this change between the TE and LE timestamps had the biggest impact on the analysis is in the shake-off electron time-of-flight spectra, on which a cut must eventually be taken. Although this problem was not discovered in time to be used in the previous measurement of $\Abeta$ using this same data~\cite{ben_Abeta}, it likely would have had a negligible effect on the final result, because the SOE TOF cut that was used there was comparatively loose, and the evaluation of the background that remained was not a dominant systematic effect. \aside[org]{This goes in that one appendix, if I haven't already put it there.  ...Also, is this even fucking true?!?}
 
 With the data reprocessed using the leading edge for timestamps, I wanted to eliminate as much background as possible from the SOE TOF spectrum.  With this goal in mind, the next step was to correct the scintillator timing for its low energy `walk' (see Fig.~\ref{fig:WalkAdjust}).  A quartic polynomial was fit to each of the 2D timing vs energy spectra (the top and bottom detectors were treated separately), and the result was used to produce a `straightened' SOE TOF spectrum with respect to measured scintillator energy, and as expected, the resulting SOE TOF spectrum was a bit more sharply peaked.  
 
@@ -470,7 +470,7 @@ With the data reprocessed using the leading edge for timestamps, I wanted to eli
 	{Figures/experimental_scintspectra_lin.png}
 	\caption[Experimental Scintillator Spectra]{Experimental scintillator spectra, for both detectors in both polarization states.  These spectra are what remain after all cuts have been taken, and all runsets are included.  Binning is selected to match the convention used for the final analysis.}	
 	\label{fig:scintspectra}
-	\note[color=tag]{Experimental scint. spectra plot needs to be referenced in text.}
+	\note[tag]{Experimental scint. spectra plot needs to be referenced in text.}
 \end{figure}
 
 With the SOE TOF spectra cleaned up, a cut can be taken to reduce the fraction of background events.  Informed by the model of background spectra described in Section~\ref{sec:tof_bg}, a cut was made to include only a 2.344 ns window around the primary peak in further analysis~\aside{``...removing X fraction of the remaining events."} (see Fig.~\ref{fig:soetof}).  With all cuts included, the four cleaned scintillator spectra corresponding to combinations of detector and polarization direction are plotted in Fig.~\ref{fig:scintspectra}.

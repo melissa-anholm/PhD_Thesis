@@ -11,9 +11,9 @@
 \note{Go through and change all instances of ``Beta - SOE''/``Beta---SOE''/etc to ``SOE -  Beta''/etc., *within the whole thesis*.}
 %I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
 %\missingfigure{Show simulated spectra separated by scattering category.}
-%\note[color=tag]{Re-phrase (or at least un-pinken) Analysis Chapter intro blurb from John.}
-\note[color=jb]{John proposes the following intro statement for this Ch.~\ref{analysis_chapter} The following two(one) paragraphs are (almost) a direct quote from him:  }
-%\note[color=jb]{JB:  Here is what I suggest for the intro the Analysis section:  (n.b.:  at the time of this comment, that was Ch.7)
+%\note[tag]{Re-phrase (or at least un-pinken) Analysis Chapter intro blurb from John.}
+\note[jb]{John proposes the following intro statement for this Ch.~\ref{analysis_chapter} The following two(one) paragraphs are (almost) a direct quote from him:  }
+%\note[jb]{JB:  Here is what I suggest for the intro the Analysis section:  (n.b.:  at the time of this comment, that was Ch.7)
 %\\...\\
 %7.0
 %\comment{
@@ -28,20 +28,20 @@ radius cut is kept self-consistent.
 %}
 
 
-%\note[color=jb]{JB:  ``I doubt I will have further useful comments on the Ch. (((this chapter))) as they are now.}
-\note[color=jb]{JB:  \\
+%\note[jb]{JB:  ``I doubt I will have further useful comments on the Ch. (((this chapter))) as they are now.}
+\note[jb]{JB:  \\
 I've tried to email you the paragraphs on "collaboration determination of uncertainties" for (((Ch.~\ref{systematics_chapter})))
 \\
 My intent of all that other advice  was to keep your time spent on Chs 1-4 ((Now Ch. 1-2)) concise, so you could concentrate on these real jobs.  (n.b.:  the advice he's already sent was almost all about chapters 1-4, which are the various intros/background info and experimental setup stuff)
 \\ ... \\
 I can only say that if you have an equal choice between including a detail or not, pick "not." ''
 }
-%\note[color=jb]{JB:  I will try to schedule meeting with Dan for you to show us the final version of (((Ch.~\ref{systematics_chapter}))) Estimating systematic effects soon.}
+%\note[jb]{JB:  I will try to schedule meeting with Dan for you to show us the final version of (((Ch.~\ref{systematics_chapter}))) Estimating systematic effects soon.}
 
-%\note[color=org]{Do I want this chapter combined with the analysis chapter?  If that chapter includes all the stuff about G4, it's going to be unwieldy and huge.}
+%\note[org]{Do I want this chapter combined with the analysis chapter?  If that chapter includes all the stuff about G4, it's going to be unwieldy and huge.}
 %\note{How do I even \emph{do} these estimations?}
 
-%%%%\note[color=todoblue]{JB says:   
+%%%%\note[todoblue]{JB says:   
 %%%%\\
 %%%%A simple estimate from the collaboration that builds intuition for this result:
 %%%%Scatter in the SiC mirrors and DSSD actually produces an efficiency change at low
@@ -140,7 +140,7 @@ To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$
 	\includegraphics[width=.999\linewidth]
 	{Figures/Chi2_2D_SetB.png}
 	\note{Systematic uncertainties are evaluated by adjusting parameters and creating a new (set of) chi2 maps very much like this one.}
-%	\note[color=tag]{On the per-dataset $\chi^2$ maps and SR asymmetries, go through and write descriptions for the goddamn pictures.}
+%	\note[tag]{On the per-dataset $\chi^2$ maps and SR asymmetries, go through and write descriptions for the goddamn pictures.}
 	\caption[$\chi^2$ Map for Runset B]{A $\chi^2$ map to compare data from Runset B to a parameter space of $\Abeta$ and $\bFierz$ values.  The contours show 1$\sigma$, 90\%, and 95\% statistical confidence intervals.}	
 	\label{fig:2dchi2_setB}
 \end{figure}
@@ -179,7 +179,7 @@ To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$
 \subsection{Beta Scattering}
 %\section{Quantifying the Effects of Backscatter with Geant4}
 \label{section:scattering_systematics}
-%\note[color=org]{This content got moved over *there*.  (ie, Section~\ref{sec:bs}.)}
+%\note[org]{This content got moved over *there*.  (ie, Section~\ref{sec:bs}.)}
 The methodology used to simulate and model scattered events is described in Section~\ref{sec:bs}.  To evaluate the systematic effect on the final measurements arising from incomplete knowledge of how much beta scattering is present (i.e., how well we can trust the simulation to correctly model the amount of scattering), 
 %To evaluate the systematic effects arising from incomplete knowledge of how much beta scattering is present, 
 two sets of $\chi^2$ maps very much like those in Section~\ref{sec:comparing_data_sims} are created, with the amount of scattering varied by one standard deviation.  This does not require a new simulation;  instead, for the three high statistics G4 simulations varying the BSM scalar coupling, all events passing the cuts are categorized into `unscattered and forward-scattered' events, `sidescattered' events, and `backscattered' events, depending on a comparison of the beta's emission angle to the detector in which it was eventually observed, as shown in Fig.~\ref{fig:soe_tof_vs_costheta}.
@@ -190,7 +190,7 @@ The contribution from unscattered and forward scattered events is not allowed to
 	\includegraphics[width=.999\linewidth]
 	{Figures/ScatteringEstimate.png}
 %	\note{I got it out of the Sim\_to\_Asym directory, so that's where I have to go looking to see how I made it and/or make a new one. .... nope, the new one is from Fit_2D.}
-%%%%%	\note[color=jb]{John on Section~\ref{section:scattering_systematics} ``Quantifying the Effects of Backscatter with Geant4'':
+%%%%%	\note[jb]{John on Section~\ref{section:scattering_systematics} ``Quantifying the Effects of Backscatter with Geant4'':
 %%%%%\\...\\
 %%%%%Fig.~\ref{fig:asymmetry_scattering} illustrates the distortions in the energy dependence of Abeta
 %%%%%that mimics effects of bFierz. A generic 10\% uncertainty assigned to
@@ -239,7 +239,7 @@ To evaluate the systematic effects associated with the scintillators' calibratio
 \subsubsection{DSSD Radius, Energy Threshold, Agreement}
 %\section{BB1 Radius, Energy Threshold, Agreement}
 \label{section:bb1_systematics}
-%\note[color=tag]{Write section dssd systematics evaluation.}
+%\note[tag]{Write section dssd systematics evaluation.}
 Several parameters relating to our choice of cuts relating to DSSD calibrations are varied within both the experimental data and the simulated data to which it is compared.  The detection radius, the overall energy threshold, the strip-by-strip SNR, and the energy and timing agreement (See Ch.~\ref{sec:dssd_cuts}) are each adjusted separately at the start of data processing, and the changes are propagated through to a final $\chi^2$ map.  
 
 The changes to measured values of $\bFierz$ and $\Abeta$ from these adjustments are comparatively small, and the errors are believed to be uncorrelated, so they are added in quadrature to the total systematic uncertainty.
@@ -248,22 +248,22 @@ The changes to measured values of $\bFierz$ and $\Abeta$ from these adjustments 
 
 %%
 %%BB1 radius cut can help to eliminate scattered events.  Energy threshold selection and statistical agreement between BB1 detectors' energies only makes a small effect on results.  BB1 radius itself has a pretty big effect on the result, but we can at least just G4 it away.  The remaining systematic effect is pretty small.  
-\note[color=jb]{JB:  I hope the discussion is clear in your head.  Any effect that relies on scattering computation in G4 should have an uncertainty on order 10\% of the correction -- hopefully you are keeping a distinction here between the finite geometry acceptance (which I guess is exact) scattering off the collimator.}
-\note[color=jb]{As per JB's comment in section~\ref{thesisconventionjb}:   ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement."}
+\note[jb]{JB:  I hope the discussion is clear in your head.  Any effect that relies on scattering computation in G4 should have an uncertainty on order 10\% of the correction -- hopefully you are keeping a distinction here between the finite geometry acceptance (which I guess is exact) scattering off the collimator.}
+\note[jb]{As per JB's comment in section~\ref{thesisconventionjb}:   ``statistical agreement between BB1 X and Y detectors' energies only makes a small effect on results" does not need the technical details beyond that statement."}
 	
 \missingfigure{Surely this requires at *least* one image of the pixelated BB1 data.  Maybe some of a few waveforms and energy distributions too.  ....Feels like cheating to include some of that stuff, since Ben was the one who actually used it mostly.}
-\note[color=jb]{JB on missing figure:  ``if you used such an image as part of your uncertainty estimate, yes [include it]''}
+\note[jb]{JB on missing figure:  ``if you used such an image as part of your uncertainty estimate, yes [include it]''}
 
 \note{Remember:  There's noise applied to simulated BB1s, matching some spectrum.}
 \note{This probably should go somewhere else:  "In the end, we get our results from the scintillator energy only, without summing the BB1 energy back in.  Energy absorbed in DSSDs is only used as (a) a tag for events, and (b) contributing to the total beta energy loss before the beta arrives at the scintillator."}
-\note[color=jb]{JB:  The simulations of course include it event-by-event, not just a minimally ionizing average loss.}
+\note[jb]{JB:  The simulations of course include it event-by-event, not just a minimally ionizing average loss.}
 
 %%%% --- * --- %%%%
 \subsection{The Atomic Cloud}
 %\section{Lineshape Reconstruction}
 \label{sec:lineshape_results}
-%\note[color=tag]{(Re-)Write sections systematics from the cloud.}
-\note[color=org]{A lot of this content has gone into (Section~\ref{sec:responsefunction}) instead.  I really need to just mention it here (Sec.~\ref{sec:lineshape_results}) and give an indication of how good the result is.  Then evaluate stuff.}
+%\note[tag]{(Re-)Write sections systematics from the cloud.}
+\note[org]{A lot of this content has gone into (Section~\ref{sec:responsefunction}) instead.  I really need to just mention it here (Sec.~\ref{sec:lineshape_results}) and give an indication of how good the result is.  Then evaluate stuff.}
 Uncertainties relating to the position, size, motion, and expansion of the atomic cloud are evaluated using the response function, which is implemented as described in Ch.~\ref{sec:responsefunction}. To evaluate how well the simple monte carlo + response function (SMC+RF) performs in evaluating uncertainties, the relationship between how the SMC+RF and the full G4 simulation changes when a BSM parameter is adjusted is considered in Fig.~\ref{fig:lineshape_demo}.
 
 \begin{figure}[h!!!t]
@@ -297,7 +297,7 @@ To evaluate the propagated systematic effects arising from our knowledge of the 
 \end{figure}
 
 
-%%%\note[color=jb]{John on Ch.~\ref{sec:lineshape_results} ``Lineshape Reconstruction'':
+%%%\note[jb]{John on Ch.~\ref{sec:lineshape_results} ``Lineshape Reconstruction'':
 %%%%\\...\\
 %%%%I can only recommend now including what you've written (your extensive work on the rest you
 %%%%documented well in your TRINAT meeting reports have):
@@ -325,10 +325,10 @@ To evaluate the propagated systematic effects arising from our knowledge of the 
 %%%%	I'll write down the specific functions I'm using, and the parameter values I'm using.  (Maybe this should go in an appendix instead?)  I'll describe the adjustments I make to the spectrum so that it can work even for the dataset where the scintillators' resolutions have changed.
 %%%	
 %%%\subsubsection{Cloud Parameter Uncertainty Evaluations with the Response Function}
-%%%As it turns out, only cloud parameters were evaluated this way. \aside[color=jb]{JB:  so it's still critical to write down more of the lineshape work.}
+%%%As it turns out, only cloud parameters were evaluated this way. \aside[jb]{JB:  so it's still critical to write down more of the lineshape work.}
 %%%Trap position, size, sail velocity, temperature.  But then we varied the lineshape anyhow, to account for G4 doing a bad job of modelling the bremsstrahlung (sp?).
 %%%%Thicknesses of the SiC mirror, the Be foil, and the DSSD.  Scintillator calibration.  
-%%%\note[color=jb]{JB:  yes, brems strahlung is 'braking radiation' so gets 2 ss's. 
+%%%\note[jb]{JB:  yes, brems strahlung is 'braking radiation' so gets 2 ss's. 
 %%%the lineshape tail in any scintillator also includes backscattered events -- we are not claiming the 2-pixel cut is complete}
 %%%	
 %%%
@@ -338,11 +338,11 @@ To evaluate the propagated systematic effects arising from our knowledge of the 
 %%%% --- * --- %%%%
 \FloatBarrier
 \subsection{The Response Function's Low Energy Tail}
-%\note[color=tag]{Un-pinken/re-write section on the low energy lineshape tail.}
+%\note[tag]{Un-pinken/re-write section on the low energy lineshape tail.}
 %\subsubsection{The low-energy tail uncertainty, and what it does}
 \note{Bremsstrahlung.  It does Bremsstrahlung.}
-%	\note[color=jb]{JB:  ``I will write this up better soon."  (I think he already did that)}
-\note[color=jb]{ Here is Subsection 9.5.5 ``The low-energy tail uncerainty, and what it does'' complete.  There should be no figure.
+%	\note[jb]{JB:  ``I will write this up better soon."  (I think he already did that)}
+\note[jb]{ Here is Subsection 9.5.5 ``The low-energy tail uncerainty, and what it does'' complete.  There should be no figure.
 \\
 Direct quote from John follows in the next two paragraphs.  Maybe I should paraphrase, but it's so nicely written! }
 
@@ -382,11 +382,11 @@ Modeling of background events is coverered comprehensively in Ch.~\ref{sec:tof_b
 Since the background has been reduced greatly by the improved time-of-flight
 analysis, this even this large variation in the number of background events makes a relatively small contribution to the final result.
 
-%\note[color=tag]{Write the section about evaluating *systematics* from background events.}
+%\note[tag]{Write the section about evaluating *systematics* from background events.}
 %\section{Background Modeling -- Decay from Surfaces within the Chamber}
-\note[color=org]{This content got moved to Ch.~\ref{sec:tof_bg}.}
+\note[org]{This content got moved to Ch.~\ref{sec:tof_bg}.}
 
-\note[color=jb]{
+\note[jb]{
 John on Section 5.4 Background Modeling – Decay from Surfaces within
 the Chamber:
 \\...\\
@@ -400,7 +400,7 @@ final result.
 }
 
 \subsection{Material Thicknesses}
-%%%\note[color=tag]{Write/re-write section on material thickness systematics.  Remove casual phrasing.}
+%%%\note[tag]{Write/re-write section on material thickness systematics.  Remove casual phrasing.}
 There are three distinct objects a beta emitted from the central atom cloud must pass through before arriving at a scintillator:  a $(275 \pm 6) \mu$m silicon carbide mirror, a $(229 \pm 23) \mu$m beryllium foil, and a $(295 \pm 5) \mu$m double-sided silicon strip detector, as shown in Fig.~\ref{chamber_decayevent}.~\aside{These numbers are really *not* what's shown in that picture.  The ones *here* are what I got from notes in my G4 scripts.  I don't know where the uncertainties came from before that.}
 
 The propagated uncertainties are treated as uncorrelated (added in quadrature), and evaluated by running high-statistics Geant4 simulations with a parameter adjusted, then propagating the result through the analysis pipeline to compare against superratio asymmetries constructed to span the 2D BSM parameter space.  Because of the processor time required for this, certain simplifying assumptions were used to reduce the necessary number of simulations.  In particular, the top and bottom for each type of object were treated as producing the same size propagated uncertainty, though the top and bottom errors were not treated as being correlated.  Simulations were run to ensure there would not be any large nonlinear effects when combining a change in thickness for one type of object.  
@@ -420,17 +420,17 @@ All uncertainties from material thicknesses are believed to be uncorrelated, and
 %%%	So many surfaces, all of which can get stray 37K atoms stuck to them.  Then they decay from a place that isn't the actual trap center, and it contaminates our stuff.
 %%%	
 %%%%	\missingfigure{Show modelled TOF spectra in comparison with real TOF spectra.  Show the cut we made on that. }
-%%%	\note[color=jb]{JB on figures that might go here:  Figure 6.4 (currently that picture of the TOF spectrum) could either be here, or you could reference it from here. The TOF histogram is a great start. Adding the asymmetry[TOF] indeed would be vital.}
+%%%	\note[jb]{JB on figures that might go here:  Figure 6.4 (currently that picture of the TOF spectrum) could either be here, or you could reference it from here. The TOF histogram is a great start. Adding the asymmetry[TOF] indeed would be vital.}
 %%%	\missingfigure{Show the "average asymmetry" (all energies) as a function of TOF, with real data, best model normalization, and extrema of model normalizations.  Show our cut.  Turns out, it's a lot of work for a really tiny correction.  Oh well.}
-%%%	\note[color=jb]{JB on the *actual* figure I had been planning to put here, and my remarks about it:  Indeed it will be critical to show a clear compelling version of this figure in thesis and in a paper.  It was vital to minimize and determine this background to avoid fitting a polynomial to it from the wings,  even more so for the energy dependence of A than for its average -- you should say so.
+%%%	\note[jb]{JB on the *actual* figure I had been planning to put here, and my remarks about it:  Indeed it will be critical to show a clear compelling version of this figure in thesis and in a paper.  It was vital to minimize and determine this background to avoid fitting a polynomial to it from the wings,  even more so for the energy dependence of A than for its average -- you should say so.
 %%%	\\ ... \\
 %%%The reason the correction is small is because of all your hard work.}
 %%%	
-%%%	We model the beta TOF from the surfaces in G4, event by event.  This is necessary because scattered \aside[color=jb]{JB:  ``I wouldn't call these "scattered" events... that's very misleading.'' 
+%%%	We model the beta TOF from the surfaces in G4, event by event.  This is necessary because scattered \aside[jb]{JB:  ``I wouldn't call these "scattered" events... that's very misleading.'' 
 %%%	\\ ... \\ 
 %%%	Yeah, I should really stop doing that.  
 %%%	\\ ... \\ 
-%%%	Wait no, scattered is what I mean!  But fine, my phrasing is really unclear.} events will have their TOF changed to account for a longer beta pathlength, and we're preferrentially cutting away the events that don't have a TOF in the appropriate range.  ....And then have COMSOL generate electron TOFs for SOEs starting from the start points picked by G4.  Ran COMSOL for 0 eV SOEs, and again for Levinger spectrum SOEs.  Used ~9\% 0eV SOEs in the end.  I forget which Levinger distribution I used in the end.  \aside[color=jb]{JB:  Please comment on whether or not it was important to have this energy distribution.}  The point is, for each event, you've simulated a beta TOF that may or may not be scattered off of something before it hits a detector, and you have a SOE TOF for an event originating at that same point, so you subtract them to model the TOF you'd measure in an experiment.  Also, because you've done the scattering with G4, you get the beta energy corrected for any scattering that happened.  This way, one can estimate %\aside[color=jb]{JB:  `you know precisely' $\rightarrow$ `you can estimate'} 
+%%%	Wait no, scattered is what I mean!  But fine, my phrasing is really unclear.} events will have their TOF changed to account for a longer beta pathlength, and we're preferrentially cutting away the events that don't have a TOF in the appropriate range.  ....And then have COMSOL generate electron TOFs for SOEs starting from the start points picked by G4.  Ran COMSOL for 0 eV SOEs, and again for Levinger spectrum SOEs.  Used ~9\% 0eV SOEs in the end.  I forget which Levinger distribution I used in the end.  \aside[jb]{JB:  Please comment on whether or not it was important to have this energy distribution.}  The point is, for each event, you've simulated a beta TOF that may or may not be scattered off of something before it hits a detector, and you have a SOE TOF for an event originating at that same point, so you subtract them to model the TOF you'd measure in an experiment.  Also, because you've done the scattering with G4, you get the beta energy corrected for any scattering that happened.  This way, one can estimate %\aside[jb]{JB:  `you know precisely' $\rightarrow$ `you can estimate'} 
 %%%how many ``bad" events are eliminated with the TOF cut, as well as the fraction of ``bad'' events left in what remains.
 %%%	
 %%%%	\subsection{Decay from Chamber Surfaces}
@@ -438,7 +438,7 @@ All uncertainties from material thicknesses are believed to be uncorrelated, and
 %
 
 
-%\note[color=jb]{End direct quote paragraphs from John.}
+%\note[jb]{End direct quote paragraphs from John.}
 
 %\section{Summary of Data Collected}
 %\missingfigure{TBH, the thing that's missing is a table, not a figure.  Needs a table full of systematic errors.  And maybe statistical errors?  wev.}

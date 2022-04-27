@@ -10,7 +10,7 @@
 %\missingfigure{Show simulated spectra separated by scattering category.}
 \missingfigure{Show SimpleMC spectra, show the supersum, show the superratio, show the superratio asymmetry.  Maybe do some simple fits to show how much better the superratio asymmetry is than \emph{not} the superratio asymmetry.  }
 
-%\note[color=done]{John says:  ``I doubt I will have further useful comments on the Ch. ((this chapter)) as they are now.'' -- Yeah, but *now* he will.}
+%\note[done]{John says:  ``I doubt I will have further useful comments on the Ch. ((this chapter)) as they are now.'' -- Yeah, but *now* he will.}
 
 The TRINAT collaboration has created a Geant4 (G4) simulation which models the geometry and materials within the experimental chamber, and uses a monte carlo algorithm to describe generalized physical processes such as particle scattering and energy loss, within the geometry specific to the experiment.  This software library has been maintained and updated over several generations of graduate students~\cite{ben_thesis}~\cite{spencer_thesis}.  
 \note{add comment about how  you need G4 to do scattering/backscattering.  I think I wrote a blurb like this *somewhere* already....}
@@ -26,13 +26,13 @@ Enabling multithreading support turned out to be quite time consuming, and in th
 %Throughout the history of this simulation package, 
 The TRINAT G4 monte carlo package had never been used to directly model interactions beyond the standard model within the decay physics.  
 \aside{because for $\Abeta$ even a BSM interaction will *basically* look like a SM interaction, and I think something somewhere isn't precise enough to distinguish it.}  
-It had  previously been set up by the collaboration to use a probability density function (PDF) including most of the terms from Holstein's Eq. (51)~\cite{holstein}, which describes both electron and neutrino momenta from polarized beta decay.  This treatment is quite robust, and includes corrections at recoil-order, as well as certain other corrections of similar size.~\aside[color=bluetodo]{which other corrections?  coulomb and/or radiative corrections, but somehow when I say that, I'm apparently talking about a different thing than everyone else who uses those terms.  also, weak magnetism. also ... ???}
+It had  previously been set up by the collaboration to use a probability density function (PDF) including most of the terms from Holstein's Eq. (51)~\cite{holstein}, which describes both electron and neutrino momenta from polarized beta decay.  This treatment is quite robust, and includes corrections at recoil-order, as well as certain other corrections of similar size.~\aside[bluetodo]{which other corrections?  coulomb and/or radiative corrections, but somehow when I say that, I'm apparently talking about a different thing than everyone else who uses those terms.  also, weak magnetism. also ... ???}
 
 Unfortunately, terms arising from interactions beyond the standard model are not included in Holstein's description of the decay process. \aside{Is this true?  Does it not include *any* BSM interactions?}  To understand the kinematic results of the exotic interactions of interest to us here, we turn to the classic JTW treatment of beta decay~\cite{jtw}~\cite{jtw_coulomb}.  In addition to the (expected) vector and axial interactions, JTW also describes the interaction in terms of (exotic) scalar and tensor interactions, should such be present.  
 \note{Furthermore, although it is currently understood that the weak interaction is predominantly or perhaps entirely `left-handed', the JTW treatment leaves certain phase angles unfixed, and is therefore able to accurately describe a decay which is, for example, partially `right-handed' -- however the latter feature is not directly relevant to the project at hand.  [It's several phase angles in JTW, but maybe it's fundamentally only like one angle on some level?  Also I think it's not actually a ``gauge freedom,'' per se.  .... No, I'm pretty sure this `phase angle' description is all wrong.]  Also, consider time reversal!  Anyway, most of this paragraph probably goes better in Section~\ref{sec:math_formalism}.}
 Despite JTW's broad ability to describe beta decay under a variety of physical models, this treatment includes only the leading-order terms, and smaller terms, such as recoil-order corrections, are neglected entirely.  
 
-%\note[color=org]{Surely I describe what recoil-order corrections even *are* in some appendix somewhere, right?  Or, possibly, in Section~\ref{sec:math_formalism}.  Possibly the paragraphs above need to be moved...}
+%\note[org]{Surely I describe what recoil-order corrections even *are* in some appendix somewhere, right?  Or, possibly, in Section~\ref{sec:math_formalism}.  Possibly the paragraphs above need to be moved...}
 
 Because the present project is a precision measurement of the Fierz interference, a term which arises from scalar and tensor couplings, it was imperative to create an event generator for our G4 simulations that could account for these exotic interactions while also including in its PDF the higher-order effects which, in some cases, can mimic the effects of a scalar or tensor current.  
 
@@ -78,7 +78,7 @@ In addition to simulations of the dominant decay branch, it is also necessary to
 \label{sec:responsefunction}
 Scattering (both forward scattering and backscattering) is an important effect to consider within this experiment, and it must be evaluated through extensive and time consuming monte carlo simulations -- in this case, using Geant4.  However, there are a number of other systematic uncertainties that must also be evaluated, and it is computationally prohibitive (even after multithreading support was implemented) to evaluate all of them via the same sort of high statistics, scattering included, full monte carlo that we use for scattering effects.  Luckily, the systematic effects arising from scattering are largely decoupled from other effects, and this section describes the framework that has been implemented in order to evaluate certain other systematic effects separately.  
 
-%However, while scattering effects are a dominant source of systematic error, \aside[color=org]{It's *the* dominant error, right?  Right?  Also, maybe point at that final error budget table here.} other systematics cannot simply be neglected.  
+%However, while scattering effects are a dominant source of systematic error, \aside[org]{It's *the* dominant error, right?  Right?  Also, maybe point at that final error budget table here.} other systematics cannot simply be neglected.  
 %Because of the large number of systematic effects to be examined, and because of the processor time required to run a high statistics Geant4 simulation even after enabling multithreading support, it was desirable to develop a procedure by which it would be possible to evaluate certain systematic effects while avoiding the computationally intensive simulations that might traditionally be used.  
 
 To this end, a fast-running Simple Monte Carlo (SMC) was developed together with an empirical ``response function'' similar to the one described by Clifford et al~\cite{clifford} to describe probabilistic beta energy loss before its detection in a scintillator.  In the end, the lineshape description became quite involved, and it is unclear whether, in the end, any time was saved this way. 
@@ -100,7 +100,7 @@ where $p_{\textrm{norm}}$ is one parameter, and the other terms within the expre
 \input{equation_fmoyal}
 \note{Obviously, from a physical standpoint, the initial beta energy $E_0$ must be positive, but the response function still includes several expressions of the form, $\left| E_0 \right|$.  This is not done by accident, but rather is an intentional adjustment used to encourage the parameters to behave well within a fit. }
 \input{equation_f1f2}
-\note[color=tag]{In these response functions, $x=$?}
+\note[tag]{In these response functions, $x=$?}
 \input{equation_f3f4}
 \note{To evaluate $\Erf\left[\right]$ for parameter fits, root's built-in function was used.  Root also includes a built-in Landau function, but it makes everything very slow if we use it.}
 \input{equation_f5} and
@@ -108,9 +108,9 @@ where $p_{\textrm{norm}}$ is one parameter, and the other terms within the expre
 
 In particular, $f_{511}$ is a rather inelegant representation of the annihilation radiation compton edge within our geometry.  Although the DSSD provides an effective veto for the overwhelming majority of these events--and indeed within Clifford's treatment this veto is treated as being perfect in its discernment--it is clear both from experimental spectra and the Geant4 simulations intended to represent them that there exist a small number of such events within our scintillator spectra that cannot be vetoed in this manner.  These events must be understood and adequately accounted for.  
 
-It should be noted that no attempt is made to derive the expression for $f_{511}$ from first principles; the expression was chosen only because of its visual similarity to the spectrum's fit residuals before its inclusion.  This expression's contribution to the overall function is negligible at all but the lowest initial beta energies (Eq.~\ref{eq:f511}'s $p_{\mathrm{scale}}$ parameter, showing the absolute normalization of $f_{511}$, is plotted in the top right of Fig.~\ref{fig:lineshapeparams_scale}.), and is always negligible at scintillator energies above $\sim 500\,$keV, as can be seen in Fig.~\ref{fig:lineshape_750}.  We note that within the final analysis, all scintillator spectra will be given a low energy cutoff at 400\,keV, so the only the higher energy tail of $f_{511}$ will make any contribution.  \aside{Also, I think for this particular part of analysis, the cutoff was like 600 keV.} \aside[color=org]{Some of this content needs to go somewhere else.}
+It should be noted that no attempt is made to derive the expression for $f_{511}$ from first principles; the expression was chosen only because of its visual similarity to the spectrum's fit residuals before its inclusion.  This expression's contribution to the overall function is negligible at all but the lowest initial beta energies (Eq.~\ref{eq:f511}'s $p_{\mathrm{scale}}$ parameter, showing the absolute normalization of $f_{511}$, is plotted in the top right of Fig.~\ref{fig:lineshapeparams_scale}.), and is always negligible at scintillator energies above $\sim 500\,$keV, as can be seen in Fig.~\ref{fig:lineshape_750}.  We note that within the final analysis, all scintillator spectra will be given a low energy cutoff at 400\,keV, so the only the higher energy tail of $f_{511}$ will make any contribution.  \aside{Also, I think for this particular part of analysis, the cutoff was like 600 keV.} \aside[org]{Some of this content needs to go somewhere else.}
 
-The expression $f_{\mathrm{moyal}}$ arises from the beta particles' energy loss within materials (i.e. the mirror, the beryllium foil, and the DSSD itself, as in Fig.~\ref{fig:thechamber}) before its eventual absorption within the scintillator.  Although Clifford's treatment does include a $\Delta E$ detector (our DSSD would be the equivalent), the energy absorbed in this detector is added back in to the total before Clifford's final spectra are modeled.  Although it would be possible to do something similar with our DSSD spectra, \aside[color=org]{We never attempt to do this, because reasons.  Don't I talk about this somewhere?} we would still be left with the problem of accounting for the similarly-shaped energy loss within the mirror and foil. 
+The expression $f_{\mathrm{moyal}}$ arises from the beta particles' energy loss within materials (i.e. the mirror, the beryllium foil, and the DSSD itself, as in Fig.~\ref{fig:thechamber}) before its eventual absorption within the scintillator.  Although Clifford's treatment does include a $\Delta E$ detector (our DSSD would be the equivalent), the energy absorbed in this detector is added back in to the total before Clifford's final spectra are modeled.  Although it would be possible to do something similar with our DSSD spectra, \aside[org]{We never attempt to do this, because reasons.  Don't I talk about this somewhere?} we would still be left with the problem of accounting for the similarly-shaped energy loss within the mirror and foil. 
 
 The distribution for energy deposition within a thin material by an energetic charged particle, first described by Lev Landau in 1944~\cite{landaudistribution}, is now known as a Landau distribution.  This distribution has a variety of properties that make it challenging to work with -- notably its mean, variance, and all higher moments are undefined, and the distribution itself cannot be written in closed form.  Its primary redeeming mathematical feature, however, is the fact that the convolution of a Landau distribution with another Landau distribution is, itself, a Landau distribution, and this means that we can represent the sum total of energy absorption within three successive thin materials as a single Landau distribution.  
 
@@ -165,7 +165,7 @@ The values of the individual parameters contributing to the fit functions in, eg
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/LineshapeParams_part1.png}
-	\note[color=done]{What even \emph{is} the thing plotted below E0 in the `residuals' spot, you ask?  It's `PseudoE', which is describes the difference between the original input energy, $E_0$, and the energy where the output spectrum is maximal. Or something.  To `pretty good' order, it's a straight line.  the `PseudoE' plot shows what's left after you fit it to a straight line.  It's fucking weird that it's negative everywhere.  Like, what?}
+	\note[done]{What even \emph{is} the thing plotted below E0 in the `residuals' spot, you ask?  It's `PseudoE', which is describes the difference between the original input energy, $E_0$, and the energy where the output spectrum is maximal. Or something.  To `pretty good' order, it's a straight line.  the `PseudoE' plot shows what's left after you fit it to a straight line.  It's fucking weird that it's negative everywhere.  Like, what?}
 	\caption[Lineshape Parameter Fits (Part 1)]{Lineshape Parameter Fits (Part 1)}	
 	\label{fig:lineshapeparams_part1}
 \end{figure}
@@ -229,7 +229,7 @@ Do I need the angular distribution in the end?  I think maybe I put in scatterin
 %\subsection{Imported:  Quantifying the Effects of Backscatter with Geant4}
 %	Beta decay (back-)scatter from surfaces within the experimental chamber is a significant systematic, and it must be evaluated, quantified, and corrected for.  This is done via a series of GEANT4 simulations.  While only a small fraction of events are affected, the process results in an energy loss in the beta that can, if not understood, be misinterpreted as the exact signal we're searching for.  It is therefore imperative that this be well understood. 
 %	\aside{Oh god.  Have I even \emph{tried} to quantify the combined systematic that comes out of the TOF cut?  Do I need to, or is it double-counting?  Ugh, it would be such a headache to do this.  Maybe I can at least do it at the end -- because I might never get my code back to the way it was.}
-%\note[color=jb]{JB says: I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
+%\note[jb]{JB says: I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
 %
 %
 %\note{Events from the trap aren't generated with the same position in G4 and comsol!  ugh.  ...but it's fine, because the betas are fast.  Comsol gets the position right, which is where it actually matters.}
@@ -253,7 +253,7 @@ It is useful to remember in the discussion that follows that a beta particle eme
 Within this section, however, where the experimental SOE TOF spectra are examined in detail, the above assumption is insufficient, as it is necessary to consider effects from beta scattering -- both to the observed beta energy spectra, and also to the observed beta time-of-flight spectra (which, of course, are only experimentally meaningful in comparison with another timed observation).  
 
 Using Geant4, a set of beta time-of-flight spectra is generated for decays originating from within the atom cloud for all four detector+polarization combinations, and it is clear that there is a small but non-negligible fraction of such events that arise from beta scattering events.
-%~\aside[color=org]{No, don't reference these pictures yet -- we haven't discussed the SOE TOF.}  
+%~\aside[org]{No, don't reference these pictures yet -- we haven't discussed the SOE TOF.}  
 Even within Geant4, where is \emph{is} possible to measure the beta time of flight with respect to the initial time of decay, the scattered and unscattered spectra cannot be fully separated from one another.  The strong correlation between emission angle and time-of-flight does, however, suggest that the signal-to-noise ratio could be improved by a judicious cut on the TOF spectra. 
 %
 In order to produce something which can be directly compared with experimental data, a TOF spectrum for SOEs must also be produced and merged with the beta TOF spectrum.  Experimentally, this is done as an event-by-event subtraction, so that is also what must be done for the simulations.  Unfortunately, these two time-of-flight spectra cannot easily be produced within a single type of simulation.  Because scattering is an important effect within the beta time of flight spectra (and resulting beta energy spectra), Geant4 is the tool of choice for this type of particle.  For shake-off electrons, which are emitted with little energy and accelerated through the electric field within the chamber, it is much more important to have an accurate model of the electric field and its effects on charged particles.  The shake-off electrons' time of flight is therefore evaluated by the TRINAT collaboration using COMSOL to track individual electrons through a model of the electric field within the experimental geometry.   
@@ -266,7 +266,7 @@ A final simulated SOE TOF spectrum (relative to the time of decay) was produced 
 %\note{The SOE events were generated only up to 100 eV.  That smaller number of eV (20??) wasn't enough, even though the tail gets tiny.  Also, for higher energy SOEs, we observe a smaller fraction of the ones that are generated anyway.}
 
 %\note{We do the COMSOL thing here too, but it becomes much more useful for the background events, because that's where the electric field is really non-uniform.}
-%\note[color=bluetodo]{In the end, we used $(0.09)*(\textrm{0eV}) + (0.91)*(0.85*(\textrm{4S}) + 0.15*(\textrm{3P}))$.   That's $9+77+14$.  I will (eventually) say that *here*, not in the intro section.  Also, John used Eq.20 for the 4S, and Eq.24 for the 3P.}
+%\note[bluetodo]{In the end, we used $(0.09)*(\textrm{0eV}) + (0.91)*(0.85*(\textrm{4S}) + 0.15*(\textrm{3P}))$.   That's $9+77+14$.  I will (eventually) say that *here*, not in the intro section.  Also, John used Eq.20 for the 4S, and Eq.24 for the 3P.}
 
 With both a SOE TOF spectrum generated by COMSOL and a beta TOF spectrum generated by Geant4, the two spectra were combined event-by-event to produce a simulated ``SOE -- Beta'' TOF spectrum to match the form of the data collected from the experiment. Note that although the simulated SOEs were generated from a model of the atom cloud, the betas generated by Geant4 were simply treated as originating from a pointlike distribution at the chamber centre.  Since the betas are relativistic and the cloud is small, any changes to the beta spectrum as a result of this model would be too small to be seen given the timing resolution of our detectors ($\sim 0.1\,$ns).  
 
@@ -292,7 +292,7 @@ This ``SOE -- Beta'' spectrum is convoluted with a gaussian of width $\sigma=0.4
 %	 the detector vs adjusted SOE--Beta TOF, with Levinger (top) and 0eV (bottom) energy spectra for the SOEs.  
 The TOF cut that will eventually be taken is shown, and events are classified into scattering categories for later evaluation as a systematic (see Ch.~\ref{section:scattering_systematics}).  }
 	\label{fig:soe_tof_vs_costheta}
-%	\note[color=tag]{For the two cos(theta) vs TOF plots, label the cutoff cos(theta) values and label scattering categories.  Comment briefly on it in text.}
+%	\note[tag]{For the two cos(theta) vs TOF plots, label the cutoff cos(theta) values and label scattering categories.  Comment briefly on it in text.}
 \end{figure}
 
 
@@ -302,7 +302,7 @@ The TOF cut that will eventually be taken is shown, and events are classified in
 %%%%	\item In terms of agreement with the experimental spectra, the exact ratio of 4S to 3P doesn't matter much, however adding in the 0eV events makes a big difference.   
 %%%%	\item Umm.  Did I do a fit for the ratio of 0eV events?  I kind-of don't think I did... 
 %%%%	\item Also, the SOE events were generated only up to 100 eV.  That smaller number of eV (20??) wasn't enough, even though the tail gets tiny.  Also, for higher energy SOEs, we observe a smaller fraction of the ones that are generated anyway.  
-%%%%	\note[color=bluetodo]{Umm.  Did I blur the whole peak with statistics?  I don't fucking remember.  I must have.  Check.}
+%%%%	\note[bluetodo]{Umm.  Did I blur the whole peak with statistics?  I don't fucking remember.  I must have.  Check.}
 %%%%	\item Umm.  Did I blur the whole peak with statistics?  I don't fucking remember.  I must have.
 %%%	\item Also, the SOEs in COMSOL had their original positions picked out by the event generator in G4.  So all the SOEs and betas originated at the same point within the cloud.
 %%%\end{itemize}
@@ -316,7 +316,7 @@ The TOF cut that will eventually be taken is shown, and events are classified in
 %%%%%%%I used this for modeling the background spectrum, but in the end it wasn't as elegant a result as I might have hoped.  Also, it's still an open question exactly which fraction of SOEs come from which atomic shell, but it doesn't change the resulting spectrum very much.
 %%%%%%}
 %%%%%%
-%%%%%%\note[color=jb]{JB on 2.4 SOE:
+%%%%%%\note[jb]{JB on 2.4 SOE:
 %%%%%%\\
 %%%%%%Say what you did, with as little info as possible now. Georg is a theoretical
 %%%%%%chemist, so he may be very curious about this.
@@ -349,7 +349,7 @@ The TOF cut that will eventually be taken is shown, and events are classified in
 
 %	\missingfigure{Show simulated $\cos\theta$ vs TOF.  You can just make a lot of that go away with a properly selected cut.}
 
-%\note[color=jb]{JB says:  
+%\note[jb]{JB says:  
 %Please discuss this at the next meeting.  (ETA:  Done!)
 %\\
 %Indeed this is why you should avoid calling the events originating not from the trap 'scattered events.' More importantly, why it was so critical that you reduced the size of the correction by timing bad events out. I would say you have a well-determined TOF cut to minimize this error-- a cut that could not have been done blind without an unreasonably perfect simulation.  Thus the exact spot of the cut should not be considered to introduce a systematic. }
@@ -389,7 +389,7 @@ In order to check this model's performance, the energy-averaged superratio asymm
 	\includegraphics[width=.999\linewidth]
 	{Figures/SOE_TOF_Spectra.png}
 %	\note{In SOE TOF Sim+Data plot, re-make the label.}
-%	\note[color=tag]{Rephrase description of SOE TOF Sim+Data plot.}
+%	\note[tag]{Rephrase description of SOE TOF Sim+Data plot.}
 	\note{Reference Section~\ref{section:emcp_cuts}, probably.}
 	\caption[(SOE--Beta) TOF]{(SOE--Beta) TOF, with both model and experimental data shown.  Spectra from simulations are separated according to their source, and the final TOF cut is drawn on.  The background spectra have been scaled down by about a factor of 2 from their estimated maximum in order to match experimental data.  Similar quality results are achieved no matter how the Levinger SOEs are distributed between 4S and 3P orbital shells, however adding the 0 eV electrons to the spectrum produces a large improvement to the agreement between the model and experiment.
 %	by approximately a factor of 2.	
@@ -406,7 +406,7 @@ In order to check this model's performance, the energy-averaged superratio asymm
 	{Figures/asymmetry_by_tof.pdf}
 %	\note{I think I want this picture to go in some other section.}
 %	\note{Show the "average asymmetry" (all energies) as a function of TOF, with real data, best model normalization, and extrema of model normalizations.  Show our cut.  Turns out, it's a lot of work for a really tiny correction.  Oh well.}
-%%%	\note[color=done]{JB on the *actual* figure I had been planning to put here, and my remarks about it:  Indeed it will be critical to show a clear compelling version of this figure in thesis and in a paper.  It was vital to minimize and determine this background to avoid fitting a polynomial to it from the wings,  even more so for the energy dependence of A than for its average -- you should say so.
+%%%	\note[done]{JB on the *actual* figure I had been planning to put here, and my remarks about it:  Indeed it will be critical to show a clear compelling version of this figure in thesis and in a paper.  It was vital to minimize and determine this background to avoid fitting a polynomial to it from the wings,  even more so for the energy dependence of A than for its average -- you should say so.
 %%%	\\ ... \\
 %%%The reason the correction is small is because of all your hard work.}
 	\caption[Averaged Superratio Asymmetry by TOF]{The superratio asymmetry, averaged over all scintillator energies between 400-4800 keV, is used to compare the experimental data and simulated TOF model as a proxy for the quality of the model to estimate the background.  Background events are treated as being entirely unpolarized.  All other cuts have been applied.}	
@@ -436,14 +436,14 @@ In order to check this model's performance, the energy-averaged superratio asymm
 %%The beta time of flight spectra from surfaces within the experimental chamber were generated with Geant4, in order to account for variations in travel time arising from beta scattering.  This also allows us to simultaneously account for energy lost to scattering within this background spectrum.
 
 
-%%%%%We model the beta TOF from the surfaces in G4, event by event.  This is necessary because scattered \aside[color=jb]{JB:  ``I wouldn't call these "scattered" events... that's very misleading.'' 
+%%%%%We model the beta TOF from the surfaces in G4, event by event.  This is necessary because scattered \aside[jb]{JB:  ``I wouldn't call these "scattered" events... that's very misleading.'' 
 %%%%%	\\ ... \\ 
 %%%%%	Yeah, I should really stop doing that.  
 %%%%%	\\ ... \\ 
 %%%%%	Wait no, scattered is what I mean!  But fine, my phrasing is really unclear.} 
 %%%%%events will have their TOF changed to account for a longer beta pathlength, and we're preferrentially cutting away the events that don't have a TOF in the appropriate range.  ....And then have COMSOL generate electron TOFs for SOEs starting from the start points picked by G4.  Ran COMSOL for 0 eV SOEs, and again for Levinger spectrum SOEs.  Used ~9\% 0eV SOEs in the end.  I forget which Levinger distribution I used in the end.  
-%%%%%\aside[color=jb]{JB:  Please comment on whether or not it was important to have this energy distribution.}  The point is, for each event, you've simulated a beta TOF that may or may not be scattered off of something before it hits a detector, and you have a SOE TOF for an event originating at that same point, so you subtract them to model the TOF you'd measure in an experiment.  Also, because you've done the scattering with G4, you get the beta energy corrected for any scattering that happened.  This way, one can estimate 
-%%%%%%\aside[color=jb]{JB:  `you know precisely' $\rightarrow$ `you can estimate'} 
+%%%%%\aside[jb]{JB:  Please comment on whether or not it was important to have this energy distribution.}  The point is, for each event, you've simulated a beta TOF that may or may not be scattered off of something before it hits a detector, and you have a SOE TOF for an event originating at that same point, so you subtract them to model the TOF you'd measure in an experiment.  Also, because you've done the scattering with G4, you get the beta energy corrected for any scattering that happened.  This way, one can estimate 
+%%%%%%\aside[jb]{JB:  `you know precisely' $\rightarrow$ `you can estimate'} 
 %%%%%how many ``bad" events are eliminated with the TOF cut, as well as the fraction of ``bad'' events left in what remains.
 %%%%%
 
@@ -467,7 +467,7 @@ In order to check this model's performance, the energy-averaged superratio asymm
 %\subsection{Begin Imported Section!  ``Background Modeling -- Decay from Surfaces within the Chamber''}
 %	So many surfaces, all of which can get stray 37K atoms stuck to them.  Then they decay from a place that isn't the actual trap center, and it contaminates our stuff.
 %	\missingfigure{Show modelled TOF spectra in comparison with real TOF spectra.  Show the cut we made on that. }
-%	\note[color=jb]{JB on figures that might go here:  Figure 6.4 (currently that picture of the TOF spectrum) could either be here, or you could reference it from here. The TOF histogram is a great start. Adding the asymmetry[TOF] indeed would be vital.}
+%	\note[jb]{JB on figures that might go here:  Figure 6.4 (currently that picture of the TOF spectrum) could either be here, or you could reference it from here. The TOF histogram is a great start. Adding the asymmetry[TOF] indeed would be vital.}
 
 
 %	\subsection{Decay from Chamber Surfaces}
@@ -477,4 +477,4 @@ In order to check this model's performance, the energy-averaged superratio asymm
 %%%%\clearpage
 %%%%\FloatBarrier
 %%%\section{OldSection -- ``Comparing Simulations to Experimental Data''}
-%%%\note[color=org]{This content got moved to Ch.~\ref{sec:comparing_data_sims}.}
+%%%\note[org]{This content got moved to Ch.~\ref{sec:comparing_data_sims}.}
