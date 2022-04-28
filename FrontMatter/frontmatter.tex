@@ -33,7 +33,6 @@
 %\listofacronyms
 
 
-%\ifthenelse{\boolean{isdraft}}{\listoftodos}{} 
 \ifthenelse{\boolean{isdraft}}
 {
 	\listoftodos[Shit To Do]\relax
@@ -41,5 +40,14 @@
 }
 {}
 
-\end{frontmatter}
+%%\end{frontmatter}
 
+\ifthenelse{\boolean{isdraft}}
+{
+	\input{notes_legend}
+	
+	\input{notes_long}
+}
+{}
+
+\end{frontmatter}
