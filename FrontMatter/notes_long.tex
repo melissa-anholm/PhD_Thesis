@@ -110,34 +110,55 @@ In my view, the following are critical problems:
         \item - Closely related to the previous question, how does the current work fit into this overall effort? What is the unique contribution here?
 	\end{itemize}
     Etc.
+%%%\end{enumerate}
+%%%...\\
+%%%}
+%%%\note[gs, nolist]{
+%%%\\...\\
+%%%\begin{enumerate}
+%%%	\setcounter{enumi}{1}
+    \item 2. These aspects should be picked up in the Conclusions. What do the results mean for the “big
+    picture”? Again, how do the fit in with the other efforts, prior, concurrent, or planned? Etc.
 \end{enumerate}
 ...\\
 }
 \note[gs, nolist]{
-...\\
-\begin{enumerate}
-	\setcounter{enumi}{1}
-    \item 2. These aspects should be picked up in the Conclusions. What do the results mean for the “big
-    picture”? Again, how do the fit in with the other efforts, prior, concurrent, or planned? Etc.
+\\...\\
+\begin{enumerate}    
+	\setcounter{enumi}{2}
     \item 3. As an outsider, it is my understanding that the author worked as part of a larger collaboration.
     It would be beneficial to clearly lay out what her unique contributions are. This could be
     done, for instance, in the Introduction, and/or the Conclusions.
-    \item 4. Formulas and symbols contained in these need to be defined, as do symbols that appear in the
-    text. Currently, this is only done partly. It starts right at the beginning with Eq. 1.1 and continues throughout. Sure, one can of course guess the meaning of the symbols in Eq. 1.1 – but one should not have to guess! – and this is certainly not true for later equations. (For instance, I have no idea about the meaning of most of the symbols in Eq. 1.9, to give but one example.)
-    \item 5. Similarly, several figures need better explanations, starting with Fig. 1.1. Which, btw., also needs a source attribution (unless it was created by the author) and, presumably, a copyright note. Similar comments apply to various other figures as well.
 \end{enumerate}
-...\\
 }
 \note[gs, nolist]{
-...\\
+\begin{enumerate}    
+	\setcounter{enumi}{3}
+    \item 4. Formulas and symbols contained in these need to be defined, as do symbols that appear in the
+    text. Currently, this is only done partly. It starts right at the beginning with Eq.~\ref{eq:betaplus_decay} (formerly 1.1) and continues throughout. Sure, one can of course guess the meaning of the symbols in Eq.~\ref{eq:betaplus_decay} – but one should not have to guess! – and this is certainly not true for later equations. (For instance, I have no idea about the meaning of most of the symbols in Eq.~\ref{equation:integrated_jtw_INTRODUCTION} (formerly 1.9), to give but one example.)
+\end{enumerate}
+}
+\note[gs, nolist]{
+\begin{enumerate}    
+	\setcounter{enumi}{4}
+    \item 5. Similarly, several figures need better explanations, starting with Fig. 1.1. Which, btw., also needs a source attribution (unless it was created by the author) and, presumably, a copyright note. Similar comments apply to various other figures as well.
+\end{enumerate}
+}
+\note[gs, nolist]{
 \begin{enumerate}    
 	\setcounter{enumi}{5}
     \item 6. At first glance, I find a bibliography that contains only 28 entries to be problematic for a Ph.D. thesis. This goes, to some degree, back to my earlier points about embedding the work in the “bigger picture” – doing so would necessarily lead to several additional references – but it might be more than that.
+\end{enumerate}
+}
+\note[done, nolist]{
+\begin{enumerate}    
+	\setcounter{enumi}{6}
     \item 7. Appendix C, adding scanned pictures of handwritten notes as figures that, moreover, seem not to be referenced at all, is – well – problematic. I don’t think that it conforms to the instructions as per Supplemental Regulations either (though I did not explicitly check).
 \end{enumerate}
 }
 
 \note[gs, nolist]{
+\\...\\
 Given these various issues, I have not fully read the thesis in detail; I have instead focused on the question at hand: what is needed for the thesis to be in a form that can be distributed? I will provide a more formal report on the version of the thesis that I will receive from FGS.
 }
 \note[gs, nolist]{
@@ -176,13 +197,121 @@ Besides, there are some additional points that I would suggest for modification 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
-\note[orange, nolist]{More comments from John go here.  In 'date modified order' or whatever.}
+
+\note[jbn, nolist]{Suggestions from John on listing my contributions that need to be mentioned and/or general stuff that needs to be mentioned:
+\\
+Georg wants you to list your contributions in the intro, good.
+\\...\\
+First, in Section 2.4 the sentence after Harvey and Murray are referenced could be "There are some details of the present implementation of the AC MOT in Ref.~\cite{thesis}, done with a separate MOT geometry from
+this beta decay work."
+\\
+(Presently your thesis is Ref. 14, which is only cited so far for Fig. 2.1)
+\\...\\
+*you need a subsection in Section 2.4 "The AC-MOT and Polarization" on your field trimming.
+\\...\\
+Time-constant ambient fields were trimmed in all dimensions using two horizontal pairs of Helmholtz coils and the AC MOT coils for the vertical direction.
+These ambient B fields were first trimmed to be near zero using a giant magnetoresistance 3-axis probe at the trap center, with the MCP assembly removed and the vacuum chamber up to air.
+\\...\\
+Final trimming was done by optimizing polarization of stable $^{41}$K atoms with the apparatus assembled (cite[Fenker PRL Suppl Mat] has some details).
+\\...\\
+The AC MOT and polarization B fields were generated by SRS DS345 arbitrary waveform generators, amplified by
+Matsusada bipolar 20 KHz bandwidth 80A 20V amplifiers. The waveforms were carefully trimmed in amplitude and time to minimize B fields from eddy currents during the optical pumping cycle, again with the MCP assembly removed and the vacuum chamber up to air.
+\\...\\
+The bipolar amplifier bandwidth was inadequate when using current control mode, so voltage control had to be used, a much more time-exacting process requiring empirical iteration. These waveforms are not the same for the top and bottom coils, as during the optical pumping cycle one coil had to be flipped with respect to the MOT cycle to create the uniform vertical field for optical pumping by a Helmholtz rather than antiHelmholtz configuration.
+\\
+The beta detector full assemblies were in place during the field trimming.
+\\...\\
+All materials near the trap cloud are chosen to minimize both magnetic permeability to suppress time-constant B field gradients and conductivity to suppress eddy currents. E.g., the E field electrodes are made from either glassy carbon semiconductor or titanium alloy. A copper ring (not pictured in Fig. 2.5) with a slit mounted on each beta detector stainless steel reentrant flange suppresses the worst eddy currents fighting the B field along the z-axis. These designs were all confirmed by finite element calculations of another collaboration member.
+}
 
 
-
+\note[jbn, nolist]{
+I think you've neglected where the fT value and prediction for Abeta come from, entirely, and still don't have an equation for b\_Fierz in terms of Cs and Ct.
+\\...\\
+You had a note to do this, and in desperation I encouraged you to leave it out.
+I was wrong and Georg is right-- the whole SM prediction for Abeta makes no sense this way, and something about it needs to be there.
+\\...\\
+there are two ways to add a dedicated section in ch 1:
+\begin{itemize}
+	\item i) by writing the equation for the rate in terms of Vud and rho (the G-T matrix element over Fermi squared), and saying Shidling et al. gets rho from that by assuming Vud from the 0+ to 0+ decays. (You had a note "Do the master equation!" which I think I said you needed to leave out, but I was probably wrong.) But then you have to define all the small corrections, which is a lot of physics.
+	\item ii) Write the SM equation for Abeta in terms of rho, to give you the SM prediction for Abeta. State that recoil order corrections are in Appendix X. (If that's now a collaboration note? cite that there are recoil corrections considered in Appendix X-1 and a collaboration note).
+	\item iii) Such a section would then naturally end with b\_Fierz in terms of Cs and Ct, a natural followup to what you've written.
+	\\
+"JTW does the Dirac matrix traces necessary to write down the decay rates in term of the Lee-Yang Lagrangian's parameters.
+The prediction for b\_Fierz is " " which is zero in the SM." \textbf{even with recoil-order corrections} (there is no recoil order correction with the same m/Ebeta dependence).
+\\
+Then and only then will the final addition of the bFierz plot will make sense.
+\end{itemize}
 %
+OR, more likely:
+\\
+\textbf{leave out i)}.
+\\
+Say in text that Shidling et al. (I've added the reference in a sticky note for the figure) hands you rho (the $M_{GT}/M_F$ ratio prediction) using as input the absolute rate, Vud from the 0+ to 0+ beta decays, and calculations of isospin mixing and radiative corrections (cite[shidling]) for details beyond the scope of this thesis. The sign of rho comes both from a shell model by Ian and by if it were flipped Abeta would be off by an enormous factor. 
+\\...\\
+Then you would just need \textbf{ii and iii}.
+}
+\note[jbn, nolist]{
+As a reward for reading this far, I'll admit I wrote the bFierz m/E dependence wrong in the sticky notes in ch 1, sorry.
+}
+
+%%%
+\note[jbn, nolist]{first, actually, Ben writes a good summary of Ft mirror equation in terms of Ft0+ to 0+ in the PRL, you could just use that in Ch. 1 and it would help enormously. (Of course now I'm scared because it doesn't mention isospin mixing is different for 37K and the others, and that should be in the numerator as (Ft0to0/Ft37K) well as in rho, shouldn't it? I would need to compare to Shidling's expressions to sort this out.)
+}
+\note[jbn, nolist]{
+I said Ft wrong. I think you must know what to do.  
+\\
+F is the lepton phase space integral.
+\\
+(Decay rate)/F is then a dimensionless quantity proportional to |matrix element|$^2$, which you could call the intrinsic strength of the transition.
+\\
+People instead consider the inverse quantity denoted Ft defined as F*t\_1/2, so if log\_10(Ft) is smaller, the strength is larger.
+\\...\\
+So e.g. t\_1/2 is wildly different for the 0+ to 0+ decays (t1/2 for $^{14}$O is a minute, not a second like 38mK) but once you correct for the wildly different phase space (the Coulomb energies and therefore the decay Q-value smoothly grow, and phase space goes like $Q^5$) the Ft rates are close (closer once percent corrections from isospin mixing and nucleus-dependent radiative corrections are applied).
+}
+\note[jbn, nolist]{
+...
+\\
+(That equation is fine-- I was confused earlier.) You can mention that script{Ft} has isospin-breaking and other theory corrections beyond the scope of the thesis, and cite Shidling for those. This equation, along with the Abeta equation in terms of rho (you should not include the right-handed currents in Ben's Abeta equation and re-state that your thesis is working on scalar and tensor in your title) then sets up the inputs you need for the Abeta prediction.
+}
+%%%
+
+\note[jbn, nolist]{Chapter 2 corrections from John:
+\\
+all of these are trivial except the last, which counts as a glaring omission.
+\\
+\begin{itemize}
+	\item *section 2.1.3 "using a Helmoltz coil" add "but with currents in opposite direction." (saying it correctly here then implicitly defines anti-Helmholtz which you use correctly later for the AC MOT)
+	\item *It would be simplest to write down what you mean by a quadrupole field. You could say: "approximately in our geometry near the trap center
+	\\
+	$\vec{B} = 2 B_o z \hat{z} - (B_0 x \hat{x} + B_0 y \hat{y})$
+	\item *section 2.4 near end "divergencelessness" is not a word. It's obvious how to fix it ''since del dot B =0 in a current-free region..."
+	\item 2.5.1 "roughly" -> "approximately" The Efield is not rough at all, it's pretty good really. 
+	\\
+	Is the rMCP really just a 2-plate chevron in 2014? I don't remember. Why can't I find Ben's thesis?
+	\item *2.5.1 state clearly in an extra paragraph at the end that the polarization-determining data was taken with the rMCP, while the Abeta and bFierz data were taken with the eMCP. The polarization was assumed to be the same during the Abeta+bFierz data. This is backed up by constant 41K polarization data for weeks
+of optimization, with all optical pumping and B field switching parameters kept constant. Ambient magnetic field changes of 50 milliGauss could cause some polarization perturbations at the precision achieved, yet the stray fields are under control at that level. The TRINAT lab is in a basement well-shielded from the experimental hall by concrete with rebar, and though 50 mG fields are seen in that Hall from an open Helmholtz ion trap, they and the 5-ton crane produce negligible fields when measured at the atom trap. The cyclotron field makes 0.5 Gauss, predominantly vertical, and a smaller horizontal component, but trim Helmholtz coils at TRINAT are adjusted during calibrations with cyclotron on vs. off, and of course the cyclotron is on with constant field during the 37K delivery.
+	\item *\textbf{You don't state the polarization achieved 99.1$\pm$0.1 percent anywhere that I can see., citing the publication.} You might also state that's important for Abeta but has much more precision than needed for the near-zero bFierz term.
+	\\...\\
+	You mention the polarization is different by approximately 0.3\% in Section 6.1 from the cut, but never say what P is.
+	\\...\\
+	Appendix A has ?? for a discussion of the changes of the polarization cut, so you need to clean up that \ref{}. It is presently in Section 6.1.
+\end{itemize}
+}
+
+
+
+
+
+
+
+
+
+
+
 %%%% --- * --- %%%%	
-%
+%%%%%%%%%%%%%%%%%%%
+%\FloatBarrier
 \clearpage
 
 \note[white, nolist]{Old Notes!} \noindent
