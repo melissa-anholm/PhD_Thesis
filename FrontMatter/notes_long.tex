@@ -299,11 +299,53 @@ of optimization, with all optical pumping and B field switching parameters kept 
 \end{itemize}
 }
 
+%%%%%%%%%%%%%%%%%%%
+\note[jbn, nolist]{Another Round of Thoughts from John!
+\\...\\
+Fitting Ben's data (using for the bFierz function my convolution of 1/E with a Clifford tail) as I've shown before, compare what happens if I let Abeta float, or if I then fix Abeta arbitrarily to that floated value.
+\\
+That's not a well-motivated thing to do on its own, but it's not that much different than using Abeta[Cs$^2$,Ct$^2$] constrained by Ft[Cs$^2$,Ct$^2$] since that's only dependent on squares of small quantities.
+\\...\\
+So I would expect the ability to extract Cs and Ct from the 37K data to have more
+sensitivity if Abeta[Cs$^2$,Ct$^2$] and Ft[Cs$^2$,Ct$^2$] and bFierz[Cs,Ct] are floated together in a 2d fit rather then floating Abeta and bFierz without any theoretical constraints and then considering getting linear combinations of Cs and Ct from the bFierz value.
+\\...\\
+Note that my simply fixing Abeta lowers bFierz uncertainty by a factor of 3. I expect similar improvement in sensitivity to Cs and Ct.
+\\...\\
+(Here I'm using Cs as a stand-in for (Cs+Cs')/2 for simplicity)
+}
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=.999\linewidth]{Feedback/FixAndNot.png}
+	\caption[A Fit From John]{A Fit From John, or something.  idk, it goes with the text immediately previous.}
+%	\label{}
+\end{figure}
+\FloatBarrier
 
 
-
-
-
+\note[jbn, nolist]{More thoughts from John:
+\\...\\
+hi Melissa,
+\\...\\
+I think you should keep Section 6.2, but I think it would be clearer to point out the observable manifests as a dip in the raw TOF spectrum, not going all the way to zero as in the ideal on-axis situation you describe for simplicity.
+I.e., I would say you need to qualify this "exactly" word (emphasis mine below), and since
+it ends up as a cos(theta) distribution like in my attached slide on the subject, your figure of the TOF spectrum would be a good way to do that.
+\\...\\
+"Henceforth, daughter nuclei from a back-to-back decay as shown in
+Figure ?? will be described as ‘slow’ recoils. In terms of observables, this means that
+if the electric field is configured to point along one of the axes perpendicular to the
+polarization direction, then when the recoiling ion is swept away into a detector, the
+slow recoil’s hit position should be \textbf{exactly}​​ along the projection of the polarization
+axis. Furthermore, the slow recoil’s time of flight should be in the middle of the time
+of flight spectrum, since other recoils will be emitted with momentum towards or
+away from the detector"
+}
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=.999\linewidth]{Feedback/AMirrorDecayObservable.png}
+	\caption[A Slide From John]{A Slide From John, or something.  idk, it goes with the text immediately previous.}
+%	\label{}
+\end{figure}
+\FloatBarrier
 
 
 

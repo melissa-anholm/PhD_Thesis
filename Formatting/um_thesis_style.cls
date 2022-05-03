@@ -207,6 +207,10 @@
 \def\acknowledgename{Acknowledgements}
 %                    ~~~~~~~~~~~~~~~~
 %
+% preface environment:  (a clone of Acknowledgements)
+\def\prefacename{Preface}
+%               ~~~~~~~~~
+%
 % vita environment:
 \def\vitaname{Vita}
 %             ~~~~
@@ -399,6 +403,19 @@ $\:\overline{~~~~ \mbox{\rule{0in}{0.16in}\small ~\hspace{3.5in} Date }}\:$ \\
 }
 
 \def\endacknowledgement{\par\vfil\null}
+
+% Preface.  Clone of Acknowledgements section.
+\def\preface{
+   \newpage
+   \dsp
+   \chapter*{\prefacename}
+   \fmfont
+   
+   \addcontentsline{toc}{chapter}{\prefacename}
+}
+
+\def\endpreface{\par\vfil\null}
+
 
 % LIST OF SYMBOLS
 %
