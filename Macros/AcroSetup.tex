@@ -1,0 +1,122 @@
+% !TEX root = ../thesis_main.tex
+%
+%
+%
+
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{acro}
+
+
+\usepackage{longtable,array}
+\newlength\abbrevwidth
+\setlength\abbrevwidth{6em}
+\setlength\LTleft{6pt}
+\setlength\LTright{6pt}
+
+\NewAcroTemplate[list]{styleabbrev}{%
+  \AcroNeedPackage{array,longtable}%
+  \acronymsmapF{%
+    \AcroAddRow{%
+      \bfseries \acrowrite{short}%
+      \acroifT{alt}{/}\acrowrite{alt}%
+      &
+      \acrowrite{list}%
+      \acroifanyT{foreign,extra}{ (}%
+      \acrowrite{foreign}%
+      \acroifallT{foreign,extra}{, }%
+      \acrowrite{extra}%
+      \acroifanyT{foreign,extra}{)}%
+      \acropagefill
+      \acropages
+        {\acrotranslate{page}\nobreakspace}
+        {\acrotranslate{pages}\nobreakspace}%
+      \tabularnewline
+    }
+  }{\AcroRerun}
+  \acroheading
+  \acropreamble
+  \par\noindent
+%%  \begin{longtable}{@{}p{\abbrevwidth}p{\dimexpr\linewidth-\abbrevwidth-2\tabcolsep\relax}@{}}
+  \begin{longtable}{@{}p{\abbrevwidth}p{\dimexpr\linewidth-\abbrevwidth-\LTright-\LTleft-2\tabcolsep\relax}@{}}
+%    \bfseries Abkürzung & \bfseries Erläuterung 
+	\endhead
+    \AcronymTable
+  \end{longtable}
+}
+
+
+%\usepackage{enumitem}
+%
+%\newlength\myitemwidth
+%\setlength\myitemwidth{5em}
+%
+%\newlist{listabbrev}{description}{1}
+%\setlist[listabbrev]{
+%    labelindent = 0pt,
+%    labelsep    = 0pt,
+%    leftmargin  = \myitemwidth,
+%    labelwidth  = \myitemwidth,
+%    format      = \normalfont
+%    }
+%
+%\NewAcroTemplate[list]{styleabbrev}{%
+%  \let\description\listabbrev
+%  \let\enddescription\endlistabbrev
+%  \UseAcroTemplate[list]{description}[0]%
+%}
+
+
+%%%\DeclareAcroListStyle{extra-tabular}{table}
+%%%{
+%%%  table = tabular ,
+%%%  % 4 columns: acronym, description, extra information, page number
+%%%  table-spec = lp{.5\linewidth}p{.2\linewidth}l
+%%%}
+\acsetup{
+make-links    = true, 
+pages/display = all, 
+list/display  = all, 
+%list/template = longtable,
+list/template = styleabbrev,
+%%%%%list-short-width = 100pt,
+%%%%%list-short-width = 500pt,
+%list/template = longtable{@{}p{50pt} p{250pt}},  % description, lof, toc.  with packages:  supertabular, tabular, longtable
+%%list/template = longtable[l]{@{}p{50pt} p{250pt}},  % 
+%list-style=tabular,  % description, lof, toc.  with packages:  supertabular, tabular, longtable
+%%%table-spec    = @{}lp{.5\linewidth}p{.2\linewidth}l@{}. (\setlength\LTleft{0pt},  % for the longtable class.
+list/local    = false, 
+list/name     = List of Abbreviations,
+%first-style = short-long
+first-style   = long-short, 
+uc-cmd = \capitalisewords
+}
+%%%\acsetup{
+%%%make-links = true ,    % bool
+%%%index ,                % bool
+%%%format = \emph ,       % standard
+%%%list / local ,         % boolean option of the list module
+%%%list / display = all   % choice option of the list module
+%%%}
+%
+%%%\usepackage{showframe}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%
