@@ -1,5 +1,52 @@
 \begin{thebibliography}{10}
 
+\bibitem{SeverijnsTandecki2008}
+Severijns, N., Tandecki, M., Phalet, T. {\mdseries and} Towner, I.~S.,
+  \textit{$\mathcal{F}t$ values of the $T=1/2$ mirror \ensuremath{\beta}
+  transitions}, Phys. Rev. C, Vol.~78, pp.~055501, Nov 2008.
+
+\bibitem{pshidling}
+Shidling, P.~D., Melconian, D., Behling, S., Fenker, B., Hardy, J.~C., Iacob,
+  V.~E., McCleskey, E., McCleskey, M., Mehlman, M., Park, H.~I. {\mdseries and}
+  Roeder, B.~T., \textit{Precision half-life measurement of the
+  ${\ensuremath{\beta}}^{+}$ decay of $^{37}\mathrm{K}$}, Phys. Rev. C,
+  Vol.~90, pp.~032501, Sep 2014.
+
+\bibitem{hardytowner2015}
+Hardy, J. {\mdseries and} Towner, I., \textit{Superallowed 0+→ 0+ nuclear
+  $\beta$ decays: 2014 critical survey, with precise results for V u d and CKM
+  unitarity}, Physical Review C, Vol.~91, No.~2, pp.~025501, 2015.
+
+\bibitem{naviliat2009april}
+Naviliat-Cuncic, O. {\mdseries and} Severijns, N., \textit{Test of the
+  Conserved Vector Current Hypothesis in $T=1/2$ Mirror Transitions and New
+  Determination of $|{V}_{ud}|$}, Physical Review Letters, Vol.~102,
+  pp.~142302, April 2009.
+
+\bibitem{naviliat2009june}
+Naviliat-Cuncic, O. {\mdseries and} Severijns, N., \textit{$|{V}_{ud}|$ from
+  $T=1/2$ mirror transitions and the role of atom and ion traps}, The European
+  Physical Journal A, Vol.~42, No.~3, pp.~327--331, June 2009.
+
+\bibitem{vonplaten1971}
+{von Platen}, C., {Bonn}, J., {K{\"o}pf}, U., {Neugart}, R. {\mdseries and}
+  {Otten}, E.~W., \textit{{Spin exchange polarization and hfs anomaly
+  measurement of {\ensuremath{\beta}}-active$^{37}$K}}, Zeitschrift für
+  Physik, Vol.~244, No.~1, pp.~44--69, 1971.
+
+\bibitem{mpitt1992}
+{Pitt}, M.~L., {Test of the Linearity of Quantum Mechanics Using ARGON-37
+  Polarized by Spin-Exchange Optical Pumping.}, Princeton University, January
+  1992.
+
+\bibitem{minamisono2008quadrupole}
+Minamisono, K., Mantica, P., Crawford, H., Pinter, J., Stoker, J., Utsuno, Y.
+  {\mdseries and} Weerasiri, R., \textit{Quadrupole moment of 37K}, Physics
+  Letters B, Vol.~662, No.~5, pp.~389--395, 2008.
+
+\bibitem{itownerCalcs}
+Towner, I., Private Communication, August 2011.
+
 \bibitem{Glashow1959}
 Glashow, S.~L., \textit{The renormalizability of vector meson interactions},
   Nuclear Physics, Vol.~10, pp.~107--117, 1959.
@@ -19,11 +66,6 @@ Weinberg, S., \textit{A Model of Leptons}, Phys. Rev. Lett., Vol.~19,
 \bibitem{YangMills1954}
 Yang, C.~N. {\mdseries and} Mills, R.~L., \textit{Conservation of Isotopic Spin
   and Isotopic Gauge Invariance}, Phys. Rev., Vol.~96, pp.~191--195, Oct 1954.
-
-\bibitem{SeverijnsTandecki2008}
-Severijns, N., Tandecki, M., Phalet, T. {\mdseries and} Towner, I.~S.,
-  \textit{$\mathcal{F}t$ values of the $T=1/2$ mirror \ensuremath{\beta}
-  transitions}, Phys. Rev. C, Vol.~78, pp.~055501, Nov 2008.
 
 \bibitem{shidling2018}
 Shidling, P., Behling, R., Fenker, B., Hardy, J., Iacob, V., Mehlman, M., Park,
@@ -75,6 +117,18 @@ Fenker, B., Behr, J.~A., Melconian, D., Anderson, R. M.~A., Anholm, M., Ashery,
   optically pumped $^{37}\textrm{K}$}, New Journal of Physics, Vol.~18, No.~7,
   pp.~073028, 2016.
 
+\bibitem{stragglingLonergan1970}
+Lonergan, J., Jupiter, C. {\mdseries and} Merkel, G., \textit{Electron energy
+  straggling measurements for thick targets of beryllium, aluminum, and gold at
+  4.0 and 8.0 MeV}, Journal of Applied Physics, Vol.~41, No.~2, pp.~678--688,
+  1970.
+
+\bibitem{stragglingRester1971}
+Rester, D.~H. {\mdseries and} Derrickson, J.~H., \textit{Electron Transmission
+  Measurements for Al, Sn, and Au Targets at Electron Bombarding Energies of
+  1.0 and 2.5 MeV}, Journal of Applied Physics, Vol.~42, No.~2, pp.~714--721,
+  1971.
+
 \bibitem{thesis}
 Anholm, M., Characterizing the {AC-MOT}, Master's thesis, University of British
   Columbia, 2014.
@@ -98,6 +152,65 @@ Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
   \textit{Comprehensive analysis of beta decays within and beyond the Standard
   Model}, Journal of High Energy Physics, Vol.~2021, No.~4, pp.~1--36, 2021.
 
+\bibitem{becquerel1896}
+Becquerel, H., \textit{Sur les radiations {\'e}mises par phosphorescence},
+  Comptes rendus de 1'Academie des Sciences, Paris, Vol.~122, pp.~420--421,
+  1896.
+
+\bibitem{rutherford1899}
+Rutherford, E., \textit{VIII. Uranium radiation and the electrical conduction
+  produced by it}, The London, Edinburgh, and Dublin Philosophical Magazine and
+  Journal of Science, Vol.~47, No. 284, pp.~109--163, 1899.
+
+\bibitem{villard1900}
+Villard, P., \textit{Sur la r{\'e}flexion et la r{\'e}fraction des rayons
+  cathodiques et des rayons d{\'e}viables du radium}, CR Acad. Sci. Paris,
+  Vol.~130, pp.~1010, 1900.
+
+\bibitem{rutherford1903}
+Rutherford, E., \textit{XV. The magnetic and electric deviation of the easily
+  absorbed rays from radium}, The London, Edinburgh, and Dublin Philosophical
+  Magazine and Journal of Science, Vol.~5, No.~26, pp.~177--187, 1903.
+
+\bibitem{becquerel1900}
+Becquerel, H., \textit{Influence d'un champ magn{\'e}tique sur le rayonnement
+  des corps radio-actifs}, Journal de Physique Th{\'e}orique et Appliqu{\'e}e,
+  Vol.~9, No.~1, pp.~71--78, 1900.
+
+\bibitem{klein1996}
+Klein, A., Brown, B., Georg, U., Keim, M., Lievens, P., Neugart, R., Neuroth,
+  M., Silverans, R., Vermeeren, L. {\mdseries and} {ISOLDE Collaboration},
+  \textit{Moments and mean square charge radii of short-lived argon isotopes},
+  Nuclear Physics A, Vol.~607, No.~1, pp.~1--22, 1996.
+
+\bibitem{fermi1934german}
+Fermi, E., \textit{Versuch einer Theorie der $\beta$-Strahlen. I}, Zeitschrift
+  f{\"u}r Physik, Vol.~88, No.~3, pp.~161--177, 1934.
+
+\bibitem{pdg2018}
+{Tanabashi}, M. i. P. D.~G., \textit{Review of Particle Physics}, Phys. Rev. D,
+  Vol.~98, pp.~030001, Aug 2018.
+
+\bibitem{LeeYang}
+Lee, T.-D. {\mdseries and} Yang, C.-N., \textit{Question of parity conservation
+  in weak interactions}, Physical Review, Vol.~104, No.~1, pp.~254--258, 1956.
+
+\bibitem{wu}
+Wu, C.~S., Ambler, E., Hayward, R.~W., Hoppes, D.~D. {\mdseries and} Hudson,
+  R.~P., \textit{Experimental Test of Parity Conservation in Beta Decay}, Phys.
+  Rev., Vol.~105, pp.~1413--1415, Feb 1957.
+
+\bibitem{RustadRuby1955tensor}
+Rustad, B.~M. {\mdseries and} Ruby, S.~L., \textit{Gamow-Teller Interaction in
+  the Decay of ${\mathrm{He}}^{6}$}, Phys. Rev., Vol.~97, pp.~991--1002, Feb
+  1955.
+
+\bibitem{BurgyEpstein1957scalartensor}
+Burgy, M.~T., Epstein, R.~J., Krohn, V.~E., Novey, T.~B., Raboy, S., Ringo,
+  G.~R. {\mdseries and} Telegdi, V.~L., \textit{Measurement of Beta Asymmetry
+  in the Decay of Polarized Neutrons}, Phys. Rev., Vol.~107, pp.~1731--1733,
+  Sep 1957.
+
 \bibitem{severijns_beck_cuncic_2006}
 Severijns, N., Beck, M. {\mdseries and} Naviliat-Cuncic, O., \textit{Tests of
   the standard electroweak model in nuclear beta decay}, Rev. Mod. Phys.,
@@ -109,15 +222,6 @@ Krane, K.~S., Introductory Nuclear Physics, Wiley, New York, 1988.
 \bibitem{wong1990}
 Wong, S., Introductory Nuclear Physics, Prentice Hall Advanced Reference Series
   Prentice Hall Labora, Prentice Hall, 1990.
-
-\bibitem{wu}
-Wu, C.~S., Ambler, E., Hayward, R.~W., Hoppes, D.~D. {\mdseries and} Hudson,
-  R.~P., \textit{Experimental Test of Parity Conservation in Beta Decay}, Phys.
-  Rev., Vol.~105, pp.~1413--1415, Feb 1957.
-
-\bibitem{LeeYang}
-Lee, T.-D. {\mdseries and} Yang, C.-N., \textit{Question of parity conservation
-  in weak interactions}, Physical Review, Vol.~104, No.~1, pp.~254, 1956.
 
 \bibitem{jtw_coulomb}
 Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Coulomb
@@ -172,11 +276,12 @@ Audi, G., Wapstra, A. {\mdseries and} Thibault, C., \textit{The {AME2003}
 
 \bibitem{ben_thesis}
 Fenker, B.~B., Precise measurement of the $\beta$-asymmetry in the decay of
-  magneto-optically trapped, spin-polarized 37K, Ph.D. thesis, 2016.
+  magneto-optically trapped, spin-polarized 37K, Ph.D. thesis, Texas A\&M
+  University, 2016.
 
 \bibitem{spencer_thesis}
 Behling, R.~S., Measurement of the Standard Model Beta Asymmetry Parameter,
-  \ensuremath{\beta}, in 37K, Ph.D. thesis, 2015.
+  \ensuremath{\beta}, in 37K, Ph.D. thesis, Texas A\&M University, 2015.
 
 \bibitem{clifford}
 Clifford, E., Hagberg, E., Koslowsy, V., Hardy, J., Schmeing, H. {\mdseries
