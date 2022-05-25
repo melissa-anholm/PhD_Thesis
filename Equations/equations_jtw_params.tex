@@ -5,20 +5,107 @@
 %%%% --- * --- %%%%	
 \begin{eqnarray}
     \xi &=& 
-    	|M_F|^2    \left( |C_S|^2 + |C_V|^2 + |C_S^\prime|^2 + |C_V^\prime|^2 \right) 
-		\nonumber \\ && + \;\; 
+    	|M_F|^2   \! \left( |C_S|^2 + |C_V|^2 + |C_S^\prime|^2 + |C_V^\prime|^2 \right) 
+		\nonumber \\ && 
+		+ \;\; 
 		|M_{GT}|^2 \left( |C_T|^2 + |C_A|^2 + |C_T^\prime|^2 + |C_A^\prime|^2 \right)
-	\label{eq:jtw_xi} \\
-    \bFierz \, \xi &=& \pm \: 2\gamma \, \textrm{Re}\!\left[ |M_F|^2 \left( C_S C_V^* + C_S^\prime C_V^{\prime *} \right) + |M_{GT}|^2 \left( C_T C_A^* + C_T^{\prime} C_A^{\prime *} \right) \right] 
-    \label{eq:jtw_bxi} \\
-    \Abeta \, \xi &=& |M_{GT}|^2 \lambda_{J^\prime J} \left[ \pm 2 \textrm{Re}\!\left[ C_T C_T^{\prime *} - C_A C_A^{\prime *} \right] + 2 \frac{\alpha Z \me }{\pbeta} \,\textrm{Im}\!\left[ C_T C_A^{\prime *} + C_T^\prime C_A^* \right] \right] 
-		\nonumber \\ && + \;\; 
-		\delta_{J^\prime J} \, M_F\,M_{GT} \left( \frac{J}{J+1} \right)^{\!\!\! 1/2} \left[ \phantom{\frac{1}{1}\!\!\!} 2 \,\textrm{Re} \! \left[ C_S C_T^{\prime *} +  C_S^\prime C_T^* - C_V C_A^{\prime *} - C_V^\prime C_A^* \right] 
-		\right.
-		\nonumber \\ && \pm \;\;
-		\left.
-		2 \frac{\alpha Z \me }{\pbeta} \,\textrm{Im}\!\left[ C_S C_A^{\prime *} + C_S^\prime C_A^* - C_V C_T^{\prime *} -C_V^\prime C_T^* \right] \right]
-	\label{eq:jtw_Abetaxi}
+	%	\nonumber \\
+		\label{eq:jtw_xi} 
+	\\
+	\a \xi &=& 
+		|M_F|^2 \! \left[ \left( |C_V|^2 + |C_V^\prime|^2 - |C_S|^2 - |C_S^\prime|^2 \right) 
+		\mp %\left( 
+		2 \frac{\alpha Z \me c^2}{\pbeta c}\,\textrm{Im}\!\left[ C_S C_V^* + C_S^\prime C_V^{\prime *} \right]
+	%	\right) \!
+		\right] 
+		\nonumber \\
+		&& + \;\; 
+		\frac{1}{3} \, |M_{GT}|^2 \! \left[ 
+		\left( |C_T|^2 - |C_A|^2 + |C_T^\prime|^2 - |C_A^\prime|^2 \right) \phantom{\frac{\alpha Z \me c^2 }{\pbeta c}} \right.
+		\nonumber \\ && 
+		\pm \left.
+		2 \frac{\alpha Z \me c^2}{\pbeta c}\,\textrm{Im}\!\left[ C_T C_A^* + C_T^\prime C_A^{\prime *} \right] %\right) %\!
+		\right]
+		% \nonumber \\
+		\label{eq:jtw_abetanuxi}
+	\\ 
+    \bFierz \, \xi &=& 
+		\pm \: 2\gamma \: \textrm{Re}\!\left[ |M_F|^2 \left( C_S C_V^* + C_S^\prime C_V^{\prime *} \right) 
+		+ |M_{GT}|^2 \left( C_T C_A^* + C_T^{\prime} C_A^{\prime *} \right) \right] 
+		\label{eq:jtw_bxi} 
+    \\
+	\calign \, \xi &=& 
+		|M_{GT}|^2 \Lambda_{J^\prime J}\! \left[ 
+		\left( |C_T|^2 - |C_A|^2 + |C_T^\prime|^2 - |C_A^\prime|^2 \right)
+		\pm 
+		2 \frac{\alpha Z \me c^2}{\pbeta c}\,\textrm{Im}\!\left[ C_T C_A^* + C_T^\prime C_A^{\prime *} \right]
+		\right]
+		\nonumber \\
+		\label{eq:jtw_calignxi}
 \end{eqnarray}
 %
+\begin{eqnarray}
+    \Abeta \, \xi &=& 
+    	2\, \lambda_{J^\prime J} |M_{GT}|^2 \left[ \pm \textrm{Re}\!\left[ C_T C_T^{\prime *} - C_A C_A^{\prime *} \right] + \frac{\alpha Z \me c^2}{\pbeta c} \,\textrm{Im}\!\left[ C_T C_A^{\prime *} + C_T^\prime C_A^* \right] \right] 
+		\nonumber \\ && + \;\; 
+		2\, \delta_{J^\prime J} \, M_F\,M_{GT} \left(\! \frac{J}{J+1} \! \right)^{\!\!\! 1/2} \left[ \phantom{\frac{1}{1}\!\!\!} \,\textrm{Re} \! \left[ C_S C_T^{\prime *} +  C_S^\prime C_T^* - C_V C_A^{\prime *} - C_V^\prime C_A^* \right] 
+		\right.
+		\nonumber \\ && \pm \;
+		\left.
+		2 \frac{\alpha Z \me c^2}{\pbeta c} \,\textrm{Im}\!\left[ C_S C_A^{\prime *} + C_S^\prime C_A^* - C_V C_T^{\prime *} -C_V^\prime C_T^* \right] \right]
+		\label{eq:jtw_Abetaxi}
+	\\
+	\Bnu \xi &=& 
+		2 |M_{GT}|^2 \lambda_{J^\prime J}  \, \textrm{Re}\!\left[ \frac{\gamma \, \me c^2 }{\Ebeta}
+		\left( C_T C_A^{\prime *} + C_T^\prime C_A^* \right) 
+		\pm \left( C_T C_T^{\prime *} + C_A C_A^{\prime * }\right) \right]
+		\nonumber \\
+		&& - \;\; \delta_{J^\prime J} \, M_F\,M_{GT} \left(\! \frac{J}{J+1} \!\right)^{\!\!\! 1/2} 
+		\textrm{Re} \! \left[ \left( C_S C_T^{\prime *} + C_S^\prime C_T^* + C_V C_A^{\prime *} + C_V^\prime C_A^* \right)
+			\phantom{\frac{\me c^2}{\Ebeta } \!\!\!\! \!\!\!\! } \right.
+		\nonumber \\ && \pm 
+		\left. 
+		\frac{\gamma \, \me c^2}{\Ebeta}  \left( C_S C_A^{\prime *} + C_S^\prime C_A^* + C_V C_T^{\prime *} + C_V^\prime C_T^* \right)  
+		\right]
+		\label{eq:jtw_Bnuxi}
+	\\
+	\DTR \xi &=&
+		2 \, \delta_{J^\prime J} \, M_F\,M_{GT} \left(\! \frac{J}{J+1} \!\right)^{\!\!\! 1/2} \left[ \,
+		\textrm{Im}\!\left[ C_S C_T^* - C_V C_A^* + C_S^\prime C_T^{\prime *} - C_V^\prime C_A^{\prime *} \right] 
+			\phantom{\frac{\alpha Z \me}{\pbeta}} \right.
+		\nonumber \\
+		&& \mp \;\; \left.
+		\frac{\alpha Z \me c^2}{\pbeta c} \, \textrm{Re}\!\left[ C_S C_A^* - C_V C_T^* + C_S^\prime C_A^{\prime *} - C_V^\prime C_T^{\prime *} \right] \right]
+		\label{eq:jtw_DTRxi}
+\end{eqnarray}
 %
+% 
+%\aside{Pretty sure these ones have sign conventions for ($\beta^- / \beta^+$). }
+%\note{Define $\gamma$!  Also $\lambda_{J^\prime J}$.  And $\alpha$.  I guess $\delta_{J^\prime J}$ too.  And $\Lambda_{J^\prime J}$. Somewhere mention that the primes go on things that are for the daughter.  But only when it's a spin.}
+%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
