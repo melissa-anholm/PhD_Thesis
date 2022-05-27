@@ -1,5 +1,15 @@
 \begin{thebibliography}{10}
 
+\bibitem{jtw}
+Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
+  Tests of Time Reversal Invariance in Beta Decay}, Phys. Rev., Vol.~106,
+  pp.~517--521, May 1957.
+
+\bibitem{jtw_coulomb}
+Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Coulomb
+  Corrections in Allowed Beta Transitions}, Nuclear Physics, Vol.~4,
+  pp.~206--212, Nov. 1957.
+
 \bibitem{SeverijnsTandecki2008}
 Severijns, N., Tandecki, M., Phalet, T. {\mdseries and} Towner, I.~S.,
   \textit{$\mathcal{F}t$ values of the $T=1/2$ mirror \ensuremath{\beta}
@@ -43,6 +53,12 @@ Naviliat-Cuncic, O. {\mdseries and} Severijns, N., \textit{$|{V}_{ud}|$ from
 Minamisono, K., Mantica, P., Crawford, H., Pinter, J., Stoker, J., Utsuno, Y.
   {\mdseries and} Weerasiri, R., \textit{Quadrupole moment of 37K}, Physics
   Letters B, Vol.~662, No.~5, pp.~389--395, 2008.
+
+\bibitem{klein1996}
+Klein, A., Brown, B., Georg, U., Keim, M., Lievens, P., Neugart, R., Neuroth,
+  M., Silverans, R., Vermeeren, L. {\mdseries and} {ISOLDE Collaboration},
+  \textit{Moments and mean square charge radii of short-lived argon isotopes},
+  Nuclear Physics A, Vol.~607, No.~1, pp.~1--22, 1996.
 
 \bibitem{itownerCalcs}
 Towner, I., Private Communication, August 2011.
@@ -129,6 +145,31 @@ Rester, D.~H. {\mdseries and} Derrickson, J.~H., \textit{Electron Transmission
   1.0 and 2.5 MeV}, Journal of Applied Physics, Vol.~42, No.~2, pp.~714--721,
   1971.
 
+\bibitem{holstein}
+{Holstein}, B.~R., \textit{{Recoil effects in allowed beta decay: The
+  elementary particle approach}}, Reviews of Modern Physics, Vol.~46, No.~4,
+  pp.~789--814, Oct. 1974.
+
+\bibitem{holstein_errata}
+Holstein, B.~R., \textit{Erratum: Recoil effects in allowed beta decay: The
+  elementary particle approach}, Rev. Mod. Phys., Vol.~48, pp.~673--673, Oct
+  1976.
+
+\bibitem{EbelFeldman1957}
+Ebel, M. {\mdseries and} Feldman, G., \textit{Further remarks on Coulomb
+  corrections in allowed beta transitions}, Nuclear Physics, Vol.~4,
+  pp.~213--214, 1957.
+
+\bibitem{Falkowski2021}
+Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
+  \textit{Comprehensive analysis of beta decays within and beyond the Standard
+  Model}, Journal of High Energy Physics, Vol.~2021, No.~4, pp.~1--36, 2021.
+
+\bibitem{Falkowski2022}
+Falkowski, A., González-Alonso, M., Palavrić, A. {\mdseries and}
+  Rodríguez-Sánchez, A., \textit{Constraints on subleading interactions in
+  beta decay Lagrangian}, 2022.
+
 \bibitem{thesis}
 Anholm, M., Characterizing the {AC-MOT}, Master's thesis, University of British
   Columbia, 2014.
@@ -138,19 +179,9 @@ Hong, R., Sternberg, M.~G. {\mdseries and} Garcia, A., \textit{Helicity and
   nuclear $\beta$ decay correlations}, American Journal of Physics, Vol.~85,
   No.~1, pp.~45--53, 2017.
 
-\bibitem{jtw}
-Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
-  Tests of Time Reversal Invariance in Beta Decay}, Phys. Rev., Vol.~106,
-  pp.~517--521, May 1957.
-
 \bibitem{deShalit1963}
 de~Shalit, A. {\mdseries and} Talmi, I., Nuclear Shell Theory, Nuclear Shell
   Theory, Academic Press, 1963.
-
-\bibitem{Falkowski2021}
-Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
-  \textit{Comprehensive analysis of beta decays within and beyond the Standard
-  Model}, Journal of High Energy Physics, Vol.~2021, No.~4, pp.~1--36, 2021.
 
 \bibitem{becquerel1896}
 Becquerel, H., \textit{Sur les radiations {\'e}mises par phosphorescence},
@@ -176,12 +207,6 @@ Rutherford, E., \textit{XV. The magnetic and electric deviation of the easily
 Becquerel, H., \textit{Influence d'un champ magn{\'e}tique sur le rayonnement
   des corps radio-actifs}, Journal de Physique Th{\'e}orique et Appliqu{\'e}e,
   Vol.~9, No.~1, pp.~71--78, 1900.
-
-\bibitem{klein1996}
-Klein, A., Brown, B., Georg, U., Keim, M., Lievens, P., Neugart, R., Neuroth,
-  M., Silverans, R., Vermeeren, L. {\mdseries and} {ISOLDE Collaboration},
-  \textit{Moments and mean square charge radii of short-lived argon isotopes},
-  Nuclear Physics A, Vol.~607, No.~1, pp.~1--22, 1996.
 
 \bibitem{fermi1934german}
 Fermi, E., \textit{Versuch einer Theorie der $\beta$-Strahlen. I}, Zeitschrift
@@ -222,16 +247,6 @@ Krane, K.~S., Introductory Nuclear Physics, Wiley, New York, 1988.
 \bibitem{wong1990}
 Wong, S., Introductory Nuclear Physics, Prentice Hall Advanced Reference Series
   Prentice Hall Labora, Prentice Hall, 1990.
-
-\bibitem{jtw_coulomb}
-Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Coulomb
-  Corrections in Allowed Beta Transitions}, Nuclear Physics, Vol.~4,
-  pp.~206--212, Nov. 1957.
-
-\bibitem{holstein}
-{Holstein}, B.~R., \textit{{Recoil effects in allowed beta decay: The
-  elementary particle approach}}, Reviews of Modern Physics, Vol.~46, No.~4,
-  pp.~789--814, Oct. 1974.
 
 \bibitem{raabprentiss}
 Raab, E.~L., Prentiss, M., Cable, A., Chu, S. {\mdseries and} Pritchard, D.~E.,
@@ -308,10 +323,5 @@ Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
 Melconian, D.~G., Measurement of the Neutrino Asymmetry in the Beta Decay of
   Laser-Cooled, Polarized $^{37}\textrm{K}$, Ph.D. thesis, Simon Fraser
   University, 2005.
-
-\bibitem{holstein_errata}
-Holstein, B.~R., \textit{Erratum: Recoil effects in allowed beta decay: The
-  elementary particle approach}, Rev. Mod. Phys., Vol.~48, pp.~673--673, Oct
-  1976.
 
 \end{thebibliography}

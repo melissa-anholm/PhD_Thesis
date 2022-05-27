@@ -29,7 +29,7 @@ where, for convenience, we have defined a nuclear alignment term,
 \eea
 %%%\aside{We have already specialized to $\beta^+$ decay.  .... Wait, we have?  Where?  ... There.  Fixed. It's not like that anymore.}
 
-In Eq.~\ref{equation:jtw_master}, $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the outgoing $\beta$ particle's (total) energy, momentum 3-vector, and momentum scalar, while $\Enu$, $\vecpnu$, and $\pnu$ are the equivalent quantities for the outgoing (anti-)neutrino, and $E_0$ is the maximum possible $\beta$ energy associated with the transition.   $\vecJ$ is the nuclear angular momentum vector of the parent, and $J$ is its projection onto the axis of quantization. $\hatj$ is a unit vector in the direction of $\vecJ$ (note that in general, $\hatj \neq \frac{\vecJ}{J}$).  As usual, $\me$ is the mass of the electron, and $c$ is the speed of light.  The infinitesimal surface element $\dOmegabeta$ ($\dOmeganu$) represents the direction of $\beta$ (neutrino) emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with Z the proton number of the parent nucleus.  The Fermi function accounts for the electric force between the nucleus and the charged outgoing beta particle, and its integral over $\Ebeta$ has no closed form expression.
+In Eq.~\ref{equation:jtw_master}, $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the outgoing $\beta$ particle's (total) energy, momentum 3-vector, and momentum scalar, while $\Enu$, $\vecpnu$, and $\pnu$ are the equivalent quantities for the outgoing (anti-)neutrino, and $E_0$ is the maximum possible $\beta$ energy associated with the transition.\aside{Holstein gives a formula for it.  Maybe I should write it out...}   $\vecJ$ is the nuclear angular momentum vector of the parent, and $J$ is its projection onto the axis of quantization. $\hatj$ is a unit vector in the direction of $\vecJ$ (note that in general, $\hatj \neq \frac{\vecJ}{J}$).  As usual, $\me$ is the mass of the electron, and $c$ is the speed of light.  The infinitesimal surface element $\dOmegabeta$ ($\dOmeganu$) represents the direction of $\beta$ (neutrino) emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with Z the proton number of the parent nucleus.  The Fermi function accounts for the electric force between the nucleus and the charged outgoing beta particle, and its integral over $\Ebeta$ has no closed form expression.
 
 %%%indicates that the direction of beta emission must be considered
 %%%Eq.~\ref{equation:jtw_master} must be 
@@ -94,7 +94,7 @@ such that the resulting distribution no longer depends on parameters that are no
 %The neutrino energy itself is not a free variable in this equation, because the energy release in the decay is fixed, and given the approximation that none of that energy is allocated to the recoiling daughter, it is very straightforward to calculate the neutrino energy for a decay event in which the beta energy is known.
 %
 %We haven't integrated out the neutrino momentum.  Neutrino energy itself is a redundant parameter, I think, because we are already using an endpoint energy and a beta energy, and we are not taking recoil-order effects into account.  Also, we treat neutrinos as massless here, which is a perfectly reasonable approximation for our purposes.  For ``convenience'', let's define a nuclear alignment term, $\Talign$, so that:
-We take this as an opportunity to specialize the equations for $\beta^+$ decay transitions with $J^\prime = J$. The result 
+We take this as an opportunity to specialize the equations for $\beta^+$ decay transitions with $j = J^\prime = \frac{3}{2}$. The result 
 %of performing this integration over neutrino direction 
 is:
 \input{equation_integratedjtw}
@@ -105,8 +105,10 @@ is:
 %\aside{}
 %We still must write the remaining parameters in terms of the relevant nuclear matrix elements and fundamental coupling constants.  These coupling constants are, in general, complex-valued, and JTW does not choose a phase angle for us.  We write them out in 
 %Eqs.~(\ref{eq:jtw_xi}-\ref{eq:jtw_Abetaxi}).
+Note that JTW presents slightly different expressions for one component of $\Abeta$ within~\cite{jtw} and~\cite{jtw_coulomb}, and the latter convention is what is adopted here.  
+%Here, we adopt the convention from the latter publication.  
 
-Note that JTW presents slightly different expressions for the sign convention in components of $\Abeta$ within~\cite{jtw} and~\cite{jtw_coulomb}.  Here, we adopt the convention from the latter publication.  We further require that both $M_F$ or $M_{GT}$ must be real, which can be done without loss of generality, however we do not require that they be positive, which would make the two conventions equivalent.  
+We further require that both $M_F$ and $M_{GT}$ must be real, which can be done without loss of generality,~\aside{I don't think this is true...} however we do not require that they be positive, which would make the two conventions equivalent.  
 %We do not require that either $M_F$ or $M_{GT}$ be positive (which would make the two conventions equivalent), but we can require that both must be \emph{real} without loss of generality.
 
 There are a number of degrees of freedom left in the expressions that remain, and it is not immediately obvious how certain choices about these parameters might affect the physical results, or which approximations or assumptions ought to be made in order to arrive at a theory that matches the observational reality.  This is in part a result of the fact that the theory behind \ac{JTW} was developed before we had a detailed experimental understanding of much of the behaviour of beta decay, so all mathematically consistent behaviours are treated with roughly the same amount of consideration within the model.  
@@ -144,9 +146,14 @@ $M_{F}\,M_{GT}$ term in Eq.~(\ref{eq:jtw_Abetaxi}) have an overall positive valu
 
 \aside{Also, $\xi = G_v^2 \, \cos\theta_C \, f_1(E).$}
 
+\note{More coulomb corrections in JTW notation:~\cite{EbelFeldman1957}.  Also, an update to Falkowski's review article\cite{Falkowski2021}, which currently still liives on the arxiv, is here:~\cite{Falkowski2022}. }
+
 
 %%%% --- * --- %%%%	
+%%%% --- * --- %%%%	
+%%%% --- * --- %%%%	
 \section[Holstein Formalism]{Holstein Formalism} 
+\note{Probably the phrasing here is way too casual.  Fix it.}
 Holstein~\cite{holstein}~\cite{holstein_errata} generously provides explicit equations to match both Eq.~(\ref{equation:jtw_master}) (i.e. Holstein's Eq.~(51), where neutrino direction is a parameter of the probability distribution) and Eq.~(\ref{equation:integrated_jtw}) (Holstein's Eq.~(52), where neutrino direction has already been integrated over).  
 
 %Holstein~\cite{holstein} generously provides explicit equations to match both Eq.~\ref{equation:jtw_master} (where neutrino direction is a parameter of the probability distribution), and Eq.~\ref{equation:integrated_jtw} (where the neutrino direction has already been integrated over).
@@ -557,7 +564,8 @@ Holstein's $\Lambda_2$ is closely related to JTW's $\Talign$.  JTW has no equiva
 %
 
 
-
+%%%% --- * --- %%%%	
+\section{Qualitative Parameter Descriptions and Convention Compatibility}
 
 
 
