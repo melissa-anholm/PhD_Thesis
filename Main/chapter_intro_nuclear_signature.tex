@@ -62,7 +62,12 @@ things from Ian Towner 2013:  all the (reduced) matrix elements and all the coup
 Really, this shit can probably can be an appendix.
 }
 
-Despite these early successes, in 1911 Lise Meitner and Otto Hahn noticed that beta particles are emitted with a variety of different kinetic energies, and in 1914 James Chadwick demonstrated that energies of emitted beta particles formed a continuous distribution.  The physics community was baffled by the fact that it seemed impossible to predict the energy of a beta particle emitted by a particular process;  if the emitted beta simply took on the difference in energy between the initial and final elements, then surely that should be a fixed amount of energy for a given transition.  Finally in 1930, Wolfgang Pauli proposed that the presence of an additional small, neutral, difficult to detect particle could account for the continuous beta energy spectrum.  He named this particle the ``neutron'' -- though today we refer to that same particle as a ``neutrino,'' and use the name ``neutron'' for an entirely different particle.
+Despite these early successes, in 1911 Lise Meitner and Otto Hahn noticed that beta particles are emitted with a variety of different kinetic energies, and in 1914 James Chadwick demonstrated that energies of emitted beta particles formed a continuous distribution.  The physics community was baffled for years by the fact that it seemed impossible to predict the energy of a beta particle emitted by a particular process;  if the emitted beta simply took on the difference in energy between the initial and final states, then surely that energy should be a fixed, unchanging value for a paricular transition.  
+%should be a fixed amount of energy for a given transition.  
+Finally, in 1931, a frustrated Wolfgang Pauli famously proposed that if an additional small, neutral, difficult to detect particle were emitted simultaneously with the beta and allowed to carrying away a varying amount of energy, then this accounting trick could account for the continuous beta energy spectrum.
+%could account for the continuous beta energy spectrum, by carrying away whatever fraction of the
+%This new particle was dubbed a ``neutron'' 
+He named this particle a ``neutron'' -- though today we refer to that same particle as a(n) ``(anti-)neutrino,'' and use the name ``neutron'' for an entirely different particle.~\aside{Fermi renamed it, because Italian.}
 
 \note{alpha and beta decay:
 \\
@@ -85,8 +90,10 @@ Transmutations?:
 %%%
 %%%a neutrino (which he referred to as a "neutron" at the time) 
 
-When Enrico Fermi offered a quantitative description of 
+%When Enrico Fermi offered a quantitative description of 
+Pauli's 1931 insight paved the way for Enrico Fermi to propose a quantitative description of the beta decay process.  Now known as Fermi's Golden Rule, the introduction of this model in 1934 arguably marks the beginning of our modern understanding of beta decay.  Fermi's Golden Rule is both remarkably general in its approach, as well as powerful in its predictive power, approaching the matter from a fully quantum mechanical perspective.  \aside{Point to that other section where I math this out.}
 
+On the experimental front, 1934 also marks the first discovery of $\beta^+$ radiation, for which Irène and Frédéric Joliot-Curie later received a Nobel prize.  1934 was also the year when Wick proposed the electron capture mechanism for beta decay, later observed by Luis Alvarez in 1937.  \aside{Yukawa and others totes helped flesh out the theory behind E.C.}
 
 
 \section{Draft of Intro Section}
@@ -133,6 +140,7 @@ Radioactivity:
 \item 1934 - Irène and Frédéric Joliot-Curie discover (induced) beta+ decay.  it got 'em a nobel prize.
 \item 1934 - Wick proposes electron capture as a thing.  Yukawa and others maybe have thoughts about that too.
 \item 1937 - Luis Alvarez observes electron capture.
+\item ???? - Parity?  Coupling constants??
 \end{itemize}
 
 \subsection{paragraphs}
@@ -161,6 +169,8 @@ Anyway, that thing was published in 1934 !  And he assumed the interaction only 
 Later, we collectivelly learned that a better model is to suppose that the interaction is mediated by a massive, charged $W^+$ or $W^-$ particle.  Also, it's pretty heavy, and Ben totally gives the mass so he can cite the dudes who compile that stuff, but there's a new version now.  As of 2018, we have $m_W = 80.379(12)$\,GeV/$c^2$ ~\cite{pdg2018}.  The point is, the fact that it's so massive means that the approximation of $0$ distance was pretty good, since the larger mass implies that the interaction can only occur at short range.
 
 So we're going to require that $\mathcal{O}$ must behave under a Lorentz transformation.  You can construct operators with the correct form out of Dirac $\gamma$-matrices, and you get scalar, pseudoscalar, vector, axial vector, and tensor couplings.  potentially.  Anything else would just reduce to linear combinations of those, so those ones span the space.  Some of those respect parity, and some don't.  
+
+\input{table_dirac_matrix_operators.tex}
 
 Up until 1956, it was common wisdowm that weak interactions should respect parity, but there was really no evidence for it.  Lee and Yang formulate a more general description of beta decay, with all the Lorentz symmetry respecting operators, and only some of those obey parity~\cite{LeeYang}.  It was an open question, then, whether parity should be respected in the nuclear weak interaction -- but not for long, because C.S. Wu tested it out in 1957~\cite{wu}.  The result of the experiment is that not only is parity *not* conserved, it's (sometimes) *maximally* not conserved!  Neat!  Nobody would have expected it.
 
