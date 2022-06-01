@@ -1,14 +1,118 @@
 % !TEX root = ../thesis_main.tex
-
-
-
+%
+%
+%
 %%%% --- * --- %%%%	
 %\clearpage
 %\chapter{Introduction}
 \chapter{Background}
 \label{intro_chapter}
 \label{nuclear_chapter}
+\section{Introduction}
+\label{section:intro}
+Within our present understanding of physics, there are four fundamental forces governing the interactions of particles with one another:  electromagnetism, the nuclear weak force, the nuclear strong force, and gravity.  These forces are considered to be distinct from one another by virtue of their differing behaviours, however attempting to unify them within a single theoretical framework has been a major focus of later 20th- and early 21st century physics to date.  The effort has been met with only partial success.
 
+Each force has its own specific mediating particle(s) which couple only to a particular type of (generalized) charge, and therefore interact only with particles that possess that charge.  For example, the gravitational charge is \emph{mass}, and (at least within a simplified particle physics model) gravity acts only on objects that possess mass.  With only a single type of charge and no negative masses, the gravitational force can only ever be attractive.
+%
+By constrast, the electromagnetic force couples to both positive and negative electric charges, and can produce both attractive and repulsive forces.  Both the electromagnetic and gravitational forces are mediated by massless force-carrying particles (the photon and graviton, respectively), a property which implies that the amount of flux per unit solid angle is constant over all distance scales, and Gauss's Law holds true.
+% allows them to act even over long distances, as it implies that the amount of flux per unit solid angle is constant over all distance scales, leading to, e.g., the applicability of the famous Gauss's Law.  \aside{cite someone for Gauss's Law.}
+
+In the case of the nuclear weak force, which will be the primary concern within this thesis, 
+the notion of generalized charge is no longer entirely straightforward to apply.
+%, which could be readily applied to the gravitational and electromagnetic forces, is no longer entirely straightforward to apply.  
+We must rely instead on a list of allowed Feynman diagram vertices to describe the types of interactions that are possible (see Fig.~\ref{fig:feynmandiagrams_general}).  We note that the weak force involves three mediating particles --- $W^+$, $W^-$, and $Z^0$ bosons --- and these mediators can interact with both (anti-)quarks and (anti-)leptons.  The $W^+$ and $W^-$ particles also carry electric charge, which must be separately conserved in any interaction,~\aside{(wait, is that true?  what about with the photon vertex? ....I think it's fine.....} but the $Z^0$ is electrically neutral.  All three are massive, which implies that the strength of the weak force falls off more rapidly as distance increases, and Gauss's Law does not apply. 
+
+%Despite the large number of possible weak force interaction vertices, 
+%develop an intuition about the types of interactions that are possible (see Fig.~\ref{fig:feynmandiagrams_general}).  
+%%%%\begin{figure}[h!tb]
+%%%%	\centering
+%%%%	\includegraphics[width=.999\linewidth]{Figures/feynmanvertices_placeholder.png}
+%%%%	\note{I have to re-make this figure.  This one doesn't belong to me.  Also, I'm not necessarily sure I believe/understand what it's saying on the bottom line.}
+%%%%	\caption[Allowed Weak Vertices]{Allowed Weak Vertices:  a placeholder figure.  Top left:  $f$ is any fermion.  Top centre:  Lepton flavour is conserved under the weak interaction.  Top right:  quark generation is not conserved under the weak interaction.}	
+%%%%	\label{fig:feynmandiagrams}
+%%%%\end{figure}
+
+\begin{figure}[h!t!b!]
+	\centering
+	\includegraphics[width=.80\linewidth]{Figures/feynmandiagrams_general_placeholdercropped.pdf}
+	\note[tag]{Fix Feynman vertex placeholder figure.}
+	\caption[An exhaustive list of weak vertices]{An exhaustive list of weak vertices.  All possible Feynman diagram vertices involving $W^+$, $W^-$, or $Z^0$ bosons are shown.  Time goes up.  The usual rules for Feynman diagram vertices apply.}	
+	\label{fig:feynmandiagrams_general}
+\end{figure}
+
+With a comparatively large number of possible vertex types, it can be challenging to develop an intuition about the behaviour of the weak force. 
+%and the vertices involving only gauge bosons are especially inscrutable.
+%Arguably the most well-known result of the weak force is radioactive beta decay, 
+Perhaps the most well known physical behaviour that arises from the weak force is nuclear beta decay. 
+% (Fig.~\ref{fig:feynmandiagrams_betadecay}).  
+In Fig.~\ref{fig:feynmandiagrams_betadecay} the Feynman diagrams pertaining to the most common beta decay processes are shown.
+
+\FloatBarrier
+\begin{figure}[h!t!b!]
+	\centering
+	\includegraphics[width=.999\linewidth]{Figures/feynmandiagrams_betadecay_placeholder.jpeg}
+	\note[tag]{Fix beta decay Feynman diagram placeholder figure.}
+	\caption[Beta Decay Feynman Diagrams]{Beta decay Feynman diagrams are shown here at the nucleon(? sort of) level.    
+	}	
+	\label{fig:feynmandiagrams_betadecay}
+\end{figure}
+
+
+
+%Attempting to unify the four fundamental forces within a single theoretical framework has been a major focus of later 20th- and early 21st century physics to date, however the effort has thus far been met with only partial success.
+
+%Things to go here.
+\begin{itemize}
+%	\item list of feynman diagrams.  probably within that picture. 
+	\item (we're not proposing a new feynman diagram.  Just, a new vertex factor thingy, I guess.)
+	\item weak force is pretty well understood.... sort-of.
+	\item Weak force lagrangian!  I think possibly it's only for the *charged* weak force??
+	\item ...then we demand that the Lagrangian must be Lorentz invariant, otherwise we break physics.
+	\item weak force moderated by massive particles -- so it can't be as long range, and Gauss's Law doesn't hold.
+	\item within this thesis, we will focus primarily on the \emph{charged} weak interactions (using $W^{\pm}$ as mediators rather than $Z^0$), with first-generation normal matter quarks (\emph{i.e.} up ($u$) and down ($d$) quarks, but not charm ($c$), strange ($s$), top ($t$), or bottom ($b$) quarks; no anti-quarks ($\bar{q}$ for $q=\{u,d,c,s,t,b \}$ )) and first-generation leptons (\emph{i.e.} electrons, positrons, electron neutrinos and electron anti-neutrinos, but not positive or negative muons or taus, nor muon or tau neutrinos or anti-neutrinos).
+	\item Really, we'll only be looking at weak force interactions involving the two most common nucleons -- protons and neutrons.  ...each of which is a (meta-)stable bound state involving three quarks.  
+	\item the weak force couples to both leptons and quarks.
+	\item masses of W and Z bosons?  
+	\item graviton -- theoretical only.
+	\item strong force -- beyond the scope.
+\end{itemize}
+
+
+
+....
+
+....
+
+%%%%%Within the present understanding of physics, there are four fundamental forces governing the interactions of particles with one another:  electromagnetism, the nuclear weak force, the nuclear strong force, and gravity. 
+%%%%%%
+%%%%%Among other things, these four forces are considered distinct by virtue of the fact that each one couples to a different type of charge and is mediated by a different type of particle.  The result is that each force has potentially different behaviour at varying length scales.  
+%%%%%%
+%%%%%The most familiar example of this is a comparison between the forces of electromagnetism and gravity.  While the electromagnetic force couples to both positive and negative electric charges, and can therefore create both attractive and repulsive forces, the gravitational force couples only to (positive) mass, and the result is a force that is only attractive and never repulsive.  Both forces are mediated by massless particles (the photon and graviton, respectively), which implies that the strength of the two forces must fall off at the same rate as the distance between interacting bodies is increased.  In the case of the nuclear weak force, the mediator particles are massive, ...
+%%%%%
+%%%%%Attempting to unify the four forces within a single theoretical framework has been a major focus of later 20th- and early 21st century physics to date, however the effort has thus far been met with some limited success.
+
+
+\note{OK, how/when did they do electroweak unification, and who did it?  What about the full SM, incorporating the strong force too?}
+\note{Schwinger does renormalization, which makes QED go. Glashow~\cite{Glashow1959} extends it to the Z boson.  But now it's not renormalizable.  Salam and Ward~\cite{SalamWard1964} did a similar thing, but independently.   Then Weinberg (1967) did it but didn't know what to do with Z bosons~\cite{Weinberg1967}.  Until later.  Or something.  Then, 't Hooft (1971) proved that this thing was normalizable even with massive gauge bosons~\cite{thooft1971}.  Or at least, that's how Wikipedia describes it.  Also, in the end, electroweak unification was based on Yang-Mills (1954)~\cite{YangMills1954}, but their theory didn't really get that much attention initially because it was just a lot of boring math, and they couldn't figure out how to something something symmetry breaking.}
+
+%Attempts to unify the four forces within a single model have been a major focus of 20th- and 21st century physics, }
+
+%%%Both are mediated by massless particles (the photon and graviton, respectively)
+%%%Because these are both mediated by massless particles (the photon and graviton, respectively), their behaviour 
+
+The nuclear weak force is one of four fundamental forces described within physics.  It mediates the process of beta decay, which is of particular interest to us here.  Although beta decay is generally well understood, it presents a unique opportunity for precision measurements to search for physics beyond the Standard Model within the Weak coupling.\aside[jbn]{Standard Model -> standard model of particle physics (often denoted here "SM"). 
+\\
+The standard model is ...
+\\...\\
+Weak -> weak.
+\\...\\
+This of course is the place where Georg wants more for orientation.
+}
+By observing the kinematics and angular correlations involved in the decay process, one gains access to a wealth of information about the form of the operators mediating the decay.  
+
+
+
+%%%% --- * --- %%%%	
 \section{An Abbreviated Look at the History of Beta Decay}
 \note[tag]{History section needs *all* the citations.}
 We consider the historical development of our scientific understanding of beta decay and the nuclear weak force.  This is a historically rich topic, and a full discussion is beyond the scope of this document, however we shall attempt to touch on some highlights.
@@ -172,7 +276,7 @@ So we're going to require that $\mathcal{O}$ must behave under a Lorentz transfo
 
 \input{table_dirac_matrix_operators.tex}
 
-Up until 1956, it was common wisdowm that weak interactions should respect parity, but there was really no evidence for it.  Lee and Yang formulate a more general description of beta decay, with all the Lorentz symmetry respecting operators, and only some of those obey parity~\cite{LeeYang}.  It was an open question, then, whether parity should be respected in the nuclear weak interaction -- but not for long, because C.S. Wu tested it out in 1957~\cite{wu}.  The result of the experiment is that not only is parity *not* conserved, it's (sometimes) *maximally* not conserved!  Neat!  Nobody would have expected it.
+Up until 1956, it was common wisdom that weak interactions should respect parity, but there was really no evidence for it.  Lee and Yang formulate a more general description of beta decay, with all the Lorentz symmetry respecting operators, and only some of those obey parity~\cite{LeeYang}.  It was an open question, then, whether parity should be respected in the nuclear weak interaction -- but not for long, because C.S. Wu tested it out in 1957~\cite{wu}.  The result of the experiment is that not only is parity *not* conserved, it's (sometimes) *maximally* not conserved!  Neat!  Nobody would have expected it.
 
 Ben points out that they thought it was scalars and tensors at first, and cites some people(\cite{RustadRuby1955tensor}\cite{BurgyEpstein1957scalartensor}), but frankly, I can't access those articles and I thought there was more evidence for it than that.  Also, the one article is published before Madame Wu's, so idk what to make of that.
 
@@ -187,29 +291,6 @@ Also-also, the fundamental property is chirality, not helicity.  Helicity can be
 So anyway, we have lots of evidence for the $V-A$ form of interactions.  (Ben doesn't cite anyone for this).  But other forms of the interaction could be in there too.  And at this point, Ben just assumes the Standard Model and goes with it.
 
 -- -- -- -- -- -- 
-
-Within the present understanding of physics, there are four fundamental forces governing the interactions of particles with one another:  electromagnetism, the nuclear weak force, the nuclear strong force, and gravity.  These four forces are considered different by virtue of the fact that each one couples to a different type of charge, is mediated by a different type of particle, and therefore has potentially different behaviour at varying length scales.  The most familiar example of this is a comparison between the forces of electromagnetism and gravity.  While the electromagnetic force couples to both positive and negative electric charges, and can therefore create both attractive and repulsive forces, the gravitational force couples only to (positive) mass, and the result is a force that is only attractive and never repulsive.  Both forces are mediated by massless particles (the photon and graviton, respectively), which implies that the strength of the two forces must fall off at the same rate as the distance between interacting bodies is increased.
-
-Attempting to unify the four forces within a single theoretical framework has been a major focus of later 20th- and early 21st century physics to date, however the effort has thus far been met with some limited success.
-
-
-\note{OK, how/when did they do electroweak unification, and who did it?  What about the full SM, incorporating the strong force too?}
-\note{Schwinger does renormalization, which makes QED go. Glashow~\cite{Glashow1959} extends it to the Z boson.  But now it's not renormalizable.  Salam and Ward~\cite{SalamWard1964} did a similar thing, but independently.   Then Weinberg (1967) did it but didn't know what to do with Z bosons~\cite{Weinberg1967}.  Until later.  Or something.  Then, 't Hooft (1971) proved that this thing was normalizable even with massive gauge bosons~\cite{thooft1971}.  Or at least, that's how Wikipedia describes it.  Also, in the end, electroweak unification was based on Yang-Mills (1954)~\cite{YangMills1954}, but their theory didn't really get that much attention initially because it was just a lot of boring math, and they couldn't figure out how to something something symmetry breaking.}
-
-%Attempts to unify the four forces within a single model have been a major focus of 20th- and 21st century physics, }
-
-%%%Both are mediated by massless particles (the photon and graviton, respectively)
-%%%Because these are both mediated by massless particles (the photon and graviton, respectively), their behaviour 
-
-The nuclear weak force is one of four fundamental forces described within physics.  It mediates the process of beta decay, which is of particular interest to us here.  Although beta decay is generally well understood, it presents a unique opportunity for precision measurements to search for physics beyond the Standard Model within the Weak coupling.\aside[jbn]{Standard Model -> standard model of particle physics (often denoted here "SM"). 
-\\
-The standard model is ...
-\\...\\
-Weak -> weak.
-\\...\\
-This of course is the place where Georg wants more for orientation.
-}
-By observing the kinematics and angular correlations involved in the decay process, one gains access to a wealth of information about the form of the operators mediating the decay.  
 
 \note[done]{JB says:  Chapters 1.1 and 1.2 look fine.
 \\
