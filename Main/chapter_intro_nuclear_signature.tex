@@ -10,17 +10,32 @@
 \label{nuclear_chapter}
 \section{Introduction}
 \label{section:intro}
-Within our present understanding of physics, there are four fundamental forces governing the interactions of particles with one another:  electromagnetism, the nuclear weak force, the nuclear strong force, and gravity.  These forces are considered to be distinct from one another by virtue of their differing behaviours, however attempting to unify them within a single theoretical framework has been a major focus of later 20th- and early 21st century physics to date.  The effort has been met with only partial success.
+% 4 forces
+Within our present understanding of physics, there are four fundamental forces governing the interactions of particles with one another:  electromagnetism, the nuclear weak force, the nuclear strong force, and gravity.  These forces are considered to be distinct from one another by virtue of their differing behaviours, however attempting to unify them within a single theoretical framework has been a major focus of later 20th- and early 21st century physics to date.  The effort has been met with only partial success, and the resulting theoretical framework is collectively known as the \ac{SM}.
 
-Each force has its own specific mediating particle(s) which couple only to a particular type of (generalized) charge, and therefore interact only with particles that possess that charge.  For example, the gravitational charge is \emph{mass}, and (at least within a simplified particle physics model) gravity acts only on objects that possess mass.  With only a single type of charge and no negative masses, the gravitational force can only ever be attractive.
+% Standard Model
+The standard model provides a quantum mechanical description for
+%which includes quantitative models of 
+the behaviour of three of the four fundamental forces:  electromagnetism, the nuclear weak force, and the nuclear strong force.  The \ac{SM} notably does not describe gravitational processes --- despite extensive efforts, the gravitational force has thus far defied all attempts to describe it in a fully quantum mechanical way, though this remains an active field of research.  
+
 %
-By constrast, the electromagnetic force couples to both positive and negative electric charges, and can produce both attractive and repulsive forces.  Both the electromagnetic and gravitational forces are mediated by massless force-carrying particles (the photon and graviton, respectively), a property which implies that the amount of flux per unit solid angle is constant over all distance scales, and Gauss's Law holds true.
+Each force has its own specific mediating particle(s) which couple only to a particular type of (generalized) charge, and therefore interact only with particles that possess that charge.  For example, the gravitational charge is \emph{mass}, and (at least within a simplified particle physics model) gravity acts only on objects that possess mass.~\aside{Can I turn this into a footnote?  It's not true because the curvature of spacetime also affects photon trajectories, and there even exist (unstable) (quasi-?) bound states comprised *only* of photons, as in e.g. Aichelburg-Sexl.}  With only a single type of charge and no negative masses, the gravitational force can only ever be attractive.
+%
+By constrast, the electromagnetic force couples to both positive and negative electric charges, and can produce both attractive and repulsive forces.  Both the electromagnetic and gravitational forces are mediated by massless force-carrying particles (the photon and still-theoretical graviton, respectively), a property which implies that the amount of flux per unit solid angle is constant over all distance scales, and Gauss's Law holds true.
 % allows them to act even over long distances, as it implies that the amount of flux per unit solid angle is constant over all distance scales, leading to, e.g., the applicability of the famous Gauss's Law.  \aside{cite someone for Gauss's Law.}
+
+\begin{figure}[h!t!b!]
+	\centering
+	\includegraphics[width=.80\linewidth]{Figures/feynmandiagrams_general_placeholdercropped.pdf}
+	\note[tag]{Fix Feynman vertex placeholder figure.}
+	\caption[An exhaustive list of weak vertices]{An exhaustive list of weak vertices.  All possible Feynman diagram vertices involving $W^+$, $W^-$, or $Z^0$ bosons are shown.  Time goes up.  The usual rules for Feynman diagram vertices apply.}	
+	\label{fig:feynmandiagrams_general}
+\end{figure}
 
 In the case of the nuclear weak force, which will be the primary concern within this thesis, 
 the notion of generalized charge is no longer entirely straightforward to apply.
 %, which could be readily applied to the gravitational and electromagnetic forces, is no longer entirely straightforward to apply.  
-We must rely instead on a list of allowed Feynman diagram vertices to describe the types of interactions that are possible (see Fig.~\ref{fig:feynmandiagrams_general}).  We note that the weak force involves three mediating particles --- $W^+$, $W^-$, and $Z^0$ bosons --- and these mediators can interact with both (anti-)quarks and (anti-)leptons.  The $W^+$ and $W^-$ particles also carry electric charge, which must be separately conserved in any interaction,~\aside{(wait, is that true?  what about with the photon vertex? ....I think it's fine.....} but the $Z^0$ is electrically neutral.  All three are massive, which implies that the strength of the weak force falls off more rapidly as distance increases, and Gauss's Law does not apply. 
+We must rely instead on a list of allowed Feynman diagram vertices to describe the types of interaction that are possible (see Fig.~\ref{fig:feynmandiagrams_general}).  We note that the weak force involves three mediating particles --- $W^+$, $W^-$, and $Z^0$ bosons --- and these mediators can interact with both (anti-)quarks and (anti-)leptons.  The $W^+$ and $W^-$ particles also carry electric charge, which must be separately conserved in any interaction,~\aside{(wait, is that true?  what about with the photon vertex? ....I think it's fine.....} but the $Z^0$ is electrically neutral.  All three are massive, which implies that the strength of the weak force falls off more rapidly as distance increases, and Gauss's Law does not apply. 
 
 %Despite the large number of possible weak force interaction vertices, 
 %develop an intuition about the types of interactions that are possible (see Fig.~\ref{fig:feynmandiagrams_general}).  
@@ -34,54 +49,56 @@ We must rely instead on a list of allowed Feynman diagram vertices to describe t
 
 \begin{figure}[h!t!b!]
 	\centering
-	\includegraphics[width=.80\linewidth]{Figures/feynmandiagrams_general_placeholdercropped.pdf}
-	\note[tag]{Fix Feynman vertex placeholder figure.}
-	\caption[An exhaustive list of weak vertices]{An exhaustive list of weak vertices.  All possible Feynman diagram vertices involving $W^+$, $W^-$, or $Z^0$ bosons are shown.  Time goes up.  The usual rules for Feynman diagram vertices apply.}	
-	\label{fig:feynmandiagrams_general}
+	\includegraphics[width=.90\linewidth]{Figures/feynmandiagrams_betadecay_placeholder.jpeg}
+	\note[tag]{Fix beta decay Feynman diagram placeholder figure.}
+	\caption[Beta Decay Feynman Diagrams]{Beta decay Feynman diagrams are shown here at the nucleon(? sort of) level.    
+	}	
+	\label{fig:feynmandiagrams_betadecay}
 \end{figure}
+\FloatBarrier
+
 
 With a comparatively large number of possible vertex types, it can be challenging to develop an intuition about the behaviour of the weak force. 
 %and the vertices involving only gauge bosons are especially inscrutable.
 %Arguably the most well-known result of the weak force is radioactive beta decay, 
 Perhaps the most well known physical behaviour that arises from the weak force is nuclear beta decay. 
 % (Fig.~\ref{fig:feynmandiagrams_betadecay}).  
-In Fig.~\ref{fig:feynmandiagrams_betadecay} the Feynman diagrams pertaining to the most common beta decay processes are shown.
+In Fig.~\ref{fig:feynmandiagrams_betadecay} the tree-level Feynman diagrams pertaining to the most common beta decay processes are shown.  It is these beta decay processes which present what is arguably the most accessible experimental window on the workings of the nuclear weak force.
 
-\FloatBarrier
-\begin{figure}[h!t!b!]
-	\centering
-	\includegraphics[width=.999\linewidth]{Figures/feynmandiagrams_betadecay_placeholder.jpeg}
-	\note[tag]{Fix beta decay Feynman diagram placeholder figure.}
-	\caption[Beta Decay Feynman Diagrams]{Beta decay Feynman diagrams are shown here at the nucleon(? sort of) level.    
-	}	
-	\label{fig:feynmandiagrams_betadecay}
-\end{figure}
 
+
+%The nuclear weak force is one of four fundamental forces described within physics.  
+%It mediates the process of beta decay, which is of particular interest to us here.  
+Although beta decay is generally well understood, it presents a unique opportunity for precision measurements to search for physics beyond the Standard Model within the Weak coupling.\aside[jbn]{Standard Model -> standard model of particle physics (often denoted here "SM"). 
+\\
+The standard model is ...
+\\...\\
+Weak -> weak.
+\\...\\
+This of course is the place where Georg wants more for orientation.
+}
+By observing the kinematics and angular correlations involved in the decay process, one gains access to a wealth of information about the form of the operators mediating the decay.  
+
+\aside{Something something ... it's so well understood that all that's left to do is the precision measurements.}
 
 
 %Attempting to unify the four fundamental forces within a single theoretical framework has been a major focus of later 20th- and early 21st century physics to date, however the effort has thus far been met with only partial success.
 
-%Things to go here.
+\note[orange, nolist]{
 \begin{itemize}
-%	\item list of feynman diagrams.  probably within that picture. 
 	\item (we're not proposing a new feynman diagram.  Just, a new vertex factor thingy, I guess.)
-	\item weak force is pretty well understood.... sort-of.
 	\item Weak force lagrangian!  I think possibly it's only for the *charged* weak force??
 	\item ...then we demand that the Lagrangian must be Lorentz invariant, otherwise we break physics.
-	\item weak force moderated by massive particles -- so it can't be as long range, and Gauss's Law doesn't hold.
+%	\item weak force moderated by massive particles -- so it can't be as long range, and Gauss's Law doesn't hold.
 	\item within this thesis, we will focus primarily on the \emph{charged} weak interactions (using $W^{\pm}$ as mediators rather than $Z^0$), with first-generation normal matter quarks (\emph{i.e.} up ($u$) and down ($d$) quarks, but not charm ($c$), strange ($s$), top ($t$), or bottom ($b$) quarks; no anti-quarks ($\bar{q}$ for $q=\{u,d,c,s,t,b \}$ )) and first-generation leptons (\emph{i.e.} electrons, positrons, electron neutrinos and electron anti-neutrinos, but not positive or negative muons or taus, nor muon or tau neutrinos or anti-neutrinos).
 	\item Really, we'll only be looking at weak force interactions involving the two most common nucleons -- protons and neutrons.  ...each of which is a (meta-)stable bound state involving three quarks.  
-	\item the weak force couples to both leptons and quarks.
+%	\item the weak force couples to both leptons and quarks.
 	\item masses of W and Z bosons?  
-	\item graviton -- theoretical only.
-	\item strong force -- beyond the scope.
+%	\item graviton -- theoretical only.
+%	\item strong force -- beyond the scope.
 \end{itemize}
+}
 
-
-
-....
-
-....
 
 %%%%%Within the present understanding of physics, there are four fundamental forces governing the interactions of particles with one another:  electromagnetism, the nuclear weak force, the nuclear strong force, and gravity. 
 %%%%%%
@@ -92,38 +109,50 @@ In Fig.~\ref{fig:feynmandiagrams_betadecay} the Feynman diagrams pertaining to t
 %%%%%Attempting to unify the four forces within a single theoretical framework has been a major focus of later 20th- and early 21st century physics to date, however the effort has thus far been met with some limited success.
 
 
-\note{OK, how/when did they do electroweak unification, and who did it?  What about the full SM, incorporating the strong force too?}
-\note{Schwinger does renormalization, which makes QED go. Glashow~\cite{Glashow1959} extends it to the Z boson.  But now it's not renormalizable.  Salam and Ward~\cite{SalamWard1964} did a similar thing, but independently.   Then Weinberg (1967) did it but didn't know what to do with Z bosons~\cite{Weinberg1967}.  Until later.  Or something.  Then, 't Hooft (1971) proved that this thing was normalizable even with massive gauge bosons~\cite{thooft1971}.  Or at least, that's how Wikipedia describes it.  Also, in the end, electroweak unification was based on Yang-Mills (1954)~\cite{YangMills1954}, but their theory didn't really get that much attention initially because it was just a lot of boring math, and they couldn't figure out how to something something symmetry breaking.}
-
 %Attempts to unify the four forces within a single model have been a major focus of 20th- and 21st century physics, }
 
 %%%Both are mediated by massless particles (the photon and graviton, respectively)
 %%%Because these are both mediated by massless particles (the photon and graviton, respectively), their behaviour 
 
-The nuclear weak force is one of four fundamental forces described within physics.  It mediates the process of beta decay, which is of particular interest to us here.  Although beta decay is generally well understood, it presents a unique opportunity for precision measurements to search for physics beyond the Standard Model within the Weak coupling.\aside[jbn]{Standard Model -> standard model of particle physics (often denoted here "SM"). 
-\\
-The standard model is ...
-\\...\\
-Weak -> weak.
-\\...\\
-This of course is the place where Georg wants more for orientation.
-}
-By observing the kinematics and angular correlations involved in the decay process, one gains access to a wealth of information about the form of the operators mediating the decay.  
-
 
 
 %%%% --- * --- %%%%	
-\section{An Abbreviated Look at the History of Beta Decay}
+%\section{An Abbreviated Look at the History of Beta Decay}
+\section{A Historical Look at Beta Decay}
 \note[tag]{History section needs *all* the citations.}
+
 We consider the historical development of our scientific understanding of beta decay and the nuclear weak force.  This is a historically rich topic, and a full discussion is beyond the scope of this document, however we shall attempt to touch on some highlights.
 
 Radioactivity was first observed in 1896 by Henri Becquerel in uranium, and this landmark discovery set off a flurry of activity in the field~\cite{becquerel1896}.
 % With our modern understanding of radioactive decay, we know that this of course could not have been beta decay, but rather a combination of alpha decay and spontaneous fission -- however it was this observation that set the field into motion.  
 Ernest Rutherford noted in 1899 that the particles emitted by a sample of uranium could be classified into two groups based on how readily they were absorbed in materials -- alpha particles are easily absorbed, while beta particles are more penetrating~\cite{rutherford1899}.  A third and even more penetrating type of radioactive emission was observed in 1900 by Paul Villard, who made no attempt to give it a name -- but within a few years, Rutherford's naming convention had been applied and this third type of particle became known as a gamma ray~\cite{villard1900}\cite{rutherford1903}.  
 
-When, in 1900, Becquerel measured the charge-to-mass ratio of emitted beta ($\beta^-$) radiation and found that it was the same as that of the electron, he proposed that these must be the same particle~\cite{becquerel1900} (I think.  Also, I think that's the right citation..), and in 1901 (or possibly 1903?) Rutherford and Soddy demonstrated that the processes of alpha and beta decay both transmute the original chemical element into another.  
+When, in 1900, Becquerel measured the charge-to-mass ratio of emitted beta ($\beta^-$) radiation and found that it was the same as that of the electron, he proposed that these must be the same particle~\cite{becquerel1900},~\aside{I think.  Also, I think that's the right citation..} and in 1901~\aside{or possibly 1903?} Rutherford and Soddy demonstrated that the processes of alpha and beta decay both transmute the original chemical element into another.  
+\aside{That arxiv rando claims that the half-life thing was developed or hinted at by 1900 Rutherford, but who the fuck knows?}
 
-\note{That arxiv rando claims that the half-life thing was developed or hinted at by 1900 Rutherford, but who the fuck knows?}
+Despite these early successes, in 1911 Lise Meitner and Otto Hahn noticed that beta particles are emitted with a variety of different kinetic energies, and in 1914 James Chadwick demonstrated that energies of emitted beta particles formed a continuous distribution.  The physics community was baffled for years by the fact that it seemed impossible to predict the energy of a beta particle emitted by a particular process;  if the emitted beta simply took on the difference in energy between the initial and final states, then surely that energy should be a fixed, unchanging value for a paricular transition.  
+%should be a fixed amount of energy for a given transition.  
+Finally, in 1931, a frustrated Wolfgang Pauli famously proposed that if an additional small, neutral, difficult to detect particle were emitted simultaneously with the beta and allowed to carrying away a varying amount of energy, then this accounting trick could account for the continuous beta energy spectrum.
+%could account for the continuous beta energy spectrum, by carrying away whatever fraction of the
+%This new particle was dubbed a ``neutron'' 
+He named this particle a ``neutron'' -- though today we refer to that same particle as a(n) ``(anti-)neutrino,'' and use the name ``neutron'' for an entirely different particle.~\aside{Fermi renamed it, because Italian.}
+
+%When Enrico Fermi offered a quantitative description of 
+Pauli's 1931 insight paved the way for Enrico Fermi to propose a quantitative description of the beta decay process.  Now known as Fermi's Golden Rule, the introduction of this model in 1933~\aside{1933 in Italian, 1934 in German.  ....after being rejected by Nature.  Citation is:  Pais, Abraham (1986). Inward Bound. Oxford: Oxford University Press. p. 418. ISBN 0-19-851997-4. } arguably marks the beginning of our modern understanding of beta decay.  Fermi's Golden Rule is both remarkably general in its approach, as well as powerful in its predictive power, approaching the matter from a fully quantum mechanical perspective (see Section~\ref{}).~\aside{add link}
+
+On the experimental front,~\aside{Rephrase.} 1934 marks the first discovery of $\beta^+$ radiation, for which Irène and Frédéric Joliot-Curie later received a Nobel prize.  This was also the year when the electron capture mechanism for beta decay was first proposed by Gian-Carlo Wick.  The theory was fleshed out over 1935-1936 by Yukawa and Sakata, and first observed in 1937 by Luis Alvarez.  ~\aside{omg, I can't just give first names for only the non-Asian people...}
+
+%1934 was also the year when Wick proposed the electron capture mechanism for beta decay, later observed by Luis Alvarez in 1937.  \aside{Yukawa and others totes helped flesh out the theory behind E.C.  Or possibly they proposed it first?  who even knows.}
+Over the next few years, developments within the field of nuclear physics were largely directed elsewhere, but beta decay returned to scientific prominence with Lee and Yang's 1956 suggestion that, contrary to the community's prior expectation, parity may not be conserved within beta decay processes.~\aside{their hamiltonian operates at the nucleon level, because they hadn't discovered quarks yet.  also, this is the basis for where we're going with this experiment.  shows all possible Lorentz-invariant contributions to the thingy. V,A,S,T,P.  I don't think they knew about W and Z bosons either.}  The proposition was rapidly put to the test by C.S. Wu's landmark 1957 measurement of $^{60}$Co, confirming that beta decay violates parity conservation~\cite{wu}.~\aside{For a while everyone thought it was S,T.  But it turns out it's V,A.}
+
+\note{}
+...
+\note{}
+
+...
+\note{OK, how/when did they do electroweak unification, and who did it?---Glashow+Weinberg+Salam, 1968.}
+\note{What about the full SM, incorporating the strong force too?}
+\note{Schwinger does renormalization, which makes QED go. Glashow~\cite{Glashow1959} extends it to the Z boson.  But now it's not renormalizable.  Salam and Ward~\cite{SalamWard1964} did a similar thing, but independently.   Then Weinberg (1967) did it but didn't know what to do with Z bosons~\cite{Weinberg1967}.  Until later.  Or something.  Then, 't Hooft (1971) proved that this thing was normalizable even with massive gauge bosons~\cite{thooft1971}.  Or at least, that's how Wikipedia describes it.  Also, in the end, electroweak unification was based on Yang-Mills (1954)~\cite{YangMills1954}, but their theory didn't really get that much attention initially because it was just a lot of boring math, and they couldn't figure out how to something something symmetry breaking.}
 
 \note{Halliday doesn't remember Meitner+Hahn, and says Pauli's thing is 1927, but doesn't give a reference for it.
 \\...\\
@@ -166,12 +195,6 @@ things from Ian Towner 2013:  all the (reduced) matrix elements and all the coup
 Really, this shit can probably can be an appendix.
 }
 
-Despite these early successes, in 1911 Lise Meitner and Otto Hahn noticed that beta particles are emitted with a variety of different kinetic energies, and in 1914 James Chadwick demonstrated that energies of emitted beta particles formed a continuous distribution.  The physics community was baffled for years by the fact that it seemed impossible to predict the energy of a beta particle emitted by a particular process;  if the emitted beta simply took on the difference in energy between the initial and final states, then surely that energy should be a fixed, unchanging value for a paricular transition.  
-%should be a fixed amount of energy for a given transition.  
-Finally, in 1931, a frustrated Wolfgang Pauli famously proposed that if an additional small, neutral, difficult to detect particle were emitted simultaneously with the beta and allowed to carrying away a varying amount of energy, then this accounting trick could account for the continuous beta energy spectrum.
-%could account for the continuous beta energy spectrum, by carrying away whatever fraction of the
-%This new particle was dubbed a ``neutron'' 
-He named this particle a ``neutron'' -- though today we refer to that same particle as a(n) ``(anti-)neutrino,'' and use the name ``neutron'' for an entirely different particle.~\aside{Fermi renamed it, because Italian.}
 
 \note{alpha and beta decay:
 \\
@@ -194,23 +217,19 @@ Transmutations?:
 %%%
 %%%a neutrino (which he referred to as a "neutron" at the time) 
 
-%When Enrico Fermi offered a quantitative description of 
-Pauli's 1931 insight paved the way for Enrico Fermi to propose a quantitative description of the beta decay process.  Now known as Fermi's Golden Rule, the introduction of this model in 1934 arguably marks the beginning of our modern understanding of beta decay.  Fermi's Golden Rule is both remarkably general in its approach, as well as powerful in its predictive power, approaching the matter from a fully quantum mechanical perspective.  \aside{Point to that other section where I math this out.}
-
-On the experimental front, 1934 also marks the first discovery of $\beta^+$ radiation, for which Irène and Frédéric Joliot-Curie later received a Nobel prize.  1934 was also the year when Wick proposed the electron capture mechanism for beta decay, later observed by Luis Alvarez in 1937.  \aside{Yukawa and others totes helped flesh out the theory behind E.C.}
 
 
 \section{Draft of Intro Section}
 \subsection{bullet points.}
-Beta Decay:
-\begin{itemize}
-\item 1931 - Pauli "discovers" neutrinos and is very confused.
-\item 1934 - Fermi's Golden Rule to describe the rate of beta decay in terms of transition matrix elements.
-\item ...
-\item 1956 - Lee and Yang wonder if parity is even conserved in beta decay?  
-\item 1957 - C.S. Wu shows that parity isn't conserved.  At all.
-\item ???? - turns out it's V-A.
-\end{itemize}
+%%Beta Decay:
+%%\begin{itemize}
+%%\item 1931 - Pauli "discovers" neutrinos and is very confused.
+%%\item 1934 - Fermi's Golden Rule to describe the rate of beta decay in terms of transition matrix elements.
+%%\item ...
+%%\item 1956 - Lee and Yang wonder if parity is even conserved in beta decay?  
+%%\item 1957 - C.S. Wu shows that parity isn't conserved.  At all.
+%%\item ???? - turns out it's V-A.
+%%\end{itemize}
 Standard Model:
 \begin{itemize}
 \item ???? - Schwinger 
@@ -221,31 +240,30 @@ Standard Model:
 \item ...
 \item 1954 - Yang + Mills  .... huh?
 \end{itemize}
-
-Radioactivity:
-\begin{itemize}
-\item 1896 - Henry Bequerel in Uranium.  Presumably that's alpha decay.
-\item 1898 - Thorium is radioactive -- Marie Curie + Gerhard Carl Schmidt, independently.
-\item 	 - Curie:  Thorium, polonium, radium -- all radioactive!
-\item 1899 - Rutherford notices that there's two types of emissions:  alpha and beta (beta minus).
-\item 1900 - Paul Villard discovers gamma rays, doesn't realize they're different?  Or something?
-\item 1903 - Rutherford realizes that gamma rays are a fundamentally new thing.
-\item ...
-\item 1900 - Becquerel realizes beta particles have the same charge-to-mass ratio as electrons, postulates that they're the same thing.
-\item 1901 - Rutherford + Soddy show that alpha and beta decay turn elements into different elements.  
-\item ...
-\item 1911 - Lise Meitner + Otto Hahn:  emitted beta particles come out at many different energies.  Unlike alpha and gamma decays.
-\item 1914 - James Chadwick shows that it's a continuous distribution.
-...
-\item 1930 - Pauli proposes neutrinos (but he called them "neutrons") as a solution to the missing energy problem.
-\item 1931 - Fermi calls them neutrinos.  
-\item 1933 - Fermi's landmark theory?  Surely it's 1934.
-...
-\item 1934 - Irène and Frédéric Joliot-Curie discover (induced) beta+ decay.  it got 'em a nobel prize.
-\item 1934 - Wick proposes electron capture as a thing.  Yukawa and others maybe have thoughts about that too.
-\item 1937 - Luis Alvarez observes electron capture.
-\item ???? - Parity?  Coupling constants??
-\end{itemize}
+%%Radioactivity:
+%%\begin{itemize}
+%%\item 1896 - Henry Bequerel in Uranium.  Presumably that's alpha decay.
+%%\item 1898 - Thorium is radioactive -- Marie Curie + Gerhard Carl Schmidt, independently.
+%%\item 	 - Curie:  Thorium, polonium, radium -- all radioactive!
+%%\item 1899 - Rutherford notices that there's two types of emissions:  alpha and beta (beta minus).
+%%\item 1900 - Paul Villard discovers gamma rays, doesn't realize they're different?  Or something?
+%%\item 1903 - Rutherford realizes that gamma rays are a fundamentally new thing.
+%%\item ...
+%%\item 1900 - Becquerel realizes beta particles have the same charge-to-mass ratio as electrons, postulates that they're the same thing.
+%%\item 1901 - Rutherford + Soddy show that alpha and beta decay turn elements into different elements.  
+%%\item ...
+%%\item 1911 - Lise Meitner + Otto Hahn:  emitted beta particles come out at many different energies.  Unlike alpha and gamma decays.
+%%\item 1914 - James Chadwick shows that it's a continuous distribution.
+%%...
+%%\item 1930 - Pauli proposes neutrinos (but he called them "neutrons") as a solution to the missing energy problem.
+%%\item 1931 - Fermi calls them neutrinos.  
+%%\item 1933 - Fermi's landmark theory?  Surely it's 1934.
+%%...
+%%\item 1934 - Irène and Frédéric Joliot-Curie discover (induced) beta+ decay.  it got 'em a nobel prize.
+%%\item 1934 - Wick proposes electron capture as a thing.  Yukawa and others maybe have thoughts about that too.
+%%\item 1937 - Luis Alvarez observes electron capture.
+%%\item ???? - Parity?  Coupling constants??
+%%\end{itemize}
 
 \subsection{paragraphs}
 OK.  This stuff is basically yoinked from Ben's thesis.  And Dan's.  I'll need to re-organize and rephrase the content -- but I want to make sure I get the important points down.  

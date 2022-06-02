@@ -10,6 +10,75 @@ Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Coulomb
   Corrections in Allowed Beta Transitions}, Nuclear Physics, Vol.~4,
   pp.~206--212, Nov. 1957.
 
+\bibitem{thesis}
+Anholm, M., Characterizing the {AC-MOT}, Master's thesis, University of British
+  Columbia, 2014.
+
+\bibitem{hong_sternberg_garcia}
+Hong, R., Sternberg, M.~G. {\mdseries and} Garcia, A., \textit{Helicity and
+  nuclear $\beta$ decay correlations}, American Journal of Physics, Vol.~85,
+  No.~1, pp.~45--53, 2017.
+
+\bibitem{Saul2020}
+Saul, H., Roick, C., Abele, H., Mest, H., Klopf, M., Petukhov, A.~K., Soldner,
+  T., Wang, X., Werder, D. {\mdseries and} M\"arkisch, B., \textit{Limit on the
+  Fierz Interference Term $b$ from a Measurement of the Beta Asymmetry in
+  Neutron Decay}, Phys. Rev. Lett., Vol.~125, pp.~112501, Sep 2020.
+
+\bibitem{deShalit1963}
+de~Shalit, A. {\mdseries and} Talmi, I., Nuclear Shell Theory, Nuclear Shell
+  Theory, Academic Press, 1963.
+
+\bibitem{Falkowski2021}
+Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
+  \textit{Comprehensive analysis of beta decays within and beyond the Standard
+  Model}, Journal of High Energy Physics, Vol.~2021, No.~4, pp.~1--36, 2021.
+
+\bibitem{becquerel1896}
+Becquerel, H., \textit{Sur les radiations {\'e}mises par phosphorescence},
+  Comptes rendus de 1'Academie des Sciences, Paris, Vol.~122, pp.~420--421,
+  1896.
+
+\bibitem{rutherford1899}
+Rutherford, E., \textit{VIII. Uranium radiation and the electrical conduction
+  produced by it}, The London, Edinburgh, and Dublin Philosophical Magazine and
+  Journal of Science, Vol.~47, No. 284, pp.~109--163, 1899.
+
+\bibitem{villard1900}
+Villard, P., \textit{Sur la r{\'e}flexion et la r{\'e}fraction des rayons
+  cathodiques et des rayons d{\'e}viables du radium}, CR Acad. Sci. Paris,
+  Vol.~130, pp.~1010, 1900.
+
+\bibitem{rutherford1903}
+Rutherford, E., \textit{XV. The magnetic and electric deviation of the easily
+  absorbed rays from radium}, The London, Edinburgh, and Dublin Philosophical
+  Magazine and Journal of Science, Vol.~5, No.~26, pp.~177--187, 1903.
+
+\bibitem{becquerel1900}
+Becquerel, H., \textit{Influence d'un champ magn{\'e}tique sur le rayonnement
+  des corps radio-actifs}, Journal de Physique Th{\'e}orique et Appliqu{\'e}e,
+  Vol.~9, No.~1, pp.~71--78, 1900.
+
+\bibitem{Glashow1959}
+Glashow, S.~L., \textit{The renormalizability of vector meson interactions},
+  Nuclear Physics, Vol.~10, pp.~107--117, 1959.
+
+\bibitem{SalamWard1964}
+Salam, A. {\mdseries and} Ward, J., \textit{Electromagnetic and weak
+  interactions}, Physics Letters, Vol.~13, No.~2, pp.~168--171, 1964.
+
+\bibitem{Weinberg1967}
+Weinberg, S., \textit{A Model of Leptons}, Phys. Rev. Lett., Vol.~19,
+  pp.~1264--1266, Nov 1967.
+
+\bibitem{thooft1971}
+'t~Hooft, G., \textit{Renormalization of massless Yang-Mills fields}, Nuclear
+  Physics B, Vol.~33, No.~1, pp.~173--199, 1971.
+
+\bibitem{YangMills1954}
+Yang, C.~N. {\mdseries and} Mills, R.~L., \textit{Conservation of Isotopic Spin
+  and Isotopic Gauge Invariance}, Phys. Rev., Vol.~96, pp.~191--195, Oct 1954.
+
 \bibitem{SeverijnsTandecki2008}
 Severijns, N., Tandecki, M., Phalet, T. {\mdseries and} Towner, I.~S.,
   \textit{$\mathcal{F}t$ values of the $T=1/2$ mirror \ensuremath{\beta}
@@ -63,151 +132,6 @@ Klein, A., Brown, B., Georg, U., Keim, M., Lievens, P., Neugart, R., Neuroth,
 \bibitem{itownerCalcs}
 Towner, I., Private Communication, August 2011.
 
-\bibitem{Glashow1959}
-Glashow, S.~L., \textit{The renormalizability of vector meson interactions},
-  Nuclear Physics, Vol.~10, pp.~107--117, 1959.
-
-\bibitem{SalamWard1964}
-Salam, A. {\mdseries and} Ward, J., \textit{Electromagnetic and weak
-  interactions}, Physics Letters, Vol.~13, No.~2, pp.~168--171, 1964.
-
-\bibitem{Weinberg1967}
-Weinberg, S., \textit{A Model of Leptons}, Phys. Rev. Lett., Vol.~19,
-  pp.~1264--1266, Nov 1967.
-
-\bibitem{thooft1971}
-'t~Hooft, G., \textit{Renormalization of massless Yang-Mills fields}, Nuclear
-  Physics B, Vol.~33, No.~1, pp.~173--199, 1971.
-
-\bibitem{YangMills1954}
-Yang, C.~N. {\mdseries and} Mills, R.~L., \textit{Conservation of Isotopic Spin
-  and Isotopic Gauge Invariance}, Phys. Rev., Vol.~96, pp.~191--195, Oct 1954.
-
-\bibitem{shidling2018}
-Shidling, P., Behling, R., Fenker, B., Hardy, J., Iacob, V., Mehlman, M., Park,
-  H., Roeder, B. {\mdseries and} Melconian, D., \textit{High-precision
-  half-life measurement of the $\beta$+ decay of Na 21}, Physical Review C,
-  Vol.~98, No.~1, pp.~015502, 2018.
-
-\bibitem{ozmetin2020}
-{Ozmetin}, A., {Melconian}, D.~G., {Iacob}, V.~E., {Shidling}, P., {Kolhinen},
-  V.~S., {McClain}, D.~J., {Nasser}, M., {Schroeder}, B., {Roeder}, B., {Park},
-  H.-I., {Anholm}, M., {Saastamoinen}, A.~J. {\mdseries and} {Trinat
-  Collaboration}, \textit{{Improving the ft value of 37K via a precision
-  measurement of the branching ratio}}, \textit{APS Division of Nuclear Physics
-  Meeting Abstracts}, Vol. 2020 of \textit{APS Meeting Abstracts}, p. KF.005,
-  Jan. 2020.
-
-\bibitem{Levinger}
-Levinger, J.~S., \textit{Effects of Radioactive Disintegrations on Inner
-  Electrons of the Atom}, Phys. Rev., Vol.~90, pp.~11--25, Apr 1953.
-
-\bibitem{NeutronbFierz_March2020}
-Sun, X., Adamek, E., Allgeier, B., Bagdasarova, Y., Berguno, D.~B., Blatnik,
-  M., Bowles, T.~J., Broussard, L.~J., Brown, M. A.-P., Carr, R., Clayton, S.,
-  Cude-Woods, C., Currie, S., Dees, E.~B., Ding, X., Filippone, B.~W.,
-  Garc\'{\i}a, A., Geltenbort, P., Hasan, S., Hickerson, K.~P., Hoagland, J.,
-  Hong, R., Holley, A.~T., Ito, T.~M., Knecht, A., Liu, C.-Y., Liu, J., Makela,
-  M., Mammei, R., Martin, J.~W., Melconian, D., Mendenhall, M.~P., Moore,
-  S.~D., Morris, C.~L., Nepal, S., Nouri, N., Pattie, R.~W., P\'erez~G\'alvan,
-  A., Phillips, D.~G., Picker, R., Pitt, M.~L., Plaster, B., Salvat, D.~J.,
-  Saunders, A., Sharapov, E.~I., Sjue, S., Slutsky, S., Sondheim, W., Swank,
-  C., Tatar, E., Vogelaar, R.~B., VornDick, B., Wang, Z., Wei, W., Wexler,
-  J.~W., Womack, T., Wrede, C., Young, A.~R. {\mdseries and} Zeck, B.~A.,
-  \textit{Improved limits on Fierz interference using asymmetry measurements
-  from the Ultracold Neutron Asymmetry (UCNA) experiment}, Phys. Rev. C,
-  Vol.~101, pp.~035503, Mar 2020.
-
-\bibitem{Saul2020}
-Saul, H., Roick, C., Abele, H., Mest, H., Klopf, M., Petukhov, A.~K., Soldner,
-  T., Wang, X., Werder, D. {\mdseries and} M\"arkisch, B., \textit{Limit on the
-  Fierz Interference Term $b$ from a Measurement of the Beta Asymmetry in
-  Neutron Decay}, Phys. Rev. Lett., Vol.~125, pp.~112501, Sep 2020.
-
-\bibitem{ben_OP}
-Fenker, B., Behr, J.~A., Melconian, D., Anderson, R. M.~A., Anholm, M., Ashery,
-  D., Behling, R.~S., Cohen, I., Craiciu, I., Donohue, J.~M., Farfan, C.,
-  Friesen, D., Gorelov, A., McNeil, J., Mehlman, M., Norton, H., Olchanski, K.,
-  Smale, S., Th\'{e}riault, O., Vantyghem, A.~N. {\mdseries and} Warner, C.~L.,
-  \textit{Precision measurement of the nuclear polarization in laser-cooled,
-  optically pumped $^{37}\textrm{K}$}, New Journal of Physics, Vol.~18, No.~7,
-  pp.~073028, 2016.
-
-\bibitem{stragglingLonergan1970}
-Lonergan, J., Jupiter, C. {\mdseries and} Merkel, G., \textit{Electron energy
-  straggling measurements for thick targets of beryllium, aluminum, and gold at
-  4.0 and 8.0 MeV}, Journal of Applied Physics, Vol.~41, No.~2, pp.~678--688,
-  1970.
-
-\bibitem{stragglingRester1971}
-Rester, D.~H. {\mdseries and} Derrickson, J.~H., \textit{Electron Transmission
-  Measurements for Al, Sn, and Au Targets at Electron Bombarding Energies of
-  1.0 and 2.5 MeV}, Journal of Applied Physics, Vol.~42, No.~2, pp.~714--721,
-  1971.
-
-\bibitem{holstein}
-{Holstein}, B.~R., \textit{{Recoil effects in allowed beta decay: The
-  elementary particle approach}}, Reviews of Modern Physics, Vol.~46, No.~4,
-  pp.~789--814, Oct. 1974.
-
-\bibitem{holstein_errata}
-Holstein, B.~R., \textit{Erratum: Recoil effects in allowed beta decay: The
-  elementary particle approach}, Rev. Mod. Phys., Vol.~48, pp.~673--673, Oct
-  1976.
-
-\bibitem{EbelFeldman1957}
-Ebel, M. {\mdseries and} Feldman, G., \textit{Further remarks on Coulomb
-  corrections in allowed beta transitions}, Nuclear Physics, Vol.~4,
-  pp.~213--214, 1957.
-
-\bibitem{Falkowski2021}
-Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
-  \textit{Comprehensive analysis of beta decays within and beyond the Standard
-  Model}, Journal of High Energy Physics, Vol.~2021, No.~4, pp.~1--36, 2021.
-
-\bibitem{Falkowski2022}
-Falkowski, A., González-Alonso, M., Palavrić, A. {\mdseries and}
-  Rodríguez-Sánchez, A., \textit{Constraints on subleading interactions in
-  beta decay Lagrangian}, 2022.
-
-\bibitem{thesis}
-Anholm, M., Characterizing the {AC-MOT}, Master's thesis, University of British
-  Columbia, 2014.
-
-\bibitem{hong_sternberg_garcia}
-Hong, R., Sternberg, M.~G. {\mdseries and} Garcia, A., \textit{Helicity and
-  nuclear $\beta$ decay correlations}, American Journal of Physics, Vol.~85,
-  No.~1, pp.~45--53, 2017.
-
-\bibitem{deShalit1963}
-de~Shalit, A. {\mdseries and} Talmi, I., Nuclear Shell Theory, Nuclear Shell
-  Theory, Academic Press, 1963.
-
-\bibitem{becquerel1896}
-Becquerel, H., \textit{Sur les radiations {\'e}mises par phosphorescence},
-  Comptes rendus de 1'Academie des Sciences, Paris, Vol.~122, pp.~420--421,
-  1896.
-
-\bibitem{rutherford1899}
-Rutherford, E., \textit{VIII. Uranium radiation and the electrical conduction
-  produced by it}, The London, Edinburgh, and Dublin Philosophical Magazine and
-  Journal of Science, Vol.~47, No. 284, pp.~109--163, 1899.
-
-\bibitem{villard1900}
-Villard, P., \textit{Sur la r{\'e}flexion et la r{\'e}fraction des rayons
-  cathodiques et des rayons d{\'e}viables du radium}, CR Acad. Sci. Paris,
-  Vol.~130, pp.~1010, 1900.
-
-\bibitem{rutherford1903}
-Rutherford, E., \textit{XV. The magnetic and electric deviation of the easily
-  absorbed rays from radium}, The London, Edinburgh, and Dublin Philosophical
-  Magazine and Journal of Science, Vol.~5, No.~26, pp.~177--187, 1903.
-
-\bibitem{becquerel1900}
-Becquerel, H., \textit{Influence d'un champ magn{\'e}tique sur le rayonnement
-  des corps radio-actifs}, Journal de Physique Th{\'e}orique et Appliqu{\'e}e,
-  Vol.~9, No.~1, pp.~71--78, 1900.
-
 \bibitem{fermi1934german}
 Fermi, E., \textit{Versuch einer Theorie der $\beta$-Strahlen. I}, Zeitschrift
   f{\"u}r Physik, Vol.~88, No.~3, pp.~161--177, 1934.
@@ -236,6 +160,21 @@ Burgy, M.~T., Epstein, R.~J., Krohn, V.~E., Novey, T.~B., Raboy, S., Ringo,
   in the Decay of Polarized Neutrons}, Phys. Rev., Vol.~107, pp.~1731--1733,
   Sep 1957.
 
+\bibitem{shidling2018}
+Shidling, P., Behling, R., Fenker, B., Hardy, J., Iacob, V., Mehlman, M., Park,
+  H., Roeder, B. {\mdseries and} Melconian, D., \textit{High-precision
+  half-life measurement of the $\beta$+ decay of Na 21}, Physical Review C,
+  Vol.~98, No.~1, pp.~015502, 2018.
+
+\bibitem{ozmetin2020}
+{Ozmetin}, A., {Melconian}, D.~G., {Iacob}, V.~E., {Shidling}, P., {Kolhinen},
+  V.~S., {McClain}, D.~J., {Nasser}, M., {Schroeder}, B., {Roeder}, B., {Park},
+  H.-I., {Anholm}, M., {Saastamoinen}, A.~J. {\mdseries and} {Trinat
+  Collaboration}, \textit{{Improving the ft value of 37K via a precision
+  measurement of the branching ratio}}, \textit{APS Division of Nuclear Physics
+  Meeting Abstracts}, Vol. 2020 of \textit{APS Meeting Abstracts}, p. KF.005,
+  Jan. 2020.
+
 \bibitem{severijns_beck_cuncic_2006}
 Severijns, N., Beck, M. {\mdseries and} Naviliat-Cuncic, O., \textit{Tests of
   the standard electroweak model in nuclear beta decay}, Rev. Mod. Phys.,
@@ -248,6 +187,31 @@ Krane, K.~S., Introductory Nuclear Physics, Wiley, New York, 1988.
 Wong, S., Introductory Nuclear Physics, Prentice Hall Advanced Reference Series
   Prentice Hall Labora, Prentice Hall, 1990.
 
+\bibitem{holstein}
+{Holstein}, B.~R., \textit{{Recoil effects in allowed beta decay: The
+  elementary particle approach}}, Reviews of Modern Physics, Vol.~46, No.~4,
+  pp.~789--814, Oct. 1974.
+
+\bibitem{Levinger}
+Levinger, J.~S., \textit{Effects of Radioactive Disintegrations on Inner
+  Electrons of the Atom}, Phys. Rev., Vol.~90, pp.~11--25, Apr 1953.
+
+\bibitem{NeutronbFierz_March2020}
+Sun, X., Adamek, E., Allgeier, B., Bagdasarova, Y., Berguno, D.~B., Blatnik,
+  M., Bowles, T.~J., Broussard, L.~J., Brown, M. A.-P., Carr, R., Clayton, S.,
+  Cude-Woods, C., Currie, S., Dees, E.~B., Ding, X., Filippone, B.~W.,
+  Garc\'{\i}a, A., Geltenbort, P., Hasan, S., Hickerson, K.~P., Hoagland, J.,
+  Hong, R., Holley, A.~T., Ito, T.~M., Knecht, A., Liu, C.-Y., Liu, J., Makela,
+  M., Mammei, R., Martin, J.~W., Melconian, D., Mendenhall, M.~P., Moore,
+  S.~D., Morris, C.~L., Nepal, S., Nouri, N., Pattie, R.~W., P\'erez~G\'alvan,
+  A., Phillips, D.~G., Picker, R., Pitt, M.~L., Plaster, B., Salvat, D.~J.,
+  Saunders, A., Sharapov, E.~I., Sjue, S., Slutsky, S., Sondheim, W., Swank,
+  C., Tatar, E., Vogelaar, R.~B., VornDick, B., Wang, Z., Wei, W., Wexler,
+  J.~W., Womack, T., Wrede, C., Young, A.~R. {\mdseries and} Zeck, B.~A.,
+  \textit{Improved limits on Fierz interference using asymmetry measurements
+  from the Ultracold Neutron Asymmetry (UCNA) experiment}, Phys. Rev. C,
+  Vol.~101, pp.~035503, Mar 2020.
+
 \bibitem{raabprentiss}
 Raab, E.~L., Prentiss, M., Cable, A., Chu, S. {\mdseries and} Pritchard, D.~E.,
   \textit{Trapping of Neutral Sodium Atoms with Radiation Pressure}, Phys. Rev.
@@ -256,6 +220,15 @@ Raab, E.~L., Prentiss, M., Cable, A., Chu, S. {\mdseries and} Pritchard, D.~E.,
 \bibitem{corney}
 Corney, A., Atomic and Laser Spectroscopy, Oxford University Press, New York,
   1977.
+
+\bibitem{ben_OP}
+Fenker, B., Behr, J.~A., Melconian, D., Anderson, R. M.~A., Anholm, M., Ashery,
+  D., Behling, R.~S., Cohen, I., Craiciu, I., Donohue, J.~M., Farfan, C.,
+  Friesen, D., Gorelov, A., McNeil, J., Mehlman, M., Norton, H., Olchanski, K.,
+  Smale, S., Th\'{e}riault, O., Vantyghem, A.~N. {\mdseries and} Warner, C.~L.,
+  \textit{Precision measurement of the nuclear polarization in laser-cooled,
+  optically pumped $^{37}\textrm{K}$}, New Journal of Physics, Vol.~18, No.~7,
+  pp.~073028, 2016.
 
 \bibitem{gorelov2000}
 Gorelov, A., Behr, J., Melconian, D., Trinczek, M., Dub{\'e}, P., H{\"a}usser,
@@ -314,6 +287,18 @@ Moyal, J., \textit{XXX. Theory of ionization fluctuations}, The London,
   Edinburgh, and Dublin Philosophical Magazine and Journal of Science, Vol.~46,
   No. 374, pp.~263--280, 1955.
 
+\bibitem{stragglingLonergan1970}
+Lonergan, J., Jupiter, C. {\mdseries and} Merkel, G., \textit{Electron energy
+  straggling measurements for thick targets of beryllium, aluminum, and gold at
+  4.0 and 8.0 MeV}, Journal of Applied Physics, Vol.~41, No.~2, pp.~678--688,
+  1970.
+
+\bibitem{stragglingRester1971}
+Rester, D.~H. {\mdseries and} Derrickson, J.~H., \textit{Electron Transmission
+  Measurements for Al, Sn, and Au Targets at Electron Bombarding Energies of
+  1.0 and 2.5 MeV}, Journal of Applied Physics, Vol.~42, No.~2, pp.~714--721,
+  1971.
+
 \bibitem{severijns_cuncic_2011}
 Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
   nuclear beta decay}, Annual Review of Nuclear and Particle Science, Vol.~61,
@@ -323,5 +308,20 @@ Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
 Melconian, D.~G., Measurement of the Neutrino Asymmetry in the Beta Decay of
   Laser-Cooled, Polarized $^{37}\textrm{K}$, Ph.D. thesis, Simon Fraser
   University, 2005.
+
+\bibitem{holstein_errata}
+Holstein, B.~R., \textit{Erratum: Recoil effects in allowed beta decay: The
+  elementary particle approach}, Rev. Mod. Phys., Vol.~48, pp.~673--673, Oct
+  1976.
+
+\bibitem{EbelFeldman1957}
+Ebel, M. {\mdseries and} Feldman, G., \textit{Further remarks on Coulomb
+  corrections in allowed beta transitions}, Nuclear Physics, Vol.~4,
+  pp.~213--214, 1957.
+
+\bibitem{Falkowski2022}
+Falkowski, A., González-Alonso, M., Palavrić, A. {\mdseries and}
+  Rodríguez-Sánchez, A., \textit{Constraints on subleading interactions in
+  beta decay Lagrangian}, 2022.
 
 \end{thebibliography}
