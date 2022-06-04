@@ -59,6 +59,59 @@ Becquerel, H., \textit{Influence d'un champ magn{\'e}tique sur le rayonnement
   des corps radio-actifs}, Journal de Physique Th{\'e}orique et Appliqu{\'e}e,
   Vol.~9, No.~1, pp.~71--78, 1900.
 
+\bibitem{rutherfordsoddy1903}
+Rutherford, E. {\mdseries and} Soddy, F., \textit{LX. radioactive change}, The
+  London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science,
+  Vol.~5, No.~29, pp.~576--591, 1903.
+
+\bibitem{PauliNeutrino1978}
+Brown, L.~M., \textit{The idea of the neutrino}, Physics today, Vol.~31, No.~9,
+  pp.~23, 1978.
+
+\bibitem{AbrahamPais}
+Pais, A., Inward Bound: Of Matter and Forces in the Physical World, Oxford
+  University Press, 1986.
+
+\bibitem{Fermi1934Italian}
+{Fermi}, E., \textit{{Tentativo di una Teoria Dei Raggi {\ensuremath{\beta}}}},
+  Il Nuovo Cimento, Vol.~11, No.~1, pp.~1--19, Jan. 1934.
+
+\bibitem{Fermi1934German}
+Fermi, E., \textit{Versuch einer Theorie der $\beta$-Strahlen. I}, Zeitschrift
+  f{\"u}r Physik, Vol.~88, No.~3, pp.~161--177, 1934.
+
+\bibitem{LeeYang}
+Lee, T.-D. {\mdseries and} Yang, C.-N., \textit{Question of parity conservation
+  in weak interactions}, Physical Review, Vol.~104, No.~1, pp.~254--258, 1956.
+
+\bibitem{wu}
+Wu, C.~S., Ambler, E., Hayward, R.~W., Hoppes, D.~D. {\mdseries and} Hudson,
+  R.~P., \textit{Experimental Test of Parity Conservation in Beta Decay}, Phys.
+  Rev., Vol.~105, pp.~1413--1415, Feb 1957.
+
+\bibitem{Higgs1964EnglertBrout}
+Englert, F. {\mdseries and} Brout, R., \textit{Broken Symmetry and the Mass of
+  Gauge Vector Mesons}, Phys. Rev. Lett., Vol.~13, pp.~321--323, Aug 1964.
+
+\bibitem{Higgs1964Higgs}
+Higgs, P.~W., \textit{Broken Symmetries and the Masses of Gauge Bosons}, Phys.
+  Rev. Lett., Vol.~13, pp.~508--509, Oct 1964.
+
+\bibitem{Higgs1964GuralnikHagenKibble}
+Guralnik, G.~S., Hagen, C.~R. {\mdseries and} Kibble, T. W.~B., \textit{Global
+  Conservation Laws and Massless Particles}, Phys. Rev. Lett., Vol.~13,
+  pp.~585--587, Nov 1964.
+
+\bibitem{BroutEnglertArXiv}
+Brout, R. {\mdseries and} Englert, F., \textit{Spontaneous Symmetry Breaking in
+  Gauge Theories: a Historical Survey}, 1998.
+
+\bibitem{guralnik2009}
+Guralnik, G.~S., \textit{The history of the Guralnik, Hagen and Kibble
+  development of the theory of spontaneous symmetry breaking and gauge
+  particles}, International Journal of Modern Physics A, Vol.~24, No.~14,
+  pp.~2601--2627, 2009.
+
 \bibitem{Glashow1959}
 Glashow, S.~L., \textit{The renormalizability of vector meson interactions},
   Nuclear Physics, Vol.~10, pp.~107--117, 1959.
@@ -132,22 +185,9 @@ Klein, A., Brown, B., Georg, U., Keim, M., Lievens, P., Neugart, R., Neuroth,
 \bibitem{itownerCalcs}
 Towner, I., Private Communication, August 2011.
 
-\bibitem{fermi1934german}
-Fermi, E., \textit{Versuch einer Theorie der $\beta$-Strahlen. I}, Zeitschrift
-  f{\"u}r Physik, Vol.~88, No.~3, pp.~161--177, 1934.
-
 \bibitem{pdg2018}
 {Tanabashi}, M. i. P. D.~G., \textit{Review of Particle Physics}, Phys. Rev. D,
   Vol.~98, pp.~030001, Aug 2018.
-
-\bibitem{LeeYang}
-Lee, T.-D. {\mdseries and} Yang, C.-N., \textit{Question of parity conservation
-  in weak interactions}, Physical Review, Vol.~104, No.~1, pp.~254--258, 1956.
-
-\bibitem{wu}
-Wu, C.~S., Ambler, E., Hayward, R.~W., Hoppes, D.~D. {\mdseries and} Hudson,
-  R.~P., \textit{Experimental Test of Parity Conservation in Beta Decay}, Phys.
-  Rev., Vol.~105, pp.~1413--1415, Feb 1957.
 
 \bibitem{RustadRuby1955tensor}
 Rustad, B.~M. {\mdseries and} Ruby, S.~L., \textit{Gamow-Teller Interaction in
