@@ -77,8 +77,13 @@ Pais, A., Inward Bound: Of Matter and Forces in the Physical World, Oxford
   Il Nuovo Cimento, Vol.~11, No.~1, pp.~1--19, Jan. 1934.
 
 \bibitem{Fermi1934German}
-Fermi, E., \textit{Versuch einer Theorie der $\beta$-Strahlen. I}, Zeitschrift
-  f{\"u}r Physik, Vol.~88, No.~3, pp.~161--177, 1934.
+{Fermi}, E., \textit{{Versuch einer Theorie der $\beta$-Strahlen. I}},
+  {Zeitschrift f{\"u}r Physik}, Vol.~88, No.~3, pp.~161--177, 1934.
+
+\bibitem{GamowTeller1936}
+Gamow, G. {\mdseries and} Teller, E., \textit{Selection Rules for the
+  $\ensuremath{\beta}$-Disintegration}, Phys. Rev., Vol.~49, pp.~895--899, Jun
+  1936.
 
 \bibitem{LeeYang}
 Lee, T.-D. {\mdseries and} Yang, C.-N., \textit{Question of parity conservation
@@ -88,6 +93,51 @@ Lee, T.-D. {\mdseries and} Yang, C.-N., \textit{Question of parity conservation
 Wu, C.~S., Ambler, E., Hayward, R.~W., Hoppes, D.~D. {\mdseries and} Hudson,
   R.~P., \textit{Experimental Test of Parity Conservation in Beta Decay}, Phys.
   Rev., Vol.~105, pp.~1413--1415, Feb 1957.
+
+\bibitem{FeynmanGellMann1958}
+Feynman, R.~P. {\mdseries and} Gell-Mann, M., \textit{Theory of the Fermi
+  Interaction}, Phys. Rev., Vol.~109, pp.~193--198, Jan 1958.
+
+\bibitem{tomonaga1946}
+Tomonaga, S.-i., \textit{On a relativistically invariant formulation of the
+  quantum theory of wave fields.}, Progress of Theoretical Physics, Vol.~1,
+  No.~2, pp.~27--42, 1946.
+
+\bibitem{schwinger1948covariant}
+Schwinger, J., \textit{Quantum electrodynamics. I. A covariant formulation},
+  Physical Review, Vol.~74, No.~10, pp.~1439, 1948.
+
+\bibitem{feynman1949spacetime}
+Feynman, R.~P., \textit{Space-time approach to quantum electrodynamics},
+  Physical Review, Vol.~76, No.~6, pp.~769, 1949.
+
+\bibitem{feynman1949positrons}
+Feynman, R.~P., \textit{The theory of positrons}, Physical Review, Vol.~76,
+  No.~6, pp.~749, 1949.
+
+\bibitem{feynman1950}
+Feynman, R.~P., \textit{Mathematical formulation of the quantum theory of
+  electromagnetic interaction}, Physical Review, Vol.~80, No.~3, pp.~440, 1950.
+
+\bibitem{dyson1949theories}
+Dyson, F.~J., \textit{The radiation theories of Tomonaga, Schwinger, and
+  Feynman}, Physical Review, Vol.~75, No.~3, pp.~486, 1949.
+
+\bibitem{Glashow1959}
+Glashow, S.~L., \textit{The renormalizability of vector meson interactions},
+  Nuclear Physics, Vol.~10, pp.~107--117, 1959.
+
+\bibitem{Glashow1961}
+Glashow, S.~L., \textit{Partial-symmetries of weak interactions}, Nuclear
+  Physics, Vol.~22, No.~4, pp.~579--588, 1961.
+
+\bibitem{SalamWard1964}
+Salam, A. {\mdseries and} Ward, J.~C., \textit{Electromagnetic and weak
+  interactions}, Physics Letters, Vol.~13, No.~2, pp.~168--171, 1964.
+
+\bibitem{Weinberg1967}
+Weinberg, S., \textit{A Model of Leptons}, Phys. Rev. Lett., Vol.~19,
+  pp.~1264--1266, Nov 1967.
 
 \bibitem{Higgs1964EnglertBrout}
 Englert, F. {\mdseries and} Brout, R., \textit{Broken Symmetry and the Mass of
@@ -112,17 +162,10 @@ Guralnik, G.~S., \textit{The history of the Guralnik, Hagen and Kibble
   particles}, International Journal of Modern Physics A, Vol.~24, No.~14,
   pp.~2601--2627, 2009.
 
-\bibitem{Glashow1959}
-Glashow, S.~L., \textit{The renormalizability of vector meson interactions},
-  Nuclear Physics, Vol.~10, pp.~107--117, 1959.
-
-\bibitem{SalamWard1964}
-Salam, A. {\mdseries and} Ward, J., \textit{Electromagnetic and weak
-  interactions}, Physics Letters, Vol.~13, No.~2, pp.~168--171, 1964.
-
-\bibitem{Weinberg1967}
-Weinberg, S., \textit{A Model of Leptons}, Phys. Rev. Lett., Vol.~19,
-  pp.~1264--1266, Nov 1967.
+\bibitem{thooftveltman1972}
+{'t Hooft}, G. {\mdseries and} Veltman, M., \textit{Regularization and
+  renormalization of gauge fields}, Nuclear Physics B, Vol.~44, No.~1,
+  pp.~189--213, 1972.
 
 \bibitem{thooft1971}
 't~Hooft, G., \textit{Renormalization of massless Yang-Mills fields}, Nuclear
@@ -132,58 +175,48 @@ Weinberg, S., \textit{A Model of Leptons}, Phys. Rev. Lett., Vol.~19,
 Yang, C.~N. {\mdseries and} Mills, R.~L., \textit{Conservation of Isotopic Spin
   and Isotopic Gauge Invariance}, Phys. Rev., Vol.~96, pp.~191--195, Oct 1954.
 
-\bibitem{SeverijnsTandecki2008}
-Severijns, N., Tandecki, M., Phalet, T. {\mdseries and} Towner, I.~S.,
-  \textit{$\mathcal{F}t$ values of the $T=1/2$ mirror \ensuremath{\beta}
-  transitions}, Phys. Rev. C, Vol.~78, pp.~055501, Nov 2008.
+\bibitem{somerandomthingJohndid2014}
+Behr, J. {\mdseries and} Gorelov, A., \textit{$\beta$-decay angular
+  correlations with neutral atom traps}, Journal of Physics G: Nuclear and
+  Particle Physics, Vol.~41, No.~11, pp.~114005, 2014.
 
-\bibitem{pshidling}
-Shidling, P.~D., Melconian, D., Behling, S., Fenker, B., Hardy, J.~C., Iacob,
-  V.~E., McCleskey, E., McCleskey, M., Mehlman, M., Park, H.~I. {\mdseries and}
-  Roeder, B.~T., \textit{Precision half-life measurement of the
-  ${\ensuremath{\beta}}^{+}$ decay of $^{37}\mathrm{K}$}, Phys. Rev. C,
-  Vol.~90, pp.~032501, Sep 2014.
+\bibitem{somerandomthingTRINATdid2014}
+Behr, J., Gorelov, A., Jackson, K., Pearson, M., Anholm, M., Kong, T., Behling,
+  R., Fenker, B., Melconian, D., Ashery, D. et~al., \textit{TRINAT: measuring
+  $\beta$-decay correlations with laser-trapped atoms}, Hyperfine Interactions,
+  Vol.~225, No.~1, pp.~115--120, 2014.
 
-\bibitem{hardytowner2015}
-Hardy, J. {\mdseries and} Towner, I., \textit{Superallowed 0+→ 0+ nuclear
-  $\beta$ decays: 2014 critical survey, with precise results for V u d and CKM
-  unitarity}, Physical Review C, Vol.~91, No.~2, pp.~025501, 2015.
+\bibitem{Pitcairn2009}
+Pitcairn, J. R.~A., Roberge, D., Gorelov, A., Ashery, D., Aviv, O., Behr,
+  J.~A., Bricault, P.~G., Dombsky, M., Holt, J.~D., Jackson, K.~P., Lee, B.,
+  Pearson, M.~R., Gaudin, A., Dej, B., H\"ohr, C., Gwinner, G. {\mdseries and}
+  Melconian, D., \textit{Tensor interaction constraints from
+  $\ensuremath{\beta}$-decay recoil spin asymmetry of trapped atoms}, Phys.
+  Rev. C, Vol.~79, pp.~015501, Jan 2009.
 
-\bibitem{naviliat2009april}
-Naviliat-Cuncic, O. {\mdseries and} Severijns, N., \textit{Test of the
-  Conserved Vector Current Hypothesis in $T=1/2$ Mirror Transitions and New
-  Determination of $|{V}_{ud}|$}, Physical Review Letters, Vol.~102,
-  pp.~142302, April 2009.
+\bibitem{alexandrethesis2008}
+{Gorelov}, A.~I., {Positron-neutrino correlation measurements in the beta decay
+  of magneto-optically trapped potassium-38m atoms}, Ph.D. thesis, Simon Fraser
+  University, Canada, Jan. 2008.
 
-\bibitem{naviliat2009june}
-Naviliat-Cuncic, O. {\mdseries and} Severijns, N., \textit{$|{V}_{ud}|$ from
-  $T=1/2$ mirror transitions and the role of atom and ion traps}, The European
-  Physical Journal A, Vol.~42, No.~3, pp.~327--331, June 2009.
+\bibitem{dan_thesis}
+Melconian, D.~G., Measurement of the Neutrino Asymmetry in the Beta Decay of
+  Laser-Cooled, Polarized $^{37}\textrm{K}$, Ph.D. thesis, Simon Fraser
+  University, 2005.
 
-\bibitem{vonplaten1971}
-{von Platen}, C., {Bonn}, J., {K{\"o}pf}, U., {Neugart}, R. {\mdseries and}
-  {Otten}, E.~W., \textit{{Spin exchange polarization and hfs anomaly
-  measurement of {\ensuremath{\beta}}-active$^{37}$K}}, Zeitschrift für
-  Physik, Vol.~244, No.~1, pp.~44--69, 1971.
+\bibitem{TensorLimits8Li2015}
+Sternberg, M.~G., Segel, R., Scielzo, N.~D., Savard, G., Clark, J.~A., Bertone,
+  P.~F., Buchinger, F., Burkey, M., Caldwell, S., Chaudhuri, A., Crawford,
+  J.~E., Deibel, C.~M., Greene, J., Gulick, S., Lascar, D., Levand, A.~F., Li,
+  G., P\'erez~Galv\'an, A., Sharma, K.~S., Van~Schelt, J., Yee, R.~M.
+  {\mdseries and} Zabransky, B.~J., \textit{Limit on Tensor Currents from
+  $^{8}\mathrm{Li}$ $\ensuremath{\beta}$ Decay}, Phys. Rev. Lett., Vol.~115,
+  pp.~182501, Oct 2015.
 
-\bibitem{mpitt1992}
-{Pitt}, M.~L., {Test of the Linearity of Quantum Mechanics Using ARGON-37
-  Polarized by Spin-Exchange Optical Pumping.}, Princeton University, January
-  1992.
-
-\bibitem{minamisono2008quadrupole}
-Minamisono, K., Mantica, P., Crawford, H., Pinter, J., Stoker, J., Utsuno, Y.
-  {\mdseries and} Weerasiri, R., \textit{Quadrupole moment of 37K}, Physics
-  Letters B, Vol.~662, No.~5, pp.~389--395, 2008.
-
-\bibitem{klein1996}
-Klein, A., Brown, B., Georg, U., Keim, M., Lievens, P., Neugart, R., Neuroth,
-  M., Silverans, R., Vermeeren, L. {\mdseries and} {ISOLDE Collaboration},
-  \textit{Moments and mean square charge radii of short-lived argon isotopes},
-  Nuclear Physics A, Vol.~607, No.~1, pp.~1--22, 1996.
-
-\bibitem{itownerCalcs}
-Towner, I., Private Communication, August 2011.
+\bibitem{KinematicFierz2016}
+{{Gonz{\'a}lez-Alonso}, M. and {Naviliat-Cuncic}, O.}, \textit{{Kinematic
+  sensitivity to the Fierz term of $\beta$-decay differential spectra}},
+  Physical Review C, Vol.~94, No.~3, pp.~035503, Sep. 2016.
 
 \bibitem{pdg2018}
 {Tanabashi}, M. i. P. D.~G., \textit{Review of Particle Physics}, Phys. Rev. D,
@@ -199,6 +232,11 @@ Burgy, M.~T., Epstein, R.~J., Krohn, V.~E., Novey, T.~B., Raboy, S., Ringo,
   G.~R. {\mdseries and} Telegdi, V.~L., \textit{Measurement of Beta Asymmetry
   in the Decay of Polarized Neutrons}, Phys. Rev., Vol.~107, pp.~1731--1733,
   Sep 1957.
+
+\bibitem{SeverijnsTandecki2008}
+Severijns, N., Tandecki, M., Phalet, T. {\mdseries and} Towner, I.~S.,
+  \textit{$\mathcal{F}t$ values of the $T=1/2$ mirror \ensuremath{\beta}
+  transitions}, Phys. Rev. C, Vol.~78, pp.~055501, Nov 2008.
 
 \bibitem{shidling2018}
 Shidling, P., Behling, R., Fenker, B., Hardy, J., Iacob, V., Mehlman, M., Park,
@@ -311,6 +349,54 @@ Fenker, B.~B., Precise measurement of the $\beta$-asymmetry in the decay of
 Behling, R.~S., Measurement of the Standard Model Beta Asymmetry Parameter,
   \ensuremath{\beta}, in 37K, Ph.D. thesis, Texas A\&M University, 2015.
 
+\bibitem{pshidling}
+Shidling, P.~D., Melconian, D., Behling, S., Fenker, B., Hardy, J.~C., Iacob,
+  V.~E., McCleskey, E., McCleskey, M., Mehlman, M., Park, H.~I. {\mdseries and}
+  Roeder, B.~T., \textit{Precision half-life measurement of the
+  ${\ensuremath{\beta}}^{+}$ decay of $^{37}\mathrm{K}$}, Phys. Rev. C,
+  Vol.~90, pp.~032501, Sep 2014.
+
+\bibitem{hardytowner2015}
+Hardy, J. {\mdseries and} Towner, I., \textit{Superallowed 0+→ 0+ nuclear
+  $\beta$ decays: 2014 critical survey, with precise results for V u d and CKM
+  unitarity}, Physical Review C, Vol.~91, No.~2, pp.~025501, 2015.
+
+\bibitem{naviliat2009april}
+Naviliat-Cuncic, O. {\mdseries and} Severijns, N., \textit{Test of the
+  Conserved Vector Current Hypothesis in $T=1/2$ Mirror Transitions and New
+  Determination of $|{V}_{ud}|$}, Physical Review Letters, Vol.~102,
+  pp.~142302, April 2009.
+
+\bibitem{naviliat2009june}
+Naviliat-Cuncic, O. {\mdseries and} Severijns, N., \textit{$|{V}_{ud}|$ from
+  $T=1/2$ mirror transitions and the role of atom and ion traps}, The European
+  Physical Journal A, Vol.~42, No.~3, pp.~327--331, June 2009.
+
+\bibitem{vonplaten1971}
+{von Platen}, C., {Bonn}, J., {K{\"o}pf}, U., {Neugart}, R. {\mdseries and}
+  {Otten}, E.~W., \textit{{Spin exchange polarization and hfs anomaly
+  measurement of {\ensuremath{\beta}}-active$^{37}$K}}, Zeitschrift für
+  Physik, Vol.~244, No.~1, pp.~44--69, 1971.
+
+\bibitem{mpitt1992}
+{Pitt}, M.~L., {Test of the Linearity of Quantum Mechanics Using ARGON-37
+  Polarized by Spin-Exchange Optical Pumping.}, Princeton University, January
+  1992.
+
+\bibitem{minamisono2008quadrupole}
+Minamisono, K., Mantica, P., Crawford, H., Pinter, J., Stoker, J., Utsuno, Y.
+  {\mdseries and} Weerasiri, R., \textit{Quadrupole moment of 37K}, Physics
+  Letters B, Vol.~662, No.~5, pp.~389--395, 2008.
+
+\bibitem{klein1996}
+Klein, A., Brown, B., Georg, U., Keim, M., Lievens, P., Neugart, R., Neuroth,
+  M., Silverans, R., Vermeeren, L. {\mdseries and} {ISOLDE Collaboration},
+  \textit{Moments and mean square charge radii of short-lived argon isotopes},
+  Nuclear Physics A, Vol.~607, No.~1, pp.~1--22, 1996.
+
+\bibitem{itownerCalcs}
+Towner, I., Private Communication to the TRINAT Collaboration, August 2011.
+
 \bibitem{clifford}
 Clifford, E., Hagberg, E., Koslowsy, V., Hardy, J., Schmeing, H. {\mdseries
   and} Azuma, R., \textit{Measurements of the response of a hybrid detector
@@ -343,11 +429,6 @@ Rester, D.~H. {\mdseries and} Derrickson, J.~H., \textit{Electron Transmission
 Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
   nuclear beta decay}, Annual Review of Nuclear and Particle Science, Vol.~61,
   pp.~23--46, 2011.
-
-\bibitem{dan_thesis}
-Melconian, D.~G., Measurement of the Neutrino Asymmetry in the Beta Decay of
-  Laser-Cooled, Polarized $^{37}\textrm{K}$, Ph.D. thesis, Simon Fraser
-  University, 2005.
 
 \bibitem{holstein_errata}
 Holstein, B.~R., \textit{Erratum: Recoil effects in allowed beta decay: The
