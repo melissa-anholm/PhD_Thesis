@@ -5,6 +5,34 @@
 \clearpage	
 \chapter{Results and Conclusions}
 \label{results_chapter}
+
+\note[jbn, nolist]{Another Round of Thoughts from John!
+\\...\\
+Fitting Ben's data (using for the bFierz function my convolution of 1/E with a Clifford tail) as I've shown before, compare what happens if I let Abeta float, or if I then fix Abeta arbitrarily to that floated value.
+\\
+That's not a well-motivated thing to do on its own, but it's not that much different than using Abeta[Cs$^2$,Ct$^2$] constrained by Ft[Cs$^2$,Ct$^2$] since that's only dependent on squares of small quantities.
+\\...\\
+So I would expect the ability to extract Cs and Ct from the 37K data to have more
+sensitivity if Abeta[Cs$^2$,Ct$^2$] and Ft[Cs$^2$,Ct$^2$] and bFierz[Cs,Ct] are floated together in a 2d fit rather then floating Abeta and bFierz without any theoretical constraints and then considering getting linear combinations of Cs and Ct from the bFierz value.
+\\...\\
+Note that my simply fixing Abeta lowers bFierz uncertainty by a factor of 3. I expect similar improvement in sensitivity to Cs and Ct.
+\\...\\
+(Here I'm using Cs as a stand-in for (Cs+Cs')/2 for simplicity)
+}
+\ifthenelse{\boolean{isdraft}}
+{
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=.999\linewidth]{Feedback/FixAndNot.png}
+	\caption[A Fit From John]{A Fit From John, or something.  idk, it goes with the text immediately previous.}
+%	\label{}
+\end{figure}
+\FloatBarrier
+}
+{}
+
+
+
 %%%\note[jb1]{Me:
 %%%\\
 %%%My value of Abeta with bFierz=0 (which I see now that I haven't *actually* included in the text yet.  That clearly needs to happen.) is consistent with Ben's when you account for the fact that Ben's data is, on average, less polarized than he thought.  I think I mention this somewhere, but I probably need to make it more obvious, and located in the 'Conclusions' chapter.  
@@ -105,7 +133,7 @@ Accounting for this, a more accurate one-parameter measurement might produce the
 
 
 %%%%%%% %%%%%%%%% %%%%%%%%
-\section{Comparison to Prior Measurement}
+\section{Comparison to TRINAT's Prior $\Abeta$ Measurement}
 \label{sec:compare_Abeta}
 \note{Here, I have to move over some of the other section's stuff.
 Also, talk about how this measurement compares with the collaboration's previous.}
@@ -114,6 +142,50 @@ Also, talk about how this measurement compares with the collaboration's previous
 \section{Relation to Current Limits on Scalar and Tensor Interactions}
 \label{sec:scalartensorlimits}
 \note{Look up some literature.  Use that picture from John.  Probably use that blurb from John, too.}
+
+...
+\note[org, nolist]{I have legit just deleted a section in Ch.6:  "Relation to Other Measurements and New Overall Limits".  It's gone now.  Because it was stupid.  Only John's comments about what it might do in the future remain.}
+\note[jb1, nolist]{JB on Ch.~\ref{sec:relation_to_other_measurements}:  "Relation to Other Measurements and New Overall Limits"
+\\
+6.3 might be better left to a collaboration memo. You have to decide what to do here,
+and decide it quickly.
+\\...\\
+I already gave you the latest Perkeo Fierz paper,
+and the info that we are relatively less sensitive to tensor by
+by the ratio of Mgt$^2$ = 3/0.6 = 5.
+\\...\\
+so if you make a linearized exclusion plot of tensor vs. scalar as straight
+lines with the uncertainty of bFierz, using Perkeo and your result, you
+will see even with 0.09 uncertainty you compete with them on the scalar limit.
+\\...\\
+(However, see attached figure from my article with Alexandre on 38mK's
+beta-nu scalar limit. I think the constraints on Lorentz scalars are hard to
+compete with.)
+}
+\note[jb1, nolist]{JB says:   To put your work in context, please add at the end of that minimal S,T section, or at the end of "Our Decay" section
+\\ ... \\
+The best existing measurement of $\bFierz$ is in the decay of the neutron~\cite{Saul2020},
+$\bFierz$ = 0.017 $\pm$ 0.021, consistent with the Standard Model prediction of zero.
+Our measurement is strongly related, yet complementary.
+In terms on non-Standard Model Lorentz current structures, to lowest order in the non-SM  currents the same equation applies:
+\\
+$\bFierz$ = $\pm$ $(C_S +C_S' + (C_T - C_T') \lambda^2)/( 1 + \lambda^2)$
+\\
+(the plus is for $\beta^-$ decay and the - for $\beta^+$ decay)~\cite{jtw}.  [to be continued...] }
+\note[jb1, nolist]{[...continued from prev.]
+\\
+In our $^{37}$K case, $\lambda^2$ = $|M_{\rm GT}|^2$/$|M_{\rm F}|^2$ is close to 3/5 (the expected value j/(j+1) for a single j=3/2 d3/2 nucleon)~\cite{deShalit1963},
+while for the neutron $\lambda^2$ is close to 3 (the expected value for an (j+1)/j j=1/2 s1/2 nucleon).
+$|M_F|$, the Fermi matrix element, is nearly the same for both of these isospin = 1/2 decays (the largest correction is the larger isospin mixing of $\sim$0.01 in $^{37}$K).
+So our observable is relatively less sensitive to Lorentz tensor currents, and will predominantly constrain or discover Lorentz scalar currents.
+\\...\\ 
+Full considerations would require a weighted fit of $\bFierz$ experiments and similar observables~\cite{Falkowski2021}, and are beyond the scope of this thesis.
+The info from this thesis, values of $\Abeta$ and $\bFierz$ with their uncertainties, can together with the known $fT$ value (lifetime and
+branching ratio) allow the community and/or the collaboration to include the results in a future constraint or discovery of scalar and tensor Lorentz currents
+contributing to $\beta$ decay.}
+\note[org, nolist]{End of John's comments on the section I deleted.}
+...
+
 
 %%%\section{Relation to Other Measurements and New Overall Limits}
 %%%\label{sec:relation_to_other_measurements}
@@ -163,6 +235,37 @@ So all the known information about Ca and Cv is accounted for.
 \clearpage
 \section{Possible Future Work:  $R_{\textrm{slow}}$}
 \label{section_rslow}
+
+\note[jbn, nolist]{More thoughts from John:
+\\...\\
+hi Melissa,
+\\...\\
+I think you should keep Section 6.2, but I think it would be clearer to point out the observable manifests as a dip in the raw TOF spectrum, not going all the way to zero as in the ideal on-axis situation you describe for simplicity.
+I.e., I would say you need to qualify this "exactly" word (emphasis mine below), and since
+it ends up as a cos(theta) distribution like in my attached slide on the subject, your figure of the TOF spectrum would be a good way to do that.
+\\...\\
+"Henceforth, daughter nuclei from a back-to-back decay as shown in
+Figure ?? will be described as ‘slow’ recoils. In terms of observables, this means that
+if the electric field is configured to point along one of the axes perpendicular to the
+polarization direction, then when the recoiling ion is swept away into a detector, the
+slow recoil’s hit position should be \textbf{exactly}​​ along the projection of the polarization
+axis. Furthermore, the slow recoil’s time of flight should be in the middle of the time
+of flight spectrum, since other recoils will be emitted with momentum towards or
+away from the detector"
+}
+\ifthenelse{\boolean{isdraft}}
+{
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=.999\linewidth]{Feedback/AMirrorDecayObservable.png}
+	\caption[A Slide From John]{A Slide From John, or something.  idk, it goes with the text immediately previous.}
+%	\label{}
+\end{figure}
+\FloatBarrier
+}
+{}
+
+
 \note{Probably shouldn't get a clearpage in the end.  It's for my sanity during writing.}
 \note[jb1]{John says the whole $R_{\textrm{slow}}$ thing should go in here somewhere.}
 \note[jb1]{Appendix I  keep, it's excellent. It should be moved as is to Conclusions under "Future Experiment for the collaboration"! so people know you worked so hard on it!!}

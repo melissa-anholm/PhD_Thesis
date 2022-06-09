@@ -135,10 +135,6 @@ Glashow, S.~L., \textit{Partial-symmetries of weak interactions}, Nuclear
 Salam, A. {\mdseries and} Ward, J.~C., \textit{Electromagnetic and weak
   interactions}, Physics Letters, Vol.~13, No.~2, pp.~168--171, 1964.
 
-\bibitem{Weinberg1967}
-Weinberg, S., \textit{A Model of Leptons}, Phys. Rev. Lett., Vol.~19,
-  pp.~1264--1266, Nov 1967.
-
 \bibitem{Higgs1964EnglertBrout}
 Englert, F. {\mdseries and} Brout, R., \textit{Broken Symmetry and the Mass of
   Gauge Vector Mesons}, Phys. Rev. Lett., Vol.~13, pp.~321--323, Aug 1964.
@@ -161,6 +157,13 @@ Guralnik, G.~S., \textit{The history of the Guralnik, Hagen and Kibble
   development of the theory of spontaneous symmetry breaking and gauge
   particles}, International Journal of Modern Physics A, Vol.~24, No.~14,
   pp.~2601--2627, 2009.
+
+\bibitem{Weinberg1967}
+Weinberg, S., \textit{A Model of Leptons}, Phys. Rev. Lett., Vol.~19,
+  pp.~1264--1266, Nov 1967.
+
+\bibitem{salam1968}
+Salam, A., \textit{Elementary particle theory, ed. N. Svartholm}, 1968.
 
 \bibitem{thooftveltman1972}
 {'t Hooft}, G. {\mdseries and} Veltman, M., \textit{Regularization and
