@@ -3,18 +3,27 @@
 %
 %
 %%%% --- * --- %%%%	
-\chapter[Derivation of the Probability Density Function]{Derivation of the Probability Density Function}
+\chapter[Derivation of the Beta Decay Probability Density Function]{Derivation of the Probability Density Function}
 \label{appendix_forthepeople}
-\note{Define all the letters.}
+\note{More coulomb corrections in JTW notation:~\cite{EbelFeldman1957}.  Also, an update to Falkowski's review article\cite{Falkowski2021}, which currently still liives on the arxiv, is here:~\cite{Falkowski2022}. }
+\note{Start with Lee-Yang Hamiltonian, or at least point to it in the first chapter (it's Eq.~\ref{eq:lee_yang_hamiltonian}), because that's where all the BSM stuff lives.}
+%\note{Define all the letters.}
 %\note[color=done]{John says to keep this appendix, because it's great now.}
 %\note[color=jb]{JB:  Appendix B is in good shape. "someone other than me" please change to "the collaboration."}
-In order to obtain a \acf{PDF} to describe the beta decay process, and which includes both a representation of the exotic physics that is the subject of this search, as well as small higher-order corrections which are known to be present, it is necessary to combine features from two disparate formalisms.  
+In order to obtain a \acf{PDF} to describe the beta decay process which includes both a representation of the exotic physics that is the subject of this search, as well as the small higher-order corrections which are known to be present, it is necessary to combine features from two disparate formalisms.  The \acf{JTW} description incorporates many parameters representing exotic physics of various flavours, but the Holstein formulation, which makes no reference to exotic physics, does a much more thorough job of describing the beta decay physics we collectively expect to see, including higher-order terms and small corrections to the form of the spectra.
+
+% has included many smaller corrections 
+
+Because the \ac{JTW} formulation has intentionally neglected the higher-order terms, this model is much less messy to work with than Holstein's -- an assertion that may come as a surprise to the reader given the content within Sec.~\ref{sec:jtw_formalism} -- therefore \ac{JTW}'s work will be considered first.  
+
 \note{Blurb continuation:  JTW is for the BSM shit, because they created it before they really knew which form the operators take.~\cite{jtw}\cite{jtw_coulomb}  Holstein is for the small contributions to physics that we actually know to exist.~\cite{holstein}\cite{holstein_errata}}
 
 
 \section[JTW Formalism]{JTW Formalism}
-\note{They start with the Lee-Yang Hamiltonian in Eq.~\ref{eq:lee_yang_hamiltonian}, with the pseudoscalar terms dropped for convenience, as they're suppressed anyway.}
-We begin with the five-dimensional \ac{PDF} taken directly from \acf{JTW}~\cite{jtw}\cite{jtw_coulomb} for beta decay kinematics:
+\label{sec:jtw_formalism}
+%\note{They start with the Lee-Yang interaction Hamiltonian in Eq.~(\ref{eq:lee_yang_hamiltonian}), with the pseudoscalar terms dropped for convenience, as they're suppressed anyway.}
+We begin a statement of the five-dimensional \ac{PDF} for beta decay kinematics, taken from \acf{JTW}, which arises directly from the Lee-Yang interaction Hamiltonian of Eq.~(\ref{eq:lee_yang_hamiltonian})~\cite{LeeYang}\cite{jtw}\cite{jtw_coulomb}:
+%, taken from \acf{JTW} for beta decay kinematics~\cite{LeeYang}\cite{jtw}\cite{jtw_coulomb}:
 %Here's a master equation from JTW to describe beta decay kinematics~\cite{jtw}\cite{jtw_coulomb}:
 %%%\note{Rephrase some of this stuff...}
 %\note[done]{Item 12. from Georg:
@@ -23,24 +32,28 @@ We begin with the five-dimensional \ac{PDF} taken directly from \acf{JTW}~\cite{
 %}
 %\label{note:gs_12}
 \input{equation_jtw_master}
-\note{Missing factors of c ??}
 where, for convenience, we have defined a nuclear alignment term,
 \bea
 \Talign(\vecJ) &\equiv& \TalignExpand.
 \eea
+\note{Missing factors of c ??}
 %%%\aside{We have already specialized to $\beta^+$ decay.  .... Wait, we have?  Where?  ... There.  Fixed. It's not like that anymore.}
 
-In Eq.~\ref{equation:jtw_master}, $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the outgoing $\beta$ particle's (total) energy, momentum 3-vector, and momentum scalar, while $\Enu$, $\vecpnu$, and $\pnu$ are the equivalent quantities for the outgoing (anti-)neutrino, and $E_0$ is the maximum possible $\beta$ energy associated with the transition.\aside{Holstein gives a formula for it.  Maybe I should write it out...}   $\vecJ$ is the nuclear angular momentum vector of the parent, and $J$ is its projection onto the axis of quantization. $\hatj$ is a unit vector in the direction of $\vecJ$ (note that in general, $\hatj \neq \frac{\vecJ}{J}$).  As usual, $\me$ is the mass of the electron, and $c$ is the speed of light.  The infinitesimal surface element $\dOmegabeta$ ($\dOmeganu$) represents the direction of $\beta$ (neutrino) emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with Z the proton number of the parent nucleus.\aside{Possibly it should be $Z^\prime$ and for the daughter nucleus...}  The Fermi function accounts for the electric force between the nucleus and the charged outgoing beta particle, and its integral over $\Ebeta$ has no closed form expression.
+In Eq.~(\ref{equation:jtw_master}), $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the outgoing $\beta$ particle's (total) energy, momentum 3-vector, and momentum scalar, while $\Enu$, $\vecpnu$, and $\pnu$ are the equivalent quantities for the outgoing (anti-)neutrino, and $E_0$ is the maximum possible $\beta$ energy associated with the transition.\aside{Holstein gives a formula for it.  Maybe I should write it out...}   $\vecJ$ is the nuclear angular momentum vector of the parent, and $J$ is its projection onto the axis of quantization. $\hatj$ is a unit vector in the direction of $\vecJ$ (note that in general, $\hatj \neq \frac{\vecJ}{J}$).  As usual, $\me$ is the mass of the electron, and $c$ is the speed of light.  The infinitesimal surface element $\dOmegabeta$ ($\dOmeganu$) represents the direction of $\beta$ (neutrino) emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with $Z^\prime$ the proton number of the daughter nucleus.
+
+%\aside{Possibly it should be $Z^\prime$ and for the daughter nucleus...}  The Fermi function accounts for the electric force between the nucleus and the charged outgoing beta particle, and its integral over $\Ebeta$ has no closed form expression.
 
 %%%indicates that the direction of beta emission must be considered
 %%%Eq.~\ref{equation:jtw_master} must be 
 %%%$\beta$ emission must be e 
 %%%the probability distribution must be considered to be a function of the direction of $\beta$ emission.
 
-For the reader's convenience, the kinematic factors unique to a particular transition are written out here in terms of their couplings.  %
+For the reader's convenience, the kinematic factors unique to a particular transition are written out here in terms of their couplings.~\aside{...which are the same as in the Lee-Yang Hamiltonian!}
 \input{equations_jtw_params}
 
-In Eqs. \ref{eq:jtw_xi} - \ref{eq:jtw_DTRxi}, we have used $\gamma := \left( 1-\alpha^2 Z^2 \right)^{1/2}$, and as usual, $\alpha$ is the fine structure constant.  Here, $M_F$ and $M_{GT}$ are the Fermi and Gamow-Teller matrix elements, and are unique to the transition under consideration, while the $C_X$ and $C_X^\prime$ (for $X = \{ V,A,S,T\} $) are complex coupling constants describing the strength of vector, axial, scalar, and tensor couplings present in \emph{all} charged weak force transitions.~\aside{Somewhere I have to talk about what the primes and the imaginary parts mean.  But maybe later.  Also, we've just straight-up neglected pseudoscalars.}  We also make use of the following shorthand definitions of $\lambda_{J^\prime J}$, $\Lambda_{J^\prime J}$, and $\delta_{J^\prime J}$ for transitions with parent and daughter nuclear angular momenta given by $J$ and $J^\prime$ respectively:
+In Eqs. \ref{eq:jtw_xi} - \ref{eq:jtw_DTRxi}, we have used $\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2}$, and as usual, $\alpha$ is the fine structure constant.  Here, $M_F$ and $M_{GT}$ are the Fermi and Gamow-Teller matrix elements, and are unique to the transition under consideration, while the $C_X$ and $C_X^\prime$ (for $X = \{ V,A,S,T\} $) are, as in the Lee-Yang Hamiltonian in Eq.~(\ref{eq:lee_yang_hamiltonian}), the complex coupling constants describing the global strength of vector, axial, scalar, and tensor couplings within charged weak interactions.  The possible pseudoscalar couplings have been neglected here because they are relativisitically suppressed.  
+~\aside{Somewhere I have to talk about what the primes and the imaginary parts mean.  But maybe later.}  
+We also make use of the following shorthand definitions of $\lambda_{J^\prime J}$, $\Lambda_{J^\prime J}$, and $\delta_{J^\prime J}$ for transitions with parent and daughter nuclear angular momenta given by $J$ and $J^\prime$ respectively:
 \bea
 \lambda_{J^\prime J} \;\; = \;\; 
 	\begin{cases}
@@ -86,7 +99,9 @@ In Eqs. \ref{eq:jtw_xi} - \ref{eq:jtw_DTRxi}, we have used $\gamma := \left( 1-\
 
 Note that Eq.~\ref{equation:jtw_master} depends on neutrino momentum, which we cannot observe directly.  
 %Furthermore, we cannot use this expression to reconstruct neutrino momenta in our decay events either, because it would be necessary to account for the momentum of the recoiling daughter nucleus, treating the decay as a three-body problem.  
-From an experimental standpoint, we also cannot reconstruct the the neutrino momenta with the available data, because we failed to measure the momenta of the daughters in conjunction with the tagged beta decay events with which we are primarily concerned in this thesis, so there is insufficient kinematic information available.   From a theoretical standpoint, JTW has intentionally neglected recoil-order terms -- meaning that the daughter nucleus is treated, for the purpose of kinetic energy calculations, as being infinitely massive, and as such it must have no change in kinetic energy from the decay--however the approximation still allows for it to undergo a change in momentum.  One result of this approximation is that the neutrino energy, $\Enu$, is not a free variable within Eq.~\ref{equation:jtw_master}, since the total amount of energy released is fixed for a given transition.  The inherent inconsistencies of this approximation make it a tricky starting point for a description of neutrino and recoil kinematics.
+From an experimental standpoint, within the present experiment we it is not possible to reconstruct the the neutrino momenta with the available data, because we failed to measure the momenta of the daughters in conjunction with the tagged beta decay events with which we are primarily concerned in this thesis, so there is insufficient kinematic information available.   
+
+From a theoretical standpoint, JTW has intentionally neglected recoil-order terms -- meaning that the daughter nucleus is treated, for the purpose of kinetic energy calculations, as being infinitely massive, and as such it must have no change in kinetic energy from the decay--however the approximation still allows for it to undergo a change in momentum.  One result of this approximation is that the neutrino energy, $\Enu$, is not a free variable within Eq.~\ref{equation:jtw_master}, since the total amount of energy released is fixed for a given transition.  The inherent inconsistencies of this approximation make it a tricky starting point for a description of neutrino and recoil kinematics.
 
 % re-formulate Eq.~(\ref{equation:jtw_master}) in terms of the momentum of the daughter instead of the momentum of the neutrino.  
 
@@ -95,18 +110,17 @@ such that the resulting distribution no longer depends on parameters that are no
 %The neutrino energy itself is not a free variable in this equation, because the energy release in the decay is fixed, and given the approximation that none of that energy is allocated to the recoiling daughter, it is very straightforward to calculate the neutrino energy for a decay event in which the beta energy is known.
 %
 %We haven't integrated out the neutrino momentum.  Neutrino energy itself is a redundant parameter, I think, because we are already using an endpoint energy and a beta energy, and we are not taking recoil-order effects into account.  Also, we treat neutrinos as massless here, which is a perfectly reasonable approximation for our purposes.  For ``convenience'', let's define a nuclear alignment term, $\Talign$, so that:
-We take this as an opportunity to specialize the equations for $\beta^+$ decay transitions with $j = J^\prime = \frac{3}{2}$. The result 
+We take this as an opportunity to specialize the equations for $\beta^+$ decay transitions with $J = J^\prime = \frac{3}{2}$. The result 
 %of performing this integration over neutrino direction 
 is:
 \input{equation_integratedjtw}
 \unskip with the remaining parameters,
-
 \input{equations_jtw_params_onlyintegrated}
-\unskip \!\!which is a great simplification on Eqs.~(\ref{equation:jtw_master})-(\ref{eq:kronecker}).  
+\unskip \!\!/This is a great simplification on Eqs.~(\ref{equation:jtw_master})-(\ref{eq:kronecker}).  
 %\aside{}
 %We still must write the remaining parameters in terms of the relevant nuclear matrix elements and fundamental coupling constants.  These coupling constants are, in general, complex-valued, and JTW does not choose a phase angle for us.  We write them out in 
 %Eqs.~(\ref{eq:jtw_xi}-\ref{eq:jtw_Abetaxi}).
-Note that JTW presents slightly different expressions for one component of $\Abeta$ within~\cite{jtw} and~\cite{jtw_coulomb}, and the latter convention is what is adopted here.  
+Note that JTW presents slightly different expressions for one component of $\Abeta$ within~\cite{jtw} and~\cite{jtw_coulomb}, and the latter convention is what has been adopted here.  
 %Here, we adopt the convention from the latter publication.  
 
 We further require that both $M_F$ and $M_{GT}$ must be real, which can be done without loss of generality,~\aside{I don't think this is true...} however we do not require that they be positive, which would make the two conventions equivalent.  
@@ -115,7 +129,9 @@ We further require that both $M_F$ and $M_{GT}$ must be real, which can be done 
 There are a number of degrees of freedom left in the expressions that remain, and it is not immediately obvious how certain choices about these parameters might affect the physical results, or which approximations or assumptions ought to be made in order to arrive at a theory that matches the observational reality.  This is in part a result of the fact that the theory behind \ac{JTW} was developed before we had a detailed experimental understanding of much of the behaviour of beta decay, so all mathematically consistent behaviours are treated with roughly the same amount of consideration within the model.  
 
 %The qualitative meaning behind some such parameter choices is described in what follows.  
-Perhaps the most notable improvement to our understanding of Eqs.~(\ref{equation:integrated_jtw})-(\ref{eq:jtw_Abetaxi_integrated}) is that the weak interaction arises predominantly from vector ($C_V$, $C_V^\prime$) and axial-vector ($C_A$, $C_A^\prime$) couplings, and the scalar and tensor couplings, if present at all, are comparatively small and must be relegated to the realm of precision measurements to search for exotic physics. In particular, 
+Perhaps the most notable improvement to our understanding of Eqs.~(\ref{equation:integrated_jtw})-(\ref{eq:jtw_Abetaxi_integrated}) is that the weak interaction arises predominantly from vector ($C_V$, $C_V^\prime$) and axial-vector ($C_A$, $C_A^\prime$) couplings, and the scalar and tensor couplings, if present at all, are comparatively small.  
+% and must be relegated to the realm of precision measurements to search for exotic physics. 
+In particular, 
 \bea
 \frac{ |C_S|^2 + |C_S^\prime|^2 }{ |C_V|^2 + |C_V^\prime|^2 }        &\ll& 1 
 \\
@@ -132,8 +148,8 @@ Imaginary components of $C_X$ and $C_X^\prime$ are associated with breaking of t
 \\
 \left| \frac{\Im \,[C_X^\prime]}{\Re \,[C_X^\prime]} \, \right| &\ll& 1, 
 \eea
-which holds at least for the cases of $X=\{V,A\}$.  There is comparatively little experimental information on how scalar and tensor interactions might behave with regard to time reversal, for the obvious reason that they have never been observed.  
-\note{I think I made an even number of sign errors...}
+which holds \emph{at least} for the cases of $X=\{V,A\}$, as there is comparatively little experimental information on how scalar and tensor interactions might behave with regard to time reversal, for the obvious reason that they have never been observed.  \aside{This isn't quite right, there *are* limits....}
+%\note{I think I made an even number of sign errors...}
 In order to obtain the correct, physically observed value for $\Abeta$, we require that the 
 $M_{F}\,M_{GT}$ term in Eq.~(\ref{eq:jtw_Abetaxi}) have an overall positive value.  Because we know that the scalar and tensor couplings must be small, and any imaginary contributions to the term must be small, we conclude that
 \bea
@@ -147,7 +163,8 @@ $M_{F}\,M_{GT}$ term in Eq.~(\ref{eq:jtw_Abetaxi}) have an overall positive valu
 
 \aside{Also, $\xi = G_v^2 \, \cos\theta_C \, f_1(E).$}
 
-\note{More coulomb corrections in JTW notation:~\cite{EbelFeldman1957}.  Also, an update to Falkowski's review article\cite{Falkowski2021}, which currently still liives on the arxiv, is here:~\cite{Falkowski2022}. }
+\note{Handedness considerations?}
+
 
 
 %%%% --- * --- %%%%	
@@ -623,7 +640,8 @@ Holstein's $\Lambda_2$ is closely related to JTW's $\Talign$.  JTW has no equiva
 
 
 %%%% --- * --- %%%%	
-\section{Qualitative Parameter Descriptions and Convention Compatibility}
+%\section{Qualitative Parameter Descriptions and Convention Compatibility}
+\section{Combining Formalisms}
 
 
 
