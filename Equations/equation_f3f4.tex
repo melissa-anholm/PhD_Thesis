@@ -4,12 +4,12 @@
 %
 %%%% --- * --- %%%%	
 \begin{flalign}
-	f_3 \,\, = \,\, & \frac{p_\beta}{\left|E_0\right|}  \left( 	\frac{ e^{ \frac{ p_{\mathrm{k}} *(x-E_0) }{ \left|E_0\right|} } * e^{ \frac{p_{\textrm{toeres}} \, p_{\mathrm{k}}^2 }{2 \left|E_0\right|} } }{ 2 (1-e^{-p_{\mathrm{k}}} ) } \right)
-	\left(1 - \Erf\left[ \frac{ (x-E_0+p_{\textrm{toeres}} \, p_{\mathrm{k}} ) } {\sqrt{2 \,p_{\textrm{toeres}} \left|E_0\right| } } \right] \right), &&
+	f_3 \,\, = \,\, & \frac{p_\beta}{\left|E_{\textrm{in}}\right|}  \left( 	\frac{ e^{ \frac{ p_{\mathrm{k}} *(E_{\textrm{out}}-E_{\textrm{in}}) }{ \left|E_{\textrm{in}}\right|} } * e^{ \frac{p_{\textrm{toeres}} \, p_{\mathrm{k}}^2 }{2 \left|E_{\textrm{in}}\right|} } }{ 2 (1-e^{-p_{\mathrm{k}}} ) } \right)
+	\left(1 - \Erf\left[ \frac{ (E_{\textrm{out}}-E_{\textrm{in}}+p_{\textrm{toeres}} \, p_{\mathrm{k}} ) } {\sqrt{2 \,p_{\textrm{toeres}} \left|E_{\textrm{in}}\right| } } \right] \right), &&
 	\label{eq:f3}
 \end{flalign}
 \begin{flalign}
-	f_4 \,\, = \,\, & \frac{p_\gamma}{2}   \left( \Erf \left[ \frac{ x-E_0 }{ \sqrt{(2 \, p_{\textrm{toeres}} \left|E_0\right| )} }  \right]  
-	- \Erf \left[ \frac{ x-E_0-p_{W} }{ \sqrt{2 \, p_{\textrm{toeres}} \left| E_0+p_{W}\right| } } \right] \right), && 
+	f_4 \,\, = \,\, & \frac{p_\gamma}{2}   \left( \Erf \left[ \frac{ E_{\textrm{out}}-E_{\textrm{in}} }{ \sqrt{(2 \, p_{\textrm{toeres}} \left|E_{\textrm{in}}\right| )} }  \right]  
+	- \Erf \left[ \frac{ E_{\textrm{out}}-E_{\textrm{in}}-p_{W} }{ \sqrt{2 \, p_{\textrm{toeres}} \left| E_{\textrm{in}}+p_{W}\right| } } \right] \right), && 
 	\label{eq:f4}
 \end{flalign}
