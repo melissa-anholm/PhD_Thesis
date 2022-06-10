@@ -12,7 +12,7 @@
 \section{An Overview of Magneto-Optical Traps}
 \label{section:mot}
 %\note[org]{I need to organize the sections/subsections in this chapter/section better, and generally just de-Frankenstein it.}
-Since its initial description by Raab et. al. in 1987~\cite{raabprentiss}, the magneto-optical trap (MOT) has become a widely used technique in many atomic physics laboratories.  The MOT produces confined samples of cold, electrically neutral and isotopically pure atoms confined within a small spatial region.  It is these properties that make the MOT a valuable tool not only in atomic physics, but for precision measurements in nuclear physics as well, and the TRIUMF Neutral Atom Trap (TRINAT) collaboration has adopted the technique wholeheartedly.
+Since its initial description by Raab et. al. in 1987~\cite{raabprentiss}, the magneto-optical trap (MOT) has become a widely used technique in many atomic physics laboratories.\aside{An opportunity to cite a bunch of people here...} The MOT produces confined samples of cold, electrically neutral and isotopically pure atoms confined within a small spatial region.  It is these properties that make the MOT a valuable tool not only in atomic physics, but for precision measurements in nuclear physics as well, and the TRIUMF Neutral Atom Trap (TRINAT) collaboration has adopted the technique wholeheartedly.
 
 The technique is used predominantly with alkalis due to their simple orbital electron structure, and once set up it is quite robust.  The MOT's trapping force is specific to the isotope for which the trap has been tuned. This feature makes it ideal for use in precision radioactive decay experiments, since the daughters are unaffected by the trapping forces keeping the parent confined.
 
@@ -118,20 +118,41 @@ Although this setup will decrease atomic velocity, it does not create a confinin
 
 %%% % % % %%%
 \subsection{Atom Trapping with a MOT}
-%\note[cleanup]{Write the MOT section.}
-A Magneto-optical trap (MOT) combines the slowing features of an optical molasses (Sec.~\ref{sec:dopplercooling}) with the Zeeman splitting (Sec.~\ref{sec:zeemansplitting}) arising from a quadrupolar magnetic field, to produce a robust and isotope-specific trapping force in all three dimensions.  The quadrupolar magnetic field is typically generated using a Helmholtz coil surrounding the space in which the trap is formed, with the two coils' currents flowing anti-parallel to one another.  The quadrupole shape of the field implies that it must be zero at some central point between the two coils, and in the space nearby, the magnitude of the magnetic field increases linearly in every direction as one moves away from the centre.  
+A Magneto-optical trap (MOT) combines the slowing features of an optical molasses (Sec.~\ref{sec:dopplercooling}) with the Zeeman splitting (Sec.~\ref{sec:zeemansplitting}) arising from a quadrupolar magnetic field, to produce a robust and isotope-specific trapping force in all three dimensions.  
+
+The quadrupolar magnetic field is typically generated using a set of two current carrying electrical coils in a geometry similar to a Helmholtz coil, but with the two coils' currents flowing anti-parallel to one another.  This anti-Helmholtz coil is constructed to surround the trapping region, and introduces a quadrupolar magnetic field.  Within the central region where the trap is located, the magnetic field $\vec{B}$ has the approximate shape,
+\bea
+	\vec{B} &=& 2 B_0 z \,\hat{z} - (B_0 x \,\hat{x} + B_0 y \,\hat{y}), 
+\eea
+where $B_0$ represents the overall strength of the magnetic field, $\hat{x}$, $\hat{y}$, and $\hat{z}$ are coordinate unit vectors such that the $\hat{z}$ axis points along the axis of the anti-Helmholz coil, and $x$, $y$, and $z$ represent the position (relative to the central point between the two coils) at which the magnetic field is being described.
+%$\hat{x}$, $\hat{y}$, and $\hat{z}$ are coordinate unit vectors such that the $\hat{z}$ axis points along the axis of the anti-Helmholz coil.  
+In particular, this implies that the field magnitude is zero at the centre, and increases linearly in every direction as one moves away from the centre.
+%
+%This shape implies that the magnitude of the field must be zero at some central point between the 
+%surrounding the space in which the trap is formed, with the two coils' currents flowing anti-parallel to one another.  
+%
+%The quadrupole shape of the field implies that it must be zero at some central point between the two coils, and in the space nearby, the magnitude of the magnetic field increases linearly in every direction as one moves away from the centre.  
 
 The retroreflecting lasers are red-detuned and circularly polarized in a direction selected to couple to the Zeeman shifted energy level which will push a given atom towards the centre.  This provides a restoring force in all three dimensions to atoms that have moved too far from the centre.  See Fig.~\ref{fig:mot}.
 
 \begin{figure}[h!!!!!t!b]
 	\centering
 		\includegraphics[width=.999\linewidth]{mot.png}
-		\caption[Components of a Magneto-Optical Trap]{Components of a magneto-optical trap, including current-carrying magnetic field coils and counterpropagating circularly polarized laser beams. Diagram taken from~\cite{thesis}}
+		\caption[Components of a Magneto-Optical Trap]{Components of a magneto-optical trap, including counterpropagating circularly polarized laser beams (with $\sigma^\pm$ polarization) intersecting at the centre, and current-carrying electrical coils above and below the central intersection point, used to generate a magnetic field gradient.  With antiparallel currents, the magnitude of the field in the region near the centre is linear in all directions.  Diagram taken from~\cite{thesis}}.
 		\label{fig:mot}
     	\label{fig:themot}
 \end{figure}
 
+%\note[cleanup]{Write the MOT section.}
+%\note{quadrupolar?  prolly just say what I mean.  at least, John thinks so..}
+\note[done, nolist]{  JB:  \\
+*It would be simplest to write down what you mean by a quadrupole field. You could say: "approximately in our geometry near the trap center
+\\
+$\vec{B} = 2 B_o z \hat{z} - (B_0 x \hat{x} + B_0 y \hat{y})$
+}
+
 \note{Upon decay, atoms literally aren't trapped anymore by the trap.  No trapping forces, no slowing forces, because it's all isotope-specific.  This is super useful for us.}
+
 
 %%\note{The laser, which must be circularly polarized in the appropriate directions and tuned slightly to the red of an atomic resonance, is split into three perpendicular retroreflected beams, doppler cooling the atoms and (with the appropriate magnetic field) confining them in all three dimensions (see Figure~\ref{fig:mot}).  }
 
@@ -282,6 +303,9 @@ Immediately following each set of 100 optical pumping cycles, another set of ato
 
 %%% % % % %%%
 \section{The AC-MOT and Polarization Setup}
+\label{sec:acmot}
+\label{section:acmot_and_polarization}
+
 \note[done, nolist]{First, in Section 2.4 the sentence after Harvey and Murray are referenced could be "There are some details of the present implementation of the AC MOT in Ref.~\cite{thesis}, done with a separate MOT geometry from
 this beta decay work."
 \\
@@ -291,22 +315,10 @@ this beta decay work."
 \note[done, nolist]{
 *section 2.1.3 "using a Helmoltz coil" add "but with currents in opposite direction." (saying it correctly here then implicitly defines anti-Helmholtz which you use correctly later for the AC MOT)
 }
-\note[jbn, nolist]{
-*It would be simplest to write down what you mean by a quadrupole field. You could say: "approximately in our geometry near the trap center
-\\
-$\vec{B} = 2 B_o z \hat{z} - (B_0 x \hat{x} + B_0 y \hat{y})$
-}
-\note[jbn, nolist]{
-*section 2.4 near end "divergencelessness" is not a word. It's obvious how to fix it ''since del dot B =0 in a current-free region..."
-}
+
 \note[done, nolist]{*2.5.1 "roughly" -> "approximately" The Efield is not rough at all, it's pretty good really. }
 \note[done, nolist]{Is the rMCP really just a 2-plate chevron in 2014? I don't remember. Why can't I find Ben's thesis?}
 %
-\note[jbn, nolist]{Chapter 2 corrections from John: (trivial...):
-\\...\\
-*2.5.1 state clearly in an extra paragraph at the end that the polarization-determining data was taken with the rMCP, while the Abeta and bFierz data were taken with the eMCP. The polarization was assumed to be the same during the Abeta+bFierz data. This is backed up by constant 41K polarization data for weeks
-of optimization, with all optical pumping and B field switching parameters kept constant. Ambient magnetic field changes of 50 milliGauss could cause some polarization perturbations at the precision achieved, yet the stray fields are under control at that level. The TRINAT lab is in a basement well-shielded from the experimental hall by concrete with rebar, and though 50 mG fields are seen in that Hall from an open Helmholtz ion trap, they and the 5-ton crane produce negligible fields when measured at the atom trap. The cyclotron field makes 0.5 Gauss, predominantly vertical, and a smaller horizontal component, but trim Helmholtz coils at TRINAT are adjusted during calibrations with cyclotron on vs. off, and of course the cyclotron is on with constant field during the 37K delivery.
-}
 \note[jbn, nolist]{a glaring omission:
 \\
 \textbf{You don't state the polarization achieved 99.1$\pm$0.1 percent anywhere that I can see., citing the publication.} You might also state that's important for Abeta but has much more precision than needed for the near-zero bFierz term.
@@ -316,9 +328,7 @@ You mention the polarization is different by approximately 0.3\% in Section 6.1 
 Appendix A has ?? for a discussion of the changes of the polarization cut, so you need to clean up that \ref{}. It is presently in Section 6.1.
 }
 
-\label{sec:acmot}
-\label{section:acmot_and_polarization}
-\note{Fix the phrasing of AC-MOT/OP experimental section.  It's not passable, but still kind-of a mess.}
+\note{Fix the phrasing of AC-MOT/OP experimental section.  It's passable, but still kind-of a mess.}
 The AC-MOT was first described by Harvey and Murray~\cite{harveymurray}, but the TRINAT collaboration has adopted its use because it enables the polarization-destroying magnetic field to be eliminated quickly after the MOT is shut off.  Some details of the present implementation of the AC-MOT are given in Ref.~\cite{thesis}, done with a separate MOT geometry from this beta decay work.  A diagram of showing the operation phases of several key components in our AC-MOT/optical pumping duty cycle is shown in Fig.~\ref{fig:acmot}.
 
 \begin{figure}[ht]
@@ -411,6 +421,9 @@ We spin-polarize $^{37}\textrm{K}$ atoms within the trapping region by optical p
 %\comment{(is it still isotropic when it's polarized?  I bet it's not.)}
 so it follows that if there are available states of higher and lower angular momentum, the \emph{average} change in the angular momentum projection is zero.  If the atom is not yet spin-polarized, it can absorb and re-emit another photon, following a biased random walk towards complete polarization.  
 
+\note[jbn, nolist]{
+*section 2.4 near end "divergencelessness" is not a word. It's obvious how to fix it ''since del dot B =0 in a current-free region..."
+}
 
 In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  In particular, the magnetic field must be aligned along the polarization axis (otherwise the tendency will be to actually depolarize the atoms), and it must be uniform in magnitude over the region of interest (otherwise its divergencelessness will result in the field also having a non-uniform direction, which results in a spatially-dependent depolarization mechanism).  Note that this type of magnetic field is not compatible with the MOT, which requires a linear magnetic field gradient in all directions (characteristic of a quadrupolar field shape), and has necessitated our use of the AC-MOT.
 % as described in (Sub-)Section~\ref{sec:acmot}. \aside[org]{At some point I have to decide if that's going to be a section or a subsection.}
@@ -418,22 +431,27 @@ In order to optimally polarize a sample of atoms by this method, it is necessary
 
 %%%%%%% % %%%%%%%%
 \subsection{Magnetic Field Trimming}
-\note[jbn, nolist]{*you need a subsection in Section 2.4 "The AC-MOT and Polarization" on your field trimming.
-\\...\\
+\label{sec:trimming}
+\note[jbn, nolist]{*you need a subsection in Section 2.4 "The AC-MOT and Polarization" on your field trimming.}
+
+
+
+\note[jbn]{}
+\note[jbn]{begin quote from JB:}
 Time-constant ambient fields were trimmed in all dimensions using two horizontal pairs of Helmholtz coils and the AC MOT coils for the vertical direction.
 These ambient B fields were first trimmed to be near zero using a giant magnetoresistance 3-axis probe at the trap center, with the MCP assembly removed and the vacuum chamber up to air.
-\\...\\
+
 Final trimming was done by optimizing polarization of stable $^{41}$K atoms with the apparatus assembled (cite[Fenker PRL Suppl Mat] has some details).
-}
-\note[jbn, nolist]{The AC MOT and polarization B fields were generated by SRS DS345 arbitrary waveform generators, amplified by
+
+The AC MOT and polarization B fields were generated by SRS DS345 arbitrary waveform generators, amplified by
 Matsusada bipolar 20 KHz bandwidth 80A 20V amplifiers. The waveforms were carefully trimmed in amplitude and time to minimize B fields from eddy currents during the optical pumping cycle, again with the MCP assembly removed and the vacuum chamber up to air.
-\\...\\
+
 The bipolar amplifier bandwidth was inadequate when using current control mode, so voltage control had to be used, a much more time-exacting process requiring empirical iteration. These waveforms are not the same for the top and bottom coils, as during the optical pumping cycle one coil had to be flipped with respect to the MOT cycle to create the uniform vertical field for optical pumping by a Helmholtz rather than antiHelmholtz configuration.
-\\
+
 The beta detector full assemblies were in place during the field trimming.
-\\...\\
+
 All materials near the trap cloud are chosen to minimize both magnetic permeability to suppress time-constant B field gradients and conductivity to suppress eddy currents. E.g., the E field electrodes are made from either glassy carbon semiconductor or titanium alloy. A copper ring (not pictured in Fig. 2.5) with a slit mounted on each beta detector stainless steel reentrant flange suppresses the worst eddy currents fighting the B field along the z-axis. These designs were all confirmed by finite element calculations of another collaboration member.
-}
+\note[jbn]{end quote from JB.}
 
 
 
@@ -508,6 +526,13 @@ Due to an unfortunate interaction between the two MCP detectors, during the 2014
 %\note{Back-to-back MCPs in an electric field to tag events from the trap, and to measure the trap position and polarization.}
 %\note[org]{I guess I could describe how delay lines work, but I don't really want to.  Might be useful for in the next chapter though. ...actually, I think I've done it as well as is needed over there.}
 %\note[org]{At some point I probably have to mention how decays lose orbital electrons.  Do I do it in another section somewhere?}
+
+\note[jbn, nolist]{Chapter 2 corrections from John: (trivial...):
+\\...\\
+*2.5.1 state clearly in an extra paragraph at the end that the polarization-determining data was taken with the rMCP, while the Abeta and bFierz data were taken with the eMCP. The polarization was assumed to be the same during the Abeta+bFierz data. This is backed up by constant 41K polarization data for weeks
+of optimization, with all optical pumping and B field switching parameters kept constant. Ambient magnetic field changes of 50 milliGauss could cause some polarization perturbations at the precision achieved, yet the stray fields are under control at that level. The TRINAT lab is in a basement well-shielded from the experimental hall by concrete with rebar, and though 50 mG fields are seen in that Hall from an open Helmholtz ion trap, they and the 5-ton crane produce negligible fields when measured at the atom trap. The cyclotron field makes 0.5 Gauss, predominantly vertical, and a smaller horizontal component, but trim Helmholtz coils at TRINAT are adjusted during calibrations with cyclotron on vs. off, and of course the cyclotron is on with constant field during the 37K delivery.
+}
+
 
 \subsection{Beta Detectors}
 \label{section:betadetectors}

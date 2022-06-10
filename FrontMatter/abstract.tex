@@ -1,12 +1,70 @@
 % !TEX root = ../thesis_main.tex
-
-
+%
+%
 % Abstract
+%\newpage
 \clearpage
+%\null\vspace{\fill}
+%\null\vspace{36pt}
+%\vspace{-36pt}
 \begin{abstract}
+%\onehalfspacing
+%\vspace{-24pt}
+%\setstretch{1.1}
+There are four fundamental forces known to exist within the natural world:  electromagnetism, gravity, the strong nuclear force, and the weak nuclear force.  One of the primary windows to the inner workings of the weak nuclear force has long been found in observations of beta decay processes.  Of particular interest is the form taken by the couplings involved in beta decay; although prior experiments have shown that the process is dominated by a combination of so-called vector and axial couplings, the possibility of a non-dominant contribution from exotic scalar or tensor couplings remains.  Such a discovery would shake the foundations upon which our understanding of the weak force is built.
+
+%Although much is known about the behaviour of the weak force, 
+%major vehicles through which the weak nuclear force c
+%One of the primary vehicles through which the weak nuclear force can be understood and analyzed is 
+
+%
+A precision kinematic measurement of the beta decay process $\mbox{$^{37}$K$ \, \rightarrow \, ^{37}$Ar $ +\, \beta^+ + \nu_e$}$ is conducted to search for- or constrain exotic couplings within the nuclear weak force by measuring observable known as the Fierz interference ($\bFierz$).  This effect, if present, would manifest as a perturbation to the expected shape of the energy spectrum for betas emerging from a decay, and would be a definitive indication of the presence of scalar or tensor couplings.
+
+%
+%An observable known as the Fierz interference ($\bFierz$) 
+%which is comprised of a linear combination of any scalar and tensor couplings present in nature.  
+%This effect, if present, would manifest as a perturbation to the expected shape of the energy spectrum for betas emerging from a decay.  
+%
+%The search is performed by kinematic observations of the outgoing particles within the decay process, $^{37}$K$ \, \rightarrow \, ^{37}$Ar $ +\, \beta^+ + \nu_e$.  
+Measurements are carried out within the TRINAT laboratory located at TRIUMF, which provides the radioactive $^{37}$K necessary for the experiment.  The TRINAT apparatus provides the means to cool, confine, and intermittently spin-polarize $^{37}$K atoms within a magneto-optical trap.  Upon decay, outgoing particles are emitted from a small central cloud into an open geometry featuring a variety of detectors.  
+
+With a thorough understanding of the polarization, and a \emph{fractional} effect that changes size with the relative angle between the directions of polarization and beta emission, the superratio technique is able to provide an elegant mathematical tool to greatly decrease the size of many systematic uncertainties, at the cost of some statistical power.  Geant4 simulations are used to model scattering effects and background events that could mimic the signal being searched for.  The resulting measurement gives \, $\mbox{\!$\bFierz = +0.033 \pm 0.084(\textrm{stat}) \pm 0.039(\textrm{sys})$}$, consistent with the absence of exotic scalar and tensor couplings.
+
+
+\note[orange, nolist]{}
+\ifthenelse{\boolean{isdraft}}
+{
+	\clearpage
+}
+{}
+
+% 
+\note{prospective abstract first paragraph, now in the intro chapter: 
+\\...\\
+Within nature, there exist four fundamental forces governing the interactions of particles with one another:  the strong nuclear force, the weak nuclear force, electromagnetism, and gravity.  This work seeks to probe the nature of the weak nuclear force on its most fundamental level through observations of beta decay, a process which results directly from the action of the weak nuclear force.  Through kinematic observations of the decay products, much can be learned about the form of the weak nuclear force's coupling, through which beta decay proceeds.  Prior experiments have shown that this coupling is dominated by a combination of so-called vector and axial couplings, but the possibility of a non-dominant contribution from other types of operators cannot be ruled out entirely.  
+}
+
+%
+\note[orange, nolist]{Prototype abstract blurb on the superratio:
+\\...\\
+While the \emph{overall} size of the effect does not vary as a function of beta emission angle relative to the nuclear spin polarization, other effects do, and so the \emph{fractional} size of the effect also changes.  By constructing the superratio asymmetry, this feature allows for the cancellation of many systematic effects, at the cost of some statistical power.  
+}
+%
+\note[orange, nolist]{}
+%
 %The nuclear weak force is known to be a predominantly left-handed vector and axial-vector (V-A) interaction.  An experiment is proposed to further test that observation, constraining the strength of right-handed (V+A) currents by exploiting the principle of conservation of angular momentum within a spin-polarized beta decay process.  Here, we focus on the decay \mbox{$^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$}.  The angular correlations between the emerging daughter particles provide a rich source of information about the type of interaction that produced the decay.
-The nuclear weak interaction is known to feature both vector and axial-vector couplings in a dominant role, however the presence of scalar and tensor couplings cannot be ruled out entirely.~\aside[jbn]{Needs a more general sentence to start, and then needs to say what space these are 'vectors, ...tensors' in.}
-In beta decay physics, the Fierz interference, $\bFierz$, is an observable comprised of a linear combination of scalar and tensor couplings, and can be measured as an adjustment to the shape of the resultant beta energy spectrum.  A precision measurement experiment is conducted to observe the $\beta^+$ decay of spin-polarized $^{37}$K from an atom cloud intermittently confined by a magneto-optical trap, and  the beta energy spectra are observed in two detectors on opposing sides of the cloud, along the axis of polarization.  This geometry, combined with a knowledge of the polarization, allows the superratio asymmetry to be constructed, providing an observable which is particularly sensitive to the value of $\bFierz$, while simultaneously eliminating contributions from a variety of systematic effects.  Geant4 simulations are used to model scattering effects that could mimic the signal being searched for.  The resulting measurement gives $\mbox{\!$\bFierz = +0.033 \pm 0.084(\textrm{stat}) \pm 0.039(\textrm{syst})$\!}$, consistent with the Standard Model.~\aside[jbn]{Needs a sentence on why that's interesting.}
+\note[orange, nolist]{Old abstract:
+\\...\\
+The nuclear weak interaction is known to feature both vector and axial-vector couplings in a dominant role, however the presence of scalar and tensor couplings cannot be ruled out entirely.}
+\note[done, nolist]{JB:  Needs a more general sentence to start, and then needs to say what space these are 'vectors, ...tensors' in.}
+\note[orange, nolist]{ ... \\
+In beta decay physics, the Fierz interference, $\bFierz$, is an observable comprised of a linear combination of scalar and tensor couplings, and can be measured as an adjustment to the shape of the resultant beta energy spectrum.  
+\\...\\
+%
+A precision measurement experiment is conducted to observe the $\beta^+$ decay of spin-polarized $^{37}$K from an atom cloud intermittently confined by a magneto-optical trap, and  the beta energy spectra are observed in two detectors on opposing sides of the cloud, along the axis of polarization.  This geometry, combined with a knowledge of the polarization, allows the superratio asymmetry to be constructed, providing an observable which is particularly sensitive to the value of $\bFierz$, while simultaneously eliminating contributions from a variety of systematic effects.  Geant4 simulations are used to model scattering effects that could mimic the signal being searched for.  The resulting measurement gives $\mbox{\!$\bFierz = +0.033 \pm 0.084(\textrm{stat}) \pm 0.039(\textrm{sys})$\!}$, consistent with the Standard Model.
+}
+\note[done,nolist]{JB:  Needs a sentence on why that's interesting.}
+
 %A precision search for a linear combination of these exotic couplings is performed 
 %The nuclear weak force is understood to 
 %Although the nuclear weak force primarily involves
@@ -17,5 +75,7 @@ In beta decay physics, the Fierz interference, $\bFierz$, is an observable compr
 The abstract in its current form comprises 186 words or so. The FGS regulations allow for 350 words maximum; I would encourage the author to make better use of that space – not the least in light of my earlier comments regarding the “big picture” and such.
 }
 %\label{note:gs_08}
+
+\onehalfspacing
 \end{abstract}
 
