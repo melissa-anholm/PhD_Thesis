@@ -7,33 +7,52 @@
 \chapter{Statement of Contributions}
 \label{ch:contributions}
 
-\note[gs]{from Georg:
-\\
-3. As an outsider, it is my understanding that the author worked as part of a larger collaboration. It would be beneficial to clearly lay out what her unique contributions are. This could be done, for instance, in the Introduction, and/or the Conclusions.
-}
 %\note{Preface goes here.  Really, it's going to be a list of contributions that I made.  Maybe I should break it down by chapter?  Also, should this thing go in an appendix?}
 %\note[tag]{Make the phrasing less stupid.}
 %
-Contributions by the author and by collaborators to the project which is the topic of this thesis are described here, organized according to the chapter in which they are primarily described. 
+
+%Contributions by the author and by collaborators to the project which is the topic of this thesis are described here, organized according to the chapter in which they are primarily described. 
+
 %to the of the author, as well 
 %Contributions by the author of this thesis, and by 
 
-\subsection*{Chapter 1}
-\note{content goes here.}
-\subsection*{Chapter 2}
-Much of the experimental apparatus described here was designed and built before the author joined the TRINAT research group, with the notable exception of the AC-MOT, which I played a key part in designing and implementing as part of a previous MSc degree, as well as afterwards.  This includes magnetic field trimming and optimization during all parts of the AC-MOT/OP duty cycle, and logic triggers, both to control relevant instruments over the course of the duty cycle, and to record within data acquisition where within the duty cycle an event must lie.  
-\subsection*{Chapter 3}
-Calibration of the rMCP and subsequent measurements of the atom cloud position were performed by me.  Calibration of the eMCP, the two scintillators, and the DSSDs for the relevant experimental data were performed by Ben Fenker.  The switch to using the leading rather than trailing edge for all timing data was performed by me.  The scintillator walk correction was also done by me.  
-\subsection*{Chapter 4}
-Upgrades to the TRINAT Geant4 package to enable multithreading and allow for scalar and tensor couplings within the decay probability distributions was performed by me.  The simulation's representation of the materials and geometry used for our experimental chamber had already been set up by Spencer Behling and Ben Fenker.  Ben Fenker also set up the simulated DSSD calibration such that each simulated strip had the same resolution and noise as the real strip that it represented.  
+%\subsection*{Chapter 1}
+%\note{content goes here.}
+%\subsection*{Chapter 2}
+Much of the experimental apparatus described here was designed and built before I joined the TRINAT research group, with the notable exception of the AC-MOT, which I played a key part in designing and implementing as part of a previous MSc degree\cite{thesis}, as well as afterwards.  This includes time-independent magnetic field trimming, time-dependent control and optimization of the anti-Helmholtz coils for all parts of the AC-MOT/OP duty cycle with the development of custom waveforms, logic controls for the trapping and optical pumping lasers to maintain synchronization with the magnetic field, and related logic triggers to be recorded in data acquisition.   
 
-The simple monte carlo and associated response functions were created and optimized by me.  
+%and optimization during all parts of the AC-MOT/OP duty cycle, development of custom waveforms for the anti-Helmholtz coils
+%
+%and logic triggers, both to control relevant instruments over the course of the duty cycle, and to record within data acquisition where within the duty cycle an event must lie.  
 
-Although I was responsible for running and analyzing the G4 simulations, the SOE simulations in COMSOL were performed by Alexandre Gorelov.  The event-by-event combination of G4 and COMSOL spectra, their normalizations, and all further work with the simulated data was performed by me.  I was also responsible for checking that the TOF background model performed as expected.  
-\subsection*{Chapter 5}
-Yeah, there's stuff here.
-\note[tag]{Finish writing chapter 5 contributions.  And also chapter 6 contributions.  And, for that matter, chapter 1 contributions.}
-\subsection*{Chapter 6}
-There's stuff here too. 
+%\subsection*{Chapter 3}
+Calibration of the rMCP and subsequent measurements of the atom cloud position were performed by me.  Calibration of the eMCP, the two scintillators, and the DSSDs for the relevant experimental data was performed primarily by Ben Fenker.  The switch to using the leading rather than trailing edge for all timing data was implemented by me.  The scintillator walk correction was also performed by me.  
+
+%\subsection*{Chapter 4}
+Upgrades to the TRINAT Geant4 software package to enable multithreading and reconcile the \acs{JTW} and Holstein approaches (see Appendix~\ref{appendix_forthepeople}) to allow for scalar and tensor couplings within the main branch decay probability distribution were performed by me.  The implementation of the simulation's 2\% branch without exotic couplings, which was used for this analysis, had been completed earlier by other collaboration members.
+The simulation's representation of the materials and geometry used for our experimental chamber had already been set up by Spencer Behling and Ben Fenker.  Ben Fenker also set up the simulated DSSD calibration such that each simulated strip had the same resolution and noise as the real strip that it represented.  
+
+The simple monte carlo and associated response functions were created, optimized, and tested by me, and I was responsible for overseeing the Geant4 and simple monte carlo simulation runs.  
+
+%Although I was responsible for running and analyzing the G4 simulations, 
+
+The \ac{SOE} \ac{TOF} simulations in COMSOL were performed by Alexandre Gorelov, but the event-by-event combination of G4 and COMSOL spectra, their normalizations, and all further work with the simulated data was performed by me.  I was also responsible for checking that the TOF model of background events arising from the combination of COMSOL and Geant4 simulations performed as expected.  
+
+I was responsible for setting up the comparisons between experimental data and the parameter space of simulated $\Abeta$ and $\bFierz$ values.  The systematic effects listed in Table~\ref{table:budget} were all evaluated with me, with the exception of the low energy tail entry, which was evaluated by John Behr.  Additionally, although the final value of the beta scattering uncertainty was evaluated by me, its value as a fraction of total events at certain angles was agreed upon by the collaboration as a whole after much discussion, in advance of the acceptance for publication of our previous $\Abeta$ measurement with the same data~\cite{ben_Abeta}, and I have attempted to maintain a consistent approach in that regard.  
+
+The final values of the $\bFierz$ and $\Abeta$ measurements presented here, and the uncertainties associated with them, were evaluated by me.  
+
+I was also responsible for the collaboration's \emph{post hoc} discovery that the previous $\Abeta$ measurement had been performed using partially polarized data, and estimating the size of the effect to $\Abeta$.
+
+%\subsection*{Chapter 5}
+%Yeah, there's stuff here.
+%\note[tag]{Finish writing chapter 5 contributions.  And also chapter 6 contributions.  And, for that matter, chapter 1 contributions.}
+
+%\subsection*{Chapter 6}
+%There's stuff here too. 
+\note[done, nolist]{from Georg:
+\\
+3. As an outsider, it is my understanding that the author worked as part of a larger collaboration. It would be beneficial to clearly lay out what her unique contributions are. This could be done, for instance, in the Introduction, and/or the Conclusions.
+}
 
 %\end{preface}

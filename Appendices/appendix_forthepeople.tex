@@ -179,7 +179,7 @@ Holstein~\cite{holstein}~\cite{holstein_errata} generously provides explicit equ
 %This one is harder.  But here, we've already integrated over neutrino momentum at least.  That's something.  
 
 Here's Holstein's Eq.~(52):
-\input{equation_holstein52}\unskip
+\input{equation_holstein52}\unskip  % equation:holstein52
 where $\Ebeta$, $\vecpbeta$, $\pbeta$, $E_0$, $\dOmegabeta$, and $\FFpm$ are as in Eq.(\ref{equation:jtw_master}).
 %\note{... where $\Ebeta$, $\vecpbeta$, $\pbeta$, $E_0$, $\dOmegabeta$, and $\FFpm$ are as in Eq.\ref{equation:jtw_master}.
 %}
@@ -642,6 +642,59 @@ Holstein's $\Lambda_2$ is closely related to JTW's $\Talign$.  JTW has no equiva
 %%%% --- * --- %%%%	
 %\section{Qualitative Parameter Descriptions and Convention Compatibility}
 \section{Combining Formalisms}
+To combine the two formalisms, we begin by comparing individual terms within \ac{JTW}'s integrated \ac{PDF} (Eq.~\ref{equation:integrated_jtw}) and Holstein's comparable \ac{PDF} (Eq.~\ref{equation:holstein52}).  We find:
+\bea
+\xi &\approx& G_v^2 \cos^2\theta_c \,\, F_0(\Ebeta)  \label{eq:jtw_holstein_xi}
+\\
+\Abeta \xi &\approx& G_v^2 \cos^2\theta_c \,\, F_1(\Ebeta), \label{eq:jtw_holstein_Abetaxi}
+\eea
+where the equality is exact within certain limits as described below.
+
+With these relationships established, we can proceed to compare individual terms within each of the above expressions.  Recalling that \ac{JTW} retains fewer expansion terms than Holstein, and also neglects the smaller nuclear structure functions entirely, it is clear that many terms from Holstein simply have no equivalent within \ac{JTW}.  In fact, of the Holstein structure functions $a_1, a_2, b, c_1, c_2, d, e, f, g, h, j_2$, and $j_3$, only $a_1$ and $c_1$ are represented within \ac{JTW}.  Holstein has made it clear that $a_1$ and $c_1$ are related, respectively, to the Fermi (vector) and Gamow-Teller (axial) couplings.  However, \ac{JTW} uses more parameters to describe each of these:  the vector coupling is parameterized by $M_F$, $C_V$, and $C_V^\prime$, and the axial coupling by $M_{GT}$, $C_A$, and $C_A^\prime$.
+
+To properly compare the Holstein and JTW formalisms, Eqs.~(\ref{eq:jtw_holstein_xi}-\ref{eq:jtw_holstein_Abetaxi}) must be evaluated with $C_S \!=\! C_S^\prime \!=\! C_T \!=\! C_T^\prime = 0$, and $a_2 \!=\! b \!=\! c_2 \!=\! d \!=\! e \!=\! f \!=\! g \!=\! h \!=\! j_2 \!=\! j_3 \!=\! 0$, and $M = \infty$.  We find, from Eq.~(\ref{eq:jtw_holstein_xi}):
+\bea
+| a_1 |^2 \,\,\, G_v^2 \cos^2\theta_c &=& | M_F |^2 \, (|C_V|^2 + |C_V^\prime|^2 )  
+\label{eq:holstein_a1_from_xi} 
+\\
+| c_1 |^2 \,\,\, G_v^2 \cos^2\theta_c &=& |M_{GT}|^2 (|C_A|^2 + |C_A^\prime|^2 ) 
+\label{eq:holstein_c1_from_xi}, 
+\eea
+and treating Eq.~(\ref{eq:jtw_holstein_Abetaxi}) in a similar manner, 
+\bea
+| c_1 |^2 \,\,\, G_v^2 \cos^2\theta_c &=& 2 \, |M_{GT}|^2 \Re \left[ C_A C_A^{\prime *} \right]
+\label{eq:holstein_a1_from_Abeta} 
+\\
+\Re \left[ a_1^* c_1 \right] \,\,\, G_v^2 \cos^2\theta_c &=& - M_F \, M_{GT} \, \Re \left[ C_V C_A^{\prime *} + C_V^\prime C_A^* \right]
+\label{eq:holstein_a1c1}
+\eea
+
+At this point, given that we are working with complex coupling constants, it becomes clear that there may not be a uniquely defined relationship between the two formalisms' coupling constants.  Therefore, we will proceed by simply picking a convention and checking that it is self-consistent and produces the physical behaviour we expect.  
+
+Because we expect Holstein to use only the physically observed left-handed couplings, we will enforce left-handed couplings within \ac{JTW}'s couplings as well.  In particular, for left-handed couplings, we have~\cite{Falkowski2021}:
+\bea
+C_V &=& C_V^\prime \\
+C_A &=& C_A^\prime.
+\eea
+One possible convention for the relationship between the two formalisms which is consistent with the constraints described above is:
+\bea
+a_1 &=& \frac{M_F}     {G_v \cos\theta_c} \, \frac{1}{\sqrt{2}} \, (C_V + C_V^\prime )  
+\label{eq:a1_def}
+\\
+c_1 &=& \frac{- M_{GT}}{G_v \cos\theta_c} \, \frac{1}{\sqrt{2}} \, (C_A + C_A^\prime )
+\label{eq:c1_def}
+\eea
+
+
+%we must find a regime in which the two 
+
+%, with the matrix elements $M_F$ and $M_{GT}$ being unique to each nucleus, and the $C_X$ and $C_X^\prime$ .
+% in order to account for both left-handed and right-handed couplings.
+
+
+
+
+
 
 
 

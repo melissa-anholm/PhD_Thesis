@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{jtw}
 Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
@@ -93,6 +93,17 @@ Lee, T.-D. {\mdseries and} Yang, C.-N., \textit{Question of parity conservation
 Wu, C.~S., Ambler, E., Hayward, R.~W., Hoppes, D.~D. {\mdseries and} Hudson,
   R.~P., \textit{Experimental Test of Parity Conservation in Beta Decay}, Phys.
   Rev., Vol.~105, pp.~1413--1415, Feb 1957.
+
+\bibitem{RustadRuby1955tensor}
+Rustad, B.~M. {\mdseries and} Ruby, S.~L., \textit{Gamow-Teller Interaction in
+  the Decay of ${\mathrm{He}}^{6}$}, Phys. Rev., Vol.~97, pp.~991--1002, Feb
+  1955.
+
+\bibitem{BurgyEpstein1957scalartensor}
+Burgy, M.~T., Epstein, R.~J., Krohn, V.~E., Novey, T.~B., Raboy, S., Ringo,
+  G.~R. {\mdseries and} Telegdi, V.~L., \textit{Measurement of Beta Asymmetry
+  in the Decay of Polarized Neutrons}, Phys. Rev., Vol.~107, pp.~1731--1733,
+  Sep 1957.
 
 \bibitem{FeynmanGellMann1958}
 Feynman, R.~P. {\mdseries and} Gell-Mann, M., \textit{Theory of the Fermi
@@ -346,24 +357,6 @@ Sternberg, M.~G., Segel, R., Scielzo, N.~D., Savard, G., Clark, J.~A., Bertone,
   sensitivity to the Fierz term of $\beta$-decay differential spectra}},
   Physical Review C, Vol.~94, No.~3, pp.~035503, Sep. 2016.
 
-\bibitem{krane}
-Krane, K.~S., Introductory Nuclear Physics, Wiley, New York, 1988.
-
-\bibitem{pdg2018}
-{Tanabashi}, M. i. P. D.~G., \textit{Review of Particle Physics}, Phys. Rev. D,
-  Vol.~98, pp.~030001, Aug 2018.
-
-\bibitem{RustadRuby1955tensor}
-Rustad, B.~M. {\mdseries and} Ruby, S.~L., \textit{Gamow-Teller Interaction in
-  the Decay of ${\mathrm{He}}^{6}$}, Phys. Rev., Vol.~97, pp.~991--1002, Feb
-  1955.
-
-\bibitem{BurgyEpstein1957scalartensor}
-Burgy, M.~T., Epstein, R.~J., Krohn, V.~E., Novey, T.~B., Raboy, S., Ringo,
-  G.~R. {\mdseries and} Telegdi, V.~L., \textit{Measurement of Beta Asymmetry
-  in the Decay of Polarized Neutrons}, Phys. Rev., Vol.~107, pp.~1731--1733,
-  Sep 1957.
-
 \bibitem{SeverijnsTandecki2008}
 Severijns, N., Tandecki, M., Phalet, T. {\mdseries and} Towner, I.~S.,
   \textit{$\mathcal{F}t$ values of the $T=1/2$ mirror \ensuremath{\beta}
@@ -389,9 +382,16 @@ Severijns, N., Beck, M. {\mdseries and} Naviliat-Cuncic, O., \textit{Tests of
   the standard electroweak model in nuclear beta decay}, Rev. Mod. Phys.,
   Vol.~78, pp.~991--1040, September 2006.
 
+\bibitem{krane}
+Krane, K.~S., Introductory Nuclear Physics, Wiley, New York, 1988.
+
 \bibitem{wong1990}
 Wong, S., Introductory Nuclear Physics, Prentice Hall Advanced Reference Series
   Prentice Hall Labora, Prentice Hall, 1990.
+
+\bibitem{pdg2018}
+{Tanabashi}, M. i. P. D.~G., \textit{Review of Particle Physics}, Phys. Rev. D,
+  Vol.~98, pp.~030001, Aug 2018.
 
 \bibitem{holstein}
 {Holstein}, B.~R., \textit{{Recoil effects in allowed beta decay: The
@@ -401,12 +401,6 @@ Wong, S., Introductory Nuclear Physics, Prentice Hall Advanced Reference Series
 \bibitem{nucleardata2012}
 Cameron, J., Chen, J., Singh, B. {\mdseries and} Nica, N., \textit{Nuclear data
   sheets for A= 37}, Nuclear Data Sheets, Vol.~113, No.~2, pp.~365--514, 2012.
-
-\bibitem{ChinPhysC2012}
-{Wang}, M., {Audi}, G., {Wapstra}, A.~H., {Kondev}, F.~G., {MacCormick}, M.,
-  {Xu}, X. {\mdseries and} {Pfeiffer}, B., \textit{The AME2012 atomic mass
-  evaluation (II). Tables, graphs and references}, Chin.Phys.C, Vol.~36,
-  pp.~1603, 2012.
 
 \bibitem{Levinger}
 Levinger, J.~S., \textit{Effects of Radioactive Disintegrations on Inner
@@ -563,6 +557,38 @@ Rester, D.~H. {\mdseries and} Derrickson, J.~H., \textit{Electron Transmission
   1.0 and 2.5 MeV}, Journal of Applied Physics, Vol.~42, No.~2, pp.~714--721,
   1971.
 
+\bibitem{Falkowski2022}
+Falkowski, A., González-Alonso, M., Palavrić, A. {\mdseries and}
+  Rodríguez-Sánchez, A., \textit{Constraints on subleading interactions in
+  beta decay Lagrangian}, 2022.
+
+\bibitem{GonzalesalonsoNaviliatcuncicSeverijns2019}
+González-Alonso, M., Naviliat-Cuncic, O. {\mdseries and} Severijns, N.,
+  \textit{New physics searches in nuclear and neutron $\beta$ decay}, Progress
+  in Particle and Nuclear Physics, Vol.~104, pp.~165--223, 2019.
+
+\bibitem{HardyTownerSuperallowed2020}
+Hardy, J.~C. {\mdseries and} Towner, I.~S., \textit{Superallowed
+  ${0}^{+}\ensuremath{\rightarrow}{0}^{+}$ nuclear $\ensuremath{\beta}$ decays:
+  2020 critical survey, with implications for ${V}_{\mathit{ud}}$ and CKM
+  unitarity}, Phys. Rev. C, Vol.~102, pp.~045501, Oct 2020.
+
+\bibitem{UCNAfierz2020}
+Sun, X., Adamek, E., Allgeier, B., Bagdasarova, Y., Berguno, D.~B., Blatnik,
+  M., Bowles, T.~J., Broussard, L.~J., Brown, M. A.-P., Carr, R., Clayton, S.,
+  Cude-Woods, C., Currie, S., Dees, E.~B., Ding, X., Filippone, B.~W.,
+  Garc\'{\i}a, A., Geltenbort, P., Hasan, S., Hickerson, K.~P., Hoagland, J.,
+  Hong, R., Holley, A.~T., Ito, T.~M., Knecht, A., Liu, C.-Y., Liu, J., Makela,
+  M., Mammei, R., Martin, J.~W., Melconian, D., Mendenhall, M.~P., Moore,
+  S.~D., Morris, C.~L., Nepal, S., Nouri, N., Pattie, R.~W., P\'erez~G\'alvan,
+  A., Phillips, D.~G., Picker, R., Pitt, M.~L., Plaster, B., Salvat, D.~J.,
+  Saunders, A., Sharapov, E.~I., Sjue, S., Slutsky, S., Sondheim, W., Swank,
+  C., Tatar, E., Vogelaar, R.~B., VornDick, B., Wang, Z., Wei, W., Wexler,
+  J.~W., Womack, T., Wrede, C., Young, A.~R. {\mdseries and} Zeck, B.~A.,
+  \textit{Improved limits on Fierz interference using asymmetry measurements
+  from the Ultracold Neutron Asymmetry (UCNA) experiment}, Phys. Rev. C,
+  Vol.~101, pp.~035503, Mar 2020.
+
 \bibitem{severijns_cuncic_2011}
 Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
   nuclear beta decay}, Annual Review of Nuclear and Particle Science, Vol.~61,
@@ -572,11 +598,6 @@ Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
 Ebel, M. {\mdseries and} Feldman, G., \textit{Further remarks on Coulomb
   corrections in allowed beta transitions}, Nuclear Physics, Vol.~4,
   pp.~213--214, 1957.
-
-\bibitem{Falkowski2022}
-Falkowski, A., González-Alonso, M., Palavrić, A. {\mdseries and}
-  Rodríguez-Sánchez, A., \textit{Constraints on subleading interactions in
-  beta decay Lagrangian}, 2022.
 
 \bibitem{holstein_errata}
 Holstein, B.~R., \textit{Erratum: Recoil effects in allowed beta decay: The

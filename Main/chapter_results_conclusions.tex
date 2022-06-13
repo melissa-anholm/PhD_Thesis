@@ -11,7 +11,7 @@
 \label{sec:measured_limits}
 \note[tag]{put in that thing John said.}
 
-\note[jb1]{JB on Ch. ~\ref{sec:measured_limits}:
+\note[done, nolist]{JB on Ch. ~\ref{sec:measured_limits}:
 \\...\\
 you just have to summarize the figures. Point out the natural dilution
 of Abeta result if energy-dependent new physics is allowed to float.
@@ -29,43 +29,12 @@ After corrections have been applied and uncertainties evaluated, statistical con
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/Chi2_2D_AllData.png}
-	\caption[$\chi^2$ Map for All Data]{A $\chi^2$ map to compare all data to a parameter space of $\Abeta$ and $\bFierz$ values.  All corrections have been included, however only statistical confidence intervals are shown.}	
+	\caption[$\chi^2$ Map for All Data]{A $\chi^2$ map to compare all data to a simulated parameter space of $\Abeta$ and $\bFierz$ values.  All corrections have been included, however only statistical confidence intervals are shown.}	
 	\label{fig:2dchi2_alldata}
 \end{figure}
 %
-and a list of contributing uncertainties is provided in Table~\ref{table:budget}.
+and a list of contributing uncertainties is provided in Table~\ref{table:budget}.  The error is dominated by statistics, which is unsurprising given that the superratio asymmetry has been used, thereby decreasing systematic errors in exchange for an increase in statistical errors (see Appendix~\ref{appendix:superratio} for a further discussion of the superratio and superratio asymmetry).  
 \input{table_budget}  %\label{table:budget}
-
-
-%%an oversight in data cut
-%%when one accounts for the fact that an oversight in the previous analysis led to 
-%Info on the $\Abeta$ measurement goes here too.  In particular, you set $\bFierz=0$ and see what happens to $\Abeta$.
-
-%%%% %%%%%%% %%%
-%%\section{Discussion of Corrections and Uncertainties}
-%\note{Kludgily removed an entire section:  ``Discussion of Corrections and Uncertainties''.  But comments from John on that section still remain.}
-%%\note[tag]{Write Discussion Section.}
-%\label{sec:discussion_corrections_uncertainties}
-%%\section{Overview}	
-%%A summary of systematics goes here.  In words, yes, but also in table form.
-%%%%\note[jb1]{JB on simple things still missing:
-%%%%\\
-%%%%I see no statement near Table ~\ref{table:budget} that you are adding the uncertainties in
-%%%%quadrature. As part of that you need a simple summary
-%%%%statement that all uncertainties are
-%%%%uncorrelated and, after the corrections applied, believed to be random. 
-%%%%}
-%
-%%%%A list of uncertainties is provided in Table~\ref{table:budget}.
-%%%%\input{table_budget}  %\label{table:budget}
-%
-%%	\section{Low-energy Scintillator Threshold}
-%%\aside{Choice of low-energy scintillator threshold has a large systematic effect...  
-%%\\...\\
-%%It's actually not nearly as big as I'd originally expected.  It's huge in the lineshape thing, but pretty tiny in everything else.}
-%
-%%%%%\note[jb1]{from John:  ``I used Ben's threshold when determining the uncertainty from the lineshape tail (UFTLT). 
-%%%%%If you're saying the UFTLT depends on the threshold used, ok, of course it does. But if you're claiming that UFTLT depends on the **uncertainty** of the threshold, that's manifestly smaller than the UFTLT itself, and I'm going to assert it isn't worth evaluating.''}
 
 %
 \note{Just write a blurb to qualitatively summarize a bunch of the stuff in Ch.~\ref{systematics_chapter}.}
@@ -90,13 +59,71 @@ Accounting for this, a more accurate one-parameter measurement might produce the
 
 
 
-\section{Relation to Current Limits on Scalar and Tensor Interactions}
+\section{Relation to Present Limits on Scalar and Tensor Interactions}
 \label{sec:scalartensorlimits}
-\note{Look up some literature.  Use that picture from John.  Probably use that blurb from John, too.}
+\label{sec:relation_to_other_measurements}
+\note{begin literal quote from John:}
+The best existing measurement of the Fierz interference term is in the decay of the neutron, with
+\mbox{$\bFierz = 0.017 \pm 0.021$} --- consistent with the Standard Model prediction of zero~\cite{Saul2020}. Our measurement is strongly related, yet complementary.  
+%
+This result for $\bFierz$ cannot be directly compared to our result  in $^{37}$K, because the neutron's sensitivity to scalar and tensor couplings is different than our own.  
+%
+In terms of non-Standard Model Lorentz current structures, to lowest order in the non-SM  currents the same equation applies:
+\bea
+\bFierz = \pm \frac{(C_S +C_S') + (C_T - C_T') \lambda^2}{ 1 + \lambda^2}
+\eea
+where the top/bottom sign is for $\beta^-$/$\beta^+$ decay~\cite{jtw}.~\aside{I think we're missing a $\gamma$.}
+%(the plus is for $\beta^-$ decay and the - for $\beta^+$ decay)
 
-...
-\note[org, nolist]{I have legit just deleted a section in Ch.6:  "Relation to Other Measurements and New Overall Limits".  It's gone now.  Because it was stupid.  Only John's comments about what it might do in the future remain.}
-\note[jb1, nolist]{JB on Ch.~\ref{sec:relation_to_other_measurements}:  "Relation to Other Measurements and New Overall Limits"
+In our $^{37}$K case, $\lambda^2$ = $|M_{\rm GT}|^2$/$|M_{\rm F}|^2$ is close to 3/5 (the expected value of \mbox{$J/(J+1)$} for a single $J=3/2$, $d 3/2$ nucleon)~\cite{deShalit1963},
+while for the neutron $\lambda^2$ is close to 3 (the expected value for a $(J+1)/J$, $J=1/2$, $s1/2$ nucleon).
+$|M_F|$, the Fermi matrix element, is nearly the same for both of these isospin = 1/2 decays (the largest correction is the larger isospin mixing of $\sim$0.01 in $^{37}$K).
+So our observable is relatively less sensitive to Lorentz tensor currents, and will predominantly constrain or discover Lorentz scalar currents.  See Fig.~(\ref{fig:exclusionplotfromjohn}).
+
+\note{}
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=.999\linewidth]{Figures/JB_exclusion.pdf}
+	\caption[That exclusion plot from John.]{That exclusion plot from John.  I think he means ``$C_S - C_S^\prime$'', etc.}	
+	\label{fig:exclusionplotfromjohn}
+\end{figure}
+
+However, measurements of the superallowed $0^+ \rightarrow 0^+$ beta decays are able to produce constraints on scalar couplings which are unrivaled by any other type of measurement, and improving with every experimental generation.  Though these transitions offer no sensitivity at all to tensor couplings, it would be incredibly difficult for a mixed transition measurement such as ours to compete on scalar coupling limits with the superallowed $0^+ \rightarrow 0^+$ transitions.  At the time of writing, the superallowed $0^+ \rightarrow 0^+$ transition measurements have together produced a constraint of \mbox{$\left| C_S / C_V \right| \leq 0.0010$} at the $1\sigma$ confidence level~\cite{HardyTownerSuperallowed2020}.
+\note{}
+
+%.It would be incredibly difficult to compete with such measurements 
+%
+%
+%in the realm of constraints to scalar couplings, 
+%it is very difficult to compete with measurements from superallowed $0^+ \rightarrow 0^+$ beta decays.  Though they offer no sensitivity at all to tensor couplings, 
+
+% offer powerful constraints .  
+% Measurements of superallowed $0^+ \rightarrow 0^+$ beta decay transitions offer powerful constraints to weak force scalar couplings, but are completely unaffected by possible tensor couplings.  
+
+%that would be very difficult to compete with by observations of a mixed transition. }
+
+Full considerations would require a weighted fit of $\bFierz$ experiments and similar observables~\cite{Falkowski2021}, and are beyond the scope of this thesis.
+The info from this thesis, values of $\Abeta$ and $\bFierz$ with their uncertainties, can together with the known $fT$ value (lifetime and
+branching ratio) allow the community and/or the collaboration to include the results in a future constraint or discovery of scalar and tensor Lorentz currents
+contributing to $\beta$ decay.
+\note{end literal quote from John.}
+
+\note{Some citations of things I'll probably want to use:
+\\...\\
+Falkowski (v1, v2):  \cite{Falkowski2021}\cite{Falkowski2022}.  
+\\
+Gonzales-Alonso, Naviliat-Cuncic, Severijns (2019) review on searches:  \cite{GonzalesalonsoNaviliatcuncicSeverijns2019}.
+\\
+Hardy and Towner review limits from superallowed beta decay, 2020:  \cite{HardyTownerSuperallowed2020}.
+\\
+UCNA does $\bFierz$, 2020 version.  They got $\bFierz = 0.066 \pm 0.041$(stat) $\pm 0.024$(sys) for the neutron\cite{UCNAfierz2020}.
+\\
+Saul and some other collaboration does $\bFierz$, 2020 version.  They got $\bFierz = 0.017 \pm 0.021$ \cite{Saul2020}.  (they also make the claim that I make about how the SR trades stats for reduced systematics.)
+}
+%\note{Look up some literature.  Use that picture from John.  Probably use that blurb from John, too.}
+
+%\note[org, nolist]{I have legit just deleted a section in Ch.6:  "Relation to Other Measurements and New Overall Limits".  It's gone now.  Because it was stupid.  Only John's comments about what it might do in the future remain.}
+\note[done, nolist]{JB on Ch.~\ref{sec:relation_to_other_measurements}:  "Relation to Other Measurements and New Overall Limits"
 \\
 6.3 might be better left to a collaboration memo. You have to decide what to do here,
 and decide it quickly.
@@ -113,7 +140,7 @@ will see even with 0.09 uncertainty you compete with them on the scalar limit.
 beta-nu scalar limit. I think the constraints on Lorentz scalars are hard to
 compete with.)
 }
-\note[jb1, nolist]{JB says:   To put your work in context, please add at the end of that minimal S,T section, or at the end of "Our Decay" section
+\note[done, nolist]{JB says:   To put your work in context, please add at the end of that minimal S,T section, or at the end of "Our Decay" section
 \\ ... \\
 The best existing measurement of $\bFierz$ is in the decay of the neutron~\cite{Saul2020},
 $\bFierz$ = 0.017 $\pm$ 0.021, consistent with the Standard Model prediction of zero.
@@ -123,7 +150,7 @@ In terms on non-Standard Model Lorentz current structures, to lowest order in th
 $\bFierz$ = $\pm$ $(C_S +C_S' + (C_T - C_T') \lambda^2)/( 1 + \lambda^2)$
 \\
 (the plus is for $\beta^-$ decay and the - for $\beta^+$ decay)~\cite{jtw}.  [to be continued...] }
-\note[jb1, nolist]{[...continued from prev.]
+\note[done, nolist]{[...continued from prev.]
 \\
 In our $^{37}$K case, $\lambda^2$ = $|M_{\rm GT}|^2$/$|M_{\rm F}|^2$ is close to 3/5 (the expected value j/(j+1) for a single j=3/2 d3/2 nucleon)~\cite{deShalit1963},
 while for the neutron $\lambda^2$ is close to 3 (the expected value for an (j+1)/j j=1/2 s1/2 nucleon).
@@ -134,8 +161,7 @@ Full considerations would require a weighted fit of $\bFierz$ experiments and si
 The info from this thesis, values of $\Abeta$ and $\bFierz$ with their uncertainties, can together with the known $fT$ value (lifetime and
 branching ratio) allow the community and/or the collaboration to include the results in a future constraint or discovery of scalar and tensor Lorentz currents
 contributing to $\beta$ decay.}
-\note[org, nolist]{End of John's comments on the section I deleted.}
-...
+%\note[org, nolist]{End of John's comments on the section I deleted.}
 
 
 %%%\section{Relation to Other Measurements and New Overall Limits}
@@ -143,6 +169,7 @@ contributing to $\beta$ decay.}
 %%%%%%% %%%%%%%%% %%%%%%%%
 %\clearpage
 \section{That figure from John}
+In which we talk about and possibly *put* Fig.~\ref{fig:exclusionplotfromjohn}.
 \note[jbn, nolist]{
 ii) Similarly, answering how the results fit into the bigger picture is what you wanted to do.
 \\...\\
@@ -153,12 +180,6 @@ asymmetry, cite the best paper in the neutron and maybe the UCNA one as well, an
 \\...\\
 It is a good approximation to linearize the situation, i.e. this figure is good for small Cs and Ct. (A similar approach is being used in a letter coming out soon, and 3 referees did not nag them about it.)
 }
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=.999\linewidth]{Figures/JB_exclusion.pdf}
-	\caption[That exclusion plot from John.]{That exclusion plot from John.  I think he means ``$C_S - C_S^\prime$'', etc.}	
-	\label{fig:nuclearleveldiagram_new}
-\end{figure}
 
 \note[jbn, nolist]{Immediate follow-up email from John:  
 \\...\\
@@ -183,47 +204,33 @@ So all the known information about Ca and Cv is accounted for.
 
 %
 %%%%%%% %%%%%%%%% %%%%%%%%
-\clearpage
+\FloatBarrier
 \section{Possible Future Work:  $R_{\textrm{slow}}$}
 \label{section_rslow}
+\subsection{Background}
+As discussed in Ch.~\ref{intro_chapter}, the nuclear weak force is known to be a predominantly left-handed vector and axial-vector $(V-A)$ interaction -- meaning that immediately following an interaction (e.g. beta decay) with a weak force carrying boson ($W^+,\: W^-,\: Z$), 
+normal-matter leptons (such as the electron and electron neutrino) emerge with left-handed chirality,
+while the anti-leptons (e.g. the positron and electron anti-neutrino) emerge with right-handed chirality.  
 
-\note[jbn, nolist]{More thoughts from John:
-\\...\\
-hi Melissa,
-\\...\\
-I think you should keep Section 6.2, but I think it would be clearer to point out the observable manifests as a dip in the raw TOF spectrum, not going all the way to zero as in the ideal on-axis situation you describe for simplicity.
-I.e., I would say you need to qualify this "exactly" word (emphasis mine below), and since
-it ends up as a cos(theta) distribution like in my attached slide on the subject, your figure of the TOF spectrum would be a good way to do that.
-\\...\\
-"Henceforth, daughter nuclei from a back-to-back decay as shown in
-Figure ?? will be described as ‘slow’ recoils. In terms of observables, this means that
-if the electric field is configured to point along one of the axes perpendicular to the
-polarization direction, then when the recoiling ion is swept away into a detector, the
-slow recoil’s hit position should be \textbf{exactly}​​ along the projection of the polarization
-axis. Furthermore, the slow recoil’s time of flight should be in the middle of the time
-of flight spectrum, since other recoils will be emitted with momentum towards or
-away from the detector"
-}
-\ifthenelse{\boolean{isdraft}}
-{
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=.999\linewidth]{Feedback/AMirrorDecayObservable.png}
-	\caption[A Slide From John]{A Slide From John, or something.  idk, it goes with the text immediately previous.}
-%	\label{}
-\end{figure}
-\FloatBarrier
-}
-{}
+In the limit of massless particles, the particle's chirality is the same as its helicity. Thus, in a left-handed model, the direction of an (ultrarelativistic) normal lepton's spin is antiparallel direction of its motion, and the direction of spin for an anti-lepton is parallel to its direction of motion.  For a non-relativistic particle the property of chirality is fairly abstract, and describes the appropriate group representation and projection operators to be used in calculations.  It should be noted that a fully chiral model is also one which is maximally parity violating.
 
+This odd quirk of the nuclear weak force is not only \emph{predominantly} true, but it is, to the best of our current scientific knowledge, \emph{always} true -- that is, attempts to measure any right-handed chiral components of the weak force have produced results consistent with zero~\cite{severijns_beck_cuncic_2006}\cite{severijns_cuncic_2011}.  This project proposes a further measurement to constrain the strength of the right-handed component of the weak interaction.  
 
-\note{Probably shouldn't get a clearpage in the end.  It's for my sanity during writing.}
-\note[jb1]{John says the whole $R_{\textrm{slow}}$ thing should go in here somewhere.}
-\note[jb1]{Appendix I  keep, it's excellent. It should be moved as is to Conclusions under "Future Experiment for the collaboration"! so people know you worked so hard on it!!}
-%\section{An Old Rslow Abstract}
-As discussed in Ch.~\ref{sec:modernprecision}, the nuclear weak force is known to be a predominantly left-handed vector and axial-vector (V-A) interaction.  An experiment is proposed to further test that observation, constraining the strength of right-handed (V+A) currents by exploiting the principle of conservation of angular momentum within a spin-polarized beta decay process.  %\comment{
-Here, we focus on the decay \mbox{$^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$}.  The angular correlations between the emerging daughter particles provide a rich source of information about the type of interaction that produced the decay.
-%}
+Although the primary focus of this thesis is a search for exotic scalar and tensor couplings within the weak force, it is clear that a precision search for right-handed vector and axial-vector $(V+A)$ interactions would be motivated by very similar rationale.
+
+In the proposed experiment, we focus once again on the spin-polarized decay, \mbox{$^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$}, exploiting the principle of conservation of angular momentum as it applies to this transition.  The proposed analysis could be performed on the data that has already been collected, although as we will see, there are some inherent difficulties to this approach which might be eliminated with a fresh set of decay data.
+
+%It would be possible to perform such an analysis
+
+%An experiment is proposed to further test that observation, constraining the strength of right-handed (V+A) currents by exploiting the principle of conservation of angular momentum within a spin-polarized beta decay process.  %\comment{
+%Here, we focus on the decay \mbox{$^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$}.  
+
+%%%%
+%%%%\subsection{Motivation}
+%%%%\label{rslow_motivation}
+%%%%
+%%%%The angular correlations between the emerging daughter particles provide a rich source of information about the type of interaction that produced the decay.
+%%%%%}
 
 %, meaning that \comment{the fuck does it even mean?}, but limits are \comment{something something dark side}.  However, we are able to describe the probability distribution for the kinematics of the daughter particles in a beta decay reaction in terms of both right- and left-handed interactions, and scalar, tensor, vector, and axial couplings.  
 %It is therefore possible to perform tests of the Standard Model by precisely measuring the kinematics within a beta decay process.  
@@ -243,20 +250,19 @@ Here, we focus on the decay \mbox{$^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!
 %Precision measurements of this decay are expected to be sensitive to the presence of right-handed vector currents, as well as a linear combination of scalar and tensor currents.  Progress towards a final result is presented here.
 %\color{black}
 
-\subsection{Motivation}
-\label{rslow_motivation}
 
-The nuclear weak force has long been known to be a predominantly left-handed chiral interaction, meaning that immediately following an interaction (such as a beta decay) with a weak force carrying boson ($W^+,\: W^-,\: Z$), 
-%leptons emerge with left-handed chirality.  
-normal-matter leptons (such as the electron and electron neutrino) emerge with left-handed chirality
-% as seen from the decay frame, 
-%\comment{(chirality?)}, chirality, 
-while the anti-leptons (e.g. the positron and electron anti-neutrino) emerge with right-handed chirality.  
-%\comment{(chirality?)}.  chirality.  
-In the limit of massless particles, the particle's chirality is the same as its helicity. Thus, in a left-handed model, the direction of an (ultrarelativistic) normal lepton's spin is antiparallel direction of its motion, and the direction of spin for an anti-lepton is parallel to its direction of motion.  For a non-relativistic particle the property of chirality is fairly abstract, and describes the appropriate group representation and projection operators to be used in calculations.  It should be noted that a fully chiral model is also one which is maximally parity violating.
-% \comment{(cite someone)}.
+%The nuclear weak force has long been known to be a predominantly left-handed chiral interaction, meaning that immediately following an interaction (such as a beta decay) with a weak force carrying boson ($W^+,\: W^-,\: Z$), 
+%%leptons emerge with left-handed chirality.  
+%normal-matter leptons (such as the electron and electron neutrino) emerge with left-handed chirality
+%% as seen from the decay frame, 
+%%\comment{(chirality?)}, chirality, 
+%while the anti-leptons (e.g. the positron and electron anti-neutrino) emerge with right-handed chirality.  
+%%\comment{(chirality?)}.  chirality.  
 
-This odd quirk of the nuclear weak force is not only \emph{predominantly} true, but it is, to the best of our current scientific knowledge, \emph{always} true -- that is, attempts to measure any right-handed chiral components of the weak force have produced results consistent with zero~\cite{severijns_beck_cuncic_2006}\cite{severijns_cuncic_2011}.  This project proposes a further measurement to constrain the strength of the right-handed component of the weak interaction.  
+%%In the limit of massless particles, the particle's chirality is the same as its helicity. Thus, in a left-handed model, the direction of an (ultrarelativistic) normal lepton's spin is antiparallel direction of its motion, and the direction of spin for an anti-lepton is parallel to its direction of motion.  For a non-relativistic particle the property of chirality is fairly abstract, and describes the appropriate group representation and projection operators to be used in calculations.  It should be noted that a fully chiral model is also one which is maximally parity violating.
+%%% \comment{(cite someone)}.
+%%
+%%This odd quirk of the nuclear weak force is not only \emph{predominantly} true, but it is, to the best of our current scientific knowledge, \emph{always} true -- that is, attempts to measure any right-handed chiral components of the weak force have produced results consistent with zero~\cite{severijns_beck_cuncic_2006}\cite{severijns_cuncic_2011}.  This project proposes a further measurement to constrain the strength of the right-handed component of the weak interaction.  
 
 %
 %\section{The Principle of the Measurement}
@@ -287,61 +293,13 @@ This odd quirk of the nuclear weak force is not only \emph{predominantly} true, 
 %
 %The problem, then, becomes one of designing an experiment which will allow us to isolate beta decay events with the desired signature from the more mundane beta decay events predicted by the Standard Model.  
 
-
-
-%\pagebreak
-
 %
 %\section{The Experimental Setup}
-%\label{setup}
-%
-%\color{usedcolor}
-%\subsection{Overview}
-%\label{overview}
-%
-%\begin{figure}[t!h]
-%	\centering
-%	\includegraphics[width=.999\linewidth]
-%	{Figures/doublemot4.pdf}
-%	\caption{The TRINAT experimental set-up utilizes a two MOT system in order to reduce background in the detection chamber.}	
-%	\label{fig:doublemot}
-%\end{figure}
-%
+
 %The TRIUMF Neutral Atom Trap (TRINAT) offers an experimental set-up which is uniquely suited to precision tests of Standard Model beta decay physics.  Radioactive ions are delivered from the ISAC beamline and neutralized before being trapped in the first of two magneto-optical traps (MOTs).  Approximately once per second, atoms from the first MOT are transferred to the second, where their decay products can be observed with significantly less background than would have been possible in the first trap (see Figure~\ref{fig:doublemot}).  The transfer methodology is discussed in some detail in a paper by Swanson et al~\cite{swanson}.
 %
 %Once the newly transferred atoms -- in this case, neutral $^{37}\textrm{K}$ -- have arrived at the second trap, the MOT cycles 500 times between a state where it is `on' and actively confining atoms to a region of approximately 2\,mm$^3$, to a state where it is `off' and instead the atoms are spin-polarized by optical pumping while the atom cloud expands ballistically before being re-trapped.  In order to eliminate systematic effects, the polarization direction is flipped every 16 seconds.  This optical pumping technique and its results are the subject of a recent publication~\cite{ben_OP}.
 %
-%The science chamber (shown in Figure \ref{fig:thechamber}) operates at ultra-high vacuum (UHV) and provides the apparatus necessary to intermittently confine atoms within a MOT and then spin-polarize them, and quantify their position, temperature, and initial polarization, and electrostatic hoops to allow for collection and observation of charged recoiling daughter nuclei, as well as further detectors to observe the outgoing betas and reconstruct angular correlations.  
-%\comment{(should I elaborate here?) -- "no".} 
-%
-%\begin{figure}[h!!!tb]
-%	\centering
-%	\hspace*{\fill}%
-%	\subfloat[A decay event within the TRINAT science chamber.  After a decay, the daughter will be unaffected by forces from the MOT.  Positively charged recoils and negatively charged shake-off electrons are pulled towards detectors in opposite directions.  Although the $\beta^+$ is charged, it is also highly relativistic and escapes the electric field with minimal perturbation.
-%	%\comment{The pic is still kind-of fuzzy.}
-%	]
-%	{\includegraphics[width=.530\linewidth]{Figures/chamber_decayevent3.png}\label{chamber_decayevent} }
-%	\hspace*{\fill}
-%	\hfill
-%	\hspace*{\fill}
-%	\subfloat[Inside the TRINAT science chamber.  This photo is taken from the vantage point of one of the microchannel plates, looking into the chamber towards the second microchannel plate.  The current-carrying copper Helmholtz coils and two beta telescopes are visible at the top and bottom.  The metallic piece near the center is one of the electrostatic `hoops' used to generate an electric field within the chamber.  The hoop's central circular hole allows access to the microchannel plate, and the two elongated holes on the sides allow the MOT's trapping lasers to pass unimpeded at an angle of 45 degress `out of the page'.]	
-%	{\includegraphics[width=.444\linewidth]{Figures/chamber_photo_2.png}}
-%	\hspace*{\fill}%
-%	\caption{The TRINAT detection chamber}	
-%	\label{fig:thechamber}
-%\end{figure}
-%\clearpage
-%\color{black}
-%
-%\subsection{Trapping}
-%\label{trap}
-%The Magneto-Optical Trap is a well-known technique from atomic physics, used to confine and cool neutral atoms~\cite{raabprentiss}.  The technique is used predominantly with alkalis due to their simple orbital electron structure, and is quite robust, so is appropriate for use with $^{37}\textrm{K}$.  Once set up, the trapping force is specific to the isotope for which the trap has been tuned, which makes it ideal for use in radioactive decay experiments, since the daughters are unaffected by the trapping forces keeping the parent confined.
-%
-%There are two primary components necessary for any MOT:  a laser, and a magnetic field.  The laser, which must be circularly polarized in the appropriate directions and tuned slightly to the red of an atomic resonance, is split into three perpendicular retroreflected beams, doppler cooling the atoms and (with the appropriate magnetic field) confining them in all three dimensions (see Figure~\ref{fig:mot}).  The TRINAT science chamber includes 6 `viewports' specifically designed to be used for the trapping laser.
-%
-%A MOT also requires a quadrupolar magnetic field, which we generate with two current-carrying anti-Helmholtz coils located within the vacuum chamber itself.  The coils themselves are hollow, and are cooled continuously by pumping temperature-controlled water through them.   
-%
-%One feature which makes our MOT unusual has been developed as a result of our need to rapidly cycle the MOT on and off -- that is, it is an ``AC-MOT''.  Rather than running the trap with one particular magnetic field and one set of laser polarizations to match, we run a sinusoidal AC current in the magnetic field coils, and so the sign and magnitude of the magnetic field alternate smoothly between two extrema, and the trapping laser polarizations are rapidly swapped to remain in sync with the field~\cite{harveymurray}\cite{thesis}.  See Figure~\ref{fig:acmot}.  
 %
 %\begin{figure}[ht]
 %	\centering
@@ -357,100 +315,90 @@ This odd quirk of the nuclear weak force is not only \emph{predominantly} true, 
 %\end{figure}
 %
 %The need to use an AC-MOT rather than a typical MOT has arisen as a direct result of our desire to optimally polarize our sample of atoms.  Polarization is incompatible with the non-uniform magnetic field used by a MOT, and rapidly shutting off the current used to produce the MOT's magnetic field produces eddy currents in the surrounding materials, which in turn produce their own non-uniform magnetic field in the region of interest.  The AC-MOT is developed as a way to ensure that the unavoidable eddy currents are behaving as we expect.  With an appropriate choice of shut-off phase, the current in the coils can be shut off when the overall magnetic field is already zero, so that no further eddy currents are induced.   
-
-%{\color{cyan} (...) (something about why we need to run an AC-MOT.) }
-
-%%%  Cut here?  %%%
-%Note that because the atoms within a MOT can be treated as following a thermal distribution, some fraction of the fastest atoms continuously escape from the trap's potential well.  Even with the most carefully-tuned apparatus, the AC-MOT cannot quite match a similar standard MOT in terms of retaining atoms.  The TRINAT AC-MOT has a `trapping half-life' of around 6 seconds, and although that may not be particularly impressive by the standards of other MOTs, it is more than adequate for our purposes.  $^{37}\textrm{K}$ itself has a radioactive half-life of only 1.6 seconds \comment{(cite someone)}, so our dominant loss mechanism is radioactive decay rather than thermal escape. \comment{(Cut this whole paragraph?)}
-%%%     %%%     %%%
-%\clearpage
-
 %
 
-
-%\subsection{Optical Pumping}
-%\label{op}
-%We spin-polarize $^{37}\textrm{K}$ atoms within the trapping region by optical pumping~\cite{ben_OP}.  A circularly polarized laser is tuned to match the relevant atomic resonances, and is directed through the trapping region along the vertical axis in both directions.  When a photon is absorbed by an atom, the atom transitions to an excited state and its total angular momentum (electron spin + orbital + nuclear spin) along the vertical axis is incremented by one unit.  When the atom is de-excited a photon is emitted isotropically, 
-%%\comment{(is it still isotropic when it's polarized?  I bet it's not.)}
-%so it follows that if there are available states of higher and lower angular momentum, the \emph{average} change in the angular momentum projection is zero.  If the atom is not yet spin-polarized, it can absorb and re-emit another photon, following a biased random walk towards complete polarization.  
 %
 %In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  In particular, the magnetic field must be aligned along the polarization axis (otherwise the tendency will be to actually depolarize the atoms), and it must be uniform in magnitude over the region of interest (otherwise its divergencelessness will result in the field also having a non-uniform direction, which results in a spatially-dependent depolarization mechanism).  Note that this type of magnetic field is not compatible with the MOT, which requires a quadrupolar magnetic field \emph{gradient}, and has necessitated our use of the AC-MOT as described in Subsection~\ref{trap}.
 
-
-%\subsection{The Detectors}
-%\label{detectors}
-%\label{field}
-%The beta detectors, located above and below the atom cloud along the axis of polarization (see Figure~\ref{chamber_decayevent}), are each the combination of a plastic scintillator and a set of silicon strip detectors.  Using all of the available information, these detectors are able to reconstruct the energy of an incident beta, as well as its hit position, and provide a timestamp for the hit's arrival.  Together the upper and lower beta detectors subtend approximately 1.4\% of the total solid angle as measured with respect to the cloud position. 
-%
-%It must be noted that the path between the cloud of trapped atoms and either beta detector is blocked by two objects:  a 254$\,\mu$m silicon carbide mirror (necessary for both trapping and optical pumping), and a 229$\,\mu$m beryllium foil (separating the UHV vacuum within the chamber from the outside world).  In order to minimize beta scattering and energy attenuation, these objects have had their materials selected to use the lightest nuclei with the desired material properties, and have been manufactured to be as thin as possible without compromising the experiment.  As the $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$ decay proceess releases $Q=5.125$\,MeV of kinetic energy~\cite{Q_value}, the great majority of betas are energetic enough to punch through both obstacles without significant energy loss before being collected by the beta detectors.  
-%
-%On opposing sides of the chamber, and perpendicular to the axis of polarization, two stacks of $\sim$ 80\,mm diameter microchannel plates (MCPs) have been placed (see Figure~\ref{fig:thechamber}) as detectors, providing a time stamp when a particle is incident on their surfaces.  Behind each stack of MCPs there is a set of delay lines, which provide  position sensitivity for these detectors.   
 %
 %In order to make best use of these MCPs, we create an electric field in order to draw positively charged particles into one MCP, while drawing negatively charged electrons into the other MCP.  Seven electrostatic hoops have been placed within the chamber (see Figure~\ref{fig:thechamber}), and are connected to a series of high voltage power supplies.  See Sections~\ref{photoions} and~\ref{pos_recoils} for a discussion of what sort of charged particles we expect to observe in these detectors and how they are created.  
 %  
-%%\comment{(Say something about field uniformity?)}
-%
+
 %Scientific data has been collected at field strengths of 395 V/cm, 415 V/cm, and 535 V/cm.  It should be noted that these field strengths are too low to significantly perturb any but the least energetic of the (positively charged) betas from the decay process, and these low energy betas would already have been unable to reach the upper and lower beta detectors due to interactions with materials in the SiC mirror and Be foil vacuum seal.  
 %
 
+\note[done, nolist]{John says the whole $R_{\textrm{slow}}$ thing should go in here somewhere.}
+\note[done, nolist]{Appendix I  keep, it's excellent. It should be moved as is to Conclusions under "Future Experiment for the collaboration"! so people know you worked so hard on it!!}
 
-%\subsection{Cloud Measurements via Photoionization}
-%\label{cloud}
-%\label{photoions}
-%In order to measure properties of the trapped $^{37}\textrm{K}$ cloud, a 10\,kHz pulsed laser at 355\,nm is directed towards the cloud.  These photons have sufficient energy to photoionize neutral $^{37}\textrm{K}$ from its excited atomic state, releasing 0.77\,eV of kinetic energy, but do not interact with ground state $^{37}\textrm{K}$ atoms.  The laser is of sufficiently low intensity that the great majority of excited state atoms are \emph{not} photoionized, so the technique is only very minimally destructive.  
-%
-%Because an electric field has been applied within this region (see Section~\ref{field}) the $^{37}\textrm{K}^+$ ions are immediately pulled into the detector on one side of the chamber, while the freed $e^-$ is pulled towards the detector on the opposite side of the chamber.  Because  $^{37}\textrm{K}^+$ is quite heavy relative to its initial energy, it can be treated as moving in a straight line directly to the detector, where its hit position on the microchannel plate is taken as a 2D projection of its position within the cloud.  Similarly, given a sufficient understanding of the electric field, the time difference between the laser pulse and the microchannel plate hit allows for a calculation of the ion's initial position along the third axis.  
-%
-%With this procedure, it is possible to produce a precise map of the cloud's position and size, both of which are necessary for the precision measurements of angular correlation parameters that are of interest to us here.  However, it also allows us to extract a third, slightly more subtle and significantly more important measurement:  the cloud's \emph{polarization}.
-%
-%The key to the polarization measurement is that only atoms in the excited atomic state can be photoionized.  While the MOT runs, atoms are constantly being pushed around and excited by the trapping lasers, so this period of time provides a lot of information for characterizing the trap size and position.  When the MOT is shut off, the atoms quickly return to their ground states and are no longer photoionized until the optical pumping beam is turned on.  As described in Section~\ref{op}, and in greater detail in~\cite{ben_OP}, the optical pumping process involves repeatedly exciting atoms from their ground states until the atoms finally cannot absorb any further angular momentum and remain in their fully-polarized (ground) state until they are perturbed.  Therefore, there is a sharp spike in excited-state atoms (and therefore photoions) when the optical pumping begins, and none once the cloud has been completely polarized.  The number of photoion events that occur once the sample has been maximally polarized, in comparison with the size and shape of the initial spike of photoions, provides a very precise characterization of the cloud's final polarization~\cite{ben_OP}.
-
-
-
-%\comment{Photoions, the MCP, polarization stats, camera.}
-%{\color{cyan} (...) }
 
 %
 \subsection{The Decay Process}
 \label{rslow_decayprocess}
 \label{pos_recoils}
-% % %
-The kinematics of nuclear $\beta^+$ decay are described by the following probability density function:
-\bea
-\label{jtw_pdf}
-W(\langle I \rangle | E_\beta \hat{\Omega}_\beta \hat{\Omega}_\nu) 
-&=& \left(\frac{1}{2\pi}\right)^{\!5} \!\! F\!\left( - Z, E_\beta \right)\, 
-p_\beta E_\beta (E_0 - E_\beta)^2 \textrm{d}E_\beta \textrm{d}\hat{\Omega}_\beta \textrm{d}\hat{\Omega}_\nu \, \xi 
-%
-\!\!\!\! \nonumber \\ && \times
-\left[ 1 + a_{\beta\nu} \frac{\vec{p}_\beta \cdot \vec{p}_\nu}{E_\beta E_\nu}
-+ b_{\textrm{Fierz}} \frac{m_e}{E_\beta} 
-\phantom{\frac{\left(\vec{p}_\beta\right)^2}{\vec{p}_\beta}} 
-%
-\!\!\!\! \right. \nonumber \\ &&\left. 
-+ \, c_\textrm{align} \left( \frac{\frac{1}{3}\vec{p}_\beta \cdot \vec{p}_\nu - (\vec{p}_\beta \cdot \hat{j}) ( \vec{p}_\nu\cdot \hat{j} ) }{E_\beta E_\nu} \right) \!
- \left( \frac{I(I+1) - 3\langle (\vec{I}\cdot\hat{i})^2 \rangle}{I(2I-1)} \right) 
-%
-\right. \nonumber \\ && \left. 
-+ \frac{\langle \vec{I} \rangle}{I} \left( A_\beta\frac{\vec{p}_\beta}{E_\beta} + B_\nu \frac{\vec{p}_\nu}{E_\nu} + D_{\textrm{TR}} \frac{\vec{p}_\beta \times \vec{p}_\nu}{E_\beta E_\nu} \right)
-\right],
-\eea
-where $\vec{I}$ is the nuclear spin-polarization, $F\!\left( - Z, E_\beta \right)$ is the Fermi function, 
-and parameters $\xi$, $a_{\beta\nu}$, $ b_{\textrm{Fierz}}$, $c_\textrm{align}$, $A_\beta$, $B_\nu$, and $D_{\textrm{TR}}$ are functions that vary with the strengths of the vector, axial, scalar, and tensor couplings (constant throughout nature), as well as the Fermi and Gamow-Teller nuclear matrix elements (specific to the individual decay)~\cite{jtw}\cite{jtw_coulomb}.
 
-%{\color{cyan} (...) }
+The \acf{JTW} beta decay probability density function, including a representation of exotic right-handed couplings, is given, to first order, by Eq.~\ref{equation:jtw_master}.  Here, information about the handedness of any couplings is buried within the relative signs of the primed and un-primed coupling constants ($C_X$ and $C_X^\prime$, for $X = \{ V,A,S,T\}$).  
 
 The decay may be treated as a three-body problem in which the available kinetic energy is divided up between the beta, the neutrino, and the recoiling $^{37}\textrm{\!Ar}$ nucleus, and (of course) the total linear and angular momentum are conserved.  While the neutrino cannot be detected directly, its kinematics may be reconstructed from observations of the beta and the recoiling daughter nucleus.  By placing detectors above and below the decaying atom along the axis of its polarization, we are able to obtain information about the outgoing beta's energy and momentum, in the cases of interest to us, where it is emitted along (or close to) the axis of polarization.  
 
 The recoiling $^{37}\textrm{\!Ar}$ nucleus is a bit trickier to work with, but the task is not impossible.  One useful feature of the $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar}$ transition is that, in addition to the $\beta^+$ emitted in the decay itself, one or more \emph{orbital} electrons from the parent atom are typically lost.  In the majority of decay events
 %\comment{(80\% of them?  Give a number.  Cite someone.  Dan's thesis?~\cite{dan_thesis}  Or Alexandre's talk from like 1999.)}, 
-only one orbital electron is `shaken off' and so the daughter $^{37}\textrm{\!Ar}$ atom is electrically neutral~\cite{gorelov2000}\cite{dan_thesis}.  In the remaining cases, two or more orbital electrons are lost this way, and the daughter atom is positively charged.  If we apply an electric field perpendicular to the direction of polarization, these positively charged $^{37}\textrm{\!Ar}^{(+n)}$ ions may be collected into a detector, from which hit position and time of flight information may be extracted.  These shake-off electrons are emitted with an average energy of only $\sim$ 2\,eV
+only one orbital electron is shaken off, which results in the daughter $^{37}\textrm{\!Ar}$ atom being electrically neutral~\cite{gorelov2000}\cite{dan_thesis}.  In the remaining cases, two or more orbital electrons are lost this way, and the daughter atom is positively charged.  If we apply an electric field perpendicular to the direction of polarization, these positively charged $^{37}\textrm{\!Ar}^{(+n)}$ ions may be collected into a detector, from which hit position and time of flight information may be extracted.  The shake-off electrons are emitted with an average energy of only $\sim$ 2\,eV
 %very little kinetic energy ($\sim$ 2\,eV)
 %\comment{(give a number.  2 eV?  I should check.  Also, do I cite one of John's talks here?)}, 
 so to a very good approximation the other decay products are not perturbed by the presence of shake-off electrons.  
 
+\note{}
 It should be noted that for the class of decays of greatest interest, where the beta and the neutrino emerge back-to-back along the polarization axis, the recoiling daughter nucleus will have zero momentum along the directions perpendicular to this axis, and on average less total energy than if the beta and neutrino were emitted in a parallel direction.  Henceforth, daughter nuclei from a back-to-back decay as shown in Figure~\ref{fig:rhc} will be described as `slow' recoils.  In terms of observables, this means that if the electric field is configured to point along one of the axes perpendicular to the polarization direction, then when the recoiling ion is swept away into a detector, the slow recoil's hit position should be exactly along the projection of the polarization axis.  Furthermore, the slow recoil's time of flight should be in the middle of the time of flight spectrum, since other recoils will be emitted with momentum towards or away from the detector.  
 \note[gs]{ 10. P. 93 contains a reference to “Figure ??”  (that's actually the thing above, Figure~\ref{fig:rhc}, no matter what page it's on now.) }
+
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=.999\linewidth]{Figures/RHC.png}
+	\caption[A Comparison of Left-Handed and Right-Handed Couplings]{A comparison of left-handed and right-handed vector and axial couplings in polarized beta decay.  The above are extremal examples;  in nature there is no requirement for the leptons to be emitted back-to-back, or for either to be emitted along the axis of polarization.  However the class of events with minimal momentum allocated to the recoiling daughter nucleus (i.e., the result of back-to-back lepton emission) is what provides the most sensitivity to the $\Rslow$ observable, and a $\beta$ coincidence (our detectors are located along the axis of polarization) is required.
+	The precise scenario on the right is the only one that is \emph{completely} disallowed in the absence of right-handed couplings, and only if the neutrinos are taken to be massless.  For intermediate decay scenarios, the probability is simply suppressed based on the extent to which the usual left-handed coupling can access the phase space.
+	}
+%	\note[tag]{fix caption.}
+	\note{reference figure in text somewhere.}
+\end{figure}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=.999\linewidth]{Figures/Rslow_tof_squished.png}
+	\note[tag]{Wait, is this description from John even accurate?  It seems wrong, but my brain won't go.}
+	\caption[Recoil TOF Spectra at 535 V/cm]{Recoil TOF Spectra for $^{37}$K, taken at 535 V/cm.  Recoil spectra are partially separated by charge distribution.  $\Rslow$ would manifest as a dip in the centre of the TOF for each charge state.  .... wait, is this even true?!  The large dips visible here are primarily a result of chamber geometry.}
+\end{figure}
+
+
+\note[jbn, nolist]{More thoughts from John:
+\\...\\
+hi Melissa,
+\\...\\
+I think you should keep Section 6.2, but I think it would be clearer to point out the observable manifests as a dip in the raw TOF spectrum, not going all the way to zero as in the ideal on-axis situation you describe for simplicity.
+I.e., I would say you need to qualify this "exactly" word (emphasis mine below), and since
+it ends up as a cos(theta) distribution like in my attached slide on the subject, your figure of the TOF spectrum would be a good way to do that.
+\\...\\
+"Henceforth, daughter nuclei from a back-to-back decay as shown in
+Figure ?? will be described as ‘slow’ recoils. In terms of observables, this means that
+if the electric field is configured to point along one of the axes perpendicular to the
+polarization direction, then when the recoiling ion is swept away into a detector, the
+slow recoil’s hit position should be \textbf{exactly}​​ along the projection of the polarization
+axis. Furthermore, the slow recoil’s time of flight should be in the middle of the time
+of flight spectrum, since other recoils will be emitted with momentum towards or
+away from the detector"
+}
+
+\ifthenelse{\boolean{isdraft}}
+{
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=.999\linewidth]{Feedback/AMirrorDecayObservable.png}
+	\caption[A Slide From John]{A Slide From John, or something.  idk, it goes with the text immediately previous.}
+%	\label{}
+\end{figure}
+\FloatBarrier
+}
+{}
 
 
 %Of course, in any real experiment, the number of decays emitted in exactly one set of directions will be a set of measure zero.  \comment{(say something about the limits taken as beta decay events approach the optimal set of angles.  Or just delete this paragraph because it's stupid.)}
