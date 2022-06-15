@@ -39,9 +39,7 @@
   \acroheading
   \acropreamble
   \par\noindent
-%%  \begin{longtable}{@{}p{\abbrevwidth}p{\dimexpr\linewidth-\abbrevwidth-2\tabcolsep\relax}@{}}
   \begin{longtable}{@{}p{\abbrevwidth}p{\dimexpr\linewidth-\abbrevwidth-\LTright-\LTleft-2\tabcolsep\relax}@{}}
-%    \bfseries Abkürzung & \bfseries Erläuterung 
 	\endhead
     \AcronymTable
   \end{longtable}
@@ -77,7 +75,7 @@
 %%%}
 \acsetup{
 make-links    = true, 
-pages/display = all, 
+pages/display = none, 
 list/display  = all, 
 %list/template = longtable,
 list/template = styleabbrev,
@@ -87,6 +85,7 @@ list/template = styleabbrev,
 %%list/template = longtable[l]{@{}p{50pt} p{250pt}},  % 
 %list-style=tabular,  % description, lof, toc.  with packages:  supertabular, tabular, longtable
 %%%table-spec    = @{}lp{.5\linewidth}p{.2\linewidth}l@{}. (\setlength\LTleft{0pt},  % for the longtable class.
+list/sort     = true,
 list/local    = false, 
 list/name     = List of Abbreviations,
 %first-style = short-long

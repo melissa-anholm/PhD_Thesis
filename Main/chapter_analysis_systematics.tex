@@ -8,7 +8,7 @@
 \chapter{Analysis and Estimates of Systematic Effects}
 \label{systematics_chapter}
 \label{analysis_chapter} 
-\note{Remember to cite these dudes for (I think) the low-energy tail in the spectrum:  ~\cite{stragglingLonergan1970} \cite{stragglingRester1971}.}
+%\note[done]{Remember to cite these dudes for (I think) the low-energy tail in the spectrum:  ~\cite{stragglingLonergan1970} \cite{stragglingRester1971}.}
 
 \note{Go through and change all instances of ``Beta - SOE''/``Beta---SOE''/etc to ``SOE -  Beta''/etc., *within the whole thesis*.}
 %I really need an excuse to include more pictures of data.  Also, more pictures of simulations.
@@ -184,29 +184,17 @@ To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$
 %\note[org]{This content got moved over *there*.  (ie, Section~\ref{sec:bs}.)}
 The methodology used to simulate and model scattered events is described in Section~\ref{sec:bs}.  To evaluate the systematic effect on the final measurements arising from incomplete knowledge of how much beta scattering is present (i.e., how well we can trust the simulation to correctly model the amount of scattering), 
 %To evaluate the systematic effects arising from incomplete knowledge of how much beta scattering is present, 
-two sets of $\chi^2$ maps very much like those in Section~\ref{sec:comparing_data_sims} are created, with the amount of scattering varied by one standard deviation.  This does not require a new simulation;  instead, for the three high statistics G4 simulations varying the BSM scalar coupling, all events passing the cuts are categorized into `unscattered and forward-scattered' events, `sidescattered' events, and `backscattered' events, depending on a comparison of the beta's emission angle to the detector in which it was eventually observed, as shown in Fig.~\ref{fig:soe_tof_vs_costheta}.
+two sets of $\chi^2$ maps very much like those in Section~\ref{sec:comparing_data_sims} are created, with the amount of scattering varied by one standard deviation.  This does not require a new simulation;  instead, for the three high statistics G4 simulations varying the BSM scalar coupling, all events passing the cuts are categorized into unscattered and forward-scattered events, sidescattered events, and backscattered events, depending on a comparison of the beta's emission angle to the detector in which it was eventually observed, as shown in Fig.~\ref{fig:soe_tof_vs_costheta}.
 
-The contribution from unscattered and forward scattered events is not allowed to vary, but the weights attributed to sidescattered and backscattered events was varied by $\pm 10\%$ and $\pm 5.1\%$ (respectively) relative to their `best' values.  Fig.~\ref{fig:asymmetry_scattering} clearly shows the change in superratio asymmetry produced by this variation in the amount of scattering.  The method by which it was determined how much the scattering weights should be allowed to vary is described in the supplementary material of a recent publication by the collaboration~\cite{ben_Abeta}.
+The contribution from unscattered and forward scattered events is not allowed to vary, but the weights attributed to sidescattered and backscattered events was varied by $\pm 10\%$ and $\pm 5.1\%$ (respectively) relative to their `best' values.  Fig.~\ref{fig:asymmetry_scattering} clearly shows the change in superratio asymmetry produced by this variation in the amount of scattering.  The method by which it was determined how much the scattering weights should be allowed to vary is benchmarked in Refs.~\cite{stragglingLonergan1970} \cite{stragglingRester1971}, and is described further in the supplementary material of a recent publication by the collaboration~\cite{ben_Abeta}.
+
 \begin{figure}[h!tb]
 	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/ScatteringEstimate.png}
-%	\note{I got it out of the Sim\_to\_Asym directory, so that's where I have to go looking to see how I made it and/or make a new one. .... nope, the new one is from Fit_2D.}
-%%%%%	\note[jb1]{John on Section~\ref{section:scattering_systematics} ``Quantifying the Effects of Backscatter with Geant4'':
-%%%%%\\...\\
-%%%%%Fig.~\ref{fig:asymmetry_scattering} illustrates the distortions in the energy dependence of Abeta
-%%%%%that mimics effects of bFierz. A generic 10\% uncertainty assigned to
-%%%%%the GEANT4 similation of backscatter produces the largest systematic
-%%%%%uncertainty in bFierz. Based on this result, the collaboration is
-%%%%%attempting to improve the
-%%%%%experimental design to use lower-Z materials to improve this systematic.
-%%%%%\\
-%%%%%(I.e. that's all you need to say. The figure tells the story.)}
-%
-	\caption[Scattering Effects in the Asymmetry]{The amount of scattering is adjusted by one standard deviation in both directions, and the results to the superratio asymmetry are plotted.  The bulk of the effect occurs at lower energies, where sensitivity to $\bFierz$ is at its highest.}	
+	\includegraphics[width=.999\linewidth]{Figures/ScatteringEstimate.png}
 	\label{fig:asymmetry_scattering}
+	\caption[Scattering Effects in the Asymmetry]{The amount of scattering is adjusted by one standard deviation in both directions, and the results to the superratio asymmetry are plotted.  The bulk of the effect occurs at lower energies, where sensitivity to $\bFierz$ is at its highest.}	
 \end{figure}
-%%%\note{Oh fuck.  Oh fuck oh fuck oh fuck.  $5.1\%$ is actually a $2\sigma$ limit.  I guess $10\%$ is still basically just a guess though.  Still, this kills like half of the systematic error.  I'll have to re-evaluate this later.}
+
 Since errors in evaluating both side-scatter and backscatter arise from limitations on how well Geant4 is expected to perform, it is not clear how correlated these errors are, but it seems foolish to suppose they should not be correlated at all.  Therefore, the conservative assumption that the two are \emph{fully} correlated is taken, and the errors from side-scatter and backscatter are added \emph{linearly} to one another before being combined in quadrature with the other uncertainties.  
 
 As this is the dominant systematic error, the TRINAT collaboration is working to improve the experimental design to use lower-Z materials to reduce the size of this effect.
@@ -344,7 +332,7 @@ To evaluate the propagated systematic effects arising from our knowledge of the 
 %\subsubsection{The low-energy tail uncertainty, and what it does}
 \note{Bremsstrahlung.  It does Bremsstrahlung.}
 %	\note[jb1]{JB:  ``I will write this up better soon."  (I think he already did that)}
-\note[jb1]{ Here is Subsection 9.5.5 ``The low-energy tail uncerainty, and what it does'' complete.  There should be no figure.
+\note[done,nolist]{ Here is Subsection 9.5.5 ``The low-energy tail uncerainty, and what it does'' complete.  There should be no figure.
 \\
 Direct quote from John follows in the next two paragraphs.  Maybe I should paraphrase, but it's so nicely written! }
 
@@ -386,9 +374,9 @@ analysis, this even this large variation in the number of background events make
 
 %\note[tag]{Write the section about evaluating *systematics* from background events.}
 %\section{Background Modeling -- Decay from Surfaces within the Chamber}
-\note[org]{This content got moved to Ch.~\ref{sec:tof_bg}.}
+%\note[org]{This content got moved to Ch.~\ref{sec:tof_bg}.}
 
-\note[jb1]{
+\note[done,nolist]{
 John on Section 5.4 Background Modeling – Decay from Surfaces within
 the Chamber:
 \\...\\

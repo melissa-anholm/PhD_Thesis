@@ -83,6 +83,7 @@ while the $C_X$ and $C_X^\prime$ (for $X = \{ V,A,S,T\} $) are as in Eq.~(\ref{e
 %are, as in the Lee-Yang Hamiltonian in Eq.~(\ref{eq:lee_yang_hamiltonian}), the complex coupling constants describing the global strength of vector, axial, scalar, and tensor couplings within charged weak interactions.  
 %
 The possible pseudoscalar couplings ($C_P$ and $C_P^\prime$) have been dropped here because they are relativisitically suppressed.  
+\note[jbn]{(Any quark-lepton pseudoscalar couplings have usually been ignored in beta decay, because they are suppressed by (beta momentum)/(nucleon mass).  Note that more recently it's been pointed out that C\_P is naturally quite large in the nucleon (M. Gonzalez-Alonso and J. Martin Camalich Phys Rev Lett 112 042501 (2014)) and allows for significant constraints from allowed beta decay.)}
 %~\aside{Somewhere I have to talk about what the primes and the imaginary parts mean.  But maybe later.}  
 We have also made use of the following shorthand definitions of $\lambda_{J^\prime J}$, $\Lambda_{J^\prime J}$, and $\delta_{J^\prime J}$ for transitions with parent and daughter nuclear angular momenta given by $J$ and $J^\prime$ respectively:
 \bea
@@ -776,9 +777,10 @@ g_S &=& \frac{1}{\sqrt{2}} \, (C_S + C_S^\prime )
 g_T &=& \frac{-1}{\sqrt{2}} \, (C_T + C_T^\prime), 
 \label{eq:gT_def}
 \eea
-where,
+where, 
 \aside{In my notes, $g_T$ has a minus sign in front of it.  Is there really any reason to keep that?  I guess probably not...\\
-Also in my notes, $g_A$ and $c_1$ have a minus sign in front of them too.  I think it's superfluous.  Recall that $M_{GT}$ is negative.   } in addition to the requirements of Eqs.~(\ref{eq:cVcVprime})-(\ref{eq:cAcAprime}) we will henceforth consider only the left-handed scalar and tensor couplings, so that 
+Also in my notes, $g_A$ and $c_1$ have a minus sign in front of them too.  I think it's superfluous.  Recall that $M_{GT}$ is negative.   } 
+in addition to the requirements of Eqs.~(\ref{eq:cVcVprime})-(\ref{eq:cAcAprime}) we will henceforth consider only the left-handed scalar and tensor couplings, so that 
 \bea
 C_S &=& C_S^\prime 
 \label{eq:cScSprime} \\
@@ -793,11 +795,30 @@ M_{GT, \textrm{\,Holstein}} &=& - M_{GT, \textrm{\,JTW}} \;\; \approx \;\; -\, 0
 \eea
 The discrepancy can be attributed to a difference in notation convention; the literature can't seem to agree on a single sign convention, or even whether the convention ought to be the same in the cases of $\beta^-$/$\beta^+$ decay.  See, for example, Refs~\cite{dan_thesis}\cite{GCBall2000}\cite{Raman1978}.  The important point is that, for whichever convention is in use, the equations result in broadly correct physical behaviour.  In the case of $^{37}$K, we can use the fact that the overall sign of $\Abeta$ \emph{must} be negative within our mathematical expressions, because it is experimentally measured to be negative.  
 
-We are now in a position to write out Eqs.~(\ref{eq:jtw_xi_integrated}), (\ref{eq:jtw_bxi_integrated}), and (\ref{eq:jtw_Abetaxi_integrated}) in terms of only real, left-handed couplings.  We find:
+We are now in a position to write out Eqs.~(\ref{eq:jtw_xi_integrated}), (\ref{eq:jtw_bxi_integrated}), and (\ref{eq:jtw_Abetaxi_integrated}) in terms of only real, left-handed couplings.  Doing so, we note that if the couplings are required to be real, then $\bFierz$ is \emph{only} sensitive to left-handed scalar or tensor couplings, and within $\Abeta$, the requirement is only that the scalar and tensor couplings must have \emph{the same} handedness.
+
+The resulting expressions are:
 \input{equations_jtw_params_LH.tex}
 
-
-
+We will take this opportunity to define and utilize some standard nuclear physics notation:
+\bea
+\lambda &:=& \frac{g_A M_{GT}}{g_V M_F}
+\label{eq:definelambda}
+\eea
+Since each specific transition may, as a result of the nuclear structure relationships involved, take different values for the matrix elements $M_F$ and $M_{GT}$, a particular transition can often be described by the ratio, $\lambda$, of the Gamow-Teller and Fermi couplings specific to it.  This notation offers a cleaner way to characterize standard model predictions of the observables in Eqs.~(\ref{eq:jtw_xi})-(\ref{eq:jtw_DTRxi}), but can become somewhat inelegant when used within a description of \ac{BSM} physics.  
+%In particular,
+Taking \emph{only} the leading order (linear) terms in exotic couplings, we find:
+\bea
+\xi &=& g_V^2 | M_F |^2 \left( 1 + \lambda^2 \right)
+\label{eq:xiwithlambda} 
+\\
+\bFierz &=& \frac{-2\gamma}{1 + \lambda^2} \left( \frac{g_S}{g_V} + \lambda^2 \frac{g_T}{g_A} \right) 
+\label{bFierzwithlambda}
+\\
+\Abeta &=& \frac{\frac{2}{5} \lambda^2 - 2 \lambda \sqrt{\frac{3}{5}}  }{1 + \lambda^2}, 
+\label{eq:Awithlambda}
+\eea
+where, for $^{37}$K, Eq.~(\ref{eq:definelambda}) must produce a negative value for $\lambda$ in order to be compatible with both Eq.~(\ref{eq:Awithlambda}) and the physically observed results.
 
 
 

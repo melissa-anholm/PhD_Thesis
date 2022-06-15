@@ -278,15 +278,6 @@ Schirber, M., \textit{Q\&A: with Standard Bearer Steven Weinberg}, APS News,
 \bibitem{krane}
 Krane, K.~S., Introductory Nuclear Physics, Wiley, New York, 1988.
 
-\bibitem{severijns_beck_cuncic_2006}
-Severijns, N., Beck, M. {\mdseries and} Naviliat-Cuncic, O., \textit{Tests of
-  the standard electroweak model in nuclear beta decay}, Rev. Mod. Phys.,
-  Vol.~78, pp.~991--1040, September 2006.
-
-\bibitem{wong1990}
-Wong, S., Introductory Nuclear Physics, Prentice Hall Advanced Reference Series
-  Prentice Hall Labora, Prentice Hall, 1990.
-
 \bibitem{Falkowski2021}
 Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
   \textit{Comprehensive analysis of beta decays within and beyond the Standard
@@ -297,10 +288,52 @@ Hong, R., Sternberg, M.~G. {\mdseries and} Garcia, A., \textit{Helicity and
   nuclear $\beta$ decay correlations}, American Journal of Physics, Vol.~85,
   No.~1, pp.~45--53, 2017.
 
-\bibitem{holstein}
-{Holstein}, B.~R., \textit{{Recoil effects in allowed beta decay: The
-  elementary particle approach}}, Reviews of Modern Physics, Vol.~46, No.~4,
-  pp.~789--814, Oct. 1974.
+\bibitem{EbelFeldman1957}
+Ebel, M. {\mdseries and} Feldman, G., \textit{Further remarks on Coulomb
+  corrections in allowed beta transitions}, Nuclear Physics, Vol.~4,
+  pp.~213--214, 1957.
+
+\bibitem{UCNA_first_superratio}
+Pattie~Jr, R., Anaya, J., Back, H., Boissevain, J., Bowles, T., Broussard, L.,
+  Carr, R., Clark, D., Currie, S., Du, S. et~al., \textit{First measurement of
+  the neutron $\beta$ asymmetry with ultracold neutrons}, Physical review
+  letters, Vol.~102, No.~1, pp.~012301, 2009.
+
+\bibitem{ben_Abeta}
+Fenker, B., Gorelov, A., Melconian, D., Behr, J.~A., Anholm, M., Ashery, D.,
+  Behling, R.~S., Cohen, I., Craiciu, I., Gwinner, G., McNeil, J., Mehlman, M.,
+  Olchanski, K., Shidling, P.~D., Smale, S. {\mdseries and} Warner, C.~L.,
+  \textit{Precision Measurement of the $\ensuremath{\beta}$ Asymmetry in
+  Spin-Polarized $^{37}\mathrm{K}$ Decay}, Phys. Rev. Lett., Vol.~120,
+  pp.~062502, Feb 2018.
+
+\bibitem{UCNAfierz2020}
+Sun, X., Adamek, E., Allgeier, B., Bagdasarova, Y., Berguno, D.~B., Blatnik,
+  M., Bowles, T.~J., Broussard, L.~J., Brown, M. A.-P., Carr, R., Clayton, S.,
+  Cude-Woods, C., Currie, S., Dees, E.~B., Ding, X., Filippone, B.~W.,
+  Garc\'{\i}a, A., Geltenbort, P., Hasan, S., Hickerson, K.~P., Hoagland, J.,
+  Hong, R., Holley, A.~T., Ito, T.~M., Knecht, A., Liu, C.-Y., Liu, J., Makela,
+  M., Mammei, R., Martin, J.~W., Melconian, D., Mendenhall, M.~P., Moore,
+  S.~D., Morris, C.~L., Nepal, S., Nouri, N., Pattie, R.~W., P\'erez~G\'alvan,
+  A., Phillips, D.~G., Picker, R., Pitt, M.~L., Plaster, B., Salvat, D.~J.,
+  Saunders, A., Sharapov, E.~I., Sjue, S., Slutsky, S., Sondheim, W., Swank,
+  C., Tatar, E., Vogelaar, R.~B., VornDick, B., Wang, Z., Wei, W., Wexler,
+  J.~W., Womack, T., Wrede, C., Young, A.~R. {\mdseries and} Zeck, B.~A.,
+  \textit{Improved limits on Fierz interference using asymmetry measurements
+  from the Ultracold Neutron Asymmetry (UCNA) experiment}, Phys. Rev. C,
+  Vol.~101, pp.~035503, Mar 2020.
+
+\bibitem{Saul2020}
+Saul, H., Roick, C., Abele, H., Mest, H., Klopf, M., Petukhov, A.~K., Soldner,
+  T., Wang, X., Werder, D. {\mdseries and} M\"arkisch, B., \textit{Limit on the
+  Fierz Interference Term $b$ from a Measurement of the Beta Asymmetry in
+  Neutron Decay}, Phys. Rev. Lett., Vol.~125, pp.~112501, Sep 2020.
+
+\bibitem{UCNA_first_Fierz}
+Hickerson, K., Sun, X., Bagdasarova, Y., Bravo-Bergu{\~n}o, D., Broussard, L.,
+  Brown, M.-P., Carr, R., Currie, S., Ding, X., Filippone, B. et~al.,
+  \textit{First direct constraints on Fierz interference in free-neutron
+  $\beta$ decay}, Physical Review C, Vol.~96, No.~4, pp.~042501, 2017.
 
 \bibitem{nucleardata2012}
 Cameron, J., Chen, J., Singh, B. {\mdseries and} Nica, N., \textit{Nuclear data
@@ -320,6 +353,12 @@ Shidling, P., Behling, R., Fenker, B., Hardy, J., Iacob, V., Mehlman, M., Park,
   measurement of the branching ratio}}, \textit{APS Division of Nuclear Physics
   Meeting Abstracts}, Vol. 2020 of \textit{APS Meeting Abstracts}, p. KF.005,
   Jan. 2020.
+
+\bibitem{ArgonMinusIons}
+Ben-Itzhak, I., Heber, O., Gertner, I. {\mdseries and} Rosner, B.,
+  \textit{Production and mean-lifetime measurement of metastable
+  ${\mathrm{Ar}}^{\mathrm{\ensuremath{-}}}$ ions}, Phys. Rev. A, Vol.~38,
+  pp.~4870--4871, Nov 1988.
 
 \bibitem{Levinger}
 Levinger, J.~S., \textit{Effects of Radioactive Disintegrations on Inner
@@ -366,14 +405,6 @@ Harvey, M. {\mdseries and} Murray, A.~J., \textit{Cold Atom Trap with Zero
   Residual Magnetic Field: The AC Magneto-Optical Trap}, Phys. Rev. Lett.,
   Vol.~101, pp.~173201, Oct 2008.
 
-\bibitem{ben_Abeta}
-Fenker, B., Gorelov, A., Melconian, D., Behr, J.~A., Anholm, M., Ashery, D.,
-  Behling, R.~S., Cohen, I., Craiciu, I., Gwinner, G., McNeil, J., Mehlman, M.,
-  Olchanski, K., Shidling, P.~D., Smale, S. {\mdseries and} Warner, C.~L.,
-  \textit{Precision Measurement of the $\ensuremath{\beta}$ Asymmetry in
-  Spin-Polarized $^{37}\mathrm{K}$ Decay}, Phys. Rev. Lett., Vol.~120,
-  pp.~062502, Feb 2018.
-
 \bibitem{Q_value}
 Audi, G., Wapstra, A. {\mdseries and} Thibault, C., \textit{The {AME2003}
   Atomic Mass Evaluation}, Nuclear Physics A, Vol.~729, No.~1, pp.~337 -- 676,
@@ -387,6 +418,11 @@ Fenker, B.~B., Precise measurement of the $\beta$-asymmetry in the decay of
 \bibitem{spencer_thesis}
 Behling, R.~S., Measurement of the Standard Model Beta Asymmetry Parameter,
   \ensuremath{\beta}, in 37K, Ph.D. thesis, Texas A\&M University, 2015.
+
+\bibitem{holstein}
+{Holstein}, B.~R., \textit{{Recoil effects in allowed beta decay: The
+  elementary particle approach}}, Reviews of Modern Physics, Vol.~46, No.~4,
+  pp.~789--814, Oct. 1974.
 
 \bibitem{clifford}
 Clifford, E., Hagberg, E., Koslowsy, V., Hardy, J., Schmeing, H. {\mdseries
@@ -404,21 +440,43 @@ Moyal, J., \textit{XXX. Theory of ionization fluctuations}, The London,
   Edinburgh, and Dublin Philosophical Magazine and Journal of Science, Vol.~46,
   No. 374, pp.~263--280, 1955.
 
-\bibitem{Saul2020}
-Saul, H., Roick, C., Abele, H., Mest, H., Klopf, M., Petukhov, A.~K., Soldner,
-  T., Wang, X., Werder, D. {\mdseries and} M\"arkisch, B., \textit{Limit on the
-  Fierz Interference Term $b$ from a Measurement of the Beta Asymmetry in
-  Neutron Decay}, Phys. Rev. Lett., Vol.~125, pp.~112501, Sep 2020.
+\bibitem{stragglingLonergan1970}
+Lonergan, J., Jupiter, C. {\mdseries and} Merkel, G., \textit{Electron energy
+  straggling measurements for thick targets of beryllium, aluminum, and gold at
+  4.0 and 8.0 MeV}, Journal of Applied Physics, Vol.~41, No.~2, pp.~678--688,
+  1970.
 
-\bibitem{deShalit1963}
-de~Shalit, A. {\mdseries and} Talmi, I., Nuclear Shell Theory, Nuclear Shell
-  Theory, Academic Press, 1963.
+\bibitem{stragglingRester1971}
+Rester, D.~H. {\mdseries and} Derrickson, J.~H., \textit{Electron Transmission
+  Measurements for Al, Sn, and Au Targets at Electron Bombarding Energies of
+  1.0 and 2.5 MeV}, Journal of Applied Physics, Vol.~42, No.~2, pp.~714--721,
+  1971.
+
+\bibitem{NeutronAbeta2018}
+Brown, M. A.-P., Dees, E.~B., Adamek, E., Allgeier, B., Blatnik, M., Bowles,
+  T.~J., Broussard, L.~J., Carr, R., Clayton, S., Cude-Woods, C., Currie, S.,
+  Ding, X., Filippone, B.~W., Garc\'{\i}a, A., Geltenbort, P., Hasan, S.,
+  Hickerson, K.~P., Hoagland, J., Hong, R., Hogan, G.~E., Holley, A.~T., Ito,
+  T.~M., Knecht, A., Liu, C.-Y., Liu, J., Makela, M., Martin, J.~W., Melconian,
+  D., Mendenhall, M.~P., Moore, S.~D., Morris, C.~L., Nepal, S., Nouri, N.,
+  Pattie, R.~W., P\'erez~Galv\'an, A., Phillips, D.~G., Picker, R., Pitt,
+  M.~L., Plaster, B., Ramsey, J.~C., Rios, R., Salvat, D.~J., Saunders, A.,
+  Sondheim, W., Seestrom, S.~J., Sjue, S., Slutsky, S., Sun, X., Swank, C.,
+  Swift, G., Tatar, E., Vogelaar, R.~B., VornDick, B., Wang, Z., Wexler, J.,
+  Womack, T., Wrede, C., Young, A.~R. {\mdseries and} Zeck, B.~A., \textit{New
+  result for the neutron $\ensuremath{\beta}$-asymmetry parameter ${A}_{0}$
+  from UCNA}, Phys. Rev. C, Vol.~97, pp.~035505, Mar 2018.
 
 \bibitem{HardyTownerSuperallowed2020}
 Hardy, J.~C. {\mdseries and} Towner, I.~S., \textit{Superallowed
   ${0}^{+}\ensuremath{\rightarrow}{0}^{+}$ nuclear $\ensuremath{\beta}$ decays:
   2020 critical survey, with implications for ${V}_{\mathit{ud}}$ and CKM
   unitarity}, Phys. Rev. C, Vol.~102, pp.~045501, Oct 2020.
+
+\bibitem{severijns_beck_cuncic_2006}
+Severijns, N., Beck, M. {\mdseries and} Naviliat-Cuncic, O., \textit{Tests of
+  the standard electroweak model in nuclear beta decay}, Rev. Mod. Phys.,
+  Vol.~78, pp.~991--1040, September 2006.
 
 \bibitem{severijns_cuncic_2011}
 Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
@@ -429,11 +487,6 @@ Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
 Melconian, D.~G., Measurement of the Neutrino Asymmetry in the Beta Decay of
   Laser-Cooled, Polarized $^{37}\textrm{K}$, Ph.D. thesis, Simon Fraser
   University, 2005.
-
-\bibitem{EbelFeldman1957}
-Ebel, M. {\mdseries and} Feldman, G., \textit{Further remarks on Coulomb
-  corrections in allowed beta transitions}, Nuclear Physics, Vol.~4,
-  pp.~213--214, 1957.
 
 \bibitem{holstein_errata}
 Holstein, B.~R., \textit{Erratum: Recoil effects in allowed beta decay: The

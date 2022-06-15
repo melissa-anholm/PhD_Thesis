@@ -471,7 +471,9 @@ Within the nucleus, rules of which processes are and are not energetically allow
 	\centering
 	\includegraphics[width=.90\linewidth]{Figures/feynmandiagrams_betadecay_placeholder.jpeg}
 	\note[tag]{Fix beta decay Feynman diagram placeholder figure.}
-	\caption[Beta Decay Feynman Diagrams]{Beta decay Feynman diagrams are shown here at the nucleon(? sort of) level.    
+	\caption[Beta Decay Feynman Diagrams]{Beta decay Feynman diagrams are drawn here to describe the three most common types of beta decay.  The interactions are mediated by massive $W^\pm$ bosons, resulting in an extremely limited range for the weak force.
+%	 which have only a short range.
+%		shown here at the nucleon(? sort of) level.    
 	}	
 	\label{fig:feynmandiagrams_betadecay}
 \end{figure}
@@ -486,8 +488,6 @@ We must develop the tools with which these questions can be discussed.  We will 
 where $\mathcal{M}_{fi}$ is the transition matrix element between the final ($\psi_f$) and initial ($\psi_i$) states, and $G_F$ gives a measure of the strength of the coupling between states.  The integral is evaluated over phase space volume, and the operator $\mathcal{\hat{O}}$, which has yet to be determined, allows for a mathematical description of how the initial and final states must be related in order for a transition to occur.
 
 Of course, this description represents a model of nuclear transitions which is highly simplified;  by neglecting the $W$ bosons that mediate the process and that we now know to be present, the result is a description of an interaction with zero range -- i.e., the leptons must be emitted from the exact place where the nucleon was transmuted.  Because the mediating $W$ bosons are so heavy ($m_W = 80.379(12)$\,GeV/$c^2$ ~\cite{pdg2018}), the range of the interaction is extremely limited, so the above turns out to be a very good description.  
-
-
 
 This immediately gives rise to a rate law commonly known as Fermi's Golden Rule, 
 \beq
@@ -509,18 +509,54 @@ Table~\ref{table:dirac_matrix_operators} provides a comprehensive list of all op
 \input{table_dirac_matrix_operators.tex} % table:dirac_matrix_operators
 
 
-%our collective understanding of the nuclear weak force.   
-%
-%This is the question at the heart of many modern precision measurements in beta decay physics.
-%\note{Back in the day, it was at the heart of non-precision beta decay measurements too.  Like Wu's measurement of parity violation.}
-%
+An equivalent expression for Eq.~\ref{eq:fermitransition} can be written in terms of the interaction Hamiltonian $\mathcal{H}_{\mathrm{int}}$, as:
+%, $\mathcal{M}_{fi}$ may be written in terms of the interaction Hamiltonian $\mathcal{H}_{\mathrm{int}}$, as 
+\bea
+\mathcal{M}_{fi} &=& \int \! \mathcal{H}_{\mathrm{int}} \, \textrm{d}V. 
+\eea 
+
+To obtain a full solution to the above, we will make use of the Lee-Yang interaction Hamiltonian, which provides a generalized combination of the Lorentz invariant operators and fits neatly into Eq.~\ref{eq:transitionmatrixhamiltonian}~\cite{LeeYang}:
+%The Lee-Yang interaction Hamiltonian is: %\aside{It's an *interaction* Hamiltonian!}
+\input{equation_LeeYangHamiltonian.tex}%  \label{eq:lee_yang_hamiltonian} 
+
+Here, $C_X$ and $C_X^{\prime}$ (with $X=\{V,A,S,T,P\}$) are complex coupling constants for vector, axial, scalar, tensor, and pseudoscalar interactions, and $\psi_Y$ (with $Y=\{p,n,e,\nu\}$) are the wavefunctions for the interaction's proton, neutron, electron, and neutrino.  Operators $\gamma_5$ and $\gamma_\mu$ are Dirac gamma matrices, and $\mbox{$\sigma_{\lambda\mu} = -\frac{i}{2}(\gamma_\lambda \gamma_\mu - \gamma_\mu\gamma_\lambda )$}$.  As usual, ``H.C.'' represents the Hermitian conjugate of the previous terms within the Hamiltonian.
+
+It can be seen from the form of the Hamiltonian that the $V,A,S,T,P$ couplings within are described as such because they \emph{behave} as vectors, axial-vectors, scalars, tensors, and pseudoscalars (respectively) under a Lorentz transform, where the Lagrangian itself must be a scaler both before and after a Lorentz transform~\cite{LeeYang}~\cite{Falkowski2021}~\cite{hong_sternberg_garcia}.
+
+The fact that there are two coupling constants (primed and unprimed) for each type of coupling relates to the \emph{handedness} of the interaction.  Both left-handed and right-handed couplings, or a combination thereof, are \emph{a priori} possible, and the form of Eq.~\ref{eq:lee_yang_hamiltonian} does not give preference to either.
+
+While it is possible to define an interaction's handedness in a rigorous and mathematical way, the reader may gain more clarity by simply remembering the rule of thumb that a left-handed weak force 
+% (which is predominantly or entirely what exists in nature) 
+couples only to left-handed regular matter leptons and right-handed anti-leptons --- where the handedness of a lepton or other particle is defined by the direction of its spin relative to its direction of motion.  That description is exact in the limit where such a lepton travels at the speed of light (otherwise a clever Lorentz transform can change the result), but the underlying mathematics is well defined for slower particles as well.  For neutrinos, which are so light they were long believed to be massless, the description is \emph{nearly perfect}.  For electrons and positrons emitted in beta decay, which are massive but often emitted at relativistic speeds, the description is only \emph{pretty good}.  
+
+\note{Here, we should put in Falkowski's convention to separate out the RH and LH components of things.  Or take it out completely.}
+
+Over the years, we have collectively learned much about which simplifications to Eq.~\ref{eq:lee_yang_hamiltonian} can be justified.  Typically, reference to the pseudoscalar couplings is one of the first things to be dropped, because it is suppressed at typical beta decay energies, and as such its presence would be difficult to demonstrate and have very little effect on experimental results.  
+It is also now widely understood that 
+the nuclear weak force involves primarily (or entirely) vector and axial vector couplings, and is primarily (or entirely) a left-handed interaction in which parity is maximally (or nearly maximally) violated.  
+
+\note{We'll use Falkowski's convention to re-wite the Lee-Yang Hamiltonian in terms of right- and left-handed interactions.  That'll be useful later.  Sort-of.}
+
+\note{Something about how beta decays turned out to be $(V-A)$...}
+
+Although the physics community has largely come to a consensus 
+%over the years 
+on the \emph{dominant} behaviour of the nuclear weak force, there still exists a range of possible \emph{sub-dominant} behaviours that cannot be ruled out by theoretical considerations alone, and therefore must be tested experimentally.  With the weak force already so well described, searching for indications of unexpected behaviours is the domain of precision measurements.  This class of non-dominant behaviours is sometimes described as exotic physics, or with the imprecise label of physics \ac{BSM}, or even the wildly inaccurate misnomer, ``new physics''.  
+
+Many types of exotic physics have, in fact, already been described by Lee and Yang's 1956 interaction Hamiltonian, which was originally motivated by the question of parity conservation within beta decay\cite{LeeYang}.  Despite the original motivations, the authors were very thorough in their description of possible interaction types.  By starting with Fermi's contact interaction model of beta decay, incorporating Gamow and Teller's selection rules, and enforcing Lorentz invariance, they arrived at a nucleon-level Hamiltonian (quarks had not been discovered yet) which accounted for \emph{all} possible coupling behaviours~\cite{GamowTeller}. 
+%\aside{also cite Fermi here, and Gamow-Teller.}
+
+In the years since, we have discovered that beta decay is mediated by $W^\pm$ bosons, which, among other things, allows for the possibility of certain transitions (ie, with different selection rules) occuring, which had been considered forbidden under the contact interaction model.  
+
 
 
 
 \FloatBarrier
 %%%% --- * --- %%%%	
-\section{Beta Decay within the Standard Model}
-\note{...}
+\ifthenelse{\boolean{isdraft}}
+{
+\section{Beta Decay within the Standard Model -- a section that no longer exists.}
+\note[tag]{This section is problematic....}
 %\note{Intro blurb goes here.
 %\\...\\
 %The most general and vague description of beta decay ever:  a proton turns into a neutron and emits a positron, or else a neutron turns into a proton and emits an electron.  Also, neutrinos are emitted with the proton/electron.  Occasionally, also, an electron from like atomic orbitals or something gets captured, triggering a similar process in which a proton is transmuted into a neutron, but no positron/electron gets emitted.  A neutrino does though.  The Feynman diagrams for all these things are pretty similar, and they're shown in Fig.~\ref{fig:feynmandiagrams_betadecay}.  
@@ -573,98 +609,100 @@ This implies that the total nuclear angular momentum is changed by $\Delta J = \
 Given the differing behaviour within the angular momenta of the daughters in Fermi and Gamow-Teller transitions, it is perhaps not suprising that that the \emph{linear} momenta of the outgoing particles should also follow a different set of distributions in these two cases.  At the level of the Weak~\aside[jbn]{Don't capitalize Weak anywhere, either. You can keep quotes around the first "weak", I guess.} coupling, Fermi- and Gamow-Teller~\aside[jbn]{you should indeed capitalize Fermi and Gamow-Teller because these are people.} transitions are governed by different operators, with the Fermi interaction mediated by a so-called ``vector'' ($V$) coupling, and the Gamow-Teller interaction mediated by an ``axial-vector'' ($A$) coupling.
 ~\note[jbn]{The vector and axial-vector couplings refer to Lorentz transformation of the Lagrangian terms involved, which we come to next.}
 
+}
+{}  % End "if draft" section...
 
 
-%%%% --- * --- %%%%	
-\section{On Modern Precision Measurements and the Nuclear Weak Force}
-\label{sec:modernprecision}
-Although the physics community has largely come to a consensus over the years about the \emph{dominant} behaviour of the nuclear weak force, there still exists a range of possible \emph{sub-dominant} behaviours that cannot be ruled out by theoretical considerations alone, and therefore must be tested experimentally.  With the weak force already so well described, searching for indications of unexpected behaviours is the domain of precision measurements.  This class of non-dominant behaviours is sometimes described as exotic physics, or with the imprecise label of physics \ac{BSM}, or even the wildly inaccurate misnomer, ``new physics''.  
-
-Many types of exotic physics have, in fact, already been described by Lee and Yang's 1956 interaction Hamiltonian, which was originally motivated by the question of parity conservation within beta decay\cite{LeeYang}.  Despite the original motivations, the authors were very thorough in their description of possible interaction types.  By starting with Fermi's contact interaction model of beta decay, incorporating Gamow and Teller's selection rules, and enforcing Lorentz invariance, they arrived at a nucleon-level Hamiltonian (quarks had not been discovered yet) which accounted for \emph{all} possible coupling behaviours~\cite{GamowTeller}. 
-%\aside{also cite Fermi here, and Gamow-Teller.}
-
-In the years since, we have discovered that beta decay is mediated by $W^\pm$ bosons, which, among other things, allows for the possibility of certain transitions (ie, with different selection rules) occuring, which had been considered forbidden under the contact interaction model.  
-%certain suppressed transitions with different selection rules
-%creates the opportunity for certain suppressed transitions to occur which follow different sets of selection rules.
-%thereby allowing for certain suppressed transitions with different sorts selection rules.  
-Since $W^\pm$ bosons are quite massive,
-%relative to typical beta decay energies,
-\aside{Give numbers.} the beta decay interaction is only applicable at a short range, and as a result, the Fermi model (with the Gamow-Teller addendum) represents a very good approximation for the transitions it applies to. \aside{Give numbers.}
-%So although Fermi's model with the Gamow-Teller addendum is not truly a complete description, it is still a very good approximation, given the mass of the  $W^\pm$ bosons relative to typical beta decay energies.
-\aside{Also, like many mathematical descriptions where one wants to predict things, it's better without the quarks.}
-%\note{This isn't quite right.  Gamow and Teller added a process to change nucleon spin, and the Lee-Yang Hamiltonian is based on that.}
-
-We begin with Fermi's\aside{Is this true?  Probably} description of the transition: 
-\bea
-\mathcal{M}_{fi} &=& G_F \int \bar{\psi}_f \, \mathcal{\hat{O}} \, \psi_i \,\textrm{d}V,% \;\;=\;\; \int \mathcal{H}_{\mathrm{int}} \textrm{d}V
-\eea 
-where $\mathcal{M}_{fi}$ is the transition matrix element between the final ($\psi_f$) and initial ($\psi_i$) states, and $G_F$ gives a measure of the size of the coupling between states.  The integral is evaluated over phase space volume.  Equivalently, $\mathcal{M}_{fi}$ may be written in terms of the interaction Hamiltonian $\mathcal{H}_{\mathrm{int}}$, as 
-\bea
-\mathcal{M}_{fi} &=& \int \! \mathcal{H}_{\mathrm{int}} \, \textrm{d}V. 
-%\label{eq:transitionmatrixhamiltonian}
-\eea 
-%
-This leads immediately to Fermi's Golden Rule, 
-\beq
-\Gamma \;\; = \;\; \frac{1}{\tau}  \;\; = \;\; \frac{2\pi}{\hbar} \left| \mathcal{M}_{fi} \right|^2 \, \rho(E_f),
-%\;\;\;\; \textrm{(Why is this formatted weird??)},
-\eeq
-which describes the relationship between the total transition rate $\Gamma$ (or equivalently the lifetime $\tau$), the transition matrix element $\mathcal{M}_{fi}$, and the available density of states at the final energy, $\rho(E_f)$.  We can also use this to write down the differential decay rate, 
-\bea
-\frac{\textrm{d}^5 \Gamma}{ \textrm{d} \Ebeta \textrm{d}\Omegahatbeta \textrm{d} \Omegahatnu } 
-&=& \frac{1}{(2\pi)^5} \, \pbeta \Ebeta (E_0 - \Ebeta)^2 F_{\pm}(\Ebeta, Z^\prime) \left| \mathcal{M}_{fi} \right|^2,
-%\frac{\textrm{d}^5 \Gamma}{ \textrm{d} \Ebeta \textrm{d}\Omegahatbeta \textrm{d} \Omegahatnu } 
-%&=& \frac{G_F^2}{(2\pi)^5} \, \pbeta \Ebeta (E_0 - \Ebeta)^2 F_{\pm}(\Ebeta, Z^\prime) \left| \mathcal{M}_{fi} \right|^2,
-\eea
-where \aside{pretty sure I lost an $\hbar$.  Maybe no one will notice.  }
-%$G_F$ is the mumble mumble,\aside[tag]{Fix $G_F$ !} 
-$\Ebeta$ and $\pbeta$ are the outgoing $\beta$'s (total) energy and momentum,
-$E_0$ is the maximum possible $\beta$ energy associated with the transition, 
-and $\FFpm$ is called a Fermi function (with $Z^\prime$ the proton number of the daughter), %\aside[tag]{$Z^\prime$ ?} 
-and is used to account for the electric force between the nucleus and the (charged) outgoing electron (top) or positron (bottom) \cite{Fermi1934Italian}\cite{Fermi1934German}\cite{krane}.  
-
-With this description, the problem of characterizing the transition is reduced to determining the form of $\mathcal{\hat{O}}$, or equivalently, $\mathcal{H}_{\mathrm{int}}$.  Table~\ref{table:dirac_matrix_operators} provides a comprehensive list of all operators for which Lorentz invariance holds.  The complete transition operator $\mathcal{\hat{O}}$ must be comprised of a linear combination of these terms.  
-\input{table_dirac_matrix_operators.tex} % table:dirac_matrix_operators
-This gives rise to the Lee-Yang interaction Hamiltonian, which provides a generalized combination of the Lorentz invariant operators and fits neatly into Eq.~\ref{eq:transitionmatrixhamiltonian}~\cite{LeeYang}:
-
-%The Lee-Yang interaction Hamiltonian is: %\aside{It's an *interaction* Hamiltonian!}
-\input{equation_LeeYangHamiltonian.tex}%  \label{eq:lee_yang_hamiltonian} 
-
-Here, $C_X$ and $C_X^{\prime}$ (with $X=\{V,A,S,T,P\}$) are complex coupling constants for vector, axial, scalar, tensor, and pseudoscalar interactions, and $\psi_Y$ (with $Y=\{p,n,e,\nu\}$) are the wavefunctions for the interaction's proton, neutron, electron, and neutrino.  Operators $\gamma_5$ and $\gamma_\mu$ are Dirac gamma matrices, and $\mbox{$\sigma_{\lambda\mu} = -\frac{i}{2}(\gamma_\lambda \gamma_\mu - \gamma_\mu\gamma_\lambda )$}$.  As usual, ``H.C.'' represents the Hermitian conjugate of the previous terms within the Hamiltonian.
-%\aside{What about sigma!?  is it a pauli matrix?}  
-
-The fact that there are two coupling constants (primed and unprimed) for each type of coupling relates to the \emph{handedness} of the interaction.  Both left-handed and right-handed couplings, or a combination thereof, are \emph{a priori} possible, and the form of Eq.~\ref{eq:lee_yang_hamiltonian} does not give preference to either.
-
-
-While it is possible to define an interaction's handedness in a rigorous and mathematical way, the reader may gain more clarity by simply remembering the rule of thumb that a left-handed weak force 
-% (which is predominantly or entirely what exists in nature) 
-couples only to left-handed regular matter leptons and right-handed anti-leptons --- where the handedness of a lepton or other particle is defined by the direction of its spin relative to its direction of motion.  That description is exact in the limit where such a lepton travels at the speed of light (otherwise a clever Lorentz transform can change the result), but the underlying mathematics is well defined for slower particles as well.  For neutrinos, which are so light they were long believed to be massless, the description is \emph{nearly perfect}.  For electrons and positrons emitted in beta decay, which are massive but often emitted at relativistic speeds, the description is only \emph{pretty good}.  
-
-
-\note{Here, we should put in Falkowski's convention to separate out the RH and LH components of things.  Or take it out completely.}
-
-%were long believed to be massless 
-% --- meaning that it is \emph{very good} for neutrinos emerging from a weak interaction, and \emph{pretty good} for electrons and positrons emerging from a similar interaction.  
-%
-%regular matter neutrinos that have a left-handed spin relative to the direction of motion
-%This can be defined in a rigorous and mathematical way, 
-%\note{The primes or lack thereof are a thingy with the interaction's handedness...}
-%$\psi_Y$ (with $Y=\{p=$proton, $n=$neutron, $e=$electron, $\nu=$neutrino$\}$)
-%the search for small deviations from this model is ongoing.  
-
-Over the years, the physics community has learned much about which simplifications to Eq.~\ref{eq:lee_yang_hamiltonian} can be justified.  Typically, reference to the pseudoscalar couplings is one of the first things to be dropped, because it is suppressed at typical beta decay energies, and as such its presence would be difficult to demonstrate and have very little effect on experimental results.  
-%Experimental results have demonstrated that 
-It is also now widely understood that 
-the nuclear weak force involves primarily (or entirely) vector and axial vector couplings, and is primarily (or entirely) a left-handed interaction in which parity is maximally (or nearly maximally) violated.  
-
-\note{We'll use Falkowski's convention to re-wite the Lee-Yang Hamiltonian in terms of right- and left-handed interactions.  That'll be useful later.  Sort-of.}
-
-\note{Something about how beta decays turned out to be $(V-A)$...}
-
-\note{btw:  as of 2018, we have $m_W = 80.379(12)$\,GeV/$c^2$ ~\cite{pdg2018}.}
 
 %%%% --- * --- %%%%	
-\section{Draft of Intro Section -- with paragraphs!}
+%%%\section{On Modern Precision Measurements and the Nuclear Weak Force}
+%%%\label{sec:modernprecision}
+%%%Although the physics community has largely come to a consensus over the years about the \emph{dominant} behaviour of the nuclear weak force, there still exists a range of possible \emph{sub-dominant} behaviours that cannot be ruled out by theoretical considerations alone, and therefore must be tested experimentally.  With the weak force already so well described, searching for indications of unexpected behaviours is the domain of precision measurements.  This class of non-dominant behaviours is sometimes described as exotic physics, or with the imprecise label of physics \ac{BSM}, or even the wildly inaccurate misnomer, ``new physics''.  
+%%%
+%%%Many types of exotic physics have, in fact, already been described by Lee and Yang's 1956 interaction Hamiltonian, which was originally motivated by the question of parity conservation within beta decay\cite{LeeYang}.  Despite the original motivations, the authors were very thorough in their description of possible interaction types.  By starting with Fermi's contact interaction model of beta decay, incorporating Gamow and Teller's selection rules, and enforcing Lorentz invariance, they arrived at a nucleon-level Hamiltonian (quarks had not been discovered yet) which accounted for \emph{all} possible coupling behaviours~\cite{GamowTeller}. 
+%%%%\aside{also cite Fermi here, and Gamow-Teller.}
+%%%
+%%%In the years since, we have discovered that beta decay is mediated by $W^\pm$ bosons, which, among other things, allows for the possibility of certain transitions (ie, with different selection rules) occuring, which had been considered forbidden under the contact interaction model.  
+%%%%certain suppressed transitions with different selection rules
+%%%%creates the opportunity for certain suppressed transitions to occur which follow different sets of selection rules.
+%%%%thereby allowing for certain suppressed transitions with different sorts selection rules.  
+%%%Since $W^\pm$ bosons are quite massive,
+%%%%relative to typical beta decay energies,
+%%%\aside{Give numbers.} the beta decay interaction is only applicable at a short range, and as a result, the Fermi model (with the Gamow-Teller addendum) represents a very good approximation for the transitions it applies to. \aside{Give numbers.}
+%%%%So although Fermi's model with the Gamow-Teller addendum is not truly a complete description, it is still a very good approximation, given the mass of the  $W^\pm$ bosons relative to typical beta decay energies.
+%%%\aside{Also, like many mathematical descriptions where one wants to predict things, it's better without the quarks.}
+%%%%\note{This isn't quite right.  Gamow and Teller added a process to change nucleon spin, and the Lee-Yang Hamiltonian is based on that.}
+%%%
+%%%We begin with Fermi's\aside{Is this true?  Probably} description of the transition: 
+%%%\bea
+%%%\mathcal{M}_{fi} &=& G_F \int \bar{\psi}_f \, \mathcal{\hat{O}} \, \psi_i \,\textrm{d}V,% \;\;=\;\; \int \mathcal{H}_{\mathrm{int}} \textrm{d}V
+%%%\eea 
+%%%where $\mathcal{M}_{fi}$ is the transition matrix element between the final ($\psi_f$) and initial ($\psi_i$) states, and $G_F$ gives a measure of the size of the coupling between states.  The integral is evaluated over phase space volume.  Equivalently, $\mathcal{M}_{fi}$ may be written in terms of the interaction Hamiltonian $\mathcal{H}_{\mathrm{int}}$, as 
+%%%\bea
+%%%\mathcal{M}_{fi} &=& \int \! \mathcal{H}_{\mathrm{int}} \, \textrm{d}V. 
+%%%%\label{eq:transitionmatrixhamiltonian}
+%%%\eea 
+%%%%
+%%%This leads immediately to Fermi's Golden Rule, 
+%%%\beq
+%%%\Gamma \;\; = \;\; \frac{1}{\tau}  \;\; = \;\; \frac{2\pi}{\hbar} \left| \mathcal{M}_{fi} \right|^2 \, \rho(E_f),
+%%%%\;\;\;\; \textrm{(Why is this formatted weird??)},
+%%%\eeq
+%%%which describes the relationship between the total transition rate $\Gamma$ (or equivalently the lifetime $\tau$), the transition matrix element $\mathcal{M}_{fi}$, and the available density of states at the final energy, $\rho(E_f)$.  We can also use this to write down the differential decay rate, 
+%%%\bea
+%%%\frac{\textrm{d}^5 \Gamma}{ \textrm{d} \Ebeta \textrm{d}\Omegahatbeta \textrm{d} \Omegahatnu } 
+%%%&=& \frac{1}{(2\pi)^5} \, \pbeta \Ebeta (E_0 - \Ebeta)^2 F_{\pm}(\Ebeta, Z^\prime) \left| \mathcal{M}_{fi} \right|^2,
+%%%%\frac{\textrm{d}^5 \Gamma}{ \textrm{d} \Ebeta \textrm{d}\Omegahatbeta \textrm{d} \Omegahatnu } 
+%%%%&=& \frac{G_F^2}{(2\pi)^5} \, \pbeta \Ebeta (E_0 - \Ebeta)^2 F_{\pm}(\Ebeta, Z^\prime) \left| \mathcal{M}_{fi} \right|^2,
+%%%\eea
+%%%where \aside{pretty sure I lost an $\hbar$.  Maybe no one will notice.  }
+%%%%$G_F$ is the mumble mumble,\aside[tag]{Fix $G_F$ !} 
+%%%$\Ebeta$ and $\pbeta$ are the outgoing $\beta$'s (total) energy and momentum,
+%%%$E_0$ is the maximum possible $\beta$ energy associated with the transition, 
+%%%and $\FFpm$ is called a Fermi function (with $Z^\prime$ the proton number of the daughter), %\aside[tag]{$Z^\prime$ ?} 
+%%%and is used to account for the electric force between the nucleus and the (charged) outgoing electron (top) or positron (bottom) \cite{Fermi1934Italian}\cite{Fermi1934German}\cite{krane}.  
+%%%
+%%%With this description, the problem of characterizing the transition is reduced to determining the form of $\mathcal{\hat{O}}$, or equivalently, $\mathcal{H}_{\mathrm{int}}$.  Table~\ref{table:dirac_matrix_operators} provides a comprehensive list of all operators for which Lorentz invariance holds.  The complete transition operator $\mathcal{\hat{O}}$ must be comprised of a linear combination of these terms.  
+%%%\input{table_dirac_matrix_operators.tex} % table:dirac_matrix_operators
+%%%This gives rise to the Lee-Yang interaction Hamiltonian, which provides a generalized combination of the Lorentz invariant operators and fits neatly into Eq.~\ref{eq:transitionmatrixhamiltonian}~\cite{LeeYang}:
+%%%
+%%%%The Lee-Yang interaction Hamiltonian is: %\aside{It's an *interaction* Hamiltonian!}
+%%%\input{equation_LeeYangHamiltonian.tex}%  \label{eq:lee_yang_hamiltonian} 
+%%%
+%%%Here, $C_X$ and $C_X^{\prime}$ (with $X=\{V,A,S,T,P\}$) are complex coupling constants for vector, axial, scalar, tensor, and pseudoscalar interactions, and $\psi_Y$ (with $Y=\{p,n,e,\nu\}$) are the wavefunctions for the interaction's proton, neutron, electron, and neutrino.  Operators $\gamma_5$ and $\gamma_\mu$ are Dirac gamma matrices, and $\mbox{$\sigma_{\lambda\mu} = -\frac{i}{2}(\gamma_\lambda \gamma_\mu - \gamma_\mu\gamma_\lambda )$}$.  As usual, ``H.C.'' represents the Hermitian conjugate of the previous terms within the Hamiltonian.
+%%%%\aside{What about sigma!?  is it a pauli matrix?}  
+%%%
+%%%The fact that there are two coupling constants (primed and unprimed) for each type of coupling relates to the \emph{handedness} of the interaction.  Both left-handed and right-handed couplings, or a combination thereof, are \emph{a priori} possible, and the form of Eq.~\ref{eq:lee_yang_hamiltonian} does not give preference to either.
+%%%
+%%%
+%%%While it is possible to define an interaction's handedness in a rigorous and mathematical way, the reader may gain more clarity by simply remembering the rule of thumb that a left-handed weak force 
+%%%% (which is predominantly or entirely what exists in nature) 
+%%%couples only to left-handed regular matter leptons and right-handed anti-leptons --- where the handedness of a lepton or other particle is defined by the direction of its spin relative to its direction of motion.  That description is exact in the limit where such a lepton travels at the speed of light (otherwise a clever Lorentz transform can change the result), but the underlying mathematics is well defined for slower particles as well.  For neutrinos, which are so light they were long believed to be massless, the description is \emph{nearly perfect}.  For electrons and positrons emitted in beta decay, which are massive but often emitted at relativistic speeds, the description is only \emph{pretty good}.  
+%%%
+%%%
+%%%\note{Here, we should put in Falkowski's convention to separate out the RH and LH components of things.  Or take it out completely.}
+%%%
+%%%%were long believed to be massless 
+%%%% --- meaning that it is \emph{very good} for neutrinos emerging from a weak interaction, and \emph{pretty good} for electrons and positrons emerging from a similar interaction.  
+%%%%
+%%%%regular matter neutrinos that have a left-handed spin relative to the direction of motion
+%%%%This can be defined in a rigorous and mathematical way, 
+%%%%\note{The primes or lack thereof are a thingy with the interaction's handedness...}
+%%%%$\psi_Y$ (with $Y=\{p=$proton, $n=$neutron, $e=$electron, $\nu=$neutrino$\}$)
+%%%%the search for small deviations from this model is ongoing.  
+%%%
+%%%Over the years, the physics community has learned much about which simplifications to Eq.~\ref{eq:lee_yang_hamiltonian} can be justified.  Typically, reference to the pseudoscalar couplings is one of the first things to be dropped, because it is suppressed at typical beta decay energies, and as such its presence would be difficult to demonstrate and have very little effect on experimental results.  
+%%%%Experimental results have demonstrated that 
+%%%It is also now widely understood that 
+%%%the nuclear weak force involves primarily (or entirely) vector and axial vector couplings, and is primarily (or entirely) a left-handed interaction in which parity is maximally (or nearly maximally) violated.  
+%%%
+%%%\note{We'll use Falkowski's convention to re-wite the Lee-Yang Hamiltonian in terms of right- and left-handed interactions.  That'll be useful later.  Sort-of.}
+%%%
+%%%\note{Something about how beta decays turned out to be $(V-A)$...}
+%%%
+%%%%\note{btw:  as of 2018, we have $m_W = 80.379(12)$\,GeV/$c^2$ ~\cite{pdg2018}.}
+
+%%%% --- * --- %%%%	
 %%%OK.  This stuff is basically yoinked from Ben's thesis.  And Dan's.  I'll need to re-organize and rephrase the content -- but I want to make sure I get the important points down.  
 %%%
 %%%In 1931, Pauli figured out about neutrinos, because beta decay produced a whole spectrum of beta energies, so there had to be a third body available to carry off some of the energy.  (Dan doesn't cite anyone here)
@@ -697,18 +735,26 @@ the nuclear weak force involves primarily (or entirely) vector and axial vector 
 %%
 %%Ben points out that they thought it was scalars and tensors at first, and cites some people(\cite{RustadRuby1955tensor}\cite{BurgyEpstein1957scalartensor}), but frankly, I can't access those articles and I thought there was more evidence for it than that.  Also, the one article is published before Madame Wu's, so idk what to make of that.
 
-Ben points out that the $V-A$ form of the interaction means that parity is *maximally* violated, however he also says that $A$ has $+$ and $V$ has $-$ parity.
-
-Anyway.  We're maximally parity violating, and when we describe this in modern terminology, we would say that the $W^{\pm}$ particles only couple to negative helicity (left-handed) leptons, or positive helicity antimatter leptons (anti-leptons).
-\note[bluetodo]{Wait.  Are these equivalent statements??  So confused...}
-
-Also, chirality as a concept.  It's an intuitively straightforward concept when your particle is going at the speed of light.  So, for a massless neutrino, if it has a negative chirality, that means that its spin vector is pointed opposite to its direction of motion.  
-
-Also-also, the fundamental property is chirality, not helicity.  Helicity can be flipped by a simple Lorentz boost.  But because we're talking about an interaction, there is some sense in which this defines a rest frame for us.   ....is this even the correct way to think about it?  I think it has to be fine.
-
-So anyway, we have lots of evidence for the $V-A$ form of interactions.  (Ben doesn't cite anyone for this).  But other forms of the interaction could be in there too.  And at this point, Ben just assumes the Standard Model and goes with it.
+%%%%Ben points out that the $V-A$ form of the interaction means that parity is *maximally* violated, however he also says that $A$ has $+$ and $V$ has $-$ parity.
+%%%%
+%%%%Anyway.  We're maximally parity violating, and when we describe this in modern terminology, we would say that the $W^{\pm}$ particles only couple to negative helicity (left-handed) leptons, or positive helicity antimatter leptons (anti-leptons).
+%%%%\note[bluetodo]{Wait.  Are these equivalent statements??  So confused...}
+%%%%
+%%%%Also, chirality as a concept.  It's an intuitively straightforward concept when your particle is going at the speed of light.  So, for a massless neutrino, if it has a negative chirality, that means that its spin vector is pointed opposite to its direction of motion.  
+%%%%
+%%%%Also-also, the fundamental property is chirality, not helicity.  Helicity can be flipped by a simple Lorentz boost.  But because we're talking about an interaction, there is some sense in which this defines a rest frame for us.   ....is this even the correct way to think about it?  I think it has to be fine.
+%%%%
+%%%%So anyway, we have lots of evidence for the $V-A$ form of interactions.  (Ben doesn't cite anyone for this).  But other forms of the interaction could be in there too.  And at this point, Ben just assumes the Standard Model and goes with it.
 
 %%%
+
+\ifthenelse{\boolean{isdraft}}
+{
+\section{Draft of Intro Section -- with paragraphs!}
+}
+{}
+
+
 \note[jbn, nolist]{first, actually, Ben writes a good summary of Ft mirror equation in terms of Ft0+ to 0+ in the PRL, you could just use that in Ch. 1 and it would help enormously. (Of course now I'm scared because it doesn't mention isospin mixing is different for 37K and the others, and that should be in the numerator as (Ft0to0/Ft37K) well as in rho, shouldn't it? I would need to compare to Shidling's expressions to sort this out.)
 }
 \note[jbn, nolist]{
@@ -759,6 +805,16 @@ People had assumed there was a massive boson exchanged for a very long time.
 \\
 What Weinberg (and, independently, Salam) did was come up with a consistent mathematical theory of massive bosons, incorporating Yang Mills gauge theory (looks like E\&M but with nonabelian operators) to do that, and the result was the weak neutral interaction prediction.
 }
+
+\note{A paragraph that used to live in my "draft of the intro" section:
+\\...\\
+There exists an extensive body of experimental evidence to demonstrate that the above model is overall a very good description of the beta decay process~\cite{wu}.  Despite the success of the $(V-A)$ model, there are still certain lingering questions that must be addressed by precision measurements.  Any deviation from maximal parity violation (i.e., a ``$(V+A)$'' contribution to the Weak force) would be of great interest to the community, as would the presence of certain other exotic couplings, such as the so-called Scalar ($S$) and Tensor ($T$) interactions.  Any such behaviour beyond the Standard Model (BSM) would represent a non-dominant contribution to the interaction, however the possibility cannot be entirely ruled out.  
+}
+~\note[jbn]{This is where I'm suggesting a little more explanation of Lee and Yang, and  V-A from Feynman and Gell-Mann}
+
+
+
+\note[jbn]{(Any quark-lepton pseudoscalar couplings have usually been ignored in beta decay, because they are suppressed by (beta momentum)/(nucleon mass).  Note that more recently it's been pointed out that C\_P is naturally quite large in the nucleon (M. Gonzalez-Alonso and J. Martin Camalich Phys Rev Lett 112 042501 (2014)) and allows for significant constraints from allowed beta decay.)}
 
 
 % and therefore carry angular momentum, the total nuclear angular momentum may still be changed.
@@ -854,40 +910,36 @@ What Weinberg (and, independently, Salam) did was come up with a consistent math
 %
 %%%% --- * --- %%%%	
 %\section{Motivation}
-\section{A Generalized Description of the Weak Interaction}
-%\section{Background}
-%\section{Motivation}
-%\greycomment{The nuclear Weak force is one of four fundamental forces described within physics.  It mediates the process of beta decay, which is of particular interest to us here.  Although beta decay is generally well understood, it presents a unique opportunity for precision measurements to search for physics beyond the Standard Model within the Weak coupling.  By observing the kinematics and angular correlations involved in the decay process, one gains access to a wealth of information about the form of the operators mediating the decay.}
+%\section{A Generalized Description of the Weak Interaction}
+%%\section{Background}
+%%\section{Motivation}
+%%\greycomment{The nuclear Weak force is one of four fundamental forces described within physics.  It mediates the process of beta decay, which is of particular interest to us here.  Although beta decay is generally well understood, it presents a unique opportunity for precision measurements to search for physics beyond the Standard Model within the Weak coupling.  By observing the kinematics and angular correlations involved in the decay process, one gains access to a wealth of information about the form of the operators mediating the decay.}
+%
+%According to the predictions of the \acf{SM}, %Standard Model~\aside[jbn]{standard model} (SM), 
+%the Weak force involves only vector ($V$) and axial-vector ($A$) couplings, where a relative sign within the quark-lepton Lagrangian produces the left-handed ``$(V-A)$'' form of the interaction in maximal violation of parity.  In terms of physical behaviour, one consequence of this model is that ``regular matter'' leptons emerge from a Weak interaction with left-handed chirality, while antimatter leptons emerge with right-handed chirality. Any deviation from this behavior would be indicative of ``new'' or ``exotic'' (i.e., not previously discovered) physics.
+%%~\aside[jbn]{"new" -> new
+%%\\
+%%"exotic" -> exotic. 
+%%\\...\\
+%%You define them right away. There is no need for air quotes. You should seriously think about never using air quotes, but use them as an indication to you that you need to write down more clarifying words instead.}
 
-According to the predictions of the \acf{SM}, %Standard Model~\aside[jbn]{standard model} (SM), 
-the Weak force involves only vector ($V$) and axial-vector ($A$) couplings, where a relative sign within the quark-lepton Lagrangian produces the left-handed ``$(V-A)$'' form of the interaction in maximal violation of parity.  In terms of physical behaviour, one consequence of this model is that ``regular matter'' leptons emerge from a Weak interaction with left-handed chirality, while antimatter leptons emerge with right-handed chirality. Any deviation from this behavior would be indicative of ``new'' or ``exotic'' (i.e., not previously discovered) physics.
-~\aside[jbn]{"new" -> new
-\\
-"exotic" -> exotic. 
-\\...\\
-You define them right away. There is no need for air quotes. You should seriously think about never using air quotes, but use them as an indication to you that you need to write down more clarifying words instead.}
+%%Lee-Yang 
+%The generalized nucleon-level Lagrangian to describe the Weak interaction including BSM behaviour is given by:
+%\input{equation_LeeYangLagrangian.tex}%  \label{eq:lee_yang_lagrangian} 
+%where the coupling constants $C_X^{\pm}$ (with $X=\{V,A,S,T,P\}$) are written in such a way as to separate out the left-handed ($C_X^{+}$) and right-handed ($C_X^{-}$) components from one another, and the neutrino fields $\nu_{L,R}$ are given a similar treatment.  
+%%the left- and right-handed components of both the coupling constants and neutrino fields are separated out from one another, with left-handed couplings $C_X^{+} = $
+%%coupling constants $C_X^{\pm}$ are written
+%%$C_X^{+}$ and $C_X^{-}$ describe the left-handed and right-handed (respectively) 
+%A simple variable transform relates Eq.~\ref{eq:lee_yang_lagrangian} to expressions that are potentially more familiar from the older literature, much of which was written before it had been determined that the Weak force is primarily or entirely left-handed: 
+%\bea
+%\nu_{L} &=& \frac{1}{2}\nu \left( 1 + \gamma_5 \right) \\
+%\nu_{R} &=& \frac{1}{2}\nu \left( 1 - \gamma_5 \right) \\
+%C_X &=& \frac{1}{2} \left( C_X^+ + C_X^- \right) \\
+%C_X^\prime &=& \frac{1}{2} \left( C_X^+ - C_X^- \right)
+%\eea
+%\note[jbn]{Can you please provide a reference for Eq.~\ref{eq:lee_yang_lagrangian}? I'm now confused about how you can get pure 1+gamma\_5 projections without assuming Cv=Cv' and Ca = +/- Ca' (I forget the convention) so I really think you need to reference this expression rather than derive it.
+%} 
 
-There exists an extensive body of experimental evidence to demonstrate that the above model is overall a very good description of the beta decay process~\cite{wu}.  Despite the success of the $(V-A)$ model, there are still certain lingering questions that must be addressed by precision measurements.  Any deviation from maximal parity violation (i.e., a ``$(V+A)$'' contribution to the Weak force) would be of great interest to the community, as would the presence of certain other exotic couplings, such as the so-called Scalar ($S$) and Tensor ($T$) interactions.  Any such behaviour beyond the Standard Model (BSM) would represent a non-dominant contribution to the interaction, however the possibility cannot be entirely ruled out.  
-~\note[jbn]{This is where I'm suggesting a little more explanation of Lee and Yang, and  V-A from Feynman and Gell-Mann}
-
-%Lee-Yang 
-The generalized nucleon-level Lagrangian to describe the Weak interaction including BSM behaviour is given by:
-\input{equation_LeeYangLagrangian.tex}%  \label{eq:lee_yang_lagrangian} 
-where the coupling constants $C_X^{\pm}$ (with $X=\{V,A,S,T,P\}$) are written in such a way as to separate out the left-handed ($C_X^{+}$) and right-handed ($C_X^{-}$) components from one another, and the neutrino fields $\nu_{L,R}$ are given a similar treatment.  
-%the left- and right-handed components of both the coupling constants and neutrino fields are separated out from one another, with left-handed couplings $C_X^{+} = $
-%coupling constants $C_X^{\pm}$ are written
-%$C_X^{+}$ and $C_X^{-}$ describe the left-handed and right-handed (respectively) 
-A simple variable transform relates Eq.~\ref{eq:lee_yang_lagrangian} to expressions that are potentially more familiar from the older literature, much of which was written before it had been determined that the Weak force is primarily or entirely left-handed: 
-\bea
-\nu_{L} &=& \frac{1}{2}\nu \left( 1 + \gamma_5 \right) \\
-\nu_{R} &=& \frac{1}{2}\nu \left( 1 - \gamma_5 \right) \\
-C_X &=& \frac{1}{2} \left( C_X^+ + C_X^- \right) \\
-C_X^\prime &=& \frac{1}{2} \left( C_X^+ - C_X^- \right)
-\eea
-\note[jbn]{Can you please provide a reference for Eq.~\ref{eq:lee_yang_lagrangian}? I'm now confused about how you can get pure 1+gamma\_5 projections without assuming Cv=Cv' and Ca = +/- Ca' (I forget the convention) so I really think you need to reference this expression rather than derive it.
-} 
-It can be seen from the form of the Lagrangian that the $V,A,S,T,P$ couplings within are described as such because they \emph{behave} as vectors, axial-vectors, scalars, tensors, and pseudoscalars (respectively) under a Lorentz transform, where the Lagrangian itself must be a scaler both before and after a Lorentz transform~\cite{LeeYang}~\cite{Falkowski2021}~\cite{hong_sternberg_garcia}.
-\note[jbn]{(Any quark-lepton pseudoscalar couplings have usually been ignored in beta decay, because they are suppressed by (beta momentum)/(nucleon mass).  Note that more recently it's been pointed out that C\_P is naturally quite large in the nucleon (M. Gonzalez-Alonso and J. Martin Camalich Phys Rev Lett 112 042501 (2014)) and allows for significant constraints from allowed beta decay.)}
 
 %\note[bluetodo]{Seriously, this section needs some citations.  Notably, C.S. Wu~\cite{wu} (done) and Lee+Yang~\cite{LeeYang} (done).  Perhaps also Hong+Sternberg+Garcia~\cite{hong_sternberg_garcia}.  Probably a bunch more people too though.}
 %%\note{Write a paragraph about what we're looking for with this experiment.}
@@ -973,44 +1025,18 @@ It can be seen from the form of the Lagrangian that the $V,A,S,T,P$ couplings wi
 %%%%%%%%	To conduct a precision search for scalar and tensor couplings, it is necessary to combine the Holstein and JTW models into a single cohesive probability distribution.  
 
 
-\section{Mathematical Formalism}
-\label{sec:math_formalism}
-		In a beta decay event, conservation of energy and momentum are of course required, but those conditions alone cannot~\aside[jbn]{"cannot" is very misleading. The delta function for all 4 particles is a nontrivial mathematical object, but people do deal with it. I'm trying to suggest rephrasings.} provide a full description of the kinematics of emitted particles.
-\note[jbn]{Although momentum and energy conservation determine all kinematics event-by-event. the actual distributions include complications. 
-}
-The distribution of energy and momenta is probabilistic rather than deterministic with three bodies involved, and the full probability distribution for the momenta of outgoing particles cannot be written in closed form.  
-\note[jbn]{"probabilistic rather than deterministic with three bodies involved, and the full probability distribution for the momenta of outgoing particles cannot be written in closed form." 
-\\
-$\rightarrow$
-\\
-If terms including the tiny kinetic energy of the recoil are neglected, then
-the distribution of energy and momenta comes from a simple integral over final momentum states $d^3p$ of the leptons. But the outgoing beta sees a large correction from the Coulomb field of the nucleus, written as a Fermi function F(Z,Ebeta).  The result is in Eq.~\ref{equation:integrated_jtw_INTRODUCTION} (provide a reference for it).  
-}
-Because the nucleus is significantly more massive than either of the other two outgoing particles, the great majority of the released kinetic energy is distributed between the leptons, while the nucleus receives only a tiny fraction of the total.  This feature lends itself to an approximation in which the energy of the recoiling nucleus (the ``recoil'') is neglected entirely, and the decay may be described only in terms of the momenta of the outgoing positron(electron) and neutrino(anti-neutrino), as in the description from Jackson, Treiman, and Wyld (JTW)~\cite{jtw}~\cite{jtw_coulomb}.  The terms that have been neglected in this treatment are sometimes called `recoil-order corrections'.
-
-In order to proceed with a measurement, we must find an equation to describe the probability of beta decay events with any given distribution of energy and momenta among the daughter particles, as a function of the strength of the specific couplings of interest to us.  To do this, two sets of formalisms are combined -- the older formalism of JTW, %~\cite{jtw},~\cite{jtw_coulomb}, 
-which describes the effects of all types of Standard Model and exotic couplings of interest to us here, but which truncates its expression at first order in the (small) parameter of transferred nuclear recoil energy, and a newer formalism from Holstein~\cite{holstein}, which includes terms up to several orders higher in recoil energy, but which does not include any description of the exotic couplings of particular interest to us.  We note that because any exotic couplings present in nature have already been determined to be either small or nonexistant, it is sufficient to describe these parameters with expressions truncated at first order, despite the fact that it is still necessary to describe the larger Standard Model couplings with higher-order terms. 
-
-%%%\note{
-%%%In beta decay, a proton(neutron) within a nucleus decays into a neutron(proton), and emits a positron(electron) and neutrino(anti-neutrino).  The new neutron(proton) remains bound within the nucleus.  As always, momentum and energy must both be conserved.  The distribution of energy and momenta is, of course, probabilistic rather than deterministic, and with three bodies involved, the full probability distribution for the momenta of outgoing particles cannot be written in closed form.  However, because the nucleus is significantly more massive than either of the other two outgoing particles, the great majority of the released kinetic energy is distributed between the leptons, while the nucleus receives only a tiny fraction of the total.  This feature lends itself to an approximation in which the energy of the recoiling nucleus (recoil) is neglected entirely, and the decay may be described only in terms of the momenta of the outgoing positron(electron) and neutrino(anti-neutrino), as in JTW~\cite{jtw}.  The terms that have been neglected in this treatment are sometimes called `recoil-order corrections'.
-%%%}
-\note{
-Unfortunately, the outgoing (anti-)neutrino is very difficult to detect directly, and we make no attempt to do so in this experiment.  Instead, we might look for coincidences between an outgoing beta and a recoiling nucleus, and use that information to reconstruct the kinematics of the neutrino.  
-}
-	
-	
-	The procedure for combining the two formalisms is described in detail in Appendix~\ref{appendix_forthepeople}.  
-%	, so we will simply provide the combined master equation here:
-\aside{Do it!  Do the master equation!}
-\aside[done]{JB:  cut "so we will simply provide the combined master equation here"
-\\Don't. The equation you have is all you need.}
-Integrating the JTW expression over neutrino direction, we find:
+%%%% --- * --- %%%%
+\section{The Physical Signature of the Fierz Interference}
+\subsection{Mathematical Description}
+In this section, we consider how scalar and tensor interactions within the beta decay process might manifest as a physical observable.  Because the mathematical formalism 
+%for this sort of description 
+is worked out in detail within the contents of Appendix~\ref{appendix_forthepeople}, this section will simply provide the result directly.  To leading order, the probability density function from the classic \ac{JTW} paper to describe beta decay in terms of the outgoing beta's energy and direction relative to the nuclear spin is given here, as well as in Eq.~(\ref{equation:integrated_jtw})~\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}:
 \bea
 	\textrm{d}^3 \Gamma \dEe \, \dOmegae
 	&=& 
 	\frac{2}{(2\pi)^4} \, \FF \, \pe \Ee (E_0 - \Ee)^2 \, \dEe \, \dOmegae \, \xi \nonumber\\ 
 	&& \times \left[
-		1 + \bFierz \frac{\m c^2}{\Ee} + 
+		1 + \bFierz \frac{\m }{\Ee} + 
 		\A  
 		\left(
 			\frac{\vecJ}{J} \cdot \frac{\vecpe}{\Ee} 
@@ -1018,16 +1044,252 @@ Integrating the JTW expression over neutrino direction, we find:
 	\right],
 \label{equation:integrated_jtw_INTRODUCTION}
 \eea
-%%%%%\input{equation_integratedjtw} % \label{equation:integrated_jtw} --ugh, but this is also in the appendix.
-where a comparison with Holstein's treatment yields the relation,
+Here, $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the outgoing $\beta$ particle's (total) energy, momentum 3-vector, and momentum scalar, 
+%while $\Enu$, $\vecpnu$, and $\pnu$ are the equivalent quantities for the outgoing (anti-)neutrino, 
+and $E_0$ is the maximum possible $\beta$ energy associated with the transition.\aside{Holstein gives a formula for it.  Maybe I should write it out...}   $\vecJ$ is the  angular momentum vector associated with the parent nucleus, and $J$ its projection onto the axis of quantization. 
+%$\hatj$ is a unit vector in the direction of $\vecJ$ (note that in general, $\hatj \neq \frac{\vecJ}{J}$).  
+As usual, $\me$ is the mass of the electron.
+%, and $c$ is the speed of light.  
+The infinitesimal surface element $\dOmegabeta$ represents the direction of $\beta$ emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with $Z^\prime$ the proton number of the daughter nucleus.  The Fermi function accounts for the force from the nuclear electric charge acting on the outgoing electron or positron.  
+
+%\note{talk about $\xi, \Abeta, \bFierz$ here...}
+The parameters $\xi$, $\bFierz$, and $\Abeta$ are specific to the decay being considered, if one assumes the standard model holds, they can be written in terms of a simplified set of parameters (as compared with the original formalism).  Here, we introduce $\lambda$, the ratio of Gamow-Teller and Fermi couplings: 
 \bea
-\xi = G_v^2 \, \cos\theta_C \, f_1(E).
+\lambda &:=& \frac{g_A M_{GT}}{g_V M_F}
+\label{eq:definelambda}
 \eea
-\note[jbn]{...and $f_1(E)$ has both Fermi and Gamow-Teller contributions (?  I hope; otherwise it can't be the total rate that it strives to be?)
+where $g_A$ and $g_V$ are universally applicable vector and axial coupling strengths, and $M_F$ and $M_{GT}$ are the Fermi (vector coupling) and Gamow-Teller (axial coupling) matrix elements unique to a particular nucleus.  Then, under the expected behaviour of the standard model, we can express $\xi$, $\bFierz$, and $\Abeta$ as:
+\bea
+\xi &=& g_V^2 | M_F |^2 \left( 1 + \lambda^2 \right)
+\label{eq:xiwithlambda_intro} 
+\\
+\bFierz &=& 0 
+\label{bFierzwithlambda_intro}
+\\
+\Abeta &=& \frac{\frac{2}{5} \lambda^2 - 2 \lambda \sqrt{\frac{3}{5}}  }{1 + \lambda^2}.
+\label{eq:Awithlambda_intro}
+\eea
+\note{The formalism that gave rise to these expressions is missing some things...}
+
+
+Because the nucleus is significantly more massive than either of the other two outgoing particles, the great majority of the released kinetic energy is distributed between the leptons, while the nucleus receives only a tiny fraction of the total.  This feature lends itself to an approximation, as above, in which the energy of the recoiling nucleus (the ``recoil'') is neglected entirely, and the decay may be described only in terms of the momenta of the outgoing positron(electron) and neutrino(anti-neutrino).  
+%, as in the description from \ac(JTW)~\cite{jtw}~\cite{jtw_coulomb}.  
+The terms that have been neglected in this treatment are sometimes called recoil-order corrections.
+
+%In order to proceed with a measurement, we must find an equation to describe the probability of beta decay events with any given distribution of energy and momenta among the daughter particles, as a function of the strength of the specific couplings of interest to us.  To do this, two sets of formalisms are combined -- the older formalism of JTW, %~\cite{jtw},~\cite{jtw_coulomb}, 
+%which describes the effects of all types of Standard Model and exotic couplings of interest to us here, but which truncates its expression at first order in the (small) parameter of transferred nuclear recoil energy, and a newer formalism from Holstein~\cite{holstein}, which includes terms up to several orders higher in recoil energy, but which does not include any description of the exotic couplings of particular interest to us.  
+Although recoil-order and other small corrections must be accounted for within the standard model description of beta decay, in the case of exotic couplings, leading order \ac{JTW} description is adequate, because any exotic couplings present in nature have already been determined to be either small or nonexistant.  Therefore, in a search for exotic physics of this nature, it is sufficient to describe any exotic coupling parameters with expressions truncated at first order, in combination with a more precise set of expressions to account for the well-understood physical behaviours that dominate.  
+
+Within this work, we are particularly interested in the $\bFierz$ parameter.  Though it is identically zero under the standard model, it is quite sensitive to certain \ac{BSM} physics.  In particular, it describes (small) left-handed scalar and tensor couplings at \emph{linear} order, while these \ac{BSM} parameters only enter at the quadratic order in the case of $\xi$ and $\Abeta$.  In particular, in terms of the left-handed scalar and tensor couplings $g_S$ and $g_T$, $\bFierz$ has the form 
+\bea
+\bFierz &=& \frac{-2\gamma}{1 + \lambda^2} \left( \frac{g_S}{g_V} + \lambda^2 \frac{g_T}{g_A} \right), 
+%\label{bFierzwithlambda}
+\eea
+where $\gamma \approx 1$ is defined as in Appendix~\ref{sec:jtw_formalism}, and
+which clearly reduces to 0 in the standard model limit where $g_S = g_T = 0$.
+
+\subsection{Physical Behaviour}
+\label{signature_chapter}
+We now attempt to develop a physical intuition for the behaviour described above.  Considering Eq.~\ref{equation:integrated_jtw_INTRODUCTION}, we see that there is a beta energy dependence multiplying the $\bFierz$ term within the complete energy spectrum.  From this, it seems natural to assert that the most \emph{obvious} physically observable change that arises from the presence of a scalar or tensor coupling should be a change to the overall shape of the beta energy spectrum.  
+
+In fact, it is possible to extract a much clearer signal if we are clever with our choice of measurement.  To see this, it is helpful to notice that the \emph{overall} size of the $\bFierz$ term does not vary as a function of beta emission angle -- however, the $\Abeta$ term \emph{does}.  Indeed, in some sense, $\Abeta$ can be thought of as a parameterization of the extent to which the number of beta emissions changes as a function of angle.  The fact that we have in $\bFierz$ a small (or nonexistent), unchanging (with respect to angle) effect to be compared against a ``background'' large $\Abeta$ term which \emph{does} scale with emission angle, hints at a potential handle we might use to measure $\bFierz$ --- as we vary the emission angle under consideration, the \emph{fractional} size of the effect we're looking for will change!
+
+One way to do this is to separate the data into categories relating to their angular dependence with respect to the direction of nuclear spin (which parameterizes the $\Abeta$ observable).  If, as in our case, these sets of data can be further subdivided into categories that can be expected to have similar physical behaviours, but which may have differing systematic effects, the result is even more powerful.  In our case, the nuclear polarization is flipped periodically within a (mostly) symmetric apparatus, with beta detectors above and below along the axis of polarization.  The four beta spectra that result from this categorization can be used to construct a so-called superratio asymmetry.   
+
+The superratio, and superratio asymmetry, has been used for precision beta decay measurements in the past to measure the neutron's beta asymmetry\cite{UCNA_first_superratio}, and our own collaboration has also used it to measure the beta asymmetry in $^{37}$K~\cite{ben_Abeta}.  More recently, it has been used to measure the neutron's Fierz interference term~\cite{UCNAfierz2020}\cite{Saul2020} as well, with notably more impressive results than using the earlier `supersum' data combination method~\cite{UCNA_first_Fierz}.  
+
+The key to the effectiveness of the superratio technique is that many systematic effects can be made to cancel at the leading order, at the cost of some statistical resolving power.  The mathematical details of the superratio construction and its results are discussed in detail within Appendix~\ref{appendix:superratio}, so within the present section we will limit ourselves to a discussion of the results.
+
+%\note{}
+With the four rate spectra, $r_{D P}(\Ebeta)$, describing the rate at which events are detected in beta detector $D$ ($D =\{ \mathrm{T, B}  \}$ are the top and bottom detectors) from a decay whose parent had polarization $P$ ($P=\{+,-\}$), we can construct the superratio asymmetry observable, $A_{\mathrm{super}}$, such that
+\bea
+A_{\mathrm{super}} \;\;=\;\; A_{\mathrm{super}}(\Ebeta) 
+&=& \frac{ \sqrt{r_{\mathrm T-}\, r_{\mathrm B+} \phantom{ (\!\!\!\!\!) } }\; -\, \sqrt{ r_{\mathrm T+}\, r_{\mathrm B-}\phantom{ (\!\!\!\!\!) }} }{ \sqrt{r_{\mathrm T-}\, r_{\mathrm B+}\phantom{ (\!\!\!\!\!) }} \;+\, \sqrt{r_{\mathrm T+}\, r_{\mathrm B-} \phantom{ (\!\!\!\!\!) }} },
+\eea
+and we find the following dependence for the parameters $\Abeta$ and $\bFierz$ from Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}):
+\bea
+A_{\mathrm{super}} &\approx& \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \left( 1 - \bFierz \frac{mc^2}{\Ebeta} \right), 
+\eea
+where $v$ is the speed of the emitted beta particle, $c$ is the speed of light, $m$ is the mass of the electron, $\Ebeta$ is the total beta energy, $\vec{P}$ gives the nuclear spin-polarization vector of the parent, and $\theta$ describes the angle between the polarization vector and the direction into which the beta is emitted.  The ensemble averaged term, $\langle | \cos\theta | \rangle$, is averaged over the betas that are observed in a \emph{detector} (located along the axis of polarization).
+%\note{define:  $v,c,\vec{P}, m_e,$...}
+
+In addition to eliminating systematic effects, the superratio asymmetry also provides an enhanced signal to be evaluated, as can be seen in Fig.~\ref{fig:FierzSignature}.
+
+%We consider the effect of extracting 
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/Fierz_Signature.png}
+	\caption[Generated Beta Energy Spectrum and Superratio Asymmetry to Measure $\bFierz$]{A generated beta energy spectrum (top), and the superratio asymmetry associated with it (bottom) are constructed to measure a $\bFierz$ signal at the values shown.  The supersum method of Ref.~\cite{UCNA_first_Fierz} is roughly equivalent to constructing the top plot's beta energy spectrum.  Note that the magnitude of these $\bFierz$ values has been made to be unphysically large so that the effect to the top plot can be seen; both scalar and tensor couplings of the size needed to produce this effect have already been ruled out. }	\label{fig:FierzSignature}
+\end{figure}
+
+The superratio and superratio asymmetry are discussed in detail within Appendix~\ref{appendix:superratio}.  The discussion includes details on which sort of systematic errors will cancel out entirely, or to leading order, with this treatment -- however it must be noted that for the present project, higher-order corrections are included in all simulations, and the effects are propagated through to the end of the analysis.  Though many systematic effects can be reduced by using the superratio asymmetry, they must still be evaluated.  Therefore, measured values of $\Abeta$ and $\bFierz$ may be directly compared to theoretical predictions.
+
+
+
+\note{}
+
+%eliminated either complete
+%and more recently 
+%By constructing the superratio asymmetry, this feature allows for the cancellation of many systematic effects, at the cost of some statistical power.
+
+%%%% --- * --- %%%%
+%\FloatBarrier  % This will have to go away later.
+%\section{Fierz Interference -- The Physical Signature}
+%\note[orange]{Prototype abstract blurb on the superratio:
+%\\...\\
+%While the \emph{overall} size of the effect does not vary as a function of beta emission angle relative to the nuclear spin polarization, other effects do, and so the \emph{fractional} size of the effect also changes.  By constructing the superratio asymmetry, this feature allows for the cancellation of many systematic effects, at the cost of some statistical power.  
+%}
+
+%The physical effects resulting from the presence of scalar or tensor couplings include a small perturbation to the energy spectrum of betas produced by radioactive decay, labeled $\bFierz$ in Eq.~\ref{equation:integrated_jtw}.  Within the Standard Model, the parameter $\bFierz$ is identically zero, and a departure from that would be indicative of (BSM) scalar or tensor couplings.  
+
+%%%The measured value of $\bFierz$ can be evaluated not only by using a simple beta energy spectrum, as in the top plot of Fig.~\ref{fig:FierzSignature}, but also by
+%%%%~\aside[jbn]{$\rightarrow$ not only by.... but also by...} 
+%%%constructing a so-called ``superratio asymmetry'' instead (bottom plot in Fig.~\ref{fig:FierzSignature}), these small changes to the overall spectrum are amplified, and many systematic effects cancel out entirely.  This result comes at the cost of an increased statistical uncertainty.
+
+\note[done, nolist]{By normalizing Eq.~\ref{equation:integrated_jtw_INTRODUCTION} to have a conventional angular distribution 1 + (term)*$\Abeta$, we can write 
+$W(\theta) = 1 + \Abeta/(1+\bFierz \E/\me) cos(\theta) 
+\approx 
+1 + \Abeta cos(\theta) - \bFierz \E/\me \Abeta cos(\theta) $
+for small $\bFierz$.
+Our  superratio observable measures directly the coefficient of the $cos(\theta)$ term., and its distortion with energy is multiplied by $\bFierz \Abeta$.
+}
+\note[jbn]{
+The 37K $\Abeta$ is much larger than the neutron's $\Abeta$, so we gain in sensitivity compared to the neutron.
 }
 
 
+%%%, and the sort of systematic errors that cancel out under this treatment are discussed in detail in Appendix~\ref{appendix:superratio}.
+%\note{the "Physical Signature" section probably needs more work, but it's not getting it tonight.}
+\note[jb1]{JB on simple things still missing:
+\\
+Intro or theory section:
+\\...\\
+P(cos(theta)) = 1 + bm/E + P  Abeta v/c cos(theta)
+\\
+where theta is the angle between beta and polarization direction
+\\...\\
+Higher-order corrections to this equation (citing your appendices and/or
+chapters) are included in the simulation,
+so you are extracting b and Abeta in this
+equation to be compared with theory
+\\...\\
+\{This is a simple but vital statement-- some people actually extract Abeta(Ebeta$=$0) without recoil-order corrections, which is not the same parameter.\}
+\\...\\
+The theory prediction for Abeta (citing Fenker PRL) is X.
+\\
+The theory prediction for bFierz is 0 (maybe you have that already).
+}
 
+%\note[jb1]{JB:  ``I doubt I will have further useful comments on the Ch. (((this chapter))) as they are now.'' }
+
+%\missingfigure{I need that simulated picture of the different beta energy spectra, with different values of $\bFierz$.}
+\note[jb1]{JB on that missing figure that I've now put in:    ``A dependence of Abeta on beta energy is also introduced.
+\\
+UCNA fits energy spectrum and Abeta[Ebeta] simultaneously now."
+}
+
+%\section{Present Limits}
+%	A bit about other people's physics.
+
+\note{The point is, the presence of either scalar or tensor interactions will produce a $\bFierz$ term in the decay PDF.  It has other effects on the PDF, but those come in at higher-order in the tiny scalar and tensor couplings.  So, the Fierz term would be by far the biggest thing that changes in the PDF.  The PDF describes the energy and momentum of the outgoing beta w.r.t. a variety of other things.  Notably, we can write an elegant-ish description of beta momentum w.r.t. nuclear polarization direction, and ignore the neutrino completely after integrating over it.  We have a PDF in beta \emph{direction} (w.r.t. polarization), and beta \emph{energy}.  To lowest order (and lowest order is best order) the distribution w.r.t. polarization direction doesn't change, but the distribution w.r.t. energy does change.  Or ... something?  The point is, it makes a change in the beta energy spectrum.  This change is most pronounced at low energies, because the Fierz term is scaled by $(1/\Ebeta)$.  However, the asymmetry is also a function of $\Ebeta$.  A different function of $\Ebeta$.  In fact, it is scaled by $(\pbeta/\Ebeta)$ within the PDF, which is distinctly different than $\bFierz$.  So, one might ask what effect a $\bFierz$ term would produce on a constructed asymmetry spectrum.  ....This explanation has gone way off track.}
+
+%\note{Here's a reference to the picture that shows the result of a non-zero $\bFierz$ term.  It's Fig.~\ref{fig:FierzSignature}.}
+%\note{Kludge-deleted section:  ``On the Superratio, the Supersum, and the Constructed Asymmetry''}
+%\section{On the Superratio, the Supersum, and the Constructed Asymmetry}
+%\note{Clean Superratio,Supersum,Super-Asymmetry section.  Prolly merge w/ bFierz section.}
+\note[done,nolist]{JB:  You need to at some point say that the supersum is the beta energy spectrum.  There are experiments trying to do this method better, but they are very difficult.  UCNA published a combined energy spectrum and Abeta[Ebeta] analysis on the neutron in March 2020~\cite{NeutronbFierz_March2020}.
+\\...\\
+MJA:  I can't help but also notice the follow-up article from September 2020~\cite{Saul2020}.  Ugh. 
+}
+
+%%%%%\\*
+%%%%The data can be combined into a superratio asymmetry.  This has the benefit of causing many systematics to cancel themselves out at leading order.  It also will increase the fractional size of the effects we're looking for.  This can be shown by using math.~\aside[jbn]{``This is shown in full detail in Appendix~\ref{appendix:superratio}.''}
+%%%%
+%%%%%\\*
+%%%%Not all systematics effects are eliminated.  We'll want to be careful to propagate through any effects that are relevant.  Using the superratio asymmetry as our physical observable makes this process a bit messier for the things that don't cancel out, but it's all just math.
+%%%%~\aside[jbn]{You really need a literature reference to the superratio method here. I know you have one. Danny gave us one a long time ago.
+%%%%}
+%%%%Some other groups have performed similar measurements using the supersum as the physical observable.  There are pros and cons to both methods.  I can show, using a back-of-the-envelope calculation, that for this particular dataset, the superratio asymmetry method produces a better result.  
+%%%%\note[jbn]{If you're not going to do this back-of-envelope calculation here, you need to just reference Appendix D and likely eliminate this paragraph?}
+
+%%despite the fact that it is still necessary to describe the larger Standard Model couplings with higher-order terms. 
+%%
+%%for the case of exotic couplings, we
+%%We note that because any exotic couplings present in nature have already been determined to be either small or nonexistant, it is sufficient to describe these parameters with expressions truncated at first order, despite the fact that it is still necessary to describe the larger Standard Model couplings with higher-order terms. 
+
+
+%%%%%%% --- * --- %%%%	
+%%%\section{Mathematical Formalism}
+%%%\label{sec:math_formalism}
+%%%		In a beta decay event, conservation of energy and momentum are of course required, but those conditions alone cannot~\aside[jbn]{"cannot" is very misleading. The delta function for all 4 particles is a nontrivial mathematical object, but people do deal with it. I'm trying to suggest rephrasings.} provide a full description of the kinematics of emitted particles.
+%%%\note[jbn]{Although momentum and energy conservation determine all kinematics event-by-event. the actual distributions include complications. 
+%%%}
+%%%The distribution of energy and momenta is probabilistic rather than deterministic with three bodies involved, and the full probability distribution for the momenta of outgoing particles cannot be written in closed form.  
+%%%\note[jbn]{"probabilistic rather than deterministic with three bodies involved, and the full probability distribution for the momenta of outgoing particles cannot be written in closed form." 
+%%%\\
+%%%$\rightarrow$
+%%%\\
+%%%If terms including the tiny kinetic energy of the recoil are neglected, then
+%%%the distribution of energy and momenta comes from a simple integral over final momentum states $d^3p$ of the leptons. But the outgoing beta sees a large correction from the Coulomb field of the nucleus, written as a Fermi function F(Z,Ebeta).  The result is in Eq.~\ref{equation:integrated_jtw_INTRODUCTION} (provide a reference for it).  
+%%%}
+%%%Because the nucleus is significantly more massive than either of the other two outgoing particles, the great majority of the released kinetic energy is distributed between the leptons, while the nucleus receives only a tiny fraction of the total.  This feature lends itself to an approximation in which the energy of the recoiling nucleus (the ``recoil'') is neglected entirely, and the decay may be described only in terms of the momenta of the outgoing positron(electron) and neutrino(anti-neutrino), as in the description from Jackson, Treiman, and Wyld (JTW)~\cite{jtw}~\cite{jtw_coulomb}.  The terms that have been neglected in this treatment are sometimes called `recoil-order corrections'.
+%%%
+%%%In order to proceed with a measurement, we must find an equation to describe the probability of beta decay events with any given distribution of energy and momenta among the daughter particles, as a function of the strength of the specific couplings of interest to us.  To do this, two sets of formalisms are combined -- the older formalism of JTW, %~\cite{jtw},~\cite{jtw_coulomb}, 
+%%%which describes the effects of all types of Standard Model and exotic couplings of interest to us here, but which truncates its expression at first order in the (small) parameter of transferred nuclear recoil energy, and a newer formalism from Holstein~\cite{holstein}, which includes terms up to several orders higher in recoil energy, but which does not include any description of the exotic couplings of particular interest to us.  We note that because any exotic couplings present in nature have already been determined to be either small or nonexistant, it is sufficient to describe these parameters with expressions truncated at first order, despite the fact that it is still necessary to describe the larger Standard Model couplings with higher-order terms. 
+%%%
+%%%%%%\note{
+%%%%%%In beta decay, a proton(neutron) within a nucleus decays into a neutron(proton), and emits a positron(electron) and neutrino(anti-neutrino).  The new neutron(proton) remains bound within the nucleus.  As always, momentum and energy must both be conserved.  The distribution of energy and momenta is, of course, probabilistic rather than deterministic, and with three bodies involved, the full probability distribution for the momenta of outgoing particles cannot be written in closed form.  However, because the nucleus is significantly more massive than either of the other two outgoing particles, the great majority of the released kinetic energy is distributed between the leptons, while the nucleus receives only a tiny fraction of the total.  This feature lends itself to an approximation in which the energy of the recoiling nucleus (recoil) is neglected entirely, and the decay may be described only in terms of the momenta of the outgoing positron(electron) and neutrino(anti-neutrino), as in JTW~\cite{jtw}.  The terms that have been neglected in this treatment are sometimes called `recoil-order corrections'.
+%%%%%%}
+%%%\note{
+%%%Unfortunately, the outgoing (anti-)neutrino is very difficult to detect directly, and we make no attempt to do so in this experiment.  Instead, we might look for coincidences between an outgoing beta and a recoiling nucleus, and use that information to reconstruct the kinematics of the neutrino.  
+%%%}
+%%%	
+%%%	
+%%%	The procedure for combining the two formalisms is described in detail in Appendix~\ref{appendix_forthepeople}.  
+%%%%	, so we will simply provide the combined master equation here:
+%%%\aside{Do it!  Do the master equation!}
+%%%\aside[done]{JB:  cut "so we will simply provide the combined master equation here"
+%%%\\Don't. The equation you have is all you need.}
+%%%Integrating the JTW expression over neutrino direction, we find:
+%%%\bea
+%%%	\textrm{d}^3 \Gamma \dEe \, \dOmegae
+%%%	&=& 
+%%%	\frac{2}{(2\pi)^4} \, \FF \, \pe \Ee (E_0 - \Ee)^2 \, \dEe \, \dOmegae \, \xi \nonumber\\ 
+%%%	&& \times \left[
+%%%		1 + \bFierz \frac{\m c^2}{\Ee} + 
+%%%		\A  
+%%%		\left(
+%%%			\frac{\vecJ}{J} \cdot \frac{\vecpe}{\Ee} 
+%%%		\right) 
+%%%	\right],
+%%%\label{equation:integrated_jtw_INTRODUCTION}
+%%%\eea
+%%%%%%%%\input{equation_integratedjtw} % \label{equation:integrated_jtw} --ugh, but this is also in the appendix.
+%%%where a comparison with Holstein's treatment yields the relation,
+%%%\bea
+%%%\xi = G_v^2 \, \cos\theta_C \, f_1(E).
+%%%\eea
+%%%\note[jbn]{...and $f_1(E)$ has both Fermi and Gamow-Teller contributions (?  I hope; otherwise it can't be the total rate that it strives to be?)
+%%%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%% --- * --- %%%%
 \section{Our Decay}
 %%%\note[jb1]{JB:  on 2.3 (now 1.4), "Our decay":  Just put the comments in. Keep the figure as-is.
 %%%%\\
@@ -1043,7 +1305,7 @@ Here, we will focus on the decay,
 \eea
 which is extremely well suited to the type of experiment to be the discussed in this thesis.  
 %this and other similar experiments -- both because of its suitability 
-The parent, $^{37}\textrm{K}$, is an isotope of potassium---an alkali.  Though this fact may initially seem unremarkable, it is their `hydrogen-like'~\aside[jbn]{hydrogen-like does not need quotes} single valence electron which allows alkalis to be readily trapped within a magneto-optical trap, a critical component of our experimental design (see Chapter~\ref{atomicphysics_chapter}).
+The parent, $^{37}\textrm{K}$, is an isotope of potassium---an alkali.  Though this fact may initially seem unremarkable, it is their hydrogen-like~\aside[done, nolist]{hydrogen-like does not need quotes} single valence electron which allows alkalis to be readily trapped within a magneto-optical trap, a critical component of our experimental design (see Chapter~\ref{atomicphysics_chapter}).
 
 A potential concern in any experiment concerned with the angular correlations resulting from one particular decay branch is the background from competing decay branches.  As can be seen in Fig.~\ref{fig:nuclearleveldiagram}, the decay of $^{37}\textrm{K}$ is dominated by a single branch which contributes nearly $98\%$ of $^{37}\textrm{K}$ decay events, and the remaining events nearly all arise from a single branch contributing around $2\%$ of the decay events.  The other branches combined account for only around $0.04\%$ of decays.  Taken all together, this means that the background events which must be accounted for are both infrequent and well understood.
 %the result is a fairly clean decay spectrum dominated by the branch of interest to us, with  
@@ -1131,18 +1393,23 @@ its big $\Abeta$ value means we have a big thing to multiply any $\bFierz$ value
 %%%% --- * --- %%%%	
 \section{The Shake-off Electron Spectrum}
 \label{section:soe_intro}
-Although the beta decay process is primarily concerned with the emission of beta particles (electrons or positrons) from a Weak interaction that occurs within the nucleus, it is common for one or more \emph{orbital} electrons to also be lost in the process.  Although beta particles are emitted over a continuous energy spectrum, they commonly carry several MeV of kinetic energy.  By contrast, an atomic electron that becomes unbound in this process is likely to only carry a few eV of kinetic energy, and we say that they are `shaken' off.  
-\note[jbn]{These are referred to as shakeoff electrons (SOEs), since they are in some sense shaken off.}
+Although the beta decay process is primarily concerned with the emission of beta particles (electrons or positrons) from a Weak interaction that occurs within the nucleus, it is common for one or more \emph{orbital} electrons to also be lost in the process.  Although beta particles are emitted over a continuous energy spectrum, they commonly carry several MeV of kinetic energy.  By contrast, an atomic electron that becomes unbound in this process is likely to only carry a few eV of kinetic energy.  These are referred to as \acp{SOE}, since they are in some sense shaken off.
+%, and we say that they are `shaken' off.  
+%\note[jbn]{These are referred to as shakeoff electrons (SOEs), since they are in some sense shaken off.}
 
-We will amend Eq.~\ref{eq:ourdecay} to reflect the presence of $N$ such `shake-off electrons' (SOEs) within each decay event, as
+We will amend Eq.~\ref{eq:ourdecay} to reflect the presence of $N$ such \ac{SOE}s within each decay event, as
 \bea
 ^{37}\textrm{K} &\rightarrow& \,^{37}\textrm{\!Ar}^{(N-1)+} + \beta^{+} + \nu_e + N \, e_{\textrm{SO}}, 
 \label{eq:ourdecay_withsoe}
 \eea
 %\aside{Do I want to re-assign N somehow so the notation works better?}
-where it is clear that, since the parent $^{37}\textrm{K}$ atom was electrically neutral before its decay by $\beta^+$ emission, the daughter $^{37}\textrm{\!Ar}$ will initially have an `extra'~\aside[jbn]{'extra' -> extra. You're not breaking charge conservation here, you don't need to define the word.} orbital electron (and therefore a negative net charge) if no electrons are shaken off.  We also note that it is common for multiple SOEs to be created in a given decay event.  
+where it is clear that, since the parent $^{37}\textrm{K}$ atom was electrically neutral before its decay by $\beta^+$ emission, the daughter $^{37}\textrm{\!Ar}$ will initially have an extra
+%~\aside[jbn]{'extra' -> extra. You're not breaking charge conservation here, you don't need to define the word.} 
+orbital electron (and therefore a negative net charge) if no electrons are shaken off.  We also note that it is common for multiple SOEs to be created in a given decay event.  
 
-A further consideration is that the outer electron in an $^{37}\textrm{\!Ar}^{-}$ ion is \emph{not bound},~\aside{cite someone!!  I don't know who.} and in an electric field such as is present within our experimental chamber, this outer electron is removed immediately to be accelerated through the field, leaving behind a neutral $^{37}\textrm{\!Ar}$ atom.  Although this is in principle a different physical loss mechanism, we will refer to unbound electrons resulting from either process as SOEs.  
+A further consideration is that the outer electron in an $^{37}\textrm{\!Ar}^{-}$ ion is not bound\cite{ArgonMinusIons}, 
+%~\aside{cite someone!!  I don't know who.}
+and in an electric field such as is present within our experimental chamber, this outer electron is removed immediately to be accelerated through the field, leaving behind a neutral $^{37}\textrm{\!Ar}$ atom.  Although this is in principle a different physical loss mechanism, we will refer to unbound electrons resulting from either process as SOEs.  
 
 It is useful to consider the energy spectrum of these shake-off electrons.  The most straightforward component of the SOE energy spectrum arises from the electrons that are lost immediately following decay, and we take these to initially have 0eV in kinetic energy.  
 
@@ -1173,93 +1440,4 @@ Unfortunately, this treatment cannot determine the fractional contribution of ea
 %%%%%\end{figure}
 
 
-%%%% --- * --- %%%%
-\FloatBarrier  % This will have to go away later.
-\section{Fierz Interference -- The Physical Signature}
-\label{signature_chapter}
-\note[orange]{Prototype abstract blurb on the superratio:
-\\...\\
-While the \emph{overall} size of the effect does not vary as a function of beta emission angle relative to the nuclear spin polarization, other effects do, and so the \emph{fractional} size of the effect also changes.  By constructing the superratio asymmetry, this feature allows for the cancellation of many systematic effects, at the cost of some statistical power.  
-}
-
-The physical effects resulting from the presence of scalar or tensor couplings include a small perturbation to the energy spectrum of betas produced by radioactive decay, labeled $\bFierz$ in Eq.~\ref{equation:integrated_jtw}.  Within the Standard Model, the parameter $\bFierz$ is identically zero, and a departure from that would be indicative of (BSM) scalar or tensor couplings.  
-
-The measured value of $\bFierz$ can be evaluated by using a simple beta energy spectrum, as in the top plot of Fig.~\ref{fig:FierzSignature}, but by~\aside[jbn]{$\rightarrow$ not only by.... but also by...} constructing a so-called ``superratio asymmetry'' instead (bottom plot in Fig.~\ref{fig:FierzSignature}), these small changes to the overall spectrum are amplified, and many systematic effects cancel out entirely.  This result comes at the cost of an increased statistical uncertainty.
-\note[jbn]{By normalizing Eq.~\ref{equation:integrated_jtw_INTRODUCTION} to have a conventional angular distribution 1 + (term)*$\Abeta$, we can write 
-$W(\theta) = 1 + \Abeta/(1+\bFierz \E/\me) cos(\theta) 
-\approx 
-1 + \Abeta cos(\theta) - \bFierz \E/\me \Abeta cos(\theta) $
-for small $\bFierz$.
-Our  superratio observable measures directly the coefficient of the $cos(\theta)$ term., and its distortion with energy is multiplied by $\bFierz \Abeta$.
-\\...\\
-The 37K $\Abeta$ is much larger than the neutron's $\Abeta$, so we gain in sensitivity compared to the neutron.
-}
-\begin{figure}[h!!t]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/Fierz_Signature.png}
-	\caption[Naive Beta Energy Spectrum and Superratio Asymmetry to Measure $\bFierz$]{A naive beta energy spectrum (top) and superratio asymmetry (bottom) are constructed to measure $\bFierz$.}	
-	\label{fig:FierzSignature}
-\end{figure}
-
-The superratio and superratio asymmetry are discussed in detail in Appendix~\ref{appendix:superratio}.  The discussion includes details on which sort of systematic errors will cancel out entirely, or to leading order, with this treatment -- however it must be noted that for this project, higher-order corrections are included in all simulations, and the effects are propagated through to the end of the analysis.  Therefore, measured values of $\Abeta$ (and $\bFierz$, though that is trivial) may be directly compared to theoretical predictions.  
-
-%%%, and the sort of systematic errors that cancel out under this treatment are discussed in detail in Appendix~\ref{appendix:superratio}.
-
-
-\note{the "Physical Signature" section probably needs more work, but it's not getting it tonight.}
-\note[jb1]{JB on simple things still missing:
-\\
-Intro or theory section:
-\\...\\
-P(cos(theta)) = 1 + bm/E + P  Abeta v/c cos(theta)
-\\
-where theta is the angle between beta and polarization direction
-\\...\\
-Higher-order corrections to this equation (citing your appendices and/or
-chapters) are included in the simulation,
-so you are extracting b and Abeta in this
-equation to be compared with theory
-\\...\\
-\{This is a simple but vital statement-- some people actually extract Abeta(Ebeta$=$0) without recoil-order corrections, which is not the same parameter.\}
-\\...\\
-The theory prediction for Abeta (citing Fenker PRL) is X.
-\\
-The theory prediction for bFierz is 0 (maybe you have that already).
-}
-
-%\note[jb1]{JB:  ``I doubt I will have further useful comments on the Ch. (((this chapter))) as they are now.'' }
-
-%\missingfigure{I need that simulated picture of the different beta energy spectra, with different values of $\bFierz$.}
-\note[jb1]{JB on that missing figure that I've now put in:    ``A dependence of Abeta on beta energy is also introduced.
-\\
-UCNA fits energy spectrum and Abeta[Ebeta] simultaneously now."
-}
-
-%\section{Present Limits}
-%	A bit about other people's physics.
-
-\note{The point is, the presence of either scalar or tensor interactions will produce a $\bFierz$ term in the decay PDF.  It has other effects on the PDF, but those come in at higher-order in the tiny scalar and tensor couplings.  So, the Fierz term would be by far the biggest thing that changes in the PDF.  The PDF describes the energy and momentum of the outgoing beta w.r.t. a variety of other things.  Notably, we can write an elegant-ish description of beta momentum w.r.t. nuclear polarization direction, and ignore the neutrino completely after integrating over it.  We have a PDF in beta \emph{direction} (w.r.t. polarization), and beta \emph{energy}.  To lowest order (and lowest order is best order) the distribution w.r.t. polarization direction doesn't change, but the distribution w.r.t. energy does change.  Or ... something?  The point is, it makes a change in the beta energy spectrum.  This change is most pronounced at low energies, because the Fierz term is scaled by $(1/\Ebeta)$.  However, the asymmetry is also a function of $\Ebeta$.  A different function of $\Ebeta$.  In fact, it is scaled by $(\pbeta/\Ebeta)$ within the PDF, which is distinctly different than $\bFierz$.  So, one might ask what effect a $\bFierz$ term would produce on a constructed asymmetry spectrum.  ....This explanation has gone way off track.}
-
-\note{Here's a reference to the picture that shows the result of a non-zero $\bFierz$ term.  It's Fig.~\ref{fig:FierzSignature}.}
-
-
-
-\note{Kludge-deleted section:  ``On the Superratio, the Supersum, and the Constructed Asymmetry''}
-%\section{On the Superratio, the Supersum, and the Constructed Asymmetry}
-\note{Clean Superratio,Supersum,Super-Asymmetry section.  Prolly merge w/ bFierz section.}
-\note[jb1]{JB:  You need to at some point say that the supersum is the beta energy spectrum.  There are experiments trying to do this method better, but they are very difficult.  UCNA published a combined energy spectrum and Abeta[Ebeta] analysis on the neutron in March 2020~\cite{NeutronbFierz_March2020}.
-\\...\\
-MJA:  I can't help but also notice the follow-up article from September 2020~\cite{Saul2020}.  Ugh. 
-}
-
-%\\*
-The data can be combined into a superratio asymmetry.  This has the benefit of causing many systematics to cancel themselves out at leading order.  It also will increase the fractional size of the effects we're looking for.  This can be shown by using math.~\aside[jbn]{``This is shown in full detail in Appendix~\ref{appendix:superratio}.''}
-
-%\\*
-Not all systematics effects are eliminated.  We'll want to be careful to propagate through any effects that are relevant.  Using the superratio asymmetry as our physical observable makes this process a bit messier for the things that don't cancel out, but it's all just math.
-~\aside[jbn]{You really need a literature reference to the superratio method here. I know you have one. Danny gave us one a long time ago.
-}
-Some other groups have performed similar measurements using the supersum as the physical observable.  There are pros and cons to both methods.  I can show, using a back-of-the-envelope calculation, that for this particular dataset, the superratio asymmetry method produces a better result.  
-\note[jbn]{If you're not going to do this back-of-envelope calculation here, you need to just reference Appendix D and likely eliminate this paragraph?}
 

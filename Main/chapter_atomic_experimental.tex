@@ -277,7 +277,8 @@ several related experiments using other isotopes.
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/doublemot4.pdf}
-	\caption[The TRINAT experimental set-up, viewed from above]{The TRINAT experimental set-up, viewed from above.  The two MOT system reduces background in the detection chamber.  Funnel beams along the atom transfer path keep the atoms focused.}	
+	\caption[The TRINAT experimental set-up, viewed from above]{The TRINAT experimental set-up, viewed from above.  Ions from the beamline pass through the collection chamber onto the neutralizer, which is held at ground.  The neutralizer is heated to release the neutral atoms from its surface back into the collection chamber, where some are collected into a \ac{MOT}.  Every 16 seconds, the atoms from the collection chamber's MOT are transferred directly into the detection chamber's MOT, kept focused during the transfer by funnel beams (lasers).  Within the detection chamber, background events are dramatically reduced.  }
+%	The two MOT system reduces background in the detection chamber.  Funnel beams along the atom transfer path keep the atoms focused.}	
 	\label{fig:doublemot}
 \note{Figure was originally created by Alexandre, modified by ... someone else?  Or Alexandre?  And I got it from ... probably an experimental proposal?  I should figure out how to cite a proposal...}
 \end{figure}
@@ -317,7 +318,7 @@ this beta decay work."
 \\
 (Presently your thesis is Ref. 14, which is only cited so far for Fig. 2.1)
 }
-\note[jbn, nolist]{Chapter 2 corrections from John:  "all of these are trivial...."}
+\note[done, nolist]{Chapter 2 corrections from John:  "all of these are trivial...."}
 \note[done, nolist]{
 *section 2.1.3 "using a Helmoltz coil" add "but with currents in opposite direction." (saying it correctly here then implicitly defines anti-Helmholtz which you use correctly later for the AC MOT)
 }
@@ -325,7 +326,7 @@ this beta decay work."
 \note[done, nolist]{*2.5.1 "roughly" -> "approximately" The Efield is not rough at all, it's pretty good really. }
 \note[done, nolist]{Is the rMCP really just a 2-plate chevron in 2014? I don't remember. Why can't I find Ben's thesis?}
 %
-\note[jbn, nolist]{a glaring omission:
+\note[done, nolist]{a glaring omission:
 \\
 \textbf{You don't state the polarization achieved 99.1$\pm$0.1 percent anywhere that I can see., citing the publication.} You might also state that's important for Abeta but has much more precision than needed for the near-zero bFierz term.
 \\...\\
@@ -561,7 +562,15 @@ Due to an unfortunate interaction between the two MCP detectors, during the 2014
 %\note[org]{I guess I could describe how delay lines work, but I don't really want to.  Might be useful for in the next chapter though. ...actually, I think I've done it as well as is needed over there.}
 %\note[org]{At some point I probably have to mention how decays lose orbital electrons.  Do I do it in another section somewhere?}
 
-\note[jbn, nolist]{Chapter 2 corrections from John: (trivial...):
+The data used to measure the polarization was all collected using the rMCP, while the $\Abeta$ and $\bFierz$ data were collected using the eMCP.  The polarization was taken to be the same in both cases, an assertion that is backed up by weeks of optimization and polarization data on stable $^{41}$K, with all optical pumping and magnetic field switching parameters kept constant.  Ambient magnetic field changes of $\sim$50 milliGauss could cause some polarization perturbations at the precision achieved, but the stray fields were kept under control at that level.  The TRINAT lab is in a basement, well shielded from the experimental hall by concrete with rebar, and though 50 mG fields are seen in that hall from an open Helmholtz ion trap, they and the nearby 5-ton crane produce negligible fields when measured at the atom trap. The cyclotron field is $\sim$0.5 Gauss, predominantly vertical, 
+%and a smaller horizontal component, 
+but TRINAT's Helmholtz trim coils are adjusted during calibrations with cyclotron both on and off --- and of course the cyclotron is on with a constant field during the $^{37}$K delivery.  Furthermore, because we switched every few hours between the using the eMCP and rMCP, we were able to rule out the possibility that the polarization might have drifted but escaped notice.  
+
+%The polarization was taken to be the same in both cases.
+
+
+
+\note[done, nolist]{Chapter 2 corrections from John: (trivial...):
 \\...\\
 *2.5.1 state clearly in an extra paragraph at the end that the polarization-determining data was taken with the rMCP, while the Abeta and bFierz data were taken with the eMCP. The polarization was assumed to be the same during the Abeta+bFierz data. This is backed up by constant 41K polarization data for weeks
 of optimization, with all optical pumping and B field switching parameters kept constant. Ambient magnetic field changes of 50 milliGauss could cause some polarization perturbations at the precision achieved, yet the stray fields are under control at that level. The TRINAT lab is in a basement well-shielded from the experimental hall by concrete with rebar, and though 50 mG fields are seen in that Hall from an open Helmholtz ion trap, they and the 5-ton crane produce negligible fields when measured at the atom trap. The cyclotron field makes 0.5 Gauss, predominantly vertical, and a smaller horizontal component, but trim Helmholtz coils at TRINAT are adjusted during calibrations with cyclotron on vs. off, and of course the cyclotron is on with constant field during the 37K delivery.

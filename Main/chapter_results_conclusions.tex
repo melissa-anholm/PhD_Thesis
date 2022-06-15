@@ -64,27 +64,32 @@ Accounting for this, a more accurate one-parameter measurement might produce the
 \label{sec:relation_to_other_measurements}
 \note{begin literal quote from John:}
 The best existing measurement of the Fierz interference term is in the decay of the neutron, with
-\mbox{$\bFierz = 0.017 \pm 0.021$} --- consistent with the Standard Model prediction of zero~\cite{Saul2020}. Our measurement is strongly related, yet complementary.  
+\mbox{$\bFierz = 0.017 \pm 0.021$} --- consistent with the Standard Model prediction of zero, and with previous results for the neutron's $\bFierz$~\cite{Saul2020}\cite{UCNAfierz2020}. Our measurement is strongly related, yet complementary.  
 %
-This result for $\bFierz$ cannot be directly compared to our result  in $^{37}$K, because the neutron's sensitivity to scalar and tensor couplings is different than our own.  
+This result for $\bFierz$ cannot be directly compared to our result in $^{37}$K, because the neutron's sensitivity to scalar and tensor couplings is different than our own.  In particular, using $\lambda := \frac{g_A M_{GT}}{g_V M_F}$, a parameter unique to a given transition (see Eq.~(\ref{eq:definelambda}) and the related discussion), we find:
 %
-In terms of non-Standard Model Lorentz current structures, to lowest order in the non-SM  currents the same equation applies:
+%In terms of non-Standard Model Lorentz current structures, to lowest order in the non-SM  currents the same equation applies:\aside{John's $\bFierz$ equation was off...}
 \bea
-\bFierz = \pm \frac{(C_S +C_S') + (C_T - C_T') \lambda^2}{ 1 + \lambda^2}
+\bFierz &=& \frac{\pm 2\gamma}{1 + \lambda^2} \left( \frac{g_S}{g_V} + \lambda^2 \frac{g_T}{g_A} \right)
+%\bFierz = \pm \frac{(C_S +C_S') + (C_T - C_T') \lambda^2}{ 1 + \lambda^2}
 \eea
-where the top/bottom sign is for $\beta^-$/$\beta^+$ decay~\cite{jtw}.~\aside{I think we're missing a $\gamma$.}
+where the top/bottom sign is for $\beta^-$/$\beta^+$ decay, and $g_X$ ($X = \{ V,A,S,T\} $) is a purely left-handed coupling for vectors, axial-vectors, scalars, and tensors~\cite{jtw}\cite{jtw_coulomb}.
+%~\aside{I think we're missing a $\gamma$.}
 %(the plus is for $\beta^-$ decay and the - for $\beta^+$ decay)
-
-In our $^{37}$K case, $\lambda^2$ = $|M_{\rm GT}|^2$/$|M_{\rm F}|^2$ is close to 3/5 (the expected value of \mbox{$J/(J+1)$} for a single $J=3/2$, $d 3/2$ nucleon)~\cite{deShalit1963},
-while for the neutron $\lambda^2$ is close to 3 (the expected value for a $(J+1)/J$, $J=1/2$, $s1/2$ nucleon).
-$|M_F|$, the Fermi matrix element, is nearly the same for both of these isospin = 1/2 decays (the largest correction is the larger isospin mixing of $\sim$0.01 in $^{37}$K).
-So our observable is relatively less sensitive to Lorentz tensor currents, and will predominantly constrain or discover Lorentz scalar currents.  See Fig.~(\ref{fig:exclusionplotfromjohn}).
+In the case of $^{37}$K, a previous measurement puts $ | \lambda | \approx 0.576 $, while, in the case of the neutron, $ | \lambda | \approx 1.277 $~\cite{ben_Abeta}\cite{NeutronAbeta2018}.
+%%$\lambda$ is close to $\sqrt{3/5}$ (the expected value of \mbox{$J/(J+1)$} for a single $J=3/2$, $d 3/2$ nucleon)~\cite{deShalit1963}
+%%In our $^{37}$K case, $\lambda^2$ = $|M_{\rm GT}|^2$/$|M_{\rm F}|^2$ is close to 3/5 (the expected value of \mbox{$J/(J+1)$} for a single $J=3/2$, $d 3/2$ nucleon)~\cite{deShalit1963},
+%%while for the neutron $\lambda^2$ is close to 3 (the expected value for a $(J+1)/J$, $J=1/2$, $s1/2$ nucleon).
+The Fermi matrix element, $|M_F|$, is nearly the same for both of these isospin = 1/2 decays (the largest correction is the larger isospin mixing of $\sim$0.01 in $^{37}$K).
+This means that our observable is comparatively less sensitive to Lorentz tensor currents, and will predominantly constrain or discover Lorentz scalar currents.  See Fig.~(\ref{fig:exclusionplotfromjohn}).
 
 \note{}
-\begin{figure}[htb]
+\begin{figure}[h!t!b!]
 	\centering
 	\includegraphics[width=.999\linewidth]{Figures/JB_exclusion.pdf}
-	\caption[That exclusion plot from John.]{That exclusion plot from John.  I think he means ``$C_S - C_S^\prime$'', etc.}	
+	\caption[An exclusion plot for left-handed scalar and tensor couplings comparing this work with the recent $\bFierz$ measurement in the neutron]{An exclusion plot for left-handed scalar and tensor couplings comparing this work with the recent $\bFierz$ measurement in the neutron\cite{Saul2020}.}
+%	\caption[That exclusion plot from John.]{That exclusion plot from John.  I think he means ``$C_S - C_S^\prime$'', etc.}	
+	\note{Pretty sure the sign of the $C_S$ constraint is flipped.  Also, I just can't get this centroid or these limits.  What?}
 	\label{fig:exclusionplotfromjohn}
 \end{figure}
 
@@ -150,6 +155,7 @@ In terms on non-Standard Model Lorentz current structures, to lowest order in th
 $\bFierz$ = $\pm$ $(C_S +C_S' + (C_T - C_T') \lambda^2)/( 1 + \lambda^2)$
 \\
 (the plus is for $\beta^-$ decay and the - for $\beta^+$ decay)~\cite{jtw}.  [to be continued...] }
+\note{John's equation for $\bFierz$ is wrong.  Use mine.}
 \note[done, nolist]{[...continued from prev.]
 \\
 In our $^{37}$K case, $\lambda^2$ = $|M_{\rm GT}|^2$/$|M_{\rm F}|^2$ is close to 3/5 (the expected value j/(j+1) for a single j=3/2 d3/2 nucleon)~\cite{deShalit1963},
@@ -168,37 +174,6 @@ contributing to $\beta$ decay.}
 %%%\label{sec:relation_to_other_measurements}
 %%%%%%% %%%%%%%%% %%%%%%%%
 %\clearpage
-\section{That figure from John}
-In which we talk about and possibly *put* Fig.~\ref{fig:exclusionplotfromjohn}.
-\note[jbn, nolist]{
-ii) Similarly, answering how the results fit into the bigger picture is what you wanted to do.
-\\...\\
-I'm convinced that you don't want to do a full review of all beta decay experiments.
-\\...\\
-But you could say the Fierz term has been constrained by the energy spectrum and by the energy dependence of the beta
-asymmetry, cite the best paper in the neutron and maybe the UCNA one as well, and use that figure I sent (I'm sending the improved version).
-\\...\\
-It is a good approximation to linearize the situation, i.e. this figure is good for small Cs and Ct. (A similar approach is being used in a letter coming out soon, and 3 referees did not nag them about it.)
-}
-
-\note[jbn, nolist]{Immediate follow-up email from John:  
-\\...\\
-another basic big point. What would it mean if there were nonzero Cs, Ct? 
-\\
-In the context of the more elegant SM, a theory of quarks and leptons and mathematically consistent interactions, that would imply the existence of at least one extra unknown exchange boson. The mass would not be measured, just its coupling
-strenghts to the particles participating in the beta decay.
-\\...\\
-Maybe background to understand that includes:
-\\
-If one were to write the SM weak interaction, $C_A$ and $C_V$ and $C_A$ and $C_V g_A$ would all be constants with abs value 1.
-The (1+- gamma\_5)'s are projection operators-- in the SM, the W boson only couples to left-handed nu's and right-handed antinu's
-\\
-('more will be said in the forward-looking Ch. 6.2 about tests of that part.)
-\\
-So all the known information about Ca and Cv is accounted for.
-\\
-($g_A = 1.26$ for the neutron... it's not equal to 1 because of strong interactions between the quarks in the neutron.)
-}
 
 
 
@@ -207,7 +182,7 @@ So all the known information about Ca and Cv is accounted for.
 \FloatBarrier
 \section{Possible Future Work:  $R_{\textrm{slow}}$}
 \label{section_rslow}
-\subsection{Background}
+%\subsection{Background}
 As discussed in Ch.~\ref{intro_chapter}, the nuclear weak force is known to be a predominantly left-handed vector and axial-vector $(V-A)$ interaction -- meaning that immediately following an interaction (e.g. beta decay) with a weak force carrying boson ($W^+,\: W^-,\: Z$), 
 normal-matter leptons (such as the electron and electron neutrino) emerge with left-handed chirality,
 while the anti-leptons (e.g. the positron and electron anti-neutrino) emerge with right-handed chirality.  
@@ -332,45 +307,61 @@ In the proposed experiment, we focus once again on the spin-polarized decay, \mb
 
 
 %
-\subsection{The Decay Process}
-\label{rslow_decayprocess}
-\label{pos_recoils}
-
-The \acf{JTW} beta decay probability density function, including a representation of exotic right-handed couplings, is given, to first order, by Eq.~\ref{equation:jtw_master}.  Here, information about the handedness of any couplings is buried within the relative signs of the primed and un-primed coupling constants ($C_X$ and $C_X^\prime$, for $X = \{ V,A,S,T\}$).  
+%\subsection{The Decay Process}
+%\label{rslow_decayprocess}
+%\label{pos_recoils}
+The decay process is as described in Appendix~\ref{appendix_forthepeople}.  Within the \ac{JTW} formalism, information about the handedness of any couplings is buried within the relative signs of the primed and un-primed coupling constants ($C_X$ and $C_X^\prime$, for $X = \{ V,A,S,T\}$).  Since this section describes a search for a different type of exotic physics, it is clear that the simplifications to be made within the \ac{JTW} formalism will be different.  
+% with the exception being the simplifications that can be made to the \ac{JTW} formalism.  
+Recall that for the expected pure left-handed interactions, the coupling constants obey the rule, $C_X = C_X^\prime$ ($X = \{ V,A,S,T,P\}$).  For a purely right-handed interaction, the equivalent relationship is $C_X = - C_X^\prime$.  Since we know, at least for vectors and axial vectors, that the interaction must still be predominantly left-handed, one way to approach the problem is to define a new basis for the couplings to explicitly split the left-handed and right-handed couplings, as in:
+\bea
+C_X^{L} &:=& \frac{1}{\sqrt{2}}(C_X + C_X^\prime)
+\\
+C_X^{R} &:=& \frac{1}{\sqrt{2}}(C_X - C_X^\prime).
+\eea
 
 The decay may be treated as a three-body problem in which the available kinetic energy is divided up between the beta, the neutrino, and the recoiling $^{37}\textrm{\!Ar}$ nucleus, and (of course) the total linear and angular momentum are conserved.  While the neutrino cannot be detected directly, its kinematics may be reconstructed from observations of the beta and the recoiling daughter nucleus.  By placing detectors above and below the decaying atom along the axis of its polarization, we are able to obtain information about the outgoing beta's energy and momentum, in the cases of interest to us, where it is emitted along (or close to) the axis of polarization.  
 
-The recoiling $^{37}\textrm{\!Ar}$ nucleus is a bit trickier to work with, but the task is not impossible.  One useful feature of the $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar}$ transition is that, in addition to the $\beta^+$ emitted in the decay itself, one or more \emph{orbital} electrons from the parent atom are typically lost.  In the majority of decay events
-%\comment{(80\% of them?  Give a number.  Cite someone.  Dan's thesis?~\cite{dan_thesis}  Or Alexandre's talk from like 1999.)}, 
-only one orbital electron is shaken off, which results in the daughter $^{37}\textrm{\!Ar}$ atom being electrically neutral~\cite{gorelov2000}\cite{dan_thesis}.  In the remaining cases, two or more orbital electrons are lost this way, and the daughter atom is positively charged.  If we apply an electric field perpendicular to the direction of polarization, these positively charged $^{37}\textrm{\!Ar}^{(+n)}$ ions may be collected into a detector, from which hit position and time of flight information may be extracted.  The shake-off electrons are emitted with an average energy of only $\sim$ 2\,eV
-%very little kinetic energy ($\sim$ 2\,eV)
-%\comment{(give a number.  2 eV?  I should check.  Also, do I cite one of John's talks here?)}, 
-so to a very good approximation the other decay products are not perturbed by the presence of shake-off electrons.  
+It should be noted that for the class of decays of greatest interest, where the beta and the neutrino emerge back-to-back along the polarization axis, the recoiling daughter nucleus will have zero momentum along the directions perpendicular to this axis, and on average less total energy than if the beta and neutrino were emitted in a parallel direction.  Henceforth, daughter nuclei from a back-to-back decay as shown in Figure~\ref{fig:rhc} will be described as `slow' recoils.  In terms of observables, 
+%these slow recoils, upon being swept into a detector by an ambient electric field, 
+this means that if the electric field is configured to point along one of the axes perpendicular to the polarization direction, then when the recoiling ion is swept away into a detector, the slow recoil's hit position should be exactly along the projection of the polarization axis.  Furthermore, the slow recoil's time of flight should be in the middle of the time of flight spectrum, since other recoils will be emitted with momentum towards or away from the detector.  Of course, this is a simplistic description; in nature, no matter how strong the right-handed couplings, emitted particles will have a continuous angular spectrum -- the above is only meant to describe the angular set up which would give us maximal sensitivity to observables relating to right-handed currents.  
 
-\note{}
-It should be noted that for the class of decays of greatest interest, where the beta and the neutrino emerge back-to-back along the polarization axis, the recoiling daughter nucleus will have zero momentum along the directions perpendicular to this axis, and on average less total energy than if the beta and neutrino were emitted in a parallel direction.  Henceforth, daughter nuclei from a back-to-back decay as shown in Figure~\ref{fig:rhc} will be described as `slow' recoils.  In terms of observables, this means that if the electric field is configured to point along one of the axes perpendicular to the polarization direction, then when the recoiling ion is swept away into a detector, the slow recoil's hit position should be exactly along the projection of the polarization axis.  Furthermore, the slow recoil's time of flight should be in the middle of the time of flight spectrum, since other recoils will be emitted with momentum towards or away from the detector.  
-\note[gs]{ 10. P. 93 contains a reference to “Figure ??”  (that's actually the thing above, Figure~\ref{fig:rhc}, no matter what page it's on now.) }
-
-
-\begin{figure}[htb]
+\begin{figure}[h!t!b!]
 	\centering
 	\includegraphics[width=.999\linewidth]{Figures/RHC.png}
 	\caption[A Comparison of Left-Handed and Right-Handed Couplings]{A comparison of left-handed and right-handed vector and axial couplings in polarized beta decay.  The above are extremal examples;  in nature there is no requirement for the leptons to be emitted back-to-back, or for either to be emitted along the axis of polarization.  However the class of events with minimal momentum allocated to the recoiling daughter nucleus (i.e., the result of back-to-back lepton emission) is what provides the most sensitivity to the $\Rslow$ observable, and a $\beta$ coincidence (our detectors are located along the axis of polarization) is required.
 	The precise scenario on the right is the only one that is \emph{completely} disallowed in the absence of right-handed couplings, and only if the neutrinos are taken to be massless.  For intermediate decay scenarios, the probability is simply suppressed based on the extent to which the usual left-handed coupling can access the phase space.
+	\label{fig:rhc}
 	}
-%	\note[tag]{fix caption.}
-	\note{reference figure in text somewhere.}
 \end{figure}
+
+The recoiling $^{37}\textrm{\!Ar}$ nucleus is a bit trickier to work with in some ways than an outgoing beta particle, but it is possible to do, and a necessary component of this measurement.  One useful feature of the $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar}$ transition is that, in addition to the $\beta^+$ emitted in the decay itself, one or more \emph{orbital} electrons from the parent atom are typically lost.  In the majority of decay events only one orbital electron is shaken off, which results in the daughter $^{37}\textrm{\!Ar}$ atom being electrically neutral~\cite{gorelov2000}\cite{dan_thesis}.  In the remaining cases, two or more orbital electrons are lost this way, and the daughter atom is positively charged.  If we apply an electric field perpendicular to the direction of polarization, these positively charged $^{37}\textrm{\!Ar}^{(+n)}$ ions may be collected into a detector, from which hit position and time of flight information may be extracted.  The shake-off electrons are emitted with an average energy of only $\sim$ 2\,eV so to a very good approximation the other decay products are not perturbed by the presence of shake-off electrons\cite{Levinger}.  
+
+The potential exists to use these shake-off electrons as a tag for good events, in a way similar to what has been done in the present measurements of $\bFierz$ and $\Abeta$.  This could greatly improve the cleanliness of the spectra.  Unfortunately, within the 2014 data that has already been collected, the recoil detector and electron detector could not be made to work simultaneously.  Some of the resulting spectra are shown in Fig.~\ref{fig:RslowSpectra}.  While an analysis to search for right-handed interactions could be performed on existing data, it would likely \emph{significantly} improve the results if a new dataset were collected with both \ac{MCP} detectors working at the same time. 
+
+\note[done,nolist]{From G.S.: 
+\\ 
+10. P. 93 contains a reference to “Figure ??”  (that's actually the thing above, Figure~\ref{fig:rhc}, no matter what page it's on now.) }
 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=.999\linewidth]{Figures/Rslow_tof_squished.png}
-	\note[tag]{Wait, is this description from John even accurate?  It seems wrong, but my brain won't go.}
-	\caption[Recoil TOF Spectra at 535 V/cm]{Recoil TOF Spectra for $^{37}$K, taken at 535 V/cm.  Recoil spectra are partially separated by charge distribution.  $\Rslow$ would manifest as a dip in the centre of the TOF for each charge state.  .... wait, is this even true?!  The large dips visible here are primarily a result of chamber geometry.}
+	\caption[Recoil TOF Spectra at 535 V/cm]{Recoil TOF Spectra for $^{37}$K, taken at 535 V/cm.  Recoil spectra are partially separated by charge state.  For the most part, the dips within the centre of each charge state distribution are the result of the decay chamber's geometry.  However, within these spectra, a non-zero $\Rslow$ would manifest as a change in the relative sizes of the mid-charge-state dips when comparing the red and blue spectra.	}
+	\label{fig:RslowSpectra}
 \end{figure}
 
 
-\note[jbn, nolist]{More thoughts from John:
+
+In June 2014, approximately 7 days of beam time at TRIUMF was dedicated to the TRINAT $^{37}\textrm{K}$ beta decay experiment.  During this period, approximately 10,000 atoms were held within the trap at any given time.  The cleaned spectra show around 50,000 polarized beta-recoil coincidence events in total, divided among measurements at three different electric field strengths (535 V/cm, 415 V/cm, 395 V/cm).
+
+Approximately half of this data was collected with the recoil MCP in use and is therefore suitable for use in this project to search for right-handed currents;  the other half is used as described within the rest of this document to search for scalar and tensor couplings.   
+
+A fit to simulation has shown that the data that has already been collected has sufficient statistical power to measure the \emph{fractional} contribution of any polarized `new physics' beta decay parameter (ie right-handed, scalar, and tensor currents within the weak interaction) to a sensitivity of $\sim 2\%$ of its true value.  Systematic limitations are still being assessed.  
+
+%\note{}
+
+
+
+\note[done, nolist]{More thoughts from John:
 \\...\\
 hi Melissa,
 \\...\\
@@ -388,17 +379,17 @@ of flight spectrum, since other recoils will be emitted with momentum towards or
 away from the detector"
 }
 
-\ifthenelse{\boolean{isdraft}}
-{
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=.999\linewidth]{Feedback/AMirrorDecayObservable.png}
-	\caption[A Slide From John]{A Slide From John, or something.  idk, it goes with the text immediately previous.}
-%	\label{}
-\end{figure}
-\FloatBarrier
-}
-{}
+%%\ifthenelse{\boolean{isdraft}}
+%%{
+%%\begin{figure}[htb]
+%%	\centering
+%%	\includegraphics[width=.999\linewidth]{Feedback/AMirrorDecayObservable.png}
+%%	\caption[A Slide From John]{A Slide From John, or something.  idk, it goes with the text immediately previous.}
+%%%	\label{}
+%%\end{figure}
+%%\FloatBarrier
+%%}
+%%{}
 
 
 %Of course, in any real experiment, the number of decays emitted in exactly one set of directions will be a set of measure zero.  \comment{(say something about the limits taken as beta decay events approach the optimal set of angles.  Or just delete this paragraph because it's stupid.)}
@@ -421,30 +412,30 @@ away from the detector"
 %	\label{fig:Rslow_tof}
 %\end{figure}
 
-%
-\subsection{Status of the $R_{\textrm{slow}}$ Measurement}
-\label{rslow_status}
-In June 2014, after several years of preparatory work beforehand (the author has been continuously involved with this project since 2010), approximately 7 days of beam time at TRIUMF was dedicated to the TRINAT $^{37}\textrm{K}$ beta decay experiment.  Approximately half of this data is suitable for use in this project.  During this period, approximately 10,000 atoms were held within the trap at any given time.  The cleaned spectra show around 50,000 polarized beta-recoil coincidence events in total, divided among measurements at three different electric field strengths (535 V/cm, 415 V/cm, 395 V/cm). 
-
-%At the present time, analysis is underway.  The recoil MCP hit position data has been calibrated, and systematic effects in the trap position and size measurements are being considered.  The largest two remaining hurdles for the analysis both lie in improvements to the Monte Carlo.  
-
-%The first challenge is to implement particle tracking within a \emph{non-uniform} electric field.  Using the true non-uniform electric field will shift the time-of-flight spectra overall by around 1\%, and is expected to change the \emph{shape} of spectra as well, since the deviation from uniformity changes significantly as a function of flight tragectory, and is greater the farther a particle ventures from the central axis.  This would affect the measured hit positions as well.  Taken together, the shape of the time-of-flight spectra (as in Figure~\ref{fig:Rslow_tof}) and the recoil hit position are critical to our reconstruction of the decay process, it is critical that we model them correctly.  
-
-%The second challenge will be to allow our simulation to vary vector, axial, scalar, and tensor coupling constants separately while holding other physical parameters (such as the half-life and Fermi/Gamow-Teller ratio) constant.  This, too, will be absolutely critical to the analysis, and its implementation is likely to be non-trivial.
-
-A fit to simulation has shown that the data that has already been collected has sufficient statistical power to measure the \emph{fractional} contribution of any polarized `new physics' beta decay parameter (ie right-handed, scalar, and tensor currents within the weak interaction) to a sensitivity of $\sim 2\%$ of its true value.  Systematic limitations are still being assessed.  
-%Because previous measurements have already shown that any $(V-A)$, $S$, and $T$ terms within the Standard Model must be quite small~\cite{severijns_beck_cuncic_2006}\cite{severijns_cuncic_2011}, the present measurement is not likely to be able to add any new constraints to our understanding of Standard Model physics, and must instead be understood as complementary to previous measurements.
-%Because previous measurements have 
-%Quantifying this observable's sensitivity to physics beyond the Standard Model in comparison to previously measured constraints~\cite{severijns_beck_cuncic_2006}\cite{severijns_cuncic_2011} is work in progress.  
-
-
-
-%Approximately of beamtime and several years of preparatory work beforehand, and its analysis is currently underway.  The statistical strength of our data is sufficient for a \comment{5\%?  (John said 5\%, but I don't really know how he calculated that...)} measurement to constrain right-handed weak interactions, however the systematic effects within the data have not yet been fully evaluated.  This constraint is far too weak to allo w for the discovery of a right-handed component of the nuclear weak force, and is likely also too weak to place any new constraints on its strength.  It could, at best, lend statistical strength to the constraints on right-handed currents that have already been observed.
-%
-%Unfortunately, due to beam scheduling and target creation procedures at TRIUMF, and because several components of the TRINAT science chamber have subsequently been removed and disassembled to prepare for future upgrades to the apparatus, it would be extremely difficult to collect any further data in a timely fashion.  
-
-%\pagebreak
-
+%%%%
+%%%\subsection{Status of the $R_{\textrm{slow}}$ Measurement}
+%%%\label{rslow_status}
+%%%In June 2014, after several years of preparatory work beforehand (the author has been continuously involved with this project since 2010), approximately 7 days of beam time at TRIUMF was dedicated to the TRINAT $^{37}\textrm{K}$ beta decay experiment.  Approximately half of this data is suitable for use in this project.  During this period, approximately 10,000 atoms were held within the trap at any given time.  The cleaned spectra show around 50,000 polarized beta-recoil coincidence events in total, divided among measurements at three different electric field strengths (535 V/cm, 415 V/cm, 395 V/cm). 
+%%%
+%%%%At the present time, analysis is underway.  The recoil MCP hit position data has been calibrated, and systematic effects in the trap position and size measurements are being considered.  The largest two remaining hurdles for the analysis both lie in improvements to the Monte Carlo.  
+%%%
+%%%%The first challenge is to implement particle tracking within a \emph{non-uniform} electric field.  Using the true non-uniform electric field will shift the time-of-flight spectra overall by around 1\%, and is expected to change the \emph{shape} of spectra as well, since the deviation from uniformity changes significantly as a function of flight tragectory, and is greater the farther a particle ventures from the central axis.  This would affect the measured hit positions as well.  Taken together, the shape of the time-of-flight spectra (as in Figure~\ref{fig:Rslow_tof}) and the recoil hit position are critical to our reconstruction of the decay process, it is critical that we model them correctly.  
+%%%
+%%%%The second challenge will be to allow our simulation to vary vector, axial, scalar, and tensor coupling constants separately while holding other physical parameters (such as the half-life and Fermi/Gamow-Teller ratio) constant.  This, too, will be absolutely critical to the analysis, and its implementation is likely to be non-trivial.
+%%%
+%%%A fit to simulation has shown that the data that has already been collected has sufficient statistical power to measure the \emph{fractional} contribution of any polarized `new physics' beta decay parameter (ie right-handed, scalar, and tensor currents within the weak interaction) to a sensitivity of $\sim 2\%$ of its true value.  Systematic limitations are still being assessed.  
+%%%%Because previous measurements have already shown that any $(V-A)$, $S$, and $T$ terms within the Standard Model must be quite small~\cite{severijns_beck_cuncic_2006}\cite{severijns_cuncic_2011}, the present measurement is not likely to be able to add any new constraints to our understanding of Standard Model physics, and must instead be understood as complementary to previous measurements.
+%%%%Because previous measurements have 
+%%%%Quantifying this observable's sensitivity to physics beyond the Standard Model in comparison to previously measured constraints~\cite{severijns_beck_cuncic_2006}\cite{severijns_cuncic_2011} is work in progress.  
+%%%
+%%%
+%%%
+%%%%Approximately of beamtime and several years of preparatory work beforehand, and its analysis is currently underway.  The statistical strength of our data is sufficient for a \comment{5\%?  (John said 5\%, but I don't really know how he calculated that...)} measurement to constrain right-handed weak interactions, however the systematic effects within the data have not yet been fully evaluated.  This constraint is far too weak to allo w for the discovery of a right-handed component of the nuclear weak force, and is likely also too weak to place any new constraints on its strength.  It could, at best, lend statistical strength to the constraints on right-handed currents that have already been observed.
+%%%%
+%%%%Unfortunately, due to beam scheduling and target creation procedures at TRIUMF, and because several components of the TRINAT science chamber have subsequently been removed and disassembled to prepare for future upgrades to the apparatus, it would be extremely difficult to collect any further data in a timely fashion.  
+%%%
+%%%%\pagebreak
+%%%
 
 
 
@@ -456,11 +447,21 @@ This two-parameter analysis to measure $\Abeta$ and $\bFierz$ has produced the r
 \bFierz =& \,0.033  &\!\!\! \pm\, 0.084(\textrm{stat})\;\, \pm\, 0.039(\textrm{sys})  \\
 \Abeta  =& -0.5738 &\!\!\! \pm\, 0.0082(\textrm{stat})    \pm\, 0.0041(\textrm{sys}),
 \eea
-where uncertainties are evaluated at 1$\sigma$.  This measurement of $\bFierz$ is consistent with the Standard Model value of $\bFierz=0$, and $\Abeta$ is consistent both with the collaboration's prior measurement of $\Abeta$, as well as with the value predicted by the Standard Model at $\Abeta=-0.5706\pm0.0007$.
+where uncertainties are evaluated at 1$\sigma$.  This measurement of $\bFierz$ is consistent with the Standard Model value of $\bFierz=0$, and $\Abeta$ is consistent both with the collaboration's prior measurement of $\Abeta$, as well as with the value predicted by the standard model at $\Abeta=-0.5706\pm0.0007$.  \aside[tag]{somewhere, I have to define $\Abeta$ in terms of $\lambda$...}
 
 The result for $\bFierz$ is dominated by statistical uncertainty, suggesting that the measurement could be improved simply by counting longer.  There is also room for improvement in the systematic uncertainty, which is dominated by scattering and the related measurements of material thicknesses.  
 
-\note[jb1]{JB on Ch. \ref{sec:discussion_corrections_uncertainties} -- `discussion of corrections and uncertainties':
+\note{begin direct quote from John:}
+Largely because of this result,
+the collaboration is working to reduce the largest systematics,
+using lower-Z materials to reduce backscattering, and changing the silicon
+$\delta$E to a multi-wire proportional chamber with very thin windows.
+The collaboration has already implemented very thin pellicle mirrors.
+The projected systematic uncertainty could approach 0.01 in a future
+experment, which would then likely continue to be limited by statistics.
+\note{end quote from John.}
+
+\note[done,nolist]{JB on Ch. \ref{sec:discussion_corrections_uncertainties} -- `discussion of corrections and uncertainties':
 \\...\\
 could be as simple as
 "The bFierz result in Table 5.1 is dominated by statistical uncertainty.
@@ -491,7 +492,7 @@ or all of that could go at the end of Chapter 5.
 
 
 
-\section{Stuff from John}
+%\section{Stuff from John}
 \note[jbn, nolist]{Another Round of Thoughts from John!
 \\...\\
 Fitting Ben's data (using for the bFierz function my convolution of 1/E with a Clifford tail) as I've shown before, compare what happens if I let Abeta float, or if I then fix Abeta arbitrarily to that floated value.
@@ -537,8 +538,37 @@ I would have expected a separate uncertainty for b and Abeta for each data set,
 either on each 2D figure in ch. 6, are collected in a table in Ch. 6.
 }
 
+%\section{That figure from John}
+In which we talk about and possibly *put* Fig.~\ref{fig:exclusionplotfromjohn}.
+\note[done, nolist]{
+ii) Similarly, answering how the results fit into the bigger picture is what you wanted to do.
+\\...\\
+I'm convinced that you don't want to do a full review of all beta decay experiments.
+\\...\\
+But you could say the Fierz term has been constrained by the energy spectrum and by the energy dependence of the beta
+asymmetry, cite the best paper in the neutron and maybe the UCNA one as well, and use that figure I sent (I'm sending the improved version).
+\\...\\
+It is a good approximation to linearize the situation, i.e. this figure is good for small Cs and Ct. (A similar approach is being used in a letter coming out soon, and 3 referees did not nag them about it.)
+}
 
-
+\note[jbn, nolist]{Immediate follow-up email from John:  
+\\...\\
+another basic big point. What would it mean if there were nonzero Cs, Ct? 
+\\
+In the context of the more elegant SM, a theory of quarks and leptons and mathematically consistent interactions, that would imply the existence of at least one extra unknown exchange boson. The mass would not be measured, just its coupling
+strenghts to the particles participating in the beta decay.
+\\...\\
+Maybe background to understand that includes:
+\\
+If one were to write the SM weak interaction, $C_A$ and $C_V$ and $C_A$ and $C_V g_A$ would all be constants with abs value 1.
+The (1+- gamma\_5)'s are projection operators-- in the SM, the W boson only couples to left-handed nu's and right-handed antinu's
+\\
+('more will be said in the forward-looking Ch. 6.2 about tests of that part.)
+\\
+So all the known information about Ca and Cv is accounted for.
+\\
+($g_A = 1.26$ for the neutron... it's not equal to 1 because of strong interactions between the quarks in the neutron.)
+}
 
 
 
