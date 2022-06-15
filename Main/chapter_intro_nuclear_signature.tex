@@ -261,7 +261,7 @@ theorists turned their attention to the nuclear strong force, which had been cha
 %which had been challenging to model successfully 
 %certain properties that made it challenging to 
 
-The completed theories of electroweak and strong interactions, together, formed the core of what has come to be known as the standard model of particle physics (\acs{SM}).  It is unclear exactly when this terminology developed, or who originated it, but it had certianly come into use by the mid-1970s, and has persisted afterwards\cite{PaisTreiman1975}\cite{weinberginterview2018}.  Notably, the only one of the fundamental forces not included under the umbrella of the standard model is the force of gravity, which is not compatible, in its current form, with the quantum mechanical underpinnings of the standard model.  In the decades since, this incompatibility has been a major focus of inquiry for theoretical physicists, but the problem remains unresolved. 
+The completed theories of electroweak and strong interactions, together, formed the core of what has come to be known as the standard model of particle physics (\acs{SM}).  It is unclear exactly when this terminology developed, or who originated it, but it had certianly come into use by the mid-1970s, and the usage still persists\cite{PaisTreiman1975}\cite{weinberginterview2018}.  Notably, the only one of the fundamental forces not included under the umbrella of the standard model is the force of gravity, which is not compatible, as it is currently understood, with the quantum mechanical underpinnings of the standard model.  In the decades since, this incompatibility has been a major focus of inquiry for theoretical physicists, but the problem remains unresolved. 
 
 %standard model does not attempt address the force of gravity
 
@@ -359,11 +359,10 @@ Transmutations?:
 %%%a neutrino (which he referred to as a "neutron" at the time) 
 
 \note{Here's some random thing John did in 2014:  \cite{somerandomthingJohndid2014}.  
-\\...\\
+\\
 Here's some random thing that apparently all of TRINAT did in 2014:  \cite{somerandomthingTRINATdid2014}. 
-\\...\\
+\\
 Here's Rob Pitcairn's thing:  \cite{Pitcairn2009}.  }
-
 \note{I should probably cite Dan's thesis.  And Alexandre's too.\cite{alexandrethesis2008}.  Actually Dan's is already cited somewhere else, but here it is anyway:  \cite{dan_thesis}.  }
 
 \note{$^8$Li limits on tensor currents from 2015, by Sternberg:  \cite{TensorLimits8Li2015}. 
@@ -420,7 +419,8 @@ I think you've neglected where the fT value and prediction for Abeta come from, 
 \\...\\
 You had a note to do this, and in desperation I encouraged you to leave it out.
 I was wrong and Georg is right-- the whole SM prediction for Abeta makes no sense this way, and something about it needs to be there.
-\\...\\
+}
+\note[jbn, nolist]{
 there are two ways to add a dedicated section in ch 1:
 \begin{itemize}
 	\item i) by writing the equation for the rate in terms of Vud and rho (the G-T matrix element over Fermi squared), and saying Shidling et al. gets rho from that by assuming Vud from the 0+ to 0+ decays. (You had a note "Do the master equation!" which I think I said you needed to leave out, but I was probably wrong.) But then you have to define all the small corrections, which is a lot of physics.
@@ -444,21 +444,29 @@ Then you would just need \textbf{ii and iii}.
 
 
 %%%% --- * --- %%%%	
-\section{Beta Decay within the Standard Model}
-\note{Intro blurb goes here.
-\\...\\
-The most general and vague description of beta decay ever:  a proton turns into a neutron and emits a positron, or else a neutron turns into a proton and emits an electron.  Also, neutrinos are emitted with the proton/electron.  Occasionally, also, an electron from like atomic orbitals or something gets captured, triggering a similar process in which a proton is transmuted into a neutron, but no positron/electron gets emitted.  A neutrino does though.  The Feynman diagrams for all these things are pretty similar, and they're shown in Fig.~\ref{fig:feynmandiagrams_betadecay}.  
-\\..\\
-Electric charge is kept fixed.  The whole process is mediated by the $W^\pm$ bosons.  
-}
-%%%%%%%%
-\note{}
-\note{Imported figure and reference to the figure are here.  It probably goes in this section rather than the one it was in before.}
-In Fig.~\ref{fig:feynmandiagrams_betadecay} the tree-level Feynman diagrams pertaining to the most common beta decay processes are shown.  
-%
-It is these beta decay processes which present what is arguably the most accessible experimental window on the workings of the nuclear weak force.
+\section{Beta Decay within the Standard Model and \; \mbox{Beyond}}
+In the most general sense, the process of beta decay is one in which a nucleon (proton or neutron) is transformed into a different nucleon (i.e., a neutron or proton, respectively) and a beta particle (a positron or electron, respectively) and neutrino are emitted.
 
-\FloatBarrier
+At the nucleon level, there are three basic classes of beta decay processes:
+\bea
+	  n \;\;\rightarrow& p + e^- + \bar{\nu}_e        
+\;\;\;\; \;\;\;\; \;\;\;\; \;\;\;\; 
+	  & \beta^- \;\, \mathrm{Decay}    
+\label{eq:betaminus_decay}  \\
+	  p \;\;\rightarrow& n + e^+ + \nu_e              
+\;\;\;\; \;\;\;\; \;\;\;\; \;\;\;\; 
+	  & \beta^+ \;\, \mathrm{Decay}    
+\label{eq:betaplus_decay}   \\
+p + e^- \;\;\rightarrow& n + \nu_e, \;\;\;\; \;\;\;\; 
+\;\;\;\; \;\;\;\; \;\;\;\; \;\;\;\; 
+	   & \mathrm{Electron \;\, Capture}    
+\label{eq:electroncapture}
+\eea
+where $p$ represents a proton and $n$ a neutron, $e^-$/$e^+$ represents an electron/positron (often referred to as a $\beta^-$/$\beta^+$), and $\nu_e$/$\bar{\nu}_e$ represents an electron neutrino/electron anti-neutrino.  In practice, these are often all simply referred to as "neutrinos".  
+
+Of course, the processes of $\beta^+$ decay and electron capture are energetically disallowed for a proton not bound within a nucleus, but a free neutron will eventually undergo $\beta^-$ decay.  
+%The rules for which of the above are energetically possible within a nucleus
+Within the nucleus, rules of which processes are and are not energetically allowed are dependent on the specific nucleus in question.  Figure~\ref{fig:feynmandiagrams_betadecay} shows the Feynman diagrams associated with each of these processes.   
 \begin{figure}[h!t!b!]
 	\centering
 	\includegraphics[width=.90\linewidth]{Figures/feynmandiagrams_betadecay_placeholder.jpeg}
@@ -467,16 +475,84 @@ It is these beta decay processes which present what is arguably the most accessi
 	}	
 	\label{fig:feynmandiagrams_betadecay}
 \end{figure}
-\note{}
-%%%%%%%%
 
-A nucleus undergoing beta decay converts one of its protons (neutrons) into a neutron (proton), and simultaneously emits a lepton and anti-lepton.  The daughter nucleon remains bound in place of its parent, and the overall electric charge of the nucleus is changed by -1 (+1), with the extra charge being carried away by the anti-lepton (lepton).  In particular, at the nucleon level, three beta decay processes are possible:
+Energetic considerations aside, it is worthwhile to consider whether there might be any rules relating to the \emph{spin} of the nucleons before and after a decay, or the spins and angular correlations of the leptons that emerge.  Does the nucleon's spin flip during the decay process, or remain unchanged?  Are the decay products emitted preferentially in any particular direction?  Which direction are the beta and neutrino spins pointed in after they are emitted?  Angular momentum must, of course, be conserved -- but the question is \emph{how} it is to be conserved.  This question is not only at the heart of many modern precision measurements in beta decay physics, it has also been a driving force behind the development of much of our understanding of the nuclear weak force.
+
+We must develop the tools with which these questions can be discussed.  We will begin by using Fermi's classic description of a beta decay as a transition that occurs with zero range:
 \bea
-	p &\rightarrow& n + e^+ + \nu_e        \label{eq:betaplus_decay} \\
-	n &\rightarrow& p + e^- + \bar{\nu}_e, \label{eq:betaminus_decay}  \\
-	p + e^- &\rightarrow& n + \nu_e        \label{eq:electroncapture}
+\mathcal{M}_{fi} &=& G_F \int \bar{\psi}_f \, \mathcal{\hat{O}} \, \psi_i \,\textrm{d}V,
+\label{eq:fermitransition}
+\eea 
+where $\mathcal{M}_{fi}$ is the transition matrix element between the final ($\psi_f$) and initial ($\psi_i$) states, and $G_F$ gives a measure of the strength of the coupling between states.  The integral is evaluated over phase space volume, and the operator $\mathcal{\hat{O}}$, which has yet to be determined, allows for a mathematical description of how the initial and final states must be related in order for a transition to occur.
+
+Of course, this description represents a model of nuclear transitions which is highly simplified;  by neglecting the $W$ bosons that mediate the process and that we now know to be present, the result is a description of an interaction with zero range -- i.e., the leptons must be emitted from the exact place where the nucleon was transmuted.  Because the mediating $W$ bosons are so heavy ($m_W = 80.379(12)$\,GeV/$c^2$ ~\cite{pdg2018}), the range of the interaction is extremely limited, so the above turns out to be a very good description.  
+
+
+
+This immediately gives rise to a rate law commonly known as Fermi's Golden Rule, 
+\beq
+\Gamma \;\; = \;\; \frac{1}{\tau}  \;\; = \;\; \frac{2\pi}{\hbar} \left| \mathcal{M}_{fi} \right|^2 \, \rho(E_f),
+\eeq
+which describes the relationship between the total transition rate $\Gamma$ (or equivalently the lifetime $\tau$), the transition matrix element $\mathcal{M}_{fi}$, and the available density of states at the final energy, $\rho(E_f)$.  We can also use this to write down the differential decay rate, 
+\bea
+\frac{\textrm{d}^5 \Gamma}{ \textrm{d} \Ebeta \textrm{d}\Omegahatbeta \textrm{d} \Omegahatnu } 
+&=& \frac{1}{(2\pi)^5} \, \pbeta \Ebeta (E_0 - \Ebeta)^2 F_{\pm}(\Ebeta, Z^\prime) \left| \mathcal{M}_{fi} \right|^2,
+\label{eq:fermidifferentialdecayrate}
 \eea
-where the processes described in Eqs.~\ref{eq:betaplus_decay} and~\ref{eq:electroncapture} are energetically disallowed for an unbound proton, however there is no similar requirement for Eq.~\ref{eq:betaminus_decay}.
+where \aside{pretty sure I lost an $\hbar$.  Maybe no one will notice.  }
+$\Ebeta$ and $\pbeta$ are the outgoing $\beta$'s (total) energy and momentum,
+$E_0$ is the maximum possible $\beta$ energy associated with the transition, 
+and $\FFpm$ is called a Fermi function (with $Z^\prime$ the proton number of the daughter), and is used to account for the electric force between the nucleus and the (charged) outgoing electron (top) or positron (bottom) \cite{Fermi1934Italian}\cite{Fermi1934German}\cite{krane}.  
+
+With this description, the problem of characterizing the transition is reduced to determining the form of $\mathcal{\hat{O}}$.  %, or equivalently, $\mathcal{H}_{\mathrm{int}}$.  
+Table~\ref{table:dirac_matrix_operators} provides a comprehensive list of all operators for which Lorentz invariance holds.  The complete transition operator $\mathcal{\hat{O}}$ must be comprised of a linear combination of these terms.  
+\input{table_dirac_matrix_operators.tex} % table:dirac_matrix_operators
+
+
+%our collective understanding of the nuclear weak force.   
+%
+%This is the question at the heart of many modern precision measurements in beta decay physics.
+%\note{Back in the day, it was at the heart of non-precision beta decay measurements too.  Like Wu's measurement of parity violation.}
+%
+
+
+
+\FloatBarrier
+%%%% --- * --- %%%%	
+\section{Beta Decay within the Standard Model}
+\note{...}
+%\note{Intro blurb goes here.
+%\\...\\
+%The most general and vague description of beta decay ever:  a proton turns into a neutron and emits a positron, or else a neutron turns into a proton and emits an electron.  Also, neutrinos are emitted with the proton/electron.  Occasionally, also, an electron from like atomic orbitals or something gets captured, triggering a similar process in which a proton is transmuted into a neutron, but no positron/electron gets emitted.  A neutrino does though.  The Feynman diagrams for all these things are pretty similar, and they're shown in Fig.~\ref{fig:feynmandiagrams_betadecay}.  
+%\\..\\
+%Electric charge is kept fixed.  The whole process is mediated by the $W^\pm$ bosons.  
+%}
+%%%%%%%%%
+%\note{}
+%\note{Imported figure and reference to the figure are here.  It probably goes in this section rather than the one it was in before.}
+%In Fig.~\ref{fig:feynmandiagrams_betadecay} the tree-level Feynman diagrams pertaining to the most common beta decay processes are shown.  
+%%
+%It is these beta decay processes which present what is arguably the most accessible experimental window on the workings of the nuclear weak force.
+%
+%\FloatBarrier
+%\begin{figure}[h!t!b!]
+%	\centering
+%	\includegraphics[width=.90\linewidth]{Figures/feynmandiagrams_betadecay_placeholder.jpeg}
+%	\note[tag]{Fix beta decay Feynman diagram placeholder figure.}
+%	\caption[Beta Decay Feynman Diagrams]{Beta decay Feynman diagrams are shown here at the nucleon(? sort of) level.    
+%	}	
+%	\label{fig:feynmandiagrams_betadecay}
+%\end{figure}
+%\note{}
+%%%%%%%%%
+%
+%A nucleus undergoing beta decay converts one of its protons (neutrons) into a neutron (proton), and simultaneously emits a lepton and anti-lepton.  The daughter nucleon remains bound in place of its parent, and the overall electric charge of the nucleus is changed by -1 (+1), with the extra charge being carried away by the anti-lepton (lepton).  In particular, at the nucleon level, three beta decay processes are possible:
+%\bea
+%	p &\rightarrow& n + e^+ + \nu_e        \label{eq:betaplus_decay} \\
+%	n &\rightarrow& p + e^- + \bar{\nu}_e, \label{eq:betaminus_decay}  \\
+%	p + e^- &\rightarrow& n + \nu_e        \label{eq:electroncapture}
+%\eea
+%where the processes described in Eqs.~\ref{eq:betaplus_decay} and~\ref{eq:electroncapture} are energetically disallowed for an unbound proton, however there is no similar requirement for Eq.~\ref{eq:betaminus_decay}.
 ~\aside[jbn]{Eqs. ~\ref{eq:betaplus_decay} and ~\ref{eq:electroncapture} are energetically disallowed for an unbound proton, but allowed energetically when bound in nuclei as in 37K decay.}
 \note[jbn]{Electron capture decay of Eq. 1.3 is calculated to be an 0.080\% branch compared to positron decay in 37K decay (Table VII of N. Severijns, M. Tandecki, T. Phalet, and I.S. Towner)~\cite{SeverijnsTandecki2008}, an important correction when interpreting the total decay rate of 37K to determine the theoretical prediction for 37K Abeta  (P.D. Shidling, R.S. Behling, B. Fenker, J.C. Hardy, V.E. Iacob, M. Mehlman, H.I. Park, B.T. Roeder, D. Melconian Phys Rev C 98 015502 (2018)~\cite{shidling2018}; A. Ozmetin, D.G. Melconian, V.E. Iacob, P. Shidling, V.S. Kolhinen, D.J. McClain, M. Nasser, B. Schroeder, B. Roeder, H. Park, M. Anholm, A.J. Saastamoinen, APS DNP Abstract KF.00005 2020 ``Improving the ft value of 37K via a precision measurement of the branching ratio'')~\cite{ozmetin2020}.
 }
@@ -525,7 +601,7 @@ We begin with Fermi's\aside{Is this true?  Probably} description of the transiti
 where $\mathcal{M}_{fi}$ is the transition matrix element between the final ($\psi_f$) and initial ($\psi_i$) states, and $G_F$ gives a measure of the size of the coupling between states.  The integral is evaluated over phase space volume.  Equivalently, $\mathcal{M}_{fi}$ may be written in terms of the interaction Hamiltonian $\mathcal{H}_{\mathrm{int}}$, as 
 \bea
 \mathcal{M}_{fi} &=& \int \! \mathcal{H}_{\mathrm{int}} \, \textrm{d}V. 
-\label{eq:transitionmatrixhamiltonian}
+%\label{eq:transitionmatrixhamiltonian}
 \eea 
 %
 This leads immediately to Fermi's Golden Rule, 
@@ -550,6 +626,7 @@ and is used to account for the electric force between the nucleus and the (charg
 With this description, the problem of characterizing the transition is reduced to determining the form of $\mathcal{\hat{O}}$, or equivalently, $\mathcal{H}_{\mathrm{int}}$.  Table~\ref{table:dirac_matrix_operators} provides a comprehensive list of all operators for which Lorentz invariance holds.  The complete transition operator $\mathcal{\hat{O}}$ must be comprised of a linear combination of these terms.  
 \input{table_dirac_matrix_operators.tex} % table:dirac_matrix_operators
 This gives rise to the Lee-Yang interaction Hamiltonian, which provides a generalized combination of the Lorentz invariant operators and fits neatly into Eq.~\ref{eq:transitionmatrixhamiltonian}~\cite{LeeYang}:
+
 %The Lee-Yang interaction Hamiltonian is: %\aside{It's an *interaction* Hamiltonian!}
 \input{equation_LeeYangHamiltonian.tex}%  \label{eq:lee_yang_hamiltonian} 
 
@@ -782,7 +859,8 @@ What Weinberg (and, independently, Salam) did was come up with a consistent math
 %\section{Motivation}
 %\greycomment{The nuclear Weak force is one of four fundamental forces described within physics.  It mediates the process of beta decay, which is of particular interest to us here.  Although beta decay is generally well understood, it presents a unique opportunity for precision measurements to search for physics beyond the Standard Model within the Weak coupling.  By observing the kinematics and angular correlations involved in the decay process, one gains access to a wealth of information about the form of the operators mediating the decay.}
 
-According to the predictions of the Standard Model~\aside[jbn]{standard model} (SM), the Weak force involves only vector ($V$) and axial-vector ($A$) couplings, where a relative sign within the quark-lepton Lagrangian produces the left-handed ``$(V-A)$'' form of the interaction in maximal violation of parity.  In terms of physical behaviour, one consequence of this model is that ``regular matter'' leptons emerge from a Weak interaction with left-handed chirality, while antimatter leptons emerge with right-handed chirality. Any deviation from this behavior would be indicative of ``new'' or ``exotic'' (i.e., not previously discovered) physics.
+According to the predictions of the \acf{SM}, %Standard Model~\aside[jbn]{standard model} (SM), 
+the Weak force involves only vector ($V$) and axial-vector ($A$) couplings, where a relative sign within the quark-lepton Lagrangian produces the left-handed ``$(V-A)$'' form of the interaction in maximal violation of parity.  In terms of physical behaviour, one consequence of this model is that ``regular matter'' leptons emerge from a Weak interaction with left-handed chirality, while antimatter leptons emerge with right-handed chirality. Any deviation from this behavior would be indicative of ``new'' or ``exotic'' (i.e., not previously discovered) physics.
 ~\aside[jbn]{"new" -> new
 \\
 "exotic" -> exotic. 

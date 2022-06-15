@@ -5,41 +5,68 @@
 %%%% --- * --- %%%%	
 \chapter[Derivation of the Beta Decay Probability Density Function]{Derivation of the Probability Density Function}
 \label{appendix_forthepeople}
-\note{More coulomb corrections in JTW notation:~\cite{EbelFeldman1957}.  Also, an update to Falkowski's review article\cite{Falkowski2021}, which currently still liives on the arxiv, is here:~\cite{Falkowski2022}. }
-\note{Start with Lee-Yang Hamiltonian, or at least point to it in the first chapter (it's Eq.~\ref{eq:lee_yang_hamiltonian}), because that's where all the BSM stuff lives.}
+%\note{More coulomb corrections in JTW notation:~\cite{EbelFeldman1957}.  Also, an update to Falkowski's review article\cite{Falkowski2021}, which currently still liives on the arxiv, is here:~\cite{Falkowski2022}. }
+%\note{Start with Lee-Yang Hamiltonian, or at least point to it in the first chapter (it's Eq.~\ref{eq:lee_yang_hamiltonian}), because that's where all the BSM stuff lives.}
 %\note{Define all the letters.}
 %\note[color=done]{John says to keep this appendix, because it's great now.}
 %\note[color=jb]{JB:  Appendix B is in good shape. "someone other than me" please change to "the collaboration."}
-In order to obtain a \acf{PDF} to describe the beta decay process which includes both a representation of the exotic physics that is the subject of this search, as well as the small higher-order corrections which are known to be present, it is necessary to combine features from two disparate formalisms.  The \acf{JTW} description incorporates many parameters representing exotic physics of various flavours, but the Holstein formulation, which makes no reference to exotic physics, does a much more thorough job of describing the beta decay physics we collectively expect to see, including higher-order terms and small corrections to the form of the spectra.
+In order to obtain a \acf{PDF} to describe the beta decay process which includes both a representation of the exotic physics that is the subject of this search, as well as the small higher-order corrections which are known to be present, it is necessary to combine features from two disparate formalisms.  The \acf{JTW} description incorporates many parameters representing various flavours of exotic physics, but incorporates only the leading order terms in the resulting expression.  By contrast, the Holstein formulation makes no reference to exotic physics, but does a much more thorough job of describing the beta decay physics that we collectively do expect to see, such as higher-order terms and small corrections to the form of the spectra.
 
 % has included many smaller corrections 
 
-Because the \ac{JTW} formulation has intentionally neglected the higher-order terms, this model is much less messy to work with than Holstein's -- an assertion that may come as a surprise to the reader given the content within Sec.~\ref{sec:jtw_formalism} -- therefore \ac{JTW}'s work will be considered first.  
+Because the \ac{JTW} formulation has neglected these higher-order terms, this model is much less messy to work with than Holstein's -- an assertion that may come as a surprise to the reader given the content within Sec.~\ref{sec:jtw_formalism}.
+% -- therefore \ac{JTW}'s work will be considered first.  
+We begin by recalling the Fermi contact interaction description of beta decay from Eq.~(\ref{eq:fermitransition}).  Recalling the definition of an interaction Hamiltonian, we can write:
+\bea
+\mathcal{M}_{fi} \;\;=\;\; G_F \int \bar{\psi}_f \, \mathcal{\hat{O}} \, \psi_i \,\textrm{d}V .
+\;\;=\;\;
+\int \! \mathcal{H}_{\mathrm{int}} \, \textrm{d}V
+\label{eq:transitionmatrixhamiltonian}
+\eea 
 
+This approximation is adequate for the purpose of characterizing \ac{BSM} interactions because any exotic physics that we might search for has already been constrained, through decades of clever experiments, to be a comparatively small part of the overall behaviour.  These small adjustments to already small terms may be safely neglected.  This model leads directly to the \ac{JTW} result described in Sec.~\ref{sec:jtw_formalism}, however the Holstein results of Sec.~\ref{sec:holstein_formalism} arise from a more modern description of the beta decay process.  
+
+%The neglected small adjustments would have been made to already small terms.  
+
+
+We will use the Lee-Hang interaction Hamiltonian here, which incorporates a linear combination of all possible operators that obey Lorentz invariance at the nucleon level.  In particular\cite{LeeYang}:
+\input{equation_LeeYangHamiltonian.tex}\unskip
+where $C_X$ and $C_X^{\prime}$ (with $X=\{V,A,S,T,P\}$) are complex coupling constants for vector, axial, scalar, tensor, and pseudoscalar interactions, and $\psi_Y$ (with $Y=\{p,n,e,\nu\}$) are the wavefunctions for the interaction's proton, neutron, electron, and neutrino.  Operators $\gamma_5$ and $\gamma_\mu$ are Dirac gamma matrices, and $\mbox{$\sigma_{\lambda\mu} = -\frac{i}{2}(\gamma_\lambda \gamma_\mu - \gamma_\mu\gamma_\lambda )$}$.  As usual, ``H.C.'' represents the Hermitian conjugate of the previous terms within the Hamiltonian.
+
+With these expressions in place, it is possible to obtain a complete solution for the differential decay rate of Eq.~\ref{eq:fermidifferentialdecayrate} in terms of physical observables.
+
+\note{Fermi formalism really only *has* the leading order things.  we've already gotten rid of some.}
 \note{Blurb continuation:  JTW is for the BSM shit, because they created it before they really knew which form the operators take.~\cite{jtw}\cite{jtw_coulomb}  Holstein is for the small contributions to physics that we actually know to exist.~\cite{holstein}\cite{holstein_errata}}
-
 
 \section[JTW Formalism]{JTW Formalism}
 \label{sec:jtw_formalism}
-%\note{They start with the Lee-Yang interaction Hamiltonian in Eq.~(\ref{eq:lee_yang_hamiltonian}), with the pseudoscalar terms dropped for convenience, as they're suppressed anyway.}
-We begin a statement of the five-dimensional \ac{PDF} for beta decay kinematics, taken from \acf{JTW}, which arises directly from the Lee-Yang interaction Hamiltonian of Eq.~(\ref{eq:lee_yang_hamiltonian})~\cite{LeeYang}\cite{jtw}\cite{jtw_coulomb}:
-%, taken from \acf{JTW} for beta decay kinematics~\cite{LeeYang}\cite{jtw}\cite{jtw_coulomb}:
-%Here's a master equation from JTW to describe beta decay kinematics~\cite{jtw}\cite{jtw_coulomb}:
-%%%\note{Rephrase some of this stuff...}
-%\note[done]{Item 12. from Georg:
-%\\
-%I have no idea what the title of Appendix B means. It is for sure original and even funny though ... Also, the actual appendix title in the thesis is not the same as that listed in the TOC.
-%}
-%\label{note:gs_12}
+Rather than going through the full calculation to find the differential decay rate, I will instead simply give the result, taken from \ac{JTW} and others\cite{LeeYang}\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}.  To leading order, we find a five-dimensional \ac{PDF} for beta decay kinematics:  
+%\cite{LeeYang}\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}:
+%
+%
+%
+%%\note{They start with the Lee-Yang interaction Hamiltonian in Eq.~(\ref{eq:lee_yang_hamiltonian}), with the pseudoscalar terms dropped for convenience, as they're suppressed anyway.}
+%
+%%We begin a statement of the five-dimensional \ac{PDF} for beta decay kinematics, taken from \acf{JTW}, which arises directly from the Lee-Yang interaction Hamiltonian of Eq.~(\ref{eq:lee_yang_hamiltonian})~\cite{LeeYang}\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}:
+%
+%%, taken from \acf{JTW} for beta decay kinematics~\cite{LeeYang}\cite{jtw}\cite{jtw_coulomb}:
+%%Here's a master equation from JTW to describe beta decay kinematics~\cite{jtw}\cite{jtw_coulomb}:
+%%%%\note{Rephrase some of this stuff...}
+%%\note[done]{Item 12. from Georg:
+%%\\
+%%I have no idea what the title of Appendix B means. It is for sure original and even funny though ... Also, the actual appendix title in the thesis is not the same as that listed in the TOC.
+%%}
+%%\label{note:gs_12}
 \input{equation_jtw_master}
 where, for convenience, we have defined a nuclear alignment term,
 \bea
 \Talign(\vecJ) &\equiv& \TalignExpand.
+\label{eq:Talign}
 \eea
 \note{Missing factors of c ??}
 %%%\aside{We have already specialized to $\beta^+$ decay.  .... Wait, we have?  Where?  ... There.  Fixed. It's not like that anymore.}
 
-In Eq.~(\ref{equation:jtw_master}), $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the outgoing $\beta$ particle's (total) energy, momentum 3-vector, and momentum scalar, while $\Enu$, $\vecpnu$, and $\pnu$ are the equivalent quantities for the outgoing (anti-)neutrino, and $E_0$ is the maximum possible $\beta$ energy associated with the transition.\aside{Holstein gives a formula for it.  Maybe I should write it out...}   $\vecJ$ is the nuclear angular momentum vector of the parent, and $J$ is its projection onto the axis of quantization. $\hatj$ is a unit vector in the direction of $\vecJ$ (note that in general, $\hatj \neq \frac{\vecJ}{J}$).  As usual, $\me$ is the mass of the electron, and $c$ is the speed of light.  The infinitesimal surface element $\dOmegabeta$ ($\dOmeganu$) represents the direction of $\beta$ (neutrino) emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with $Z^\prime$ the proton number of the daughter nucleus.
+In Eqs.~(\ref{equation:jtw_master}) and~(\ref{eq:Talign}), $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the outgoing $\beta$ particle's (total) energy, momentum 3-vector, and momentum scalar, while $\Enu$, $\vecpnu$, and $\pnu$ are the equivalent quantities for the outgoing (anti-)neutrino, and $E_0$ is the maximum possible $\beta$ energy associated with the transition.\aside{Holstein gives a formula for it.  Maybe I should write it out...}   $\vecJ$ is the nuclear angular momentum vector of the parent, and $J$ is its projection onto the axis of quantization. $\hatj$ is a unit vector in the direction of $\vecJ$ (note that in general, $\hatj \neq \frac{\vecJ}{J}$).  As usual, $\me$ is the mass of the electron, and $c$ is the speed of light.  The infinitesimal surface element $\dOmegabeta$ ($\dOmeganu$) represents the direction of $\beta$ (neutrino) emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with $Z^\prime$ the proton number of the daughter nucleus.
 
 %\aside{Possibly it should be $Z^\prime$ and for the daughter nucleus...}  The Fermi function accounts for the electric force between the nucleus and the charged outgoing beta particle, and its integral over $\Ebeta$ has no closed form expression.
 
@@ -51,9 +78,13 @@ In Eq.~(\ref{equation:jtw_master}), $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the 
 For the reader's convenience, the kinematic factors unique to a particular transition are written out here in terms of their couplings.~\aside{...which are the same as in the Lee-Yang Hamiltonian!}
 \input{equations_jtw_params}
 
-In Eqs. \ref{eq:jtw_xi} - \ref{eq:jtw_DTRxi}, we have used $\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2}$, and as usual, $\alpha$ is the fine structure constant.  Here, $M_F$ and $M_{GT}$ are the Fermi and Gamow-Teller matrix elements, and are unique to the transition under consideration, while the $C_X$ and $C_X^\prime$ (for $X = \{ V,A,S,T\} $) are, as in the Lee-Yang Hamiltonian in Eq.~(\ref{eq:lee_yang_hamiltonian}), the complex coupling constants describing the global strength of vector, axial, scalar, and tensor couplings within charged weak interactions.  The possible pseudoscalar couplings have been neglected here because they are relativisitically suppressed.  
-~\aside{Somewhere I have to talk about what the primes and the imaginary parts mean.  But maybe later.}  
-We also make use of the following shorthand definitions of $\lambda_{J^\prime J}$, $\Lambda_{J^\prime J}$, and $\delta_{J^\prime J}$ for transitions with parent and daughter nuclear angular momenta given by $J$ and $J^\prime$ respectively:
+In Eqs. \ref{eq:jtw_xi} - \ref{eq:jtw_DTRxi}, we have used $\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2}$, and as usual, $\alpha$ is the fine structure constant.  Here, $M_F$ and $M_{GT}$ are the Fermi and Gamow-Teller matrix elements, and are unique to the transition under consideration, 
+while the $C_X$ and $C_X^\prime$ (for $X = \{ V,A,S,T\} $) are as in Eq.~(\ref{eq:lee_yang_hamiltonian}).
+%are, as in the Lee-Yang Hamiltonian in Eq.~(\ref{eq:lee_yang_hamiltonian}), the complex coupling constants describing the global strength of vector, axial, scalar, and tensor couplings within charged weak interactions.  
+%
+The possible pseudoscalar couplings ($C_P$ and $C_P^\prime$) have been dropped here because they are relativisitically suppressed.  
+%~\aside{Somewhere I have to talk about what the primes and the imaginary parts mean.  But maybe later.}  
+We have also made use of the following shorthand definitions of $\lambda_{J^\prime J}$, $\Lambda_{J^\prime J}$, and $\delta_{J^\prime J}$ for transitions with parent and daughter nuclear angular momenta given by $J$ and $J^\prime$ respectively:
 \bea
 \lambda_{J^\prime J} \;\; = \;\; 
 	\begin{cases}
@@ -97,7 +128,7 @@ We also make use of the following shorthand definitions of $\lambda_{J^\prime J}
 %%%}
 
 
-Note that Eq.~\ref{equation:jtw_master} depends on neutrino momentum, which we cannot observe directly.  
+Note that Eq.~\ref{equation:jtw_master} depends on neutrino momentum, which we cannot observe directly;  to make use of the neutrino momentum, it must first be reconstructed from the momenta of the outgoing beta and daughter nucleus.
 %Furthermore, we cannot use this expression to reconstruct neutrino momenta in our decay events either, because it would be necessary to account for the momentum of the recoiling daughter nucleus, treating the decay as a three-body problem.  
 From an experimental standpoint, within the present experiment we it is not possible to reconstruct the the neutrino momenta with the available data, because we failed to measure the momenta of the daughters in conjunction with the tagged beta decay events with which we are primarily concerned in this thesis, so there is insufficient kinematic information available.   
 
@@ -123,7 +154,9 @@ is:
 Note that JTW presents slightly different expressions for one component of $\Abeta$ within~\cite{jtw} and~\cite{jtw_coulomb}, and the latter convention is what has been adopted here.  
 %Here, we adopt the convention from the latter publication.  
 
-We further require that both $M_F$ and $M_{GT}$ must be real, which can be done without loss of generality,~\aside{I don't think this is true...} however we do not require that they be positive, which would make the two conventions equivalent.  
+We further require that both $M_F$ and $M_{GT}$ must be real, 
+%which can be done without loss of generality,~\aside{I don't think this is true...} 
+however we do not require that they be positive, which would make the two conventions equivalent.  
 %We do not require that either $M_F$ or $M_{GT}$ be positive (which would make the two conventions equivalent), but we can require that both must be \emph{real} without loss of generality.
 
 There are a number of degrees of freedom left in the expressions that remain, and it is not immediately obvious how certain choices about these parameters might affect the physical results, or which approximations or assumptions ought to be made in order to arrive at a theory that matches the observational reality.  This is in part a result of the fact that the theory behind \ac{JTW} was developed before we had a detailed experimental understanding of much of the behaviour of beta decay, so all mathematically consistent behaviours are treated with roughly the same amount of consideration within the model.  
@@ -171,6 +204,7 @@ $M_{F}\,M_{GT}$ term in Eq.~(\ref{eq:jtw_Abetaxi}) have an overall positive valu
 %%%% --- * --- %%%%	
 %%%% --- * --- %%%%	
 \section[Holstein Formalism]{Holstein Formalism} 
+\label{sec:holstein_formalism}
 \note{Probably the phrasing here is way too casual.  Fix it.}
 Holstein~\cite{holstein}~\cite{holstein_errata} generously provides explicit equations to match both Eq.~(\ref{equation:jtw_master}) (i.e. Holstein's Eq.~(51), where neutrino direction is a parameter of the probability distribution) and Eq.~(\ref{equation:integrated_jtw}) (Holstein's Eq.~(52), where neutrino direction has already been integrated over).  
 
@@ -180,11 +214,49 @@ Holstein~\cite{holstein}~\cite{holstein_errata} generously provides explicit equ
 
 Here's Holstein's Eq.~(52):
 \input{equation_holstein52}\unskip  % equation:holstein52
-where $\Ebeta$, $\vecpbeta$, $\pbeta$, $E_0$, $\dOmegabeta$, and $\FFpm$ are as in Eq.(\ref{equation:jtw_master}).
+where $\Ebeta$, $\vecpbeta$, $\pbeta$, $E_0$, $\dOmegabeta$, and $\FFpm$ are as in Eq.~(\ref{equation:jtw_master}), 
 %\note{... where $\Ebeta$, $\vecpbeta$, $\pbeta$, $E_0$, $\dOmegabeta$, and $\FFpm$ are as in Eq.\ref{equation:jtw_master}.
 %}
-\note{Also define:  $G_v$, $\theta_c$, $\hat{n}$, $\Lambda_i$}
+and the $\Lambda_i$ are given by Holstein's Eq.~(48), where, \emph{within this context}, $M$ is the nuclear spin projection along the axis of quantization:
+\bea
+    \Lambda_1   &:=& \LambdaOne   
+    \label{eq:lambda1} \\
+    \Lambda_2   &:=& \LambdaTwo 
+    \label{eq:lambda2} \\
+    \Lambda_3   &:=& \LambdaThree .
+    \label{eq:lambda3}
+\eea
+and we immediately see a relation between several terms in \ac{JTW}'s and Holstein's descrioptions:
+\bea
+\textrm{Holstein's \,} \mathbf{\hat{n}} &=& \textrm{JTW's \,} \mathbf{\hat{j}}
+\label{eq:nequalsj} \\
+\Lambda_1 \hatj &=& \LambdaOne \hatj \;\; = \;\; \frac{\vecJ}{J}  \\
+\Lambda_2 &=& \Talign \frac{(2J-1)}{(J+1)}.
+\eea
+Note that $\Lambda_3$ is a quadrupole term, and \ac{JTW} has no equivalent.
+\note{Make this shit a table.}
+\note{Also define:  $G_v$, $\theta_c$.}
+\note{Note:  It's not the case that $ | \vecJ | == J $.  It's actually super fucking infuriating notation. }
 
+%%%%
+%%%%It can be immediately seen that Holstein's $\Lambda_1$ is closely related to JTW's $\frac{\vecJ}{J}$, and 
+%%%%%a bit later after John points it out to us, we see that 
+%%%%Holstein's $\Lambda_2$ is closely related to JTW's $\Talign$.  JTW has no equivalent to $\Lambda_3$.  We find:
+%%%%\bea
+%%%%\Lambda_1 \hatj &=& \LambdaOne \hatj \;\; = \;\; \frac{\vecJ}{J}  \\
+%%%%%\Lambda_2 \frac{(J+1)}{(2J-1)} &=& \Talign
+%%%%\Lambda_2 &=& \Talign \frac{(2J-1)}{(J+1)}.
+%%%%\eea
+%%%%We proceed by defining some notational conventions.  Firstly, 
+%%%%\bea
+%%%%\textrm{Holstein's \,} \mathbf{\hat{n}} &=& \textrm{JTW's \,} \mathbf{\hat{j}},
+%%%%\label{eq:nequalsj}
+%%%%\eea
+
+
+
+
+\note{}
 The careful reader will eventually note that despite the deceivingly similar notation, Holstein's spectral functions $F_i(\Ee)$ are not the same as the $F_i(\Ee, u, v, s)$ in any limit.
 %, despite the notational similarities.  
 Among other rules, Holstein's spectral functions obey these:
@@ -301,49 +373,49 @@ So, we'll write out the functions for these corrections.
 \input{equation_holstein_DeltaF4_Euvs}\unskip
 \input{equation_holstein_DeltaF7_Euvs}\unskip
 
-We note that the above corrections have been written in terms of $a(q^2)$ and $c(q^2)$, and we must use Eqs.~(\ref{equation:series_expand_a}, \ref{equation:series_expand_c}) to put the results in terms of $a_1$,  $a_2$, $c_1$, and $c_2$ so that they can be correctly combined with Eqs.~(\ref{equation:holstein_F0}-\ref{equation:holstein_F3}).
+We note that the above corrections have been written in terms of $a=a(q^2)$ and $c=c(q^2)$, and we must use Eqs.~(\ref{equation:series_expand_a}, \ref{equation:series_expand_c}) to put the results in terms of $a_1$,  $a_2$, $c_1$, and $c_2$ so that they can be correctly combined with Eqs.~(\ref{equation:holstein_F0}-\ref{equation:holstein_F3}).
 
 If we evaluate Holstein's Eqs.~(B8) for $\beta^+$ decay modes (i.e., the \emph{lower} sign when the option arises), taking
 %, which I will absolutely not type out here, 
 %for the case where 
-$u=v=J=J^\prime=3/2$ and $s=0$, we find the following values
+$u=v=J=J^\prime=3/2$ and $s=0$, we find the following values:
 % for $\beta^+$ decay modes (the \emph{lower} sign when the option arises):
 \input{equations_holstein_greekletterfunctions}\unskip  % eq:holstein_greekletterfunctions
+\note{Also, pretty sure one of those never gets used.  Which one was it?  idk.}
 %%
 %%Furthermore, in our calculations here, we will be considering only the $\beta^+$ decay modes, and therefore we take the \emph{lower} sign when the option arises.  We also will use $s=0$, so that $(-1)^s = +1$.
-\note{Also, pretty sure one of those never gets used.  Which one was it?  idk.}
 
 
 %%% -- %%%
 %- -- --- -- - 
 %Let's define some of that notation!
 
-We proceed by defining some notational conventions.  Firstly, 
-\bea
-\textrm{Holstein's \,} \hat{n} &=& \textrm{JTW's \,} \mathbf{j},
-\label{eq:nequalsj}
-\eea
-and the 
-$\Lambda_i$ are given by Holstein's Eq.~(48):
-\bea
-    \Lambda_1   &:=& \LambdaOne   
-    \label{eq:lambda1} \\
-    \Lambda_2   &:=& \LambdaTwo 
-    \label{eq:lambda2} \\
-    \Lambda_3   &:=& \LambdaThree .
-    \label{eq:lambda3}
-\eea
-
-\aside{Note:  It's not the case that $ | \vecJ | == J $.  It's actually super fucking infuriating notation. }
-%\note[color=tag]{Clean up phrasing at the end of the PDF for the People.}
-It can be immediately seen that Holstein's $\Lambda_1$ is closely related to JTW's $\frac{\vecJ}{J}$, and 
-%a bit later after John points it out to us, we see that 
-Holstein's $\Lambda_2$ is closely related to JTW's $\Talign$.  JTW has no equivalent to $\Lambda_3$.  We find:
-\bea
-\Lambda_1 \hatj &=& \LambdaOne \hatj \;\; = \;\; \frac{\vecJ}{J}  \\
-%\Lambda_2 \frac{(J+1)}{(2J-1)} &=& \Talign
-\Lambda_2 &=& \Talign \frac{(2J-1)}{(J+1)}.
-\eea
+%%%%We proceed by defining some notational conventions.  Firstly, 
+%%%%\bea
+%%%%\textrm{Holstein's \,} \hat{n} &=& \textrm{JTW's \,} \mathbf{j},
+%%%%\label{eq:nequalsj}
+%%%%\eea
+%%%%and the 
+%%%%$\Lambda_i$ are given by Holstein's Eq.~(48):
+%%%%\bea
+%%%%    \Lambda_1   &:=& \LambdaOne   
+%%%%    \label{eq:lambda1} \\
+%%%%    \Lambda_2   &:=& \LambdaTwo 
+%%%%    \label{eq:lambda2} \\
+%%%%    \Lambda_3   &:=& \LambdaThree .
+%%%%    \label{eq:lambda3}
+%%%%\eea
+%%%%
+%%%%\aside{Note:  It's not the case that $ | \vecJ | == J $.  It's actually super fucking infuriating notation. }
+%%%%%\note[color=tag]{Clean up phrasing at the end of the PDF for the People.}
+%%%%It can be immediately seen that Holstein's $\Lambda_1$ is closely related to JTW's $\frac{\vecJ}{J}$, and 
+%%%%%a bit later after John points it out to us, we see that 
+%%%%Holstein's $\Lambda_2$ is closely related to JTW's $\Talign$.  JTW has no equivalent to $\Lambda_3$.  We find:
+%%%%\bea
+%%%%\Lambda_1 \hatj &=& \LambdaOne \hatj \;\; = \;\; \frac{\vecJ}{J}  \\
+%%%%%\Lambda_2 \frac{(J+1)}{(2J-1)} &=& \Talign
+%%%%\Lambda_2 &=& \Talign \frac{(2J-1)}{(J+1)}.
+%%%%\eea
 
 
 %Now we'll have to deal with expanding the $F_i(\Ee)$.  %Note that these are very different from the $F_i(\Ee, u, v, s)$, and also different from the $f_i(\Ee)$.  
@@ -671,25 +743,59 @@ and treating Eq.~(\ref{eq:jtw_holstein_Abetaxi}) in a similar manner,
 
 At this point, given that we are working with complex coupling constants, it becomes clear that there may not be a uniquely defined relationship between the two formalisms' coupling constants.  Therefore, we will proceed by simply picking a convention and checking that it is self-consistent and produces the physical behaviour we expect.  
 
-Because we expect Holstein to use only the physically observed left-handed couplings, we will enforce left-handed couplings within \ac{JTW}'s couplings as well.  In particular, for left-handed couplings, we have~\cite{Falkowski2021}:
+Because we expect Holstein to use only the physically observed left-handed couplings, and because we are not presently \emph{searching} for right-handed couplings, we will enforce left-handedness within \ac{JTW}'s description as well.  In particular, for left-handed couplings, we have~\cite{Falkowski2021}:
 \bea
-C_V &=& C_V^\prime \\
+C_V &=& C_V^\prime 
+\label{eq:cVcVprime} \\
 C_A &=& C_A^\prime.
+\label{eq:cAcAprime}
 \eea
+\note{Aaaaand here's where I start possibly getting signs of things wrong.}
 One possible convention for the relationship between the two formalisms which is consistent with the constraints described above is:
 \bea
 a_1 &=& \frac{M_F}     {G_v \cos\theta_c} \, \frac{1}{\sqrt{2}} \, (C_V + C_V^\prime )  
 \label{eq:a1_def}
 \\
-c_1 &=& \frac{- M_{GT}}{G_v \cos\theta_c} \, \frac{1}{\sqrt{2}} \, (C_A + C_A^\prime )
+c_1 &=& \frac{M_{GT}}{G_v \cos\theta_c} \, \frac{-1}{\sqrt{2}} \, (C_A + C_A^\prime ). 
 \label{eq:c1_def}
 \eea
+We note that in the above expressions, the terms ${G_v \cos\theta_c}$, $(C_V + C_V^\prime )$, and $(C_A + C_A^\prime )$ are universally applicable, while the portion of the couplings dependent on the structure of the nucleus resides entirely within the nuclear matrix elements $M_F$ and $M_{GT}$.
+%\note{}
 
+For convenience, we define the following left-handed couplings for vectors, axial vectors, scalars, and tensors:
+\bea
+g_V &=& \frac{1}{\sqrt{2}}  \, (C_V + C_V^\prime )  \;\; = \;\; +\, 1.0
+\label{eq:gV_def}
+\\
+g_A &=& \frac{-1}{\sqrt{2}} \, (C_A + C_A^\prime )  \;\; \approx \;\; +\, 0.91210
+\label{eq:gA_def}
+\\
+g_S &=& \frac{1}{\sqrt{2}} \, (C_S + C_S^\prime ) 
+\label{eq:gS_def}
+\\
+g_T &=& \frac{-1}{\sqrt{2}} \, (C_T + C_T^\prime), 
+\label{eq:gT_def}
+\eea
+where,
+\aside{In my notes, $g_T$ has a minus sign in front of it.  Is there really any reason to keep that?  I guess probably not...\\
+Also in my notes, $g_A$ and $c_1$ have a minus sign in front of them too.  I think it's superfluous.  Recall that $M_{GT}$ is negative.   } in addition to the requirements of Eqs.~(\ref{eq:cVcVprime})-(\ref{eq:cAcAprime}) we will henceforth consider only the left-handed scalar and tensor couplings, so that 
+\bea
+C_S &=& C_S^\prime 
+\label{eq:cScSprime} \\
+C_T &=& C_T^\prime.
+\label{eq:cTcTprime}
+\eea
+Furthermore, we will require that all $C_X$ and $C_X^\prime$ are \emph{real}.  By enforcing this requirement, we lose the ability to describe a violation of time reversal symmetry, an exotic behaviour that is not the focus of the present search.  
+\note{Also, maybe I should at some point mention that my $g_X$ aren't the same thing that Holstein uses with that notation?  Ugh.}
+In order to produce the correct physical behaviour in the decay of $^{37}$K, we also require, for the Gamow-Teller matrix elements in Holstein and \ac{JTW}:
+\bea
+M_{GT, \textrm{\,Holstein}} &=& - M_{GT, \textrm{\,JTW}} \;\; \approx \;\; -\, 0.62376
+\eea
+The discrepancy can be attributed to a difference in notation convention; the literature can't seem to agree on a single sign convention, or even whether the convention ought to be the same in the cases of $\beta^-$/$\beta^+$ decay.  See, for example, Refs~\cite{dan_thesis}\cite{GCBall2000}\cite{Raman1978}.  The important point is that, for whichever convention is in use, the equations result in broadly correct physical behaviour.  In the case of $^{37}$K, we can use the fact that the overall sign of $\Abeta$ \emph{must} be negative within our mathematical expressions, because it is experimentally measured to be negative.  
 
-%we must find a regime in which the two 
+We are now in a position to write out Eqs.~(\ref{eq:jtw_xi_integrated}), (\ref{eq:jtw_bxi_integrated}), and (\ref{eq:jtw_Abetaxi_integrated}) in terms of only real, left-handed couplings.  We find:
+\input{equations_jtw_params_LH.tex}
 
-%, with the matrix elements $M_F$ and $M_{GT}$ being unique to each nucleus, and the $C_X$ and $C_X^\prime$ .
-% in order to account for both left-handed and right-handed couplings.
 
 
 

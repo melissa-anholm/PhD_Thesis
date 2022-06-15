@@ -213,10 +213,16 @@ $\vec{B} = 2 B_o z \hat{z} - (B_0 x \hat{x} + B_0 y \hat{y})$
 \section{Optical Pumping}
 \label{sec:op}
 %\note[cleanup]{Fix OP section's phrasing.  Also/instead, maybe summarize it a little.}
-\note[jb1]{Direct quote from John follows below:  }
-The optical pumping process is described in detail within our collaboration's Ref.~\cite{ben_OP}. The primary detail described here is that the optical pumping is disturbed by any component of magnetic field not along the quantization axis. (Ours is the vertical axis, defined by the direction of the optical pumping light, and along which the detectors are placed.) This required sophistication with an AC-MOT described in Section~\ref{sec:acmot} below.
+The optical pumping process necessary for this work involves using a laser to stimulate atomic transitions.  With a correctly tuned and polarized laser beam, the aggregate effect is to introduce a biased random walk towards a state of high spin-polarization (sometimes called a ``stretched state'').  Although the transitions to which the laser couples are primarily thought of as atomic transitions, the coupling of angular momenta between orbital electrons and the nucleus results in both becoming polarized.  
 
-\note[jb1]{End quote from John.}
+The primary detail described here is that the optical pumping is disturbed by any component of magnetic field not directed along the quantization axis --- in our case, the vertical axis, defined by the direction of propogation for the optical pumping light, and along which the detectors are placed.  The optical pumping process is described in detail within our collaboration's Ref.~\cite{ben_OP}, and the required sophistication with an AC-MOT described in Section~\ref{sec:acmot} below.
+
+\note[done, nolist]{Direct quote from John below:  
+\\...\\
+The optical pumping process is described in detail within our collaboration's Ref.~\cite{ben_OP}. The primary detail described here is that the optical pumping is disturbed by any component of magnetic field not along the quantization axis. (Ours is the vertical axis, defined by the direction of the optical pumping light, and along which the detectors are placed.) This required sophistication with an AC-MOT described in Section~\ref{sec:acmot} below.
+}
+%\note[jb1]{End quote from John.}
+%
 %%%But also!:
 %%%\\
 %%%``...Then you can refer to that (ie, John's red quoted mini-blurb about optical pumping, (which I may relocate to Sec.~\ref{photoions}?  Or not?) in section 3.4 (now 2.4, about the AC-MOT -- ie, Sec.~\ref{sec:acmot}, (even though I might remove that section entirely and put all its content into Sec.~\ref{section:acmot_and_polarization}) ), where you're trying to now but the phrasing is poor.''}
@@ -368,7 +374,7 @@ The principle behind the AC-MOT is to simply run a sinusoidal current through on
 
 
 %	
-\note{begin content of the historical other AC-MOT+Polarization section.}
+%\note{begin content of the historical other AC-MOT+Polarization section.}
 %\note[jb1]{JB on Chapter 4.2 "The AC-MOT and Polarization Setup" (that's this section!):
 %\\...\\
 %"We use only the polarized portion of the duty cycle in
@@ -421,37 +427,65 @@ We spin-polarize $^{37}\textrm{K}$ atoms within the trapping region by optical p
 %\comment{(is it still isotropic when it's polarized?  I bet it's not.)}
 so it follows that if there are available states of higher and lower angular momentum, the \emph{average} change in the angular momentum projection is zero.  If the atom is not yet spin-polarized, it can absorb and re-emit another photon, following a biased random walk towards complete polarization.  
 
-\note[jbn, nolist]{
+\note[done, nolist]{
 *section 2.4 near end "divergencelessness" is not a word. It's obvious how to fix it ''since del dot B =0 in a current-free region..."
 }
 
-In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  In particular, the magnetic field must be aligned along the polarization axis (otherwise the tendency will be to actually depolarize the atoms), and it must be uniform in magnitude over the region of interest (otherwise its divergencelessness will result in the field also having a non-uniform direction, which results in a spatially-dependent depolarization mechanism).  Note that this type of magnetic field is not compatible with the MOT, which requires a linear magnetic field gradient in all directions (characteristic of a quadrupolar field shape), and has necessitated our use of the AC-MOT.
+In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  In particular, the magnetic field must be aligned along the polarization axis (otherwise the tendency will be to actually depolarize the atoms), and it must be uniform in both magnitude and direction over the region of interest to avoid introducing a spatially-dependent depolarization mechanism.  
+%(otherwise its divergencelessness will result in the field also having a non-uniform direction, which results in a spatially-dependent depolarization mechanism).  
+Note that this type of magnetic field is not compatible with the MOT, which requires a uniform magnetic field \emph{gradient} in all directions (characteristic of a quadrupolar field shape), and has necessitated our use of the AC-MOT.
 % as described in (Sub-)Section~\ref{sec:acmot}. \aside[org]{At some point I have to decide if that's going to be a section or a subsection.}
 
+In the end, the average (over both directions) polarization $|\vec{P}|$ achieved during the 2014 beam time is $|\vec{P}| = 0.9913 \pm 0.0009$, and the measurements are consistent with both polarization directions having the same magnitude of polarization\cite{ben_OP}.
 
+%with the error and spread associated with each polarization direction consistent with having 
+
+
+\FloatBarrier
 %%%%%%% % %%%%%%%%
 \subsection{Magnetic Field Trimming}
 \label{sec:trimming}
-\note[jbn, nolist]{*you need a subsection in Section 2.4 "The AC-MOT and Polarization" on your field trimming.}
+With ambient magnetic fields from, e.g., the TRIUMF cyclotron and the earth, it is necessary to have available a means to cancel these fields out if we hope to create a well controlled, uniform magnetic field directed along the polarization axis within the trapping region --- a necessity for optical pumping.  
+
+To this end, the time-constant ambient fields were trimmed in all dimensions using two horizontal pairs of Helmholtz coils along the horizontal axes, and the AC-MOT coils for the vertical direction.
+These magnetic fields were first trimmed to be near zero using a three-axis giant magnetoresistance 3-axis probe near the chamber center, with the \ac{MCP} assembly removed and the vacuum chamber open to air.
+%
+Final trimming was done by optimizing the polarization of (stable) $^{41}$K atoms with the apparatus assembled.  Some details are provided in the supplemental material of Ref.~\cite{ben_Abeta}. \aside[tag]{(cite[Fenker PRL Suppl Mat] has some details)  -- make the citation go!}
 
 
+The AC-MOT and optical pumping magnetic fields were generated using Stanford Research Systems' DS345 arbitrary waveform generators, and amplified by two \mbox{Matsusada} DOP 25-80 bipolar amplifiers (20 kHz bandwidth, with $\pm$25 V and $\pm$80 A).
+%80A 20V bandwidth, 20 KHz). 
+The waveforms were carefully trimmed in shape, time, and amplitude to minimize magnetic fields resulting from induced from eddy currents during the optical pumping cycle, again with the MCP assembly removed and the vacuum chamber kept open to air.
 
-\note[jbn]{}
-\note[jbn]{begin quote from JB:}
+Because the amplifiers' bandwidth was inadequate when using current control mode, so voltage control had to be used instead, allowing only for indirect control of the current.  This proved to be a much more time consuming process, requiring empirical iteration.  
+%, a much more time-exacting process requiring empirical iteration. 
+These waveforms used are not the same for the top and bottom coils, as during the optical pumping cycle one coil had to be flipped with respect to the MOT cycle to create the uniform vertical field for optical pumping by a Helmholtz rather than anti-Helmholtz configuration.
+
+
+The full beta detector assemblies were in place during the field trimming, including a sheet of mu-metal wrapped about the scintillators as a magnetic shield.  
+
+
+All materials near the trap were chosen to minimize both magnetic permeability (to suppress time-constant magnetic field gradients) and conductivity (to suppress eddy currents arising from varying magnetic fields which, themselves, induce a time-varying magnetic field).  For example, the electrodes controlling the in-chamber electric fields are made from either glassy carbon semiconductor or titanium alloy.  We found that a 
+copper ring (not pictured in Fig.~\ref{chamber_decayevent}) with a slit, mounted on each beta detector's stainless steel reentrant flange (directly above and below the trap's (anti-)Helmholtz coils), suppresses the worst eddy currents fighting the magnetic field along the vertical axis. These designs were all confirmed by finite element calculations of another collaboration member.
+
+\note[done, nolist]{*you need a subsection in Section 2.4 "The AC-MOT and Polarization" on your field trimming.}
+%\note[jbn]{}
+\note[done, nolist]{quote from JB:
+\\...\\
 Time-constant ambient fields were trimmed in all dimensions using two horizontal pairs of Helmholtz coils and the AC MOT coils for the vertical direction.
 These ambient B fields were first trimmed to be near zero using a giant magnetoresistance 3-axis probe at the trap center, with the MCP assembly removed and the vacuum chamber up to air.
-
+\\...\\
 Final trimming was done by optimizing polarization of stable $^{41}$K atoms with the apparatus assembled (cite[Fenker PRL Suppl Mat] has some details).
-
+\\...\\
 The AC MOT and polarization B fields were generated by SRS DS345 arbitrary waveform generators, amplified by
 Matsusada bipolar 20 KHz bandwidth 80A 20V amplifiers. The waveforms were carefully trimmed in amplitude and time to minimize B fields from eddy currents during the optical pumping cycle, again with the MCP assembly removed and the vacuum chamber up to air.
-
+\\...\\
 The bipolar amplifier bandwidth was inadequate when using current control mode, so voltage control had to be used, a much more time-exacting process requiring empirical iteration. These waveforms are not the same for the top and bottom coils, as during the optical pumping cycle one coil had to be flipped with respect to the MOT cycle to create the uniform vertical field for optical pumping by a Helmholtz rather than antiHelmholtz configuration.
-
+\\...\\
 The beta detector full assemblies were in place during the field trimming.
-
+\\...\\
 All materials near the trap cloud are chosen to minimize both magnetic permeability to suppress time-constant B field gradients and conductivity to suppress eddy currents. E.g., the E field electrodes are made from either glassy carbon semiconductor or titanium alloy. A copper ring (not pictured in Fig. 2.5) with a slit mounted on each beta detector stainless steel reentrant flange suppresses the worst eddy currents fighting the B field along the z-axis. These designs were all confirmed by finite element calculations of another collaboration member.
-\note[jbn]{end quote from JB.}
+}
 
 
 
