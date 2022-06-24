@@ -3,8 +3,6 @@
 %
 %
 %%%% --- * --- %%%%	
-%\clearpage
-%\chapter{Introduction}
 \chapter{Background}
 \label{intro_chapter}
 \label{nuclear_chapter}
@@ -12,20 +10,15 @@ Within nature, there exist four fundamental forces governing the interactions of
 
 \section{Introduction}
 \label{section:intro}
-%\note{...on the Four Forces}
-% 4 forces
 Within our present understanding of physics, there are four fundamental forces governing the interactions of particles with one another:  electromagnetism, the nuclear weak force, the nuclear strong force, and gravity.  These forces are considered to be distinct from one another by virtue of their differing behaviours, however attempting to unify them within a single theoretical framework has been a major focus of later 20th- and early 21st century physics to date.  The effort has been met with only partial success, and the resulting theoretical framework is collectively known as the \ac{SM}.
 
-% Standard Model
 The standard model provides a quantum mechanical description for
-%which includes quantitative models of 
 the behaviour of three of the four fundamental forces:  electromagnetism, the nuclear weak force, and the nuclear strong force.  The \ac{SM} notably does not describe gravitational processes --- despite extensive efforts, the gravitational force has thus far defied all attempts to describe it in a fully quantum mechanical way, though this remains an active field of research.  
 
 %
 Each force has its own specific mediating particle(s) which couple only to a particular type of (generalized) charge, and therefore interact only with particles that possess that charge.  For example, the gravitational charge is \emph{mass}, and (at least within a simplified particle physics model) gravity acts only on objects that possess mass.~\aside{Can I turn this into a footnote?  It's not true because the curvature of spacetime also affects photon trajectories, and there even exist (unstable) (quasi-?) bound states comprised *only* of photons, as in e.g. Aichelburg-Sexl.}  With only a single type of charge and no negative masses, the gravitational force can only ever be attractive.
 %
 By constrast, the electromagnetic force couples to both positive and negative electric charges, and can produce both attractive and repulsive forces.  Both the electromagnetic and gravitational forces are mediated by massless force-carrying particles (the photon and still-theoretical graviton, respectively), a property which implies that the amount of flux per unit solid angle is constant over all distance scales, and Gauss's Law holds true.
-% allows them to act even over long distances, as it implies that the amount of flux per unit solid angle is constant over all distance scales, leading to, e.g., the applicability of the famous Gauss's Law.  \aside{cite someone for Gauss's Law.}
 
 \begin{figure}[h!t!b!]
 	\centering
@@ -37,115 +30,32 @@ By constrast, the electromagnetic force couples to both positive and negative el
 
 In the case of the nuclear weak force, which will be the primary concern within this thesis, 
 the notion of generalized charge is no longer entirely straightforward to apply.
-%, which could be readily applied to the gravitational and electromagnetic forces, is no longer entirely straightforward to apply.  
 We must rely instead on a list of allowed Feynman diagram vertices to describe the types of interaction that are possible (see Fig.~\ref{fig:feynmandiagrams_general}).  We note that the weak force involves three mediating particles --- $W^+$, $W^-$, and $Z^0$ bosons --- and these mediators can interact with both (anti-)quarks and (anti-)leptons.  The $W^+$ and $W^-$ particles also carry electric charge, which must be separately conserved in any interaction,~\aside{(wait, is that true?  what about with the photon vertex? ....I think it's fine.....} but the $Z^0$ is electrically neutral.  All three are massive, which implies that the strength of the weak force falls off more rapidly as distance increases, and Gauss's Law does not apply. 
-
-%Despite the large number of possible weak force interaction vertices, 
-%develop an intuition about the types of interactions that are possible (see Fig.~\ref{fig:feynmandiagrams_general}).  
-%%%%\begin{figure}[h!tb]
-%%%%	\centering
-%%%%	\includegraphics[width=.999\linewidth]{Figures/feynmanvertices_placeholder.png}
-%%%%	\note{I have to re-make this figure.  This one doesn't belong to me.  Also, I'm not necessarily sure I believe/understand what it's saying on the bottom line.}
-%%%%	\caption[Allowed Weak Vertices]{Allowed Weak Vertices:  a placeholder figure.  Top left:  $f$ is any fermion.  Top centre:  Lepton flavour is conserved under the weak interaction.  Top right:  quark generation is not conserved under the weak interaction.}	
-%%%%	\label{fig:feynmandiagrams}
-%%%%\end{figure}
-
 
 
 With a comparatively large number of possible vertex types, it can be challenging to develop an intuition about the behaviour of the weak force. 
 Perhaps the most well known physical behaviour that arises from the nuclear weak force is beta decay. 
 Indeed, beta decay
-%The beta decay process 
-%certainly 
 offers one of the most readily accessible experimental windows to the workings of the nuclear weak force.
 
-%It is these beta decay processes which present what is arguably the most accessible experimental window on the workings of the nuclear weak force.
-
-%
-%In Fig.~\ref{fig:feynmandiagrams_betadecay} the tree-level Feynman diagrams pertaining to the most common beta decay processes are shown.  
-%%
-%It is these beta decay processes which present what is arguably the most accessible experimental window on the workings of the nuclear weak force.
-%
-%
-%\FloatBarrier
-%\begin{figure}[h!t!b!]
-%	\centering
-%	\includegraphics[width=.90\linewidth]{Figures/feynmandiagrams_betadecay_placeholder.jpeg}
-%	\note[tag]{Fix beta decay Feynman diagram placeholder figure.}
-%	\caption[Beta Decay Feynman Diagrams]{Beta decay Feynman diagrams are shown here at the nucleon(? sort of) level.    
-%	}	
-%	\label{fig:feynmandiagrams_betadecay}
-%\end{figure}
-%
-%
-%The nuclear weak force is one of four fundamental forces described within physics.  
-%It mediates the process of beta decay, which is of particular interest to us here.  
 Although it is now generally well understood, beta decay still presents a unique opportunity for precision measurements to search for exotic physics beyond the Standard Model within the weak coupling.
 By observing the kinematics and angular correlations involved in the decay process, one gains access to a wealth of information about the 
-%form of the operators mediating the decay.  
 laws underpinning the decay process, and the weak force as a whole.  
-
-%\aside{Something something ... it's so well understood that all that's left to do is the precision measurements.}
-
-%\note[jbn]{Standard Model -> standard model of particle physics (often denoted here "SM"). 
-%\\
-%The standard model is ...
-%\\...\\
-%Weak -> weak.
-%\\...\\
-%This of course is the place where Georg wants more for orientation.
-%}
-
-
-%Attempting to unify the four fundamental forces within a single theoretical framework has been a major focus of later 20th- and early 21st century physics to date, however the effort has thus far been met with only partial success.
-
-\note[orange, nolist]{
-\begin{itemize}
-	\item (we're not proposing a new feynman diagram.  Just, a new vertex factor thingy, I guess.)
-	\item Weak force lagrangian!  I think possibly it's only for the *charged* weak force??
-	\item ...then we demand that the Lagrangian must be Lorentz invariant, otherwise we break physics.
-%	\item weak force moderated by massive particles -- so it can't be as long range, and Gauss's Law doesn't hold.
-	\item within this thesis, we will focus primarily on the \emph{charged} weak interactions (using $W^{\pm}$ as mediators rather than $Z^0$), with first-generation normal matter quarks (\emph{i.e.} up ($u$) and down ($d$) quarks, but not charm ($c$), strange ($s$), top ($t$), or bottom ($b$) quarks; no anti-quarks ($\bar{q}$ for $q=\{u,d,c,s,t,b \}$ )) and first-generation leptons (\emph{i.e.} electrons, positrons, electron neutrinos and electron anti-neutrinos, but not positive or negative muons or taus, nor muon or tau neutrinos or anti-neutrinos).
-	\item Really, we'll only be looking at weak force interactions involving the two most common nucleons -- protons and neutrons.  ...each of which is a (meta-)stable bound state involving three quarks.  
-%	\item the weak force couples to both leptons and quarks.
-	\item masses of W and Z bosons?  
-%	\item graviton -- theoretical only.
-%	\item strong force -- beyond the scope.
-\end{itemize}
-}
-
-
-%%%%%Within the present understanding of physics, there are four fundamental forces governing the interactions of particles with one another:  electromagnetism, the nuclear weak force, the nuclear strong force, and gravity. 
-%%%%%%
-%%%%%Among other things, these four forces are considered distinct by virtue of the fact that each one couples to a different type of charge and is mediated by a different type of particle.  The result is that each force has potentially different behaviour at varying length scales.  
-%%%%%%
-%%%%%The most familiar example of this is a comparison between the forces of electromagnetism and gravity.  While the electromagnetic force couples to both positive and negative electric charges, and can therefore create both attractive and repulsive forces, the gravitational force couples only to (positive) mass, and the result is a force that is only attractive and never repulsive.  Both forces are mediated by massless particles (the photon and graviton, respectively), which implies that the strength of the two forces must fall off at the same rate as the distance between interacting bodies is increased.  In the case of the nuclear weak force, the mediator particles are massive, ...
-%%%%%
-%%%%%Attempting to unify the four forces within a single theoretical framework has been a major focus of later 20th- and early 21st century physics to date, however the effort has thus far been met with some limited success.
-
-
-%Attempts to unify the four forces within a single model have been a major focus of 20th- and 21st century physics, }
-
-%%%Both are mediated by massless particles (the photon and graviton, respectively)
-%%%Because these are both mediated by massless particles (the photon and graviton, respectively), their behaviour 
 
 
 
 %%%% --- * --- %%%%	
-%\section{An Abbreviated Look at the History of Beta Decay}
 \section{A Historical Look at Beta Decay and the Weak Interaction}
-%\note[tag]{History section needs *all* the citations.}
 
 We consider the historical development of our scientific understanding of beta decay and the nuclear weak force.  This is a historically rich topic, and a full discussion is beyond the scope of this document, however we shall attempt to touch on some highlights.
 
 Radioactivity was first observed in 1896 by Henri Becquerel in uranium, and this landmark discovery set off a flurry of activity in the field~\cite{becquerel1896}.
-% With our modern understanding of radioactive decay, we know that this of course could not have been beta decay, but rather a combination of alpha decay and spontaneous fission -- however it was this observation that set the field into motion.  
 Ernest Rutherford noted in 1899 that the particles emitted by a sample of uranium could be classified into two groups based on how readily they were absorbed in materials -- alpha particles are easily absorbed, while beta particles are more penetrating~\cite{rutherford1899}.  A third and even more penetrating type of radioactive emission was observed in 1900 by Paul Villard, who made no attempt to give it a name -- but within a few years, Rutherford's naming convention had been applied and this third type of particle became known as a gamma ray~\cite{villard1900}\cite{rutherford1903}.  
 
 \note{Rutherford discovered that:  half-life.  [76]=E. Rutherford, \emph{Phil. Mag.} \textbf{49}, 1, 1900.  Thorium.  Rn220.  ...but also, *I* got this from Abraham Pais.}
 
 When, in 1900, Becquerel measured the charge-to-mass ratio of emitted beta ($\beta^-$) radiation and found that it was the same as that of the electron, he proposed that these must be the same particle~\cite{becquerel1900},~\aside{I think.  Also, I think that's the right citation..} and in 1903~\aside{or possibly 1901?} Rutherford and Soddy demonstrated that the processes of alpha and beta decay both transmute the original chemical element into another\cite{rutherfordsoddy1903}.
-\aside{That arxiv rando claims that the half-life thing was developed or hinted at by 1900 Rutherford, but who the fuck knows?}
+
 
 Despite these early successes, in 1911 Lise Meitner and Otto Hahn noticed that beta particles are emitted with a variety of different kinetic energies,~\aside[tag]{citation needed} and in 1914 James Chadwick
 %%~\aside{citation needed.  also, maybe it was a bunch of people, 1914-1927.  
@@ -202,7 +112,7 @@ that, contrary to the community's prior expectation, parity may not be conserved
 %\note{... a discovery which earned Lee and Yang a Nobel prize.  Wu's discovery earned Lee and Yang the 1957 Nobel Prize.}
 
 Subsequent experiments demonstrated that not only was parity non-conserved in a beta decay transition, it is (as near as we can collectively tell) \emph{maximally} violated.  \aside{cite someone for maximal parity violation.}
-Though it was initially believed that the couplings were comprised of so-called scalar and tensor interactions,\aside{cite someone for S,T !} Feynman and Gell-Mann first postulated the correct $(V-A)$ form of the interaction in 1958 by invoking an analogy with the photon, and this was eventually borne out by experimental evidence\cite{FeynmanGellMann1958}.  (See Sec.~\ref{sec:modernprecision} for further discussion on the form of weak interaction couplings.)
+Though it was initially believed that the couplings were comprised of so-called scalar and tensor interactions,\aside{cite someone for S,T !} Feynman and Gell-Mann first postulated the correct $(V-A)$ form of the interaction in 1958 by invoking an analogy with the photon, and this was eventually borne out by experimental evidence\cite{FeynmanGellMann1958}.  (See Sec.~\ref{sec:SMandBeyond} for further discussion on the form of weak interaction couplings.)
 \aside{cite someone for $(V-A)$ evidence}
 %it was subsequently determined 
 %\note{Feynman and Gell-Mann postulated the $V-A$ form of the interaction in 1958, by analogy with the E\&M photon\cite{FeynmanGellMann1958}.  }
@@ -263,67 +173,6 @@ theorists turned their attention to the nuclear strong force, which had been cha
 
 The completed theories of electroweak and strong interactions, together, formed the core of what has come to be known as the standard model of particle physics (\acs{SM}).  It is unclear exactly when this terminology developed, or who originated it, but it had certianly come into use by the mid-1970s, and the usage still persists\cite{PaisTreiman1975}\cite{weinberginterview2018}.  Notably, the only one of the fundamental forces not included under the umbrella of the standard model is the force of gravity, which is not compatible, as it is currently understood, with the quantum mechanical underpinnings of the standard model.  In the decades since, this incompatibility has been a major focus of inquiry for theoretical physicists, but the problem remains unresolved. 
 
-%standard model does not attempt address the force of gravity
-
-%\note[done]{Asymptotic freedom as a thing was developed in 1973 by David Gross and Frank Wilczek\cite{gross1973asymptotically}\cite{gross1973ultraviolet}, and separately by David Politzer\cite{politzer1973reliable}. }
-%\note[done]{They started calling it the standard model at some point during the 1970s.  One of the earliest records in print is from Treiman and Pais in 1975\cite{PaisTreiman1975}, but Weinberg claims to have used it during a talk in 1973~\cite{weinberginterview2018}.  On the other hand, Weinberg is old now and it's been many years, so there's that too.  }
-
-%\note{What about the full SM, incorporating the strong force too?}
-%\note[done]{....And then they included the model of the nuclear strong force too, turning it into one giant-ass model.  The Standard Model.  I could probably cite some people about how the term got coined, and what it refered to then and what it refers to now.}
-
-%%%%%demonstrated unequivocally
-%%%%%It was not 
-%%%%
-%%%%Steven Weinberg, too, stumbled upon the symmetries to needed to produce a unified electroweak force in 1967, and used it to (roughly) predict the masses of the $W^{\pm}$ and $Z^0$ bosons that had been postulated.  Weinberg further claimed -- but did not demonstrate -- that his theory was renormalizable, but it was not established mathematically until 1971, when Gerardus 't Hooft proved that theories within that class were renormalizable.~\aside{So this is electroweak theory.  Or sometimes, Weinberg-Salam theory.  Nobel prize went to Glashow, Salam, and Weinberg.}
-
-%%%\note[done]{Higgs mechanism papers:
-%%%\\...\\
-%%%Englert, F.; Brout, R. (1964). "Broken Symmetry and the Mass of Gauge Vector Mesons". Physical Review Letters. 13 (9): 321–23. Bibcode:1964PhRvL..13..321E. doi:10.1103/PhysRevLett.13.321. \cite{Higgs1964EnglertBrout}
-%%%\\
-%%%Brout, R.; Englert, F. (1998). "Spontaneous Symmetry Breaking in Gauge Theories: A Historical Survey". arXiv:hep-th/9802142. \cite{BroutEnglertArXiv}
-%%%\\
-%%%Higgs, P. (1964). "Broken Symmetries and the Masses of Gauge Bosons". Physical Review Letters. 13 (16): 508–509. Bibcode:1964PhRvL..13..508H. doi:10.1103/PhysRevLett.13.508. \cite{Higgs1964Higgs}
-%%%\\
-%%%Guralnik, G.; Hagen, C. R.; Kibble, T. W. B. (1964). "Global Conservation Laws and Massless Particles". Physical Review Letters. 13 (20): 585–587. Bibcode:1964PhRvL..13..585G. doi:10.1103/PhysRevLett.13.585.  \cite{Higgs1964GuralnikHagenKibble}
-%%%\\
-%%%Guralnik, G. S. (2009). "The History of the Guralnik, Hagen and Kibble development of the Theory of Spontaneous Symmetry Breaking and Gauge Particles". International Journal of Modern Physics A. 24 (14): 2601–2627. arXiv:0907.3466. Bibcode:2009IJMPA..24.2601G. doi:10.1142/S0217751X09045431. S2CID 16298371. \cite{guralnik2009}
-%%%}
-
-
-%\note[done]{
-%Salam and Weinberg apply the Higgs mechanism:
-%\\...\\
-% Weinberg, S. (1967). "A Model of Leptons". Physical Review Letters. 19 (21): 1264–1266. Bibcode:1967PhRvL..19.1264W. doi:10.1103/PhysRevLett.19.1264. \cite{Weinberg1967}
-%\\ ... \\
-%Salam, A. (1968). Svartholm, N. (ed.). Elementary Particle Physics: Relativistic Groups and Analyticity. Eighth Nobel Symposium. Stockholm: Almquvist and Wiksell. p. 367.  \cite{salam1968}
-%}
-
-%%%\note[done]{ 't Hooft + Veltman renormalize shit:
-%%%\\...\\
-%%%t Hooft, G.; Veltman, M. (1972). "Regularization and renormalization of gauge fields". Nuclear Physics B. 44 (1): 189–213. Bibcode:1972NuPhB..44..189T. doi:10.1016/0550-3213(72)90279-9. hdl:1874/4845. \cite{thooftveltman1972}
-%%%}
-
-%Sheldon Glashow in 1961 extended some of Schwinger's work to model the nuclear weak force, 
-%with a manually broken symmetry that able to represent the $W^+$ and $W^-$ bosons involved in beta decay, and for the first time, the neutral $Z^0$ boson.
-%predicting the $W^+$ and $W^-$ bosons involved in beta decay, and for the first time, the neutral $Z^0$ boson.  
-%The theory was not renormalizable, and 
-%since there had not been any experimental hint of the $Z^0$, even Glashow himself discounted the model, and it initially received little attention.  
-%In 1964, Abdus Salam and John Clive Ward made a similar prediction, this time including the photon --- but as they still relied on manual symmetry breaking, this theory also was non-renormalizable.  
-
-%It was Steven Weinberg who, while investigating ...
-
-
-
-%\note{W and Z bosons not experimentally observed until 1983.  (Or possibly 1986?)
-%\\
-%Cottingham, W.N.; Greenwood, D.A. (2001) [1986]. An introduction to nuclear physics (2nd ed.). Cambridge University Press. p. 30. ISBN 978-0-521-65733-4. }
-%
-%
-%\note{The neutral current was measured first at CERN in 1973, with Gargamelle\cite{gargamelle}.  W bosons, and soon afterwards, Z bosons were experimentally measured for the first time in 1983, using the Super Proton Synchrotron.  }
-
-%\note{}
-
-%\note[done]{OK, how/when did they do electroweak unification, and who did it?---Glashow+Weinberg+Salam, 1968.}
 \note[done]{Schwinger does renormalization, which makes QED go. Glashow~\cite{Glashow1959} extends it to the Z boson.  But now it's not renormalizable.  Salam and Ward~\cite{SalamWard1964} did a similar thing, but independently.   Then Weinberg (1967) did it but didn't know what to do with Z bosons~\cite{Weinberg1967}.  Until later.  Or something.  Then, 't Hooft (1971) proved that this thing was normalizable even with massive gauge bosons~\cite{thooft1971}.  Or at least, that's how Wikipedia describes it.  Also, in the end, electroweak unification was based on Yang-Mills (1954)~\cite{YangMills1954}, but their theory didn't really get that much attention initially because it was just a lot of boring math, and they couldn't figure out how to something something symmetry breaking.}
 
 \note{Halliday doesn't remember Meitner+Hahn, and says Pauli's thing is 1927, but doesn't give a reference for it.
@@ -351,12 +200,6 @@ Rutherford, Ernest (1906). Radioactive Transformations. London: Constable \& Co.
 Transmutations?:
 1902, 1903 --- rutherford and soddy.
 }
-%%%He named this particle a "neutron", though he was referring to the particle we refer to today as the "neutrino".  
-%%%
-%%%(which he referred to as a "neutron" at the time, though we now call it a neutrino, and use the term "neutron" to describe something else)
-%%%
-%%%
-%%%a neutrino (which he referred to as a "neutron" at the time) 
 
 \note{Here's some random thing John did in 2014:  \cite{somerandomthingJohndid2014}.  
 \\
@@ -369,50 +212,6 @@ Here's Rob Pitcairn's thing:  \cite{Pitcairn2009}.  }
 \\...\\
 Here's a thing I should probably cite, on the kinematic sensitivity of bFierz, from Gonzalez-Alonso and Naviliat-Cuncic:  \cite{KinematicFierz2016}.  }
 
-%\subsection{bullet points.}
-%%Beta Decay:
-%%\begin{itemize}
-%%\item 1931 - Pauli "discovers" neutrinos and is very confused.
-%%\item 1934 - Fermi's Golden Rule to describe the rate of beta decay in terms of transition matrix elements.
-%%\item ...
-%%\item 1956 - Lee and Yang wonder if parity is even conserved in beta decay?  
-%%\item 1957 - C.S. Wu shows that parity isn't conserved.  At all.
-%%\item ???? - turns out it's V-A.
-%%\end{itemize}
-%Standard Model:
-%\begin{itemize}
-%\item ???? - Schwinger 
-%\item 1959 - Glashow
-%\item 1964 - Salam and Ward
-%\item 1967 - Weinberg
-%\item 1971 - 't Hooft
-%\item ...
-%\item 1954 - Yang + Mills  .... huh?
-%\end{itemize}
-%%Radioactivity:
-%%\begin{itemize}
-%%\item 1896 - Henry Bequerel in Uranium.  Presumably that's alpha decay.
-%%\item 1898 - Thorium is radioactive -- Marie Curie + Gerhard Carl Schmidt, independently.
-%%\item 	 - Curie:  Thorium, polonium, radium -- all radioactive!
-%%\item 1899 - Rutherford notices that there's two types of emissions:  alpha and beta (beta minus).
-%%\item 1900 - Paul Villard discovers gamma rays, doesn't realize they're different?  Or something?
-%%\item 1903 - Rutherford realizes that gamma rays are a fundamentally new thing.
-%%\item ...
-%%\item 1900 - Becquerel realizes beta particles have the same charge-to-mass ratio as electrons, postulates that they're the same thing.
-%%\item 1901 - Rutherford + Soddy show that alpha and beta decay turn elements into different elements.  
-%%\item ...
-%%\item 1911 - Lise Meitner + Otto Hahn:  emitted beta particles come out at many different energies.  Unlike alpha and gamma decays.
-%%\item 1914 - James Chadwick shows that it's a continuous distribution.
-%%...
-%%\item 1930 - Pauli proposes neutrinos (but he called them "neutrons") as a solution to the missing energy problem.
-%%\item 1931 - Fermi calls them neutrinos.  
-%%\item 1933 - Fermi's landmark theory?  Surely it's 1934.
-%%...
-%%\item 1934 - Irène and Frédéric Joliot-Curie discover (induced) beta+ decay.  it got 'em a nobel prize.
-%%\item 1934 - Wick proposes electron capture as a thing.  Yukawa and others maybe have thoughts about that too.
-%%\item 1937 - Luis Alvarez observes electron capture.
-%%\item ???? - Parity?  Coupling constants??
-%%\end{itemize}
 
 \note[jbn, nolist]{
 I think you've neglected where the fT value and prediction for Abeta come from, entirely, and still don't have an equation for b\_Fierz in terms of Cs and Ct.
@@ -445,6 +244,7 @@ Then you would just need \textbf{ii and iii}.
 
 %%%% --- * --- %%%%	
 \section{Beta Decay within the Standard Model and \; \mbox{Beyond}}
+\label{sec:SMandBeyond}
 In the most general sense, the process of beta decay is one in which a nucleon (proton or neutron) is transformed into a different nucleon (i.e., a neutron or proton, respectively) and a beta particle (a positron or electron, respectively) and neutrino are emitted.
 
 At the nucleon level, there are three basic classes of beta decay processes:
@@ -549,480 +349,6 @@ Many types of exotic physics have, in fact, already been described by Lee and Ya
 In the years since, we have discovered that beta decay is mediated by $W^\pm$ bosons, which, among other things, allows for the possibility of certain transitions (ie, with different selection rules) occuring, which had been considered forbidden under the contact interaction model.  
 
 
-
-
-\FloatBarrier
-%%%% --- * --- %%%%	
-\ifthenelse{\boolean{isdraft}}
-{
-\section{Beta Decay within the Standard Model -- a section that no longer exists.}
-\note[tag]{This section is problematic....}
-%\note{Intro blurb goes here.
-%\\...\\
-%The most general and vague description of beta decay ever:  a proton turns into a neutron and emits a positron, or else a neutron turns into a proton and emits an electron.  Also, neutrinos are emitted with the proton/electron.  Occasionally, also, an electron from like atomic orbitals or something gets captured, triggering a similar process in which a proton is transmuted into a neutron, but no positron/electron gets emitted.  A neutrino does though.  The Feynman diagrams for all these things are pretty similar, and they're shown in Fig.~\ref{fig:feynmandiagrams_betadecay}.  
-%\\..\\
-%Electric charge is kept fixed.  The whole process is mediated by the $W^\pm$ bosons.  
-%}
-%%%%%%%%%
-%\note{}
-%\note{Imported figure and reference to the figure are here.  It probably goes in this section rather than the one it was in before.}
-%In Fig.~\ref{fig:feynmandiagrams_betadecay} the tree-level Feynman diagrams pertaining to the most common beta decay processes are shown.  
-%%
-%It is these beta decay processes which present what is arguably the most accessible experimental window on the workings of the nuclear weak force.
-%
-%\FloatBarrier
-%\begin{figure}[h!t!b!]
-%	\centering
-%	\includegraphics[width=.90\linewidth]{Figures/feynmandiagrams_betadecay_placeholder.jpeg}
-%	\note[tag]{Fix beta decay Feynman diagram placeholder figure.}
-%	\caption[Beta Decay Feynman Diagrams]{Beta decay Feynman diagrams are shown here at the nucleon(? sort of) level.    
-%	}	
-%	\label{fig:feynmandiagrams_betadecay}
-%\end{figure}
-%\note{}
-%%%%%%%%%
-%
-%A nucleus undergoing beta decay converts one of its protons (neutrons) into a neutron (proton), and simultaneously emits a lepton and anti-lepton.  The daughter nucleon remains bound in place of its parent, and the overall electric charge of the nucleus is changed by -1 (+1), with the extra charge being carried away by the anti-lepton (lepton).  In particular, at the nucleon level, three beta decay processes are possible:
-%\bea
-%	p &\rightarrow& n + e^+ + \nu_e        \label{eq:betaplus_decay} \\
-%	n &\rightarrow& p + e^- + \bar{\nu}_e, \label{eq:betaminus_decay}  \\
-%	p + e^- &\rightarrow& n + \nu_e        \label{eq:electroncapture}
-%\eea
-%where the processes described in Eqs.~\ref{eq:betaplus_decay} and~\ref{eq:electroncapture} are energetically disallowed for an unbound proton, however there is no similar requirement for Eq.~\ref{eq:betaminus_decay}.
-~\aside[jbn]{Eqs. ~\ref{eq:betaplus_decay} and ~\ref{eq:electroncapture} are energetically disallowed for an unbound proton, but allowed energetically when bound in nuclei as in 37K decay.}
-\note[jbn]{Electron capture decay of Eq. 1.3 is calculated to be an 0.080\% branch compared to positron decay in 37K decay (Table VII of N. Severijns, M. Tandecki, T. Phalet, and I.S. Towner)~\cite{SeverijnsTandecki2008}, an important correction when interpreting the total decay rate of 37K to determine the theoretical prediction for 37K Abeta  (P.D. Shidling, R.S. Behling, B. Fenker, J.C. Hardy, V.E. Iacob, M. Mehlman, H.I. Park, B.T. Roeder, D. Melconian Phys Rev C 98 015502 (2018)~\cite{shidling2018}; A. Ozmetin, D.G. Melconian, V.E. Iacob, P. Shidling, V.S. Kolhinen, D.J. McClain, M. Nasser, B. Schroeder, B. Roeder, H. Park, M. Anholm, A.J. Saastamoinen, APS DNP Abstract KF.00005 2020 ``Improving the ft value of 37K via a precision measurement of the branching ratio'')~\cite{ozmetin2020}.
-}
-Limiting the focus of this discussion to Eq.~\ref{eq:betaplus_decay}, we note that this expression provides no information at all about the momenta or spin of the outgoing daughter particles.  This behaviour is governed by the form of the Weak coupling that mediates the decay.  
-
-Within the field of nuclear physics, it is common to classify beta decay processes as being either ``Allowed'' or ``Forbidden''~\aside[jbn]{don't capatalize "Allowed" and "Forbidden."
-The quotes are justified.} (sometimes with an associated number to describe the extent to which it is Forbidden), where Forbidden processes are generally suppressed but not truly forbidden.  In an Allowed transition, the positron and anti-neutrino are treated as being created at the nuclear centre, and as a result they may not carry away any \emph{orbital} angular momentum.  However, since the outgoing leptons both have spin $S=1/2$, it is still possible for the total nuclear angular momentum, $J$, to be changed in an Allowed decay.  This implies that an Allowed transition must \emph{always} change the total nuclear angular momentum by either $0$ or $\pm1$.  
-~\note[jbn]{First forbidden decay emits leptons with total orbital angular momentum 1, changing the nuclear parity-- suppressed in a long-wavelength approximation ~ ((beta momentum)/(hbar c))$^2$ or about two orders of magnitude. This is one reason decays to negative-parity excited states of 37K are so small (Fig.~\ref{fig:nuclearleveldiagram}).
-}
-
-The Allowed decays traditionally are further separated into a Fermi singlet~\aside[jbn]{singlet in lepton spin} in which there is no change to nuclear angular momentum ($\Delta J = 0$) and therefore the two leptons are required to have anti-parallel spins, and a Gamow-Teller triplet~\cite{severijns_beck_cuncic_2006}, where the projection of the nuclear angular momentum is changed by $\pm1$.%, and so the two lepton spins must be aligned in parallel to one another under the Allowed approximation.
-\note[done]{My only comment is to ask where the Fermi "singlet" and "triplet" came from, referring to coupling of the lepton spins.
-\\
-I have not seen this-- it could be fine, yes, I don't know.}
-
-This implies that the total nuclear angular momentum is changed by $\Delta J = \{0, \pm1\}$ during a Gamow-Teller transition.  A mixed transition is also possible, however we note that the $J_i = J_f = 0$ decays must always be pure Fermi transitions, because there is no way to produce this result from two outgoing leptons with parallel spins.~\cite{krane}~\cite{wong1990}~\cite{severijns_beck_cuncic_2006}.
-
-Given the differing behaviour within the angular momenta of the daughters in Fermi and Gamow-Teller transitions, it is perhaps not suprising that that the \emph{linear} momenta of the outgoing particles should also follow a different set of distributions in these two cases.  At the level of the Weak~\aside[jbn]{Don't capitalize Weak anywhere, either. You can keep quotes around the first "weak", I guess.} coupling, Fermi- and Gamow-Teller~\aside[jbn]{you should indeed capitalize Fermi and Gamow-Teller because these are people.} transitions are governed by different operators, with the Fermi interaction mediated by a so-called ``vector'' ($V$) coupling, and the Gamow-Teller interaction mediated by an ``axial-vector'' ($A$) coupling.
-~\note[jbn]{The vector and axial-vector couplings refer to Lorentz transformation of the Lagrangian terms involved, which we come to next.}
-
-}
-{}  % End "if draft" section...
-
-
-
-%%%% --- * --- %%%%	
-%%%\section{On Modern Precision Measurements and the Nuclear Weak Force}
-%%%\label{sec:modernprecision}
-%%%Although the physics community has largely come to a consensus over the years about the \emph{dominant} behaviour of the nuclear weak force, there still exists a range of possible \emph{sub-dominant} behaviours that cannot be ruled out by theoretical considerations alone, and therefore must be tested experimentally.  With the weak force already so well described, searching for indications of unexpected behaviours is the domain of precision measurements.  This class of non-dominant behaviours is sometimes described as exotic physics, or with the imprecise label of physics \ac{BSM}, or even the wildly inaccurate misnomer, ``new physics''.  
-%%%
-%%%Many types of exotic physics have, in fact, already been described by Lee and Yang's 1956 interaction Hamiltonian, which was originally motivated by the question of parity conservation within beta decay\cite{LeeYang}.  Despite the original motivations, the authors were very thorough in their description of possible interaction types.  By starting with Fermi's contact interaction model of beta decay, incorporating Gamow and Teller's selection rules, and enforcing Lorentz invariance, they arrived at a nucleon-level Hamiltonian (quarks had not been discovered yet) which accounted for \emph{all} possible coupling behaviours~\cite{GamowTeller}. 
-%%%%\aside{also cite Fermi here, and Gamow-Teller.}
-%%%
-%%%In the years since, we have discovered that beta decay is mediated by $W^\pm$ bosons, which, among other things, allows for the possibility of certain transitions (ie, with different selection rules) occuring, which had been considered forbidden under the contact interaction model.  
-%%%%certain suppressed transitions with different selection rules
-%%%%creates the opportunity for certain suppressed transitions to occur which follow different sets of selection rules.
-%%%%thereby allowing for certain suppressed transitions with different sorts selection rules.  
-%%%Since $W^\pm$ bosons are quite massive,
-%%%%relative to typical beta decay energies,
-%%%\aside{Give numbers.} the beta decay interaction is only applicable at a short range, and as a result, the Fermi model (with the Gamow-Teller addendum) represents a very good approximation for the transitions it applies to. \aside{Give numbers.}
-%%%%So although Fermi's model with the Gamow-Teller addendum is not truly a complete description, it is still a very good approximation, given the mass of the  $W^\pm$ bosons relative to typical beta decay energies.
-%%%\aside{Also, like many mathematical descriptions where one wants to predict things, it's better without the quarks.}
-%%%%\note{This isn't quite right.  Gamow and Teller added a process to change nucleon spin, and the Lee-Yang Hamiltonian is based on that.}
-%%%
-%%%We begin with Fermi's\aside{Is this true?  Probably} description of the transition: 
-%%%\bea
-%%%\mathcal{M}_{fi} &=& G_F \int \bar{\psi}_f \, \mathcal{\hat{O}} \, \psi_i \,\textrm{d}V,% \;\;=\;\; \int \mathcal{H}_{\mathrm{int}} \textrm{d}V
-%%%\eea 
-%%%where $\mathcal{M}_{fi}$ is the transition matrix element between the final ($\psi_f$) and initial ($\psi_i$) states, and $G_F$ gives a measure of the size of the coupling between states.  The integral is evaluated over phase space volume.  Equivalently, $\mathcal{M}_{fi}$ may be written in terms of the interaction Hamiltonian $\mathcal{H}_{\mathrm{int}}$, as 
-%%%\bea
-%%%\mathcal{M}_{fi} &=& \int \! \mathcal{H}_{\mathrm{int}} \, \textrm{d}V. 
-%%%%\label{eq:transitionmatrixhamiltonian}
-%%%\eea 
-%%%%
-%%%This leads immediately to Fermi's Golden Rule, 
-%%%\beq
-%%%\Gamma \;\; = \;\; \frac{1}{\tau}  \;\; = \;\; \frac{2\pi}{\hbar} \left| \mathcal{M}_{fi} \right|^2 \, \rho(E_f),
-%%%%\;\;\;\; \textrm{(Why is this formatted weird??)},
-%%%\eeq
-%%%which describes the relationship between the total transition rate $\Gamma$ (or equivalently the lifetime $\tau$), the transition matrix element $\mathcal{M}_{fi}$, and the available density of states at the final energy, $\rho(E_f)$.  We can also use this to write down the differential decay rate, 
-%%%\bea
-%%%\frac{\textrm{d}^5 \Gamma}{ \textrm{d} \Ebeta \textrm{d}\Omegahatbeta \textrm{d} \Omegahatnu } 
-%%%&=& \frac{1}{(2\pi)^5} \, \pbeta \Ebeta (E_0 - \Ebeta)^2 F_{\pm}(\Ebeta, Z^\prime) \left| \mathcal{M}_{fi} \right|^2,
-%%%%\frac{\textrm{d}^5 \Gamma}{ \textrm{d} \Ebeta \textrm{d}\Omegahatbeta \textrm{d} \Omegahatnu } 
-%%%%&=& \frac{G_F^2}{(2\pi)^5} \, \pbeta \Ebeta (E_0 - \Ebeta)^2 F_{\pm}(\Ebeta, Z^\prime) \left| \mathcal{M}_{fi} \right|^2,
-%%%\eea
-%%%where \aside{pretty sure I lost an $\hbar$.  Maybe no one will notice.  }
-%%%%$G_F$ is the mumble mumble,\aside[tag]{Fix $G_F$ !} 
-%%%$\Ebeta$ and $\pbeta$ are the outgoing $\beta$'s (total) energy and momentum,
-%%%$E_0$ is the maximum possible $\beta$ energy associated with the transition, 
-%%%and $\FFpm$ is called a Fermi function (with $Z^\prime$ the proton number of the daughter), %\aside[tag]{$Z^\prime$ ?} 
-%%%and is used to account for the electric force between the nucleus and the (charged) outgoing electron (top) or positron (bottom) \cite{Fermi1934Italian}\cite{Fermi1934German}\cite{krane}.  
-%%%
-%%%With this description, the problem of characterizing the transition is reduced to determining the form of $\mathcal{\hat{O}}$, or equivalently, $\mathcal{H}_{\mathrm{int}}$.  Table~\ref{table:dirac_matrix_operators} provides a comprehensive list of all operators for which Lorentz invariance holds.  The complete transition operator $\mathcal{\hat{O}}$ must be comprised of a linear combination of these terms.  
-%%%\input{table_dirac_matrix_operators.tex} % table:dirac_matrix_operators
-%%%This gives rise to the Lee-Yang interaction Hamiltonian, which provides a generalized combination of the Lorentz invariant operators and fits neatly into Eq.~\ref{eq:transitionmatrixhamiltonian}~\cite{LeeYang}:
-%%%
-%%%%The Lee-Yang interaction Hamiltonian is: %\aside{It's an *interaction* Hamiltonian!}
-%%%\input{equation_LeeYangHamiltonian.tex}%  \label{eq:lee_yang_hamiltonian} 
-%%%
-%%%Here, $C_X$ and $C_X^{\prime}$ (with $X=\{V,A,S,T,P\}$) are complex coupling constants for vector, axial, scalar, tensor, and pseudoscalar interactions, and $\psi_Y$ (with $Y=\{p,n,e,\nu\}$) are the wavefunctions for the interaction's proton, neutron, electron, and neutrino.  Operators $\gamma_5$ and $\gamma_\mu$ are Dirac gamma matrices, and $\mbox{$\sigma_{\lambda\mu} = -\frac{i}{2}(\gamma_\lambda \gamma_\mu - \gamma_\mu\gamma_\lambda )$}$.  As usual, ``H.C.'' represents the Hermitian conjugate of the previous terms within the Hamiltonian.
-%%%%\aside{What about sigma!?  is it a pauli matrix?}  
-%%%
-%%%The fact that there are two coupling constants (primed and unprimed) for each type of coupling relates to the \emph{handedness} of the interaction.  Both left-handed and right-handed couplings, or a combination thereof, are \emph{a priori} possible, and the form of Eq.~\ref{eq:lee_yang_hamiltonian} does not give preference to either.
-%%%
-%%%
-%%%While it is possible to define an interaction's handedness in a rigorous and mathematical way, the reader may gain more clarity by simply remembering the rule of thumb that a left-handed weak force 
-%%%% (which is predominantly or entirely what exists in nature) 
-%%%couples only to left-handed regular matter leptons and right-handed anti-leptons --- where the handedness of a lepton or other particle is defined by the direction of its spin relative to its direction of motion.  That description is exact in the limit where such a lepton travels at the speed of light (otherwise a clever Lorentz transform can change the result), but the underlying mathematics is well defined for slower particles as well.  For neutrinos, which are so light they were long believed to be massless, the description is \emph{nearly perfect}.  For electrons and positrons emitted in beta decay, which are massive but often emitted at relativistic speeds, the description is only \emph{pretty good}.  
-%%%
-%%%
-%%%\note{Here, we should put in Falkowski's convention to separate out the RH and LH components of things.  Or take it out completely.}
-%%%
-%%%%were long believed to be massless 
-%%%% --- meaning that it is \emph{very good} for neutrinos emerging from a weak interaction, and \emph{pretty good} for electrons and positrons emerging from a similar interaction.  
-%%%%
-%%%%regular matter neutrinos that have a left-handed spin relative to the direction of motion
-%%%%This can be defined in a rigorous and mathematical way, 
-%%%%\note{The primes or lack thereof are a thingy with the interaction's handedness...}
-%%%%$\psi_Y$ (with $Y=\{p=$proton, $n=$neutron, $e=$electron, $\nu=$neutrino$\}$)
-%%%%the search for small deviations from this model is ongoing.  
-%%%
-%%%Over the years, the physics community has learned much about which simplifications to Eq.~\ref{eq:lee_yang_hamiltonian} can be justified.  Typically, reference to the pseudoscalar couplings is one of the first things to be dropped, because it is suppressed at typical beta decay energies, and as such its presence would be difficult to demonstrate and have very little effect on experimental results.  
-%%%%Experimental results have demonstrated that 
-%%%It is also now widely understood that 
-%%%the nuclear weak force involves primarily (or entirely) vector and axial vector couplings, and is primarily (or entirely) a left-handed interaction in which parity is maximally (or nearly maximally) violated.  
-%%%
-%%%\note{We'll use Falkowski's convention to re-wite the Lee-Yang Hamiltonian in terms of right- and left-handed interactions.  That'll be useful later.  Sort-of.}
-%%%
-%%%\note{Something about how beta decays turned out to be $(V-A)$...}
-%%%
-%%%%\note{btw:  as of 2018, we have $m_W = 80.379(12)$\,GeV/$c^2$ ~\cite{pdg2018}.}
-
-%%%% --- * --- %%%%	
-%%%OK.  This stuff is basically yoinked from Ben's thesis.  And Dan's.  I'll need to re-organize and rephrase the content -- but I want to make sure I get the important points down.  
-%%%
-%%%In 1931, Pauli figured out about neutrinos, because beta decay produced a whole spectrum of beta energies, so there had to be a third body available to carry off some of the energy.  (Dan doesn't cite anyone here)
-%%%
-%%%There's the matrix element, $\mathcal{M}_{fi}$, which connects the initial and final nuclear states, before and after an interaction (decay).  
-%%%
-%%%\bea
-%%%\mathcal{M}_{fi} &=& \int \psi_f^* \mathcal{O} \psi_i \textrm{d}V  \;\;\;\; \textrm{(What is $V$??  Pretty sure it's phase space volume.)}, 
-%%%\eea 
-%%%which goes with Fermi's Golden Rule (or at least one of them):
-%%%\bea
-%%%\Gamma &= \;\; \frac{1}{\tau} \;\; =& \frac{2\pi}{\hbar} \left| \mathcal{M}_{fi} \right|^2 \, \rho(E_f)  \;\;\;\; \textrm{(Why is this formatted weird??)},
-%%%\eea
-%%%where, as Ben puts it, $\rho(E_f)$ is "the thermodynamic density of states available at a final energy".  Then he writes down the differential decay rate and cites ~\cite{Fermi1934German} 
-%%%%\cite{fermi1934english} 
-%%%for it, which is in German:
-%%%\bea
-%%%\frac{\textrm{d}^5 W}{ \textrm{d} \Ebeta \textrm{d}\Omega_\beta \textrm{d}\Omega_\nu } 
-%%%&=& \frac{G_F^2}{(2\pi)^5} \pbeta \Ebeta (E_0 - \Ebeta)^2 F_{\pm}(\Ebeta, Z^\prime) \left| \mathcal{M}_{fi} \right|^2
-%%%\eea
-%%%Anyway, that thing was published in 1934 !  And he assumed the interaction only worked at $0$ distance.  Also, he postulated that the weak force was a vector interaction, and some of it is!  
-%%%
-%%%Later, we collectivelly learned that a better model is to suppose that the interaction is mediated by a massive, charged $W^+$ or $W^-$ particle.  Also, it's pretty heavy, and Ben totally gives the mass so he can cite the dudes who compile that stuff, but there's a new version now.  As of 2018, we have $m_W = 80.379(12)$\,GeV/$c^2$ ~\cite{pdg2018}.  The point is, the fact that it's so massive means that the approximation of $0$ distance was pretty good, since the larger mass implies that the interaction can only occur at short range.
-%%%
-%%%So we're going to require that $\mathcal{O}$ must behave under a Lorentz transformation.  You can construct operators with the correct form out of Dirac $\gamma$-matrices, and you get scalar, pseudoscalar, vector, axial vector, and tensor couplings.  potentially.  Anything else would just reduce to linear combinations of those, so those ones span the space.  Some of those respect parity, and some don't.  
-
-%\input{table_dirac_matrix_operators.tex}
-
-%%Up until 1956, it was common wisdom that weak interactions should respect parity, but there was really no evidence for it.  Lee and Yang formulate a more general description of beta decay, with all the Lorentz symmetry respecting operators, and only some of those obey parity~\cite{LeeYang}.  It was an open question, then, whether parity should be respected in the nuclear weak interaction -- but not for long, because C.S. Wu tested it out in 1957~\cite{wu}.  The result of the experiment is that not only is parity *not* conserved, it's (sometimes) *maximally* not conserved!  Neat!  Nobody would have expected it.
-%%
-%%Ben points out that they thought it was scalars and tensors at first, and cites some people(\cite{RustadRuby1955tensor}\cite{BurgyEpstein1957scalartensor}), but frankly, I can't access those articles and I thought there was more evidence for it than that.  Also, the one article is published before Madame Wu's, so idk what to make of that.
-
-%%%%Ben points out that the $V-A$ form of the interaction means that parity is *maximally* violated, however he also says that $A$ has $+$ and $V$ has $-$ parity.
-%%%%
-%%%%Anyway.  We're maximally parity violating, and when we describe this in modern terminology, we would say that the $W^{\pm}$ particles only couple to negative helicity (left-handed) leptons, or positive helicity antimatter leptons (anti-leptons).
-%%%%\note[bluetodo]{Wait.  Are these equivalent statements??  So confused...}
-%%%%
-%%%%Also, chirality as a concept.  It's an intuitively straightforward concept when your particle is going at the speed of light.  So, for a massless neutrino, if it has a negative chirality, that means that its spin vector is pointed opposite to its direction of motion.  
-%%%%
-%%%%Also-also, the fundamental property is chirality, not helicity.  Helicity can be flipped by a simple Lorentz boost.  But because we're talking about an interaction, there is some sense in which this defines a rest frame for us.   ....is this even the correct way to think about it?  I think it has to be fine.
-%%%%
-%%%%So anyway, we have lots of evidence for the $V-A$ form of interactions.  (Ben doesn't cite anyone for this).  But other forms of the interaction could be in there too.  And at this point, Ben just assumes the Standard Model and goes with it.
-
-%%%
-
-\ifthenelse{\boolean{isdraft}}
-{
-\section{Draft of Intro Section -- with paragraphs!}
-}
-{}
-
-
-\note[jbn, nolist]{first, actually, Ben writes a good summary of Ft mirror equation in terms of Ft0+ to 0+ in the PRL, you could just use that in Ch. 1 and it would help enormously. (Of course now I'm scared because it doesn't mention isospin mixing is different for 37K and the others, and that should be in the numerator as (Ft0to0/Ft37K) well as in rho, shouldn't it? I would need to compare to Shidling's expressions to sort this out.)
-}
-\note[jbn, nolist]{
-I said Ft wrong. I think you must know what to do.  
-\\
-F is the lepton phase space integral.
-\\
-(Decay rate)/F is then a dimensionless quantity proportional to |matrix element|$^2$, which you could call the intrinsic strength of the transition.
-\\
-People instead consider the inverse quantity denoted Ft defined as F*t\_1/2, so if log\_10(Ft) is smaller, the strength is larger.
-\\...\\
-So e.g. t\_1/2 is wildly different for the 0+ to 0+ decays (t1/2 for $^{14}$O is a minute, not a second like 38mK) but once you correct for the wildly different phase space (the Coulomb energies and therefore the decay Q-value smoothly grow, and phase space goes like $Q^5$) the Ft rates are close (closer once percent corrections from isospin mixing and nucleus-dependent radiative corrections are applied).
-}
-\note[jbn, nolist]{
-...
-\\
-(That equation is fine-- I was confused earlier.) You can mention that script{Ft} has isospin-breaking and other theory corrections beyond the scope of the thesis, and cite Shidling for those. This equation, along with the Abeta equation in terms of rho (you should not include the right-handed currents in Ben's Abeta equation and re-state that your thesis is working on scalar and tensor in your title) then sets up the inputs you need for the Abeta prediction.
-}
-%%%
-
--- -- -- -- -- -- 
-\note[jb1]{JB:  The Gamow-Teller operator sigma dot tau refers to nucleon spins, not lepton spins, i.e. the nucleon spin can flip, but that doesn't tell me about this lepton rule either way.
-You correctly state the lepton and antilepton chirality farther down.
-}
-
-\note[done]{John's suggestions for fixing the stuff that Georg wanted fixed -- that giant email.
-i) Among the necessary technical corrections, there's a solid request for more background info. I think you know what to do.
-\\...\\
-A large thing is some kind of extra qualitative description of what the SM is. You could do that qualitatively without any trouble.
-}
-\note[done, nolist]{
-You might point out some part of this:
-\begin{itemize}
-	\item the charged weak interaction you're writing down predates the Weinberg-Salam model by more than a decade. The version you've written down assumes protons and neutrons are fundamental particles.
-	\item The exchange boson is much heavier in mass than the energy and momentum in the decay, so it can be approximated by an interaction with zero range. 
-	\begin{itemize}
-		\item Fermi did that very early on, 
-		\item and Gamow and Teller added a process that change the nucleon spin. \cite{GamowTeller}
-		\item Lee and Yang, which you cite, added the possible currents with different Lorentz transformations (do you mention that since any further combination of Dirac matrices can be reduced to these, so they span the space), and the possibility of parity violation by writing out helicity projections for the leptons. I.e. Lee and Yang assumed some fields (the nucleons and leptons) and a general interaction preserving the symmetries of the theory, which by definition is then an effective field theory. \cite{LeeYang}
-	\end{itemize}
-\end{itemize}
-}
-\note[done, nolist]{(...I might point out some part of this:)
-\begin{itemize}
-	\item Feynman and Gell-Mann's 1958 paper is the one that postulated V-A, again a decade before Weinberg-Salam, and they did this by making analogies between the boson exchanged and the photon, i.e. an analogy between the charged weak interaction and the electromagnetic current, so you could cite them instead of saying "SM predicts everything" \cite{FeynmanGellMann1958} 
-\end{itemize}
-People had assumed there was a massive boson exchanged for a very long time.
-\\
-What Weinberg (and, independently, Salam) did was come up with a consistent mathematical theory of massive bosons, incorporating Yang Mills gauge theory (looks like E\&M but with nonabelian operators) to do that, and the result was the weak neutral interaction prediction.
-}
-
-\note{A paragraph that used to live in my "draft of the intro" section:
-\\...\\
-There exists an extensive body of experimental evidence to demonstrate that the above model is overall a very good description of the beta decay process~\cite{wu}.  Despite the success of the $(V-A)$ model, there are still certain lingering questions that must be addressed by precision measurements.  Any deviation from maximal parity violation (i.e., a ``$(V+A)$'' contribution to the Weak force) would be of great interest to the community, as would the presence of certain other exotic couplings, such as the so-called Scalar ($S$) and Tensor ($T$) interactions.  Any such behaviour beyond the Standard Model (BSM) would represent a non-dominant contribution to the interaction, however the possibility cannot be entirely ruled out.  
-}
-~\note[jbn]{This is where I'm suggesting a little more explanation of Lee and Yang, and  V-A from Feynman and Gell-Mann}
-
-
-
-\note[jbn]{(Any quark-lepton pseudoscalar couplings have usually been ignored in beta decay, because they are suppressed by (beta momentum)/(nucleon mass).  Note that more recently it's been pointed out that C\_P is naturally quite large in the nucleon (M. Gonzalez-Alonso and J. Martin Camalich Phys Rev Lett 112 042501 (2014)) and allows for significant constraints from allowed beta decay.)}
-
-
-% and therefore carry angular momentum, the total nuclear angular momentum may still be changed.
-%Allowed transitions, in which the decay may not  as either ``Fermi'' decays, 
-%Since the topic of this work involves the Beta+ decay process of Eq.~\ref{eq:betaplus_decay}, that will be the primary focus in the discussion of beta decay that follows.
-%we will focus primarily on that in the discussion that follows.
-%We will focus primarily on the process of Eq.~\ref{eq:betaplus_decay}
-
-
-%%\note{The TRIUMF Neutral Atom Trap (TRINAT) offers an experimental set-up which is uniquely suited to precision tests of Standard Model beta decay physics.  Radioactive ions are delivered from the ISAC beamline and neutralized before being trapped in the first of two magneto-optical traps (MOTs).  Approximately once per second, atoms from the first MOT are transferred to the second, where their decay products can be observed with significantly less background than would have been possible in the first trap (see Figure~\ref{fig:doublemot}).  The transfer methodology is discussed in some detail in a paper by Swanson et al~\cite{swanson}. (The point is that this eliminates background from the decays of other stuff.  Or the same stuff.  Stuff that's not centered at the trap.)}
-
-%\note[jb1]{JB on the contents of Chapter 1:  \\
-%Move what you have in 1.1 and 1.3 to the first section of Chapter 2, and otherwise omit Chapter 1.}
-
-
-% ~\cite{wu}
-% ~\cite{LeeYang}
-%\aside{Did I even get this right?  Is the phase angle really what makes it left-handed? \\ JB says:  \\ ... \\ Relative sign.  look at the quark-lepton Lagrangian, which has $(1 \pm \gamma_5)$ } 
-%Any such behaviour, should it be present, would necessarily be a non-dominant contribution to the interaction, however it cannot be entirely ruled out.  
-%Any such behaviour with would necessarily be only 
-% cannot be entirely ruled out, and the search for physical interactions beyond the Standard Model (BSM) is an active field of research. \aside{cite someone?}  
-%, and our observable is mostly sensitive to scalar (S) and tensor (T) couplings.  
-%\note{According to present limits, these couplings would have to be pretty small relative to the ($V$) and ($A$) couplings.}
-
-
-%%%%%\note[jb1]{from JB on the contents of Chapter 1:
-%%%%%%\\
-%%%%%%With three changes:
-%%%%%%\\ ... \\
-%%%%%%1)"and we shall be interested especially in scalar (S) and tensor (T) couplings." -> "our observable is mostly sensitive to scalar (S) and tensor (T) couplings."
-%%%%%\\ ...\\
-%%%%%2)
-%%%%%"These couplings all refer to parameters in a Lagrangian that takes the
-%%%%%relativistic inner product of a current for the lepton with a current for the
-%%%%%proton or neutron.
-%%%%%The resulting Lagrangian must be a scalar under Lorentz transformations, so
-%%%%%these currents must have transformations like these V,A,S, and T and be
-%%%%%combined into a scalar."
-%%%%%\\...\\
-%%%%%3) Add one reference to the latest review:
-%%%%%\\
-%%%%%Adam Falkowski, Martín González-Alonso, Oscar Naviliat-Cuncic. Comprehensive analysis of beta
-%%%%%decays within and beyond the Standard Model. Journal of High Energy Physics, Springer, 2021, 04,
-%%%%%pp.126. 10.1007/JHEP04(2021)126.
-%%%%%\\
-%%%%%Here it is!~\cite{Falkowski2021}.
-%%%%%\\ ... \\
-%%%%%You have time for nothing else.
-%%%%%}
-
-%%%%%\note[jb1]{Me:  \\ Is a `phase angle' really what makes it left-handed? \\.\\ JB says:  \\ Relative sign.  look at the quark-lepton Lagrangian, which has $(1 \pm \gamma_5)$ }
-
-%%%%%\bluetodo{Need to figure out how the exotic couplings actually work, mathematically.  What the fuck does ``$(V-A)$'' even *mean*?  IIRC John wants a brief mention of $\gamma_5$'s and $\gamma_\mu$'s, and probably a brief mention of whatever mumble-mumble group is mumble-mumble represented or something.
-%%%%%\\
-%%%%%...
-%%%%%\\
-%%%%%JB says:
-%%%%%\\
-%%%%%the current transforms like a Lorentz scalar or tensor -- this does not refer to the angular momentum.
-%%%%%\\
-%%%%%If you write down the Lagrangian for beta decay, that's eough. All these things refer to the structure of the Lagrangian. The theory considers all possible Lorentz transformations of the currents. 
-%%%%%\\
-%%%%%Please don't talk about SU(2)xU(1) for electroweak unification. It's textbook material that's beyond the scope.
-%%%%%}
-
-%%%%%%\note{ The general form of the weak interaction Hamiltonian is: \\
-%%%%%%\bea
-%%%%%%\hat{H}_{\mathrm{weak}} &=& \sum_{i=S,P,V,A,T} \left( {\bar{\psi}}_p {\mathcal O}^i \psi_n \right) \left( C_i \bar{\psi}_e {\mathcal O}_i \psi_\nu + C_i^\prime \bar{\psi}_e {\mathcal O}_i \gamma^5 \psi_\nu \right) + H.C.
-%%%%%%\eea
-%%%%%%with
-%%%%%%\bea
-%%%%%%{\mathcal O}_S &=& 1            \\
-%%%%%%{\mathcal O}_P &=& \gamma^5     \\
-%%%%%%{\mathcal O}_V &=& \gamma_\mu    \\
-%%%%%%{\mathcal O}_A &=& i \gamma_\mu \gamma^5  \\
-%%%%%%{\mathcal O}_T &=& \frac{-i}{2\sqrt{2}} \left( \gamma_\mu \gamma_\nu - \gamma_\nu \gamma_\mu \right)
-%%%%%%\eea
-%%%%%%\\
-%%%%%%It's from here:  ~\cite{hong_sternberg_garcia}.
-%%%%%%\\ 
-%%%%%%Also, unclear what subscripts $p,n,e,\nu$ mean.  I could guess/assume, but....
-%%%%%%}
-
-
-
-%%%% --- * --- %%%%	
-%
-%
-%
-%
-%
-%
-%
-%%%% --- * --- %%%%	
-%\section{Motivation}
-%\section{A Generalized Description of the Weak Interaction}
-%%\section{Background}
-%%\section{Motivation}
-%%\greycomment{The nuclear Weak force is one of four fundamental forces described within physics.  It mediates the process of beta decay, which is of particular interest to us here.  Although beta decay is generally well understood, it presents a unique opportunity for precision measurements to search for physics beyond the Standard Model within the Weak coupling.  By observing the kinematics and angular correlations involved in the decay process, one gains access to a wealth of information about the form of the operators mediating the decay.}
-%
-%According to the predictions of the \acf{SM}, %Standard Model~\aside[jbn]{standard model} (SM), 
-%the Weak force involves only vector ($V$) and axial-vector ($A$) couplings, where a relative sign within the quark-lepton Lagrangian produces the left-handed ``$(V-A)$'' form of the interaction in maximal violation of parity.  In terms of physical behaviour, one consequence of this model is that ``regular matter'' leptons emerge from a Weak interaction with left-handed chirality, while antimatter leptons emerge with right-handed chirality. Any deviation from this behavior would be indicative of ``new'' or ``exotic'' (i.e., not previously discovered) physics.
-%%~\aside[jbn]{"new" -> new
-%%\\
-%%"exotic" -> exotic. 
-%%\\...\\
-%%You define them right away. There is no need for air quotes. You should seriously think about never using air quotes, but use them as an indication to you that you need to write down more clarifying words instead.}
-
-%%Lee-Yang 
-%The generalized nucleon-level Lagrangian to describe the Weak interaction including BSM behaviour is given by:
-%\input{equation_LeeYangLagrangian.tex}%  \label{eq:lee_yang_lagrangian} 
-%where the coupling constants $C_X^{\pm}$ (with $X=\{V,A,S,T,P\}$) are written in such a way as to separate out the left-handed ($C_X^{+}$) and right-handed ($C_X^{-}$) components from one another, and the neutrino fields $\nu_{L,R}$ are given a similar treatment.  
-%%the left- and right-handed components of both the coupling constants and neutrino fields are separated out from one another, with left-handed couplings $C_X^{+} = $
-%%coupling constants $C_X^{\pm}$ are written
-%%$C_X^{+}$ and $C_X^{-}$ describe the left-handed and right-handed (respectively) 
-%A simple variable transform relates Eq.~\ref{eq:lee_yang_lagrangian} to expressions that are potentially more familiar from the older literature, much of which was written before it had been determined that the Weak force is primarily or entirely left-handed: 
-%\bea
-%\nu_{L} &=& \frac{1}{2}\nu \left( 1 + \gamma_5 \right) \\
-%\nu_{R} &=& \frac{1}{2}\nu \left( 1 - \gamma_5 \right) \\
-%C_X &=& \frac{1}{2} \left( C_X^+ + C_X^- \right) \\
-%C_X^\prime &=& \frac{1}{2} \left( C_X^+ - C_X^- \right)
-%\eea
-%\note[jbn]{Can you please provide a reference for Eq.~\ref{eq:lee_yang_lagrangian}? I'm now confused about how you can get pure 1+gamma\_5 projections without assuming Cv=Cv' and Ca = +/- Ca' (I forget the convention) so I really think you need to reference this expression rather than derive it.
-%} 
-
-
-%\note[bluetodo]{Seriously, this section needs some citations.  Notably, C.S. Wu~\cite{wu} (done) and Lee+Yang~\cite{LeeYang} (done).  Perhaps also Hong+Sternberg+Garcia~\cite{hong_sternberg_garcia}.  Probably a bunch more people too though.}
-%%\note{Write a paragraph about what we're looking for with this experiment.}
-%%%\note[done]{John wanted this change (now implemented), but I think the phrasing is unclear now: \\
-%%%"and we shall be interested especially in scalar ($S$) and tensor ($T$) couplings." -> "our observable is mostly sensitive to scalar ($S$) and tensor ($T$) couplings."
-%%%\\ ... \\
-%%%In fact, that sentence is gone now, but I no longer talk about which things we're sensitive to in this section of the intro.}
-
-
-
-%%%% --- * --- %%%%	
-%
-%
-%
-%
-%
-%
-%
-%%%% --- * --- %%%%	
-%%%%%%%\section{The Basics of Beta Decay}
-%%%%%%%	%\\*
-%%%%%%%	%The Fermi description of beta decay can be found in any nuclear physics textbook, but you have to dig slightly harder to understand Gamow-Teller or mixed decays, all of which are relevant here.  
-%%%%%%%%Beta decay within the Standard Model is well understood.  \greycomment{At the nucleon level, two processes are possible:
-%%%%%%%%\bea
-%%%%%%%%	p &\rightarrow& n + e^+ + \bar{\nu}_e  \label{eq:betaplus_decay} \\
-%%%%%%%%	n &\rightarrow& p + e^- + \nu_e, \label{eq:betaminus_decay}
-%%%%%%%%\eea
-%%%%%%%%where Eq.~\ref{eq:betaplus_decay} is energetically disallowed for an unbound proton, however there is no similar requirement for Eq.~\ref{eq:betaminus_decay}.  
-%%%%%%%%}
-%%%%%%%
-%%%%%%%\greycomment{We will limit the scope of this discussion to Allowed transitions, in which a beta decay may not change the \emph{orbital} angular momentum.  However, as the outgoing leptons have spin$=1/2$ and therefore carry angular momentum, the total nuclear angular momentum may still be changed.  Since a beta decay creates \emph{two} new leptons, this implies that the total nuclear angular momentum must always change by either $0$ or $1$ in an Allowed decay ~\cite{krane}.}
-%%%%%%%
-%%%%%%%%only possible for a proton bound within a nucleus, 
-%%%%%%%%not possible for an unbound proton.  
-%%%%%%%%In the most basic sense, a beta decay involves a proton (neutron) within a nucleus (either within a nucleus or not) undergoes a transition to a neutron (proton), simultaneously creating a new positron (electron) and neutrino (anti-neutrino).  
-%%%%%%%%	via Krane~\cite{krane}
-%%%%%%%%	Under the Allowed Approximation, we require that a beta decay may not carry away any orbital angular momentum, because we treat the nucleus as pointlike \aside{Is this even true?  The pointlike thing?  ...No.  No it's not.} and work in the CM frame.  
-%%%%%%%%	An Allowed decay can, however, change the total nuclear angular momentum, because the outgoing leptons have spin$=1/2$ and therefore carry angular momentum.  Therefore, in an allowed decay, the total nuclear angular momentum must always change by either $0$ or $1$.  
-%%%%%%%
-%%%%%%%	\note[jb1]{JB says:  The title of Holstein's review addresses this ``pointlike'' issue, and he describes the ``impulse approximation" in Section V.  The interaction is not pointlike, because all constants are a form factor expansion in $q^2$ -- finite size terms contribute to the Coulomb correction.}
-%%%%%%%	
-%%%%%%%	From a 2006 paper by Severijns et al ~\cite{severijns_beck_cuncic_2006}, the selection rules for an allowed transition are:
-%%%%%%%\bea
-%%%%%%%\Delta I = I_f - I_i = \{0, \pm 1\} \\ 
-%%%%%%%\hat{\Pi}_i \, \hat{\Pi}_f = +1
-%%%%%%%\eea
-%%%%%%%where $I_i$ and $\hat{\Pi}_i$ ($I_f$ and $\hat{\Pi}_f$) are the initial (final) parity of the nuclear states.
-%%%%%%%
-%%%%%%%	Then, you can separate the allowed transitions into singlet (anti-parallel lepton spins, $S=0$ -- a Fermi transition) and triplet states (parallel lepton spins, $S=1$ -- a Gamow-Teller transition).
-%%%%%%%	
-%%%%%%%	
-%%%%%%%	\greycomment{ Fermi decays are so-called ``vector'' interactions, and happen when the spin of the two leptons involved are antiparallel, so there can be no change in angular momentum (at least in the case of the Allowed approximation).  
-%%%%%%%	
-%%%%%%%	Gamow-Teller decays involve two leptons with parallel spins, so the decay must change the projection of the nuclear angular momentum, $M_I$, by exactly one unit (in the case of the Allowed approximation).  They transition may or may not simultaneously change the total nuclear spin, $I$, by one unit.  These are ``axial-vector'' interactions.  (Note that $I=0 \rightarrow I=0$ interactions are never Gamow-Teller decays.  
-%%%%%%%	
-%%%%%%%	Probably everything in this section is yoinked from ~\cite{wong1990}, pg 212.  
-%%%%%%%	}
-%%%%%%%	
-%%%%%%%%\section{JTW Formalism}	
-%%%%%%%%	%\\*
-%%%%%%%%	Describes how to search for a variety of BSM terms within beta decay.  Does not account for certain well-understood effects of similar (or greater) magnitude.
-%%%%%%%%	
-%%%%%%%%	\input{equation_jtw_master}
-%%%%%%%%	% equation:jtw_master
-%%%%%%%%	
-%%%%%%%%\note{Probably I should now give values for things, or expressions for letters, or something.  }
-%%%%%%%%We haven't integrated out the neutrino momentum.  Neutrino energy itself is a redundant parameter, I think, because we are already using an endpoint energy and a beta energy, and we are not taking recoil-order effects into account.
-%%%%%%%%
-%%%%%%%%For ``convenience'', let's define a nuclear alignment term, $\Talign$, so that:
-%%%%%%%%\bea
-%%%%%%%%\Talign(\vecJ) &=& \TalignExpand
-%%%%%%%%\eea
-%%%%%%%%
-%%%%%%%%
-%%%%%%%%
-%%%%%%%%\section{Holstein Formalism}
-%%%%%%%%	An in-depth mathematical description of beta decay, including many smaller effects.  It does not include a description of the BSM physics of greatest interest to us.   Here, we've already integrated over neutrino momentum at least.  That's something.  Here's Holstein's Eq.~(52):
-%%%%%%%%\input{equation_holstein52}
-%%%%%%%%% equation:holstein52
-%%%%%%%%
-%%%%%%%%\section{Relation between JTW and Holstein Formalisms}
-%%%%%%%%	%\\*
-%%%%%%%%	To conduct a precision search for scalar and tensor couplings, it is necessary to combine the Holstein and JTW models into a single cohesive probability distribution.  
 
 
 %%%% --- * --- %%%%
@@ -1407,9 +733,7 @@ where it is clear that, since the parent $^{37}\textrm{K}$ atom was electrically
 %~\aside[jbn]{'extra' -> extra. You're not breaking charge conservation here, you don't need to define the word.} 
 orbital electron (and therefore a negative net charge) if no electrons are shaken off.  We also note that it is common for multiple SOEs to be created in a given decay event.  
 
-A further consideration is that the outer electron in an $^{37}\textrm{\!Ar}^{-}$ ion is not bound\cite{ArgonMinusIons}, 
-%~\aside{cite someone!!  I don't know who.}
-and in an electric field such as is present within our experimental chamber, this outer electron is removed immediately to be accelerated through the field, leaving behind a neutral $^{37}\textrm{\!Ar}$ atom.  Although this is in principle a different physical loss mechanism, we will refer to unbound electrons resulting from either process as SOEs.  
+A further consideration is that the outer electron in an $^{37}\textrm{\!Ar}^{-}$ ion is not bound\cite{ArgonMinusIons}, and in an electric field such as is present within our experimental chamber, this outer electron is removed immediately to be accelerated through the field, leaving behind a neutral $^{37}\textrm{\!Ar}$ atom.  Although this is in principle a different physical loss mechanism, we will refer to unbound electrons resulting from either process as SOEs.  
 
 It is useful to consider the energy spectrum of these shake-off electrons.  The most straightforward component of the SOE energy spectrum arises from the electrons that are lost immediately following decay, and we take these to initially have 0eV in kinetic energy.  
 
@@ -1433,7 +757,7 @@ Unfortunately, this treatment cannot determine the fractional contribution of ea
 %%%%%	\includegraphics[width=.999\linewidth]
 %%%%%	{Figures/Levinger_SOETOF_prelim.pdf}
 %%%%%	\note[clean]{Clean up SOE TOF pic in intro.  It doesn't show what I need!}
-\note{A picture of the SOE spectrum for the intro was here.  It's gone now, but it's important that we remember!}
+\note{A picture of the SOE spectrum for the intro was here.  It's gone now, but it's important that we remember!  pretty sure I reference it from somewhere else...}
 %%%%%	\note{Maybe just kill this picture?  At least reference it in the text somewhere.}
 %%%%%	\caption[Levinger TOF]{Shake-off electron TOF (w.r.t. beta TOA) spectrum, showing how the spectrum is different if one includes different sets of initial electrons to be shaken off.  I forget why some of them have 0 eV.  Maybe those are the ones from the $\isotope[37]{Ar}^+$. ... Levinger TOF spectra for some different sets of SOE initial orbitals before shake-off.  (At least that's what it's supposed to be, after I fix the picture).  It's reconstructed event-by-event with beta times-of-flight that would pass some basic `good event' cuts.  Anyway, it turns out, it doesn't much matter what orbitals you lose SOEs from.  That's nice.  In the end, I used 85+15.  \comment{(Need to re-plot this.)} }	
 %%%%%	\label{fig:levinger_TOF}
