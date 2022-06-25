@@ -110,7 +110,7 @@ These properties of the atomic cloud allow for a relatively clean transfer of li
 
 There is no need to release previously trapped atoms in the second MOT when a new group of atoms is loaded.  Although the trap loses atoms over time as a result of a variety of physical processes,\aside{discussed ... idk, somewhere else.} during typical operation the majority of atoms loaded in a given transfer will still be trapped at the time the next set of atoms is loaded, and after several transfer cycles, something like a steady state is obtained.
 
-Because the transfer and trapping mechanisms rely on tuning laser frequencies to specific atomic resonances, these mechanisms act on only a single isotope, and all others remain unaffected.  The result is a significant reduction of background contaminants within the detection chamber relative to initial beamline output.  The transfer methodology is discussed in some detail within another publication~\cite{swanson}.
+Because the transfer and trapping mechanisms rely on tuning laser frequencies to specific atomic resonances, these mechanisms act on only a single isotope, and all others remain unaffected.  The result is a significant reduction of background contaminants within the detection chamber relative to initial beamline output.  The transfer methodology is discussed in some detail within the collaboration's Ref.~\cite{swanson}.
 
 We now turn our attention to what happens to the atom cloud in the detection chamber between loading phases (see Fig.~\ref{fig:dutycycle}).  One of the goals for the 2014 $^{37}\textrm{K}$ beamtime required that the atom cloud must be spin-polarized, as well as being cold and spatially confined.  Although the MOT makes it straightforward to produce a cold and well confined cloud of atoms, it is fundamentally incompatible with techniques to polarize these atoms. The physical reasons behind this are discussed in Section~\ref{section:acmot_and_polarization}.~\aside[org]{I *do* discuss this, right?  Right??}
 
@@ -220,7 +220,11 @@ The resulting electric field acts to pull positively charged ions towards one MC
 \begin{figure}[h!tb]
 	\centering
 	\includegraphics[width=.9\linewidth]{Figures/chamber_cross_section_with_event.png}
-	\caption[Diagram of the TRINAT Detection Chamber]{A scale diagram of the interior of the TRINAT detection chamber, shown edge-on with a decay event. After a decay, the daughter will be unaffected by forces from the MOT.  Positively charged recoils and negatively charged shake-off electrons are pulled towards detectors in opposite directions.  Although the $\beta^+$ is charged, it is also highly relativistic and escapes the electric field with minimal perturbation.}
+	\caption[Diagram of the TRINAT Detection Chamber]{A scale diagram of the interior of the TRINAT detection chamber, shown edge-on with a decay event. After a decay, the daughter will be unaffected by forces from the MOT.  Positively charged recoils and negatively charged shake-off electrons are pulled towards detectors in opposite directions.  Although the $\beta^+$ is charged, it is also highly relativistic and escapes the electric field with minimal perturbation.
+	\\
+	\\
+	% line breaks because somehow it fucks up my equation formatting if I let them go on this same page.  *shrug*
+	}
 	\note{rMCP is 101.4 mm from center, eMCP is 100 mm from center.  Do I say this somewhere else?}
 	\label{chamber_decayevent}
 \end{figure}
@@ -240,9 +244,18 @@ $100.0\,$mm from the chamber centre.  It features a Z-stack configuration of thr
 
 Due to an unfortunate interaction between the two MCP detectors, during the 2014 beamtime it was not possible to run both the eMCP and the rMCP simultaneously without producing a large background on at least one detector (there seemed to be no consistency as to which detector was most affected at a given time).  As a result, data was instead collected with only one MCP detector biased at a time, and the active detector was alternated every few hours to spend approximately equal time collecting data with the eMCP and rMCP.~\aside{Reference that one table.}  Online scientific data has been collected with the eMCP at electric field strengths of 66.7\,V/cm and 150.\,V/cm, while rMCP data has been collected at 395.\,V/cm, 415.\,V/cm, and 535.\,V/cm.  Note that these field strengths are all too low to significantly perturb any but the least energetic of the (positively charged) betas originating from decay, and those betas already lack the energy that would be needed to travel through the SiC mirror and Be foil vacuum seal into a beta detector. 
 
-The data used to measure the polarization was all collected using the rMCP, while the $\Abeta$ and $\bFierz$ data were collected using the eMCP.  The polarization was taken to be the same in both cases,
-\aside[tag]{JB:  at the level of accuracy you're quoting the answers are in the PRL:  sigma+ P=99.13(8)\%; sigma- -99.12(9)\%}
-an assertion that is backed up by weeks of optimization and polarization data on stable $^{41}$K, with all optical pumping and magnetic field switching parameters kept constant.  Ambient magnetic field changes of $\sim$50 milliGauss could cause some polarization perturbations at the precision achieved, but the stray fields were kept under control at that level.  The TRINAT lab is in a basement, well shielded from the experimental hall by concrete with rebar, and though 50 mG fields are seen in that hall from an open Helmholtz ion trap, they and the nearby 5-ton crane produce negligible fields when measured at the atom trap. The cyclotron field is $\sim$0.5 Gauss, predominantly vertical, 
+The data used to measure the polarization was all collected using the rMCP, while the $\Abeta$ and $\bFierz$ data were collected using the eMCP.  The magnitude of the polarization in each of the two orientations was measured, using online $^{37}$K data, as
+\bea
+| P_+ | &=& 0.9913 \,\pm\, 0.0008
+\\
+| P_- | &=& 0.9912 \,\pm\, 0.0009,
+\eea
+and taken to be the same in both cases --- a result that could only be attained after weeks of optimization using stable $^{41}$K polarization data, with all optical pumping and magnetic field switching parameters kept constant.  The result is described thoroughly within the collaboration's Ref.~\cite{ben_OP}.
+
+%\aside[tag]{JB:  at the level of accuracy you're quoting the answers are in the PRL:  sigma+ P=99.13(8)\%; sigma- -99.12(9)\%}
+%an assertion that is backed up by weeks of optimization and polarization data on stable $^{41}$K, with all optical pumping and magnetic field switching parameters kept constant.  
+
+Ambient magnetic field changes of $\sim$50 milliGauss could cause some polarization perturbations at the precision achieved, but the stray fields were kept under control at that level.  The TRINAT lab is in a basement, well shielded from the experimental hall by concrete with rebar, and though 50 mG fields are seen in that hall from an open Helmholtz ion trap, they and the nearby 5-ton crane produce negligible fields when measured at the atom trap. The cyclotron field is $\sim$0.5 Gauss, predominantly vertical, 
 but TRINAT's Helmholtz trim coils are adjusted during calibrations with cyclotron both on and off --- and of course the cyclotron is on with a constant field during the $^{37}$K delivery.  Furthermore, because we switched every few hours between the using the eMCP and rMCP, we were able to rule out the possibility that the polarization might have drifted but escaped notice.  
 
 \subsection{Beta Detectors}

@@ -99,6 +99,10 @@ Feynman, R.~P., \textit{Mathematical formulation of the quantum theory of
 Dyson, F.~J., \textit{The radiation theories of Tomonaga, Schwinger, and
   Feynman}, Physical Review, Vol.~75, No.~3, pp.~486, 1949.
 
+\bibitem{YangMills1954}
+Yang, C.~N. {\mdseries and} Mills, R.~L., \textit{Conservation of Isotopic Spin
+  and Isotopic Gauge Invariance}, Phys. Rev., Vol.~96, pp.~191--195, Oct 1954.
+
 \bibitem{Glashow1959}
 Glashow, S.~L., \textit{The renormalizability of vector meson interactions},
   Nuclear Physics, Vol.~10, pp.~107--117, 1959.
@@ -287,6 +291,43 @@ Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
 Hong, R., Sternberg, M.~G. {\mdseries and} Garcia, A., \textit{Helicity and
   nuclear $\beta$ decay correlations}, American Journal of Physics, Vol.~85,
   No.~1, pp.~45--53, 2017.
+
+\bibitem{Combs2020}
+{Combs}, D., {Jones}, G., {Anderson}, W., {Calaprice}, F., {Hayen}, L.
+  {\mdseries and} {Young}, A., \textit{{A look into mirrors: A measurement of
+  the $\beta$-asymmetry in $^{19}$Ne decay and searches for new physics}},
+  arXiv e-prints, p. arXiv:2009.13700, Sep. 2020.
+
+\bibitem{GonzalesalonsoNaviliatcuncicSeverijns2019}
+González-Alonso, M., Naviliat-Cuncic, O. {\mdseries and} Severijns, N.,
+  \textit{New physics searches in nuclear and neutron $\beta$ decay}, Progress
+  in Particle and Nuclear Physics, Vol.~104, pp.~165--223, 2019.
+
+\bibitem{newphysics_cirgiliano2019}
+Cirgiliano, V., Garcia, A., Gazit, D., Naviliat-Cuncic, O., Savard, G.
+  {\mdseries and} Young, A., \textit{Precision beta decay as a probe of new
+  physics}, arXiv preprint arXiv:1907.02164, 2019.
+
+\bibitem{newphysics_neutrinoless2015}
+Ge, S.-F., Lindner, M. {\mdseries and} Patra, S., \textit{New physics effects
+  on neutrinoless double beta decay from right-handed current}, Journal of High
+  Energy Physics, Vol.~2015, No.~10, pp.~1--18, 2015.
+
+\bibitem{newphysics_neutrinoless2007}
+Ali, A., Borisov, A.~V. {\mdseries and} Zhuridov, D., \textit{Probing new
+  physics in the neutrinoless double beta decay using electron angular
+  correlation}, Physical Review D, Vol.~76, No.~9, pp.~093009, 2007.
+
+\bibitem{newphysics_1998}
+Klapdor-Kleingrothaus, H., \textit{Status and Perspectives of Double Beta
+  Decay—Window to New Physics Beyond the Standard Model of Particle Physics},
+  International Journal of Modern Physics A, Vol.~13, No.~23, pp.~3953--3992,
+  1998.
+
+\bibitem{newphysics_1992langacker}
+Langacker, P., Luo, M. {\mdseries and} Mann, A.~K., \textit{High-precision
+  electroweak experiments: a global search for new physics beyond the Standard
+  Model}, Reviews of Modern Physics, Vol.~64, No.~1, pp.~87, 1992.
 
 \bibitem{EbelFeldman1957}
 Ebel, M. {\mdseries and} Feldman, G., \textit{Further remarks on Coulomb
