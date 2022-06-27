@@ -334,6 +334,37 @@ Ebel, M. {\mdseries and} Feldman, G., \textit{Further remarks on Coulomb
   corrections in allowed beta transitions}, Nuclear Physics, Vol.~4,
   pp.~213--214, 1957.
 
+\bibitem{TownerHardy2008}
+Towner, I.~S. {\mdseries and} Hardy, J.~C., \textit{Improved calculation of the
+  isospin-symmetry-breaking corrections to superallowed Fermi $\beta$ decay},
+  Phys. Rev. C, Vol.~77, pp.~025501, Feb 2008.
+
+\bibitem{JausRasche1990}
+Jaus, W. {\mdseries and} Rasche, G., \textit{Nuclear-structure dependence of
+  $O(\ensuremath{\alpha})$ corrections to Fermi decays and the value of the
+  Kobayashi-Maskawa matrix element ${V}_{\mathrm{ud}}$}, Phys. Rev. D, Vol.~41,
+  pp.~166--176, Jan 1990.
+
+\bibitem{barker1992}
+Barker, F., Brown, B., Jaus, W. {\mdseries and} Rasche, G.,
+  \textit{Determination of |Vud| from Fermi decays and the unitarity of the
+  KM-mixing matrix}, Nuclear Physics A, Vol.~540, No.~3, pp.~501--519, 1992.
+
+\bibitem{Towner1992}
+Towner, I., \textit{The nuclear-structure dependence of radiative corrections
+  in superallowed Fermi beta-decay}, Nuclear Physics A, Vol.~540, No.~3,
+  pp.~478--500, 1992.
+
+\bibitem{Towner1994}
+Towner, I., \textit{Quenching of spin operators in the calculation of radiative
+  corrections for nuclear beta decay}, Physics Letters B, Vol.~333, No.~1,
+  pp.~13--16, 1994.
+
+\bibitem{SeverijnsTandecki2008}
+Severijns, N., Tandecki, M., Phalet, T. {\mdseries and} Towner, I.~S.,
+  \textit{$\mathcal{F}t$ values of the $T=1/2$ mirror \ensuremath{\beta}
+  transitions}, Phys. Rev. C, Vol.~78, pp.~055501, Nov 2008.
+
 \bibitem{UCNA_first_superratio}
 Pattie~Jr, R., Anaya, J., Back, H., Boissevain, J., Bowles, T., Broussard, L.,
   Carr, R., Clark, D., Currie, S., Du, S. et~al., \textit{First measurement of
@@ -380,11 +411,11 @@ Hickerson, K., Sun, X., Bagdasarova, Y., Bravo-Bergu{\~n}o, D., Broussard, L.,
 Cameron, J., Chen, J., Singh, B. {\mdseries and} Nica, N., \textit{Nuclear data
   sheets for A= 37}, Nuclear Data Sheets, Vol.~113, No.~2, pp.~365--514, 2012.
 
-\bibitem{shidling2018}
-Shidling, P., Behling, R., Fenker, B., Hardy, J., Iacob, V., Mehlman, M., Park,
-  H., Roeder, B. {\mdseries and} Melconian, D., \textit{High-precision
-  half-life measurement of the $\beta$+ decay of Na 21}, Physical Review C,
-  Vol.~98, No.~1, pp.~015502, 2018.
+\bibitem{shidling2014}
+Shidling, P.~D., Melconian, D., Behling, S., Fenker, B., Hardy, J.~C., Iacob,
+  V.~E., McCleskey, E., McCleskey, M., Mehlman, M., Park, H.~I. {\mdseries and}
+  Roeder, B.~T., \textit{Precision half-life measurement of the $\beta^{+}$
+  decay of $^{37}$K}, Physical Review C, Vol.~90, pp.~032501, Sep 2014.
 
 \bibitem{ozmetin2020}
 {Ozmetin}, A., {Melconian}, D.~G., {Iacob}, V.~E., {Shidling}, P., {Kolhinen},
