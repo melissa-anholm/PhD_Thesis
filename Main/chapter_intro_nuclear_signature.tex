@@ -24,8 +24,8 @@ By constrast, the electromagnetic force couples to both positive and negative el
 
 \begin{figure}[h!t!b!]
 	\centering
-	\includegraphics[width=.75\linewidth]{Figures/feynmandiagrams_general_placeholdercropped.pdf}
-	\note[tag]{Fix Feynman diagram vertex placeholder figure.}
+	\includegraphics[width=1.0\linewidth]{Figures/VertexFeynmanDiagrams.pdf}
+%	\note[tag]{Fix Feynman diagram vertex placeholder figure.}
 	\caption[An exhaustive list of weak vertices]{An exhaustive list of weak vertices.  All possible Feynman diagram vertices involving $W^+$, $W^-$, or $Z^0$ bosons are shown, and the usual rules apply.  These vertices show the types of interactions that can occur between the bosons mediating the weak force, and other types of particles.  Only the fundamental vertices are shown, meaning that these diagrams are in some sense incomplete.  At the energy scales available in everyday life, the $W$ and $Z$ bosons act only as an intermediary between two such vertices.}	
 	\label{fig:feynmandiagrams_general}
 \end{figure}
@@ -166,33 +166,6 @@ Here's Rob Pitcairn's thing:  \cite{Pitcairn2009}.  }
 Here's a thing I should probably cite, on the kinematic sensitivity of bFierz, from Gonzalez-Alonso and Naviliat-Cuncic:  \cite{KinematicFierz2016}.  }
 
 
-\note[jbn, nolist]{
-I think you've neglected where the fT value and prediction for Abeta come from, entirely, and still don't have an equation for b\_Fierz in terms of Cs and Ct.
-\\...\\
-You had a note to do this, and in desperation I encouraged you to leave it out.
-I was wrong and Georg is right-- the whole SM prediction for Abeta makes no sense this way, and something about it needs to be there.
-}
-\note[jbn, nolist]{
-there are two ways to add a dedicated section in ch 1:
-\begin{itemize}
-	\item i) by writing the equation for the rate in terms of Vud and rho (the G-T matrix element over Fermi squared), and saying Shidling et al. gets rho from that by assuming Vud from the 0+ to 0+ decays. (You had a note "Do the master equation!" which I think I said you needed to leave out, but I was probably wrong.) But then you have to define all the small corrections, which is a lot of physics.
-	\item ii) Write the SM equation for Abeta in terms of rho, to give you the SM prediction for Abeta. State that recoil order corrections are in Appendix X. (If that's now a collaboration note? cite that there are recoil corrections considered in Appendix X-1 and a collaboration note).
-	\item iii) Such a section would then naturally end with b\_Fierz in terms of Cs and Ct, a natural followup to what you've written.
-	\\
-"JTW does the Dirac matrix traces necessary to write down the decay rates in term of the Lee-Yang Lagrangian's parameters.
-The prediction for b\_Fierz is " " which is zero in the SM." \textbf{even with recoil-order corrections} (there is no recoil order correction with the same m/Ebeta dependence).
-\\
-Then and only then will the final addition of the bFierz plot will make sense.
-\end{itemize}
-%
-OR, more likely:
-\\
-\textbf{leave out i)}.
-\\
-Say in text that Shidling et al. (I've added the reference in a sticky note for the figure) hands you rho (the $M_{GT}/M_F$ ratio prediction) using as input the absolute rate, Vud from the 0+ to 0+ beta decays, and calculations of isospin mixing and radiative corrections (cite[shidling]) for details beyond the scope of this thesis. The sign of rho comes both from a shell model by Ian and by if it were flipped Abeta would be off by an enormous factor. 
-\\...\\
-Then you would just need \textbf{ii and iii}.
-}
 
 
 %%%% --- * --- %%%%	
@@ -306,9 +279,68 @@ Many types of exotic physics have, in fact, already been described by Lee and Ya
 
 
 
+
+
+%%%% --- * --- %%%%
+\section{Our Decay}
+Here, we will focus on the decay,
+\bea
+^{37}\textrm{K} &\rightarrow& \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e, 
+\label{eq:ourdecay}
+\eea
+which is extremely well suited to the type of experiment to be the discussed in this thesis.  
+%this and other similar experiments -- both because of its suitability 
+The parent, $^{37}\textrm{K}$, is an isotope of potassium---an alkali.  Though this fact may initially seem unremarkable, it is their hydrogen-like~\aside[done, nolist]{hydrogen-like does not need quotes} single valence electron which allows alkalis to be readily trapped within a magneto-optical trap, a critical component of our experimental design (see Chapter~\ref{atomicphysics_chapter}).
+
+A potential concern in any experiment concerned with the angular correlations resulting from one particular decay branch is the background from competing decay branches.  As can be seen in Fig.~\ref{fig:nuclearleveldiagram}, the decay of $^{37}\textrm{K}$ is dominated by a single branch which contributes nearly $98\%$ of $^{37}\textrm{K}$ decay events, and the remaining events nearly all arise from a single branch contributing around $2\%$ of the decay events.  The other branches combined account for only around $0.04\%$ of decays.  Taken all together, this means that the background events which must be accounted for are both infrequent and well understood.
+
+\begin{figure}[h!t!b!]
+	\centering
+	\includegraphics[width=.999\linewidth]{Figures/decayscheme_nndc.png}
+	\caption[Decay Scheme for $^{37}$K]{A Decay Scheme for $^{37}$K, generated with the NuDat3 database toolset.  The $I(\%)$ column indicates the fraction of total decays which proceed to each level, and `Logft' gives a measure of the absolute decay rate\cite{krane}.  The column immediately to the right  of Logft indicates nuclear spin and parity, and the far right column is the energy relative to the ground state, in keV\cite{nucleardata2012}\cite{shidling2014}\cite{ozmetin2020}. 
+	}	
+	\label{fig:nuclearleveldiagram}
+\end{figure}
+%\FloatBarrier
+
+\note{Re: Fig.~\ref{fig:nuclearleveldiagram}:  the picture needs needs:  title, labels on $I^\pi$ columns, label "energy" on the RH column (which kind of energy?  It's the "level energy".  
+}
+\note[done, nolist]{JB says Re: Fig.~\ref{fig:nuclearleveldiagram}: 
+\\..\\
+The caption should include that [...] log\_10(fT) [is] a measure of the absolute decay rate (ref. Krane e.g.) \cite{krane}.
+the [...] column [that] has $I^\pi$ where I is spin and $\pi$ is parity [should get a label]. This should not only include Dan's thesis for a reference, but the most recent paper with the branches-- it should work to reference P.D. Shidling
+et al. Phys Rev C 98 015502 (2018) \cite{shidling2014} which re-did the half-life and summarized the fT value extraction. I see no publication of your branching ratio work, so I referenced Ozmetin's DNP talk in an earlier note. \cite{ozmetin2020}
+}
+
+
+As in any decay, the angular correlations between the emerging daughter particles provide a rich source of information about the type of interaction that produced the decay.  
+This particular decay involves a set of isobaric mirror nuclei, meaning that the nuclear wavefunctions of the parent and daughter are identical up to their isospin quantum number and corresponding electrical charge.  Because the two wavefunctions are so similar, effects to the decay from nuclear structure corrections are well understood and can be kept to a minimum, making it possible to place especially strong constraints on the size of the theoretical uncertainties associated with the decay.
+%Because the higher-order standard model corrections to this decay process are well understood, it is an ideal candidate for for improving constraints on interactions beyond the standard model.  
+
+\note[done, nolist]{no one will let you publish air quotes, ever. Have mercy on your committee, take them all out.  Use the opportunity to make sure you've defined them.
+\\...\\
+Here, just say isobaric mirror nuclei. You define it right there in text. It's fine to use textbook terms as long as you define them immediately.} 
+\note[bluetodo]{Is it definitely true that the nuclear structure corrections are *smaller*?  Or is it just that they're better understood?}
+
+\note{Also, 37K is a really nice isotope for this, because 
+%98\% + 2\%, 
+%also because it's a mirror decay, 
+%also because it's an alkali.  Also-
+%also, 
+its big $\Abeta$ value means we have a big thing to multiply any $\bFierz$ value there might be when we construct the superratio asymmetry to eliminate systematics.}
+
+%\missingfigure{This thing is going to need a nuclear level diagram for 37K.  Also, 37K is a really nice isotope for this, because 98\% + 2\%, also because it's a mirror decay, also because it's an alkali.  Also-also, its big $\Abeta$ value means we have a big thing to multiply any $\bFierz$ value there might be when we construct the superratio asymmetry to eliminate systematics.}
+
+
+
+
+
+
+
 %%%% --- * --- %%%%
 \section{The Physical Signature of the Fierz Interference}
 \subsection{Mathematical Description}
+\label{sec:mathdescription_intro}
 In this section, we consider how scalar and tensor interactions within the beta decay process might manifest as a physical observable.  Because the mathematical formalism 
 %for this sort of description 
 is worked out in detail within the contents of Appendix~\ref{appendix_forthepeople}, this section will simply provide the result directly.  To leading order, the probability density function from the classic \ac{JTW} paper to describe beta decay in terms of the outgoing beta's energy and direction relative to the nuclear spin is given here, as well as in Eq.~(\ref{equation:integrated_jtw})~\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}:
@@ -334,13 +366,12 @@ As usual, $\me$ is the mass of the electron.
 The infinitesimal surface element $\dOmegabeta$ represents the direction of $\beta$ emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with $Z^\prime$ the proton number of the daughter nucleus.  The Fermi function accounts for the force from the nuclear electric charge acting on the outgoing electron or positron.  It is computed with the Dirac equation using various levels of approximation to describe the nuclear charge distribution and screening of that charge distribution by electrons near the nucleus.  
 
 %\note{talk about $\xi, \Abeta, \bFierz$ here...}
-The parameters $\xi$, $\bFierz$, and $\Abeta$ are specific to the decay being considered, and if one assumes the standard model holds, they can be written in terms of a simplified set of parameters (as compared with the original formalism).  Here, we introduce $\rho$, the ratio of Gamow-Teller and Fermi couplings: 
+The parameters $\xi$, $\bFierz$, and $\Abeta$ are specific to the decay being considered (see Appendix~\ref{sec:jtw_formalism}), and if one assumes the standard model holds, they can be written in terms of a simplified set of parameters (as compared with the original formalism).  Here, we introduce $\rho$, the ratio of Gamow-Teller and Fermi couplings: 
 \bea
-\rho &:=& \frac{g_A M_{GT}}{g_V M_F}
-\label{eq:definerho}
-%\label{eq:definelambda}
+\rho &:=& \frac{C_A M_{GT}}{C_V M_F}  \;\; = \;\; \frac{g_A M_{GT}}{g_V M_F}
+\label{eq:definerho_intro}
 \eea
-where $g_A$ and $g_V$ are universally applicable vector and axial coupling strengths, and $M_F$ and $M_{GT}$ are the Fermi (vector coupling) and Gamow-Teller (axial coupling) matrix elements unique to a particular transition.  The value of $\rho$ must be extracted experimentally (see Sec.~\ref{sec:extractinglambda}). 
+where $C_A$ and $C_V$ are universally applicable vector and axial coupling constants, and $M_F$ and $M_{GT}$ are the Fermi (vector coupling) and Gamow-Teller (axial coupling) matrix elements unique to a particular transition.  See Appendix~\ref{sec:combo_formalism} for a discussion of the relationship between parameters $C_X$ and $g_X$.  The value of $\rho$ must be extracted experimentally (see Sec.~\ref{sec:extractinglambda}). 
 %
 %\note[tag]{} 
 %
@@ -352,7 +383,7 @@ Then, specializing to the 98\% branch of $^{37}$K decay, and given the expected 
 %\aside[tag]{We've specialized to 37K without telling anyone here!!!  Can't do that unless we say so.} 
 we can express $\xi$, $\bFierz$, and $\Abeta$ as:
 \bea
-\xi &=& g_V^2 | M_F |^2 \left( 1 + \rho^2 \right)
+\xi &=& 2 \,\, C_V^2 \, | M_F |^2 \left( 1 + \rho^2 \right)
 \label{eq:xiwithrho_intro} 
 \\
 \bFierz &=& 0 
@@ -391,54 +422,190 @@ which clearly reduces to 0 in the standard model limit where $g_S = g_T = 0$.
 
 
 
-
-\subsection{Extracting the Ratio of Fermi- and Gamow-Teller Couplings within a Transition}
+%%%% %%%% %%%% %%%% %%%% %%%%
+\subsection{Measuring the Gamow-Teller/Fermi Mixing Ratio}
 \label{sec:extractinglambda}
-While we will primarily work with the experimentally measured quantity $\rho$, defined as in Eq.~\ref{eq:definerho}, it is worthwhile to backtrack slightly to consider how this quantity is measured in practice, as this is needed to properly interpret a measurement of $\bFierz$.  We introduce a related quantity, $\lambda$, which cannot be measured directly, but is in some sense more fundamental than $\rho$:
-\bea
-\lambda &:=& \frac{g_A M_{GT}^0}{g_V M_F^0},
-%\;\; = \;\; ...
-\label{eq:definelambda}
-\eea
-where $M_F^0$ and $M_{GT}^0$ are the \emph{uncorrected} Fermi and Gamow-Teller matrix elements associated with a particular transition.  These uncorrected matrix elements are related to $\rho$ by:
-%through a series of small corrections:
-%The terms in Eq.~\ref{eq:definelambda} are related to $\rho$ by:
-%$\lambda$ cannot be measured directly, and it is related to $\rho$ by:
-\bea
-\rho &=& \frac{g_A M_{GT}^0}{g_V M_F^0} \left( \frac{ (1 + \delta_{NS}^A - \delta_C^{A} ) (1 + \Delta_R^A) }{ (1 + \delta_{NS}^V - \delta_C^{V} ) (1 + \Delta_R^V) } \right)^{\!\!1/2} 
-\;=\;\; \frac{g_A M_{GT}}{g_V M_F} .
-\label{equation:shidling_rho}
-\eea
+It is clear from Sec.~\ref{sec:mathdescription_intro} that in order to make a real prediction about the behaviour of outgoing particles within a particular beta decay transition, it is fundamentally important to know the value of the mixing ratio $\rho$.
 
-%We also introduce a related quantity, $\rho$, which applies some small adjustments to $\lambda$ to produce a result which is more readily measured by experiment, but less readily calculable:
-%%\input{equation_shidlingrho.tex}  % equation:shidling_rho
+Of course, it is possible to perform a relatively direct measurement of $\rho$ through an observation of one of the other \ac{JTW} parameters (e.g., a measurement of $\Abeta$ in combination with Eq.~(\ref{eq:Awithrho_intro}) rapidly leads to a value for $\rho$.).  However, this strategy has certain drawbacks -- notably, the apparatus required to perform such a measurement \emph{well} must be fairly complex;  the TRINAT setup, for example, cannot readily be used with isotopes of most chemical elements.  
+
+For $^{37}$K in particular, the more direct approach \emph{has} been used in the past, both with the present dataset and with previously collected data, yielding an overall value of $\rho=0.576 \pm 0.006$~\cite{ben_Abeta}\cite{shidling2014}\cite{dan_Bnu}.
+
+As we do not wish to re-use the same data twice within the same measurement, we take as our baseline the value of $\rho$ as extracted in a more roundabout way as described below.
+
+
+It is useful to define the strength, $ft$, of a transition---also known as the $ft$ value.  This is fundamentally an experimental quantity.  Though the $ft$ value is in principle the product of two quantities, the statistical rate function $f$ and the partial half-life $t$, it is common to treat the product as a single unit.  The $ft$ value then can be directly related to the fundamental vector coupling strength.  
+
+The statistical rate function $f$ must be split up into vector and axial components ($f_V$ and $f_A$) in order be evaluated, and $f_V$ in particular is often used alone, as we will see below.  Both vector and axial statistical rate functions are mathematically non-trivial objects\cite{towner_hardy_1995_frombook}\cite{HardyTowner2005_Superallowed}, but can be evaluated by, e.g., the methods of Refs.~\cite{wilkinson2}\cite{wilkinson3}\cite{wilkinson4}.  For our purposes here, we will simply note that $f$ is characterized primarily by the beta endpoint energy $E_0$, which can be readily measured.  
+
+The partial half-life $t$ can be quickly calculated given knowledge of the total half-life $t_{1/2}$ and branching ratio $R$, as:
+\bea
+t &=&  \frac{1}{R} \, (1 + P_{\mathrm{EC}}) \,\, t_{1/2}
+\eea
+where $P_{\mathrm{EC}}$ is the electron capture probability (in the case of $^{37}$K, $P_{\mathrm{EC}}=0.0008$ makes only a small contribution~\cite{SeverijnsTandecki2008}).\aside{could also cite Severijns2008's Refs. 35 and 36...}
+
+We consider the special case of superallowed $0^+ \rightarrow 0^+$ decay (of which $^{37}$K is \emph{not} an example).  These are nice, strong, clean transitions which proceed \emph{only} through the vector coupling, with no axial components.  As such, they are very well suited to extract (using other experimentally measured parameters) a measure of the fundamental vector coupling strength.  If the \ac{CVC} hypothesis holds (and there is some reason to believe that it does~\cite{severijns2006}\cite{HardyTownerSuperallowed2020}), then this coupling strength is common to \emph{all} transitions.
+
+In practice, the $ft$ values measured in superallowed $0^+ \rightarrow 0^+$ transitions need some small corrections in order to arrive at a universally applicable measure of the vector coupling strength.  We define a corrected $ft$ value, $\mathcal{F}t$, as:
+\bea
+\mathcal{F}t &=& f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ),
+\label{eq:define_Ft}
+\eea
+where 
+$\delta_C^{V}$ is the isospin symmetry breaking correction for the vector current, 
+$\delta^\prime_R$ is the portion of the outer radiative correction (ie, dependent on the specific nucleus in question) that depends only trivially on the nucleus, 
+and
+$\delta_{NS}^{V}$ is the portion of the outer radiative correction %(depends on the specific nucleus) 
+to the vector current that depends in a \emph{non-trivial} way on nuclear structure and requires a detailed shell model calculation to evaluate, as described in e.g.  Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.  We have specialized the $\mathcal{F}t$ value to consider only the vector component of the statistical rate function; this is redundant in the case of superallowed $0^+ \rightarrow 0^+$ transitions.
+
+Within Eq.~\ref{eq:define_Ft}, we have corrected away all contributions from nuclear structure, and what remains can also be described in terms of fundamental couplings as:
+\bea
+\mathcal{F}t &=& \frac{K}{2 \, G_V^2 (1+\Delta_R^V) },
+\label{eq:relate_Ft_to_couplings}
+\eea
+with $K$ a rather messy combination of physical constants: $K = (\hbar c)^6 2\pi^3 \hbar \ln(2) (\me c^2)^{-5}$.  In Eq.~\ref{eq:relate_Ft_to_couplings} above, $G_V$ is the vector coupling constant for semileptonic weak interactions, and $\Delta_R^{V}$ is the vector current's inner radiative correction (independent of the specific transition being considered), calculated as in e.g. Refs.~\cite{MarcianoSirlin_1986}\cite{MarcianoSirlin_2006}\cite{CzarneckiMarcianoSirlin_2019}.  %$\Delta_R^{V}$
+
+We can also relate the vector coupling constant $G_V$ to two other experimental observables:
+\bea
+G_V = V_{ud}  \, G_F
+\label{eq:Vud_relate}
+\eea
+where $G_F$ is the weak interaction coupling constant, and is measured experimentally through muon decay.  $V_{ud}$ is the up-down mixing element within the \ac{CKM} matrix, and its precise determination is an active area of curent research, motivated by the attempt to search for or constrain the possible presence of a fourth generation of quarks.
+
+Combining Eqs.~(\ref{eq:define_Ft}), (\ref{eq:relate_Ft_to_couplings}), and (\ref{eq:Vud_relate}), we have:
+\bea
+\mathcal{F}t &=& \frac{K}{2 \, G_F^2 \, V_{ud}^2 (1+\Delta_R^V) } 
+\nonumber \\
+&=& 
+f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ), 
+\label{eq:Ft_with_Vud}
+\eea
+allowing for a variety of cross-checks to be performed on physical observables.  
+
+We now turn our attention back to the mixed transitions (of which $^{37}$K \emph{is} an example) to establish an analogous relationship between observables.  Eq.~\ref{eq:define_Ft} is still technically applicable, but its $f_Vt$ value is no longer so readily observable, as it accounts for only the vector-coupled portion of the decay phase space.  We define a corrected $ft$ value specific to the case of mirror nuclei, denoted $\mathcal{F}t_0$ 
+%\cite{SeverijnsTandecki2008}
+\cite{shidling2014}
+\cite{naviliat2009april}
+\cite{ben_Abeta}:
+\bea
+\mathcal{F}t_0 &=&  \mathcal{F}t \, C_V^2 \, | M_F^0|^2 \left(1+\frac{f_A}{f_V} \rho^2 \right)
+%\frac{2 \mathcal{F}t }{ 1 + \frac{f_A}{f_V} \rho^2}, 
+%%\nonumber \\
+%%&=& f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} )
+\eea
+where, in order to get at the vector portion of the full $ft$ value, an adjustment has been made to account for the axial coupling in the decay.  With this expression, the value of $\rho$ in a mirror decay is described in terms of physical observables from an entirely separate class of decay transitions, as well as its own half-life and branching ratio.  Alternately, with a separate measurement of $\rho$, a check can be performed on the value of $V_{ud}$.
+
+
+
+
+
+
+
+
+
+
+\note[bluetodo]{}
+\note{
+It is often convenient to write the $ft$ value in terms of contributions from the fundamental coupling strengths of the weak interactions, and the corrections and adjustments to the result relating to the specifics of nuclear structure.
+To this end, we introduce $\lambda$, a quantity closely related to $\rho$.  $\lambda$ is in some sense the more fundamental quantity, but it cannot be measured directly.  We have:
+\\
+$\lambda := \frac{C_A M_{GT}^0}{C_V M_F^0} \;\; \approx \;\; \frac{C_A M_{GT}}{C_V M_F}$,
+\\
+where $M_F^0$ and $M_{GT}^0$ are the \emph{uncorrected} Fermi and Gamow-Teller matrix elements associated with a particular transition.  These quantities are related to $\rho$ by (cite shidling2014):
+\\
+$\rho = \frac{C_A M_{GT}^0}{C_V M_F^0} \left( \frac{ (1 + \delta_{NS}^A - \delta_C^{A} ) (1 + \Delta_R^A) }{ (1 + \delta_{NS}^V - \delta_C^{V} ) (1 + \Delta_R^V) } \right)^{\!\!1/2} 
+\;=\;\; \frac{C_A M_{GT}}{C_V M_F}$ .
+}
+
+%%%\beq
+%%%\lambda &:=& \frac{C_A M_{GT}^0}{C_V M_F^0} \;\; \approx \;\; \frac{C_A M_{GT}}{C_V M_F},    
+%%%\nonumber
+%%%%\label{eq:definelambda}
+%%%\eeq
+%%%where $M_F^0$ and $M_{GT}^0$ are the \emph{uncorrected} Fermi and Gamow-Teller matrix elements associated with a particular transition.  These quantities are related to $\rho$ by (cite shidling2014):
+%%%\bea
+%%%\rho &=& \frac{C_A M_{GT}^0}{C_V M_F^0} \left( \frac{ (1 + \delta_{NS}^A - \delta_C^{A} ) (1 + \Delta_R^A) }{ (1 + \delta_{NS}^V - \delta_C^{V} ) (1 + \Delta_R^V) } \right)^{\!\!1/2} 
+%%%\;=\;\; \frac{C_A M_{GT}}{C_V M_F} . \nonumber
+%%%%\label{equation:shidling_rho}
+%%%\eea
+%%%}
+
+%Here, $\delta_C^{V/A}$ is the isospin symmetry breaking correction for the vector/axial current, %$\Delta_R^{V/A}$ is the vector/axial inner radiative correction (independent of the specific nucleus being considered, calculated as in e.g. Refs.~\cite{MarcianoSirlin_1986}\cite{MarcianoSirlin_2006}\cite{CzarneckiMarcianoSirlin_2019}), and 
+%$\delta_{NS}^{V/A}$ is the portion of the outer radiative correction %(depends on the specific nucleus) 
+%that depends in a non-trivial way on nuclear structure, requiring a detailed shell model calculation as described in e.g. Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.
+
+\note{}
+%Assuming that the \ac{CVC} hypothesis holds (and there is some reason to believe that it does~\cite{severijns2006}\cite{HardyTownerSuperallowed2020}), 
+
+
+
+\note{}
+
+
+%While we will primarily work with the experimentally measured quantity $\rho$, defined as in Eq.~\ref{eq:definerho}, it is worthwhile to backtrack slightly to consider how this quantity is measured in practice, as this is needed to properly interpret a measurement of $\bFierz$.  We introduce a related quantity, $\lambda$, which cannot be measured directly, but which is in some sense more fundamental than $\rho$.  We have:
 %\bea
-%\rho &:=& \lambda \left( \frac{ (1 + \delta_{NS}^A - \delta_C^{A} ) (1 + \Delta_R^A) }{ (1 + \delta_{NS}^V - \delta_C^{V} ) (1 + \Delta_R^V) } \right)^{\!\!1/2} 
-%\;=\;\; \frac{g_A M_{GT}}{g_V M_F} .
+%\lambda &:=& \frac{C_A M_{GT}^0}{C_V M_F^0} \;\; \approx \;\; \frac{C_A M_{GT}}{C_V M_F},
+%\label{eq:definelambda}
+%\eea
+%where $M_F^0$ and $M_{GT}^0$ are the \emph{uncorrected} Fermi and Gamow-Teller matrix elements associated with a particular transition.  These quantities are related to $\rho$ by:
+%\bea
+%\rho &=& \frac{C_A M_{GT}^0}{C_V M_F^0} \left( \frac{ (1 + \delta_{NS}^A - \delta_C^{A} ) (1 + \Delta_R^A) }{ (1 + \delta_{NS}^V - \delta_C^{V} ) (1 + \Delta_R^V) } \right)^{\!\!1/2} 
+%\;=\;\; \frac{C_A M_{GT}}{C_V M_F} .
 %\label{equation:shidling_rho}
 %\eea
-%This expression also serves as an implicit definition of the corrected matrix elements $M_F$ and $M_{GT}$, used elsewhere in this document.  
+
+%%%%%While we will primarily work with the experimentally measured quantity $\rho$, defined as in Eq.~\ref{eq:definerho}, it is worthwhile to backtrack slightly to consider how this quantity is measured in practice, as this is needed to properly interpret a measurement of $\bFierz$.  We introduce a related quantity, $\lambda$, which cannot be measured directly, but which is in some sense more fundamental than $\rho$:
+%%%%%\bea
+%%%%%\lambda &:=& \frac{C_A M_{GT}^0}{C_V M_F^0} \;\; \approx \;\; \frac{C_A M_{GT}}{C_V M_F},
+%%%%%\label{eq:definelambda}
+%%%%%\eea
+%%%%%where $M_F^0$ and $M_{GT}^0$ are the \emph{uncorrected} Fermi and Gamow-Teller matrix elements associated with a particular transition.  These quantities are related to $\rho$ by:
+%%%%%%through a series of small corrections:
+%%%%%%The terms in Eq.~\ref{eq:definelambda} are related to $\rho$ by:
+%%%%%%$\lambda$ cannot be measured directly, and it is related to $\rho$ by:
+%%%%%\bea
+%%%%%\rho &=& \frac{C_A M_{GT}^0}{C_V M_F^0} \left( \frac{ (1 + \delta_{NS}^A - \delta_C^{A} ) (1 + \Delta_R^A) }{ (1 + \delta_{NS}^V - \delta_C^{V} ) (1 + \Delta_R^V) } \right)^{\!\!1/2} 
+%%%%%\;=\;\; \frac{C_A M_{GT}}{C_V M_F} .
+%%%%%\label{equation:shidling_rho}
+%%%%%\eea
+%%%%%%which also serves as an implicit definition of the corrected matrix elements $M_F$ and $M_{GT}$.  
+%%%%%%We also introduce a related quantity, $\rho$, which applies some small adjustments to $\lambda$ to produce a result which is more readily measured by experiment, but less readily calculable:
+%%%%%%%\input{equation_shidlingrho.tex}  % equation:shidling_rho
+%%%%%%\bea
+%%%%%%\rho &:=& \lambda \left( \frac{ (1 + \delta_{NS}^A - \delta_C^{A} ) (1 + \Delta_R^A) }{ (1 + \delta_{NS}^V - \delta_C^{V} ) (1 + \Delta_R^V) } \right)^{\!\!1/2} 
+%%%%%%\;=\;\; \frac{g_A M_{GT}}{g_V M_F} .
+%%%%%%\label{equation:shidling_rho}
+%%%%%%\eea
+%%%%%%This expression also serves as an implicit definition of the corrected matrix elements $M_F$ and $M_{GT}$, used elsewhere in this document.  
+
+%%%%%%Here, $\delta_C^{V/A}$ is the isospin symmetry breaking correction for the vector/axial current, $\Delta_R^{V/A}$ is the vector/axial inner radiative correction (independent of the specific nucleus being considered), and $\delta_{NS}^{V/A}$ is the portion of the outer radiative correction (depends on the specific nucleus) that depends on nuclear structure in a non-trivial way, requiring a detailed shell model calculation as described in e.g. Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.
+%%%%%%\note{}
+
+%%%We also consider a transition's strength, also called an $ft$ value, defined as the product of the partial half-life, $t$, and the statistical rate function, $f$.  Experimentally, the $ft$ value for a particular transition can be characterized by the beta endpoint energy $E_0$, 
+%%%%the transition energy, $Q_{EC}$ (closely related to the beta endpoint energy $E_0$), 
+%%%the half-life $t_{1/2}$, and the branching ratio $R$.  $E_0$ is used for the evaluation of $f$ (see, e.g.~\cite{towner_hardy_1995_frombook}\cite{HardyTowner2005_Superallowed}), while the latter two quantities are used in evaluation of $t$.  
+
+%%%%%Because the $ft$ value for a particular transition is fundamentally an experimental value, it is convenient to relate this to a corrected transition strength, $\mathcal{F}t$, which is independent of nuclear structure corrections.  
+
+%~\cite{towner_hardy_1995_frombook}.  
+%The latter quantity can be characterized by the transition energy, $Q_{EC}$ (closely related to the beta endpoint energy $E_0$), 
 
 
-Here, $\delta_C^{V/A}$ is the isospin symmetry breaking correction for the vector/axial current, $\Delta_R^{V/A}$ is the vector/axial inner radiative correction (independent of the specific nucleus being considered), and $\delta_{NS}^{V/A}$ is the portion of the outer radiative correction (depends on the specific nucleus) that depends on nuclear structure in a non-trivial way, requiring a detailed shell model calculation as described in e.g. Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.
 \note[tag]{finish it.}
 \note{While it is possible to measure rho through angular correlations and stuff, like in Dan's thesis .... \cite{dan_Bnu} }
 \note{the point is, you get rho from ... uh... 
 \\...\\
 Shidling hands you rho, using as input: the absolute rate (which is what he actually measured), Vud (from 0+ to 0+), and fancy calculations of things by theorists.}
 
-
-
+\note{
 $\delta_R^{V/A}$ is the outer radiative correction (depends on the specific nucleus), which isn't even in that expression.  
-\\
-Also, there's $\delta_{NS}^{V/A}$ which has to be extracted from a detailed nuclear structure calculation, unlike the $\delta_R^\prime$, which just have like a trivial dependence on nucleus.
-
-...
+\\...\\
 also, according to Severijns2008\cite{SeverijnsTandecki2008}, $(1+\delta_R) = (1+\delta_R^\prime)(1+\delta_{NS})$ 
-\\
+\\...\\
 Also-also, $\delta_R^\prime$ is the same for Fermi/GT, but the $\delta_{NS}^{V/A}$ and $\Delta_R^{V/A}$ are different, so they get a superscript.
+}
 
-Details of the calculation to get $\delta_{NS}$ are found in Severijns' refs. 25-29.  Here they are: ~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}
+%%%Details of the calculation to get $\delta_{NS}$ are found in Severijns' refs. 25-29.  Here they are: ~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}
 
 %%%%I. S. Towner and J. C. Hardy, Phys. Rev. C 77, 025501 (2008). \cite{TownerHardy2008}
 %%%%W. Jaus and G. Rasche, Phys. Rev. D 41, 166 (1990). \cite{JausRasche1990}
@@ -446,7 +613,7 @@ Details of the calculation to get $\delta_{NS}$ are found in Severijns' refs. 25
 %%%%I. S. Towner, Nucl. Phys. A540, 478 (1992). \cite{Towner1992}
 %%%%I. S. Towner, Phys. Lett. B333, 13 (1994). \cite{Towner1994}
 
-
+\note{
 So anyway, one might wonder why we care about this stuff.  But if I drop another equation on the readers, maybe that will make it worse and/or clarify:
 \bea
 \displaystyle
@@ -456,8 +623,88 @@ So anyway, one might wonder why we care about this stuff.  But if I drop another
 &=& f_V t (1+\delta_R) (1 + \delta_{NS}^V - \delta_C^{V} ) /(1+\delta_{NS}^V)
 \eea
 ... where $f_V$ and $f_A$ are statistical rate functions for vector and axial-vector currents.  For mirror nuclei such as ours, the ratio $f_A/f_V$ is typically within a few percent of unity~\cite{SeverijnsTandecki2008}.
+}
 
+\note{
+But also!  Shidling gives us this thing:  
+\\
+$\mathcal{F}t_0 = \mathcal{F}t \,\, C_V^2 \, |M_F^0|^2 \left( 1 + \frac{f_A}{f_V} \rho^2 \right)$
+and Naviliat-Cuncic+Severijns(2009) (cite naviliat2009april) gives us this thing:
+\\
+$V_{ud}^2 = \frac{K}{\mathcal{F}t_0 \,\, G_F^2 (1+ \Delta_V^R) }$
+\\
+In some other document (Towner+Hardy 1995), $t$ is the partial half-life for the transition.
+They *also* say:  
+\\
+$ t = t_{1/2} (1 + P_{EC}) / R $
+\\
+with $R$ the branching ratio and $P_{EC}$ the probability of E.C.  Also, $t$ is just the ``partial half-life''.
+}
 
+%\note{
+%Severijns2008 says, 
+%\bea
+%ft &=& \frac{2K}{G_F^2 V_{ud}^2} \frac{1}{\xi}\frac{1}{1+\langle \frac{\gamma m}{\Ebeta} \rangle \bFierz} 
+%\nonumber \\
+%&=& \frac{2K}{G_F^2 V_{ud}^2} \frac{1}{M_F^2 C_V^2 + M_{GT} C_A^2} \frac{1}{1+\langle \frac{\gamma m} {\Ebeta} \rangle \bFierz}
+%\nonumber
+%\eea
+%And also, for mirror transitions specifically:
+%\bea
+%\mathcal{F}t &=& f_V t (1+\delta_R^\prime) (1 + \delta_{NS}^V - \delta_C^{V} )
+%\nonumber \\
+%&=& \frac{2 \, \mathcal{F}t_0}{1+ \frac{f_A}{f_V}\rho^2 }, 
+%\nonumber
+%\eea
+%which is also what Ben says, probably citing these guys.
+%}
+
+\note[jbn, nolist]{first, actually, Ben writes a good summary of Ft mirror equation in terms of Ft0+ to 0+ in the PRL, you could just use that in Ch. 1 and it would help enormously. (Of course now I'm scared because it doesn't mention isospin mixing is different for 37K and the others, and that should be in the numerator as (Ft0to0/Ft37K) well as in rho, shouldn't it? I would need to compare to Shidling's expressions to sort this out.)
+}
+\note[jbn, nolist]{
+I said Ft wrong. I think you must know what to do.  
+\\
+F is the lepton phase space integral.
+\\
+(Decay rate)/F is then a dimensionless quantity proportional to |matrix element|$^2$, which you could call the intrinsic strength of the transition.
+\\
+People instead consider the inverse quantity denoted Ft defined as F*t\_1/2, so if log\_10(Ft) is smaller, the strength is larger.
+\\...\\
+So e.g. t\_1/2 is wildly different for the 0+ to 0+ decays (t1/2 for $^{14}$O is a minute, not a second like 38mK) but once you correct for the wildly different phase space (the Coulomb energies and therefore the decay Q-value smoothly grow, and phase space goes like $Q^5$) the Ft rates are close (closer once percent corrections from isospin mixing and nucleus-dependent radiative corrections are applied).
+}
+\note[jbn, nolist]{
+...
+\\
+(That equation is fine-- I was confused earlier.) You can mention that script{Ft} has isospin-breaking and other theory corrections beyond the scope of the thesis, and cite Shidling for those. This equation, along with the Abeta equation in terms of rho (you should not include the right-handed currents in Ben's Abeta equation and re-state that your thesis is working on scalar and tensor in your title) then sets up the inputs you need for the Abeta prediction.
+}
+
+\note[jbn, nolist]{
+I think you've neglected where the fT value and prediction for Abeta come from, entirely, and still don't have an equation for b\_Fierz in terms of Cs and Ct.
+\\...\\
+You had a note to do this, and in desperation I encouraged you to leave it out.
+I was wrong and Georg is right-- the whole SM prediction for Abeta makes no sense this way, and something about it needs to be there.
+}
+\note[jbn, nolist]{
+there are two ways to add a dedicated section in ch 1:
+\begin{itemize}
+	\item i) by writing the equation for the rate in terms of Vud and rho (the G-T matrix element over Fermi squared), and saying Shidling et al. gets rho from that by assuming Vud from the 0+ to 0+ decays. (You had a note "Do the master equation!" which I think I said you needed to leave out, but I was probably wrong.) But then you have to define all the small corrections, which is a lot of physics.
+	\item ii) Write the SM equation for Abeta in terms of rho, to give you the SM prediction for Abeta. State that recoil order corrections are in Appendix X. (If that's now a collaboration note? cite that there are recoil corrections considered in Appendix X-1 and a collaboration note).
+	\item iii) Such a section would then naturally end with b\_Fierz in terms of Cs and Ct, a natural followup to what you've written.
+	\\
+"JTW does the Dirac matrix traces necessary to write down the decay rates in term of the Lee-Yang Lagrangian's parameters.
+The prediction for b\_Fierz is " " which is zero in the SM." \textbf{even with recoil-order corrections} (there is no recoil order correction with the same m/Ebeta dependence).
+\\
+Then and only then will the final addition of the bFierz plot will make sense.
+\end{itemize}
+%
+OR, more likely:
+\\
+\textbf{leave out i)}.
+\\
+Say in text that Shidling et al. (I've added the reference in a sticky note for the figure) hands you rho (the $M_{GT}/M_F$ ratio prediction) using as input the absolute rate, Vud from the 0+ to 0+ beta decays, and calculations of isospin mixing and radiative corrections (cite[shidling]) for details beyond the scope of this thesis. The sign of rho comes both from a shell model by Ian and by if it were flipped Abeta would be off by an enormous factor. 
+\\...\\
+Then you would just need \textbf{ii and iii}.
+}
 
 
 
@@ -568,55 +815,6 @@ MJA:  I can't help but also notice the follow-up article from September 2020~\ci
 
 
 
-%%%% --- * --- %%%%
-\section{Our Decay}
-Here, we will focus on the decay,
-\bea
-^{37}\textrm{K} &\rightarrow& \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e, 
-\label{eq:ourdecay}
-\eea
-which is extremely well suited to the type of experiment to be the discussed in this thesis.  
-%this and other similar experiments -- both because of its suitability 
-The parent, $^{37}\textrm{K}$, is an isotope of potassium---an alkali.  Though this fact may initially seem unremarkable, it is their hydrogen-like~\aside[done, nolist]{hydrogen-like does not need quotes} single valence electron which allows alkalis to be readily trapped within a magneto-optical trap, a critical component of our experimental design (see Chapter~\ref{atomicphysics_chapter}).
-
-A potential concern in any experiment concerned with the angular correlations resulting from one particular decay branch is the background from competing decay branches.  As can be seen in Fig.~\ref{fig:nuclearleveldiagram}, the decay of $^{37}\textrm{K}$ is dominated by a single branch which contributes nearly $98\%$ of $^{37}\textrm{K}$ decay events, and the remaining events nearly all arise from a single branch contributing around $2\%$ of the decay events.  The other branches combined account for only around $0.04\%$ of decays.  Taken all together, this means that the background events which must be accounted for are both infrequent and well understood.
-
-\begin{figure}[h!t!b!]
-	\centering
-	\includegraphics[width=.999\linewidth]{Figures/decayscheme_nndc.png}
-	\caption[Decay Scheme for $^{37}$K]{A Decay Scheme for $^{37}$K, generated with the NuDat3 database toolset.  The $I(\%)$ column indicates the fraction of total decays which proceed to each level, and `Logft' gives a measure of the absolute decay rate\cite{krane}.  The column immediately to the right  of Logft indicates nuclear spin and parity, and the far right column is the energy relative to the ground state, in keV\cite{nucleardata2012}\cite{shidling2014}\cite{ozmetin2020}. 
-	}	
-	\label{fig:nuclearleveldiagram}
-\end{figure}
-%\FloatBarrier
-
-\note{Re: Fig.~\ref{fig:nuclearleveldiagram}:  the picture needs needs:  title, labels on $I^\pi$ columns, label "energy" on the RH column (which kind of energy?  It's the "level energy".  
-}
-\note[done, nolist]{JB says Re: Fig.~\ref{fig:nuclearleveldiagram}: 
-\\..\\
-The caption should include that [...] log\_10(fT) [is] a measure of the absolute decay rate (ref. Krane e.g.) \cite{krane}.
-the [...] column [that] has $I^\pi$ where I is spin and $\pi$ is parity [should get a label]. This should not only include Dan's thesis for a reference, but the most recent paper with the branches-- it should work to reference P.D. Shidling
-et al. Phys Rev C 98 015502 (2018) \cite{shidling2014} which re-did the half-life and summarized the fT value extraction. I see no publication of your branching ratio work, so I referenced Ozmetin's DNP talk in an earlier note. \cite{ozmetin2020}
-}
-
-
-As in any decay, the angular correlations between the emerging daughter particles provide a rich source of information about the type of interaction that produced the decay.  
-This particular decay involves a set of isobaric mirror nuclei, meaning that the nuclear wavefunctions of the parent and daughter are identical up to their isospin quantum number and corresponding electrical charge.  Because the two wavefunctions are so similar, effects to the decay from nuclear structure corrections are well understood and can be kept to a minimum, making it possible to place especially strong constraints on the size of the theoretical uncertainties associated with the decay.
-%Because the higher-order standard model corrections to this decay process are well understood, it is an ideal candidate for for improving constraints on interactions beyond the standard model.  
-
-\note[done, nolist]{no one will let you publish air quotes, ever. Have mercy on your committee, take them all out.  Use the opportunity to make sure you've defined them.
-\\...\\
-Here, just say isobaric mirror nuclei. You define it right there in text. It's fine to use textbook terms as long as you define them immediately.} 
-\note[bluetodo]{Is it definitely true that the nuclear structure corrections are *smaller*?  Or is it just that they're better understood?}
-
-\note{Also, 37K is a really nice isotope for this, because 
-%98\% + 2\%, 
-%also because it's a mirror decay, 
-%also because it's an alkali.  Also-
-%also, 
-its big $\Abeta$ value means we have a big thing to multiply any $\bFierz$ value there might be when we construct the superratio asymmetry to eliminate systematics.}
-
-%\missingfigure{This thing is going to need a nuclear level diagram for 37K.  Also, 37K is a really nice isotope for this, because 98\% + 2\%, also because it's a mirror decay, also because it's an alkali.  Also-also, its big $\Abeta$ value means we have a big thing to multiply any $\bFierz$ value there might be when we construct the superratio asymmetry to eliminate systematics.}
 
 
 

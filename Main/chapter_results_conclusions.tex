@@ -55,19 +55,25 @@ Accounting for this, a more accurate one-parameter measurement might produce the
 \label{sec:relation_to_other_measurements}
 \note{begin literal quote from John:}
 The best existing measurement of the Fierz interference term is in the decay of the neutron, with
-\mbox{$\bFierz = 0.017 \pm 0.021$} --- consistent with the Standard Model prediction of zero, and with previous results for the neutron's $\bFierz$~\cite{Saul2020}\cite{UCNAfierz2020}. Our measurement is strongly related, yet complementary.  
+\mbox{$\bFierz = 0.017 \pm 0.021$} --- consistent with the standard model prediction of zero, and with previous results for the neutron's $\bFierz$~\cite{Saul2020}\cite{UCNAfierz2020}. Our measurement is strongly related, yet complementary.  
 %
-This result for $\bFierz$ cannot be directly compared to our result in $^{37}$K, because the neutron's sensitivity to scalar and tensor couplings is different than our own.  In particular, using $\lambda := \frac{g_A M_{GT}}{g_V M_F}$, a parameter unique to a given transition (see Eq.~(\ref{eq:definelambda}) and the related discussion), we find:
+This result for $\bFierz$ cannot be directly compared to our result in $^{37}$K, because the neutron's sensitivity to scalar and tensor couplings is different than our own.  In particular, using $\rho$ as defined in Eq.~\ref{eq:definerho_intro}
+%$\lambda := \frac{g_A M_{GT}}{g_V M_F}$, a parameter unique to a given transition (see Eq.~(\ref{eq:definelambda}) and the related discussion)
+we find:
 %
 %In terms of non-Standard Model Lorentz current structures, to lowest order in the non-SM  currents the same equation applies:\aside{John's $\bFierz$ equation was off...}
 \bea
-\bFierz &=& \frac{\pm 2\gamma}{1 + \lambda^2} \left( \frac{g_S}{g_V} + \lambda^2 \frac{g_T}{g_A} \right)
+\bFierz &=& \frac{\pm 2\gamma}{1 + \rho^2} \left( \frac{g_S}{g_V} + \rho^2 \frac{g_T}{g_A} \right)
 %\bFierz = \pm \frac{(C_S +C_S') + (C_T - C_T') \lambda^2}{ 1 + \lambda^2}
+\label{eq:bFierz_in_conclusion}
 \eea
 where the top/bottom sign is for $\beta^-$/$\beta^+$ decay, and $g_X$ ($X = \{ V,A,S,T\} $) is a purely left-handed coupling for vectors, axial-vectors, scalars, and tensors~\cite{jtw}\cite{jtw_coulomb}.
 %~\aside{I think we're missing a $\gamma$.}
 %(the plus is for $\beta^-$ decay and the - for $\beta^+$ decay)
-In the case of $^{37}$K, a previous measurement puts $ | \lambda | \approx 0.576 $, while, in the case of the neutron, $ | \lambda | \approx 1.277 $~\cite{ben_Abeta}\cite{NeutronAbeta2018}.
+In the case of $^{37}$K, a previous measurement puts $ | \rho | \approx 0.576 $, while, in the case of the neutron, the equivalent quantity within Eq.~(\ref{eq:bFierz_in_conclusion}) is 
+%$| \rho | \approx 
+$\sim 2.215 $~\cite{NeutronAbeta2018}\cite{Saul2020}\cite{UCNAfierz2020}.
+\note{is it always lambda for the neutron???  ... possibly.}
 %%$\lambda$ is close to $\sqrt{3/5}$ (the expected value of \mbox{$J/(J+1)$} for a single $J=3/2$, $d 3/2$ nucleon)~\cite{deShalit1963}
 %%In our $^{37}$K case, $\lambda^2$ = $|M_{\rm GT}|^2$/$|M_{\rm F}|^2$ is close to 3/5 (the expected value of \mbox{$J/(J+1)$} for a single $J=3/2$, $d 3/2$ nucleon)~\cite{deShalit1963},
 %%while for the neutron $\lambda^2$ is close to 3 (the expected value for a $(J+1)/J$, $J=1/2$, $s1/2$ nucleon).
@@ -77,10 +83,14 @@ This means that our observable is comparatively less sensitive to Lorentz tensor
 \note{}
 \begin{figure}[h!t!b!]
 	\centering
-	\includegraphics[width=.999\linewidth]{Figures/JB_exclusion.pdf}
-	\caption[An exclusion plot for left-handed scalar and tensor couplings comparing this work with the recent $\bFierz$ measurement in the neutron]{An exclusion plot for left-handed scalar and tensor couplings comparing this work with the recent $\bFierz$ measurement in the neutron\cite{Saul2020}.}
-%	\caption[That exclusion plot from John.]{That exclusion plot from John.  I think he means ``$C_S - C_S^\prime$'', etc.}	
+	\includegraphics[width=.999\linewidth]{Figures/ScalarTensorLimits.pdf}
+	\caption[An exclusion plot for left-handed scalar and tensor couplings comparing this work with the recent $\bFierz$ measurement in the neutron]{An exclusion plot comparing the measured $1\sigma$ limits for left-handed scalar and tensor couplings, comparing this work with the recent $\bFierz$ measurement in the neutron\cite{Saul2020}.}
 	\note{Pretty sure the sign of the $C_S$ constraint is flipped.  Also, I just can't get this centroid or these limits.  What?}
+	\note[jbn]{For [bfierz exclusion plot], you have the sign correct and I don't, though I think you need $-b (1+\lambda^2)/2 = -0.02$
+\\...\\
+I sent the physica script.
+Using your eq. 6.3, set  gs/gv = x, and gt/ga = y, rewrite the equation in y = mx + b form.
+then one just substitutes the values of bf you want to plot, like maybe the centroid and the +- 1 sigma deviations from it. }
 	\label{fig:exclusionplotfromjohn}
 \end{figure}
 
@@ -175,15 +185,18 @@ A fit to simulation has shown that the data that has already been collected has 
 
 
 %%%%%% %%%%%%% %%%%%%%
-\section{Conclusions}
+\section{Summary}
 This two-parameter analysis to measure $\Abeta$ and $\bFierz$ has produced the results:
 \bea
 \bFierz =& \,0.033  &\!\!\! \pm\, 0.084(\textrm{stat})\;\, \pm\, 0.039(\textrm{sys})  \\
 \Abeta  =& -0.5738 &\!\!\! \pm\, 0.0082(\textrm{stat})    \pm\, 0.0041(\textrm{sys}),
 \eea
-where uncertainties are evaluated at 1$\sigma$.  This measurement of $\bFierz$ is consistent with the Standard Model value of $\bFierz=0$, and $\Abeta$ is consistent both with the collaboration's prior measurement of $\Abeta$, as well as with the value predicted by the standard model at $\Abeta=-0.5706\pm0.0007$.  \aside[tag]{somewhere, I have to define $\Abeta$ in terms of $\lambda$...}
+where uncertainties are evaluated at 1$\sigma$.  This measurement of $\bFierz$ is consistent with the standard model value of $\bFierz=0$ for the absence of scalar and tensor currents, and $\Abeta$ is consistent both with the collaboration's prior measurement of $\Abeta$, as well as with the theory prediction using no exotic physics, at 
+%value predicted by the standard model at
+$\Abeta=-0.5706\pm0.0007$.  %\aside[tag]{somewhere, I have to define $\Abeta$ in terms of $\lambda$...}
 
 The result for $\bFierz$ is dominated by statistical uncertainty, suggesting that the measurement could be improved simply by counting longer.  There is also room for improvement in the systematic uncertainty, which is dominated by scattering and the related measurements of material thicknesses.  
+\note[tag]{Gerald says:  write another paragraph here.}
 
 \note{begin direct quote from John:}
 Largely because of this result,

@@ -66,7 +66,7 @@ where, for convenience, we have defined a nuclear alignment term,
 \note{Missing factors of c ??}
 %%%\aside{We have already specialized to $\beta^+$ decay.  .... Wait, we have?  Where?  ... There.  Fixed. It's not like that anymore.}
 
-In Eqs.~(\ref{equation:jtw_master}) and~(\ref{eq:Talign}), $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the outgoing $\beta$ particle's (total) energy, momentum 3-vector, and momentum scalar, while $\Enu$, $\vecpnu$, and $\pnu$ are the equivalent quantities for the outgoing (anti-)neutrino, and $E_0$ is the maximum possible $\beta$ energy associated with the transition.\aside{Holstein gives a formula for it.  Maybe I should write it out...}   $\vecJ$ is the nuclear angular momentum vector of the parent, and $J$ is its projection onto the axis of quantization. $\hatj$ is a unit vector in the direction of $\vecJ$ (note that in general, $\hatj \neq \frac{\vecJ}{J}$).  As usual, $\me$ is the mass of the electron, and $c$ is the speed of light.  The infinitesimal surface element $\dOmegabeta$ ($\dOmeganu$) represents the direction of $\beta$ (neutrino) emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with $Z^\prime$ the proton number of the daughter nucleus.
+In Eqs.~(\ref{equation:jtw_master}) and~(\ref{eq:Talign}), $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the outgoing $\beta$ particle's (total) energy, momentum 3-vector, and momentum scalar, while $\Enu$, $\vecpnu$, and $\pnu$ are the equivalent quantities for the outgoing (anti-)neutrino, and $E_0$ is the maximum possible $\beta$ energy associated with the transition.\aside{Holstein gives a formula for it.  Maybe I should write it out...}   $\vecJ$ is the nuclear angular momentum vector of the parent, and $J$ is its projection onto the axis of quantization. $\hatj$ is a unit vector in the direction of $\vecJ$ (note that in general, $\hatj \neq \frac{\vecJ}{J}$).  As usual, $\me$ is the mass of the electron, and $c$ is the speed of light.  The infinitesimal surface element $\dOmegabeta$ ($\dOmeganu$) represents the direction of $\beta$ (neutrino) emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with $Z^\prime$ the proton number of the daughter nucleus, and is evaluated as in e.g. Refs.~\cite{wilkinson2}\cite{wilkinson3}\cite{wilkinson4}. 
 
 %\aside{Possibly it should be $Z^\prime$ and for the daughter nucleus...}  The Fermi function accounts for the electric force between the nucleus and the charged outgoing beta particle, and its integral over $\Ebeta$ has no closed form expression.
 
@@ -715,6 +715,7 @@ $u=v=J=J^\prime=3/2$ and $s=0$, we find the following values:
 %%%% --- * --- %%%%	
 %\section{Qualitative Parameter Descriptions and Convention Compatibility}
 \section{Combining Formalisms}
+\label{sec:combo_formalism}
 To combine the two formalisms, we begin by comparing individual terms within \ac{JTW}'s integrated \ac{PDF} (Eq.~\ref{equation:integrated_jtw}) and Holstein's comparable \ac{PDF} (Eq.~\ref{equation:holstein52}).  We find:
 \bea
 \xi &\approx& G_v^2 \cos^2\theta_c \,\, F_0(\Ebeta)  \label{eq:jtw_holstein_xi}
@@ -791,34 +792,55 @@ Furthermore, we will require that all $C_X$ and $C_X^\prime$ are \emph{real}.  B
 \note{Also, maybe I should at some point mention that my $g_X$ aren't the same thing that Holstein uses with that notation?  Ugh.}
 In order to produce the correct physical behaviour in the decay of $^{37}$K, we also require, for the Gamow-Teller matrix elements in Holstein and \ac{JTW}:
 \bea
-M_{GT, \textrm{\,Holstein}} &=& - M_{GT, \textrm{\,JTW}} \;\; \approx \;\; -\, 0.62376
+M_{GT, \textrm{\,Holstein}} &=& \pm M_{GT, \textrm{\,JTW}} \;\; \approx \;\; -\, 0.62376
+\label{eq:jtw_holstein_sign}
 \eea
-The discrepancy can be attributed to a difference in notation convention; the literature can't seem to agree on a single sign convention, or even whether the convention ought to be the same in the cases of $\beta^-$/$\beta^+$ decay.  See, for example, Refs~\cite{dan_thesis}\cite{GCBall2000}\cite{Raman1978}.  The important point is that, for whichever convention is in use, the equations result in broadly correct physical behaviour.  In the case of $^{37}$K, we can use the fact that the overall sign of $\Abeta$ \emph{must} be negative within our mathematical expressions, because it is experimentally measured to be negative.  
+%
+\note[bluetodo, nolist]{Pretty sure I resolved it.  I think.  Now, with this fix (implemented in Eq.~(\ref{eq:jtw_Abetaxi_integrated_LH}), so don't fucking change it now), we have:
+\bea
+M_{GT, \textrm{\,Holstein}} &=& + M_{GT, \textrm{\,JTW}} \;\; \approx \;\; -\, 0.62376
+\eea
+Now, Eqs.~(\ref{eq:jtw_holstein_sign},\ref{eq:jtw_Abetaxi_integrated_LH}, \ref{eq:definerho},  and \ref{eq:Awithrho}) are all consistent.  Yay!
+\\
+Eq.~(\ref{bFierzwithrho}) is also consistent.  
+}
+%
+The sign ambiguity can be attributed to a sign ambiguity in the original \ac{JTW} publications.  The result is that the literature can't seem to agree on a single sign convention, or even whether the convention ought to be the same in the cases of $\beta^-$/$\beta^+$ decay.  See, for example, Refs~\cite{dan_thesis}\cite{GCBall2000}\cite{Raman1978}.  The important point is that, for whichever convention is in use, the equations result in broadly correct physical behaviour.  In the case of $^{37}$K, we can use the fact that the overall sign of $\Abeta$ \emph{must} be negative within our mathematical expressions, because it is experimentally measured to be negative.  
 
 We are now in a position to write out Eqs.~(\ref{eq:jtw_xi_integrated}), (\ref{eq:jtw_bxi_integrated}), and (\ref{eq:jtw_Abetaxi_integrated}) in terms of only real, left-handed couplings.  Doing so, we note that if the couplings are required to be real, then $\bFierz$ is \emph{only} sensitive to left-handed scalar or tensor couplings, and within $\Abeta$, the requirement is only that the scalar and tensor couplings must have \emph{the same} handedness.
 
 The resulting expressions are:
 \input{equations_jtw_params_LH.tex}
+%  eq:jtw_xi_integrated_LH
+%  eq:jtw_bxi_integrated_LH
+%  eq:jtw_Abetaxi_integrated_LH
+
+%\note[bluetodo]{Pretty sure I fucked up the sign of $M_{GT}$, again.  
+%\\...\\
+%if $C_A$ is negative and $g_A$ is positive, like I think is the case in the simulation, then Eq.~(\ref{eq:jtw_Abetaxi_integrated_LH}) gets the wrong sign with the JTW $M_{GT}$.
+%\\...\\
+%Eq.~(\ref{eq:jtw_Abetaxi_integrated_LH}) I think doesn't follow the sign convention of jtw\_coulomb.   ....fixed.
+%}
 
 We will take this opportunity to define and utilize some standard nuclear physics notation:
 \bea
-\lambda &:=& \frac{g_A M_{GT}}{g_V M_F}
-\label{eq:definelambda}
+\rho &:=& \frac{C_A M_{GT}}{C_V M_F} \;\; = \;\; \frac{- g_A M_{GT}}{g_V M_F}
+\label{eq:definerho}
 \eea
-Since each specific transition may, as a result of the nuclear structure relationships involved, take different values for the matrix elements $M_F$ and $M_{GT}$, a particular transition can often be described by the ratio, $\lambda$, of the Gamow-Teller and Fermi couplings specific to it.  This notation offers a cleaner way to characterize standard model predictions of the observables in Eqs.~(\ref{eq:jtw_xi})-(\ref{eq:jtw_DTRxi}), but can become somewhat inelegant when used within a description of \ac{BSM} physics.  
+Since each specific transition may, as a result of the nuclear structure relationships involved, take different values for the matrix elements $M_F$ and $M_{GT}$, a particular transition can often be described by the ratio, $\rho$, of the Gamow-Teller and Fermi couplings specific to it.  This notation offers a cleaner way to characterize standard model predictions of the observables in Eqs.~(\ref{eq:jtw_xi})-(\ref{eq:jtw_DTRxi}), but can become somewhat inelegant when used within a description of \ac{BSM} physics.  
 %In particular,
 Taking \emph{only} the leading order (linear) terms in exotic couplings, we find:
 \bea
-\xi &=& g_V^2 | M_F |^2 \left( 1 + \lambda^2 \right)
-\label{eq:xiwithlambda} 
+\xi &=& g_V^2 | M_F |^2 \left( 1 + \rho^2 \right)
+\label{eq:xiwithrho} 
 \\
-\bFierz &=& \frac{-2\gamma}{1 + \lambda^2} \left( \frac{g_S}{g_V} + \lambda^2 \frac{g_T}{g_A} \right) 
-\label{bFierzwithlambda}
+\bFierz &=& \frac{-2\gamma}{1 + \rho^2} \left( \frac{g_S}{g_V} + \rho^2 \frac{g_T}{g_A} \right) 
+\label{bFierzwithrho}
 \\
-\Abeta &=& \frac{\frac{2}{5} \lambda^2 - 2 \lambda \sqrt{\frac{3}{5}}  }{1 + \lambda^2}, 
-\label{eq:Awithlambda}
+\Abeta &=& \frac{\frac{2}{5} \rho^2 - 2 \rho \sqrt{\frac{3}{5}}  }{1 + \rho^2}, 
+\label{eq:Awithrho}
 \eea
-where, for $^{37}$K, Eq.~(\ref{eq:definelambda}) must produce a negative value for $\lambda$ in order to be compatible with both Eq.~(\ref{eq:Awithlambda}) and the physically observed results.
+where, for $^{37}$K, Eq.~(\ref{eq:definerho}) must produce a positive value for $\rho$ in order to be compatible with both Eq.~(\ref{eq:Awithrho}) and the physically observed results.
 
 
 

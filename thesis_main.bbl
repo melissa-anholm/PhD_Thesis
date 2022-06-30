@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{jtw}
 Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
@@ -329,10 +329,89 @@ Langacker, P., Luo, M. {\mdseries and} Mann, A.~K., \textit{High-precision
   electroweak experiments: a global search for new physics beyond the Standard
   Model}, Reviews of Modern Physics, Vol.~64, No.~1, pp.~87, 1992.
 
+\bibitem{nucleardata2012}
+Cameron, J., Chen, J., Singh, B. {\mdseries and} Nica, N., \textit{Nuclear data
+  sheets for A= 37}, Nuclear Data Sheets, Vol.~113, No.~2, pp.~365--514, 2012.
+
+\bibitem{shidling2014}
+Shidling, P.~D., Melconian, D., Behling, S., Fenker, B., Hardy, J.~C., Iacob,
+  V.~E., McCleskey, E., McCleskey, M., Mehlman, M., Park, H.~I. {\mdseries and}
+  Roeder, B.~T., \textit{Precision half-life measurement of the $\beta^{+}$
+  decay of $^{37}$K}, Physical Review C, Vol.~90, pp.~032501, Sep 2014.
+
+\bibitem{ozmetin2020}
+{Ozmetin}, A., {Melconian}, D.~G., {Iacob}, V.~E., {Shidling}, P., {Kolhinen},
+  V.~S., {McClain}, D.~J., {Nasser}, M., {Schroeder}, B., {Roeder}, B., {Park},
+  H.-I., {Anholm}, M., {Saastamoinen}, A.~J. {\mdseries and} {Trinat
+  Collaboration}, \textit{{Improving the ft value of 37K via a precision
+  measurement of the branching ratio}}, \textit{APS Division of Nuclear Physics
+  Meeting Abstracts}, Vol. 2020 of \textit{APS Meeting Abstracts}, p. KF.005,
+  Jan. 2020.
+
 \bibitem{EbelFeldman1957}
 Ebel, M. {\mdseries and} Feldman, G., \textit{Further remarks on Coulomb
   corrections in allowed beta transitions}, Nuclear Physics, Vol.~4,
   pp.~213--214, 1957.
+
+\bibitem{ben_Abeta}
+Fenker, B., Gorelov, A., Melconian, D., Behr, J.~A., Anholm, M., Ashery, D.,
+  Behling, R.~S., Cohen, I., Craiciu, I., Gwinner, G., McNeil, J., Mehlman, M.,
+  Olchanski, K., Shidling, P.~D., Smale, S. {\mdseries and} Warner, C.~L.,
+  \textit{Precision Measurement of the $\ensuremath{\beta}$ Asymmetry in
+  Spin-Polarized $^{37}\mathrm{K}$ Decay}, Phys. Rev. Lett., Vol.~120,
+  pp.~062502, Feb 2018.
+
+\bibitem{dan_Bnu}
+Melconian, D., Behr, J., Ashery, D., Aviv, O., Bricault, P., Dombsky, M.,
+  Fostner, S., Gorelov, A., Gu, S., Hanemaayer, V., Jackson, K., Pearson, M.
+  {\mdseries and} Vollrath, I., \textit{Measurement of the neutrino asymmetry
+  in the $\beta$ decay of laser-cooled, polarized 37K}, Physics Letters B,
+  Vol.~649, No.~5, pp.~370--375, 2007.
+
+\bibitem{towner_hardy_1995_frombook}
+Towner, I. {\mdseries and} Hardy, J., \textit{Currents and their couplings in
+  the weak sector of the standard model}, Symmetries and fundamental
+  interactions in nuclei, p. 183, 1995.
+
+\bibitem{HardyTowner2005_Superallowed}
+Hardy, J.~C. {\mdseries and} Towner, I., \textit{Superallowed 0+→ 0+ nuclear
+  $\beta$ decays: A critical survey with tests of the conserved vector current
+  hypothesis and the standard model}, Physical Review C, Vol.~71, No.~5,
+  pp.~055501, 2005.
+
+\bibitem{wilkinson2}
+Wilkinson, D., \textit{Evaluation of beta-decay: II. Finite mass and size
+  effects}, Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment, Vol.~290,
+  No.~2, pp.~509--515, 1990.
+
+\bibitem{wilkinson3}
+Wilkinson, D., \textit{Evaluation of beta-decay Part III. The complex gamma
+  function}, Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment, Vol.~335,
+  No.~1, pp.~305--309, 1993.
+
+\bibitem{wilkinson4}
+Wilkinson, D., \textit{Evaluation of beta-decay Part IV. The complex gamma
+  function; practicalities}, Nuclear Instruments and Methods in Physics
+  Research Section A: Accelerators, Spectrometers, Detectors and Associated
+  Equipment, Vol.~365, No.~1, pp.~203--207, 1995.
+
+\bibitem{SeverijnsTandecki2008}
+Severijns, N., Tandecki, M., Phalet, T. {\mdseries and} Towner, I.~S.,
+  \textit{$\mathcal{F}t$ values of the $T=1/2$ mirror \ensuremath{\beta}
+  transitions}, Phys. Rev. C, Vol.~78, pp.~055501, Nov 2008.
+
+\bibitem{severijns2006}
+Severijns, N., Beck, M. {\mdseries and} Naviliat-Cuncic, O., \textit{Tests of
+  the standard electroweak model in nuclear beta decay}, Rev. Mod. Phys.,
+  Vol.~78, pp.~991--1040, Sep 2006.
+
+\bibitem{HardyTownerSuperallowed2020}
+Hardy, J.~C. {\mdseries and} Towner, I.~S., \textit{Superallowed
+  ${0}^{+}\ensuremath{\rightarrow}{0}^{+}$ nuclear $\ensuremath{\beta}$ decays:
+  2020 critical survey, with implications for ${V}_{\mathit{ud}}$ and CKM
+  unitarity}, Phys. Rev. C, Vol.~102, pp.~045501, Oct 2020.
 
 \bibitem{TownerHardy2008}
 Towner, I.~S. {\mdseries and} Hardy, J.~C., \textit{Improved calculation of the
@@ -360,24 +439,32 @@ Towner, I., \textit{Quenching of spin operators in the calculation of radiative
   corrections for nuclear beta decay}, Physics Letters B, Vol.~333, No.~1,
   pp.~13--16, 1994.
 
-\bibitem{SeverijnsTandecki2008}
-Severijns, N., Tandecki, M., Phalet, T. {\mdseries and} Towner, I.~S.,
-  \textit{$\mathcal{F}t$ values of the $T=1/2$ mirror \ensuremath{\beta}
-  transitions}, Phys. Rev. C, Vol.~78, pp.~055501, Nov 2008.
+\bibitem{MarcianoSirlin_1986}
+Marciano, W.~J. {\mdseries and} Sirlin, A., \textit{Radiative corrections to
+  \ensuremath{\beta} decay and the possibility of a fourth generation}, Phys.
+  Rev. Lett., Vol.~56, pp.~22--25, Jan 1986.
+
+\bibitem{MarcianoSirlin_2006}
+Marciano, W.~J. {\mdseries and} Sirlin, A., \textit{Improved Calculation of
+  Electroweak Radiative Corrections and the Value of ${V}_{ud}$}, Phys. Rev.
+  Lett., Vol.~96, pp.~032002, Jan 2006.
+
+\bibitem{CzarneckiMarcianoSirlin_2019}
+Czarnecki, A., Marciano, W.~J. {\mdseries and} Sirlin, A., \textit{Radiative
+  corrections to neutron and nuclear beta decays revisited}, Phys. Rev. D,
+  Vol.~100, pp.~073008, Oct 2019.
+
+\bibitem{naviliat2009april}
+Naviliat-Cuncic, O. {\mdseries and} Severijns, N., \textit{Test of the
+  Conserved Vector Current Hypothesis in $T=1/2$ Mirror Transitions and New
+  Determination of $|{V}_{ud}|$}, Physical Review Letters, Vol.~102,
+  pp.~142302, April 2009.
 
 \bibitem{UCNA_first_superratio}
 Pattie~Jr, R., Anaya, J., Back, H., Boissevain, J., Bowles, T., Broussard, L.,
   Carr, R., Clark, D., Currie, S., Du, S. et~al., \textit{First measurement of
   the neutron $\beta$ asymmetry with ultracold neutrons}, Physical review
   letters, Vol.~102, No.~1, pp.~012301, 2009.
-
-\bibitem{ben_Abeta}
-Fenker, B., Gorelov, A., Melconian, D., Behr, J.~A., Anholm, M., Ashery, D.,
-  Behling, R.~S., Cohen, I., Craiciu, I., Gwinner, G., McNeil, J., Mehlman, M.,
-  Olchanski, K., Shidling, P.~D., Smale, S. {\mdseries and} Warner, C.~L.,
-  \textit{Precision Measurement of the $\ensuremath{\beta}$ Asymmetry in
-  Spin-Polarized $^{37}\mathrm{K}$ Decay}, Phys. Rev. Lett., Vol.~120,
-  pp.~062502, Feb 2018.
 
 \bibitem{UCNAfierz2020}
 Sun, X., Adamek, E., Allgeier, B., Bagdasarova, Y., Berguno, D.~B., Blatnik,
@@ -406,25 +493,6 @@ Hickerson, K., Sun, X., Bagdasarova, Y., Bravo-Bergu{\~n}o, D., Broussard, L.,
   Brown, M.-P., Carr, R., Currie, S., Ding, X., Filippone, B. et~al.,
   \textit{First direct constraints on Fierz interference in free-neutron
   $\beta$ decay}, Physical Review C, Vol.~96, No.~4, pp.~042501, 2017.
-
-\bibitem{nucleardata2012}
-Cameron, J., Chen, J., Singh, B. {\mdseries and} Nica, N., \textit{Nuclear data
-  sheets for A= 37}, Nuclear Data Sheets, Vol.~113, No.~2, pp.~365--514, 2012.
-
-\bibitem{shidling2014}
-Shidling, P.~D., Melconian, D., Behling, S., Fenker, B., Hardy, J.~C., Iacob,
-  V.~E., McCleskey, E., McCleskey, M., Mehlman, M., Park, H.~I. {\mdseries and}
-  Roeder, B.~T., \textit{Precision half-life measurement of the $\beta^{+}$
-  decay of $^{37}$K}, Physical Review C, Vol.~90, pp.~032501, Sep 2014.
-
-\bibitem{ozmetin2020}
-{Ozmetin}, A., {Melconian}, D.~G., {Iacob}, V.~E., {Shidling}, P., {Kolhinen},
-  V.~S., {McClain}, D.~J., {Nasser}, M., {Schroeder}, B., {Roeder}, B., {Park},
-  H.-I., {Anholm}, M., {Saastamoinen}, A.~J. {\mdseries and} {Trinat
-  Collaboration}, \textit{{Improving the ft value of 37K via a precision
-  measurement of the branching ratio}}, \textit{APS Division of Nuclear Physics
-  Meeting Abstracts}, Vol. 2020 of \textit{APS Meeting Abstracts}, p. KF.005,
-  Jan. 2020.
 
 \bibitem{ArgonMinusIons}
 Ben-Itzhak, I., Heber, O., Gertner, I. {\mdseries and} Rosner, B.,
@@ -538,12 +606,6 @@ Brown, M. A.-P., Dees, E.~B., Adamek, E., Allgeier, B., Blatnik, M., Bowles,
   Womack, T., Wrede, C., Young, A.~R. {\mdseries and} Zeck, B.~A., \textit{New
   result for the neutron $\ensuremath{\beta}$-asymmetry parameter ${A}_{0}$
   from UCNA}, Phys. Rev. C, Vol.~97, pp.~035505, Mar 2018.
-
-\bibitem{HardyTownerSuperallowed2020}
-Hardy, J.~C. {\mdseries and} Towner, I.~S., \textit{Superallowed
-  ${0}^{+}\ensuremath{\rightarrow}{0}^{+}$ nuclear $\ensuremath{\beta}$ decays:
-  2020 critical survey, with implications for ${V}_{\mathit{ud}}$ and CKM
-  unitarity}, Phys. Rev. C, Vol.~102, pp.~045501, Oct 2020.
 
 \bibitem{severijns_beck_cuncic_2006}
 Severijns, N., Beck, M. {\mdseries and} Naviliat-Cuncic, O., \textit{Tests of
