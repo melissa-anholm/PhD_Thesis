@@ -351,70 +351,39 @@ FUNCTION {eng.ord}
 }
 
 MACRO {jan} {"Jan."}
-
 MACRO {feb} {"Feb."}
-
 MACRO {mar} {"Mar."}
-
 MACRO {apr} {"Apr."}
-
 MACRO {may} {"May"}
-
 MACRO {jun} {"Jun."}
-
 MACRO {jul} {"Jul."}
-
 MACRO {aug} {"Aug."}
-
 MACRO {sep} {"Sep."}
-
 MACRO {oct} {"Oct."}
-
 MACRO {nov} {"Nov."}
-
 MACRO {dec} {"Dec."}
 
  % End of language definition file
 
 MACRO {acmcs} {"ACM Computing Surveys"}
-
 MACRO {acta} {"Acta Informatica"}
-
 MACRO {cacm} {"Communications of the ACM"}
-
 MACRO {ibmjrd} {"IBM Journal of Research and Development"}
-
 MACRO {ibmsj} {"IBM Systems Journal"}
-
 MACRO {ieeese} {"IEEE Transactions on Software Engineering"}
-
 MACRO {ieeetc} {"IEEE Transactions on Computers"}
-
-MACRO {ieeetcad}
- {"IEEE Transactions on Computer-Aided Design of Integrated Circuits"}
-
+MACRO {ieeetcad} {"IEEE Transactions on Computer-Aided Design of Integrated Circuits"}
 MACRO {ipl} {"Information Processing Letters"}
-
 MACRO {jacm} {"Journal of the ACM"}
-
 MACRO {jcss} {"Journal of Computer and System Sciences"}
-
 MACRO {scp} {"Science of Computer Programming"}
-
 MACRO {sicomp} {"SIAM Journal on Computing"}
-
 MACRO {tocs} {"ACM Transactions on Computer Systems"}
-
 MACRO {tods} {"ACM Transactions on Database Systems"}
-
 MACRO {tog} {"ACM Transactions on Graphics"}
-
 MACRO {toms} {"ACM Transactions on Mathematical Software"}
-
 MACRO {toois} {"ACM Transactions on Office Information Systems"}
-
 MACRO {toplas} {"ACM Transactions on Programming Languages and Systems"}
-
 MACRO {tcs} {"Theoretical Computer Science"}
 
 INTEGERS { nameptr namesleft numnames }
@@ -458,11 +427,12 @@ FUNCTION {format.authors}
   if$
 }
 
+
 FUNCTION {format.editors}
 { editor empty$
     { "" }
     {
-      editor format.names bolden
+      editor format.names %bolden
       editor num.names$ #1 >
         { " (" * bbl.editors * ")" * }
         { " (" * bbl.editor * ")" * }
@@ -569,7 +539,7 @@ FUNCTION {format.date}
 }
 
 FUNCTION {format.btitle}
-{ title
+{ title emphasize
 }
 
 FUNCTION {tie.or.space.connect}
@@ -1107,6 +1077,7 @@ FUNCTION {misc}
 { output.bibitem
   format.authors output
   format.title output
+  format.editors output
   howpublished output
   format.date output
   format.note output

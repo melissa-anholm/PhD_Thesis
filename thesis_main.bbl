@@ -2,7 +2,7 @@
 
 \bibitem{jtw}
 Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Possible
-  Tests of Time Reversal Invariance in Beta Decay}, Phys. Rev., Vol.~106,
+  Tests of Time Reversal Invariance in Beta Decay}, Physical Review, Vol.~106,
   pp.~517--521, May 1957.
 
 \bibitem{jtw_coulomb}
@@ -12,7 +12,7 @@ Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Coulomb
 
 \bibitem{becquerel1896}
 Becquerel, H., \textit{Sur les radiations {\'e}mises par phosphorescence},
-  Comptes rendus de 1'Academie des Sciences, Paris, Vol.~122, pp.~420--421,
+  Comptes rendus de l'Academie des Sciences, Paris, Vol.~122, pp.~420--421,
   1896.
 
 \bibitem{rutherford1899}
@@ -45,8 +45,8 @@ Brown, L.~M., \textit{The idea of the neutrino}, Physics today, Vol.~31, No.~9,
   pp.~23, 1978.
 
 \bibitem{AbrahamPais}
-Pais, A., Inward Bound: Of Matter and Forces in the Physical World, Oxford
-  University Press, 1986.
+Pais, A., \textit{Inward Bound: Of Matter and Forces in the Physical World},
+  Oxford University Press, 1986.
 
 \bibitem{Fermi1934Italian}
 {Fermi}, E., \textit{{Tentativo di una Teoria Dei Raggi {\ensuremath{\beta}}}},
@@ -58,8 +58,8 @@ Pais, A., Inward Bound: Of Matter and Forces in the Physical World, Oxford
 
 \bibitem{GamowTeller}
 Gamow, G. {\mdseries and} Teller, E., \textit{Selection Rules for the
-  $\ensuremath{\beta}$-Disintegration}, Phys. Rev., Vol.~49, pp.~895--899, Jun
-  1936.
+  $\ensuremath{\beta}$-Disintegration}, Physical Review, Vol.~49, pp.~895--899,
+  Jun 1936.
 
 \bibitem{LeeYang}
 Lee, T.-D. {\mdseries and} Yang, C.-N., \textit{Question of parity conservation
@@ -67,12 +67,12 @@ Lee, T.-D. {\mdseries and} Yang, C.-N., \textit{Question of parity conservation
 
 \bibitem{wu}
 Wu, C.~S., Ambler, E., Hayward, R.~W., Hoppes, D.~D. {\mdseries and} Hudson,
-  R.~P., \textit{Experimental Test of Parity Conservation in Beta Decay}, Phys.
-  Rev., Vol.~105, pp.~1413--1415, Feb 1957.
+  R.~P., \textit{Experimental Test of Parity Conservation in Beta Decay},
+  Physical Review, Vol.~105, pp.~1413--1415, Feb 1957.
 
 \bibitem{FeynmanGellMann1958}
 Feynman, R.~P. {\mdseries and} Gell-Mann, M., \textit{Theory of the Fermi
-  Interaction}, Phys. Rev., Vol.~109, pp.~193--198, Jan 1958.
+  Interaction}, Physical Review, Vol.~109, pp.~193--198, Jan 1958.
 
 \bibitem{tomonaga1946}
 Tomonaga, S.-i., \textit{On a relativistically invariant formulation of the
@@ -101,7 +101,8 @@ Dyson, F.~J., \textit{The radiation theories of Tomonaga, Schwinger, and
 
 \bibitem{YangMills1954}
 Yang, C.~N. {\mdseries and} Mills, R.~L., \textit{Conservation of Isotopic Spin
-  and Isotopic Gauge Invariance}, Phys. Rev., Vol.~96, pp.~191--195, Oct 1954.
+  and Isotopic Gauge Invariance}, Physical Review, Vol.~96, pp.~191--195, Oct
+  1954.
 
 \bibitem{Glashow1959}
 Glashow, S.~L., \textit{The renormalizability of vector meson interactions},
@@ -117,15 +118,16 @@ Salam, A. {\mdseries and} Ward, J.~C., \textit{Electromagnetic and weak
 
 \bibitem{Higgs1964EnglertBrout}
 Englert, F. {\mdseries and} Brout, R., \textit{Broken Symmetry and the Mass of
-  Gauge Vector Mesons}, Phys. Rev. Lett., Vol.~13, pp.~321--323, Aug 1964.
+  Gauge Vector Mesons}, Physical Review Letters, Vol.~13, pp.~321--323, Aug
+  1964.
 
 \bibitem{Higgs1964Higgs}
-Higgs, P.~W., \textit{Broken Symmetries and the Masses of Gauge Bosons}, Phys.
-  Rev. Lett., Vol.~13, pp.~508--509, Oct 1964.
+Higgs, P.~W., \textit{Broken Symmetries and the Masses of Gauge Bosons},
+  Physical Review Letters, Vol.~13, pp.~508--509, Oct 1964.
 
 \bibitem{Higgs1964GuralnikHagenKibble}
 Guralnik, G.~S., Hagen, C.~R. {\mdseries and} Kibble, T. W.~B., \textit{Global
-  Conservation Laws and Massless Particles}, Phys. Rev. Lett., Vol.~13,
+  Conservation Laws and Massless Particles}, Physical Review Letters, Vol.~13,
   pp.~585--587, Nov 1964.
 
 \bibitem{BroutEnglertArXiv}
@@ -139,11 +141,11 @@ Guralnik, G.~S., \textit{The history of the Guralnik, Hagen and Kibble
   pp.~2601--2627, 2009.
 
 \bibitem{Weinberg1967}
-Weinberg, S., \textit{A Model of Leptons}, Phys. Rev. Lett., Vol.~19,
+Weinberg, S., \textit{A Model of Leptons}, Physical Review Letters, Vol.~19,
   pp.~1264--1266, Nov 1967.
 
 \bibitem{salam1968}
-Salam, A., \textit{Elementary particle theory, ed. N. Svartholm}, 1968.
+Salam, A., \textit{Elementary particle theory}, Svartholm, N. (editor), 1968.
 
 \bibitem{thooftveltman1972}
 {'t Hooft}, G. {\mdseries and} Veltman, M., \textit{Regularization and
@@ -151,108 +153,28 @@ Salam, A., \textit{Elementary particle theory, ed. N. Svartholm}, 1968.
   pp.~189--213, 1972.
 
 \bibitem{gargamelle}
-Hasert, F., Kabe, S., Krenz, W., {Von Krogh}, J., Lanske, D., Morfin, J.,
-  Schultze, K., Weerts, H., Bertrand-Coremans, G., Sacton, J., {Van Doninck},
-  W., Vilain, P., Baldi, R., Camerini, U., Cundy, D., Danilchenko, I., Fry, W.,
-  Haidt, D., Natali, S., Musset, P., Osculati, B., Palmer, R., Pattison, J.,
-  Perkins, D., Pullia, A., Rousset, A., Venus, W., Wachsmuth, H., Brisson, V.,
-  Degrange, B., Haguenauer, M., Kluberg, L., Nguyen-Khac, U., Petiau, P.,
-  Bellotti, E., Bonetti, S., Cavalli, D., Conta, C., Fiorini, E., Rollier, M.,
-  Aubert, B., Blum, D., Chounet, L., Heusse, P., Lagarrigue, A., Lutz, A.,
-  Orkin-Lecourtois, A., Vialle, J., Bullock, F., Esten, M., Jones, T.,
-  McKenzie, J., Michette, A., Myatt, G. {\mdseries and} Scott, W.,
-  \textit{Observation of neutrino-like interactions without muon or electron in
-  the Gargamelle neutrino experiment}, Nuclear Physics B, Vol.~73, No.~1,
-  pp.~1--22, 1974.
+Hasert, F. et~al., \textit{Observation of neutrino-like interactions without
+  muon or electron in the Gargamelle neutrino experiment}, Nuclear Physics B,
+  Vol.~73, No.~1, pp.~1--22, 1974.
 
 \bibitem{UA1W}
-Arnison, G., Astbury, A., Aubert, B., Bacci, C., Bauer, G., B\'ezaguet, A.,
-  Böck, R., Bowcock, T., Calvetti, M., Carroll, T., Catz, P., Cennini, P.,
-  Centro, S., Ceradini, F., Cittolin, S., Cline, D., Cochet, C., Colas, J.,
-  Corden, M., Dallman, D., DeBeer, M., {Della Negra}, M., Demoulin, M.,
-  Denegri, D., {Di Ciaccio}, A., DiBitonto, D., Dobrzynski, L., Dowell, J.,
-  Edwards, M., Eggert, K., Eisenhandler, E., Ellis, N., Erhard, P., Faissner,
-  H., Fontaine, G., Frey, R., Frühwirth, R., Garvey, J., Geer, S.,
-  Ghesquière, C., Ghez, P., Giboni, K., Gibson, W., Giraud-Héraud, Y.,
-  Givernaud, A., Gonidec, A., Grayer, G., Gutierrez, P., Hansl-Kozanecka, T.,
-  Haynes, W., Hertzberger, L., Hodges, C., Hoffmann, D., Hoffmann, H.,
-  Holthuizen, D., Homer, R., Honma, A., Jank, W., Jorat, G., Kalmus, P.,
-  Karimäki, V., Keeler, R., Kenyon, I., Kernan, A., Kinnunen, R., Kowalski,
-  H., Kozanecki, W., Kryn, D., Lacava, F., Laugier, J.-P., Lees, J.-P.,
-  Lehmann, H., Leuchs, K., Lévêque, A., Linglin, E., Locci, E., Loret, M.,
-  Malosse, J.-J., Markiewicz, T., Maurin, G., McMahon, T., Mendiburu, J.-P.,
-  Minard, M.-N., Moricca, M., Muirhead, H., Muller, F., Nandi, A., Naumann, L.,
-  Norton, A., Orkin-Lecourtois, A., Paoluzi, L., Petrucci, G., Mortari, G.,
-  Pimiä, M., Placci, A., Radermacher, E., Ransdell, J., Reithler, H., Revol,
-  J.-P., Rich, J., Rijssenbeek, M., Roberts, C., Rohlf, J., Rossi, P., Rubbia,
-  C., Sadoulet, B., Sajot, G., Salvi, G., Salvini, J., Sass, J., Saudraix, A.,
-  Savoy-Navarro, A., Schinzel, D., Scott, W., Shah, T., Spiro, M., Strauss, J.,
-  Sumorok, K., Szoncso, F., Smith, D., Tao, C., Thompson, G., Timmer, J.,
-  Tscheslog, E., Tuominiemi, J., {Van der Meer}, S., Vialle, J.-P., Vrana, J.,
-  Vuillemin, V., Wahl, H., Watkins, P., Wilson, J., Xie, Y., Yvert, M.
-  {\mdseries and} Zurfluh, E., \textit{Experimental observation of isolated
-  large transverse energy electrons with associated missing energy at s=540
-  GeV}, Physics Letters B, Vol.~122, No.~1, pp.~103--116, 1983.
+Arnison, G. et~al., \textit{Experimental observation of isolated large
+  transverse energy electrons with associated missing energy at s=540 GeV},
+  Physics Letters B, Vol.~122, No.~1, pp.~103--116, 1983.
 
 \bibitem{UA2W}
-Banner, M., Battiston, R., Bloch, P., Bonaudi, F., Borer, K., Borghini, M.,
-  Chollet, J.-C., Clark, A., Conta, C., Darriulat, P., {Di Lella}, L.,
-  Dines-Hansen, J., Dorsaz, P.-A., Fayard, L., Fraternali, M., Froidevaux, D.,
-  Gaillard, J.-M., Gildemeister, O., Goggi, V., Grote, H., Hahn, B., H\"anni,
-  H., Hansen, J., Hansen, P., Himel, T., Hungerb\"uhler, V., Jenni, P.,
-  Kofoed-Hansen, O., Lançon, E., Livan, M., Loucatos, S., Madsen, B., Mani,
-  P., Mansoulie, B., Mantovani, G., Mapelli, L., Merkel, B., Mermikides, M.,
-  M\o{}llerud, Nilsson, B., Onions, C., Parrour, G., Pastore, F.,
-  Plothow-Besch, H., Polverel, M., Repellin, J.-P., Rothenberg, A., Roussarie,
-  A., Sauvage, G., Schacher, J., Siegrist, J., Steiner, H., Stimpfl, G.,
-  Stocker, F., Teiger, J., Vercesi, V., Weidberg, A., Zaccone, H. {\mdseries
-  and} Zeller, W., \textit{Observation of single isolated electrons of high
+Banner, M. et~al., \textit{Observation of single isolated electrons of high
   transverse momentum in events with missing transverse energy at the CERN pp
   collider}, Physics Letters B, Vol.~122, No.~5, pp.~476--485, 1983.
 
 \bibitem{UA1Z}
-Arnison, G., Astbury, A., Aubert, B., Bacci, C., Bauer, G., B\'ezaguet, A.,
-  Böck, R., Bowcock, T., Calvetti, M., Catz, P., Cennini, P., Centro, S.,
-  Ceradini, F., Cittolin, S., Cline, D., Cochet, C., Colas, J., Corden, M.,
-  Dallman, D., Dau, D., DeBeer, M., Negra, M., Demoulin, M., Denegri, D., {Di
-  Ciaccio}, A., Dibitonto, D., Dobrzynski, L., Dowell, J., Eggert, K.,
-  Eisenhandler, E., Ellis, N., Erhard, P., Faissner, H., Fincke, M., Fontaine,
-  G., Frey, R., Frühwirth, R., Garvey, J., Geer, S., Ghesquière, C., Ghez,
-  P., Giboni, K., Gibson, W., Giraud-Héraud, Y., Givernaud, A., Gonidec, A.,
-  Grayer, G., Hansl-Koza\.{a}ecka, T., Haynes, W., Hertzberger, L., Hodges, C.,
-  Hoffmann, D., Hoffmann, H., Holthuizen, D., Homer, R., Honma, A., Jank, W.,
-  Jorat, G., Kalmus, P., Karimäki, V., Keeler, R., Kenyon, I., Kernan, A.,
-  Kinnunen, R., Kozanecki, W., Kryn, D., Lacava, F., Laugier, J.-P., Lees,
-  J.-P., Lehmann, H., Leuchs, R., Lévêque, A., Linglin, D., Locci, E.,
-  Malosse, J.-J., Markiewicz, T., Maurin, G., McMahon, T., Mendiburu, J.-P.,
-  Minard, M.-N., Mohammadi, M., Moricca, M., Morgan, K., Muirhead, H., Muller,
-  F., Nandi, A., Naumann, L., Norton, A., Orkin-Lecourtois, A., Paoluzi, L.,
-  Pauss, F., Mortari, G., Pietarinen, E., Pimi\"a, M., Placci, A., Porte, J.,
-  Radermacher, E., Ransdell, J., Reithler, H., Revol, J.-P., Rich, J.,
-  Rijssenbeek, M., Roberts, C., Rohlf, J., Rossi, P., Rubbia, C., Sadoulet, B.,
-  Sajot, G., Salvi, G., Salvini, G., Sass, J., Saudraix, J., Savoy-Navarro, A.,
-  Schinzel, D., Scott, W., Shah, T., Spiro, M., Strauss, J., Streets, J.,
-  Sumorok, K., Szoncso, F., Smith, D., Tao, C., Thompson, G., Timmer, J.,
-  Tscheslog, E., Touminiemi, J., {Van Eijk}, B., Vialle, J.-P., Vrana, J.,
-  Vuillemin, V., Wahl, H., Watkins, P., Wilson, J., Wulz, C., Xie, G., Yvert,
-  M. {\mdseries and} Zurfluh, E., \textit{Experimental observation of lepton
-  pairs of invariant mass around 95 GeV/c2 at the CERN SPS collider}, Physics
-  Letters B, Vol.~126, No.~5, pp.~398--410, 1983.
+Arnison, G. et~al., \textit{Experimental observation of lepton pairs of
+  invariant mass around 95 GeV$/c^2$ at the CERN SPS collider}, Physics Letters
+  B, Vol.~126, No.~5, pp.~398--410, 1983.
 
 \bibitem{UA2Z}
-Bagnaia, P., Banner, M., Battiston, R., Bloch, P., Bonaudi, F., Borer, K.,
-  Borghini, M., Chollet, J.-C., Clark, A., Conta, C., Darriulat, P., {Di
-  Lella}, L., Dines-Hansen, J., Dorsaz, P., Fayard, L., Fraternali, M.,
-  Froidevaux, D., Fumagalli, G., Gaillard, J.-M., Gildemeister, O., Goggi, V.,
-  Grote, H., Hahn, B., H\"anni, H., Hansen, J., Hansen, P., Himel, T.,
-  Hungerb\"uhler, V., Jenni, P., Kofoed-Hansen, O., Lançon, E., Livan, M.,
-  Loucatos, S., Madsen, B., Mani, P., Mansouli\'e, B., Mantovani, G., Mapelli,
-  L., Merkel, B., Mermikides, M., M\o{}llerud, R., Nilsson, B., Onions, C.,
-  Parrour, G., Pastore, F., Plothow-Besch, H., Polverel, M., Repellin, J.-P.,
-  Rimoldi, A., Rothenberg, A., Roussarie, A., Sauvage, G., Schacher, J.,
-  Siegrist, J., Steiner, H., Stimpfl, G., Stocker, F., Teiger, J., Vercesi, V.,
-  Weidberg, A., Zaccone, H., Zakrzewski, J. {\mdseries and} Zeller, W., Physics
-  Letters B, Vol.~129, No.~1, pp.~130--140, 1983.
+Bagnaia, P. et~al., \textit{Evidence for $Z^0 \rightarrow e^+ e^-$ at the CERN
+  $\bar{p}p$ Collider}, Physics Letters B, Vol.~129, No.~1, pp.~130--140, 1983.
 
 \bibitem{gross1973asymptotically}
 Gross, D.~J. {\mdseries and} Wilczek, F., \textit{Asymptotically free gauge
@@ -269,18 +191,18 @@ Politzer, H.~D., \textit{Reliable perturbative results for strong
 
 \bibitem{PaisTreiman1975}
 Pais, A. {\mdseries and} Treiman, S.~B., \textit{How Many Charm Quantum Numbers
-  are There?}, Phys. Rev. Lett., Vol.~35, pp.~1556--1559, Dec 1975.
+  are There?}, Physical Review Letters, Vol.~35, pp.~1556--1559, Dec 1975.
 
 \bibitem{weinberginterview2018}
 Schirber, M., \textit{Q\&A: with Standard Bearer Steven Weinberg}, APS News,
   Vol.~28, No.~2, Feb 2019.
 
 \bibitem{pdg2018}
-{Tanabashi}, M. i. P. D.~G., \textit{Review of Particle Physics}, Phys. Rev. D,
+{Tanabashi}, M. et~al., \textit{Review of Particle Physics}, Physical Review D,
   Vol.~98, pp.~030001, Aug 2018.
 
 \bibitem{krane}
-Krane, K.~S., Introductory Nuclear Physics, Wiley, New York, 1988.
+Krane, K.~S., \textit{Introductory Nuclear Physics}, Wiley, New York, 1988.
 
 \bibitem{Falkowski2021}
 Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
@@ -345,8 +267,7 @@ Shidling, P.~D., Melconian, D., Behling, S., Fenker, B., Hardy, J.~C., Iacob,
   H.-I., {Anholm}, M., {Saastamoinen}, A.~J. {\mdseries and} {Trinat
   Collaboration}, \textit{{Improving the ft value of 37K via a precision
   measurement of the branching ratio}}, \textit{APS Division of Nuclear Physics
-  Meeting Abstracts}, Vol. 2020 of \textit{APS Meeting Abstracts}, p. KF.005,
-  Jan. 2020.
+  Meeting Abstracts}, Oct 2020.
 
 \bibitem{EbelFeldman1957}
 Ebel, M. {\mdseries and} Feldman, G., \textit{Further remarks on Coulomb
@@ -358,7 +279,7 @@ Fenker, B., Gorelov, A., Melconian, D., Behr, J.~A., Anholm, M., Ashery, D.,
   Behling, R.~S., Cohen, I., Craiciu, I., Gwinner, G., McNeil, J., Mehlman, M.,
   Olchanski, K., Shidling, P.~D., Smale, S. {\mdseries and} Warner, C.~L.,
   \textit{Precision Measurement of the $\ensuremath{\beta}$ Asymmetry in
-  Spin-Polarized $^{37}\mathrm{K}$ Decay}, Phys. Rev. Lett., Vol.~120,
+  Spin-Polarized $^{37}\mathrm{K}$ Decay}, Physical Review Letters, Vol.~120,
   pp.~062502, Feb 2018.
 
 \bibitem{dan_Bnu}
@@ -374,10 +295,10 @@ Towner, I. {\mdseries and} Hardy, J., \textit{Currents and their couplings in
   interactions in nuclei, p. 183, 1995.
 
 \bibitem{HardyTowner2005_Superallowed}
-Hardy, J.~C. {\mdseries and} Towner, I., \textit{Superallowed 0+→ 0+ nuclear
-  $\beta$ decays: A critical survey with tests of the conserved vector current
-  hypothesis and the standard model}, Physical Review C, Vol.~71, No.~5,
-  pp.~055501, 2005.
+Hardy, J.~C. {\mdseries and} Towner, I., \textit{Superallowed $0^+ \rightarrow
+  0^+$ nuclear $\beta$ decays: A critical survey with tests of the conserved
+  vector current hypothesis and the standard model}, Physical Review C,
+  Vol.~71, No.~5, pp.~055501, 2005.
 
 \bibitem{wilkinson2}
 Wilkinson, D., \textit{Evaluation of beta-decay: II. Finite mass and size
@@ -400,34 +321,35 @@ Wilkinson, D., \textit{Evaluation of beta-decay Part IV. The complex gamma
 \bibitem{SeverijnsTandecki2008}
 Severijns, N., Tandecki, M., Phalet, T. {\mdseries and} Towner, I.~S.,
   \textit{$\mathcal{F}t$ values of the $T=1/2$ mirror \ensuremath{\beta}
-  transitions}, Phys. Rev. C, Vol.~78, pp.~055501, Nov 2008.
+  transitions}, Physical Review C, Vol.~78, pp.~055501, Nov 2008.
 
 \bibitem{severijns2006}
 Severijns, N., Beck, M. {\mdseries and} Naviliat-Cuncic, O., \textit{Tests of
-  the standard electroweak model in nuclear beta decay}, Rev. Mod. Phys.,
-  Vol.~78, pp.~991--1040, Sep 2006.
+  the standard electroweak model in nuclear beta decay}, Reviews of Modern
+  Physics, Vol.~78, pp.~991--1040, Sep 2006.
 
 \bibitem{HardyTownerSuperallowed2020}
 Hardy, J.~C. {\mdseries and} Towner, I.~S., \textit{Superallowed
   ${0}^{+}\ensuremath{\rightarrow}{0}^{+}$ nuclear $\ensuremath{\beta}$ decays:
   2020 critical survey, with implications for ${V}_{\mathit{ud}}$ and CKM
-  unitarity}, Phys. Rev. C, Vol.~102, pp.~045501, Oct 2020.
+  unitarity}, Physical Review C, Vol.~102, pp.~045501, Oct 2020.
 
 \bibitem{TownerHardy2008}
 Towner, I.~S. {\mdseries and} Hardy, J.~C., \textit{Improved calculation of the
   isospin-symmetry-breaking corrections to superallowed Fermi $\beta$ decay},
-  Phys. Rev. C, Vol.~77, pp.~025501, Feb 2008.
+  Physical Review C, Vol.~77, pp.~025501, Feb 2008.
 
 \bibitem{JausRasche1990}
 Jaus, W. {\mdseries and} Rasche, G., \textit{Nuclear-structure dependence of
   $O(\ensuremath{\alpha})$ corrections to Fermi decays and the value of the
-  Kobayashi-Maskawa matrix element ${V}_{\mathrm{ud}}$}, Phys. Rev. D, Vol.~41,
-  pp.~166--176, Jan 1990.
+  Kobayashi-Maskawa matrix element ${V}_{\mathrm{ud}}$}, Physical Review D,
+  Vol.~41, pp.~166--176, Jan 1990.
 
 \bibitem{barker1992}
 Barker, F., Brown, B., Jaus, W. {\mdseries and} Rasche, G.,
-  \textit{Determination of |Vud| from Fermi decays and the unitarity of the
-  KM-mixing matrix}, Nuclear Physics A, Vol.~540, No.~3, pp.~501--519, 1992.
+  \textit{Determination of $|V_{ud}|$ from Fermi decays and the unitarity of
+  the KM-mixing matrix}, Nuclear Physics A, Vol.~540, No.~3, pp.~501--519,
+  1992.
 
 \bibitem{Towner1992}
 Towner, I., \textit{The nuclear-structure dependence of radiative corrections
@@ -441,17 +363,17 @@ Towner, I., \textit{Quenching of spin operators in the calculation of radiative
 
 \bibitem{MarcianoSirlin_1986}
 Marciano, W.~J. {\mdseries and} Sirlin, A., \textit{Radiative corrections to
-  \ensuremath{\beta} decay and the possibility of a fourth generation}, Phys.
-  Rev. Lett., Vol.~56, pp.~22--25, Jan 1986.
+  \ensuremath{\beta} decay and the possibility of a fourth generation},
+  Physical Review Letters, Vol.~56, pp.~22--25, Jan 1986.
 
 \bibitem{MarcianoSirlin_2006}
 Marciano, W.~J. {\mdseries and} Sirlin, A., \textit{Improved Calculation of
-  Electroweak Radiative Corrections and the Value of ${V}_{ud}$}, Phys. Rev.
-  Lett., Vol.~96, pp.~032002, Jan 2006.
+  Electroweak Radiative Corrections and the Value of ${V}_{ud}$}, Physical
+  Review Letters, Vol.~96, pp.~032002, Jan 2006.
 
 \bibitem{CzarneckiMarcianoSirlin_2019}
 Czarnecki, A., Marciano, W.~J. {\mdseries and} Sirlin, A., \textit{Radiative
-  corrections to neutron and nuclear beta decays revisited}, Phys. Rev. D,
+  corrections to neutron and nuclear beta decays revisited}, Physical Review D,
   Vol.~100, pp.~073008, Oct 2019.
 
 \bibitem{naviliat2009april}
@@ -461,61 +383,47 @@ Naviliat-Cuncic, O. {\mdseries and} Severijns, N., \textit{Test of the
   pp.~142302, April 2009.
 
 \bibitem{UCNA_first_superratio}
-Pattie~Jr, R., Anaya, J., Back, H., Boissevain, J., Bowles, T., Broussard, L.,
-  Carr, R., Clark, D., Currie, S., Du, S. et~al., \textit{First measurement of
-  the neutron $\beta$ asymmetry with ultracold neutrons}, Physical review
-  letters, Vol.~102, No.~1, pp.~012301, 2009.
+Pattie, R.~J. et~al., \textit{First Measurement of the Neutron
+  $\ensuremath{\beta}$ Asymmetry with Ultracold Neutrons}, Physical Review
+  Letters, Vol.~102, pp.~012301, Jan 2009.
 
 \bibitem{UCNAfierz2020}
-Sun, X., Adamek, E., Allgeier, B., Bagdasarova, Y., Berguno, D.~B., Blatnik,
-  M., Bowles, T.~J., Broussard, L.~J., Brown, M. A.-P., Carr, R., Clayton, S.,
-  Cude-Woods, C., Currie, S., Dees, E.~B., Ding, X., Filippone, B.~W.,
-  Garc\'{\i}a, A., Geltenbort, P., Hasan, S., Hickerson, K.~P., Hoagland, J.,
-  Hong, R., Holley, A.~T., Ito, T.~M., Knecht, A., Liu, C.-Y., Liu, J., Makela,
-  M., Mammei, R., Martin, J.~W., Melconian, D., Mendenhall, M.~P., Moore,
-  S.~D., Morris, C.~L., Nepal, S., Nouri, N., Pattie, R.~W., P\'erez~G\'alvan,
-  A., Phillips, D.~G., Picker, R., Pitt, M.~L., Plaster, B., Salvat, D.~J.,
-  Saunders, A., Sharapov, E.~I., Sjue, S., Slutsky, S., Sondheim, W., Swank,
-  C., Tatar, E., Vogelaar, R.~B., VornDick, B., Wang, Z., Wei, W., Wexler,
-  J.~W., Womack, T., Wrede, C., Young, A.~R. {\mdseries and} Zeck, B.~A.,
-  \textit{Improved limits on Fierz interference using asymmetry measurements
-  from the Ultracold Neutron Asymmetry (UCNA) experiment}, Phys. Rev. C,
-  Vol.~101, pp.~035503, Mar 2020.
+Sun, X. et~al., \textit{Improved limits on Fierz interference using asymmetry
+  measurements from the Ultracold Neutron Asymmetry (UCNA) experiment},
+  Physical Review C, Vol.~101, pp.~035503, Mar 2020.
 
 \bibitem{Saul2020}
 Saul, H., Roick, C., Abele, H., Mest, H., Klopf, M., Petukhov, A.~K., Soldner,
   T., Wang, X., Werder, D. {\mdseries and} M\"arkisch, B., \textit{Limit on the
   Fierz Interference Term $b$ from a Measurement of the Beta Asymmetry in
-  Neutron Decay}, Phys. Rev. Lett., Vol.~125, pp.~112501, Sep 2020.
+  Neutron Decay}, Physical Review Letters, Vol.~125, pp.~112501, Sep 2020.
 
 \bibitem{UCNA_first_Fierz}
-Hickerson, K., Sun, X., Bagdasarova, Y., Bravo-Bergu{\~n}o, D., Broussard, L.,
-  Brown, M.-P., Carr, R., Currie, S., Ding, X., Filippone, B. et~al.,
-  \textit{First direct constraints on Fierz interference in free-neutron
-  $\beta$ decay}, Physical Review C, Vol.~96, No.~4, pp.~042501, 2017.
+Hickerson, K.~P. et~al., \textit{First direct constraints on Fierz interference
+  in free-neutron $\ensuremath{\beta}$ decay}, Physical Review C, Vol.~96,
+  pp.~042501, Oct 2017.
 
 \bibitem{ArgonMinusIons}
 Ben-Itzhak, I., Heber, O., Gertner, I. {\mdseries and} Rosner, B.,
-  \textit{Production and mean-lifetime measurement of metastable
-  ${\mathrm{Ar}}^{\mathrm{\ensuremath{-}}}$ ions}, Phys. Rev. A, Vol.~38,
-  pp.~4870--4871, Nov 1988.
+  \textit{Production and mean-lifetime measurement of metastable Ar$^{-}$
+  ions}, Physical Review A, Vol.~38, pp.~4870--4871, Nov 1988.
 
 \bibitem{Levinger}
 Levinger, J.~S., \textit{Effects of Radioactive Disintegrations on Inner
-  Electrons of the Atom}, Phys. Rev., Vol.~90, pp.~11--25, Apr 1953.
+  Electrons of the Atom}, Physical Review, Vol.~90, pp.~11--25, Apr 1953.
 
 \bibitem{raabprentiss}
 Raab, E.~L., Prentiss, M., Cable, A., Chu, S. {\mdseries and} Pritchard, D.~E.,
-  \textit{Trapping of Neutral Sodium Atoms with Radiation Pressure}, Phys. Rev.
-  Lett., Vol.~59, pp.~2631--2634, Dec 1987.
+  \textit{Trapping of Neutral Sodium Atoms with Radiation Pressure}, Physical
+  Review Letters, Vol.~59, pp.~2631--2634, Dec 1987.
 
 \bibitem{corney}
-Corney, A., Atomic and Laser Spectroscopy, Oxford University Press, New York,
-  1977.
+Corney, A., \textit{Atomic and Laser Spectroscopy}, Oxford University Press,
+  New York, 1977.
 
 \bibitem{thesis}
-Anholm, M., Characterizing the {AC-MOT}, Master's thesis, University of British
-  Columbia, 2014.
+Anholm, M., \textit{Characterizing the {AC-MOT}}, Master's thesis, University
+  of British Columbia, 2014.
 
 \bibitem{ben_OP}
 Fenker, B., Behr, J.~A., Melconian, D., Anderson, R. M.~A., Anholm, M., Ashery,
@@ -538,12 +446,13 @@ Gorelov, A., Behr, J., Melconian, D., Trinczek, M., Dub{\'e}, P., H{\"a}usser,
 \bibitem{swanson}
 Swanson, T.~B., Asgeirsson, D., Behr, J.~A., Gorelov, A. {\mdseries and}
   Melconian, D., \textit{Efficient transfer in a double magneto-optical trap
-  system}, J. Opt. Soc. Am. B, Vol.~15, No.~11, pp.~2641--2645, Nov 1998.
+  system}, Journal of the Optical Society of America B, Vol.~15, No.~11,
+  pp.~2641--2645, Nov 1998.
 
 \bibitem{harveymurray}
 Harvey, M. {\mdseries and} Murray, A.~J., \textit{Cold Atom Trap with Zero
-  Residual Magnetic Field: The AC Magneto-Optical Trap}, Phys. Rev. Lett.,
-  Vol.~101, pp.~173201, Oct 2008.
+  Residual Magnetic Field: The AC Magneto-Optical Trap}, Physical Review
+  Letters, Vol.~101, pp.~173201, Oct 2008.
 
 \bibitem{Q_value}
 Audi, G., Wapstra, A. {\mdseries and} Thibault, C., \textit{The {AME2003}
@@ -551,13 +460,14 @@ Audi, G., Wapstra, A. {\mdseries and} Thibault, C., \textit{The {AME2003}
   2003.
 
 \bibitem{ben_thesis}
-Fenker, B.~B., Precise measurement of the $\beta$-asymmetry in the decay of
-  magneto-optically trapped, spin-polarized 37K, Ph.D. thesis, Texas A\&M
-  University, 2016.
+Fenker, B.~B., \textit{Precise measurement of the $\beta$-asymmetry in the
+  decay of magneto-optically trapped, spin-polarized 37K}, Ph.D. thesis, Texas
+  A\&M University, 2016.
 
 \bibitem{spencer_thesis}
-Behling, R.~S., Measurement of the Standard Model Beta Asymmetry Parameter,
-  \ensuremath{\beta}, in 37K, Ph.D. thesis, Texas A\&M University, 2015.
+Behling, R.~S., \textit{Measurement of the Standard Model Beta Asymmetry
+  Parameter, \ensuremath{A_\beta}, in 37K}, Ph.D. thesis, Texas A\&M
+  University, 2015.
 
 \bibitem{holstein}
 {Holstein}, B.~R., \textit{{Recoil effects in allowed beta decay: The
@@ -593,24 +503,14 @@ Rester, D.~H. {\mdseries and} Derrickson, J.~H., \textit{Electron Transmission
   1971.
 
 \bibitem{NeutronAbeta2018}
-Brown, M. A.-P., Dees, E.~B., Adamek, E., Allgeier, B., Blatnik, M., Bowles,
-  T.~J., Broussard, L.~J., Carr, R., Clayton, S., Cude-Woods, C., Currie, S.,
-  Ding, X., Filippone, B.~W., Garc\'{\i}a, A., Geltenbort, P., Hasan, S.,
-  Hickerson, K.~P., Hoagland, J., Hong, R., Hogan, G.~E., Holley, A.~T., Ito,
-  T.~M., Knecht, A., Liu, C.-Y., Liu, J., Makela, M., Martin, J.~W., Melconian,
-  D., Mendenhall, M.~P., Moore, S.~D., Morris, C.~L., Nepal, S., Nouri, N.,
-  Pattie, R.~W., P\'erez~Galv\'an, A., Phillips, D.~G., Picker, R., Pitt,
-  M.~L., Plaster, B., Ramsey, J.~C., Rios, R., Salvat, D.~J., Saunders, A.,
-  Sondheim, W., Seestrom, S.~J., Sjue, S., Slutsky, S., Sun, X., Swank, C.,
-  Swift, G., Tatar, E., Vogelaar, R.~B., VornDick, B., Wang, Z., Wexler, J.,
-  Womack, T., Wrede, C., Young, A.~R. {\mdseries and} Zeck, B.~A., \textit{New
-  result for the neutron $\ensuremath{\beta}$-asymmetry parameter ${A}_{0}$
-  from UCNA}, Phys. Rev. C, Vol.~97, pp.~035505, Mar 2018.
+Brown, M. A.-P. et~al., \textit{New result for the neutron
+  $\ensuremath{\beta}$-asymmetry parameter ${A}_{0}$ from UCNA}, Physical
+  Review C, Vol.~97, pp.~035505, Mar 2018.
 
 \bibitem{severijns_beck_cuncic_2006}
 Severijns, N., Beck, M. {\mdseries and} Naviliat-Cuncic, O., \textit{Tests of
-  the standard electroweak model in nuclear beta decay}, Rev. Mod. Phys.,
-  Vol.~78, pp.~991--1040, September 2006.
+  the standard electroweak model in nuclear beta decay}, Reviews of Modern
+  Physics, Vol.~78, pp.~991--1040, September 2006.
 
 \bibitem{severijns_cuncic_2011}
 Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
@@ -618,22 +518,22 @@ Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
   pp.~23--46, 2011.
 
 \bibitem{dan_thesis}
-Melconian, D.~G., Measurement of the Neutrino Asymmetry in the Beta Decay of
-  Laser-Cooled, Polarized $^{37}\textrm{K}$, Ph.D. thesis, Simon Fraser
-  University, 2005.
+Melconian, D.~G., \textit{Measurement of the Neutrino Asymmetry in the Beta
+  Decay of Laser-Cooled, Polarized $^{37}\textrm{K}$}, Ph.D. thesis, Simon
+  Fraser University, 2005.
 
 \bibitem{holstein_errata}
 Holstein, B.~R., \textit{Erratum: Recoil effects in allowed beta decay: The
-  elementary particle approach}, Rev. Mod. Phys., Vol.~48, pp.~673--673, Oct
-  1976.
+  elementary particle approach}, Reviews of Modern Physics, Vol.~48,
+  pp.~673--673, Oct 1976.
 
 \bibitem{itownerCalcs}
 Towner, I., Private Communication to the TRINAT Collaboration, August 2011.
 
 \bibitem{GCBall2000}
-{Ball}, G.~C., \textit{{Tests of the Standard Model from Nuclear Beta-Decay
-  Studies at Isac}}, \textit{From Particles to the Universe}, pp. 148--153,
-  Apr. 2001.
+Ball, G.~C., \textit{Tests of the standard model from nuclear beta-decay
+  studies at ISAC}, \textit{From Particles To The Universe}, pp. 148--153,
+  World Scientific, 2001.
 
 \bibitem{Raman1978}
 Raman, S., Houser, C., Walkiewicz, T. {\mdseries and} Towner, I., \textit{Mixed
