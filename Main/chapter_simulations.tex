@@ -99,7 +99,7 @@ The purpose of the SMC was to \emph{quickly} generate initial particle kinematic
 To make the best use of the SMC for evaluating systematic errors, the energy lost before a beta hits a scintillator must be accounted for somehow in order to ensure all relevant physical effects are propagated through.  In particular, before hitting a scintillator, a beta must pass through a $275\,\mu m$ thick silicon carbide mirror, a $229\,\mu m$ thick beryllium foil, %used to separate the inner portion of the vacuum chamber from the outside world
 and finally a set of $300\,\mu m$ thick double-sided silicon strip detectors (DSSDs), before finally having its remaining energy absorbed within a scintillator.  Although the DSSDs are themselves detectors with the ability to record the amount of energy deposited by an incident particle, there are some known problems in achieving a uniform level of precision across the full surface of the DSSDs,\aside{See:  Some other section?  Maybe?} so adding the DSSD energy back to the scintillator energy to produce a better estimate of the original beta energy has the potential to create some problems for the analysis.  Furthermore, given the presence of the mirror, an object with a similar thickness and scattering properties to the DSSDs, re-adding the energy lost in the DSSDs would not eliminate the need to estimate probabilistic energy loss in similar materials.  
 
-In order to create a quantitative description of the effective response function, which varies with initial beta kinetic energy ($E_{\textrm{in}}$ below), an analytic function of 14 parameters \aside{Is it definitely 14 of them?} has been created to model scintillator output for decays from the central cloud for each of the two polarization states in use.  In other words, although the form of the model is always the same, the 14 individual parameters will take different values for each of the four detector and polarization combinations.  The full response function model, which describes the fraction of events measured at scintillator energy $E_{\textrm{out}}$, is given by the expression,
+In order to create a quantitative description of the effective response function, which varies with initial beta kinetic energy ($E_{\textrm{in}}$ below), an analytic function of 14 parameters \aside{Is it definitely 14 of them?} has been created to model scintillator output for decays from the central cloud for each of the two polarization states in use.  Although the form of the model is always the same, the 14 individual parameters will take different values for each of the four detector and polarization combinations.  The full response function model, which describes the fraction of events measured at scintillator energy $E_{\textrm{out}}$, is given by the expression,
 \bea
 	R(E_{\textrm{out}} \,|\, E_{\textrm{in}}, \textrm{Detector}, \mathrm{Polarization}) &=& p_{\textrm{norm}} \left( f_{\mathrm{moyal}} + f_1 + f_2 + f_3 + f_4 + f_5 \right) + f_{511},
 	\nonumber \\
@@ -166,21 +166,23 @@ To effect this result, the TRINAT Geant4 simulation is used to generate a series
 \end{figure}
 %\FloatBarrier  % this will have to go in the end, but it's really hard to edit this thing without it.
 
-The values of the individual parameters contributing to the fit functions in, eg, Figs.~\ref{fig:lineshape_5000},~\ref{fig:lineshape_3000},~\ref{fig:lineshape_1500},~\ref{fig:lineshape_1000}, and~\ref{fig:lineshape_750} are allowed to vary with initial beta energy, and the energy dependence of each parameter must be modeled in order to extrapolate the shape of the response function to intermediate initial beta kinetic energy values that are not explicitly modeled.  For each parameter, the energy dependence is modeled by an analytic function selected to have similar characteristics.  Each of these analytic functions is itself a function of several parameters which can be adjusted to optimize its fit to the true best-fit energy dependence of the parameter it models.  Because some parameters are only weakly independent, it is necessary to perform these fits iteratively on only a single parameter at a time, revisiting earlier parameter fits after fixing other parameters to updated models.  The results of this process are shown in Figs.~\ref{fig:lineshapeparams_part1}, ~\ref{fig:lineshapeparams_part2}, ~\ref{fig:lineshapeparams_part3}, and~\ref{fig:lineshapeparams_part4}.
+The values of the individual parameters contributing to the fit functions in, eg, Figs.~\ref{fig:lineshape_5000},~\ref{fig:lineshape_3000},~\ref{fig:lineshape_1500},~\ref{fig:lineshape_1000}, and~\ref{fig:lineshape_750} are allowed to vary with initial beta energy, and the energy dependence of each parameter must be modeled in order to extrapolate the shape of the response function to intermediate initial beta kinetic energy values that are not explicitly modeled.  For each parameter, the energy dependence is modeled by an analytic function selected to have similar characteristics.  Each of these analytic functions is itself a function of several parameters which can be adjusted to optimize its fit to the true best-fit energy dependence of the parameter it models.  Because some parameters are only weakly independent, it is necessary to perform these fits iteratively on only a single parameter at a time, revisiting earlier parameter fits after fixing other parameters to updated models.  The results of this process are shown in Figs.~\ref{fig:lineshapeparams_part1}, \ref{fig:lineshapeparams_part2}, and~\ref{fig:lineshapeparams_part3}.
 
 \begin{figure}[h!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
-	{Figures/LineshapeParams_part1.png}
+	{Figures/LineshapeParams_Set1.pdf}
 	\note[done]{What even \emph{is} the thing plotted below E0 in the `residuals' spot, you ask?  It's `PseudoE', which is describes the difference between the original input energy, $E_0$, and the energy where the output spectrum is maximal. Or something.  To `pretty good' order, it's a straight line.  the `PseudoE' plot shows what's left after you fit it to a straight line.  It's fucking weird that it's negative everywhere.  Like, what?}
 	\note{Top left plot is *probably* something like $E_{out}$ vs. $E_{in}$.  Probably need to re-label that within the figure itself.}
-	\caption[Lineshape Parameter Fits (Part 1)]{Lineshape Parameter Fits (Part 1) -- Several parameters for the response function are shown varying smoothly with initial beta energy, after iterative fits comparing mono-energetic spectra from the simple monte carlo + response function to the equivalent mono-energetic Geant4 simulation.  These fit outputs are subsequently fit with other functions in order to enforce a smooth variation with energy, and the results of this second fit are shown here.   }	
+	\caption[Lineshape Parameter Fits (Part 1)]{Lineshape Parameter Fits (Part 1) -- Several parameters for the response function are shown varying smoothly with initial beta energy, after iterative fits comparing mono-energetic spectra from the simple monte carlo + response function to the equivalent mono-energetic Geant4 simulation.  These fit outputs are subsequently fit with other functions in order to enforce a smooth variation with energy, and the results of this second fit are shown here and in Figs.~(\ref{fig:lineshapeparams_part2}) and (\ref{fig:lineshapeparams_part3}).   Above, two plots are shown dedicated to describing the \emph{most probable} difference between initial beta kinetic energy and measured scintillator energy.
+%	 -- i.e., in Figs.~(\ref{fig:lineshape_5000})-(\ref{fig:lineshape_750})....  
+	The left plot shows the results and residuals from a fit to a straight line; the right plot shows what remains (and fits it to an analytic function) after the dominant linear dependence is subtracted away.}	
 	\label{fig:lineshapeparams_part1}
 \end{figure}
 \begin{figure}[h!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
-	{Figures/LineshapeParams_part2.png}
+	{Figures/LineshapeParams_Set2.pdf}
 	\caption[Lineshape Parameter Fits (Part 2)]{Lineshape Parameter Fits (Part 2)}
 	\label{fig:lineshapeparams_scale}
 	\label{fig:lineshapeparams_part2}
@@ -188,17 +190,17 @@ The values of the individual parameters contributing to the fit functions in, eg
 \begin{figure}[h!!tb]
 	\centering
 	\includegraphics[width=.999\linewidth]
-	{Figures/LineshapeParams_part3.png}
+	{Figures/LineshapeParams_Set3.pdf}
 	\caption[Lineshape Parameter Fits (Part 3)]{Lineshape Parameter Fits (Part 3)}	
 	\label{fig:lineshapeparams_part3}
 \end{figure}
-\begin{figure}[h!!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/LineshapeParams_part4.png}
-	\caption[Lineshape Parameter Fits (Part 4)]{Lineshape Parameter Fits (Part 4)}	
-	\label{fig:lineshapeparams_part4}
-\end{figure}
+%\begin{figure}[h!!tb]
+%	\centering
+%	\includegraphics[width=.999\linewidth]
+%	{Figures/LineshapeParams_part4.png}
+%	\caption[Lineshape Parameter Fits (Part 4)]{Lineshape Parameter Fits (Part 4)}	
+%	\label{fig:lineshapeparams_part4}
+%\end{figure}
 %
 %\FloatBarrier  % this will have to go in the end, but it's really hard to edit this thing without it.
 It is useful to consider how well this empirical response function works to model the spectra.  One can see clearly from Figs.~\ref{fig:lineshape_5000}, ~\ref{fig:lineshape_3000}, ~\ref{fig:lineshape_1500}, ~\ref{fig:lineshape_1000}, and~\ref{fig:lineshape_750} that the fit residuals appear noticeably \emph{worse} at lower initial beta energies.  Fig.~\ref{fig:lineshape_redchi2} shows the reduced $\chi^2$ values arising from comparing mono-energetic G4 spectra to the empirical response functions described above, for all four detector and polarization combinations.
