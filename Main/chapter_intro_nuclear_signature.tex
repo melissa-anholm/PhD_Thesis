@@ -6,6 +6,25 @@
 \chapter{Background}
 \label{intro_chapter}
 \label{nuclear_chapter}
+\note[jbnn]{For sure you should ask for the electronic grammar corrections :) !!
+\\
+I hope you've already done so.
+}
+\note[jbnn]{I will write more on 5 and 6 soon and provide Hayen2021~\cite{Hayen2021}. It is quite reasonable to take the approach
+of saying `the important parts for the experiment can be described schematically' and 'the details were part of another thesis'
+and I can help with those important parts.}
+\note[jbnn]{hi Melissa,
+\\...\\
+explaining $f_A/f_V$ gives a chance to cite Leendert's recent work~\cite{Hayen2021} on a radiative correction in G-T decay, and
+\\...\\
+an assortment of other small corrections to mirror decays
+(his collaboration with Cirigliano is working on an additional correction in the neutron...).
+\\
+His Table I and Fig. 5 have results for 37K. Since $f_A/f_V$ is closer to 1 in our case, I think because the weak magnetism is small (and we-- i.e. Dan and Ben et al-- had already done a correct incorporation of $f_A/f_V$ and such, not overcounting a term LH mentions was done in the literature) , in the end it has turned out we agree with his interpretation of our 37K result. 
+\\...\\
+A difference not enough for you to worry about. But this is the best place to find $f_A/f_V$.
+}
+%
 Within nature, there exist four fundamental forces governing the interactions of particles with one another:  electromagnetism, the nuclear weak force, the nuclear strong force, and gravity.  This work seeks to probe the nature of the weak nuclear force on its most fundamental level through observations of beta decay, a process which results directly from the action of the weak nuclear force.  Through kinematic observations of the decay products, much can be learned about the form of the weak nuclear force's coupling, through which beta decay proceeds.  Prior experiments have shown that this coupling is dominated by a combination of operators that behave as vectors and axial-vectors under Lorentz transformation, however 
 %vector and axial-vector operators, but 
 the possibility of a non-dominant contribution from other types of operators, such as scalars and tensors, cannot be ruled out entirely.  This is the domain of precision measurements.  
@@ -365,6 +384,43 @@ As usual, $\me$ is the mass of the electron.
 %, and $c$ is the speed of light.  
 The infinitesimal surface element $\dOmegabeta$ represents the direction of $\beta$ emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with $Z^\prime$ the proton number of the daughter nucleus.  The Fermi function accounts for the force from the nuclear electric charge acting on the outgoing electron or positron.  It is computed with the Dirac equation using various levels of approximation to describe the nuclear charge distribution and screening of that charge distribution by electrons near the nucleus.  
 
+\note[jm]{This is where Juliette thinks I need more info about Abeta and bFierz.  
+\\
+``On the bottom of page 14 she lists relevant quantities (including bFierz itself) but sends the reader to an appendix rather than defining them here.''}
+
+\note[jm]{John says:  My suggested remedy:
+\\
+First write $b_F$ in JTW terms of $C_S$, $C_S$', $C_T$, $C_T$' and the $C_V$'s.
+\\
+say
+`, and in notation that makes clear the lepton helicity dependence of the unknown physics,' 
+\\
+include your present equation in terms of $g_S$ , $g_T$.
+\\ ... \\
+``We have defined $g_S$, $g_T$ fully in Appendix~\ref{appendix_forthepeople}, but here summarize the main reason for this notation. The Fierz interference is between a SM term and an unknown physics term. The SM weak interaction couples to left-handed neutrinos and right-handed electrons, yet all scalar and tensor terms couple to
+same-handed leptons only. So when restricting ourselves to scalars and tensors
+coupling to left-handed neutrinos, they must be coupling to left-handed electrons as well. This is why the Fierz term is suppressed by the spinor factor m/E in equation 1.9 (a derivation without Dirac formalism is in (cite Hong et al. 2017 Ref. 48) the full derivation is in Greiner2009.''
+\\...\\
+then you really should keep going qualitatively
+\\...\\
+``This m/E factor is further heuristically related to
+the fact that a massive particle has helicity depending on frame-- one can always boost to a frame moving faster than the particle, thus observing it rotating the same way but moving the opposite way and thus with the opposite helicity. These effects are greatly suppressed in high-energy physics, and are less suppressed in nuclear beta decay where electron energies can be similar to their mass.''
+\\...\\
+W. Greiner and B. M\"uller, Gauge Theory of Weak Interactions, Springer, 4th ed. 2009.
+}
+\note[jbnn]{JB on JM's complaint:  
+\\
+Juliette has done you and us a real service here.
+You write down the Fierz term in helicity terms previously undefined.
+You list that in an Appendix, ok, but odd, so JM objects.
+\\...\\
+Her uneasiness is spot on: you state something about the helicity notation, yes, but although we've agreed you shouldn't do the actual Fierz calculation (which is in Ian's SNIT notes, and in the Greiner and Mueller weak interactions book where Albert cites it in his lectures),
+unfortunately, but fortunately because it's easy to fix,
+\\...\\
+it looks to me like you've \textbf{neglected both the main reason for the $m/E$} (worked out without Dirac matrices in Hong's paper with Alejandro, which you cite but not for this reason-- you should not do this, but you should cite it)
+and, I think?, \textbf{its practical implications} (we're sensitive to it and high-energy is not). Leah Broussard covered this last point in a neutron beta decay talk at Winnipeg awhile back (we would be listing her as a possible external but universities insist in more supervisory experience).
+}
+
 %\note{talk about $\xi, \Abeta, \bFierz$ here...}
 The parameters $\xi$, $\bFierz$, and $\Abeta$ are specific to the decay being considered (see Appendix~\ref{sec:jtw_formalism}), and if one assumes the standard model holds, they can be written in terms of a simplified set of parameters (as compared with the original formalism).  Here, we introduce $\rho$, the ratio of Gamow-Teller and Fermi couplings: 
 \bea
@@ -425,6 +481,38 @@ which clearly reduces to 0 in the standard model limit where $g_S = g_T = 0$.
 %%%% %%%% %%%% %%%% %%%% %%%%
 \subsection{Measuring the Gamow-Teller/Fermi Mixing Ratio}
 \label{sec:extractinglambda}
+\note[jbnn]{John on Juliette's p. 17 comment about $0^+ \rightarrow 0^+$:
+\\...\\
+She's clearly just concerned you spend pages on 0+ to 0+, but then
+just "define" your mirror nucleus master equation 1.21 with minimal to no explanation. 
+\\...\\
+You can fix this qualitatively without trouble.  My suggested remedy:
+\\...\\
+``We define a corrected Ft value...'' 
+\\
+$\rightarrow$
+\\
+``We extend this corrected Ft value for our vector part to our mirror nucleus by including the contribution of the G-T matrix element squared, mostly by inspection [your references here]''
+\\...\\
+Then your Eq.~(\ref{eq:rhorelation})
+\\...\\
+``where rho is the ratio of axial vector to vector matrix elements defined in
+Eq.~(\ref{eq:definerho_intro}).
+\\
+Here, $f_A$ and $f_V$ are integrals over the lepton phase space for the axial
+vector and vector parts. Those integrals are identical in the allowed approximation, but are different by X\% when higher-order terms are taken into account.''
+(see Appendix~\ref{appendix_forthepeople}.N citing Holstein, and Hayen2021).
+}
+%
+\note[jbnn]{My apologies for speculating more needs to be said about $0^+ \rightarrow 0^+$ -- that's not her main concern-- but it might help to add a further qualitative sentence after
+\\
+`then this coupling strength is common to all transitions.'
+\\
+with something like
+\\
+`We will need this absolute strength for the vector part of 37K decay when we get the ratio of vector and axial vector matrix elements from our fT value and predict our observables.'
+}
+%%
 It is clear from Sec.~\ref{sec:mathdescription_intro} that in order to make a real prediction about the behaviour of outgoing particles within a particular beta decay transition, it is fundamentally important to know the value of the mixing ratio $\rho$.
 
 Of course, it is possible to perform a relatively direct measurement of $\rho$ through an observation of one of the other \ac{JTW} parameters (e.g., a measurement of $\Abeta$ in combination with Eq.~(\ref{eq:Awithrho_intro}) rapidly leads to a value for $\rho$.).  However, this strategy has certain drawbacks -- notably, the apparatus required to perform such a measurement \emph{well} must be fairly complex;  the TRINAT setup, for example, cannot readily be used with isotopes of most chemical elements.  
@@ -445,6 +533,8 @@ t &=&  \frac{1}{R} \, (1 + P_{\mathrm{EC}}) \,\, t_{1/2}
 where $P_{\mathrm{EC}}$ is the electron capture probability (in the case of $^{37}$K, $P_{\mathrm{EC}}=0.0008$ makes only a small contribution~\cite{SeverijnsTandecki2008}).\aside{could also cite Severijns2008's Refs. 35 and 36...}
 
 We consider the special case of superallowed $0^+ \rightarrow 0^+$ decay (of which $^{37}$K is \emph{not} an example).  These are nice, strong, clean transitions which proceed \emph{only} through the vector coupling, with no axial components.  As such, they are very well suited to extract (using other experimentally measured parameters) a measure of the fundamental vector coupling strength.  If the \ac{CVC} hypothesis holds (and there is some reason to believe that it does~\cite{severijns2006}\cite{HardyTownerSuperallowed2020}), then this coupling strength is common to \emph{all} transitions.
+
+\note[jm]{This is where Juliette is confused about what I'm talking about with this transition and why I don't describe it better.  ``On page 17 she describes a transition other than the one she is studying, but they neglects to explain the transition under consideration. Perhaps it is understandable if the calculation is quite onerous; I would have liked to see a brief summary of it here rather than simply referring to multiple sources.''}
 
 In practice, the $ft$ values measured in superallowed $0^+ \rightarrow 0^+$ transitions need some small corrections in order to arrive at a universally applicable measure of the vector coupling strength.  We define a corrected $ft$ value, $\mathcal{F}t$, as:
 \bea
@@ -497,15 +587,7 @@ We now turn our attention back to the mixed transitions (of which $^{37}$K \emph
 where, in order to get at the vector portion of the full $ft$ value, an adjustment has been made to account for the axial coupling in the decay.  The uncorrected Fermi matrix element $M_F^0$ is related to quantities that have already been defined by $| M_F |^2 =  (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) | M_F^0 |^2 $.  With Eq.~(\ref{eq:rhorelation}), the value of $\rho$ in a mirror decay is described in terms of physical observables from an entirely separate class of decay transitions, as well as its own half-life and branching ratio.  Alternately, with a separate measurement of $\rho$, a check can be performed on the value of $V_{ud}$.~\aside{this would be a good place to cite a bunch of people.}
 
 
-
-
-
-
-
-
-
-
-\note[bluetodo]{}
+\note[bluetodo,nolist]{}
 \note{
 It is often convenient to write the $ft$ value in terms of contributions from the fundamental coupling strengths of the weak interactions, and the corrections and adjustments to the result relating to the specifics of nuclear structure.
 To this end, we introduce $\lambda$, a quantity closely related to $\rho$.  $\lambda$ is in some sense the more fundamental quantity, but it cannot be measured directly.  We have:
@@ -535,12 +617,8 @@ $\rho = \frac{C_A M_{GT}^0}{C_V M_F^0} \left( \frac{ (1 + \delta_{NS}^A - \delta
 %$\delta_{NS}^{V/A}$ is the portion of the outer radiative correction %(depends on the specific nucleus) 
 %that depends in a non-trivial way on nuclear structure, requiring a detailed shell model calculation as described in e.g. Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.
 
-\note{}
+\note[bluetodo,nolist]{}
 %Assuming that the \ac{CVC} hypothesis holds (and there is some reason to believe that it does~\cite{severijns2006}\cite{HardyTownerSuperallowed2020}), 
-
-
-
-\note{}
 
 
 %While we will primarily work with the experimentally measured quantity $\rho$, defined as in Eq.~\ref{eq:definerho}, it is worthwhile to backtrack slightly to consider how this quantity is measured in practice, as this is needed to properly interpret a measurement of $\bFierz$.  We introduce a related quantity, $\lambda$, which cannot be measured directly, but which is in some sense more fundamental than $\rho$.  We have:
@@ -660,11 +738,11 @@ with $R$ the branching ratio and $P_{EC}$ the probability of E.C.  Also, $t$ is 
 %which is also what Ben says, probably citing these guys.
 %}
 
-\note[jbn, nolist]{first, actually, Ben writes a good summary of Ft mirror equation in terms of Ft0+ to 0+ in the PRL, you could just use that in Ch. 1 and it would help enormously. (Of course now I'm scared because it doesn't mention isospin mixing is different for 37K and the others, and that should be in the numerator as (Ft0to0/Ft37K) well as in rho, shouldn't it? I would need to compare to Shidling's expressions to sort this out.)
+\note[done, nolist]{first, actually, Ben writes a good summary of Ft mirror equation in terms of Ft0+ to 0+ in the PRL, you could just use that in Ch. 1 and it would help enormously. (Of course now I'm scared because it doesn't mention isospin mixing is different for 37K and the others, and that should be in the numerator as (Ft0to0/Ft37K) well as in rho, shouldn't it? I would need to compare to Shidling's expressions to sort this out.)
 }
 \note[jbn, nolist]{
-I said Ft wrong. I think you must know what to do.  
-\\
+%I said Ft wrong. I think you must know what to do.  
+%\\
 F is the lepton phase space integral.
 \\
 (Decay rate)/F is then a dimensionless quantity proportional to |matrix element|$^2$, which you could call the intrinsic strength of the transition.
@@ -676,16 +754,17 @@ So e.g. t\_1/2 is wildly different for the 0+ to 0+ decays (t1/2 for $^{14}$O is
 \note[jbn, nolist]{
 ...
 \\
-(That equation is fine-- I was confused earlier.) You can mention that script{Ft} has isospin-breaking and other theory corrections beyond the scope of the thesis, and cite Shidling for those. This equation, along with the Abeta equation in terms of rho (you should not include the right-handed currents in Ben's Abeta equation and re-state that your thesis is working on scalar and tensor in your title) then sets up the inputs you need for the Abeta prediction.
+%(That equation is fine-- I was confused earlier.) 
+You can mention that script{Ft} has isospin-breaking and other theory corrections beyond the scope of the thesis, and cite Shidling for those. This equation, along with the Abeta equation in terms of rho (you should not include the right-handed currents in Ben's Abeta equation and re-state that your thesis is working on scalar and tensor in your title) then sets up the inputs you need for the Abeta prediction.
 }
 
-\note[jbn, nolist]{
+\note[done, nolist]{
 I think you've neglected where the fT value and prediction for Abeta come from, entirely, and still don't have an equation for b\_Fierz in terms of Cs and Ct.
 \\...\\
 You had a note to do this, and in desperation I encouraged you to leave it out.
 I was wrong and Georg is right-- the whole SM prediction for Abeta makes no sense this way, and something about it needs to be there.
 }
-\note[jbn, nolist]{
+\note[done, nolist]{
 there are two ways to add a dedicated section in ch 1:
 \begin{itemize}
 	\item i) by writing the equation for the rate in terms of Vud and rho (the G-T matrix element over Fermi squared), and saying Shidling et al. gets rho from that by assuming Vud from the 0+ to 0+ decays. (You had a note "Do the master equation!" which I think I said you needed to leave out, but I was probably wrong.) But then you have to define all the small corrections, which is a lot of physics.
@@ -726,7 +805,8 @@ The superratio, and superratio asymmetry, has been used for precision beta decay
 
 The key to the effectiveness of the superratio technique is that many systematic effects can be made to cancel at the leading order, at the cost of some statistical resolving power.  The mathematical details of the superratio construction and its results are discussed in detail within Appendix~\ref{appendix:superratio}, so within the present section we will limit ourselves to a discussion of the results.
 
-%\note{}
+\note[jm]{Here's where Juliette thinks I need to discuss the superratio harder.  ``On page 20, the details of the superratio construction are also relegated to an appendix''}
+
 With the four rate spectra, $r_{D P}(\Ebeta)$, describing the rate at which events are detected in beta detector $D$ ($D =\{ \mathrm{T, B}  \}$ are the top and bottom detectors) from a decay whose parent had polarization $P$ ($P=\{+,-\}$), we can construct the superratio asymmetry observable, $A_{\mathrm{super}}$, such that
 \bea
 A_{\mathrm{super}} \;\;=\;\; A_{\mathrm{super}}(\Ebeta) 
@@ -794,7 +874,7 @@ UCNA fits energy spectrum and Abeta[Ebeta] simultaneously now."
 
 \note{The point is, the presence of either scalar or tensor interactions will produce a $\bFierz$ term in the decay PDF.  It has other effects on the PDF, but those come in at higher-order in the tiny scalar and tensor couplings.  So, the Fierz term would be by far the biggest thing that changes in the PDF.  The PDF describes the energy and momentum of the outgoing beta w.r.t. a variety of other things.  Notably, we can write an elegant-ish description of beta momentum w.r.t. nuclear polarization direction, and ignore the neutrino completely after integrating over it.  We have a PDF in beta \emph{direction} (w.r.t. polarization), and beta \emph{energy}.  To lowest order (and lowest order is best order) the distribution w.r.t. polarization direction doesn't change, but the distribution w.r.t. energy does change.  Or ... something?  The point is, it makes a change in the beta energy spectrum.  This change is most pronounced at low energies, because the Fierz term is scaled by $(1/\Ebeta)$.  However, the asymmetry is also a function of $\Ebeta$.  A different function of $\Ebeta$.  In fact, it is scaled by $(\pbeta/\Ebeta)$ within the PDF, which is distinctly different than $\bFierz$.  So, one might ask what effect a $\bFierz$ term would produce on a constructed asymmetry spectrum.  ....This explanation has gone way off track.}
 
-\note[done,nolist]{JB:  You need to at some point say that the supersum is the beta energy spectrum.  There are experiments trying to do this method better, but they are very difficult.  UCNA published a combined energy spectrum and Abeta[Ebeta] analysis on the neutron in March 2020~\cite{NeutronbFierz_March2020}.
+\note[done,nolist]{JB:  You need to at some point say that the supersum is the beta energy spectrum.  There are experiments trying to do this method better, but they are very difficult.  UCNA published a combined energy spectrum and Abeta[Ebeta] analysis on the neutron in March 2020~\cite{UCNAfierz2020}.
 \\...\\
 MJA:  I can't help but also notice the follow-up article from September 2020~\cite{Saul2020}.  Ugh. 
 }
@@ -844,8 +924,23 @@ For the shake-off electrons arising from the Weak process itself, the initial en
 $\rightarrow$``by Levinger, who credits Feynman for the suggestion~\cite{Levinger}.''
 \\...\\
 (Since this is a true story that is not embellished by Feynman in someone else's joke book, but is in a footnote in the Physical Review,  I like to mention it.)
+}
+\note[jbnn]{John says:  "the Feynman anecdote I did not relay correctly and should be cut"}
+\note[jbnn]{btw2, you should drop ``who credits Feynman for the suggestion.''
+\\
+It turns out Feynman suggested how to do the recoil momentum dependence of the shakeoff, including in the sudden approximation an operator for a plane wave ofan electron moving at the recoil velocity. You are quite rightly not trying to consider this hard part here.
 }  \noindent
+%
 The strategy is to assume that the sudden approximation holds, and simply calculate the overlap in electron wavefunctions between the initial and final states, where the final state may be either an outgoing electron or one bound within the atom.  Analytic expressions can be obtained if the atom is treated as being hydrogenic -- an excellent approximation here, as $^{37}\textrm{K}$ is an alkali.  
+\note[jm]{``On page 22, the ``sudden approximation'' is used but is never defined.''}
+\note[jbnn]{4. "sudden approximation"
+\\...\\
+You define it implicitly in text, but she didn't make the connection.
+\\
+It's worth defining it explicitly in passing instead: ``and simply calculate'' -> ``i.e. that one can calculate''
+btw, `arising from the Weak process itself' confuses me, maybe say ``from the initial decay''
+(i.e. as opposed to further atomic decays).}
+%
 
 Unfortunately, this treatment cannot determine the fractional contribution of each orbital to the total, nor can it determine the \emph{number} of electrons likely to be removed in a single decay event.  The implications of the SOE energy spectrum to the present experiment are discussed further in Section~\ref{sec:tof_bg}.
 

@@ -6,10 +6,17 @@
 %%%% --- * --- %%%%	
 \chapter[SuperRatio]{Derivation of the $\bFierz$ Dependence of the Superratio Asymmetry}
 \label{appendix:superratio}
-%%\note[color=jb]{ Appendix KLM you have to pick what you want-- I hope that's Appendix K (that's this one!) -- and remove the rest as you say they're "old". Appendix K could be moved to the end of Experimental Methods because it's absolutely critical and helpful!! but if you want to reference it there and leave it as an Appendix, it's up to you.}
-%%
-%%
-%Consider the following probability distribution for beta decay, which is equivalent to Eq.~(\ref{equation:integrated_jtw}).  %\aside{It's not just equivalent, it's literally identical.  }
+\note[jm]{JM suggests:  Move this thing out of an appendix and into the main?}
+\note[jbnn]{3. superratio:
+\\
+this is up to you. She has a point that the superratio is critical.
+You know that, and understand full details, and that's a real intellectual contribution you've made to your research.
+\\ ...\\
+You could just say it's a critical technique, say a little more qualitatively
+why it's critical (I have not re-read this) but the full lengthy details are reproducing refs. X and are best left to an appendix.
+\\
+Or as you suggest, bring it back in, because it's critical.}
+%
 Recall the integrated JTW probability distribution for outgoing beta particles from Eq.~(\ref{equation:integrated_jtw}):
 \bea
 	\textrm{d}^3 \Gamma ( \Ebeta, \mathbf{ \hat{\Omega}}_\beta ) \, \dEe \, \dOmegae
@@ -25,20 +32,9 @@ Recall the integrated JTW probability distribution for outgoing beta particles f
 	\label{equation:integrated_jtw_in_superratiosection}
 \eea
 We note that the only angular dependence remaining in this equation is the dot product between the direction of beta emission and the direction of nuclear spin-polarization.  This allows us to pull out a further factor of $2\pi$ by choosing the axis of polarization as defining our coordinate system, and integrating over the ``$\phi_\beta$'' coordinate.  The result is a bit more friendly to work with:
-%Integrating this distribution again over $\phi_\beta$, while reducing the
 \bea
-	\textrm{d}^2 \Gamma  ( \Ebeta, \theta ) \, \dEe \, \textrm{d} \theta %\, \dEe \, \dOmegae
+	\textrm{d}^2 \Gamma  ( \Ebeta, \theta ) %\, \dEe \, \textrm{d} \theta %\, \dEe \, \dOmegae
 	&=&
-%	\frac{2}{(2\pi)^3} \, \FF \, \pe \Ee (E_0 - \Ee)^2 \, \dEe \, \dOmegae \, \xi \nonumber\\ 
-%	&& \times \left[
-%		1 + \bFierz \frac{\m c^2}{\Ee} + 
-%		\A  
-%		\left(
-%			\frac{\vecJ}{J} \cdot \frac{\vecpe}{\Ee} 
-%		\right) 
-%	\right]
-%	\\
-%	&=&
 	W(\Ebeta) \left[ 1 + \bFierz \frac{\m c^2}{\Ebeta} + \Abeta \, \frac{v_\beta }{c} |\vec{P}| \cos\theta  \right] \, \dEe \, \textrm{d} \theta , 
 %\label{equation:integrated_jtw}
 \eea

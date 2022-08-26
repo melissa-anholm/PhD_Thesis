@@ -102,6 +102,13 @@ several related experiments using other isotopes.
 	\caption[The TRINAT experimental set-up, viewed from above]{The TRINAT experimental set-up, viewed from above.  Ions from the beamline pass through the collection chamber onto the neutralizer, which is held at ground.  The neutralizer is heated to release the neutral atoms from its surface back into the collection chamber, where some are collected into a \ac{MOT}.  Every 16 seconds, the atoms from the collection chamber's MOT are transferred directly into the detection chamber's MOT, kept focused during the transfer by funnel beams (lasers).  Within the detection chamber, background events are dramatically reduced.  }
 	\label{fig:doublemot}
 \note{Figure was originally created by Alexandre, modified by ... someone else?  Or Alexandre?  And I got it from ... probably an experimental proposal?  I should figure out how to cite a proposal...}
+\note[jbnn]{In Fig 2.2 caption ``Every 16 sec the atoms are transferred''
+\\...\\
+no, that's every 0.71 sec, of course, or we would lose atoms by $2^{16}$ or so decaying in the first trap before tranfer, hmm?
+(The 16 sec business is just 16 steps of a scanning parameter for tuneup-- it's arbitrary in the rest of the run.)
+\\
+I must be misreading this typo?
+}
 \end{figure}
 
 The TRINAT lab accepts radioactive ions delivered by the ISAC beamline at TRIUMF.  These ions are collected on the surface of a hot zirconium foil where they are electrically neutralized, and subsequently escape from the foil into the first of two experimental chambers (the ``collection chamber").  Further details on the neutralization process are presented in a previous publication~\cite{gorelov2000}.  Within the collection chamber, atoms of one specific isotope -- for the purposes of this thesis,  \isotope[37]{K} -- are continuously collected into a magneto-optical trap from the tail end of the thermal distribution.~\aside{made possible by UHV!}  Although this procedure preferrentially traps only the slowest atoms, once trapped, atoms will be cooled further as a side-effect of the MOT's trapping mechanism.  The result is a small ($\sim\!1\,$mm diameter), cold ($\sim\!1\,$mK) cloud of atoms of a particular isotope.  
@@ -112,6 +119,17 @@ There is no need to release previously trapped atoms in the second MOT when a ne
 
 Because the transfer and trapping mechanisms rely on tuning laser frequencies to specific atomic resonances, these mechanisms act on only a single isotope, and all others remain unaffected.  The result is a significant reduction of background contaminants within the detection chamber relative to initial beamline output.  The transfer methodology is discussed in some detail within the collaboration's Ref.~\cite{swanson}.
 
+\note[jm]{Here's where Juliette is annoyed that I don't describe the Swanson method.  
+\\
+``On page 30 the transfer and transport description is not even summarized''
+}
+\note[jbnn]{After your reference to Tom Swanson's paper:
+\\...\\
+`Some features are critical to this experiment.
+The 2nd magneto-optical ``funnel'' in Figure 2.2 was added after Ref. 90, (I assume John means Ref.~\cite{swanson} here...)
+to allow extra $\gamma$-ray shielding (not shown, between the 2 funnels) of untrapped atoms on the walls of the first trap. This is important because the trapping efficiency is about 1/1000.  After the 30 msec laser pulse is on to transfer atoms, a conservative 120 msec is allowed to make sure all the transferred atoms arrive and are collected and cooled before proceeding. Although there is no data collection during that 150 msec, the 2 mm diameter push laser beam is aligned several millimeters high with respect to the 2nd trap cloud to make sure all undecayed atoms are kept.'
+}
+
 We now turn our attention to what happens to the atom cloud in the detection chamber between loading phases (see Fig.~\ref{fig:dutycycle}).  One of the goals for the 2014 $^{37}\textrm{K}$ beamtime required that the atom cloud must be spin-polarized, as well as being cold and spatially confined.  Although the MOT makes it straightforward to produce a cold and well confined cloud of atoms, it is fundamentally incompatible with techniques to polarize these atoms. The physical reasons behind this are discussed in Section~\ref{section:acmot_and_polarization}.~\aside[org]{I *do* discuss this, right?  Right??}
 
 \begin{figure}[h!!]
@@ -120,6 +138,18 @@ We now turn our attention to what happens to the atom cloud in the detection cha
 	{Figures/DutyCycle_2014.pdf}
 	\caption[The 2014 duty cycle for transferring, cooling, trapping, and optically pumping $^{37}\textrm{K}$]{The duty cycle used for transferring, cooling, trapping, and optically pumping $\isotope[37]{K}$ during the June 2014 experiment.  Not drawn to scale.  Question marks indicate timings that varied either as a result of electronic jitter or as a result of variable times to execute the control code.  Atoms are transferred during operation of the DC-MOT.  Though the push beam laser itself is only on for $30\,$ms, the bulk of the DC-MOT's operation time afterwards is needed to collect and cool the transferred atoms.  After 100 on/off cycles of optical pumping and the AC-MOT, the DC-MOT resumes and the next group of atoms is transferred in.  After 16 atom transfers, the polarization of the optical pumping laser is flipped to spin-polarize the atoms in the opposite direction, in order to minimize systematic errors.}	
 	\label{fig:dutycycle}
+	\note[jbnn]{You could similarly (relative to the thing with the Swanson transfer method) comment a paragraph of critical things concerning the polarization, using your figure of the duty cycle as a guide.
+	\\...\\
+	``The need for highly circularly polarized light needed the highly
+reflective mirrors on SiC substrates. The optical pumping process,
+a biased random walk of resonant absorption of circularly polarized light,
+takes about 200 microsec and limits the part of the duty cycle available for trapping, which was chosen conservatively to ensure polarization was maximized.  The nearly uniform trapping field of 2 Gauss during polarization
+makes negligible perturbation of the momentum direction of the betas.
+The polarization knowledge at 1/1000 accuracy removes it as a systematic for $\bFierz$ (see final table... or `it was thus left off the final table', whichever is true).
+\\...\\
+It is thought the largest reason for 99.1\% polarization's deviation from unity
+is remaining transverse magnetic fields not along the optical pumping axis-- many details of this are in ~\cite{thesis}.'
+	}
 \end{figure}
 
 Once the newly transferred set of $^{37}\textrm{K}$ atoms has been collected into the cloud, the entire MOT apparatus cycles 100 times between a state where it is `on' and actively confining atoms, and a state where it is `off' and instead the atoms are spin-polarized by optical pumping while the atom cloud expands ballistically before being re-trapped.  These 100 on/off cycles take a combined total of $488\,$ms.  The laser components of the trap are straightforward to cycle on and off on these timescales, but the magnetic field is much more challenging to cycle in this manner.  
@@ -257,6 +287,8 @@ and taken to be the same in both cases --- a result that could only be attained 
 
 Ambient magnetic field changes of $\sim$50 milliGauss could cause some polarization perturbations at the precision achieved, but the stray fields were kept under control at that level.  The TRINAT lab is in a basement, well shielded from the experimental hall by concrete with rebar, and though 50 mG fields are seen in that hall from an open Helmholtz ion trap, they and the nearby 5-ton crane produce negligible fields when measured at the atom trap. The cyclotron field is $\sim$0.5 Gauss, predominantly vertical, 
 but TRINAT's Helmholtz trim coils are adjusted during calibrations with cyclotron both on and off --- and of course the cyclotron is on with a constant field during the $^{37}$K delivery.  Furthermore, because we switched every few hours between the using the eMCP and rMCP, we were able to rule out the possibility that the polarization might have drifted but escaped notice.  
+
+\note[jm]{Here's where Juliette thinks I should've described the polarization methodology better.  ``On page 39 there is a mention of polarization results with no description of the method''}
 
 \subsection{Beta Detectors}
 \label{section:betadetectors}
