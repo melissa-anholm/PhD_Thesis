@@ -4,7 +4,8 @@
 %
 %
 %%%% --- * --- %%%%	
-\chapter[SuperRatio]{Derivation of the $\bFierz$ Dependence of the Superratio Asymmetry}
+\section[SuperRatio]{Derivation of the $\bFierz$ Dependence of the Superratio Asymmetry}
+%\chapter[SuperRatio]{Derivation of the $\bFierz$ Dependence of the Superratio Asymmetry}
 \label{appendix:superratio}
 \note[jm]{JM suggests:  Move this thing out of an appendix and into the main?}
 \note[jbnn]{3. superratio:
@@ -17,36 +18,37 @@ why it's critical (I have not re-read this) but the full lengthy details are rep
 \\
 Or as you suggest, bring it back in, because it's critical.}
 %
-Recall the integrated JTW probability distribution for outgoing beta particles from Eq.~(\ref{equation:integrated_jtw}):
-\bea
-	\textrm{d}^3 \Gamma ( \Ebeta, \mathbf{ \hat{\Omega}}_\beta ) \, \dEe \, \dOmegae
-	&=& 
-	\frac{2}{(2\pi)^4} \, \FF \, \xi \, \pe \Ee (E_0 - \Ee)^2 \, \dEe \, \dOmegae \,  \nonumber\\ 
-	&& \times \left[
-		1 + \bFierz \frac{\m c^2}{\Ee} + 
-		\A  
-		\left(
-			\frac{\vecJ}{J} \cdot \frac{\vecpe}{\Ee} 
-		\right) 
-	\right].
-	\label{equation:integrated_jtw_in_superratiosection}
-\eea
-We note that the only angular dependence remaining in this equation is the dot product between the direction of beta emission and the direction of nuclear spin-polarization.  This allows us to pull out a further factor of $2\pi$ by choosing the axis of polarization as defining our coordinate system, and integrating over the ``$\phi_\beta$'' coordinate.  The result is a bit more friendly to work with:
+Recalling the integrated JTW probability distribution for outgoing beta particles of Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}), 
+%\bea
+%	\textrm{d}^3 \Gamma ( \Ebeta, \mathbf{ \hat{\Omega}}_\beta ) \, \dEe \, \dOmegae
+%	&=& 
+%	\frac{2}{(2\pi)^4} \, \FF \, \xi \, \pe \Ee (E_0 - \Ee)^2 \, \dEe \, \dOmegae \,  \nonumber\\ 
+%	&& \times \left[
+%		1 + \bFierz \frac{\m c^2}{\Ee} + 
+%		\A  
+%		\left(
+%			\frac{\vecJ}{J} \cdot \frac{\vecpe}{\Ee} 
+%		\right) 
+%	\right].
+%	\label{equation:integrated_jtw_in_superratiosection}
+%\eea
+we note that the only angular dependence remaining in this spectrum is the dot product between the direction of beta emission and the direction of nuclear spin-polarization.  It is therefore possible to pull out a further factor of $2\pi$ by choosing the axis of polarization as defining our coordinate system, and integrating over the $\phi_\beta$ coordinate, and Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}) becomes:
+%The result is a bit more straightforward to work with:
 \bea
 	\textrm{d}^2 \Gamma  ( \Ebeta, \theta ) %\, \dEe \, \textrm{d} \theta %\, \dEe \, \dOmegae
 	&=&
 	W(\Ebeta) \left[ 1 + \bFierz \frac{\m c^2}{\Ebeta} + \Abeta \, \frac{v_\beta }{c} |\vec{P}| \cos\theta  \right] \, \dEe \, \textrm{d} \theta , 
 %\label{equation:integrated_jtw}
 \eea
-where $\theta$ is the angle between the beta emission direction and the polarization direction, and is the only angular dependence that remains.  Here, we have grouped the overall energy dependence into $W(\Ebeta)$, so that
+where $\theta$ is the angle between the beta emission direction and the polarization direction, and is the only angular dependence that remains.  Here, we have grouped the expression's overall energy dependence into the term $W(\Ebeta)$, so that
 \beq
 W(\Ebeta) = \frac{2}{(2\pi)^3} \, \FF \, \xi \, \pe \Ee (E_0 - \Ee)^2, 
 \label{eq:overallenergydependence}
 \eeq
-where we note that the Fermi functions in the above make Eq.~\ref{eq:overallenergydependence} integrable only by numerical methods.  Because it would be difficult to make this expression \emph{more} challenging to work with, it is therefore easy enough to include in this expression any small corrections to overall energy dependence that might arise from e.g.\! recoil-order corrections, as described by Holstein~\cite{holstein}.
+where we note that the Fermi functions in the above make Eq.~\ref{eq:overallenergydependence} integrable only by numerical methods.  Because it would be difficult to make this expression \emph{more} challenging to work with, there is little drawback to including in this expression any small corrections to overall energy dependence that might arise from e.g.\! recoil-order corrections, as described by Holstein~\cite{holstein}.
 %\note{We could also use this with the Holstein formulation, at least some of it.  The point is, we can put *anything* that only depends on beta energy into $W(\Ebeta)$.  It doesn't matter, because it's already only integrable through numerical methods anyway -- so we can't possibly make it worse.}
 
-In the TRINAT geometry with two polarization states (+/-) and two detectors (T/B) aligned along the axis of polarization, we are able to describe four different count rates, with different combinations of polarization states and detectors.  Thus, neglecting beta scattering effects, we have:
+In the TRINAT geometry with two polarization states (+/-) and two nearly equivalent detectors (T/B) aligned along the axis of polarization, we are able to describe four different count rates, with different combinations of polarization states and detectors.  Thus, neglecting beta scattering effects, we have:
 \bea
 r_{\mathrm T+}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm T+} \right] \label{eq:r1} \\
 r_{\mathrm B+}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm B+} \right] \label{eq:r2}\\
