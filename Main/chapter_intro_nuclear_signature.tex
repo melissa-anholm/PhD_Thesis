@@ -434,7 +434,7 @@ where $C_A$ and $C_V$ are universally applicable vector and axial coupling const
 %\note[tag]{}
 %  
 
-\note[done,nolist]{JB:  I don't see where you mention the experimentally produced $M_F/M_{GT}$ that goes into the calculation for $\Abeta$.  You have the references.  You could at least say that Eq. 1.11 combined with the measured ft value produces $\lambda$, which in turn produces $\Abeta$.}  
+%%%%\note[done,nolist]{JB:  I don't see where you mention the experimentally produced $M_F/M_{GT}$ that goes into the calculation for $\Abeta$.  You have the references.  You could at least say that Eq. 1.11 combined with the measured ft value produces $\lambda$, which in turn produces $\Abeta$.}  
 Then, specializing to the 98\% branch of $^{37}$K decay, and given the expected behaviour of the standard model,
 %\aside[tag]{We've specialized to 37K without telling anyone here!!!  Can't do that unless we say so.} 
 we can express $\xi$, $\bFierz$, and $\Abeta$ as:
@@ -465,11 +465,11 @@ Although recoil-order and other small corrections must be accounted for within t
 
 Within this work, we are particularly interested in the $\bFierz$ parameter.  Though it is identically zero under the standard model, it is quite sensitive to certain \ac{BSM} physics.  In particular, it describes (small) left-handed scalar and tensor couplings at \emph{linear} order, while these \ac{BSM} parameters only enter at the quadratic order in the case of $\xi$ and $\Abeta$.  In particular, in terms of the left-handed scalar and tensor couplings $g_S$ and $g_T$, $\bFierz$ has the form 
 \bea
-\bFierz &=& \frac{-2\gamma}{1 + \rho^2} \left( \frac{g_S}{g_V} + \rho^2 \frac{g_T}{g_A} \right), 
-%\label{bFierzwithlambda}
+\bFierz &=& \frac{-2\gamma}{1 + \rho^2} \left( \frac{g_S}{g_V} + \rho^2 \frac{g_T}{g_A} \right). 
+\label{bFierzwithlambda}
 \eea
-where $\gamma \approx 1$ is defined as in Appendix~\ref{sec:jtw_formalism}, and
-which clearly reduces to 0 in the standard model limit where $g_S = g_T = 0$.
+Here $\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2} \approx 1$, where $Z^\prime$ is the atomic number of the daughter, and as usual $\alpha$ is the fine structure constant. It is clear that Eq.~\ref{bFierzwithlambda} reduces to 0 in the standard model limit where $g_S = g_T = 0$.
+%$\gamma \approx 1$ is defined as in Appendix~\ref{sec:jtw_formalism}, and\
 
 
 
@@ -481,38 +481,6 @@ which clearly reduces to 0 in the standard model limit where $g_S = g_T = 0$.
 %%%% %%%% %%%% %%%% %%%% %%%%
 \subsection{Measuring the Gamow-Teller/Fermi Mixing Ratio}
 \label{sec:extractinglambda}
-\note[jbnn]{John on Juliette's p. 17 comment about $0^+ \rightarrow 0^+$:
-\\...\\
-She's clearly just concerned you spend pages on 0+ to 0+, but then
-just "define" your mirror nucleus master equation 1.21 with minimal to no explanation. 
-\\...\\
-You can fix this qualitatively without trouble.  My suggested remedy:
-\\...\\
-``We define a corrected Ft value...'' 
-\\
-$\rightarrow$
-\\
-``We extend this corrected Ft value for our vector part to our mirror nucleus by including the contribution of the G-T matrix element squared, mostly by inspection [your references here]''
-\\...\\
-Then your Eq.~(\ref{eq:rhorelation})
-\\...\\
-``where rho is the ratio of axial vector to vector matrix elements defined in
-Eq.~(\ref{eq:definerho_intro}).
-\\
-Here, $f_A$ and $f_V$ are integrals over the lepton phase space for the axial
-vector and vector parts. Those integrals are identical in the allowed approximation, but are different by X\% when higher-order terms are taken into account.''
-(see Appendix~\ref{appendix_forthepeople}.N citing Holstein, and Hayen2021).
-}
-%
-\note[jbnn]{My apologies for speculating more needs to be said about $0^+ \rightarrow 0^+$ -- that's not her main concern-- but it might help to add a further qualitative sentence after
-\\
-`then this coupling strength is common to all transitions.'
-\\
-with something like
-\\
-`We will need this absolute strength for the vector part of 37K decay when we get the ratio of vector and axial vector matrix elements from our fT value and predict our observables.'
-}
-%%
 It is clear from Sec.~\ref{sec:mathdescription_intro} that in order to make a real prediction about the behaviour of outgoing particles within a particular beta decay transition, it is fundamentally important to know the value of the mixing ratio $\rho$.
 
 Of course, it is possible to perform a relatively direct measurement of $\rho$ through an observation of one of the other \ac{JTW} parameters (e.g., a measurement of $\Abeta$ in combination with Eq.~(\ref{eq:Awithrho_intro}) rapidly leads to a value for $\rho$.).  However, this strategy has certain drawbacks -- notably, the apparatus required to perform such a measurement \emph{well} must be fairly complex;  the TRINAT setup, for example, cannot readily be used with isotopes of most chemical elements.  
@@ -534,7 +502,7 @@ where $P_{\mathrm{EC}}$ is the electron capture probability (in the case of $^{3
 
 We consider the special case of superallowed $0^+ \rightarrow 0^+$ decay (of which $^{37}$K is \emph{not} an example).  These are nice, strong, clean transitions which proceed \emph{only} through the vector coupling, with no axial components.  As such, they are very well suited to extract (using other experimentally measured parameters) a measure of the fundamental vector coupling strength.  If the \ac{CVC} hypothesis holds (and there is some reason to believe that it does~\cite{severijns2006}\cite{HardyTownerSuperallowed2020}), then this coupling strength is common to \emph{all} transitions.
 
-\note[jm]{This is where Juliette is confused about what I'm talking about with this transition and why I don't describe it better.  ``On page 17 she describes a transition other than the one she is studying, but they neglects to explain the transition under consideration. Perhaps it is understandable if the calculation is quite onerous; I would have liked to see a brief summary of it here rather than simply referring to multiple sources.''}
+
 
 In practice, the $ft$ values measured in superallowed $0^+ \rightarrow 0^+$ transitions need some small corrections in order to arrive at a universally applicable measure of the vector coupling strength.  We define a corrected $ft$ value, $\mathcal{F}t$, as:
 \bea
@@ -584,9 +552,51 @@ We now turn our attention back to the mixed transitions (of which $^{37}$K \emph
 %%\nonumber \\
 %%&=& f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} )
 \eea
-where, in order to get at the vector portion of the full $ft$ value, an adjustment has been made to account for the axial coupling in the decay.  The uncorrected Fermi matrix element $M_F^0$ is related to quantities that have already been defined by $| M_F |^2 =  (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) | M_F^0 |^2 $.  With Eq.~(\ref{eq:rhorelation}), the value of $\rho$ in a mirror decay is described in terms of physical observables from an entirely separate class of decay transitions, as well as its own half-life and branching ratio.  Alternately, with a separate measurement of $\rho$, a check can be performed on the value of $V_{ud}$.~\aside{this would be a good place to cite a bunch of people.}
+where, in order to get at the vector portion of the full $ft$ value, an adjustment has been made to account for the axial coupling in the decay.  The uncorrected Fermi matrix element $M_F^0$ is related to quantities that have already been defined by $| M_F |^2 =  (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) | M_F^0 |^2 $.  With Eq.~(\ref{eq:rhorelation}), the value of $\rho$ in a mirror decay is described in terms of physical observables from an entirely separate class of decay transitions, as well as its own half-life and branching ratio.  Alternately, with a separate measurement of $\rho$, a check can be performed on the value of $V_{ud}$.
+%~\aside{this would be a good place to cite a bunch of people.}
 
 
+\note[bluetodo,nolist]{}
+
+
+\note[jm]{This is where Juliette is confused about what I'm talking about with this transition and why I don't describe it better.  ``On page 17 she describes a transition other than the one she is studying, but they neglects to explain the transition under consideration. Perhaps it is understandable if the calculation is quite onerous; I would have liked to see a brief summary of it here rather than simply referring to multiple sources.''}
+
+\note[jbnn]{John on Juliette's p. 17 comment about $0^+ \rightarrow 0^+$:
+\\...\\
+She's clearly just concerned you spend pages on 0+ to 0+, but then
+just "define" your mirror nucleus master equation 1.21 with minimal to no explanation. 
+\\...\\
+You can fix this qualitatively without trouble.  My suggested remedy:
+\\...\\
+``We define a corrected Ft value...'' 
+\\
+$\rightarrow$
+\\
+``We extend this corrected Ft value for our vector part to our mirror nucleus by including the contribution of the G-T matrix element squared, mostly by inspection [your references here]''
+\\...\\
+Then your Eq.~(\ref{eq:rhorelation})
+\\...\\
+``where rho is the ratio of axial vector to vector matrix elements defined in
+Eq.~(\ref{eq:definerho_intro}).
+\\
+Here, $f_A$ and $f_V$ are integrals over the lepton phase space for the axial
+vector and vector parts. Those integrals are identical in the allowed approximation, but are different by X\% when higher-order terms are taken into account.''
+(see Appendix~\ref{appendix_forthepeople}.N citing Holstein, and Hayen2021).
+}
+%
+\note[jbnn]{My apologies for speculating more needs to be said about $0^+ \rightarrow 0^+$ -- that's not her main concern-- but it might help to add a further qualitative sentence after
+\\
+`then this coupling strength is common to all transitions.'
+\\
+with something like
+\\
+`We will need this absolute strength for the vector part of 37K decay when we get the ratio of vector and axial vector matrix elements from our fT value and predict our observables.'
+}
+%%
+
+
+
+\note[bluetodo,nolist]{}
 \note[bluetodo,nolist]{}
 \note{
 It is often convenient to write the $ft$ value in terms of contributions from the fundamental coupling strengths of the weak interactions, and the corrections and adjustments to the result relating to the specifics of nuclear structure.
@@ -791,6 +801,13 @@ You can mention that script{Ft} has isospin-breaking and other theory correction
 
 
 
+%%%% --- * --- %%%%
+\ifthenelse{\boolean{isdraft}}
+{
+	\pagebreak
+}
+{}
+%%%% --- * --- %%%%
 
 
 %%%% --- * --- %%%%
@@ -806,7 +823,7 @@ One way to do this is to separate the data into categories relating to their ang
 
 The superratio, and superratio asymmetry, has been used for precision beta decay measurements in the past to measure the neutron's beta asymmetry\cite{UCNA_first_superratio}, and our own collaboration has also used it to measure the beta asymmetry in $^{37}$K~\cite{ben_Abeta}.  More recently, it has been used to measure the neutron's Fierz interference term~\cite{UCNAfierz2020}\cite{Saul2020} as well, with notably more impressive results than using the earlier `supersum' data combination method~\cite{UCNA_first_Fierz}.  
 
-The key to the effectiveness of the superratio technique is that many systematic effects can be made to cancel at the leading order, at the cost of some statistical resolving power.  The mathematical details of the superratio construction and its results are discussed in detail within Appendix~\ref{appendix:superratio}, so within the present section we will limit ourselves to a discussion of the results.
+The key to the effectiveness of the superratio technique is that many systematic effects can be made to cancel at the leading order, at the cost of some statistical resolving power.  The mathematical details of the superratio construction and its results are discussed in detail within Section~\ref{appendix:superratio}, so within the present section we will limit ourselves to a discussion of the results.
 
 \note[jm]{Here's where Juliette thinks I need to discuss the superratio harder.  ``On page 20, the details of the superratio construction are also relegated to an appendix''}
 
@@ -911,66 +928,6 @@ MJA:  I can't help but also notice the follow-up article from September 2020~\ci
 
 
 
-%%%% --- * --- %%%%	
-\section{The Shake-off Electron Spectrum}
-\label{section:soe_intro}
-Although the beta decay process is primarily concerned with the emission of beta particles (electrons or positrons) from a Weak interaction that occurs within the nucleus, it is common for one or more \emph{orbital} electrons to also be lost in the process.  Although beta particles are emitted over a continuous energy spectrum, they commonly carry several MeV of kinetic energy.  By contrast, an atomic electron that becomes unbound in this process is likely to only carry a few eV of kinetic energy.  These are referred to as \acp{SOE}, since they are in some sense shaken off.
-
-We will amend Eq.~\ref{eq:ourdecay} to reflect the presence of $N$ such \ac{SOE}s within each decay event, as
-\bea
-^{37}\textrm{K} &\rightarrow& \,^{37}\textrm{\!Ar}^{(N-1)+} + \beta^{+} + \nu_e + N \, e_{\textrm{SO}}, 
-\label{eq:ourdecay_withsoe}
-\eea
-%\aside{Do I want to re-assign N somehow so the notation works better?}
-where it is clear that, since the parent $^{37}\textrm{K}$ atom was electrically neutral before its decay by $\beta^+$ emission, the daughter $^{37}\textrm{\!Ar}$ will initially have an extra
-%~\aside[jbn]{'extra' -> extra. You're not breaking charge conservation here, you don't need to define the word.} 
-orbital electron (and therefore a negative net charge) if no electrons are shaken off.  We also note that it is common for multiple SOEs to be created in a given decay event.  
-
-A further consideration is that the outer electron in an $^{37}\textrm{\!Ar}^{-}$ ion is not bound\cite{ArgonMinusIons}, and in an electric field such as is present within our experimental chamber, this outer electron is removed immediately to be accelerated through the field, leaving behind a neutral $^{37}\textrm{\!Ar}$ atom.  Although this is in principle a different physical loss mechanism, we will refer to unbound electrons resulting from either process as SOEs.  
-
-It is useful to consider the energy spectrum of these shake-off electrons.  The most straightforward component of the SOE energy spectrum arises from the electrons that are lost immediately \emph{after} the decay, and we take these to initially have 0\,eV kinetic energy.  
-
-For the shake-off electrons arising from nuclear decay process, the initial energy spectra for SOEs originating in a particular atomic orbital shell can be estimated according to the procedure outlined by J.S. Levinger in 1953~\cite{Levinger}.
-%, who credits Feynman for the suggestion~\cite{Levinger}.
-%%%~\note[done, nolist]{JB:  \\
-%%%$\rightarrow$``by Levinger, who credits Feynman for the suggestion~\cite{Levinger}.''
-%%%\\...\\
-%%%(Since this is a true story that is not embellished by Feynman in someone else's joke book, but is in a footnote in the Physical Review,  I like to mention it.)
-%%%}
-%%%\note[done,nolist]{John says:  "the Feynman anecdote I did not relay correctly and should be cut"}
-%%%\note[done,nolist]{btw2, you should drop ``who credits Feynman for the suggestion.''
-%%%\\
-%%%It turns out Feynman suggested how to do the recoil momentum dependence of the shakeoff, including in the sudden approximation an operator for a plane wave ofan electron moving at the recoil velocity. You are quite rightly not trying to consider this hard part here.
-%%%}  \noindent
-%
-The strategy is to assume that the sudden approximation holds, meaning that the change in the shape of the potential well between initial and final states occurs so rapidly that the wavefunction of (in this case) the atomic electron does not have time to adapt.  Then, one simply calculates the overlap in wavefunctions between the bound initial state and the eigenstates of the final post-decay system.  The final state of the electron may be either bound or unbound, and analytic expressions to describe the energy of the unbound electrons may be obtained if the atom is treated as being hydrogenic --- an excellent approximation here, as $^{37}\textrm{K}$ is an alkali.  
-\note[done,nolist]{``On page 22, the ``sudden approximation'' is used but is never defined.''}
-\note[done,nolist]{4. "sudden approximation"
-\\...\\
-You define it implicitly in text, but she didn't make the connection.
-\\
-It's worth defining it explicitly in passing instead: ``and simply calculate'' -> ``i.e. that one can calculate''
-btw, `arising from the Weak process itself' confuses me, maybe say ``from the initial decay''
-(i.e. as opposed to further atomic decays).}
-%
-
-Unfortunately, this treatment cannot determine the fractional contribution of each orbital to the total, nor can it determine the \emph{number} of electrons likely to be removed in a single decay event.  The implications of the SOE energy spectrum to the present experiment are discussed further in Chapter~\ref{sec:tof_bg}.
-
-\note[org,nolist]{In the end, we used $(0.09)*(\textrm{0eV}) + (0.91)*(0.85*(\textrm{4S}) + 0.15*(\textrm{3P}))$.  But I say that in the other section.  Also, John used Eq.20 for the 4S, and Eq.24 for the 3P.}
-\note{Comment on how well this matches our data?  Somehow?}
-
-%\note{Should I talk about the distribution of how many SOEs come off in a decay?  I have measurements of the recoil charge distribution, which is related but not really the same thing.  From a theoretical POV, I don't know how many get shaken off.  Thankfully, it doesn't matter very much in the end.}
-
-%%%%%\begin{figure}[h!!t]
-%%%%%	\centering
-%%%%%	\includegraphics[width=.999\linewidth]
-%%%%%	{Figures/Levinger_SOETOF_prelim.pdf}
-%%%%%	\note[clean]{Clean up SOE TOF pic in intro.  It doesn't show what I need!}
-\note[oldnote,nolist]{A picture of the SOE spectrum for the intro was here.  It's gone now, but it's important that we remember!  pretty sure I reference it from somewhere else...}
-%%%%%	\note{Maybe just kill this picture?  At least reference it in the text somewhere.}
-%%%%%	\caption[Levinger TOF]{Shake-off electron TOF (w.r.t. beta TOA) spectrum, showing how the spectrum is different if one includes different sets of initial electrons to be shaken off.  I forget why some of them have 0 eV.  Maybe those are the ones from the $\isotope[37]{Ar}^+$. ... Levinger TOF spectra for some different sets of SOE initial orbitals before shake-off.  (At least that's what it's supposed to be, after I fix the picture).  It's reconstructed event-by-event with beta times-of-flight that would pass some basic `good event' cuts.  Anyway, it turns out, it doesn't much matter what orbitals you lose SOEs from.  That's nice.  In the end, I used 85+15.  \comment{(Need to re-plot this.)} }	
-%%%%%	\label{fig:levinger_TOF}
-%%%%%\end{figure}
 
 
 
