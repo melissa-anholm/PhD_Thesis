@@ -338,5 +338,7 @@ the cloud has been fully polarized.  The number of photoion events that occur on
 \section{Considerations for Data Collection}
 \label{sec:dataconsiderations}
 \note[note]{Talk about the data collection.  What types of events are stored?}
+There are too many events and the daq is overwhelmed if you record all the events where the eMCP or rMCP is hit.  Although possibly we recorded some with all the eMCP events?  Not sure.
+Instead, we record all the events where a scintillator is hit, and all(?) the events where a photoionization laser pulse happens.  It goes at like 10 kHz.  Or maybe it was all the events with a photoionization laser pulse in coincidence with a photoelectron (TOF window) or photoion (TOF window).  But I don't think that's quite right.  That's not what the spectra looked like in the end, so I think that was maybe only for the online plots or something?  Not for the triggers.  Did we clean the non-SOE events in the data acquisition *right then*?  You could do that ok with the electrons, but not so much with the ions.  
 \note[tag]{}
 

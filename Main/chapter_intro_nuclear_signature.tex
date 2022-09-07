@@ -378,7 +378,9 @@ is worked out in detail within the contents of Appendix~\ref{appendix_forthepeop
 \eea
 Here, $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the outgoing $\beta$ particle's (total) energy, momentum 3-vector, and momentum scalar, 
 %while $\Enu$, $\vecpnu$, and $\pnu$ are the equivalent quantities for the outgoing (anti-)neutrino, 
-and $E_0$ is the maximum possible $\beta$ energy associated with the transition.\aside{Holstein gives a formula for it.  Maybe I should write it out...}   $\vecJ$ is the  angular momentum vector associated with the parent nucleus, and $J$ its projection onto the axis of quantization. 
+and $E_0$ is the maximum possible $\beta$ energy associated with the transition.
+%\aside{Holstein gives a formula for it.  Maybe I should write it out...}   
+$\vecJ$ is the  angular momentum vector associated with the parent nucleus, and $J$ its projection onto the axis of quantization. 
 %$\hatj$ is a unit vector in the direction of $\vecJ$ (note that in general, $\hatj \neq \frac{\vecJ}{J}$).  
 As usual, $\me$ is the mass of the electron.
 %, and $c$ is the speed of light.  
@@ -481,18 +483,22 @@ Here $\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2} \approx 1$, where $
 %%%% %%%% %%%% %%%% %%%% %%%%
 \subsection{Measuring the Gamow-Teller/Fermi Mixing Ratio}
 \label{sec:extractinglambda}
-It is clear from Sec.~\ref{sec:mathdescription_intro} that in order to make a real prediction about the behaviour of outgoing particles within a particular beta decay transition, it is fundamentally important to know the value of the mixing ratio $\rho$.
+It is clear from Sec.~\ref{sec:mathdescription_intro} that in order to make a prediction about the behaviour of outgoing particles within a particular beta decay transition, it is fundamentally important to know the value of the mixing ratio $\rho$.
 
 Of course, it is possible to perform a relatively direct measurement of $\rho$ through an observation of one of the other \ac{JTW} parameters (e.g., a measurement of $\Abeta$ in combination with Eq.~(\ref{eq:Awithrho_intro}) rapidly leads to a value for $\rho$.).  However, this strategy has certain drawbacks -- notably, the apparatus required to perform such a measurement \emph{well} must be fairly complex;  the TRINAT setup, for example, cannot readily be used with isotopes of most chemical elements.  
 
-For $^{37}$K in particular, the more direct approach \emph{has} been used in the past, both with the present dataset and with previously collected data, yielding an overall value of $\rho=0.576 \pm 0.006$~\cite{ben_Abeta}\cite{shidling2014}\cite{dan_Bnu}.
+For $^{37}$K in particular, this direct approach \emph{has} been used in the past, both with the present dataset as well as with previously collected data, yielding an overall value of $\rho=0.576 \pm 0.006$~\cite{ben_Abeta}\cite{shidling2014}\cite{dan_Bnu}.
 
 As we do not wish to re-use the same data twice within the same measurement, we take as our baseline the value of $\rho$ as extracted in a more roundabout way as described below.
 
 
-It is useful to define the strength, $ft$, of a transition---also known as the $ft$ value.  This is fundamentally an experimental quantity.  Though the $ft$ value is in principle the product of two quantities, the statistical rate function $f$ and the partial half-life $t$, it is common to treat the product as a single unit.  The $ft$ value then can be directly related to the fundamental vector coupling strength.  
-
-The statistical rate function $f$ must be split up into vector and axial components ($f_V$ and $f_A$) in order be evaluated, and $f_V$ in particular is often used alone, as we will see below.  Both vector and axial statistical rate functions are mathematically non-trivial objects\cite{towner_hardy_1995_frombook}\cite{HardyTowner2005_Superallowed}, but can be evaluated by, e.g., the methods of Refs.~\cite{wilkinson2}\cite{wilkinson3}\cite{wilkinson4}.  For our purposes here, we will simply note that $f$ is characterized primarily by the beta endpoint energy $E_0$, which can be readily measured.  
+It is useful to define the strength, $ft$, of a transition---also known as the $ft$ value.  This is fundamentally an experimental quantity.  Though the $ft$ value is in principle the product of two quantities, the statistical rate function $f$ and the partial half-life $t$, it is common to treat the product as a single unit.  
+%The $ft$ value then can be directly related to the fundamental vector coupling strength.  
+%
+The statistical rate function $f$ must be split into vector and axial components ($f_V$ and $f_A$) in order be evaluated, and $f_V$ in particular is often used alone, as we will see below.  Both vector and axial statistical rate functions are mathematically non-trivial objects\cite{towner_hardy_1995_frombook}\cite{HardyTowner2005_Superallowed}, but can be evaluated by, e.g., the methods of Refs.~\cite{wilkinson2}\cite{wilkinson3}\cite{wilkinson4}.  
+Such calculations are beyond the scope of the present work, however we will note that 
+%For our purposes here, we will simply note that 
+$f_V$ and $f_A$ are characterized primarily by the beta endpoint energy $E_0$, which can be readily measured.  
 
 The partial half-life $t$ can be quickly calculated given knowledge of the total half-life $t_{1/2}$ and branching ratio $R$, as:
 \bea
@@ -500,7 +506,10 @@ t &=&  \frac{1}{R} \, (1 + P_{\mathrm{EC}}) \,\, t_{1/2}
 \eea
 where $P_{\mathrm{EC}}$ is the electron capture probability (in the case of $^{37}$K, $P_{\mathrm{EC}}=0.0008$ makes only a small contribution~\cite{SeverijnsTandecki2008}).\aside{could also cite Severijns2008's Refs. 35 and 36...}
 
-We consider the special case of superallowed $0^+ \rightarrow 0^+$ decay (of which $^{37}$K is \emph{not} an example).  These are nice, strong, clean transitions which proceed \emph{only} through the vector coupling, with no axial components.  As such, they are very well suited to extract (using other experimentally measured parameters) a measure of the fundamental vector coupling strength.  If the \ac{CVC} hypothesis holds (and there is some reason to believe that it does~\cite{severijns2006}\cite{HardyTownerSuperallowed2020}), then this coupling strength is common to \emph{all} transitions.
+We will now consider the special case of superallowed $0^+ \rightarrow 0^+$ decay (of which $^{37}$K is \emph{not} an example).  As a general rule, these are strong, clean transitions which proceed \emph{only} through vector coupling, with no axial components.  As such, they are 
+%very well suited to extract (using other experimentally measured parameters) a measure of the fundamental vector coupling strength.  
+ideal candidates for measurements of the fundamental vector coupling strength.
+If the \ac{CVC} hypothesis holds (and there is some reason to believe that it does~\cite{severijns2006}\cite{HardyTownerSuperallowed2020}), then this coupling strength is common to \emph{all} transitions.
 
 
 
@@ -514,7 +523,7 @@ $\delta_C^{V}$ is the isospin symmetry breaking correction for the vector curren
 $\delta^\prime_R$ is the portion of the outer radiative correction (ie, dependent on the specific nucleus in question) that depends only trivially on the nucleus, 
 and
 $\delta_{NS}^{V}$ is the portion of the outer radiative correction %(depends on the specific nucleus) 
-to the vector current that depends in a \emph{non-trivial} way on nuclear structure and requires a detailed shell model calculation to evaluate, as described in e.g.  Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.  We have specialized the $\mathcal{F}t$ value to consider only the vector component of the statistical rate function; this is redundant in the case of superallowed $0^+ \rightarrow 0^+$ transitions.
+to the vector current that depends in a \emph{non-trivial} way on nuclear structure and requires a detailed shell model calculation to evaluate, as described in e.g.  Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.  We have of course implicitly specialized the $\mathcal{F}t$ value to consider only the vector component of the statistical rate function, but this is redundant in the case of the superallowed $0^+ \rightarrow 0^+$ transitions that are presently under consideration.
 
 Within Eq.~\ref{eq:define_Ft}, we have corrected away all contributions from nuclear structure, and what remains can also be described in terms of fundamental couplings as:
 \bea
@@ -528,7 +537,7 @@ We can also relate the vector coupling constant $G_V$ to two other experimental 
 G_V = V_{ud}  \, G_F
 \label{eq:Vud_relate}
 \eea
-where $G_F$ is the weak interaction coupling constant, and is measured experimentally through muon decay.  $V_{ud}$ is the up-down mixing element within the \ac{CKM} matrix, and its precise determination is an active area of curent research, motivated by the attempt to search for or constrain the possible presence of a fourth generation of quarks.
+where $G_F$ is the weak interaction coupling constant, and is measured experimentally through muon decay.  $V_{ud}$ is the up-down mixing element within the \ac{CKM} matrix, and its precise determination is an active area of current research, motivated in part by the attempt to search for or constrain the possible presence of a fourth generation of quarks.
 
 Combining Eqs.~(\ref{eq:define_Ft}), (\ref{eq:relate_Ft_to_couplings}), and (\ref{eq:Vud_relate}), we have:
 \bea
@@ -538,21 +547,29 @@ Combining Eqs.~(\ref{eq:define_Ft}), (\ref{eq:relate_Ft_to_couplings}), and (\re
 f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ), 
 \label{eq:Ft_with_Vud}
 \eea
-allowing for a variety of cross-checks to be performed on physical observables.  
+which allows for a variety of cross-checks to be performed on physical observables.  
 
-We now turn our attention back to the mixed transitions (of which $^{37}$K \emph{is} an example) to establish an analogous relationship between observables.  Eq.~\ref{eq:define_Ft} is still technically applicable, but its $f_Vt$ value is no longer so readily observable, as it accounts for only the vector-coupled portion of the decay phase space.  We define a corrected $ft$ value specific to the case of mirror nuclei, denoted $\mathcal{F}t_0$ 
+We now turn our attention back to the mixed transitions (of which $^{37}$K \emph{is} an example) to establish an analogous relationship between observables.  Eq.~\ref{eq:define_Ft} is still technically applicable, but its $f_Vt$ value is no longer so readily observable, as it accounts for only the vector-coupled portion of the decay phase space.  We extend this corrected vector $\mathcal{F}t$ value to mirror decays\aside[note]{Is it all mixed transitions, or only mirror decays??} by including the contribution of the (squared) Gamow-Teller matrix element, mostly by inspection.  The result, denoted $\mathcal{F}t_0$, is given by
+%We define a corrected $ft$ value specific to the case of mirror nuclei, denoted $\mathcal{F}t_0$ 
 %\cite{SeverijnsTandecki2008}
 \cite{shidling2014}
 \cite{naviliat2009april}
 \cite{ben_Abeta}:
 \bea
-\mathcal{F}t_0 &=&  \mathcal{F}t \, C_V^2 \, | M_F^0|^2 \left(1+\frac{f_A}{f_V} \rho^2 \right)
+\mathcal{F}t_0 &=&  \mathcal{F}t \, C_V^2 \, | M_F^0|^2 \left(1+\frac{f_A}{f_V} \rho^2 \right),
 \label{eq:rhorelation}
 %\frac{2 \mathcal{F}t }{ 1 + \frac{f_A}{f_V} \rho^2}, 
 %%\nonumber \\
 %%&=& f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} )
 \eea
-where, in order to get at the vector portion of the full $ft$ value, an adjustment has been made to account for the axial coupling in the decay.  The uncorrected Fermi matrix element $M_F^0$ is related to quantities that have already been defined by $| M_F |^2 =  (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) | M_F^0 |^2 $.  With Eq.~(\ref{eq:rhorelation}), the value of $\rho$ in a mirror decay is described in terms of physical observables from an entirely separate class of decay transitions, as well as its own half-life and branching ratio.  Alternately, with a separate measurement of $\rho$, a check can be performed on the value of $V_{ud}$.
+%where, in order to get at the vector portion of the full $ft$ value, an adjustment has been made to account for the axial coupling in the decay.  
+where $\rho$ is the ratio of axial vector and vector matrix elements defined as in Eq.~(\ref{eq:definerho_intro}).  
+Here, $f_A$ and $f_V$ are integrals over the lepton phase space for the axial vector and vector parts. Those integrals are identical in the allowed approximation, but differ by X\% when higher-order terms are taken into account.
+(see Appendix~\ref{appendix_forthepeople}, Refs.~\cite{holstein},~\cite{Hayen2021}.
+\note[tag]{$f_A$ and $f_V$ with higher-order terms.  X\%.  See Hayen2021.}
+
+
+The uncorrected Fermi matrix element $M_F^0$ is related to quantities that have already been defined by $| M_F |^2 =  (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) | M_F^0 |^2 $.  With Eq.~(\ref{eq:rhorelation}), the value of $\rho$ in a mirror decay is described in terms of physical observables from an entirely separate class of decay transitions, as well as its own half-life and branching ratio.  Alternately, with a separate measurement of $\rho$, a check can be performed on the value of $V_{ud}$.
 %~\aside{this would be a good place to cite a bunch of people.}
 
 
