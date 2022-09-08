@@ -158,39 +158,65 @@ The retroreflecting lasers are red-detuned and circularly polarized in a directi
 \section{The AC-MOT}
 \label{sec:acmot}
 \note[tag]{Initially, this section is a literal duplicate of Chapter~\ref{section:acmot_and_polarization}.  When I'm done, most of the content will live *there*.  This is the intro chapter/section here.}
-One specialized type of magneto-optical trap is the AC-MOT, so named because of its use of a sinusoidal alternating current (AC) within its anti-Helmholtz coils, in contrast to the constant current used in a typical MOT (hereafter referred to as a DC-MOT to eliminate ambiguity).  Although the DC-MOT's robust trapping mechanism cannot be fully matched by a similar AC-MOT, the DC-MOT is very slow to turn off, and it is this latter consideration that led the TRINAT collaboration to implement an AC-MOT for its second trap.
+%
+One specialized type of magneto-optical trap is the AC-MOT, which was first described by Harvey and Murray in 2008~\cite{harveymurray}.  The AC-MOT is so named because of the sinusoidal alternating current (AC) used in its anti-Helmholtz coils --- in contrast to the constant direct current used in a typical MOT (hereafter referred to as a DC-MOT to eliminate ambiguity).  Although the DC-MOT's robust trapping mechanism cannot be fully matched by a similar AC-MOT, the DC-MOT is very slow to turn off, and it is this latter consideration that has led the TRINAT collaboration to implement an AC-MOT in its second trap.
 
 %, a consideration that led the TRINAT collaboration to implement an AC-MOT  
 %It was this consideration that motivated the TRINAT collaboration to implement an 
 %It is this consideration 
 %As a result, the TRINAT collaboration has 
 
-Although the trapping mechanism itself can be rapidly destroyed in both an AC- and DC-MOT, the DC-MOT's magnetic field is slow to dissipate and challenging to control during this time.  Because the optical pumping process which (in the present experiment) immediately follows the MOT being shut off requires a uniform magnetic field (in contrast to the uniform magnetic field \emph{gradient} needed for the MOT), we do not consider the MOT to have been fully shut off until any residual magnetic fields have completely dissipated.  
+Although the trapping mechanism itself can be rapidly destroyed in both an AC- and DC-MOT by simply shutting off the trapping lasers, the DC-MOT's magnetic field is slow to dissipate and challenging to control during this time.  Because the optical pumping process which (in the present experiment) immediately follows the MOT being shut off requires a uniform magnetic field (in contrast to the uniform magnetic field \emph{gradient} needed for a functional MOT), we do not consider the MOT to have been fully shut off until any residual magnetic fields have completely dissipated.  For optical pumping, a weak, dipole-shaped magnetic field is preferred, and this is not possible while the MOT's quadrupole field is in place.  %the quadrupole field has not dissipated.
+
+
+A standard DC-MOT is designed to operate continuously, and as such is fairly slow to turn off.  The limiting factor is the speed at which the magnetic field can be eliminated; it is particularly problematic when electrically conductive materials are present nearby, as is the case for our experimental chamber.  
+%and in the presence of electrically conductive materials especially, the magnetic field can take a (comparatively) long time to dissipate.  
+%This is problematic for an experiment such as this one, 
+This is because a rapidly changing magnetic field will necessarily induce an electrical potential, producing a current in any nearby conductors.  These induced eddy currents will, themselves, produce a magnetic field and further eddy currents as that magnetic field dissipates.  The result is a magnetic field which is slow to dissipate and difficult to control during the dissipation process.  In general, the atoms do not remain reliably confined while the magnetic field dissipates, as the field during this time may include anomalies which could result in atoms actively being pushed out of the trap by the trapping lasers.  For similar reasons, the atoms also cannot be successfully polarized during this time period.  
+
+It is clearly important that as little time as possible be wasted in this intermediate stage where the atoms can neither be confined nor polarized.  The more straightforward reason behind this is simply that any time wasted during beamtime is data lost.  A slightly more subtle but related reason is that when the trapping mechanism is removed, the atom cloud undergoes thermal expansion ($\sim$1\,mK).  If the cloud is retrapped quickly enough, the whole process can be done with minimal atom loss --- however once the cloud has dissipated it cannot be re-trapped, as the trapping forces act on only a small spatial region.
+
+The principle behind the AC-MOT is to simply run a sinusoidal current through one's anti-Helmholtz coils while flipping the laser polarization to remain in with the magnetic field.  Crucially, the phase of the magnetic field will lag somewhat behind the phase of the current in the anti-Helmholtz coils, as a result of induced eddy currents in nearby materials.  The precise amount of phase lag in a given system is a function both of the geometry and electrical impedence properties of the nearby materials, as well as the frequency of the sinusoid.  
+
+
+%%%%is dissipating, due to potential anomalies in the field shape which can easily result 
+%%%%
+%%%%The poorly controlled magnetic field during dissipation means that, in general, 
+%%%%In general, the atoms do not remain confined during this part of the process
+%%%%
+%%%%because the atoms do not remain confined while the magnetic field dissipates due to potential anomalies in the magnetic field shape arising from induced eddy currents, and for similar reasons, they cannot be successfully optically pumped during this time period either.  
+
+%Therefore, it is important to waste as little time as possible switching between the MOT and the  optical pumping phases in the duty cycle.  
+
 
 \note[note]{}
+\note[note]{Above, everything is re-edited for its current thesis location.  
+\\
+Below, shit's still basically duplicated in that other section.}
+\note[note]{Put that *other* AC-MOT figure here.}
+
 
 %\note{Fix the phrasing of AC-MOT/OP experimental section.  It's passable, but still kind-of a mess.}
 
 The AC-MOT was first described by Harvey and Murray~\cite{harveymurray}, but the TRINAT collaboration has adopted its use because it enables the polarization-destroying magnetic field to be eliminated quickly after the MOT is shut off.  Some details of the present implementation of the AC-MOT are given in Ref.~\cite{thesis}, done with a separate MOT geometry from this beta decay work.  A diagram of showing the operation phases of several key components in our AC-MOT/optical pumping duty cycle is shown in Fig.~\ref{fig:acmot}.
 
-\begin{figure}[ht]
-	\centering
-		\includegraphics[width=.999\linewidth]{acmot.png}
-		\caption[The AC-MOT and Optical Pumping Cycle]{One cycle of trapping with the AC-MOT, followed by optical pumping to spin-polarize the atoms.  After atoms are transferred into the science chamber, this cycle is repeated 100 times before the next transfer.  The magnetic dipole field is created by running parallel (rather than anti-parallel as is needed for the MOT) currents through the two coils.}
-		\label{fig:acmot}
-\end{figure}
+%%%%%\begin{figure}[ht]
+%%%%%	\centering
+%%%%%		\includegraphics[width=.999\linewidth]{acmot.png}
+%%%%%		\caption[The AC-MOT and Optical Pumping Cycle]{One cycle of trapping with the AC-MOT, followed by optical pumping to spin-polarize the atoms.  After atoms are transferred into the science chamber, this cycle is repeated 100 times before the next transfer.  The magnetic dipole field is created by running parallel (rather than anti-parallel as is needed for the MOT) currents through the two coils.}
+%%%%%		\label{fig:acmot}
+%%%%%\end{figure}
+%%
+%%A standard DC-MOT operates continuously, and in the presence of electrically conductive materials especially, the magnetic field can take a (comparatively) long time to dissipate.  This is problematic for an experiment such as this one, because the atoms do not remain confined while the magnetic field dissipates due to potential anomalies in the magnetic field shape arising from induced eddy currents, and for similar reasons, they cannot be successfully optically pumped during this time period either.  Therefore, it is important to waste as little time as possible switching between the MOT and the  optical pumping phases in the duty cycle.  For optical pumping, a weak, dipole-shaped magnetic field is preferred, and this is not possible while the quadrupole field has not dissipated.
 
-A standard DC-MOT operates continuously, and in the presence of electrically conductive materials especially, the magnetic field can take a (comparatively) long time to dissipate.  This is problematic for an experiment such as this one, because the atoms do not remain confined while the magnetic field dissipates due to potential anomalies in the magnetic field shape arising from induced eddy currents, and for similar reasons, they cannot be successfully optically pumped during this time period either.  Therefore, it is important to waste as little time as possible switching between the MOT and the  optical pumping phases in the duty cycle.  For optical pumping, a weak, dipole-shaped magnetic field is preferred, and this is not possible while the quadrupole field has not dissipated.
-
-The principle behind the AC-MOT is to simply run a sinusoidal current through one's anti-Helmholtz coils while flipping the laser polarization to remain in sync.  
 
 \note{Eddy currents in your nearby metal objects will still be produced, and these changing eddy currents will \emph{also} create a sinusoidally oscillating magnetic field.  If correctly timed, it is possible to eliminate the current in the anti-Helmholtz coils at the precise time when the eddy currents are also eliminated.  This process can easily reduce the size of any eddy currents still produced by around an order of magnitude or more, and these remaining eddy currents decay more rapidly as well.}
 
-\note{This content *came from* that other section, and needs to go in here somewhere:  ``Many laser ports to make the MOT functional, and for optical pumping.  Fancy mirror geometry to combine optical pumping and trapping light along the vertical axis.  Water-cooled (anti-)Helmholz coils within the chamber for the AC-MOT, fast switching to produce an optical pumping field.''  }
+%\note{This content *came from* that other section, and needs to go in here somewhere:  ``Many laser ports to make the MOT functional, and for optical pumping.  Fancy mirror geometry to combine optical pumping and trapping light along the vertical axis.  Water-cooled (anti-)Helmholz coils within the chamber for the AC-MOT, fast switching to produce an optical pumping field.''  }
 
 \note{... Sadly, this also removes our trapping mechanism.  We could keep the optical molasses after the field is off if we wanted to, but we don't, because we wouldn't be able to optically pump the atoms then.  But at least the atoms are cold-ish (we can measure!  I think it's done indirectly in that one table, or for realsies in Ben's thesis), so we can let them just chill for a little while before we have to re-trap them.  Don't lose too much.  (How much do we lose?  Have we quantified that somewhere?  Probably.).  ...}
 
-\note[note]{Probably document things about the waveform and frequency used for the beamtime, since I don't think it's in my MSc.}
+%\note[note]{Probably document things about the waveform and frequency used for the beamtime, since I don't think it's in my MSc.}
 
 As alluded to in the previous section~(\ref{section:overview}), the measurements in question required a spin-polarized sample of atoms, and a precise knowledge of what that polarization was.  This is needed in order to make best use of the superratio asymmetry for both $\Abeta$ and $\bFierz$ measurements.~\cite{ben_Abeta}\cite{ben_OP}.
 
