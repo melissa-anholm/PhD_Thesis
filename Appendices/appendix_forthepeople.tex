@@ -26,9 +26,6 @@ We begin by recalling the Fermi contact interaction description of beta decay fr
 
 This approximation is adequate for the purpose of characterizing \ac{BSM} interactions because any exotic physics that we might search for has already been constrained, through decades of clever experiments, to be a comparatively small part of the overall behaviour.  These small adjustments to already small terms may be safely neglected.  This model leads directly to the \ac{JTW} result described in Sec.~\ref{sec:jtw_formalism}, however the Holstein results of Sec.~\ref{sec:holstein_formalism} arise from a more modern description of the beta decay process.  
 
-%The neglected small adjustments would have been made to already small terms.  
-
-
 We will use the Lee-Hang interaction Hamiltonian here, which incorporates a linear combination of all possible operators that obey Lorentz invariance at the nucleon level.  In particular\cite{LeeYang}:
 \input{equation_LeeYangHamiltonian.tex}\unskip
 where $C_X$ and $C_X^{\prime}$ (with $X=\{V,A,S,T,P\}$) are complex coupling constants for vector, axial, scalar, tensor, and pseudoscalar interactions, and $\psi_Y$ (with $Y=\{p,n,e,\nu\}$) are the wavefunctions for the interaction's proton, neutron, electron, and neutrino.  Operators $\gamma_5$ and $\gamma_\mu$ are Dirac gamma matrices, and $\mbox{$\sigma_{\lambda\mu} = -\frac{i}{2}(\gamma_\lambda \gamma_\mu - \gamma_\mu\gamma_\lambda )$}$.  As usual, ``H.C.'' represents the Hermitian conjugate of the previous terms within the Hamiltonian.
@@ -47,16 +44,6 @@ Rather than going through the full calculation to find the differential decay ra
 %
 %%\note{They start with the Lee-Yang interaction Hamiltonian in Eq.~(\ref{eq:lee_yang_hamiltonian}), with the pseudoscalar terms dropped for convenience, as they're suppressed anyway.}
 %
-%%We begin a statement of the five-dimensional \ac{PDF} for beta decay kinematics, taken from \acf{JTW}, which arises directly from the Lee-Yang interaction Hamiltonian of Eq.~(\ref{eq:lee_yang_hamiltonian})~\cite{LeeYang}\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}:
-%
-%%, taken from \acf{JTW} for beta decay kinematics~\cite{LeeYang}\cite{jtw}\cite{jtw_coulomb}:
-%%Here's a master equation from JTW to describe beta decay kinematics~\cite{jtw}\cite{jtw_coulomb}:
-%%%%\note{Rephrase some of this stuff...}
-%%\note[done]{Item 12. from Georg:
-%%\\
-%%I have no idea what the title of Appendix B means. It is for sure original and even funny though ... Also, the actual appendix title in the thesis is not the same as that listed in the TOC.
-%%}
-%%\label{note:gs_12}
 \input{equation_jtw_master}
 where, for convenience, we have defined a nuclear alignment term,
 \bea
@@ -111,13 +98,6 @@ We have also made use of the following shorthand definitions of $\lambda_{J^\pri
 	\label{eq:kronecker}
 \eea
 
-%%\bea
-%%
-%%\eea
-%%\bea
-%%
-%%\eea
-
 
 %%%\note{Define all the things *here*.
 %%%\\...\\
@@ -135,30 +115,42 @@ From an experimental standpoint, within the present experiment we it is not poss
 
 From a theoretical standpoint, JTW has intentionally neglected recoil-order terms -- meaning that the daughter nucleus is treated, for the purpose of kinetic energy calculations, as being infinitely massive, and as such it must have no change in kinetic energy from the decay--however the approximation still allows for it to undergo a change in momentum.  One result of this approximation is that the neutrino energy, $\Enu$, is not a free variable within Eq.~\ref{equation:jtw_master}, since the total amount of energy released is fixed for a given transition.  The inherent inconsistencies of this approximation make it a tricky starting point for a description of neutrino and recoil kinematics.
 
-% re-formulate Eq.~(\ref{equation:jtw_master}) in terms of the momentum of the daughter instead of the momentum of the neutrino.  
-
 It is fortunately possible to simplify Eq.~(\ref{equation:jtw_master}) by integrating over all possible neutrino directions %(but not the neutrino energy), 
 such that the resulting distribution no longer depends on parameters that are not observed.  
 %The neutrino energy itself is not a free variable in this equation, because the energy release in the decay is fixed, and given the approximation that none of that energy is allocated to the recoiling daughter, it is very straightforward to calculate the neutrino energy for a decay event in which the beta energy is known.
 %
 %We haven't integrated out the neutrino momentum.  Neutrino energy itself is a redundant parameter, I think, because we are already using an endpoint energy and a beta energy, and we are not taking recoil-order effects into account.  Also, we treat neutrinos as massless here, which is a perfectly reasonable approximation for our purposes.  For ``convenience'', let's define a nuclear alignment term, $\Talign$, so that:
-We take this as an opportunity to specialize the equations for $\beta^+$ decay transitions with $J = J^\prime = \frac{3}{2}$. The result 
-%of performing this integration over neutrino direction 
-is:
+The result is:
 \input{equation_integratedjtw}
-\unskip with the remaining parameters,
+
+By choosing the coordinate system describing the outgoing $\beta$-direction to be aligned with the nuclear spin direction ($\vecJ$), it can be seen that any azimuthal dependence has been eliminated with the integral over neutrino direction.  Then, a further integral over the $\phi_\beta$ coordinate yields the result: 
+\bea
+	\textrm{d}^2 \Gamma  ( \Ebeta, \theta ) 
+	&=&
+	W(\Ebeta) \left[ 1 + \bFierz \frac{\m c^2}{\Ebeta} + \Abeta \, \frac{v_\beta(\Ebeta) }{c} |\vecP| \cos\theta  \right] \, \dEe \, \textrm{d} \theta , 
+\nonumber \\
+\label{equation:integrated_jtw_appendix}
+\eea
+where the polarization $\vecP$ is given by $\vecP := \frac{\vecJ}{J}$, and 
+$\theta$ is the angle between the beta emission direction and the polarization direction.
+% and is the only angular dependence that remains.  
+Here, we have grouped the expression's overall energy dependence into the term $W(\Ebeta)$, so that
+\beq
+W(\Ebeta) = \frac{2}{(2\pi)^3} \, \FFminus \, \xi \, \pe \Ee (E_0 - \Ee)^2, 
+\label{eq:overallenergydependence_appendix}
+\eeq
+where we have taken the opportunity to specialize the equations to $\beta^+$ decay transitions with $J = J^\prime = \frac{3}{2}$.  The remaining parameters can be simplified as:
 \input{equations_jtw_params_onlyintegrated}
-\unskip \!\!/This is a great simplification on Eqs.~(\ref{equation:jtw_master})-(\ref{eq:kronecker}).  
-%\aside{}
+\unskip \!\!\!
+It is clear that the results of Eqs.~(\ref{equation:integrated_jtw_appendix})-(\ref{eq:jtw_Abetaxi_integrated}) present a significant simplification over the description of Eqs.~(\ref{equation:jtw_master})-(\ref{eq:kronecker}).
+
 %We still must write the remaining parameters in terms of the relevant nuclear matrix elements and fundamental coupling constants.  These coupling constants are, in general, complex-valued, and JTW does not choose a phase angle for us.  We write them out in 
 %Eqs.~(\ref{eq:jtw_xi}-\ref{eq:jtw_Abetaxi}).
-Note that JTW presents slightly different expressions for one component of $\Abeta$ within~\cite{jtw} and~\cite{jtw_coulomb}, and the latter convention is what has been adopted here.  
-%Here, we adopt the convention from the latter publication.  
 
+Note that JTW presents slightly different expressions for one component of $\Abeta$ within~\cite{jtw} and~\cite{jtw_coulomb}, and the latter convention is what has been adopted here.  
 We further require that both $M_F$ and $M_{GT}$ must be real, 
 %which can be done without loss of generality,~\aside{I don't think this is true...} 
 however we do not require that they be positive, which would make the two conventions equivalent.  
-%We do not require that either $M_F$ or $M_{GT}$ be positive (which would make the two conventions equivalent), but we can require that both must be \emph{real} without loss of generality.
 
 There are a number of degrees of freedom left in the expressions that remain, and it is not immediately obvious how certain choices about these parameters might affect the physical results, or which approximations or assumptions ought to be made in order to arrive at a theory that matches the observational reality.  This is in part a result of the fact that the theory behind \ac{JTW} was developed before we had a detailed experimental understanding of much of the behaviour of beta decay, so all mathematically consistent behaviours are treated with roughly the same amount of consideration within the model.  
 
@@ -347,6 +339,7 @@ c_2 &\approx& \frac{1}{6} M^2 \, g_A \left( 1 - \frac{\Delta}{2 M} \right) \left
 
 
 %\note{In fact, we might want to add the other different-er terms in to this thing now, before we get ahead of ourselves.}
+\note[tag]{Fix phrasing.}
 Next, Holstein goes and tweaks those $F_i(\Ebeta)$ terms that we've already written out, by adding in an adjustment for Coulomb corrections.  Those corrections have this form:
 \beq
 	F_i(\Ebeta) \rightarrow \tilde{F}_i(\Ebeta) := \FF \left[ F_i(\Ebeta) + \Delta F_i(\Ebeta) \right]
