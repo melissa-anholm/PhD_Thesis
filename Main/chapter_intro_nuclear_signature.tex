@@ -360,10 +360,9 @@ its big $\Abeta$ value means we have a big thing to multiply any $\bFierz$ value
 \section{The Physical Signature of the Fierz Interference}
 %\subsection{Mathematical Description}
 \label{sec:mathdescription_intro}
-In this section, we consider how scalar and tensor interactions within the beta decay process might manifest as a physical observable.  Because the mathematical formalism 
-is worked out in detail within Appendix~\ref{appendix_forthepeople}, this section will simply provide the result directly, and use this as a starting point.  
-%As this section is, in part, intended to aid the reader in gaining a physical intuition for decay behaviour, only the leading order terms are described.  This allows 
-The \ac{PDF} below provides a description of beta decay in terms of the outgoing beta's energy and direction relative to the nuclear spin.  It is a simplification of the one presented in the classic \ac{JTW} paper, and is accurate to leading order~\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}.   For the dominant branch of $^{37}$K decay, we have:
+In this section, we consider how scalar and tensor interactions within the beta decay process might manifest as a physical observable.  As this section is, in part, intended to aid the reader in gaining a physical intuition for certain aspects of decay behaviour, only the leading order terms are described. However, the full mathematical formalism including many higher-order terms is worked out in detail within Appendix~\ref{appendix_forthepeople}.
+%this section will simply provide the result directly, and use this as a starting point. 
+The \ac{PDF} below provides a description of beta decay in terms of the outgoing beta's energy and direction relative to the nuclear spin.  It is a simplification of the one presented in the classic \ac{JTW} paper, and is accurate to leading order~\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}.  For the dominant branch of $^{37}$K decay, we have:
 %This two-dimensional \ac{PDF} provides a description of beta decay in terms of the outgoing beta's energy and direction relative to the nuclear spin
 %%To leading order, the probability density function from the classic \ac{JTW} paper can be used to describe beta decay in terms of the outgoing beta's energy and direction relative to the nuclear spin~\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}.  
 \bea
@@ -373,50 +372,58 @@ The \ac{PDF} below provides a description of beta decay in terms of the outgoing
 \nonumber \\
 \label{equation:integrated_jtw_INTRODUCTION}
 \eea
-where $\vecP$ is the overall nuclear spin polarization, and 
-$\theta$ is the angle between $\vecP$ and the beta emission direction.  The expression's overall energy dependence has been absorbed into the term $W(\Ebeta)$, so that
-\beq
-W(\Ebeta) = \frac{2}{(2\pi)^3} \, \FFminus \, \xi \, \pe \Ee (E_0 - \Ee)^2, 
+where $\vecP$ is the overall nuclear spin polarization, $\Ee$ and $\pe$ are the energy and momentum of the outgoing beta particle, and $\theta$ is the angle between $\vecP$ and the beta emission direction.  
+As usual, $\me$ is the mass of the electron and $c$ is the speed of light.
+The expression's overall energy dependence has been absorbed into the term $W(\Ebeta)$, so that
+\bea
+W(\Ebeta) &:=& \frac{2}{(2\pi)^3} \, \FFminus \, \xi \, \pe \Ee (E_0 - \Ee)^2,
 \label{eq:overallenergydependence_intro}
-\eeq
-\note[note,nolist]{}
+\eea
+where $E_0$ is the maximum possible beta energy associated with the transition.  The function $\FFminus$ is a Fermi function for outgoing positrons,
+%for outgoing electrons (top) and positrons (bottom), 
+with $Z^\prime$ the proton number of the daughter nucleus.  The Fermi function accounts for the force from the nuclear electric charge acting on the outgoing electron or positron.  It is computed with the Dirac equation using various levels of approximation to describe the nuclear charge distribution and screening of that charge distribution by electrons near the nucleus.
 
-%where the polarization $\vecP$ is given by $\vecP := \frac{\vecJ}{J}$, and 
-%$\theta$ is the angle between the beta emission direction and the polarization direction.
-%Here, we have grouped the expression's overall energy dependence into the term $W(\Ebeta)$, so that
-%\beq
-%W(\Ebeta) = \frac{2}{(2\pi)^3} \, \FFminus \, \xi \, \pe \Ee (E_0 - \Ee)^2, 
-%\label{eq:overallenergydependence_intro}
-%\eeq
-%where we have taken the opportunity to specialize the equations to $\beta^+$ decay transitions with $J = J^\prime = \frac{3}{2}$.  
-The remaining parameters can be simplified as:
+We now turn our attention to the parameters $\Abeta$ (the beta asymmetry), $\bFierz$ (the Fierz interference), and $\xi$ that are used in Eqs.~(\ref{equation:integrated_jtw_INTRODUCTION})-(\ref{eq:overallenergydependence_intro}).  These parameters are unique to the transition under consideration, but are nevertheless closely related to certain universally applicable coupling strengths.  They can be written in terms of the universally applicable complex coupling constants $C_X$ and $C_X^{\prime}$ of Eq.~(\ref{eq:lee_yang_hamiltonian_intro})
+%(with $X=\{V,A,S,T,P\}$) are complex coupling constants for vector, axial, scalar, tensor, and pseudoscalar interactions
+as follows: 
 \input{equations_jtw_params_onlyintegrated_intro}
+
+In the above expressions, $M_F$ and $M_{GT}$ are the Fermi (vector coupling) and Gamow-Teller (axial coupling) matrix elements unique to a particular transition,~\aside[note]{See Appendix~\ref{sec:jtw_formalism}, I guess?} and 
+\\
+\mbox{$\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2} \approx 1$}, using fine structure constant $\alpha$.
+%\note[note,nolist]{}
+
+The expressions above have many free parameters, and some simplifications must be made before a physically meaningful measurement can be made.  Each type of interaction $X$ (for $X=\{V,A,S,T\}$) is described by two complex coupling constants, $C_X$ and $C_X^\prime$.  This extra degree of freedom isnecessary in order to describe couplings to both left-handed and right-handed helicity leptons.
+~\aside{Is it definitely helicity?  Or do I mean chirality?}
+In practice, we already know that the weak force couples (almost) entirely to left-handed electrons and right-handed positrons.  Separately, we know that the interaction proceeds (almost) entirely by vector and axial couplings.  Taken together, this suggests that neutrinos and anti-neutrinos, as leptons, must (predominantly) follow the same helicity selection rules that apply to electrons and positrons.  This is because, \emph{e.g.}, a decay mediated by either scalar or tensor couplings would produce two outgoing leptons/anti-leptons of the \emph{same} helicity.  
+
+It is this subtlety which gives rise to the energy dependence ($\me c^2 / \Ee $) by which $\bFierz$ is multiplied in Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}) --- it is fundamentally an \emph{interference} term between the interactions of standard model physics with an unknown exotic physics term.  That is, if we have restricted ourselves to interactions involving left-handed neutrinos, then the scalar or tensor components of this interaction must also couple to left-handed electrons, effectively competing with the expected vector and axial couplings.  
+
+\note[note,nolist]{}
+\note[tag]{Needs:  
+\\
+* also, we describe it in that order [despite the fact that we're actually (experimentally?) limited to the one helicity of electrons but we have no experimental limits on neutrino helicity really...], because with massive electrons you can boost to a frame with opposite helicity.  `Massless' neutrinos can't do that.  So you get a factor of electron mass in there.
+\\
+* citations for Ran Hong and Greiner2009.  
+\\
+* Also, it arises from the Dirac spinor term?
+\\
+* Practically, it means we're sensitive to this and high energy is not.
+}
+
+If one assumes the standard model holds, $\Abeta$, $\bFierz$, and $\xi$ can be written in terms of a greatly simplified set of parameters.  Here, we introduce $\rho$, the ratio of Gamow-Teller and Fermi couplings: 
+\bea
+\rho &:=& \frac{C_A M_{GT}}{C_V M_F}.%  \;\; = \;\; \frac{g_A M_{GT}}{g_V M_F}
+\label{eq:definerho_intro}
+\eea
+The value of $\rho$ must be extracted experimentally (see Sec.~\ref{sec:extractinglambda}).
+~\aside[note]{See Appendix~\ref{sec:combo_formalism} for a discussion of the relationship between parameters $C_X$ and $g_X$.  I guess.}
+
+
+\note[note,nolist]{}
 \note[note,nolist]{}
 
-
-%%%%%\bea
-%%%%%	\textrm{d}^3 \Gamma %\dEe \, \dOmegae
-%%%%%	&=& 
-%%%%%	\frac{2}{(2\pi)^4} \, \FF \, \pe \Ee (E_0 - \Ee)^2 \, \dEe \, \dOmegae \, \xi \nonumber\\ 
-%%%%%	&& \times \left[
-%%%%%		1 + \bFierz \frac{\m }{\Ee} + 
-%%%%%		\A  
-%%%%%		\left(
-%%%%%			\frac{\vecJ}{J} \cdot \frac{\vecpe}{\Ee} 
-%%%%%		\right) 
-%%%%%	\right],
-%%%%%\label{equation:integrated_jtw_INTRODUCTION}
-%%%%%\eea
-Here, $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the outgoing $\beta$ particle's (total) energy, momentum 3-vector, and momentum scalar, 
-%while $\Enu$, $\vecpnu$, and $\pnu$ are the equivalent quantities for the outgoing (anti-)neutrino, 
-and $E_0$ is the maximum possible $\beta$ energy associated with the transition.
-%\aside{Holstein gives a formula for it.  Maybe I should write it out...}   
-$\vecJ$ is the  angular momentum vector associated with the parent nucleus, and $J$ its projection onto the axis of quantization. 
-%$\hatj$ is a unit vector in the direction of $\vecJ$ (note that in general, $\hatj \neq \frac{\vecJ}{J}$).  
-As usual, $\me$ is the mass of the electron.
-%, and $c$ is the speed of light.  
-The infinitesimal surface element $\dOmegabeta$ represents the direction of $\beta$ emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with $Z^\prime$ the proton number of the daughter nucleus.  The Fermi function accounts for the force from the nuclear electric charge acting on the outgoing electron or positron.  It is computed with the Dirac equation using various levels of approximation to describe the nuclear charge distribution and screening of that charge distribution by electrons near the nucleus.  
-
+%
 \note[jm]{This is where Juliette thinks I need more info about Abeta and bFierz.  
 \\
 ``On the bottom of page 14 she lists relevant quantities (including bFierz itself) but sends the reader to an appendix rather than defining them here.''}
@@ -454,18 +461,9 @@ it looks to me like you've \textbf{neglected both the main reason for the $m/E$}
 and, I think?, \textbf{its practical implications} (we're sensitive to it and high-energy is not). Leah Broussard covered this last point in a neutron beta decay talk at Winnipeg awhile back (we would be listing her as a possible external but universities insist in more supervisory experience).
 }
 
-%\note{talk about $\xi, \Abeta, \bFierz$ here...}
-The parameters $\xi$, $\bFierz$, and $\Abeta$ are specific to the decay being considered (see Appendix~\ref{sec:jtw_formalism}), and if one assumes the standard model holds, they can be written in terms of a simplified set of parameters (as compared with the original formalism).  Here, we introduce $\rho$, the ratio of Gamow-Teller and Fermi couplings: 
-\bea
-\rho &:=& \frac{C_A M_{GT}}{C_V M_F}  \;\; = \;\; \frac{g_A M_{GT}}{g_V M_F}
-\label{eq:definerho_intro}
-\eea
-where $C_A$ and $C_V$ are universally applicable vector and axial coupling constants, and $M_F$ and $M_{GT}$ are the Fermi (vector coupling) and Gamow-Teller (axial coupling) matrix elements unique to a particular transition.  See Appendix~\ref{sec:combo_formalism} for a discussion of the relationship between parameters $C_X$ and $g_X$.  The value of $\rho$ must be extracted experimentally (see Sec.~\ref{sec:extractinglambda}). 
-%
-%\note[tag]{} 
-%
-%\note[tag]{}
-%  
+
+
+
 
 %%%%\note[done,nolist]{JB:  I don't see where you mention the experimentally produced $M_F/M_{GT}$ that goes into the calculation for $\Abeta$.  You have the references.  You could at least say that Eq. 1.11 combined with the measured ft value produces $\lambda$, which in turn produces $\Abeta$.}  
 Then, specializing to the 98\% branch of $^{37}$K decay, and given the expected behaviour of the standard model,
@@ -655,10 +653,10 @@ we note that the only angular dependence remaining in this spectrum is the dot p
 \eea
 where $\theta$ is the angle between the beta emission direction and the polarization direction, and is the only angular dependence that remains.  Here, we have grouped the expression's overall energy dependence into the term $W(\Ebeta)$, so that
 \beq
-W(\Ebeta) = \frac{2}{(2\pi)^3} \, \FF \, \xi \, \pe \Ee (E_0 - \Ee)^2, 
+W(\Ebeta) = \frac{2}{(2\pi)^3} \, \FF \, \xi \, \pe \Ee (E_0 - \Ee)^2,
 \label{eq:overallenergydependence}
 \eeq
-\note[tag]{this section got put verbatim into the appendix.  Have to put something else here.}
+\note[tag]{this section got put verbatim into the appendix.  And also tweaked for that one previous section.  Have to put something else here.  Probably just reference it.}
 where we note that the Fermi functions in the above make Eq.~\ref{eq:overallenergydependence} integrable only by numerical methods.  Because it would be difficult to make this expression \emph{more} challenging to work with, there is little drawback to including in this expression any small corrections to overall energy dependence that might arise from e.g.\! recoil-order corrections, as described by Holstein~\cite{holstein}.
 %\note{We could also use this with the Holstein formulation, at least some of it.  The point is, we can put *anything* that only depends on beta energy into $W(\Ebeta)$.  It doesn't matter, because it's already only integrable through numerical methods anyway -- so we can't possibly make it worse.}
 
