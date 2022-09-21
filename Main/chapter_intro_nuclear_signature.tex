@@ -499,27 +499,182 @@ Within this work, we are particularly interested in the $\bFierz$ parameter.  Th
 \bFierz &=& \frac{-2\gamma}{1 + \rho^2} \left( \frac{g_S}{g_V} + \rho^2 \frac{g_T}{g_A} \right). 
 \label{bFierzwithlambda}
 \eea
-Here $\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2} \approx 1$, where $Z^\prime$ is the atomic number of the daughter, and as usual $\alpha$ is the fine structure constant. It is clear that Eq.~\ref{bFierzwithlambda} reduces to 0 in the standard model limit where $g_S = g_T = 0$.
+%Here $\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2} \approx 1$, where $Z^\prime$ is the atomic number of the daughter, and as usual $\alpha$ is the fine structure constant. 
+It is clear that Eq.~\ref{bFierzwithlambda} reduces to 0 in the standard model limit where $g_S = g_T = 0$.
 %$\gamma \approx 1$ is defined as in Appendix~\ref{sec:jtw_formalism}, and\
 
 
 
+
+
+
+
 %%%% --- * --- %%%%
 %%%% --- * --- %%%%
 %%%% --- * --- %%%%
-%\subsection{A Qualitative Description of the Physical Behaviour}
 \section{The Superratio}
-\subsection{A Qualitative Description of the Physical Behaviour}
 \label{signature_chapter}
-We now attempt to develop a physical intuition for the behaviour described above.  Considering Eq.~\ref{equation:integrated_jtw_INTRODUCTION}, we see that there is a beta energy dependence multiplying the $\bFierz$ term within the complete energy spectrum.  From this, it seems natural to assert that the most \emph{obvious} physically observable change that arises from the presence of a scalar or tensor coupling should be a change to the overall shape of the beta energy spectrum.  
+In considering Eqs.~(\ref{equation:integrated_jtw_INTRODUCTION})-(\ref{eq:overallenergydependence_intro}), we see that the $\bFierz$ term includes an explicit energy dependence.  From this, it seems natural to conclude that the shape of the beta energy spectrum can be used to measure the value of $\bFierz$.  This assertion is correct as far as it goes --- but a direct measurement of the complete energy spectrum is arguably not the best way to approach the matter.  To see this, it is helpful to consider the $\Abeta$ term within the same equation, which carries an explicit angular dependence, as well as its own explicit energy dependence.  
 
-In fact, it is possible to extract a much clearer signal if we are clever with our choice of measurement.  To see this, it is helpful to notice that the \emph{overall} size of the $\bFierz$ term does not vary as a function of beta emission angle -- however, the $\Abeta$ term \emph{does}.  Indeed, in some sense, $\Abeta$ can be thought of as a parameterization of the extent to which the number of beta emissions changes as a function of angle.  The fact that we have in $\bFierz$ a small (or nonexistent), unchanging (with respect to angle) effect to be compared against a ``background'' large $\Abeta$ term which \emph{does} scale with emission angle, hints at a potential handle we might use to measure $\bFierz$ --- as we vary the emission angle under consideration, the \emph{fractional} size of the effect we're looking for will change!
+Indeed, though a judicious choice of detector placements, it is possible to measure the beta energy spectrum at its angular extrema, with $\cos\theta \approx \pm 1$ (recall that $\theta$ is defined to be the angle between direction of nuclear polarization and beta emission).  
+\aside{Of course, the $\Abeta$ term vanishes for decays from spin-zero nuclei.}  
+With differing contributions to each angle-selected beta spectrum from the $\Abeta$ term (and no other angular dependence), it is clear that any nonzero $\bFierz$ term must provide a different \emph{fractional} contribution to the full spectrum as a function of angle.
+%\aside{Recall that this is angle between polarization and emission.}  
 
-One way to do this is to separate the data into categories relating to their angular dependence with respect to the direction of nuclear spin (which parameterizes the $\Abeta$ observable).  If, as in our case, these sets of data can be further subdivided into categories that can be expected to have similar physical behaviours, but which may have differing systematic effects, the result is even more powerful.  In our case, the nuclear polarization is flipped periodically within a (mostly) symmetric apparatus, with beta detectors above and below along the axis of polarization.  The four beta spectra that result from this categorization can be used to construct a so-called superratio asymmetry.   
+One way to quantify this fractional difference might be to take a simple ratio of the two spectra, evaluated at each energy bin --- however the effect of a non-zero $\bFierz$ term would be quite small in comparison with the overarching angular dependence of $\Abeta$.  Indeed, with the observed beta spectra explicitly selected according to emission angle, it makes little sense to attempt to extract a measurement of $\bFierz$ without a simultaneous measurement of $\Abeta$.  With this caveat kept in mind, we will now work towards finding an expression for $\Abeta$ in terms of experimental observables, with the understanding that an expression for $\bFierz$ will follow naturally.  
+%--- however we will soon see that we can do better than this.  
+
+We will approach the problem by first separating beta energy spectral data into categories relating to the angular dependence of an individual event with respect to the direction of nuclear spin.  % (which parameterizes the $\Abeta$ observable).  
+If, as in our case, these sets of data can be further subdivided into categories that can be expected to measure similar physical behaviours, but which may have differing systematic effects, it is possible to force many of these these systematic effects to cancel out at leading order, as we will soon see.  
+
+%For example, in our case, the nuclear polarization is flipped periodically within a (mostly) symmetric apparatus, with beta detectors above and below along the axis of polarization.  
+%
+For example, within the \ac{TRINAT} experimental setup, the polarization is flipped periodically between two states (+/-), within a (mostly) symmetric apparatus.  Two similar beta detectors (T/B) are positioned opposite one another along the vertical axis of polarization at the top and bottom of the experimental chamber (see Chapter~\ref{experimental_chapter}).  Then, with two detectors and two polarization states, we can describe four different experimental count rates based on Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}).  Neglecting scattering effects, we have:
+\bea
+\!\! \!\!
+r_{\mathrm T+}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vecP_{\bm{+}}| \langle \cos\theta \rangle_{\mathrm T+} \right] \;\;\;  \label{eq:r1} \\
+\!\! \!\!
+r_{\mathrm B+}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vecP_{\bm{+}}| \langle \cos\theta \rangle_{\mathrm B+} \right] \;\;\;  \label{eq:r2}\\
+\!\! \!\!
+r_{\mathrm T-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T} \, N_- \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vecP_{\bm{-}}| \langle \cos\theta \rangle_{\mathrm T-} \right] \;\;\;  \label{eq:r3}\\
+\!\! \!\!
+r_{\mathrm B-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_- \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vecP_{\bm{-}}| \langle \cos\theta \rangle_{\mathrm B-} \right], \;\;\; \label{eq:r4}
+\eea
+%
+where the $\varepsilon_{\mathrm T / \mathrm B}(\Ebeta)$ are the (top/bottom) detector efficiencies, $\Omega_{\mathrm T / \mathrm B}$ are the fractional solid angles from the trap position to the (top/bottom) detector from the trap position, $N_{+/-}$ are the number of atoms trapped in each (+/-) polarization state, and $|\vecP_{\bm{+/-}}|$ are the magnitudes of the polarization along the detector axis for each polarization state.  $\langle \cos\theta \rangle_{\mathrm T/ \mathrm B, +/-} $ is the average of $\cos\theta$ for \emph{observed} outgoing betas, for each detector and polarization state combination.  This latter term is approximately $\pm 1$ as a result of our detector geometry, but contains important sign information.  
+
+
+%\note[note,nolist]{}
+
+Recalling the form of the overall energy dependence $W(\Ebeta)$ from Eq.~(\ref{eq:overallenergydependence_intro}), we note that the presence of the Fermi function $\FFminus$ at any reasonable level of approximation makes $W(\Ebeta)$ integrable only by numerical methods.  As a result, there is little that could be changed to make the expression more difficult to work with, so we can safely take $W(\Ebeta)$ to be an arbitrary function.  Therefore, for the remainder of this section, we will take $W(\Ebeta)$ to implicitly include the small corrections to overall energy dependence that arise from e.g.\! recoil-order corrections, as described by Holstein~\cite{holstein}.
+
+
+These four beta spectra can be used to construct the so-called superratio and superratio asymmetry, both of which have some very useful properties.  The latter of these is the measure that will eventually be used to extract the values of $\Abeta$ and $\bFierz$.   
+
+We define the superratio, $s$, as:
+\bea
+s \;\;=\;\; s(\Ebeta) \;\;:=\;\; \frac{ r_{\mathrm T-}\, r_{\mathrm B+} }{ r_{\mathrm T+}\, r_{\mathrm B-} } , 
+\eea
+and the superratio asymmetry, $A_{\mathrm{super}}$, as:
+\bea
+A_{\mathrm{super}} \;\;=\;\; A_{\mathrm{super}}(\Ebeta) &:=& \frac{1-\sqrt{s}}{1+\sqrt{s}} 
+\\
+&=& \frac{ \sqrt{r_{\mathrm T+}\, r_{\mathrm B-} \phantom{ (\!\!\!\!\!) } }\; -\, \sqrt{ r_{\mathrm T-}\, r_{\mathrm B+}\phantom{ (\!\!\!\!\!) }} }{ \sqrt{r_{\mathrm T+}\, r_{\mathrm B-}\phantom{ (\!\!\!\!\!) }} \;+\, \sqrt{r_{\mathrm T-}\, r_{\mathrm B+} \phantom{ (\!\!\!\!\!) }} }.
+\eea
+%
+\note[oldnote, nolist]{We used to have:  $s := \frac{ r_{\mathrm T+}\, r_{\mathrm B-} }{ r_{\mathrm T-}\, r_{\mathrm B+} }$, and the $A_{\mathrm{super}}$ that follows.  But that's wrong.  :(   Need $s > 1$ to get the right result.}
+
+This is explicitly an experimental quantity that is measured directly by the above combination of count rates, however it is obvious that it reduces, under appropriate limits, to be equivalent to a naive asymmetry.  In particular, if we require that the physical conditions and relative detector positions and sensitivities are identical when the polarization is flipped, then we have $r_{\mathrm T+}(\Ebeta) = r_{\mathrm B-}(\Ebeta)$, $r_{\mathrm T-}(\Ebeta) = r_{\mathrm B+}(\Ebeta)$, and $|\vecP_{\bm{+}}| = |\vecP_{\bm{-}}|$.
+%
+With these simplifying assumptions, the superratio asymmetry quickly reduces into a more intuitive quantity that we might use for a measurement with only a single polarization state, e.g.,  
+%%\bea
+%%A_{\mathrm{super}} &\rightarrow& \frac{ r_{\mathrm T+}\, - \,r_{\mathrm B+} }{r_{\mathrm T+}\, +\, r_{\mathrm B+} } 
+%%\;\;\; \rightarrow \;\;\; \Abeta \frac{v}{c} |\vecP| . 
+%%\label{eq:singlepol_asymmetry}
+%%\eea
+%\bea
+%A_{\mathrm{super}} &\rightarrow& \frac{ r_{\mathrm T+}\, - \,r_{\mathrm B+} }{r_{\mathrm T+}\, +\, r_{\mathrm B+} } 
+%\;\;\; \rightarrow \;\;\; \Abeta \frac{v}{c} |\vecP_{\bm{+}}| \: |\langle \cos\theta \rangle| . 
+%\label{eq:singlepol_asymmetry}
+%\eea
+\bea
+A_{\mathrm{super}} &\rightarrow& \frac{ r_{\mathrm T+}\, - \,r_{\mathrm B+} }{r_{\mathrm T+}\, +\, r_{\mathrm B+} } 
+\;\;\; \xrightarrow[\bFierz = 0]{} \;\;\; \Abeta \frac{v}{c} |\vecP_{\bm{+}}| \: \langle | \cos\theta | \rangle . 
+\label{eq:singlepol_asymmetry}
+\eea
+%\note{Assumes $\bFierz=0$.  Or, rather, we can only interpret it as $\Abeta$ if $\bFierz=0$.  }
+
+While Eq.~\ref{eq:singlepol_asymmetry} is conceptually encouraging, the assumptions that gave rise to it are too simplifying.  We will introduce some less restrictive assumptions for what follows, along with shorthand notation for improved readability (and to make it obvious which quantities are to be considered small).  First, we require that the magnitude of the polarization vector is the same for both polarization states, and also that the average of the magnitude of $\cos\theta$ for a given detector does not change when the polarization is flipped (equivalent to a requirement that the trap position doesn't change when the polarization is flipped).  Then: 
+\bea
+P &:=& |\vecP_{\bm +}| = |\vecP_{\bm -}|  \\
+\langle |\cos\theta | \rangle_T &:=& \langle |\cos\theta | \rangle_{\mathrm T+} \, = \, \langle |\cos\theta | \rangle_{\mathrm T-} \\
+\langle |\cos\theta | \rangle_B &:=& \langle |\cos\theta | \rangle_{\mathrm B+} \, = \, \langle |\cos\theta | \rangle_{\mathrm B-},
+\eea
+and we can further define
+\bea
+c &=& \,\,\,\,\, \langle | \cos\theta | \rangle :=  \frac{1}{2} \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle_T + \langle |\cos\theta | \rangle_B \, \right) \\
+\Delta c &=& \Delta \langle | \cos\theta | \rangle := \frac{1}{2} \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle_T - \langle |\cos\theta | \rangle_B \, \right)
+\eea
+and 
+\bea
+\tilde{A} &=\;\; \tilde{A}(\Ebeta) &:=\;\; A_\beta \frac{v}{c} \\ 
+\tilde{b} &=\;\; \tilde{b}(\Ebeta) &:=\;\;  \bFierz \frac{mc^2}{\Ebeta}, \\
+\tilde{r} &=\;\; \tilde{r}(\Ebeta) &:=\;\; 1+\tilde{b}. 
+\eea
+
+With this new set of variables defined, we can re-write Eqs.~(\ref{eq:r1}-\ref{eq:r4}) as
+\bea
+r_{\mathrm T+}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T}\, N_+ \left[\tilde{r}  \,+\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c + \Delta c \, \right) \right] \\
+r_{\mathrm B+}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B}\, N_+ \left[\tilde{r}  \,-\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c - \Delta c \, \right) \right] \\
+r_{\mathrm T-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T}\, N_- \left[\tilde{r}  \,-\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c + \Delta c \, \right) \right] \\
+r_{\mathrm B-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B}\, N_- \left[\tilde{r}  \,+\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c - \Delta c \, \right) \right], 
+\eea
+and the superratio becomes
+\bea
+s 
+&=& 
+\frac{ 
+\left(
+\tilde{r} + \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 
+}{ 
+\left(
+\tilde{r} - \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 
+} 
+\eea
+where all factors of $W(\Ebeta)$, $\varepsilon_{\mathrm T/B}(\Ebeta)$, $\Omega_{\mathrm T/B}$, and $N_{+/-}$ have been cancelled out entirely.  
+
+For simplicity we take $\Delta c = 0$ in what follows.  Although this is not strictly accurate within the present experiment, this assumption greatly simplifies the expressions that follow.  Then, absent other corrections (\emph{e.g.} backscattering, unpolarized background, ...), it is clear that if $\tilde{b} = 0$ as in the Standard Model, %it follows that 
+\bea
+A_{\mathrm{super}} &=\;\; \tilde{A} P c &=\;\; \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle
+\eea
+
+In the case where $\tilde{b} \neq 0$, we find that 
+\bea
+A_{\mathrm{super}} &=& \frac{\tilde{A} P c}{1+\tilde{b}} \\
+&\approx&  \tilde{A} P c \, (1 - \tilde{b} + {\tilde{b}}^2),
+\eea
+where we have utilized the assumption that $\tilde{b} \ll 1$.
+Thus, to leading order in terms of $\tilde{b}$, 
+\bea
+A_{\mathrm{super}} &\approx& \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \left( 1 - \bFierz \frac{mc^2}{\Ebeta} \right).
+\eea
+
+
+\note[note,nolist]{}
+
+
+
+
+%In these extremal cases, the $\bFierz$ term will account for a different \emph{fraction} of 
+%\note[note,nolist]{}
+%This feature of beta emission spectra hints at a potential handle we might use to measure $\bFierz$ --- as we vary the emission angle under consideration, the \emph{fractional} size of the effect we're looking for will change!
+
+%\note[oldnote,nolist]{}
+%In the TRINAT geometry with two polarization states (+/-) and two nearly equivalent detectors (T/B) aligned along the axis of polarization, we are able to describe four different count rates, with different combinations of polarization states and detectors.  Thus, neglecting beta scattering effects, we have:
+
+
+\note[note,nolist]{}
+It is this latter observation which motivates the construction of the superratio and superratio asymmetry as new observables comprised of a combination of multiple physical measurements at the angular extrema of beta emission.  In fact, it is possible to extract a much clearer signal to measure both $\Abeta$ and $\bFierz$ by making some clever choices in how our data should be processed.  A further benefit to using the superratio construction, as we will soon see, is the cancellation (to first order) of many systematic effects.  The ``price'' for this reduction in systematics is, unfortunately, a decrease in statistical resolving power.  
+%
+%In fact, it is possible to extract a much clearer signal if we are clever with our choice of measurement.  To see this, it is helpful to notice that the \emph{overall} size of the $\bFierz$ term does not vary as a function of beta emission angle -- however, the $\Abeta$ term \emph{does}.  Indeed, in some sense, $\Abeta$ can be thought of as a parameterization of the extent to which the number of beta emissions changes as a function of angle.  
+%
+%The fact that we have in $\bFierz$ a small (or nonexistent), unchanging (with respect to angle) effect to be compared against a ``background'' large $\Abeta$ term which \emph{does} scale with emission angle, hints at a potential handle we might use to measure $\bFierz$ --- as we vary the emission angle under consideration, the \emph{fractional} size of the effect we're looking for will change!
+
+
+
+\note[note,nolist]{}
+%We now attempt to develop a physical intuition for the behaviour described above.  Considering Eq.~\ref{equation:integrated_jtw_INTRODUCTION}, we see that there is a beta energy dependence multiplying the $\bFierz$ term within the complete energy spectrum.  
+%From this, it seems natural to assert that the most \emph{obvious} physically observable change that arises from the presence of a scalar or tensor coupling should be a change to the overall shape of the beta energy spectrum.  
+
+
+
+%One way to do this is to separate the data into categories relating to their angular dependence with respect to the direction of nuclear spin (which parameterizes the $\Abeta$ observable).  If, as in our case, these sets of data can be further subdivided into categories that can be expected to have similar physical behaviours, but which may have differing systematic effects, the result is even more powerful.  In our case, the nuclear polarization is flipped periodically within a (mostly) symmetric apparatus, with beta detectors above and below along the axis of polarization.  The four beta spectra that result from this categorization can be used to construct a so-called superratio asymmetry.   
 
 The superratio, and superratio asymmetry, has been used for precision beta decay measurements in the past to measure the neutron's beta asymmetry\cite{UCNA_first_superratio}, and our own collaboration has also used it to measure the beta asymmetry in $^{37}$K~\cite{ben_Abeta}.  More recently, it has been used to measure the neutron's Fierz interference term~\cite{UCNAfierz2020}\cite{Saul2020} as well, with notably more impressive results than using the earlier `supersum' data combination method~\cite{UCNA_first_Fierz}.  
 
-The key to the effectiveness of the superratio technique is that many systematic effects can be made to cancel at the leading order, at the cost of some statistical resolving power.  The mathematical details of the superratio construction and its results are discussed in detail within Section~\ref{appendix:superratio}, so within the present section we will limit ourselves to a discussion of the results.
+The key to the effectiveness of the superratio technique is that many systematic effects can be made to cancel at the leading order, at the cost of some statistical resolving power.  
+
+%The mathematical details of the superratio construction and its results are discussed in detail within Section~\ref{appendix:superratio}, so within the present section we will limit ourselves to a discussion of the results.
 
 \note[jm]{Here's where Juliette thinks I need to discuss the superratio harder.  ``On page 20, the details of the superratio construction are also relegated to an appendix''}
 
@@ -629,131 +784,120 @@ why it's critical (I have not re-read this) but the full lengthy details are rep
 \\
 Or as you suggest, bring it back in, because it's critical.}
 %
-Recalling the integrated JTW probability distribution for outgoing beta particles of Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}), 
-%\bea
-%	\textrm{d}^3 \Gamma ( \Ebeta, \mathbf{ \hat{\Omega}}_\beta ) \, \dEe \, \dOmegae
-%	&=& 
-%	\frac{2}{(2\pi)^4} \, \FF \, \xi \, \pe \Ee (E_0 - \Ee)^2 \, \dEe \, \dOmegae \,  \nonumber\\ 
-%	&& \times \left[
-%		1 + \bFierz \frac{\m c^2}{\Ee} + 
-%		\A  
-%		\left(
-%			\frac{\vecJ}{J} \cdot \frac{\vecpe}{\Ee} 
-%		\right) 
-%	\right].
-%	\label{equation:integrated_jtw_in_superratiosection}
-%\eea
-\note[tag]{}
-we note that the only angular dependence remaining in this spectrum is the dot product between the direction of beta emission and the direction of nuclear spin-polarization.  It is therefore possible to pull out a further factor of $2\pi$ by choosing the axis of polarization as defining our coordinate system, and integrating over the $\phi_\beta$ coordinate, and Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}) becomes:
-\bea
-	\textrm{d}^2 \Gamma  ( \Ebeta, \theta ) 
-	&=&
-	W(\Ebeta) \left[ 1 + \bFierz \frac{\m c^2}{\Ebeta} + \Abeta \, \frac{v_\beta }{c} |\vec{P}| \cos\theta  \right] \, \dEe \, \textrm{d} \theta , 
-%\label{equation:integrated_jtw}
-\eea
-where $\theta$ is the angle between the beta emission direction and the polarization direction, and is the only angular dependence that remains.  Here, we have grouped the expression's overall energy dependence into the term $W(\Ebeta)$, so that
-\beq
-W(\Ebeta) = \frac{2}{(2\pi)^3} \, \FF \, \xi \, \pe \Ee (E_0 - \Ee)^2,
-\label{eq:overallenergydependence}
-\eeq
-\note[tag]{this section got put verbatim into the appendix.  And also tweaked for that one previous section.  Have to put something else here.  Probably just reference it.}
-where we note that the Fermi functions in the above make Eq.~\ref{eq:overallenergydependence} integrable only by numerical methods.  Because it would be difficult to make this expression \emph{more} challenging to work with, there is little drawback to including in this expression any small corrections to overall energy dependence that might arise from e.g.\! recoil-order corrections, as described by Holstein~\cite{holstein}.
+%Recalling the beta decay \ac{PDF}'s overall energy dependence in Eq.~(\ref{eq:overallenergydependence_intro}), we note that the Fermi function $\FFminus$ at any reasonable level of approximation is integrable only by numerical methods.  As a result, there is little that could be changed to make $W(\Ebeta)$ more difficult to work with, so we can safely take $W(\Ebeta)$ to be an arbitrary function.  Therefore, for the remainder of this section, we will take $W(\Ebeta)$ to implicitly include the small corrections to overall energy dependence that arise from e.g.\! recoil-order corrections, as described by Holstein~\cite{holstein}.
+
+
+
+\note{}
+%%%we note that the only angular dependence remaining in this spectrum is the dot product between the direction of beta emission and the direction of nuclear spin-polarization.  It is therefore possible to pull out a further factor of $2\pi$ by choosing the axis of polarization as defining our coordinate system, and integrating over the $\phi_\beta$ coordinate, and Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}) becomes:
+%%%\bea
+%%%	\textrm{d}^2 \Gamma  ( \Ebeta, \theta ) 
+%%%	&=&
+%%%	W(\Ebeta) \left[ 1 + \bFierz \frac{\m c^2}{\Ebeta} + \Abeta \, \frac{v_\beta }{c} |\vec{P}| \cos\theta  \right] \, \dEe \, \textrm{d} \theta , 
+%%%%\label{equation:integrated_jtw}
+%%%\eea
+%%%where $\theta$ is the angle between the beta emission direction and the polarization direction, and is the only angular dependence that remains.  Here, we have grouped the expression's overall energy dependence into the term $W(\Ebeta)$, so that
+%%%\beq
+%%%W(\Ebeta) = \frac{2}{(2\pi)^3} \, \FF \, \xi \, \pe \Ee (E_0 - \Ee)^2,
+%%%\label{eq:overallenergydependence}
+%%%\eeq
+%%%\note[tag]{this section got put verbatim into the appendix.  And also tweaked for that one previous section.  Have to put something else here.  Probably just reference it.}
+%%%%where we note that the Fermi functions in the above make Eq.~\ref{eq:overallenergydependence} integrable only by numerical methods.  Because it would be difficult to make this expression \emph{more} challenging to work with, there is little drawback to including in this expression any small corrections to overall energy dependence that might arise from e.g.\! recoil-order corrections, as described by Holstein~\cite{holstein}.
 %\note{We could also use this with the Holstein formulation, at least some of it.  The point is, we can put *anything* that only depends on beta energy into $W(\Ebeta)$.  It doesn't matter, because it's already only integrable through numerical methods anyway -- so we can't possibly make it worse.}
 
-In the TRINAT geometry with two polarization states (+/-) and two nearly equivalent detectors (T/B) aligned along the axis of polarization, we are able to describe four different count rates, with different combinations of polarization states and detectors.  Thus, neglecting beta scattering effects, we have:
-\bea
-r_{\mathrm T+}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm T+} \right] \label{eq:r1} \\
-r_{\mathrm B+}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm B+} \right] \label{eq:r2}\\
-r_{\mathrm T-}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T} \, N_- \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_-| \langle \cos\theta \rangle_{\mathrm T-} \right] \label{eq:r3}\\
-r_{\mathrm B-}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_- \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_-| \langle \cos\theta \rangle_{\mathrm B-} \right],\label{eq:r4}
-\eea
-where $\varepsilon_{\mathrm T / \mathrm B}(\Ebeta)$ are the (top/bottom) detector efficiencies, $\Omega_{\mathrm T / \mathrm B}$ are the fractional solid angles for the (top/bottom) detector from the trap position, $N_{+/-}$ are the number of atoms trapped in each (+/-) polarization state, and $|\vec{P}_{+/-}|$ are the magnitudes of the polarization along the detector axis for each polarization state.  $\langle \cos\theta \rangle_{\mathrm T/ \mathrm B, +/-} $ is the average of $\cos\theta$ for \emph{observed} outgoing betas, for each detector and polarization state combination.  This latter term is approximately $\pm 1$ as a result of our detector geometry, but contains important sign information.  For a pointlike trap in the center of the chamber, 103.484 mm from either (DSSSD) detector,~\aside{Does this even agree with whatever I wrote about the geometry in the other section?} each of which is taken to be circular with a radius of 15.5 mm, we find that $\langle | \cos\theta | \rangle_{\mathrm T/ \mathrm B, +/-} \approx 0.994484$, and is the same for all four cases.
+%%%%In the TRINAT geometry with two polarization states (+/-) and two nearly equivalent detectors (T/B) aligned along the axis of polarization, we are able to describe four different count rates, with different combinations of polarization states and detectors.  Thus, neglecting beta scattering effects, we have:
+%%%%\bea
+%%%%r_{\mathrm T+}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm T+} \right] \label{eq:r1} \\
+%%%%r_{\mathrm B+}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_+ \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_+| \langle \cos\theta \rangle_{\mathrm B+} \right] \label{eq:r2}\\
+%%%%r_{\mathrm T-}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T} \, N_- \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_-| \langle \cos\theta \rangle_{\mathrm T-} \right] \label{eq:r3}\\
+%%%%r_{\mathrm B-}(\Ebeta) &=& W(\Ebeta) \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_- \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vec{P}_-| \langle \cos\theta \rangle_{\mathrm B-} \right],\label{eq:r4}
+%%%%\eea
+%%%%where $\varepsilon_{\mathrm T / \mathrm B}(\Ebeta)$ are the (top/bottom) detector efficiencies, $\Omega_{\mathrm T / \mathrm B}$ are the fractional solid angles for the (top/bottom) detector from the trap position, $N_{+/-}$ are the number of atoms trapped in each (+/-) polarization state, and $|\vec{P}_{+/-}|$ are the magnitudes of the polarization along the detector axis for each polarization state.  $\langle \cos\theta \rangle_{\mathrm T/ \mathrm B, +/-} $ is the average of $\cos\theta$ for \emph{observed} outgoing betas, for each detector and polarization state combination.  This latter term is approximately $\pm 1$ as a result of our detector geometry, but contains important sign information.  
+
+\note[note, nolist]{}
+For a pointlike trap in the center of the chamber, 103.484 mm from either (DSSSD) detector,~\aside{Does this even agree with whatever I wrote about the geometry in the other section?} each of which is taken to be circular with a radius of 15.5 mm, we find that $\langle | \cos\theta | \rangle_{\mathrm T/ \mathrm B, +/-} \approx 0.994484$, and is the same for all four cases.
 \aside{Not quite true.  Some strips are missing.}
 % (or for $r=15.0$\,mm, we find that $\langle | \cos\theta | \rangle_{\mathrm T/ \mathrm B, +/-} \approx 0.994829$). 
 \aside{This is only true if we neglect (back-)scatter.  This is not actually a good approximation.  But we have pretty good simulations to give us the real numbers, anyway. } Note that a horizontally displaced trap will decrease the magnitude of $\langle | \cos\theta | \rangle $, but as it is an expectation value of an absolute value, all four will remain equal to one another.  In the case of a vertically displaced trap, these four values will no longer all be equal, however it will still be the case that $\langle | \cos\theta | \rangle_{\mathrm T +} = \langle | \cos\theta | \rangle_{\mathrm T -}$, and $\langle | \cos\theta | \rangle_{\mathrm B+} = \langle | \cos\theta | \rangle_{\mathrm B -}$.  \aside{Is that definitely true, or is it only true to lowest order?}
 
+\note{}
 In the case of the present experiment, we note that $|\vec{P}_+| = |\vec{P}_-|$ is correct to a high degree of precision.
+\note{}
 
-We define the superratio, $s$, to be:
-\bea
-%s \;\;=\;\; s(\Ebeta) \;\;:=\;\; \frac{ r_{\mathrm T-}\, r_{\mathrm B+} }{ r_{\mathrm T+}\, r_{\mathrm B-} }, 
-s \;\;=\;\; s(\Ebeta) \;\;:=\;\; \frac{ r_{\mathrm T+}\, r_{\mathrm B-} }{ r_{\mathrm T-}\, r_{\mathrm B+} }, 
-\eea
-and the superratio asymmetry, $A_{\mathrm{super}}$, as
-\bea
-A_{\mathrm{super}} \;\;=\;\; A_{\mathrm{super}}(\Ebeta) &:=& \frac{1-\sqrt{s}}{1+\sqrt{s}} 
-\\
-&=& \frac{ \sqrt{r_{\mathrm T-}\, r_{\mathrm B+} \phantom{ (\!\!\!\!\!) } }\; -\, \sqrt{ r_{\mathrm T+}\, r_{\mathrm B-}\phantom{ (\!\!\!\!\!) }} }{ \sqrt{r_{\mathrm T-}\, r_{\mathrm B+}\phantom{ (\!\!\!\!\!) }} \;+\, \sqrt{r_{\mathrm T+}\, r_{\mathrm B-} \phantom{ (\!\!\!\!\!) }} }
-\eea
-%\bea 
-%A_{\mathrm{super}} &=& \frac{(r_{\mathrm T-}\, r_{\mathrm B+})^{1/2} - (r_{\mathrm T+}\, r_{\mathrm B-})^{1/2} }{(r_{\mathrm T-}\, r_{\mathrm B+})^{1/2} + (r_{\mathrm T+}\, r_{\mathrm B-})^{1/2} }.
+%We define the superratio, $s$, to be:
+%\bea
+%s \;\;=\;\; s(\Ebeta) \;\;:=\;\; \frac{ r_{\mathrm T+}\, r_{\mathrm B-} }{ r_{\mathrm T-}\, r_{\mathrm B+} }, 
+%\eea
+%and the superratio asymmetry, $A_{\mathrm{super}}$, as
+%\bea
+%A_{\mathrm{super}} \;\;=\;\; A_{\mathrm{super}}(\Ebeta) &:=& \frac{1-\sqrt{s}}{1+\sqrt{s}} 
+%\\
+%&=& \frac{ \sqrt{r_{\mathrm T-}\, r_{\mathrm B+} \phantom{ (\!\!\!\!\!) } }\; -\, \sqrt{ r_{\mathrm T+}\, r_{\mathrm B-}\phantom{ (\!\!\!\!\!) }} }{ \sqrt{r_{\mathrm T-}\, r_{\mathrm B+}\phantom{ (\!\!\!\!\!) }} \;+\, \sqrt{r_{\mathrm T+}\, r_{\mathrm B-} \phantom{ (\!\!\!\!\!) }} }
+%\eea
+%%
+%This is explicitly an experimental quantity that is measured directly by the above combination of count rates, however it is obvious that it reduces, under appropriate limits, to be equivalent to a naive asymmetry.  In particular, if we require that the physical conditions and relative detector positions and sensitivities are identical when the polarization is flipped, then we have $r_{\mathrm T+}(\Ebeta) = r_{\mathrm B-}(\Ebeta)$ and $r_{\mathrm T-}(\Ebeta) = r_{\mathrm B+}(\Ebeta)$.
+%%
+%It follows that we can simplify the superratio asymmetry into a more intuitive quantity that we might use for a measurement with only a single polarization state, e.g.,  
+%\bea
+%A_{\mathrm{super}, +} &\rightarrow& \frac{ r_{\mathrm T}\, - \,r_{\mathrm B} }{r_{\mathrm T}\, +\, r_{\mathrm B} }. 
+%\label{eq:singlepol_asymmetry}
+%\eea
+
+\note[note, nolist]{begin thing I haven't yoinked from yet:  }
+%%%While Eq.~\ref{eq:singlepol_asymmetry} is conceptually encouraging, the assumptions that gave rise to that expression are too simplifying.  We will introduce some more limited assumptions for what follows, along with shorthand notation for improved readability.  First, we require that the magnitude of the polarization vector is the same for both polarization states, and also that the average of the magnitude of $\cos\theta$ for a given detector does not change when the polarization is flipped (equivalent to a requirement that the trap position doesn't change when the polarization is flipped).  Then: 
+%%%\bea
+%%%P &:=& |\vec{P}_+| = |\vec{P}_-|  \\
+%%%\langle |\cos\theta | \rangle_T &:=& \langle |\cos\theta | \rangle_{\mathrm T+} \, = \, \langle |\cos\theta | \rangle_{\mathrm T-} \\
+%%%\langle |\cos\theta | \rangle_B &:=& \langle |\cos\theta | \rangle_{\mathrm B+} \, = \, \langle |\cos\theta | \rangle_{\mathrm B-},
+%%%\eea
+%%%and we can further define
+%%%\bea
+%%%c &=& \,\,\,\,\, \langle | \cos\theta | \rangle :=  \frac{1}{2} \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle_T + \langle |\cos\theta | \rangle_B \, \right) \\
+%%%\Delta c &=& \Delta \langle | \cos\theta | \rangle := \frac{1}{2} \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle_T - \langle |\cos\theta | \rangle_B \, \right)
+%%%\eea
+%%%and 
+%%%\bea
+%%%\tilde{A} &=\;\; \tilde{A}(\Ebeta) &:=\;\; A_\beta \frac{v}{c} \\ 
+%%%\tilde{b} &=\;\; \tilde{b}(\Ebeta) &:=\;\;  \bFierz \frac{mc^2}{\Ebeta}, \\
+%%%\tilde{r} &=\;\; \tilde{r}(\Ebeta) &:=\;\; 1+\tilde{b}. 
+%%%\eea
+%%%
+%%%With this new set of variables defined, we can re-write Eqs.~(\ref{eq:r1}-\ref{eq:r4}) as
+%%%\bea
+%%%r_{\mathrm T+}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T}\, N_+ \left[\tilde{r}  \,+\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c + \Delta c \, \right) \right] \\
+%%%r_{\mathrm B+}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B}\, N_+ \left[\tilde{r}  \,-\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c - \Delta c \, \right) \right] \\
+%%%r_{\mathrm T-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T}\, N_- \left[\tilde{r}  \,-\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c + \Delta c \, \right) \right] \\
+%%%r_{\mathrm B-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B}\, N_- \left[\tilde{r}  \,+\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c - \Delta c \, \right) \right], 
+%%%\eea
+%%%and the superratio becomes
+%%%\bea
+%%%s 
+%%%&=& 
+%%%\frac{ 
+%%%\left(
+%%%\tilde{r} + \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 
+%%%}{ 
+%%%\left(
+%%%\tilde{r} - \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 
+%%%} 
+%%%\eea
+%%%where all factors of $W(\Ebeta)$, $\varepsilon_{\mathrm T/B}(\Ebeta)$, $\Omega_{\mathrm T/B}$, and $N_{+/-}$ have been cancelled out entirely.  
+
+%For simplicity we take $\Delta c = 0$ in what follows.  Although this is not strictly accurate within the present experiment, this assumption greatly simplifies the expressions that follow.  Then, absent other corrections (\emph{e.g.} backscattering, unpolarized background, ...), it is clear that if $\tilde{b} = 0$ as in the Standard Model, %it follows that 
+%\bea
+%A_{\mathrm{super}} &=\;\; \tilde{A} P c &=\;\; \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle
 %\eea
 %
-This is explicitly an experimental quantity that is measured directly by the above combination of count rates, however it is obvious that it reduces, under appropriate limits, to be equivalent to a naive asymmetry.  In particular, if we require that the physical conditions and relative detector positions and sensitivities are identical when the polarization is flipped, then we have $r_{\mathrm T+}(\Ebeta) = r_{\mathrm B-}(\Ebeta)$ and $r_{\mathrm T-}(\Ebeta) = r_{\mathrm B+}(\Ebeta)$.
-%%\bea
-%%r_{\mathrm T+}(\Ebeta) &=& r_{\mathrm B-}(\Ebeta) \\ 
-%%r_{\mathrm T-}(\Ebeta) &=& r_{\mathrm B+}(\Ebeta)
-%%\eea
-It follows that we can simplify the superratio asymmetry into a more intuitive quantity that we might use for a measurement with only a single polarization state, e.g.,  
-\bea
-A_{\mathrm{super}, +} &\rightarrow& \frac{ r_{\mathrm T}\, - \,r_{\mathrm B} }{r_{\mathrm T}\, +\, r_{\mathrm B} }. 
-\label{eq:singlepol_asymmetry}
-\eea
-
-While Eq.~\ref{eq:singlepol_asymmetry} is conceptually encouraging, the assumptions that gave rise to that expression are too simplifying.  We will introduce some more limited assumptions for what follows, along with shorthand notation for improved readability.  First, we require that the magnitude of the polarization vector is the same for both polarization states, and also that the average of the magnitude of $\cos\theta$ for a given detector does not change when the polarization is flipped (equivalent to a requirement that the trap position doesn't change when the polarization is flipped).  Then: 
-\bea
-P &:=& |\vec{P}_+| = |\vec{P}_-|  \\
-\langle |\cos\theta | \rangle_T &:=& \langle |\cos\theta | \rangle_{\mathrm T+} \, = \, \langle |\cos\theta | \rangle_{\mathrm T-} \\
-\langle |\cos\theta | \rangle_B &:=& \langle |\cos\theta | \rangle_{\mathrm B+} \, = \, \langle |\cos\theta | \rangle_{\mathrm B-},
-\eea
-and we can further define
-\bea
-c &=& \,\,\,\,\, \langle | \cos\theta | \rangle :=  \frac{1}{2} \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle_T + \langle |\cos\theta | \rangle_B \, \right) \\
-\Delta c &=& \Delta \langle | \cos\theta | \rangle := \frac{1}{2} \left( \phantom{2_2^2}\!\!\!\! \langle |\cos\theta | \rangle_T - \langle |\cos\theta | \rangle_B \, \right)
-\eea
-and 
-\bea
-\tilde{A} &=\;\; \tilde{A}(\Ebeta) &:=\;\; A_\beta \frac{v}{c} \\ 
-\tilde{b} &=\;\; \tilde{b}(\Ebeta) &:=\;\;  \bFierz \frac{mc^2}{\Ebeta}, \\
-\tilde{r} &=\;\; \tilde{r}(\Ebeta) &:=\;\; 1+\tilde{b}. 
-\eea
-
-With this new set of variables defined, we can re-write Eqs.~(\ref{eq:r1}-\ref{eq:r4}) as
-\bea
-r_{\mathrm T+}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T}\, N_+ \left[\tilde{r}  \,+\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c + \Delta c \, \right) \right] \\
-r_{\mathrm B+}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B}\, N_+ \left[\tilde{r}  \,-\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c - \Delta c \, \right) \right] \\
-r_{\mathrm T-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_{\mathrm T}\, N_- \left[\tilde{r}  \,-\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c + \Delta c \, \right) \right] \\
-r_{\mathrm B-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B}\, N_- \left[\tilde{r}  \,+\, \tilde{A} P \left( \phantom{2_2^2}\!\!\!\! c - \Delta c \, \right) \right], 
-\eea
-and the superratio becomes
-\bea
-s 
-&=& 
-\frac{ 
-\left(
-\tilde{r} + \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 
-}{ 
-\left(
-\tilde{r} - \tilde{A} P c \right)^2 -  \left( \phantom{\tilde{2}_2^2}\!\!\!\!\! \Delta c \right)^2 
-} 
-\eea
-where all factors of $W(\Ebeta)$, $\varepsilon_{\mathrm T/B}(\Ebeta)$, $\Omega_{\mathrm T/B}$, and $N_{+/-}$ have been cancelled out entirely.  
-
-For simplicity we take $\Delta c = 0$ in what follows.  Although this is not strictly accurate within the present experiment, this assumption greatly simplifies the expressions that follow.  Then, absent other corrections (\emph{e.g.} backscattering, unpolarized background, ...), it is clear that if $\tilde{b} = 0$ as in the Standard Model, %it follows that 
-\bea
-A_{\mathrm{super}} &=\;\; \tilde{A} P c &=\;\; \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle
-\eea
-
-In the case where $\tilde{b} \neq 0$, we find that 
-\bea
-A_{\mathrm{super}} &=& \frac{\tilde{A} P c}{1+\tilde{b}} \\
-&\approx&  \tilde{A} P c \, (1 - \tilde{b} + {\tilde{b}}^2),
-\eea
-where we have utilized the assumption that $\tilde{b} \ll 1$.
-Thus, to leading order in terms of $\tilde{b}$, 
-\bea
-A_{\mathrm{super}} &\approx& \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \left( 1 - \bFierz \frac{mc^2}{\Ebeta} \right).
-\eea
+%In the case where $\tilde{b} \neq 0$, we find that 
+%\bea
+%A_{\mathrm{super}} &=& \frac{\tilde{A} P c}{1+\tilde{b}} \\
+%&\approx&  \tilde{A} P c \, (1 - \tilde{b} + {\tilde{b}}^2),
+%\eea
+%where we have utilized the assumption that $\tilde{b} \ll 1$.
+%Thus, to leading order in terms of $\tilde{b}$, 
+%\bea
+%A_{\mathrm{super}} &\approx& \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \left( 1 - \bFierz \frac{mc^2}{\Ebeta} \right).
+%\eea
 
 
 
@@ -770,6 +914,11 @@ A_{\mathrm{super}} &\approx& \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \co
 
 %%%% %%%% %%%% %%%% %%%% %%%%
 %%%% %%%% %%%% %%%% %%%% %%%%
+\ifthenelse{\boolean{isdraft}}
+{
+	\pagebreak
+}
+{}
 %%%% %%%% %%%% %%%% %%%% %%%%
 \section{The Gamow-Teller/Fermi Mixing Ratio and Related Constraints}
 \label{sec:extractinglambda}
