@@ -362,7 +362,7 @@ its big $\Abeta$ value means we have a big thing to multiply any $\bFierz$ value
 \label{sec:mathdescription_intro}
 In this section, we consider how scalar and tensor interactions within the beta decay process might manifest as a physical observable.  As this section is, in part, intended to aid the reader in gaining a physical intuition for certain aspects of decay behaviour, only the leading order terms are described. However, the full mathematical formalism including many higher-order terms is worked out in detail within Appendix~\ref{appendix_forthepeople}.
 %this section will simply provide the result directly, and use this as a starting point. 
-The \ac{PDF} below provides a description of beta decay in terms of the outgoing beta's energy and direction relative to the nuclear spin.  It is a simplification of the one presented in the classic \ac{JTW} paper, and is accurate to leading order~\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}.  For the dominant branch of $^{37}$K decay, we have:
+The \ac{PDF} below provides a description of beta decay in terms of the outgoing beta's energy and direction relative to the nuclear spin, in terms of (almost) all mathematically consistent types of couplings. (Pseudoscalar couplings are neglected in this treatment, because they are relativistically suppressed at the energy scales characteristic of typical beta decays.)  This \ac{PDF} is a simplification of the one presented in the classic \ac{JTW} paper, and is accurate to leading order~\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}.  For the dominant branch of $^{37}$K decay, we have:
 %This two-dimensional \ac{PDF} provides a description of beta decay in terms of the outgoing beta's energy and direction relative to the nuclear spin
 %%To leading order, the probability density function from the classic \ac{JTW} paper can be used to describe beta decay in terms of the outgoing beta's energy and direction relative to the nuclear spin~\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}.  
 \bea
@@ -381,7 +381,8 @@ W(\Ebeta) &:=& \frac{2}{(2\pi)^3} \, \FFminus \, \xi \, \pe \Ee (E_0 - \Ee)^2,
 \eea
 where $E_0$ is the maximum possible beta energy associated with the transition.  The function $\FFminus$ is a Fermi function for outgoing positrons,
 %for outgoing electrons (top) and positrons (bottom), 
-with $Z^\prime$ the proton number of the daughter nucleus.  The Fermi function accounts for the force from the nuclear electric charge acting on the outgoing electron or positron.  It is computed with the Dirac equation using various levels of approximation to describe the nuclear charge distribution and screening of that charge distribution by electrons near the nucleus.
+with $Z^\prime$ the proton number of the daughter nucleus.  The Fermi function accounts for the force from the electric charge of the daughter nucleus and its orbital electrons acting on the outgoing electron/positron.  It is computed with the Dirac equation using various levels of approximation to describe the nuclear charge distribution and screening of that charge distribution by electrons near the nucleus.
+\aside{cite:  Hayen+Severijns et.al., 2017.}
 
 We now turn our attention to the parameters $\Abeta$ (the beta asymmetry), $\bFierz$ (the Fierz interference), and $\xi$ that are used in Eqs.~(\ref{equation:integrated_jtw_INTRODUCTION})-(\ref{eq:overallenergydependence_intro}).  These parameters are unique to the transition under consideration, but are nevertheless closely related to certain universally applicable coupling strengths.  They can be written in terms of the universally applicable complex coupling constants $C_X$ and $C_X^{\prime}$ of Eq.~(\ref{eq:lee_yang_hamiltonian_intro})
 %(with $X=\{V,A,S,T,P\}$) are complex coupling constants for vector, axial, scalar, tensor, and pseudoscalar interactions
@@ -393,17 +394,24 @@ In the above expressions, $M_F$ and $M_{GT}$ are the Fermi (vector coupling) and
 \mbox{$\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2} \approx 1$}, using fine structure constant $\alpha$.
 %\note[note,nolist]{}
 
-The expressions above have many free parameters, and some simplifications must be made before a physically meaningful measurement can be made.  Each type of interaction $X$ (for $X=\{V,A,S,T\}$) is described by two complex coupling constants, $C_X$ and $C_X^\prime$.  This extra degree of freedom isnecessary in order to describe couplings to both left-handed and right-handed helicity leptons.
-~\aside{Is it definitely helicity?  Or do I mean chirality?}
+The expressions above have many free parameters, and some simplifications and assumptions must be made before any experimental measurement can be interpreted in a physically meaningful way.  
+%a physically meaningful measurement can be made.  
+Each type of interaction $X$ (for $X=\{V,A,S,T\}$) is described by \emph{two} complex coupling constants, $C_X$ and $C_X^\prime$.  This extra degree of freedom is necessary in order to describe couplings to both left-handed and right-handed helicity leptons.
+~\aside{Is it definitely helicity?  Or do I mean chirality?  I think helicity is right.  probably.}
 In practice, we already know that the weak force couples (almost) entirely to left-handed electrons and right-handed positrons.  Separately, we know that the interaction proceeds (almost) entirely by vector and axial couplings.  Taken together, this suggests that neutrinos and anti-neutrinos, as leptons, must (predominantly) follow the same helicity selection rules that apply to electrons and positrons.  This is because, \emph{e.g.}, a decay mediated by either scalar or tensor couplings would produce two outgoing leptons/anti-leptons of the \emph{same} helicity.  
 
-It is this subtlety which gives rise to the energy dependence ($\me c^2 / \Ee $) by which $\bFierz$ is multiplied in Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}) --- it is fundamentally an \emph{interference} term between the interactions of standard model physics with an unknown exotic physics term.  That is, if we have restricted ourselves to interactions involving left-handed neutrinos, then the scalar or tensor components of this interaction must also couple to left-handed electrons, effectively competing with the expected vector and axial couplings.  
+It is this subtlety which gives rise to the energy dependence ($\me c^2 / \Ee $) by which $\bFierz$ is multiplied in Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}).  
+%--- it is fundamentally an \emph{interference} term between the interactions of standard model physics with an unknown exotic physics term.  
+That is, if we have restricted ourselves to interactions involving right-handed anti-neutrinos travelling at the speed of light, then the scalar or tensor components of this interaction, if present, must also couple to right-handed helicity electrons.  The lower the energy of the outgoing electron, the greater the fraction of available phase space in which the electron ``appears'' to be right-handed.  In other words, this term describes a mechanism by which scalar and tensor couplings can effectively compete with the expected vector and axial couplings;  this is why $\bFierz$ is described as an \emph{interference} term.
+% effectively competing with the expected vector and axial couplings.  
 
+
+\note{somewhere:  point out that $\bFierz$ is linear in BSM.  other observables are quadratic.  So this way is best for small S, T couplings.}
 \note[note,nolist]{}
 \note[tag]{Needs:  
 \\
-* also, we describe it in that order [despite the fact that we're actually (experimentally?) limited to the one helicity of electrons but we have no experimental limits on neutrino helicity really...], because with massive electrons you can boost to a frame with opposite helicity.  `Massless' neutrinos can't do that.  So you get a factor of electron mass in there.
-\\
+%* also, we describe it in that order [despite the fact that we're actually (experimentally?) limited to the one helicity of electrons but we have no experimental limits on neutrino helicity really...], because with massive electrons you can boost to a frame with opposite helicity.  `Massless' neutrinos can't do that.  So you get a factor of electron mass in there.
+%
 * citations for Ran Hong and Greiner2009.  
 \\
 * Also, it arises from the Dirac spinor term?
