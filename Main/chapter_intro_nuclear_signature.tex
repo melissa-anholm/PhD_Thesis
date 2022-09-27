@@ -963,9 +963,9 @@ Here, $K = (\hbar c)^6 2\pi^3 \hbar \ln(2) (\me c^2)^{-5}$ is a simple combinati
 
 It is worthwhile, at this stage, to briefly discuss the corrections to the Fermi and Gamow-Teller matrix elements, $M_F$ and $M_{GT}$, that have already been implicitly applied.  Although the uncorrected matrix elements $M_F^0$ and $M_{GT}^0$ are in some sense the more fundamental quantities, the corrected matrix elements are what is measured by an experiment.  $M_F^0$ and $M_{GT}^0$ are related to their corrected counterparts according to:
 \bea
-&|M_F|^2 \;\; =& (1+\delta_R^\prime) (1 + \delta_{NS}^V - \delta_C^V) \, |M_F^0|^2
+|M_F|^2 &=& (1+\delta_R^\prime) (1 + \delta_{NS}^V - \delta_C^V) \, |M_F^0|^2
 \\
-&|M_{GT}|^2   =& (1+\delta_R^\prime) (1 + \delta_{NS}^A - \delta_C^A) \, |M_{GT}^0|^2 , 
+|M_{GT}|^2 &=& (1+\delta_R^\prime) (1 + \delta_{NS}^A - \delta_C^A) \, |M_{GT}^0|^2 , 
 \eea 
 where $\delta_C^{V}$ ($\delta_C^{A}$) is the isospin symmetry breaking correction for the vector (axial-vector) current.  Here, $\delta^\prime_R$ is the portion of the outer radiative correction (\emph{i.e.}, dependent on the specific nucleus in question) that depends only trivially on the nucleus; it is identically the same for vector and axial couplings.  The $\delta_{NS}^V$ ($\delta_{NS}^A$) term is the portion of the outer radiative correction for the vector (axial-vector) current with a \emph{non-trivial} dependence on nuclear structure.  These require a detailed shell model calculation to evaluate, as described in \emph{e.g.}  Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.
 
@@ -990,22 +990,61 @@ with something like
 `We will need this absolute strength for the vector part of 37K decay when we get the ratio of vector and axial vector matrix elements from our fT value and predict our observables.'
 }
 
+In practice, the $ft$ values measured in superallowed $0^+ \rightarrow 0^+$ transitions need some small corrections in order to arrive at a universally applicable measure of the vector coupling strength.  We define a corrected $ft$ value, $\mathcal{F}t$, as:
+\bea
+\mathcal{F}t &:=& 
+f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) 
+\label{eq:Ft_with_fVt}\\
+&=& 
+\frac{K}{2 \, G_F^2 \, V_{ud}^2 (1+\Delta_R^V) } , 
+\label{eq:Ft_with_Vud}
+\eea
+where we have made use of Eq.~(\ref{eq:partialhalflife_theory}).  Within Eqs.~(\ref{eq:Ft_with_fVt})-(\ref{eq:Ft_with_Vud}) above, only the parameters $t$ and $G_F$ are measured directly, while the other parameters must be calculated.  If all measurements and calculations have been performed perfectly, then Eq.~(\ref{eq:Ft_with_fVt}) is expected to yield the same $\mathcal{F}t$-value for \emph{any} superallowed $0^+ \rightarrow 0^+$ transition.  The above relationship is commonly used to extract an experimental value for $V_{ud}$, which cannot be calculated directly.
+
+While Eq.~(\ref{eq:Ft_with_Vud}) describes physical parameters that are universally applicable, it is important to remember that we have only arrived at this result by specializing our description to the superallowed $0^+ \rightarrow 0^+$ transitions; Eqs.~(\ref{eq:Ft_with_fVt})-(\ref{eq:Ft_with_Vud}) are not applicable as-is to other types of transitions.  %, so the nuclear structure parameters of Eqs.~(\ref{eq:Ft_with_fVt})-(\ref{eq:Ft_with_Vud}) must only be evaluated for this same class of decays.  
+It is, however, also possible to write down an analogous expression to describe the universal vector coupling strength using parameters related to other types of decays.  We will consider the mixed (Fermi/Gamow-Teller) mirror decays (of which $^{37}$K \emph{is} an example).  As the axial current is not conserved, we will still only be interested in the vector components of such transitions, and it will take a bit more work to separate these out in a transition where both vector and axial couplings contribute.  
+
+
+As before, we use Eq.~(\ref{eq:partialhalflife_theory}) to write down $f_V t$:
+\bea
+f_V t 
+&=& 
+\frac{K}{G_F^2 V_{ud}^2 C_V^2 |M_F|^2 (1 + \Delta_R^V) \left(1 + \frac{f_A}{f_V}\frac{C_A^2}{C_V^2} \frac{|M_{GT}|^2}{|M_F|^2} \frac{(1+\Delta_R^A)}{(1+\Delta_R^V)} \right)}.  
+\eea
+Applying the same nuclear structure corrections that were used in Eq.~(\ref{eq:Ft_with_fVt}), we find:
+\bea
+f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) 
+&=& 
+\frac{K}{G_F^2 V_{ud}^2 C_V^2 |M_F^0|^2 (1+\Delta_R^V) } 
+\nonumber\\
+&& \times \;\;\;
+\frac{1}{\left(1 + \frac{f_A}{f_V}\frac{C_A^2}{C_V^2} \frac{|M_{GT}^0|^2}{ |M_F^0|^2} \frac{(1 + \delta_{NS}^A - \delta_C^A) }{(1 + \delta_{NS}^V - \delta_C^V)} \frac{(1+\Delta_R^A)}{(1+\Delta_R^V)} \right) } 
+\eea
+It is useful, at this stage, to (once again) define $\rho$, the mixing ratio of axial and vector couplings that is specific to an individual transition, such that:
+\bea
+\rho^2 &=& \frac{C_A^2}{C_V^2} \frac{|M_{GT}^0|^2}{ |M_F^0|^2} \frac{(1 + \delta_{NS}^A - \delta_C^A) }{(1 + \delta_{NS}^V - \delta_C^V)} \frac{(1+\Delta_R^A)}{(1+\Delta_R^V)} 
+\label{eq:rho_with_corrections}
+\\
+&\approx& \frac{C_A^2 |M_{GT}^0|^2 }{C_V^2 |M_F^0|^2}.
+\eea
+
+The careful reader may notice that Eq.~(\ref{eq:rho_with_corrections}) is not \emph{quite} equivalent to the definition of $\rho$ provided in Eq.~(\ref{eq:definerho_intro}).
+
+
+
 \note[note,nolist]{}
 
-
-In practice, the $ft$ values measured in superallowed $0^+ \rightarrow 0^+$ transitions need some small corrections in order to arrive at a universally applicable measure of the vector coupling strength.  We define a corrected $ft$ value, $\mathcal{F}t$, as:
+\color{skyblue}
 \bea
 \mathcal{F}t &=& f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ),
 \label{eq:define_Ft}
 \eea
-\color{skyblue}
 where 
 $\delta_C^{V}$ is the isospin symmetry breaking correction for the vector current, 
 $\delta^\prime_R$ is the portion of the outer radiative correction (ie, dependent on the specific nucleus in question) that depends only trivially on the nucleus, 
 and
 $\delta_{NS}^{V}$ is the portion of the outer radiative correction %(depends on the specific nucleus) 
 to the vector current that depends in a \emph{non-trivial} way on nuclear structure and requires a detailed shell model calculation to evaluate, as described in e.g.  Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.  
-\color{black}
 We have of course implicitly specialized the $\mathcal{F}t$ value to consider only the vector component of the statistical rate function, but this is redundant in the case of the superallowed $0^+ \rightarrow 0^+$ transitions that are presently under consideration.
 
 Within Eq.~\ref{eq:define_Ft}, we have corrected away all contributions from nuclear structure, and what remains can also be described in terms of fundamental couplings as:
@@ -1013,15 +1052,10 @@ Within Eq.~\ref{eq:define_Ft}, we have corrected away all contributions from nuc
 \mathcal{F}t &=& \frac{K}{2 \, G_V^2 (1+\Delta_R^V) },
 \label{eq:relate_Ft_to_couplings}
 \eea
-\color{skyblue}
 with $K$ a rather messy combination of physical constants: $K = (\hbar c)^6 2\pi^3 \hbar \ln(2) (\me c^2)^{-5}$.  
 %
-In Eq.~\ref{eq:relate_Ft_to_couplings} above, $G_V$ is the vector coupling constant for semileptonic weak interactions, and 
-%
-$\Delta_R^{V}$ is the vector current's inner radiative correction (independent of the specific transition being considered), calculated as in e.g. Refs.~\cite{MarcianoSirlin_1986}\cite{MarcianoSirlin_2006}\cite{CzarneckiMarcianoSirlin_2019}.  %$\Delta_R^{V}$
-\color{black}
+In Eq.~\ref{eq:relate_Ft_to_couplings} above, $G_V$ is the vector coupling constant for semileptonic weak interactions, and $\Delta_R^{V}$ is the vector current's inner radiative correction (independent of the specific transition being considered), calculated as in e.g. Refs.~\cite{MarcianoSirlin_1986}\cite{MarcianoSirlin_2006}\cite{CzarneckiMarcianoSirlin_2019}.  %$\Delta_R^{V}$
 
-\color{skyblue}
 We can also relate the vector coupling constant $G_V$ to two other experimental observables:
 \bea
 G_V = V_{ud}  \, G_F
@@ -1031,15 +1065,17 @@ where $G_F$ is the weak interaction coupling constant, and is measured experimen
 $V_{ud}$ is the up-down mixing element within the \ac{CKM} matrix, and its precise determination is an active area of current research, motivated in part by the attempt to search for or constrain the possible presence of a fourth generation of quarks. 
 \color{black}
 
+\color{skyblue}
 Combining Eqs.~(\ref{eq:define_Ft}), (\ref{eq:relate_Ft_to_couplings}), and (\ref{eq:Vud_relate}), we have:
 \bea
 \mathcal{F}t &=& \frac{K}{2 \, G_F^2 \, V_{ud}^2 (1+\Delta_R^V) } 
 \nonumber \\
 &=& 
 f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ), 
-\label{eq:Ft_with_Vud}
+%\label{eq:Ft_with_Vud}
 \eea
 which allows for a variety of cross-checks to be performed on physical observables.  
+\color{black}
 
 We now turn our attention back to the mixed transitions (of which $^{37}$K \emph{is} an example) to establish an analogous relationship between observables.  Eq.~(\ref{eq:define_Ft}) is still technically applicable, but the $f_Vt$ value is no longer so readily observable, as it accounts for only the vector-coupled portion of the decay phase space, and the axial coupling also contributes to the transition.  We extend the corrected vector $\mathcal{F}t$ value of Eq.~(\ref{eq:Ft_with_Vud}) to mirror decays\aside[note]{Is it all mixed transitions, or only mirror decays??} by including the contribution of the (squared) Gamow-Teller matrix element, mostly by inspection.  The result, denoted $\mathcal{F}t_0$, is given by
 %We define a corrected $ft$ value specific to the case of mirror nuclei, denoted $\mathcal{F}t_0$ 
