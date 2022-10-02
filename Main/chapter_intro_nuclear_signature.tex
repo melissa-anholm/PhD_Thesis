@@ -421,7 +421,7 @@ That is, if we have restricted ourselves to interactions involving right-handed 
 
 If one assumes the standard model holds, $\Abeta$, $\bFierz$, and $\xi$ can be written in terms of a greatly simplified set of parameters.  Here, we introduce $\rho$, the ratio of Gamow-Teller and Fermi couplings: 
 \bea
-\rho &:=& \frac{C_A M_{GT}}{C_V M_F}.%  \;\; = \;\; \frac{g_A M_{GT}}{g_V M_F}
+\rho &=& \frac{C_A M_{GT}}{C_V M_F}.%  \;\; = \;\; \frac{g_A M_{GT}}{g_V M_F}
 \label{eq:definerho_intro}
 \eea
 The value of $\rho$ must be extracted experimentally (see Sec.~\ref{sec:extractinglambda}).
@@ -954,20 +954,27 @@ t &=&  \frac{1}{R} \, (1 + P_{\mathrm{EC}}) \,\, t_{1/2},
 \eea
 where $P_{\mathrm{EC}}$ is the electron capture probability (in the case of $^{37}$K, $P_{\mathrm{EC}}=0.0008$ makes only a small contribution~\cite{SeverijnsTandecki2008}).  
 \aside{could also cite Severijns2008's Refs. 35 and 36...}  
-It is also possible to write down an expression for $t$ based on something closer to a first principles approach,  including corrections arising from a variety of physical effects:
+It is also possible to write down an expression for $t$ based on something closer to a first principles approach:  
+%,  including corrections arising from a variety of physical effects:
 \bea
-t &=& \frac{K}{ G_F^2 \, V_{ud}^2  \left( f_V\, C_V^2 |M_F|^2 (1+\Delta_R^V) + f_A\, C_A^2 |M_{GT}|^2 (1+\Delta_R^A) \phantom{\frac{1^1_1}{1^1_1} \!\!\!\!\!\! } \right) }.
+t &=& \frac{K}{ G_F^2 \, V_{ud}^2  \left( f_V\, C_V^2 |M_F|^2 + f_A\, C_A^2 |M_{GT}|^2 
+%\phantom{\frac{1^1_1}{1^1_1} \!\!\!\!\!\! } 
+\right) }.
 \label{eq:partialhalflife_theory}
 \eea
-Here, $K = (\hbar c)^6 2\pi^3 \hbar \ln(2) (\me c^2)^{-5}$ is a simple combination of physical constants, and $C_V$, $C_A$, $M_F$, and $M_{GT}$ are as described in \emph{e.g.} Section~\ref{sec:mathdescription_intro}.  $G_F$ is the weak interaction coupling constant, which is measured experimentally through muon decay.  $V_{ud}$ is the up-down mixing element within the \ac{CKM} matrix; its precise determination is an active area of research, motivated in part by the attempt to search for or constrain the possible presence of a fourth generation of quarks.  The quantities $\Delta_R^V$ and $\Delta_R^A$ arise from inner radiative corrections (\emph{i.e.}, they are independent of the specific transition being considered) to the vector and axial-vector currents, and may be calculated as in Refs.~\cite{MarcianoSirlin_1986}\cite{MarcianoSirlin_2006}\cite{CzarneckiMarcianoSirlin_2019}.
+Here, $K = (\hbar c)^6 2\pi^3 \hbar \ln(2) (\me c^2)^{-5}$ is a simple combination of physical constants, and, as described in Sec.~\ref{sec:mathdescription_intro}, $C_V$ ($C_A$) is the universal complex coupling parameter associated with vector (axial) currents, while $M_F$ ($M_{GT}$) is the transition matrix element associated with vector (axial) coupling for a specific decay.
+%are as described in \emph{e.g.} Section~\ref{sec:mathdescription_intro}.  
+$G_F$ is the weak interaction coupling constant, which is measured experimentally through muon decay.  $V_{ud}$ is the up-down mixing element within the \ac{CKM} matrix; its precise determination is an active area of research, motivated in part by the attempt to search for or constrain the possible presence of a fourth generation of quarks.  
 
 It is worthwhile, at this stage, to briefly discuss the corrections to the Fermi and Gamow-Teller matrix elements, $M_F$ and $M_{GT}$, that have already been implicitly applied.  Although the uncorrected matrix elements $M_F^0$ and $M_{GT}^0$ are in some sense the more fundamental quantities, the corrected matrix elements are what is measured by an experiment.  $M_F^0$ and $M_{GT}^0$ are related to their corrected counterparts according to:
 \bea
-|M_F|^2 &=& (1+\delta_R^\prime) (1 + \delta_{NS}^V - \delta_C^V) \, |M_F^0|^2
+|M_F|^2    &=& (1+\delta_R^\prime) (1 + \delta_{NS}^V - \delta_C^V) (1+\Delta_R^V) \, |M_F^0|^2
+\label{eq:MF_expand}
 \\
-|M_{GT}|^2 &=& (1+\delta_R^\prime) (1 + \delta_{NS}^A - \delta_C^A) \, |M_{GT}^0|^2 , 
+|M_{GT}|^2 &=& (1+\delta_R^\prime) (1 + \delta_{NS}^A - \delta_C^A) (1+\Delta_R^A) \, |M_{GT}^0|^2 , 
+\label{eq:MGT_expand}
 \eea 
-where $\delta_C^{V}$ ($\delta_C^{A}$) is the isospin symmetry breaking correction for the vector (axial-vector) current.  Here, $\delta^\prime_R$ is the portion of the outer radiative correction (\emph{i.e.}, dependent on the specific nucleus in question) that depends only trivially on the nucleus; it is identically the same for vector and axial couplings.  The $\delta_{NS}^V$ ($\delta_{NS}^A$) term is the portion of the outer radiative correction for the vector (axial-vector) current with a \emph{non-trivial} dependence on nuclear structure.  These require a detailed shell model calculation to evaluate, as described in \emph{e.g.}  Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.
+where $\delta_C^{V}$ ($\delta_C^{A}$) is the isospin symmetry breaking correction for the vector (axial-vector) current.  Here, $\delta^\prime_R$ is the portion of the outer radiative correction (\emph{i.e.}, it is dependent on the specific transition in question) that depends \emph{only trivially} on the nucleus; it is identically the same for vector and axial couplings.  The $\delta_{NS}^V$ ($\delta_{NS}^A$) term is the portion of the outer radiative correction for the vector (axial-vector) current with a \emph{non-trivial} dependence on nuclear structure.  These require a detailed shell model calculation to evaluate, as described in \emph{e.g.}  Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.  Finally, the quantities $\Delta_R^V$ and $\Delta_R^A$ arise from inner radiative corrections (\emph{i.e.}, independent of the specific transition being considered) to the vector and axial-vector currents, and may be calculated as in Refs.~\cite{MarcianoSirlin_1986}\cite{MarcianoSirlin_2006}\cite{CzarneckiMarcianoSirlin_2019}.  Although they do not depend on the specifics of any transition, the $\Delta_R^V$ and $\Delta_R^A$ terms are included here within the expressions for (transition-specific) $M_F$ and $M_{GT}$ for our later convenience.  This convention is sometimes, but not always, followed within the published literature~\cite{SeverijnsTandecki2008}\cite{HardyTownerSuperallowed2020}. 
 
 %%\note[note,nolist]{}
 %%$\delta_C^{V}$ is the isospin symmetry breaking correction for the vector current, $\delta^\prime_R$ is the portion of the outer radiative correction (ie, dependent on the specific nucleus in question) that depends only trivially on the nucleus, 
@@ -976,7 +983,7 @@ where $\delta_C^{V}$ ($\delta_C^{A}$) is the isospin symmetry breaking correctio
 %%\note[note,nolist]{}
 
 
-We will now consider the special case of superallowed $0^+ \rightarrow 0^+$ decay (of which $^{37}$K is \emph{not} an example).  As a general rule, these are strong, clean transitions which proceed only through vector coupling, with no axial components.  Quantitatively, this amounts to setting $M_{GT}^0=0$ and $M_F^0=2$ within Eq.~(\ref{eq:partialhalflife_theory}).  With all axial couplings eliminated completely, the superallowed $0^+ \rightarrow 0^+$ decays are
+We will now consider the special case of superallowed $0^+ \rightarrow 0^+$ decay (of which $^{37}$K is \emph{not} an example).  As a general rule, these are strong, clean transitions which proceed only through vector coupling with no axial components.  Quantitatively, this amounts to setting $M_{GT}^0=0$ and $M_F^0=2$ within Eq.~(\ref{eq:partialhalflife_theory}).  As always, $C_V=1$ by construction.  With all axial couplings eliminated completely, the superallowed $0^+ \rightarrow 0^+$ decays are
 %As such, they are 
 %%very well suited to extract (using other experimentally measured parameters) a measure of the fundamental vector coupling strength.  
 ideal candidates for measurements of the fundamental vector coupling strength.
@@ -990,51 +997,106 @@ with something like
 `We will need this absolute strength for the vector part of 37K decay when we get the ratio of vector and axial vector matrix elements from our fT value and predict our observables.'
 }
 
-In practice, the $ft$ values measured in superallowed $0^+ \rightarrow 0^+$ transitions need some small corrections in order to arrive at a universally applicable measure of the vector coupling strength.  We define a corrected $ft$ value, $\mathcal{F}t$, as:
+In practice, the $ft$ values measured in superallowed $0^+ \rightarrow 0^+$ transitions need some small corrections in order to arrive at a universally applicable measure of the vector coupling strength.  We define a corrected $ft$ value for these transitions, $\mathcal{F}t^{0^+\!\rightarrow0^+}$ (sometimes simply $\mathcal{F}t$), as:
 \bea
-\mathcal{F}t &:=& 
-f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) 
+\mathcal{F}t^{0^+\!\rightarrow0^+} &:=& 
+\left( f_V t \right) 
+\!
+\Bigg\rvert_{0^+\!\rightarrow0^+_{\phantom .}}
+\!\!\!\!\!\! \!\!\!\!\!\! 
+(1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) 
 \label{eq:Ft_with_fVt}\\
 &=& 
-\frac{K}{2 \, G_F^2 \, V_{ud}^2 (1+\Delta_R^V) } , 
+\frac{K \phantom{x^{x^x}_x} }{2 \, G_F^2 \, V_{ud}^2 (1+\Delta_R^V) } , 
 \label{eq:Ft_with_Vud}
 \eea
-where we have made use of Eq.~(\ref{eq:partialhalflife_theory}).  Within Eqs.~(\ref{eq:Ft_with_fVt})-(\ref{eq:Ft_with_Vud}) above, only the parameters $t$ and $G_F$ are measured directly, while the other parameters must be calculated.  If all measurements and calculations have been performed perfectly, then Eq.~(\ref{eq:Ft_with_fVt}) is expected to yield the same $\mathcal{F}t$-value for \emph{any} superallowed $0^+ \rightarrow 0^+$ transition.  The above relationship is commonly used to extract an experimental value for $V_{ud}$, which cannot be calculated directly.
+where we have made use of Eq.~(\ref{eq:partialhalflife_theory}).  
+\aside[note]{I think we've probably assumed something like 
+\\
+$C_V |M_F^0|_{0^+\!\rightarrow0^+} = 2$ ? } 
+Within Eqs.~(\ref{eq:Ft_with_fVt})-(\ref{eq:Ft_with_Vud}) above, only the parameters $t$ and $G_F$ are measured directly, while the other parameters must be calculated.  If all measurements and calculations have been performed perfectly, then Eq.~(\ref{eq:Ft_with_fVt}) is expected to yield the same $\mathcal{F}t$-value for \emph{any} superallowed $0^+ \rightarrow 0^+$ transition.  The above relationship is commonly used to extract an experimental value for $V_{ud}$, which cannot be calculated directly.
 
-While Eq.~(\ref{eq:Ft_with_Vud}) describes physical parameters that are universally applicable, it is important to remember that we have only arrived at this result by specializing our description to the superallowed $0^+ \rightarrow 0^+$ transitions; Eqs.~(\ref{eq:Ft_with_fVt})-(\ref{eq:Ft_with_Vud}) are not applicable as-is to other types of transitions.  %, so the nuclear structure parameters of Eqs.~(\ref{eq:Ft_with_fVt})-(\ref{eq:Ft_with_Vud}) must only be evaluated for this same class of decays.  
-It is, however, also possible to write down an analogous expression to describe the universal vector coupling strength using parameters related to other types of decays.  We will consider the mixed (Fermi/Gamow-Teller) mirror decays (of which $^{37}$K \emph{is} an example).  As the axial current is not conserved, we will still only be interested in the vector components of such transitions, and it will take a bit more work to separate these out in a transition where both vector and axial couplings contribute.  
+While Eq.~(\ref{eq:Ft_with_Vud}) describes physical parameters that are universal, it is important to remember that we have only arrived at this result by specializing our description to the superallowed $0^+ \rightarrow 0^+$ transitions; Eqs.~(\ref{eq:Ft_with_fVt})-(\ref{eq:Ft_with_Vud}) are not applicable as-is to other types of transitions.  %, so the nuclear structure parameters of Eqs.~(\ref{eq:Ft_with_fVt})-(\ref{eq:Ft_with_Vud}) must only be evaluated for this same class of decays.  
+It is, however, also possible to write down an analogous expression to describe the universal vector coupling strength using parameters related to other types of decays.  As the axial current is not conserved, we will still only be interested in the vector components of such transitions, and it will take a bit more work to separate these out within a transition where both couplings contribute.  We will consider the mixed (Fermi/Gamow-Teller) mirror decays (of which $^{37}$K \emph{is} an example).  Again, $C_V=1$ (it is a universal parameter), however for the case of mirror transitions, $M_F^0 = 1$ and $M_{GT}\neq0$.
 
-
-As before, we use Eq.~(\ref{eq:partialhalflife_theory}) to write down $f_V t$:
+It is useful, at this stage, to recall the definition of $\rho$, the axial-vector/vector mixing ratio for a specific transition, from Eq.~(\ref{eq:definerho_intro}).  In the notation of Eqs.~(\ref{eq:MF_expand})-(\ref{eq:MGT_expand}), we have:
 \bea
-f_V t 
-&=& 
-\frac{K}{G_F^2 V_{ud}^2 C_V^2 |M_F|^2 (1 + \Delta_R^V) \left(1 + \frac{f_A}{f_V}\frac{C_A^2}{C_V^2} \frac{|M_{GT}|^2}{|M_F|^2} \frac{(1+\Delta_R^A)}{(1+\Delta_R^V)} \right)}.  
-\eea
-Applying the same nuclear structure corrections that were used in Eq.~(\ref{eq:Ft_with_fVt}), we find:
-\bea
-f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) 
-&=& 
-\frac{K}{G_F^2 V_{ud}^2 C_V^2 |M_F^0|^2 (1+\Delta_R^V) } 
-\nonumber\\
-&& \times \;\;\;
-\frac{1}{\left(1 + \frac{f_A}{f_V}\frac{C_A^2}{C_V^2} \frac{|M_{GT}^0|^2}{ |M_F^0|^2} \frac{(1 + \delta_{NS}^A - \delta_C^A) }{(1 + \delta_{NS}^V - \delta_C^V)} \frac{(1+\Delta_R^A)}{(1+\Delta_R^V)} \right) } 
-\eea
-It is useful, at this stage, to (once again) define $\rho$, the mixing ratio of axial and vector couplings that is specific to an individual transition, such that:
-\bea
-\rho^2 &=& \frac{C_A^2}{C_V^2} \frac{|M_{GT}^0|^2}{ |M_F^0|^2} \frac{(1 + \delta_{NS}^A - \delta_C^A) }{(1 + \delta_{NS}^V - \delta_C^V)} \frac{(1+\Delta_R^A)}{(1+\Delta_R^V)} 
+\rho &:=& \frac{C_A \, M_{GT} }{C_V \, M_F} 
+\nonumber
+\\
+&=& \frac{C_A \, M_{GT}^0 }{C_V \, M_F^0}  \left[ \frac{(1 + \delta_{NS}^A - \delta_C^A) }{(1 + \delta_{NS}^V - \delta_C^V)} \frac{(1+\Delta_R^A)}{(1+\Delta_R^V)} \right]^{1/2}
 \label{eq:rho_with_corrections}
 \\
-&\approx& \frac{C_A^2 |M_{GT}^0|^2 }{C_V^2 |M_F^0|^2}.
+&\approx& \frac{C_A \, M_{GT}^0 }{C_V \, M_F^0}.
 \eea
 
-The careful reader may notice that Eq.~(\ref{eq:rho_with_corrections}) is not \emph{quite} equivalent to the definition of $\rho$ provided in Eq.~(\ref{eq:definerho_intro}).
+
+As before, we use Eq.~(\ref{eq:partialhalflife_theory}) to write down $f_V t$, this time for mixed mirror transitions:
+\bea
+( f_V t ) \Bigg\rvert_{\mathrm{mirror}_{\phantom .}}
+\!\!\!\!\!\! \!\!\!\!\!\! 
+&=& 
+\frac{K}{G_F^2 V_{ud}^2 C_V^2 |M_F|^2 \left(1 + \frac{f_A}{f_V}\rho^2 \right)}
+\\
+&=& 
+\frac{K}{G_F^2 V_{ud}^2 (1 + \delta^\prime_R) (1 + \delta_{NS}^V - \delta_C^V)(1+\Delta_R^V) \left(1 + \frac{f_A}{f_V}\rho^2 \right)} 
+\;\;\;\; 
+%\frac{K}{G_F^2 V_{ud}^2 C_V^2 |M_F|^2 \left(1 + \frac{f_A}{f_V}\frac{C_A^2}{C_V^2} \frac{|M_{GT}|^2}{|M_F|^2} \right)}.  
+\eea
+We now define a corrected $\mathcal{F}t$ value, $\mathcal{F}t^{\mathrm{mirror}}$, for mirror transitions by 
+applying the same nuclear structure corrections that were used in Eq.~(\ref{eq:Ft_with_fVt}).  Then:
+\bea
+\!\!\!\! \!\!\!\!
+\mathcal{F}t^{\mathrm{mirror}} &:=& 
+( f_V t ) \Bigg\rvert_{\mathrm{mirror}_{\phantom .}}
+\!\!\!\!\!\! \!\!\!\!\!\! 
+(1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) 
+\\
+&=& 
+\frac{K}{G_F^2 V_{ud}^2 (1+\Delta_R^V)
+\left(1 + \frac{f_A}{f_V}\rho^2 \right) } 
+%\frac{K}{G_F^2 V_{ud}^2 C_V^2 |M_F^0|^2 (1+\Delta_R^V)
+%\left(1 + \frac{f_A}{f_V}\frac{C_A^2}{C_V^2} \frac{|M_{GT}^0|^2}{ |M_F^0|^2} \frac{(1 + \delta_{NS}^A - \delta_C^A) }{(1 + \delta_{NS}^V - \delta_C^V)} \frac{(1+\Delta_R^A)}{(1+\Delta_R^V)} \right) } 
+\eea
+
+Comparing this result to Eq.~(\ref{eq:Ft_with_Vud}), it is immediately clear that these two expressions are closely related:
+\bea
+\mathcal{F}t^{\mathrm{mirror}}
+&=& 
+\frac{2 \mathcal{F}t^{0^+\!\rightarrow0^+} }{ \left(1 + \frac{f_A}{f_V}\rho^2 \right) }
+\eea
 
 
-
+%%%\bea
+%%%\rho &:=& \frac{C_A}{C_V} \frac{|M_{GT}|}{ |M_F|}
+%%%\\
+%%%&=& \frac{C_A}{C_V} \frac{|M_{GT}^0|}{ |M_F^0|} \left[ \frac{(1 + \delta_{NS}^A - \delta_C^A) }{(1 + \delta_{NS}^V - \delta_C^V)} \frac{(1+\Delta_R^A)}{(1+\Delta_R^V)} \right]^{1/2}
+%%%\label{eq:rho_with_corrections}
+%%%\\
+%%%&\approx& \frac{C_A |M_{GT}^0| }{C_V |M_F^0|}.
+%%%\eea
+%
+%The careful reader may notice that Eq.~(\ref{eq:rho_with_corrections}) is not \emph{quite} equivalent to the definition of $\rho$ provided in Eq.~(\ref{eq:definerho_intro}).  
+%In fact, within the literature, the 
+%
+%\note[bluetodo]{JFC, I broke math.  .... no, I think it's actually ok.}
+%\aside[note]{We haven't put this in yet, but eventually we'll probably have $C_V |M_F^0|_{\mathrm{mirror}} = 1$ ? }
+%\aside[note]{*Probably* we have  $C_V = M_F^0 = 1$ by construction?  }
+%
+\note[tag]{Now just *say some stuff* about the various Ft values.}
 \note[note,nolist]{}
 
 \color{skyblue}
+Then Eq.~(\ref{eq:rho_with_corrections}) becomes:
+\bea
+\mathcal{F}t^{\mathrm{mirror}} 
+&=& 
+\frac{K}{G_F^2 V_{ud}^2 C_V^2 |M_F^0|^2 (1+\Delta_R^V) 
+\left(1 + \frac{f_A}{f_V} \rho^2 \right) } 
+\eea
+
+%\note[note]{And.... now what?\\ The important thing is... to be careful about what goes where?  Or something?\\ Or, maybe the inner radiative corrections were *always* there.  idk.  maybe Hayen addresses this?  But I can't quite turn his notation into something like this.}
+
 \bea
 \mathcal{F}t &=& f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ),
 \label{eq:define_Ft}
@@ -1077,34 +1139,46 @@ f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ),
 which allows for a variety of cross-checks to be performed on physical observables.  
 \color{black}
 
-We now turn our attention back to the mixed transitions (of which $^{37}$K \emph{is} an example) to establish an analogous relationship between observables.  Eq.~(\ref{eq:define_Ft}) is still technically applicable, but the $f_Vt$ value is no longer so readily observable, as it accounts for only the vector-coupled portion of the decay phase space, and the axial coupling also contributes to the transition.  We extend the corrected vector $\mathcal{F}t$ value of Eq.~(\ref{eq:Ft_with_Vud}) to mirror decays\aside[note]{Is it all mixed transitions, or only mirror decays??} by including the contribution of the (squared) Gamow-Teller matrix element, mostly by inspection.  The result, denoted $\mathcal{F}t_0$, is given by
+\color{skyblue}
+We now turn our attention back to the mixed transitions (of which $^{37}$K \emph{is} an example) to establish an analogous relationship between observables.  Eq.~(\ref{eq:define_Ft}) is still technically applicable, but the $f_Vt$ value is no longer so readily observable, as it accounts for only the vector-coupled portion of the decay phase space, and the axial coupling also contributes to the transition.  
+\color{black}
+\color{skyblue}
+We extend the corrected vector $\mathcal{F}t$ value of Eq.~(\ref{eq:Ft_with_Vud}) to mirror decays\aside[note]{Is it all mixed transitions, or only mirror decays??} by including the contribution of the (squared) Gamow-Teller matrix element, mostly by inspection.  The result, denoted $\mathcal{F}t^{\mathrm{\,mirror}}$ (sometimes $\mathcal{F}t_0$), is given by
 %We define a corrected $ft$ value specific to the case of mirror nuclei, denoted $\mathcal{F}t_0$ 
 %\cite{SeverijnsTandecki2008}
 \cite{shidling2014}
 \cite{naviliat2009april}
 \cite{ben_Abeta}:
 \bea
-\mathcal{F}t_0 &=&  \mathcal{F}t \, C_V^2 \, | M_F^0|^2 \left(1+\frac{f_A}{f_V} \rho^2 \right),
+\mathcal{F}t^{\mathrm{\,mirror}} &=&  \mathcal{F}t^{0^+\!\rightarrow0^+} \, C_V^2 \, | M_F^0|^2 \left(1+\frac{f_A}{f_V} \rho^2 \right),
 \label{eq:rhorelation}
 %\frac{2 \mathcal{F}t }{ 1 + \frac{f_A}{f_V} \rho^2}, 
 %%\nonumber \\
 %%&=& f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} )
 \eea
+\aside[note]{this equation is wrong!!!}
 %where, in order to get at the vector portion of the full $ft$ value, an adjustment has been made to account for the axial coupling in the decay.  
-where $\rho$ is the ratio of axial vector and vector matrix elements defined as in Eq.~(\ref{eq:definerho_intro}).  
+where $\rho$ is the ratio of axial vector and vector matrix elements defined as in Eq.~(\ref{eq:definerho_intro}). 
+\color{black} 
 Here, $f_A$ and $f_V$ are integrals over the lepton phase space for the axial vector and vector parts. Those integrals are identical in the allowed approximation, but differ by X\% when higher-order terms are taken into account.
-(see Appendix~\ref{appendix_forthepeople}, Refs.~\cite{holstein},~\cite{Hayen2021}.
+(see Appendix~\ref{appendix_forthepeople}, Refs.~\cite{holstein},~\cite{Hayen2021}.)
 \note[tag]{$f_A$ and $f_V$ with higher-order terms.  X\%.  See Hayen2021.}
 
 
-\color{blue}The uncorrected Fermi matrix element $M_F^0$ is related to quantities that have already been defined by $| M_F |^2 =  (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) | M_F^0 |^2 $.  
+\color{skyblue}The uncorrected Fermi matrix element $M_F^0$ is related to quantities that have already been defined by $| M_F |^2 =  (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) | M_F^0 |^2 $.  
 \color{black}
 With Eq.~(\ref{eq:rhorelation}), the value of $\rho$ in a mirror decay is described in terms of physical observables from an entirely separate class of decay transitions, as well as its own half-life and branching ratio.  Alternately, with a separate measurement of $\rho$, a check can be performed on the value of $V_{ud}$.
 %~\aside{this would be a good place to cite a bunch of people.}
 
 
 \note[bluetodo,nolist]{}
-
+%%%% --- * --- %%%%
+\ifthenelse{\boolean{isdraft}}
+{
+	\pagebreak
+}
+{}
+%%%% --- * --- %%%%
 
 \note[jm]{This is where Juliette is confused about what I'm talking about with this transition and why I don't describe it better.  ``On page 17 she describes a transition other than the one she is studying, but they neglects to explain the transition under consideration. Perhaps it is understandable if the calculation is quite onerous; I would have liked to see a brief summary of it here rather than simply referring to multiple sources.''}
 
@@ -1219,7 +1293,7 @@ $\rho = \frac{C_A M_{GT}^0}{C_V M_F^0} \left( \frac{ (1 + \delta_{NS}^A - \delta
 %The latter quantity can be characterized by the transition energy, $Q_{EC}$ (closely related to the beta endpoint energy $E_0$), 
 
 
-\note[tag]{finish it.}
+%\note[tag]{finish it.}
 \note{While it is possible to measure rho through angular correlations and stuff, like in Dan's thesis .... \cite{dan_Bnu} }
 \note{the point is, you get rho from ... uh... 
 \\...\\

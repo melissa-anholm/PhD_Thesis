@@ -4,7 +4,7 @@
 %
 %%%% --- * --- %%%%	
 \clearpage
-\chapter{An Overview of Selected Principles and Techniques in Atomic Physics}
+\chapter{An Overview of Selected Techniques in Atomic Physics}
 \label{atomicphysics_chapter}
 
 
@@ -40,7 +40,8 @@ For the shake-off electrons arising from nuclear decay process, the initial ener
 %%%It turns out Feynman suggested how to do the recoil momentum dependence of the shakeoff, including in the sudden approximation an operator for a plane wave ofan electron moving at the recoil velocity. You are quite rightly not trying to consider this hard part here.
 %%%}  \noindent
 %
-The strategy is to assume that the sudden approximation holds, meaning that the change in the shape of the potential well between initial and final states occurs so rapidly that the wavefunction of (in this case) the atomic electron does not have time to adapt.  Then, one simply calculates the overlap in wavefunctions between the bound initial state and the eigenstates of the final post-decay system.  The final state of the electron may be either bound or unbound, and analytic expressions to describe the energy of the unbound electrons may be obtained if the atom is treated as being hydrogenic --- an excellent approximation here, as $^{37}\textrm{K}$ is an alkali.  
+The strategy is to assume that the sudden approximation holds, meaning that the change in the shape of the potential well between initial and final states occurs so rapidly that the wavefunction of (in this case) the atomic electron does not have time to adapt.  Then, one simply calculates the overlap in wavefunctions between the bound initial state and the eigenstates of the final post-decay system.  The final state of the electron may be either bound or unbound, and analytic expressions to describe the energy of the unbound electrons may be obtained if the atom is treated as being hydrogenic --- as $^{37}\textrm{K}$ is an alkali, this treatment is well justified.
+ 
 \note[done,nolist]{``On page 22, the ``sudden approximation'' is used but is never defined.''}
 \note[done,nolist]{4. "sudden approximation"
 \\...\\
@@ -63,7 +64,9 @@ Unfortunately, this treatment cannot determine the fractional contribution of ea
 %%%%%	\includegraphics[width=.999\linewidth]
 %%%%%	{Figures/Levinger_SOETOF_prelim.pdf}
 %%%%%	\note[clean]{Clean up SOE TOF pic in intro.  It doesn't show what I need!}
-\note[oldnote,nolist]{A picture of the SOE spectrum for the intro was here.  It's gone now, but it's important that we remember!  pretty sure I reference it from somewhere else...}
+
+%\note[oldnote,nolist]{A picture of the SOE spectrum for the intro was here.  It's gone now, but it's important that we remember!  pretty sure I reference it from somewhere else...}
+
 %%%%%	\note{Maybe just kill this picture?  At least reference it in the text somewhere.}
 %%%%%	\caption[Levinger TOF]{Shake-off electron TOF (w.r.t. beta TOA) spectrum, showing how the spectrum is different if one includes different sets of initial electrons to be shaken off.  I forget why some of them have 0 eV.  Maybe those are the ones from the $\isotope[37]{Ar}^+$. ... Levinger TOF spectra for some different sets of SOE initial orbitals before shake-off.  (At least that's what it's supposed to be, after I fix the picture).  It's reconstructed event-by-event with beta times-of-flight that would pass some basic `good event' cuts.  Anyway, it turns out, it doesn't much matter what orbitals you lose SOEs from.  That's nice.  In the end, I used 85+15.  \comment{(Need to re-plot this.)} }	
 %%%%%	\label{fig:levinger_TOF}
@@ -74,7 +77,13 @@ Unfortunately, this treatment cannot determine the fractional contribution of ea
 %%% % % % %%%
 \section{Optical Pumping}
 \label{sec:op}
-The optical pumping process necessary for this work involves using a laser to stimulate atomic transitions.  With a correctly tuned and polarized laser beam, the aggregate effect is to introduce a biased random walk towards a state of high spin-polarization (sometimes called a \emph{stretched state}).  Although the transitions to which the laser couples are primarily thought of as atomic transitions, the coupling of angular momenta between orbital electrons and the nucleus results in both becoming polarized.  
+The optical pumping process necessary for this work involves using a laser to stimulate atomic transitions.  With a correctly tuned and polarized laser beam, the aggregate effect is to introduce a biased random walk towards a state of high spin-polarization (sometimes called a \emph{stretched state}).  
+
+With every absorbed photon, one unit of angular momentum is transferred to the atom, and an orbital electron jumps to a higher energy level.  By ensuring that the incident polarization laser is fully polarized (and choosing an appropriate axis of quantization), it is possible to ensure that all the absorbed photons must \emph{increase} the angular momentum projection quantum number.  After absorbing a photon, the excited electron will eventually fall back to a lower energy level, emitting a photon in the process.  The emitted photon carries one unit of angular momentum, and is emitted in a random direction -- therefore the resulting change in atomic angular momentum projection is also randomized, provided that there exists an available lower energy state for the orbital electron to decay into.   
+
+Although the transitions to which the laser couples are primarily thought of as atomic transitions, the coupling of angular momenta between orbital electrons and the nucleus results in both becoming polarized.  
+
+\note[note,nolist]{}
 
 The primary detail described here is that the optical pumping is disturbed by any component of magnetic field not directed along the quantization axis --- in our case, the vertical axis, defined by the direction of propogation for the optical pumping light, and along which the detectors are placed.  The optical pumping process is described in detail within our collaboration's Ref.~\cite{ben_OP}, and the required sophistication with an AC-MOT described in Section~\ref{sec:acmot} below.
 
@@ -120,7 +129,7 @@ Although this setup will decrease atomic velocity, it does not create a confinin
 \section{Atom Trapping with a Magneto-Optical Trap}
 \label{section:mot}
 \note[note]{Move(d) the content of the other MOT section into here.}
-Since its initial description by Raab et. al. in 1987~\cite{raabprentiss}, the \ac{MOT} has become a widely used technique in many atomic physics laboratories.\aside{An opportunity to cite a bunch of people here...} The MOT produces confined samples of cold, electrically neutral and isotopically pure atoms confined within a small spatial region.  It is these properties that make the MOT a valuable tool not only in atomic physics, but for precision measurements in nuclear physics as well, and the TRIUMF Neutral Atom Trap (TRINAT) collaboration has adopted the technique wholeheartedly.
+Since its initial description by Raab et. al. in 1987~\cite{raabprentiss}, the \ac{MOT} has become a widely used technique in many atomic physics laboratories.\aside{An opportunity to cite a bunch of people here...} The MOT produces confined samples of cold, electrically neutral and isotopically pure atoms confined within a small spatial region.  It is these properties that make the MOT a valuable tool not only in atomic physics, but for precision measurements in nuclear physics as well, and the \ac{TRINAT} collaboration has adopted the technique wholeheartedly.
 
 The technique is used predominantly with alkalis due to their simple orbital electron structure, and once set up it is quite robust.  The MOT's trapping force is specific to the isotope for which the trap has been tuned. This feature makes it ideal for use in precision radioactive decay experiments, since the daughters are unaffected by the trapping forces keeping the parent confined.
 
@@ -157,48 +166,43 @@ The retroreflecting lasers are red-detuned and circularly polarized in a directi
 %%% % % % %%%
 \section{The AC-MOT}
 \label{sec:acmot}
-\note[tag]{Initially, this section is a literal duplicate of Chapter~\ref{section:acmot_and_polarization}.  When I'm done, most of the content will live *there*.  This is the intro chapter/section here.}
+%\note[done,nolist]{Initially, this section is a literal duplicate of Chapter~\ref{section:acmot_and_polarization}.  When I'm done, most of the content will live *there*.  This is the intro chapter/section here.}
 %
-One specialized type of magneto-optical trap is the AC-MOT, which was first described by Harvey and Murray in 2008~\cite{harveymurray}.  The AC-MOT is so named because of the sinusoidal alternating current (AC) used in its anti-Helmholtz coils --- in contrast to the constant direct current used in a typical MOT (hereafter referred to as a DC-MOT to eliminate ambiguity).  Although the DC-MOT's robust trapping mechanism cannot be fully matched by a similar AC-MOT, the DC-MOT is very slow to turn off, and it is this latter consideration that has led the TRINAT collaboration to implement an AC-MOT in its second trap.
+One specialized type of magneto-optical trap, the AC-MOT, allows for the trap's magnetic field to be rapidly shut off.  First described by Harvey and Murray in 2008~\cite{harveymurray}, the AC-MOT is so named because of the sinusoidal alternating current (AC) used in its anti-Helmholtz coils --- in contrast to the constant direct current used in a typical MOT (hereafter referred to as a DC-MOT to eliminate ambiguity).  Although the DC-MOT's robust trapping mechanism cannot be fully matched by a similar AC-MOT, the DC-MOT is very slow to turn off, and it is this latter consideration that has led the TRINAT collaboration to implement an AC-MOT in its second trap.
 
 %, a consideration that led the TRINAT collaboration to implement an AC-MOT  
 %It was this consideration that motivated the TRINAT collaboration to implement an 
 %It is this consideration 
 %As a result, the TRINAT collaboration has 
 
-Although the trapping mechanism itself can be rapidly destroyed in both an AC- and DC-MOT by simply shutting off the trapping lasers, the DC-MOT's magnetic field is slow to dissipate and challenging to control during this time.  Because the optical pumping process which (in the present experiment) immediately follows the MOT being shut off requires a uniform magnetic field (in contrast to the uniform magnetic field \emph{gradient} needed for a functional MOT), we do not consider the MOT to have been fully shut off until any residual magnetic fields have completely dissipated.  For optical pumping, a weak, dipole-shaped magnetic field is preferred, and this is not possible while the MOT's quadrupole field is in place.  %the quadrupole field has not dissipated.
+Although the trapping mechanism itself can be rapidly destroyed in both an AC- and DC-MOT by simply shutting off the trapping lasers, the DC-MOT's magnetic field is comparatively slow to dissipate and challenging to control during this time.  Because the optical pumping process 
+necessary to spin-polarize the atoms 
+%which (in the present experiment) immediately follows the MOT being shut off 
+requires a uniform magnetic field 
+over the region of interest 
+(in contrast to the uniform magnetic field \emph{gradient} needed for a functional MOT), we do not consider the MOT to have been fully shut off until any residual magnetic fields have completely dissipated.  
+Put another way, 
+for optical pumping, a weak dipole-shaped magnetic field is preferred, and this is not possible while the MOT's quadrupole field is in place.  %the quadrupole field has not dissipated.
 
-
-A standard DC-MOT is designed to operate continuously, and as such is fairly slow to turn off.  The limiting factor is the speed at which the magnetic field can be eliminated; it is particularly problematic when electrically conductive materials are present nearby, as is the case for our experimental chamber.  
+With the DC-MOT designed to operate continuously, 
+it should be unsurprising that it 
+%and as such 
+is fairly slow to turn off.  The limiting factor is the speed at which the magnetic field can be eliminated; it is particularly problematic when electrically conductive materials are present nearby, as is the case for our experimental chamber.  
 %and in the presence of electrically conductive materials especially, the magnetic field can take a (comparatively) long time to dissipate.  
 %This is problematic for an experiment such as this one, 
 This is because a rapidly changing magnetic field will necessarily induce an electrical potential, producing a current in any nearby conductors.  These induced eddy currents will, themselves, produce a magnetic field and further eddy currents as that magnetic field dissipates.  The result is a magnetic field which is slow to dissipate and difficult to control during the dissipation process.  In general, the atoms do not remain reliably confined while the magnetic field dissipates, as the field during this time may include anomalies which could result in atoms actively being pushed out of the trap by the trapping lasers.  For similar reasons, the atoms also cannot be successfully polarized during this time period.  
 
 It is clearly important that as little time as possible be wasted in this intermediate stage where the atoms can neither be confined nor polarized.  The more straightforward reason behind this is simply that any time wasted during beamtime is data lost.  A slightly more subtle but related reason is that when the trapping mechanism is removed, the atom cloud undergoes thermal expansion ($\sim$1\,mK).  If the cloud is retrapped quickly enough, the whole process can be done with minimal atom loss --- however once the cloud has dissipated it cannot be re-trapped, as the trapping forces act on only a small spatial region.
 
-The principle behind the AC-MOT is to simply run a sinusoidal current through one's anti-Helmholtz coils while flipping the laser polarization to remain in with the magnetic field.  Crucially, the phase of the magnetic field will lag somewhat behind the phase of the current in the anti-Helmholtz coils, as a result of induced eddy currents in nearby materials.  The precise amount of phase lag in a given system is a function both of the geometry and electrical impedence properties of the nearby materials, as well as the frequency of the sinusoid.  
-
-
-%%%%is dissipating, due to potential anomalies in the field shape which can easily result 
-%%%%
-%%%%The poorly controlled magnetic field during dissipation means that, in general, 
-%%%%In general, the atoms do not remain confined during this part of the process
-%%%%
-%%%%because the atoms do not remain confined while the magnetic field dissipates due to potential anomalies in the magnetic field shape arising from induced eddy currents, and for similar reasons, they cannot be successfully optically pumped during this time period either.  
-
-%Therefore, it is important to waste as little time as possible switching between the MOT and the  optical pumping phases in the duty cycle.  
-
+The principle behind the AC-MOT is to simply run a sinusoidal current through one's anti-Helmholtz coils while flipping the laser polarization to remain in sync with the magnetic field.  Crucially, the phase of the magnetic field will lag somewhat behind the phase of the current in the anti-Helmholtz coils, as a result of induced eddy currents in nearby materials.  The precise amount of phase lag in a given system is a function both of the geometry and electrical impedence properties of the nearby materials, as well as the frequency of the sinusoid.  
 
 \note[note]{}
-\note[note]{Above, everything is re-edited for its current thesis location.  
-\\
-Below, shit's still basically duplicated in that other section.}
+%\note[note]{Above, everything is re-edited for its current thesis location.  
+%\\
+%Below, shit's still basically duplicated in that other section.}
 \note[note]{Put that *other* AC-MOT figure here.}
 
-
-%\note{Fix the phrasing of AC-MOT/OP experimental section.  It's passable, but still kind-of a mess.}
-
-The AC-MOT was first described by Harvey and Murray~\cite{harveymurray}, but the TRINAT collaboration has adopted its use because it enables the polarization-destroying magnetic field to be eliminated quickly after the MOT is shut off.  Some details of the present implementation of the AC-MOT are given in Ref.~\cite{thesis}, done with a separate MOT geometry from this beta decay work.  A diagram of showing the operation phases of several key components in our AC-MOT/optical pumping duty cycle is shown in Fig.~\ref{fig:acmot}.
+%The AC-MOT was first described by Harvey and Murray~\cite{harveymurray}, but the TRINAT collaboration has adopted its use because it enables the polarization-destroying magnetic field to be eliminated quickly after the MOT is shut off.  Some details of the present implementation of the AC-MOT are given in Ref.~\cite{thesis}, done with a separate MOT geometry from this beta decay work.  A diagram of showing the operation phases of several key components in our AC-MOT/optical pumping duty cycle is shown in Fig.~\ref{fig:acmot}.
 
 %%%%%\begin{figure}[ht]
 %%%%%	\centering
@@ -218,28 +222,28 @@ The AC-MOT was first described by Harvey and Murray~\cite{harveymurray}, but the
 
 %\note[note]{Probably document things about the waveform and frequency used for the beamtime, since I don't think it's in my MSc.}
 
-As alluded to in the previous section~(\ref{section:overview}), the measurements in question required a spin-polarized sample of atoms, and a precise knowledge of what that polarization was.  This is needed in order to make best use of the superratio asymmetry for both $\Abeta$ and $\bFierz$ measurements.~\cite{ben_Abeta}\cite{ben_OP}.
+%As alluded to in the previous section~(\ref{section:overview}), the measurements in question required a spin-polarized sample of atoms, and a precise knowledge of what that polarization was.  This is needed in order to make best use of the superratio asymmetry for both $\Abeta$ and $\bFierz$ measurements.~\cite{ben_Abeta}\cite{ben_OP}.
 
-A MOT requires a quadrupolar magnetic field, and we generate ours with two current-carrying anti-Helmholtz coils located within the vacuum chamber itself.  Since these coils are expected to run an alternating current, heat is produced and cannot be dissipated in the vacuum.  Therefore the coils themselves are hollow copper tubes, and they are continuously cooled by pumping temperature-controlled water through them.   
-
-
-\note{Note that because the atoms within a MOT can be treated as following a thermal distribution, some fraction of the fastest atoms continuously escape from the trap's potential well.  Even with the most carefully-tuned apparatus, the AC-MOT cannot quite match a similar standard MOT in terms of retaining atoms.  The TRINAT AC-MOT has a `trapping half-life' of around 6 seconds, and although that may not be particularly impressive by the standards of other MOTs, it is more than adequate for our purposes.  $^{37}\textrm{K}$ itself has a radioactive half-life of only 1.6 seconds 
-(cite someone), so our dominant loss mechanism is radioactive decay rather than thermal escape. }
+%A MOT requires a quadrupolar magnetic field, and we generate ours with two current-carrying anti-Helmholtz coils located within the vacuum chamber itself.  Since these coils are expected to run an alternating current, heat is produced and cannot be dissipated in the vacuum.  Therefore the coils themselves are hollow copper tubes, and they are continuously cooled by pumping temperature-controlled water through them.   
 
 
-We spin-polarize $^{37}\textrm{K}$ atoms within the trapping region by optical pumping~\cite{ben_OP}.  A circularly polarized laser is tuned to match the relevant atomic resonances, and is directed through the trapping region along the vertical axis in both directions.  When a photon is absorbed by an atom, the atom transitions to an excited state and its total angular momentum (electron spin + orbital + nuclear spin) along the vertical axis is incremented by one unit.  When the atom is de-excited a photon is emitted isotropically, 
-so it follows that if there are available states of higher and lower angular momentum, the \emph{average} change in the angular momentum projection is zero.  If the atom is not yet spin-polarized, it can absorb and re-emit another photon, following a biased random walk towards complete polarization.  
-
-In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  In particular, the magnetic field must be aligned along the polarization axis (otherwise the tendency will be to actually depolarize the atoms), and it must be uniform in both magnitude and direction over the region of interest to avoid introducing a spatially-dependent depolarization mechanism.  
-Note that this type of magnetic field is not compatible with the MOT, which requires a uniform magnetic field \emph{gradient} in all directions (characteristic of a quadrupolar field shape), and has necessitated our use of the AC-MOT.
-
-In the end, the average (over both directions) polarization $|\vec{P}|$ achieved during the 2014 beam time is $|\vec{P}| = 0.9913 \pm 0.0009$, and the measurements are consistent with both polarization directions having the same magnitude of polarization\cite{ben_OP}.
-
-\note[tag, nolist]{End duplicated section.  When I'm done, most of the content should live *over there*.}
+%\note{Note that because the atoms within a MOT can be treated as following a thermal distribution, some fraction of the fastest atoms continuously escape from the trap's potential well.  Even with the most carefully-tuned apparatus, the AC-MOT cannot quite match a similar standard MOT in terms of retaining atoms.  The TRINAT AC-MOT has a `trapping half-life' of around 6 seconds, and although that may not be particularly impressive by the standards of other MOTs, it is more than adequate for our purposes.  $^{37}\textrm{K}$ itself has a radioactive half-life of only 1.6 seconds 
+%(cite someone), so our dominant loss mechanism is radioactive decay rather than thermal escape. }
 
 
-\section{Zeeman Slowing}
-\label{sec:zeeman}
+%We spin-polarize $^{37}\textrm{K}$ atoms within the trapping region by optical pumping~\cite{ben_OP}.  A circularly polarized laser is tuned to match the relevant atomic resonances, and is directed through the trapping region along the vertical axis in both directions.  When a photon is absorbed by an atom, the atom transitions to an excited state and its total angular momentum (electron spin + orbital + nuclear spin) along the vertical axis is incremented by one unit.  When the atom is de-excited a photon is emitted isotropically, 
+%so it follows that if there are available states of higher and lower angular momentum, the \emph{average} change in the angular momentum projection is zero.  If the atom is not yet spin-polarized, it can absorb and re-emit another photon, following a biased random walk towards complete polarization.  
+%
+%In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  In particular, the magnetic field must be aligned along the polarization axis (otherwise the tendency will be to actually depolarize the atoms), and it must be uniform in both magnitude and direction over the region of interest to avoid introducing a spatially-dependent depolarization mechanism.  
+%Note that this type of magnetic field is not compatible with the MOT, which requires a uniform magnetic field \emph{gradient} in all directions (characteristic of a quadrupolar field shape), and has necessitated our use of the AC-MOT.
+%
+%In the end, the average (over both directions) polarization $|\vec{P}|$ achieved during the 2014 beam time is $|\vec{P}| = 0.9913 \pm 0.0009$, and the measurements are consistent with both polarization directions having the same magnitude of polarization\cite{ben_OP}.
+%
+%\note[tag, nolist]{End duplicated section.  When I'm done, most of the content should live *over there*.}
 
-\note[note]{Yeah, uh, from a theoretical point of view, this is basically the same shit as doppler cooling, right?}
 
+%%%\section{Zeeman Slowing}
+%%%\label{sec:zeeman}
+%%%
+%%%\note[note]{Yeah, uh, from a theoretical point of view, this is basically the same shit as doppler cooling, right?}
+%%%

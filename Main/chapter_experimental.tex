@@ -15,7 +15,7 @@
 \note{Remember the pulser LED!  To evaluate the stability of the scintillator gain!}
 
 
-The experimental subject matter of this thesis was conducted at TRIUMF using the apparatus of the TRIUMF Neutral Atom Trap (TRINAT) collaboration.  The TRINAT laboratory offers an experimental set-up which is uniquely suited to precision tests of Standard Model beta decay physics, by virtue of its ability to produce highly localized samples of cold, isotopically pure atoms within an open detector geometry.  \aside[org]{Surely most of this paragraph goes in an intro chapter somewhere.}  Although the discussion in this chapter will focus on the methodologies used to collect one particular dataset, taken over approximately 7 days of beamtime in June 2014, the full apparatus and the techniques used are fairly versatile, and can be (and have been) applied to
+The experimental subject matter of this thesis was conducted at TRIUMF using the apparatus of the TRIUMF Neutral Atom Trap (TRINAT) collaboration.  The TRINAT laboratory offers an experimental set-up which is uniquely suited to precision searches for exotic beta decay physics by virtue of its ability to produce highly localized samples of cold, isotopically pure atoms within an open detector geometry.  \aside[org]{Surely most of this paragraph goes in an intro chapter somewhere.}  Although the discussion in this chapter will focus on the methodologies used to collect one particular dataset, taken over approximately 7 days of beamtime in June 2014, the full apparatus and the techniques used are fairly versatile, and can be (and have been) applied to
 several related experiments using other isotopes.
 \note{Cite a bunch of papers here.}
 
@@ -35,19 +35,43 @@ several related experiments using other isotopes.
 %%}
 \end{figure}
 
-The TRINAT lab accepts radioactive ions delivered by the ISAC beamline at TRIUMF.  These ions are collected on the surface of a hot zirconium foil where they are electrically neutralized, and subsequently escape from the foil into the first of two experimental chambers (the ``collection chamber").  Further details on the neutralization process are presented in a previous publication~\cite{gorelov2000}.  Within the collection chamber, atoms of one specific isotope -- for the purposes of this thesis,  \isotope[37]{K} -- are continuously collected into a magneto-optical trap from the tail end of the thermal distribution.~\aside{made possible by UHV!}  Although this procedure preferrentially traps only the slowest atoms, once trapped, atoms will be cooled further as a side-effect of the MOT's trapping mechanism.  The result is a small ($\sim\!1\,$mm diameter), cold ($\sim\!1\,$mK) cloud of atoms of a particular isotope.  
+The TRINAT lab accepts radioactive ions delivered by the ISAC beamline at TRIUMF.  These ions are collected on the surface of a hot zirconium foil where they are electrically neutralized, and subsequently escape from the foil into the first of two experimental chambers (the ``collection chamber").  Further details on the neutralization process are presented in a previous publication~\cite{gorelov2000}.  
+%
+The collection chamber is held at \ac{UHV} to facilitate continuous collection of one specific isotope -- for the purposes of this thesis,  \isotope[37]{K} -- into a \ac{MOT} from the tail end of the thermal distribution.  
+%
+%Within the collection chamber, atoms of one specific isotope -- for the purposes of this thesis,  \isotope[37]{K} -- are continuously collected into a magneto-optical trap from the tail end of the thermal distribution.~\aside{made possible by UHV!}  
+Although this procedure preferrentially traps only the slowest atoms, once trapped, atoms will be cooled further as a side-effect of the MOT's trapping mechanism.  The result is a small ($\sim\!1\,$mm diameter), cold ($\sim\!1\,$mK) cloud of \isotope[37]{K} atoms.  % of a particular isotope.  
 
-These properties of the atomic cloud allow for a relatively clean transfer of linear momentum from an appropriately tuned laser beam to the atoms within the cloud, and we use this mechanism to ``push'' the atoms out of the collection MOT and into the ``detection chamber'', where they are loaded into a second MOT (see Fig.~\ref{fig:doublemot}).  During regular operation, atoms are transferred approximately once per second.  
+These properties of the atomic cloud allow for a relatively clean transfer into the second chamber (the ``detection chamber''), where they are loaded into a second \ac{MOT} (see Fig.~\ref{fig:doublemot}).  This two MOT approach to the experiment, and the isotope-specific transfer mechanism needed to execute it, was developed primarily as a way to eliminate background events and the beamline contaminants that give rise to them.  \aside[note]{something about the lead shielding.}
 
-There is no need to release previously trapped atoms in the second MOT when a new group of atoms is loaded.  Although the trap loses atoms over time as a result of a variety of physical processes,\aside{discussed ... idk, somewhere else.} during typical operation the majority of atoms loaded in a given transfer will still be trapped at the time the next set of atoms is loaded, and after several transfer cycles, something like a steady state is obtained.
+The key to the atom transfer mechanism is, in essence, simply a properly tuned laser beam to push the atoms out of the first trap and into the second.  The push beam is frequency-tuned such that it can be absorbed by atoms trapped within the first MOT, and pulsed ($\sim$30 ms on) to initiate the transfer.  When a trapped atom absorbs a photon from the push beam, there is a transfer of linear momentum, causing the atom to escape the \ac{MOT}'s potential well and continue along into the detection chamber.  
 
-Because the transfer and trapping mechanisms rely on tuning laser frequencies to specific atomic resonances, these mechanisms act on only a single isotope, and all others remain unaffected.  The result is a significant reduction of background contaminants within the detection chamber relative to initial beamline output.  The transfer methodology is discussed in some detail within the collaboration's Ref.~\cite{swanson}.
+To help keep the atoms focused during the transfer, two sets of (laser) funnel beams are placed along the transfer path, together with current-carrying coils to maintain the desired magnetic field in the region where the funnel beams interact with atoms in transit.  Each set of funnel beams behaves very much like a two-dimensional \ac{MOT},  confining and cooling the atoms along the two perpendicular axes as they pass by.  
 
-\note[jm]{Here's where Juliette is annoyed that I don't describe the Swanson method.  
+Transferred atoms are guided by the push beam into the detection chamber;  the push beam is directed towards a position several millimetres above the pre-existing cloud of trapped atoms there.  This is an intentional design choice to prevent atoms from being ejected from the second trap by the push beam that was intended to load it, while simultaneously taking advantage of the gravitational force's tendency to push the atoms slightly down, away from the push beam's path and towards the true location of the second trap.  The transfer methodology is discussed in further detail within the collaboration's Ref.~\cite{swanson}, though some aspects of the experimental setup have changed in the intervening years.
+
+This push beam setup is able to reliably load approximately 80\% of the atoms originally held in the first trap into the second, with the transferred atoms themselves moving at $\sim$40\,m/s~\cite{swanson}.  In combination with lead shielding between the two chambers, the end result is a significant reduction of background events measured within the detection chamber.  During regular operation, atoms are transferred approximately once per second (a timescale comparable to the $\sim$1.2 second half-life of \isotope[37]{K}).  
+
+%%%\note[note, nolist]{}
+%%%
+%%%%These properties of the atomic cloud allow for a relatively clean transfer of linear momentum from an appropriately tuned laser beam to the atoms within the cloud, and we use this mechanism to ``push'' the atoms out of the collection MOT and into the ``detection chamber'', where they are loaded into a second MOT (see Fig.~\ref{fig:doublemot}).  
+%%%During regular operation, atoms are transferred approximately once per second.  
+%%%
+%%%There is no need to release previously trapped atoms in the second MOT when a new group of atoms is loaded.  Although the trap loses atoms over time as a result of a variety of physical processes,\aside{discussed ... idk, somewhere else.} during typical operation the majority of atoms loaded in a given transfer will still be trapped at the time the next set of atoms is loaded, and after several transfer cycles, something like a steady state is obtained.
+%%%
+%%%Because the transfer and trapping mechanisms rely on tuning laser frequencies to specific atomic resonances, these mechanisms act on only a single isotope, and all others remain unaffected.  
+%%%
+%%%The result is a significant reduction of background contaminants within the detection chamber relative to initial beamline output.  
+%%%
+%%%The transfer methodology is discussed in some detail within the collaboration's Ref.~\cite{swanson}.
+%%%
+%%%\note[note, nolist]{}
+
+\note[done]{Here's where Juliette is annoyed that I don't describe the Swanson method.  
 \\
 ``On page 30 the transfer and transport description is not even summarized''
 }
-\note[jbnn]{After your reference to Tom Swanson's paper:
+\note[done]{JB:  After your reference to Tom Swanson's paper:
 \\...\\
 `Some features are critical to this experiment.
 The 2nd magneto-optical ``funnel'' in Figure 2.2 was added after Ref. 90, (I assume John means Ref.~\cite{swanson} here...)
@@ -81,23 +105,35 @@ Once the newly transferred set of $^{37}\textrm{K}$ atoms has been collected int
 Immediately following each set of 100 optical pumping cycles, another set of atoms is transferred in from the collection chamber to the detection chamber, joining the atoms that remain in the trap (see Fig.~\ref{fig:dutycycle}).  The details of the trapping and optical pumping cycles are described further in Section~\ref{section:acmot_and_polarization}, and the optical pumping technique and its results for this beamtime are the subject of a recent publication~\cite{ben_OP}.
 
 
-\section{The Atom Transfer Methodology}
-\label{sec:swansonmethod}
-\note[tag]{Swanson Transfer Method}
-\note[note]{Content goes here.  It probably doesn't need to be literally its own section, but still.  Content.}
-%\note{}
+%%%%\section{The Atom Transfer Methodology}
+%%%%\label{sec:swansonmethod}
+%%%%\note[tag]{Swanson Transfer Method}
+%%%%\note[note]{Content goes here.  It probably doesn't need to be literally its own section, but still.  Content.}
+%%%%%\note{}
+
+
+%%%% --- * --- %%%%
+\ifthenelse{\boolean{isdraft}}
+{
+	\pagebreak
+}
+{}
+%%%% --- * --- %%%%
 
 %%% % % % %%%
 \section{The AC-MOT and Polarization Setup}
 %\label{sec:acmot}
 \label{section:acmot_and_polarization}
-\note[tag]{This section has (at one point) been literally duplicated in Chapter~\ref{sec:acmot}. When I'm done, most of the content will live *here*.}
+%\note[done,nolist]{This section has (at one point) been literally duplicated in Chapter~\ref{sec:acmot}. When I'm done, most of the content will live *here*.}
 
 %\note{Fix the phrasing of AC-MOT/OP experimental section.  It's passable, but still kind-of a mess.}
 
 %The AC-MOT was first described by Harvey and Murray~\cite{harveymurray}, but the TRINAT collaboration has adopted its use because it enables the polarization-destroying magnetic field to be eliminated quickly after the MOT is shut off.  
 
-The TRINAT collaboration has adopted the use of an AC-MOT in its detection chamber as a result of the necessity to intermittently polarize the atom cloud.  Despite the added complication, the AC-MOT is able to rapidly eliminate polarization-destroying non-uniformities in the magnetic field.  
+%The TRINAT collaboration has adopted the use of 
+Within the \ac{TRINAT} detection chamber an AC-MOT is used for atom trapping, because it enables the \ac{MOT}'s polarization-destroying magnetic field non-uniformities to be quickly eliminated when the \ac{MOT} is shut off.  Despite the added complication, the AC-MOT allows for a duty cycle in which the \isotope[37]{K} atoms are alternatingly trapped and then polarized.
+%% its detection chamber as a result of the necessity to intermittently polarize the atom cloud.  
+%Despite the added complication, the AC-MOT is able to rapidly eliminate polarization-destroying non-uniformities in the magnetic field.  
 %
 Some details of the present implementation of the AC-MOT are given in Ref.~\cite{thesis}, done with a separate MOT geometry from this beta decay work.  A diagram of showing the operation phases of several key components in our AC-MOT/optical pumping duty cycle is shown in Fig.~\ref{fig:acmot}.
 
@@ -108,11 +144,6 @@ Some details of the present implementation of the AC-MOT are given in Ref.~\cite
 		\label{fig:acmot}
 \end{figure}
 
-
-\note[note]{}
-\note[note]{Above, everything is re-edited for its current thesis location.  
-\\
-Below, shit's still basically duplicated in that other section.}
 
 %A standard DC-MOT operates continuously, and in the presence of electrically conductive materials especially, the magnetic field can take a (comparatively) long time to dissipate.  This is problematic for an experiment such as this one, because the atoms do not remain confined while the magnetic field dissipates due to potential anomalies in the magnetic field shape arising from induced eddy currents, and for similar reasons, they cannot be successfully optically pumped during this time period either.  Therefore, it is important to waste as little time as possible switching between the MOT and the  optical pumping phases in the duty cycle.  For optical pumping, a weak, dipole-shaped magnetic field is preferred, and this is not possible while the quadrupole field has not dissipated.
 %
@@ -133,7 +164,7 @@ As alluded to in the previous section~(\ref{section:overview}), the measurements
 A MOT requires a quadrupolar magnetic field, and we generate ours with two current-carrying anti-Helmholtz coils located within the vacuum chamber itself.  Since these coils are expected to run an alternating current, heat is produced and cannot be dissipated in the vacuum.  Therefore the coils themselves are hollow copper tubes, and they are continuously cooled by pumping temperature-controlled water through them.   
 
 
-\note{Note that because the atoms within a MOT can be treated as following a thermal distribution, some fraction of the fastest atoms continuously escape from the trap's potential well.  Even with the most carefully-tuned apparatus, the AC-MOT cannot quite match a similar standard MOT in terms of retaining atoms.  The TRINAT AC-MOT has a `trapping half-life' of around 6 seconds, and although that may not be particularly impressive by the standards of other MOTs, it is more than adequate for our purposes.  $^{37}\textrm{K}$ itself has a radioactive half-life of only 1.6 seconds 
+\note{Note that because the atoms within a MOT can be treated as following a thermal distribution, some fraction of the fastest atoms continuously escape from the trap's potential well.  Even with the most carefully-tuned apparatus, the AC-MOT cannot quite match a similar standard MOT in terms of retaining atoms.  The TRINAT AC-MOT has a `trapping half-life' of around 6 seconds, and although that may not be particularly impressive by the standards of other MOTs, it is more than adequate for our purposes.  $^{37}\textrm{K}$ itself has a radioactive half-life of only 1.6 seconds ** it's actually 1.2 seconds **
 (cite someone), so our dominant loss mechanism is radioactive decay rather than thermal escape. }
 
 
@@ -145,8 +176,9 @@ Note that this type of magnetic field is not compatible with the MOT, which requ
 
 In the end, the average (over both directions) polarization $|\vec{P}|$ achieved during the 2014 beam time is $|\vec{P}| = 0.9913 \pm 0.0009$, and the measurements are consistent with both polarization directions having the same magnitude of polarization\cite{ben_OP}.
 
-\note[tag, nolist]{End duplicated section.  When I'm done, most of the content should still live *right hhere*.}
+%\note[tag, nolist]{End duplicated section.  When I'm done, most of the content should still live *right hhere*.}
 \note[note]{}
+\note[done,nolist]{Duplications between this and the other chapter's equivalent section are eliminated up to here.}
 
 
 
@@ -184,12 +216,7 @@ copper ring (not pictured in Fig.~\ref{chamber_decayevent}) with a slit, mounted
 The TRINAT detection chamber operates at ultra-high vacuum (UHV) and provides not only the apparatus necessary to intermittently confine and then spin-polarize atoms, but also the variety of detectors and implements required to quantify their position, temperature, and polarization.  The detection chamber further boasts an array of electrostatic hoops to collect both positively and negatively charged low energy particles into two opposing microchannel plate (MCP) detectors, each backed by a set of delay lines to measure hit position, and a further set of two beta detectors positioned across from each other along the polarization axis, each of which consists of a 40x40 pixel double-sided silicon strip detector (DSSD) and a scintillator coupled to a photomultiplier tube (PMT) 
 (see Fig.~\ref{chamber_decayevent}). The chamber also includes 6 viewports specifically designed to be used for the trapping and optical pumping lasers (see Fig.~\ref{fig:thechamber}.).
 
-\section{Microchannel Plates and Electrostatic Hoops}
-\label{section:mcps}
-\label{section:field}
-Two stacks of microchannel plates (MCPs) have been placed on opposing sides of the chamber, and perpendicular to the axis of polarization.  Each stack of MCPs is a relatively large detector backed by a series of delay lines for position sensitivity.  These two MCP detectors are designed to operate in conjuction with a series of seven electrostatic hoops positioned within the chamber and connected to a series of high voltage power supplies.  The hoops' shape and position have been chosen such that they are able to maintain  
-a constant, nearly uniform electric field across the space between the two MCP detectors, without blocking the necessary laser beams used for trapping, optical pumping, and photoionization, and without blocking the paths to the detectors of particles originating from the central cloud.
-The resulting electric field acts to pull positively charged ions towards one MCP detector and negatively charged electrons towards the other (see Figs.~\ref{chamber_decayevent} and~\ref{fig:thechamber}).  
+
 
 \begin{figure}[h!tb]
 	\centering
@@ -211,6 +238,23 @@ The resulting electric field acts to pull positively charged ions towards one MC
 	\caption[A Photo from Inside the TRINAT Detection Chamber]{Inside the TRINAT detection chamber.  This photo is taken from the vantage point of one of the microchannel plates, looking into the chamber towards the second microchannel plate.  The current-carrying copper Helmholtz coils and two beta telescopes are visible at the top and bottom.  The metallic piece in the foreground is one of the electrostatic hoops used to generate an electric field within the chamber.  The hoop's central circular hole allows access to the microchannel plate, and the two elongated holes on the sides allow the MOT's trapping lasers to pass unimpeded at an angle of 45 degrees `out of the page'.}
 	\label{fig:thechamber}
 \end{figure}
+
+
+%%%% --- * --- %%%%
+\ifthenelse{\boolean{isdraft}}
+{
+	\clearpage
+	\pagebreak
+}
+{}
+%%%% --- * --- %%%%
+\section{Microchannel Plates and Electrostatic Hoops}
+\label{section:mcps}
+\label{section:field}
+Two stacks of microchannel plates (MCPs) have been placed on opposing sides of the chamber, and perpendicular to the axis of polarization.  Each stack of MCPs is a relatively large detector backed by a series of delay lines for position sensitivity.  These two MCP detectors are designed to operate in conjuction with a series of seven electrostatic hoops positioned within the chamber and connected to a series of high voltage power supplies.  The hoops' shape and position have been chosen such that they are able to maintain  
+a constant, nearly uniform electric field across the space between the two MCP detectors, without blocking the necessary laser beams used for trapping, optical pumping, and photoionization, and without blocking the paths to the detectors of particles originating from the central cloud.
+The resulting electric field acts to pull positively charged ions towards one MCP detector and negatively charged electrons towards the other (see Figs.~\ref{chamber_decayevent} and~\ref{fig:thechamber}).  
+
 
 The detector intended to collect the negatively charged electrons (the ``eMCP'') has an active area of $75.0\,$mm, and is positioned 
 %is 75 mm in diameter~\aside{No, it's 86.6 mm in diameter, but the active area is only 75 mm.}and positioned 
@@ -234,6 +278,13 @@ but TRINAT's Helmholtz trim coils are adjusted during calibrations with cyclotro
 
 \note[jm]{Here's where Juliette thinks I should've described the polarization methodology better.  ``On page 39 there is a mention of polarization results with no description of the method''}
 
+%%%% --- * --- %%%%
+\ifthenelse{\boolean{isdraft}}
+{
+	\pagebreak
+}
+{}
+%%%% --- * --- %%%%
 \section{Beta Detectors}
 \label{section:betadetectors}
 The beta detectors, located above and below the atom cloud along the axis of polarization (Fig.~\ref{chamber_decayevent}), are each the combination of a plastic scintillator and a set of silicon strip detectors.  Using all of the available information, these detectors are able to reconstruct the energy of an incident beta, as well as its hit position, and provide a timestamp for the hit's arrival.  Together the upper and lower beta detectors subtend approximately 1.4\% of the total solid angle as measured with respect to the cloud position. 
