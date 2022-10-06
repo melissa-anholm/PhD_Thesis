@@ -12,7 +12,29 @@ In a precision measurement, the bulk of the research is in determining the syste
 
 \section{An Overview of Available Data}
 \label{sec:data_overview}
-Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, it was necessary to run only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector (see Tables~\ref{table:runlist_electrons} and~\ref{table:runlist_recoils}).  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  The data is further split up into several runsets based on when certain settings were adjusted, and the individual runsets have been treated separately for nearly all parts of the analysis.  
+
+\note[note,nolist]{Moved from MCP+Hoops}
+Online scientific data has been collected with the eMCP at electric field strengths of 66.7\,V/cm and 150.\,V/cm, while rMCP data has been collected at 395.\,V/cm, 415.\,V/cm, and 535.\,V/cm.  Note that these field strengths are all too low to significantly perturb any but the least energetic of the (positively charged) betas originating from decay, and those betas already lack the energy that would be needed to travel through the SiC mirror and Be foil vacuum seal into a beta detector. 
+
+The data used to measure the polarization was all collected using the rMCP, while the $\Abeta$ and $\bFierz$ data were collected using the eMCP.  The magnitude of the polarization in each of the two orientations was measured, using online $^{37}$K data, as
+\bea
+| P_+ | &=& 0.9913 \,\pm\, 0.0008
+\\
+| P_- | &=& 0.9912 \,\pm\, 0.0009,
+\eea
+and taken to be the same in both cases --- a result that could only be attained after weeks of optimization using stable $^{41}$K polarization data, with all optical pumping and magnetic field switching parameters kept constant.  The result is described thoroughly within the collaboration's Ref.~\cite{ben_OP}.
+
+%\aside[tag]{JB:  at the level of accuracy you're quoting the answers are in the PRL:  sigma+ P=99.13(8)\%; sigma- -99.12(9)\%}
+%an assertion that is backed up by weeks of optimization and polarization data on stable $^{41}$K, with all optical pumping and magnetic field switching parameters kept constant.  
+
+\note[jm]{Here's where Juliette thinks I should've described the polarization methodology better.  ``On page 39 there is a mention of polarization results with no description of the method''}
+\note[note,nolist]{}
+
+\note{The blue thing below has been put in another chapter.  I'm leaving it here too as context for the thingy at the end of the paragraph.  I'll have to re-write it or something.}
+\color{skyblue}
+Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, it was necessary to run only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector (see Tables~\ref{table:runlist_electrons} and~\ref{table:runlist_recoils}).  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  
+\color{black}
+The data is further split up into several runsets based on when certain settings were adjusted, and the individual runsets have been treated separately for nearly all parts of the analysis.  
 
 \input{table_runlist_electrons}
 \input{table_runlist_recoils}

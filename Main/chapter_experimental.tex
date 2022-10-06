@@ -209,6 +209,11 @@ All materials near the trap were chosen to minimize both magnetic permeability (
 copper ring (not pictured in Fig.~\ref{chamber_decayevent}) with a slit, mounted on each beta detector's stainless steel reentrant flange (directly above and below the trap's (anti-)Helmholtz coils), suppresses the worst eddy currents fighting the magnetic field along the vertical axis. The efficacy of these designs were all confirmed by finite element calculations of another collaboration member.
 
 
+\note[note,nolist]{Moved from MCP+Hoops}
+Ambient magnetic field changes of $\sim$50 milliGauss could cause some polarization perturbations at the precision achieved, but the stray fields were kept under control at that level.  The TRINAT lab is in a basement, well shielded from the experimental hall by concrete with rebar, and though 50 mG fields are seen in that hall from an open Helmholtz ion trap, they and the nearby 5-ton crane produce negligible fields when measured at the atom trap. The cyclotron field is $\sim$0.5 Gauss, predominantly vertical, 
+but TRINAT's Helmholtz trim coils are adjusted during calibrations with cyclotron both on and off --- and of course the cyclotron is on with a constant field during the $^{37}$K delivery.  Furthermore, because we switched every few hours between the using the eMCP and rMCP, we were able to rule out the possibility that the polarization might have drifted but escaped notice.  
+\note[note,nolist]{}
+
 
 %%%%%%% % %%%%%%%%
 \section{Measurement Geometry and Detectors}
@@ -258,25 +263,13 @@ The resulting electric field acts to pull positively charged ions towards one MC
 
 The detector intended to collect the negatively charged electrons (the ``eMCP'') has an active area of $75.0\,$mm, and is positioned 
 %is 75 mm in diameter~\aside{No, it's 86.6 mm in diameter, but the active area is only 75 mm.}and positioned 
-$100.0\,$mm from the chamber centre.  It features a Z-stack configuration of three plates, and it is backed by a set of three separate delay lines in a ``hexagonal'' arrangement for redundant position sensitivity (the ``HEX75'').  The detector used to collect positively charged ions (the ``iMCP,'' or equivalently the ``rMCP'' since many of the ions collected are recoils from decay) is $80.0\,$mm in diameter and positioned $101.4\,$mm from the chamber centre.  It features only two plates arranged in a chevron configuration, and it is backed by a set of two separate delay lines (the ``DLD80'') for position sensitivity.  In the context of the present work, the rMCP data is used primarily in conjuction with the photoionization laser to characterize the atom cloud (Section~\ref{photoions}), while the eMCP data is used, together with the beta detectors, as a `tag' for decay events originating from the cloud. \aside{Do I talk about how this works somewhere?  Probably in that section on cuts.}
+$100.0\,$mm from the chamber centre.  It features a Z-stack configuration of three plates, and it is backed by a set of three separate delay lines in a ``hexagonal'' arrangement for redundant position sensitivity (the ``HEX75'').  The detector used to collect positively charged ions (the ``iMCP,'' or equivalently the ``rMCP'' since many of the ions collected are recoils from decay) is $80.0\,$mm in diameter and positioned $101.4\,$mm from the chamber centre.  It features only two plates arranged in a chevron configuration, and it is backed by a set of two separate delay lines (the ``DLD80'') for position sensitivity.  
+%
+In the context of the present work, the rMCP data is used primarily in conjuction with the photoionization laser to characterize the atom cloud (Section~\ref{photoions}), while the eMCP data is used, together with the beta detectors, as a `tag' for decay events originating from the cloud. \aside{Do I talk about how this works somewhere?  Probably in that section on cuts.}
 
-Due to an unfortunate interaction between the two MCP detectors, during the 2014 beamtime it was not possible to run both the eMCP and the rMCP simultaneously without producing a large background on at least one detector (there seemed to be no consistency as to which detector was most affected at a given time).  As a result, data was instead collected with only one MCP detector biased at a time, and the active detector was alternated every few hours to spend approximately equal time collecting data with the eMCP and rMCP.~\aside{Reference that one table.}  Online scientific data has been collected with the eMCP at electric field strengths of 66.7\,V/cm and 150.\,V/cm, while rMCP data has been collected at 395.\,V/cm, 415.\,V/cm, and 535.\,V/cm.  Note that these field strengths are all too low to significantly perturb any but the least energetic of the (positively charged) betas originating from decay, and those betas already lack the energy that would be needed to travel through the SiC mirror and Be foil vacuum seal into a beta detector. 
 
-The data used to measure the polarization was all collected using the rMCP, while the $\Abeta$ and $\bFierz$ data were collected using the eMCP.  The magnitude of the polarization in each of the two orientations was measured, using online $^{37}$K data, as
-\bea
-| P_+ | &=& 0.9913 \,\pm\, 0.0008
-\\
-| P_- | &=& 0.9912 \,\pm\, 0.0009,
-\eea
-and taken to be the same in both cases --- a result that could only be attained after weeks of optimization using stable $^{41}$K polarization data, with all optical pumping and magnetic field switching parameters kept constant.  The result is described thoroughly within the collaboration's Ref.~\cite{ben_OP}.
 
-%\aside[tag]{JB:  at the level of accuracy you're quoting the answers are in the PRL:  sigma+ P=99.13(8)\%; sigma- -99.12(9)\%}
-%an assertion that is backed up by weeks of optimization and polarization data on stable $^{41}$K, with all optical pumping and magnetic field switching parameters kept constant.  
 
-Ambient magnetic field changes of $\sim$50 milliGauss could cause some polarization perturbations at the precision achieved, but the stray fields were kept under control at that level.  The TRINAT lab is in a basement, well shielded from the experimental hall by concrete with rebar, and though 50 mG fields are seen in that hall from an open Helmholtz ion trap, they and the nearby 5-ton crane produce negligible fields when measured at the atom trap. The cyclotron field is $\sim$0.5 Gauss, predominantly vertical, 
-but TRINAT's Helmholtz trim coils are adjusted during calibrations with cyclotron both on and off --- and of course the cyclotron is on with a constant field during the $^{37}$K delivery.  Furthermore, because we switched every few hours between the using the eMCP and rMCP, we were able to rule out the possibility that the polarization might have drifted but escaped notice.  
-
-\note[jm]{Here's where Juliette thinks I should've described the polarization methodology better.  ``On page 39 there is a mention of polarization results with no description of the method''}
 
 %%%% --- * --- %%%%
 \ifthenelse{\boolean{isdraft}}
@@ -321,7 +314,17 @@ the cloud has been fully polarized.  The number of photoion events that occur on
 \section{Considerations for Data Collection}
 \label{sec:dataconsiderations}
 \note[note]{Talk about the data collection.  What types of events are stored?}
+Although the detection chamber was designed to feature two \ac{MCP} detectors on opposing sides of an applied electric field, and intended for simultaneous use, in practice the two detectors produced quite a bit of feedback when operated at the same time.  As a result, the decision was made to use only one MPC detector at any given time;  the detector in use was switched every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into electron and recoil runs (sometimes `\ac{eMCP}' and `\ac{rMCP}') depending on what the detector in use was intended to detect.  
+
+These two types of runs were used for very different purposes in terms of analysis.  The electron runs were used directly to measure nuclear physics parameters $\Abeta$ and $\bFierz$.  The recoil runs were used to measure cloud polarization, position, and size.  These parameters --- particularly the polarization --- must be well understood in order to effect the nuclear physics measurements performed with the other detector.  The method of switching periodically which detector is in use assures that our knowledge of the atom cloud may be treated as concurrent to the electron run measurements.
+
+\note[note,nolist]{Moved from MCP+Hoops}
+Due to an unfortunate interaction between the two MCP detectors, during the 2014 beamtime it was not possible to run both the eMCP and the rMCP simultaneously without producing a large background on at least one detector (there seemed to be no consistency as to which detector was most affected at a given time).  As a result, data was instead collected with only one MCP detector biased at a time, and the active detector was alternated every few hours to spend approximately equal time collecting data with the eMCP and rMCP.~\aside{Reference that one table.}  
+\note[note,nolist]{}
+
+\color{skyblue}
 There are too many events and the daq is overwhelmed if you record all the events where the eMCP or rMCP is hit.  Although possibly we recorded some with all the eMCP events?  Not sure.
 Instead, we record all the events where a scintillator is hit, and all(?) the events where a photoionization laser pulse happens.  It goes at like 10 kHz.  Or maybe it was all the events with a photoionization laser pulse in coincidence with a photoelectron (TOF window) or photoion (TOF window).  But I don't think that's quite right.  That's not what the spectra looked like in the end, so I think that was maybe only for the online plots or something?  Not for the triggers.  Did we clean the non-SOE events in the data acquisition *right then*?  You could do that ok with the electrons, but not so much with the ions.  
+\color{black}
 \note[tag]{}
 

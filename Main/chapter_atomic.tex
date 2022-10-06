@@ -74,21 +74,6 @@ Unfortunately, this treatment cannot determine the fractional contribution of ea
 
 
 
-%%% % % % %%%
-\section{Optical Pumping}
-\label{sec:op}
-The optical pumping process necessary for this work involves using a laser to stimulate atomic transitions.  With a correctly tuned and polarized laser beam, the aggregate effect is to introduce a biased random walk towards a state of high spin-polarization (sometimes called a \emph{stretched state}).  
-
-With every absorbed photon, one unit of angular momentum is transferred to the atom, and an orbital electron jumps to a higher energy level.  By ensuring that the incident polarization laser is fully polarized (and choosing an appropriate axis of quantization), it is possible to ensure that all the absorbed photons must \emph{increase} the angular momentum projection quantum number.  After absorbing a photon, the excited electron will eventually fall back to a lower energy level, emitting a photon in the process.  The emitted photon carries one unit of angular momentum, and is emitted in a random direction -- therefore the resulting change in atomic angular momentum projection is also randomized, provided that there exists an available lower energy state for the orbital electron to decay into.   
-
-Although the transitions to which the laser couples are primarily thought of as atomic transitions, the coupling of angular momenta between orbital electrons and the nucleus results in both becoming polarized.  
-
-\note[note,nolist]{}
-
-The primary detail described here is that the optical pumping is disturbed by any component of magnetic field not directed along the quantization axis --- in our case, the vertical axis, defined by the direction of propogation for the optical pumping light, and along which the detectors are placed.  The optical pumping process is described in detail within our collaboration's Ref.~\cite{ben_OP}, and the required sophistication with an AC-MOT described in Section~\ref{sec:acmot} below.
-
-
-
 %%%% --- * --- %%%%	
 %%%% --- * --- %%%%	
 \section{Zeeman Splitting}
@@ -106,7 +91,47 @@ With $\vec{\mu}$ fixed, it is clear that the magnitude of the energy shift must 
 \Delta E_{\mathrm{\,transition}} &=& - \left( \vec{\mu}_f - \vec{\mu}_i \right) \cdot \vec{B}.
 \eea 
 
-% % % 
+
+
+
+
+
+
+%%% % % % %%%
+\section{Optical Pumping}
+\label{sec:op}
+The optical pumping process necessary for this work involves using a laser to stimulate atomic transitions.  With a correctly tuned and polarized laser beam, the aggregate effect is to introduce a biased random walk towards a state of high spin-polarization (sometimes called a \emph{stretched state}).  Although the transitions to which the laser couples are often thought of as atomic transitions, the coupling of angular momenta between orbital electrons and the nucleus results in \emph{both} becoming polarized.  
+
+With every absorbed photon, one unit of angular momentum is transferred to the atom, and an orbital electron jumps to a higher energy level.  By ensuring that the incident polarization laser is fully circularly polarized (and choosing an appropriate axis of quantization), it is possible to ensure that all the absorbed photons must \emph{increase} the angular momentum projection quantum number.  After absorbing a photon, the excited electron will eventually decay to a lower energy level, emitting a photon in the process.  The emitted photon carries one unit of angular momentum, and is emitted in a random direction -- therefore the resulting change in atomic angular momentum projection is also randomized, provided that there exists an available lower energy state for the orbital electron to decay into.   When the electron has been moved to the maximally polarized ground state, it can no longer be excited by the laser beam that drove it there (assuming perfect circular polarization for the laser), because there is no excited state available with higher angular momentum.  
+
+Given that the process is accurately modeled as a biased random walk towards a particular state, it should be clear that once a majority of the atoms have arrived at the stretched state, the optical pumping process has progressively diminishing returns, as there are fewer and fewer unpolarized atoms available to be polarized.  As a practical matter, the entire process takes several microseconds before the system arrives at something of a steady state, with depolarizing forces balanced against the optical pumping rate.
+
+We now consider the two primary depolarization mechanisms.  The first and most straightforward of these arises as a result of incomplete circular polarization in the optical pumping laser.  The overall laser polarization can be represented as a linear combination of left-handed and right-handed ($\sigma_{\pm}$) circularly polarized components.  If the $\sigma_{+}$ light \emph{increases} the angular momentum projection in the atomic system on which it is incident, then the $\sigma_{+}$ light must necessarily \emph{decrease} that same quantity.  In practice, it is impossible to completely polarize the optical pumping laser, so it is inevitable that there will be some depolarizing component, however small, within the optical pumping laser.
+
+The cloud polarization can also be disrupted by the presence of a non-uniform magnetic field as the result of Larmor precession.  In a simplified semi-classical picture (which translates remarkably well to the quantum mechanical reality), this would result in any spins that are not fully aligned (or anti-aligned) with the magnetic field precessing about the local magnetic field lines.  If the magnetic field is aligned with the intended axis of polarization, the spins will precess, but the overall polarization (ie, the spin projection onto the selected axis) will be unchanged.  
+
+By contrast, if the magnetic field is misaligned with the polarization axis, then a spin (even one initially aligned with the polarization axis) will experience a time-dependent depolarization force as it precesses.  Worse yet, if the magnetic field is non-uniform, then the spins on one side of the atom cloud will precess about a different axis, at a different rate, than the spins on the opposite side.  
+
+This time-dependent depolarization mechanism is critical to \ac{NMR} measurements, but for our purposes here, we wish to suppress it.  To minimize depolarization effects arising from magnetic field non-uniformities, an additional uniform magnetic field may be applied along the axis of polarization.  This has the effect of decreasing the \emph{fractional} size of any non-uniformities that may be present.  The applied field must also be kept relatively small ($\sim$ 2.3 Gauss, in our case) in order to prevent the atomic and nuclear angular momenta from becoming decoupled.  
+
+
+
+\note[note,nolist]{}
+
+
+\note[note,nolist]{}
+
+\color{skyblue}
+The primary detail described here is that the optical pumping is disturbed by any component of magnetic field not directed along the quantization axis --- in our case, the vertical axis, defined by the direction of propogation for the optical pumping light, and along which the detectors are placed.  The optical pumping process is described in detail within our collaboration's Ref.~\cite{ben_OP}, and the required sophistication with an AC-MOT described in Section~\ref{sec:acmot} below.
+\color{black}
+
+
+
+
+
+%%% % % % %%%
+%%% % % % %%%
+%%% % % % %%%
 \section{Doppler Cooling}
 \label{sec:dopplercooling}
 We consider a setup in which a cloud of two-level atoms lies along the path of two counter-propagating laser beams, both tuned to
@@ -121,6 +146,10 @@ The result of many such atom-photon interactions is that an individual atom, no 
 
 Although this setup will decrease atomic velocity, it does not create a confining force, so (eg, in three dimensions) the atoms are still free to move out of the lasers' path, albeit at a decreased speed.
 \note{...This will slow the atom down, at least up to a limit related to the linewidth of the atomic transition and/or the laser.  There's something to look up.}
+
+
+
+
 
 
 %%% % % % %%%

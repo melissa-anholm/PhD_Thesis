@@ -393,43 +393,115 @@ In the above expressions, $M_F$ and $M_{GT}$ are the Fermi (vector coupling) and
 \\
 \mbox{$\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2} \approx 1$}, using fine structure constant $\alpha$.
 %\note[note,nolist]{}
+\aside[note]{I've specialized to the 98\% branch already.  Did I say so?}
 
 The expressions above have many free parameters, and some simplifications and assumptions must be made before any experimental measurement can be interpreted in a physically meaningful way.  
 %a physically meaningful measurement can be made.  
-Each type of interaction $X$ (for $X=\{V,A,S,T\}$) is described by \emph{two} complex coupling constants, $C_X$ and $C_X^\prime$.  This extra degree of freedom is necessary in order to describe couplings to both left-handed and right-handed helicity leptons.
+We note that each type of interaction $X$ (for $X=\{V,A,S,T\}$) is described by \emph{two} complex coupling constants, $C_X$ and $C_X^\prime$;  this extra degree of freedom is necessary in order to describe couplings to both left-handed and right-handed helicity leptons.
 ~\aside{Is it definitely helicity?  Or do I mean chirality?  I think helicity is right.  probably.}
 In practice, we already know that the weak force couples (almost) entirely to left-handed electrons and right-handed positrons.  Separately, we know that the interaction proceeds (almost) entirely by vector and axial couplings.  Taken together, this suggests that neutrinos and anti-neutrinos, as leptons, must (predominantly) follow the same helicity selection rules that apply to electrons and positrons.  This is because, \emph{e.g.}, a decay mediated by either scalar or tensor couplings would produce two outgoing leptons/anti-leptons of the \emph{same} helicity.  
 
 It is this subtlety which gives rise to the energy dependence ($\me c^2 / \Ee $) by which $\bFierz$ is multiplied in Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}).  
 %--- it is fundamentally an \emph{interference} term between the interactions of standard model physics with an unknown exotic physics term.  
-That is, if we have restricted ourselves to interactions involving right-handed anti-neutrinos travelling at the speed of light, then the scalar or tensor components of this interaction, if present, must also couple to right-handed helicity electrons.  The lower the energy of the outgoing electron, the greater the fraction of available phase space in which the electron ``appears'' to be right-handed.  In other words, this term describes a mechanism by which scalar and tensor couplings can effectively compete with the expected vector and axial couplings;  this is why $\bFierz$ is described as an \emph{interference} term.
+That is, if we have restricted ourselves to interactions involving right-handed anti-neutrinos travelling at the speed of light, then the scalar or tensor components of this interaction, if present, must also couple to right-handed helicity electrons.  The lower the energy of the outgoing electron, the greater the fraction of available phase space in which the electron appears to be right-handed from the reference frame of the mediating $W$ boson.  In other words, this term describes a mechanism by which scalar and tensor couplings can effectively compete with the expected vector and axial couplings;  this is why $\bFierz$ is described as an \emph{interference} term~\cite{hong_sternberg_garcia}\cite{Greiner2009}.
 % effectively competing with the expected vector and axial couplings.  
 
 
 \note{somewhere:  point out that $\bFierz$ is linear in BSM.  other observables are quadratic.  So this way is best for small S, T couplings.}
-\note[note,nolist]{}
+%\note[note,nolist]{}
 \note[tag]{Needs:  
 \\
 %* also, we describe it in that order [despite the fact that we're actually (experimentally?) limited to the one helicity of electrons but we have no experimental limits on neutrino helicity really...], because with massive electrons you can boost to a frame with opposite helicity.  `Massless' neutrinos can't do that.  So you get a factor of electron mass in there.
 %
-* citations for Ran Hong and Greiner2009.  
-\\
-* Also, it arises from the Dirac spinor term?
+%* citations for Ran Hong and Greiner2009.  They go here.  --> done!
+%\\
+* ...Also, it arises from the Dirac spinor term?
 \\
 * Practically, it means we're sensitive to this and high energy is not.
 }
 
-If one assumes the standard model holds, $\Abeta$, $\bFierz$, and $\xi$ can be written in terms of a greatly simplified set of parameters.  Here, we introduce $\rho$, the ratio of Gamow-Teller and Fermi couplings: 
+We will henceforth take $C_X = C_X^\prime$, which is equivalent to a requirement that all couplings are left-handed.  We define a set of purely left-handed couplings:
 \bea
-\rho &=& \frac{C_A M_{GT}}{C_V M_F}.%  \;\; = \;\; \frac{g_A M_{GT}}{g_V M_F}
+g_V &=& \frac{1}{\sqrt{2}}  \, (C_V + C_V^\prime )  %\;\; = \;\; +\, 1.0
+\label{eq:gV_def}
+\\
+g_A &=& \frac{-1}{\sqrt{2}} \, (C_A + C_A^\prime )  %\;\; \approx \;\; +\, 0.91210
+\label{eq:gA_def}
+\\
+g_S &=& \frac{1}{\sqrt{2}} \, (C_S + C_S^\prime ) 
+\label{eq:gS_def}
+\\
+g_T &=& \frac{-1}{\sqrt{2}} \, (C_T + C_T^\prime).
+\label{eq:gT_def}
+\eea
+Furthermore, we will also require going forward that all $C_X$ must be \emph{real};  this is equivalent to requiring that the interactions obey time-reversal invariance. 
+%\note[note,nolist]{}
+%If one assumes the standard model holds, $\Abeta$, $\bFierz$, and $\xi$ can be written in terms of a greatly simplified set of parameters.  
+We also introduce $\rho$, the ratio of Gamow-Teller and Fermi couplings:  %$\rho$ is unique to a particular transition, and must be measured experimentally.  
+\bea
+\rho &:=& \frac{C_A M_{GT}}{C_V M_F}  \;\; = \;\; \frac{- g_A M_{GT}}{g_V M_F}.
 \label{eq:definerho_intro}
 \eea
-The value of $\rho$ must be extracted experimentally (see Sec.~\ref{sec:extractinglambda}).
-~\aside[note]{See Appendix~\ref{sec:combo_formalism} for a discussion of the relationship between parameters $C_X$ and $g_X$.  I guess.}
+The value of $\rho$ is unique to a particular transition, and must be extracted experimentally (see Sec.~\ref{sec:extractinglambda}).
+~\aside[note]{See Appendix~\ref{sec:combo_formalism} for a discussion of the relationship between parameters $C_X$ and $g_X$.  I guess.}  
+
+Using the above notation and the simplifying assumptions that give rise it, it is possible to re-write Eqs.~(\ref{eq:jtw_xi_integrated_intro})-(\ref{eq:jtw_Abetaxi_integrated_intro}) as:
+
+\bea
+\xi &=& 2 \,\, C_V^2 \, | M_F |^2 \left( 1 + \rho^2 \right)
+\label{eq:xiwithrho_intro} 
+\\
+\bFierz &=& \frac{-2\gamma}{1 + \rho^2} \left( \frac{g_S}{g_V} + \rho^2 \frac{g_T}{g_A} \right). 
+\label{bFierzwithlambda}
+\\
+\Abeta &=& \frac{\frac{2}{5} \rho^2 - 2 \rho \sqrt{\frac{3}{5}}  }{1 + \rho^2}.
+\label{eq:Awithrho_intro}
+\eea
 
 
 \note[note,nolist]{}
 \note[note,nolist]{}
+
+%%%%%%%\note[done,nolist]{JB:  I don't see where you mention the experimentally produced $M_F/M_{GT}$ that goes into the calculation for $\Abeta$.  You have the references.  You could at least say that Eq. 1.11 combined with the measured ft value produces $\lambda$, which in turn produces $\Abeta$.}  
+%%%Then, specializing to the 98\% branch of $^{37}$K decay, and given the expected behaviour of the standard model,
+%%%%\aside[tag]{We've specialized to 37K without telling anyone here!!!  Can't do that unless we say so.} 
+%%%we can express $\xi$, $\bFierz$, and $\Abeta$ as:
+%%%\bea
+%%%\xi &=& 2 \,\, C_V^2 \, | M_F |^2 \left( 1 + \rho^2 \right)
+%%%%\label{eq:xiwithrho_intro} 
+%%%\\
+%%%\bFierz &=& 0 
+%%%%\label{bFierzwithrho_intro}
+%%%\\
+%%%\Abeta &=& \frac{\frac{2}{5} \rho^2 - 2 \rho \sqrt{\frac{3}{5}}  }{1 + \rho^2}.
+%%%%\label{eq:Awithrho_intro}
+%%%\eea
+%%%
+%%%%\note{The formalism that gave rise to these expressions is missing some things...}
+%%%
+%%%%\note{some citations:\\
+%%%%Dan's $\Bnu$:  \cite{dan_Bnu}.
+%%%%P.Shidling's $^{37}$K halflife:  \cite{shidling2014} }
+
+Because the nucleus is significantly more massive than either of the other two outgoing particles, the great majority of the released kinetic energy is distributed between the leptons, while the nucleus receives only a tiny fraction of the total.  This feature lends itself to an approximation, as above, in which the energy of the recoiling nucleus (the ``recoil'') is neglected entirely, and the decay may be described only in terms of the momenta of the outgoing positron(electron) and neutrino(anti-neutrino).  
+%, as in the description from \ac(JTW)~\cite{jtw}~\cite{jtw_coulomb}.  
+The terms that have been neglected in this treatment are sometimes called recoil-order corrections.
+
+%In order to proceed with a measurement, we must find an equation to describe the probability of beta decay events with any given distribution of energy and momenta among the daughter particles, as a function of the strength of the specific couplings of interest to us.  To do this, two sets of formalisms are combined -- the older formalism of JTW, %~\cite{jtw},~\cite{jtw_coulomb}, 
+%which describes the effects of all types of Standard Model and exotic couplings of interest to us here, but which truncates its expression at first order in the (small) parameter of transferred nuclear recoil energy, and a newer formalism from Holstein~\cite{holstein}, which includes terms up to several orders higher in recoil energy, but which does not include any description of the exotic couplings of particular interest to us.  
+Although recoil-order and other small corrections must be accounted for within the standard model description of beta decay, in the case of exotic couplings, leading order \ac{JTW} description is adequate, because any exotic couplings present in nature have already been determined to be either small or nonexistant.  Therefore, in a search for exotic physics of this nature, it is sufficient to describe any exotic coupling parameters with expressions truncated at first order, in combination with a more precise set of expressions to account for the well-understood physical behaviours that dominate.  
+
+Within this work, we are particularly interested in the $\bFierz$ parameter.  Though it is identically zero under the standard model, it is quite sensitive to certain \ac{BSM} physics.  In particular, it describes (small) left-handed scalar and tensor couplings at \emph{linear} order, while these \ac{BSM} parameters only enter at the quadratic order in the case of $\xi$ and $\Abeta$.  
+%%In particular, in terms of the left-handed scalar and tensor couplings $g_S$ and $g_T$, $\bFierz$ has the form 
+%%\bea
+%%\bFierz &=& \frac{-2\gamma}{1 + \rho^2} \left( \frac{g_S}{g_V} + \rho^2 \frac{g_T}{g_A} \right). 
+%%%\label{bFierzwithlambda}
+%%\eea
+%%%Here $\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2} \approx 1$, where $Z^\prime$ is the atomic number of the daughter, and as usual $\alpha$ is the fine structure constant. 
+It is clear that Eq.~\ref{bFierzwithlambda} reduces to 0 in the standard model limit where $g_S = g_T = 0$.
+%$\gamma \approx 1$ is defined as in Appendix~\ref{sec:jtw_formalism}, and\
+
+
 
 %
 \note[jm]{This is where Juliette thinks I need more info about Abeta and bFierz.  
@@ -466,53 +538,9 @@ Her uneasiness is spot on: you state something about the helicity notation, yes,
 unfortunately, but fortunately because it's easy to fix,
 \\...\\
 it looks to me like you've \textbf{neglected both the main reason for the $m/E$} (worked out without Dirac matrices in Hong's paper with Alejandro, which you cite but not for this reason-- you should not do this, but you should cite it)
-and, I think?, \textbf{its practical implications} (we're sensitive to it and high-energy is not). Leah Broussard covered this last point in a neutron beta decay talk at Winnipeg awhile back (we would be listing her as a possible external but universities insist in more supervisory experience).
+and, I think?, \textbf{its practical implications} (we're sensitive to it and high-energy is not). 
+%Leah Broussard covered this last point in a neutron beta decay talk at Winnipeg awhile back (we would be listing her as a possible external but universities insist in more supervisory experience).
 }
-
-
-
-
-
-%%%%\note[done,nolist]{JB:  I don't see where you mention the experimentally produced $M_F/M_{GT}$ that goes into the calculation for $\Abeta$.  You have the references.  You could at least say that Eq. 1.11 combined with the measured ft value produces $\lambda$, which in turn produces $\Abeta$.}  
-Then, specializing to the 98\% branch of $^{37}$K decay, and given the expected behaviour of the standard model,
-%\aside[tag]{We've specialized to 37K without telling anyone here!!!  Can't do that unless we say so.} 
-we can express $\xi$, $\bFierz$, and $\Abeta$ as:
-\bea
-\xi &=& 2 \,\, C_V^2 \, | M_F |^2 \left( 1 + \rho^2 \right)
-\label{eq:xiwithrho_intro} 
-\\
-\bFierz &=& 0 
-\label{bFierzwithrho_intro}
-\\
-\Abeta &=& \frac{\frac{2}{5} \rho^2 - 2 \rho \sqrt{\frac{3}{5}}  }{1 + \rho^2}.
-\label{eq:Awithrho_intro}
-\eea
-
-%\note{The formalism that gave rise to these expressions is missing some things...}
-
-%\note{some citations:\\
-%Dan's $\Bnu$:  \cite{dan_Bnu}.
-%P.Shidling's $^{37}$K halflife:  \cite{shidling2014} }
-
-Because the nucleus is significantly more massive than either of the other two outgoing particles, the great majority of the released kinetic energy is distributed between the leptons, while the nucleus receives only a tiny fraction of the total.  This feature lends itself to an approximation, as above, in which the energy of the recoiling nucleus (the ``recoil'') is neglected entirely, and the decay may be described only in terms of the momenta of the outgoing positron(electron) and neutrino(anti-neutrino).  
-%, as in the description from \ac(JTW)~\cite{jtw}~\cite{jtw_coulomb}.  
-The terms that have been neglected in this treatment are sometimes called recoil-order corrections.
-
-%In order to proceed with a measurement, we must find an equation to describe the probability of beta decay events with any given distribution of energy and momenta among the daughter particles, as a function of the strength of the specific couplings of interest to us.  To do this, two sets of formalisms are combined -- the older formalism of JTW, %~\cite{jtw},~\cite{jtw_coulomb}, 
-%which describes the effects of all types of Standard Model and exotic couplings of interest to us here, but which truncates its expression at first order in the (small) parameter of transferred nuclear recoil energy, and a newer formalism from Holstein~\cite{holstein}, which includes terms up to several orders higher in recoil energy, but which does not include any description of the exotic couplings of particular interest to us.  
-Although recoil-order and other small corrections must be accounted for within the standard model description of beta decay, in the case of exotic couplings, leading order \ac{JTW} description is adequate, because any exotic couplings present in nature have already been determined to be either small or nonexistant.  Therefore, in a search for exotic physics of this nature, it is sufficient to describe any exotic coupling parameters with expressions truncated at first order, in combination with a more precise set of expressions to account for the well-understood physical behaviours that dominate.  
-
-Within this work, we are particularly interested in the $\bFierz$ parameter.  Though it is identically zero under the standard model, it is quite sensitive to certain \ac{BSM} physics.  In particular, it describes (small) left-handed scalar and tensor couplings at \emph{linear} order, while these \ac{BSM} parameters only enter at the quadratic order in the case of $\xi$ and $\Abeta$.  In particular, in terms of the left-handed scalar and tensor couplings $g_S$ and $g_T$, $\bFierz$ has the form 
-\bea
-\bFierz &=& \frac{-2\gamma}{1 + \rho^2} \left( \frac{g_S}{g_V} + \rho^2 \frac{g_T}{g_A} \right). 
-\label{bFierzwithlambda}
-\eea
-%Here $\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2} \approx 1$, where $Z^\prime$ is the atomic number of the daughter, and as usual $\alpha$ is the fine structure constant. 
-It is clear that Eq.~\ref{bFierzwithlambda} reduces to 0 in the standard model limit where $g_S = g_T = 0$.
-%$\gamma \approx 1$ is defined as in Appendix~\ref{sec:jtw_formalism}, and\
-
-
-
 
 
 
@@ -549,7 +577,9 @@ r_{\mathrm T-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm T}(\Ebeta)\, \Omega_
 r_{\mathrm B-}(\Ebeta) &=& W(\Ebeta)\, \varepsilon_{\mathrm B}(\Ebeta)\, \Omega_{\mathrm B} \, N_- \left[1 + \bFierz \frac{\m c^2}{\Ebeta}  + \Abeta \, \frac{v}{c} |\vecP_{\bm{-}}| \langle \cos\theta \rangle_{\mathrm B-} \right], \;\;\; \label{eq:r4}
 \eea
 %
-where the $\varepsilon_{\mathrm T / \mathrm B}(\Ebeta)$ are the (top/bottom) detector efficiencies, $\Omega_{\mathrm T / \mathrm B}$ are the fractional solid angles from the trap position to the (top/bottom) detector from the trap position, $N_{+/-}$ are the number of atoms trapped in each (+/-) polarization state, and $|\vecP_{\bm{+/-}}|$ are the magnitudes of the polarization along the detector axis for each polarization state.  $\langle \cos\theta \rangle_{\mathrm T/ \mathrm B, +/-} $ is the average of $\cos\theta$ for \emph{observed} outgoing betas, for each detector and polarization state combination.  This latter term is approximately $\pm 1$ as a result of our detector geometry, but contains important sign information.  
+where the $\varepsilon_{\mathrm T / \mathrm B}(\Ebeta)$ are the (top/bottom) detector efficiencies, $\Omega_{\mathrm T / \mathrm B}$ are the fractional solid angles from the trap position to the (top/bottom) detector from the trap position, $N_{+/-}$ are the number of atoms trapped in each (+/-) polarization state, and $|\vecP_{\bm{+/-}}|$ are the magnitudes of the polarization along the detector axis for each polarization state.  $\langle \cos\theta \rangle_{\mathrm T/ \mathrm B, +/-} $ is the average of $\cos\theta$ for \emph{observed} outgoing betas, 
+%(\emph{i.e.}, observed in a detector with $\cos\theta \approx \pm 1$ in the present experiment), 
+for each detector and polarization state combination.  This latter term is approximately $\pm 1$ as a result of our detector geometry, but contains important sign information.  
 
 
 %\note[note,nolist]{}
@@ -592,7 +622,15 @@ A_{\mathrm{super}} &\rightarrow& \frac{ r_{\mathrm T+}\, - \,r_{\mathrm B+} }{r_
 \eea
 %\note{Assumes $\bFierz=0$.  Or, rather, we can only interpret it as $\Abeta$ if $\bFierz=0$.  }
 
-While Eq.~\ref{eq:singlepol_asymmetry} is conceptually encouraging, the assumptions that gave rise to it are too simplifying.  We will introduce some less restrictive assumptions for what follows, along with shorthand notation for improved readability (and to make it obvious which quantities are to be considered small).  First, we require that the magnitude of the polarization vector is the same for both polarization states, and also that the average of the magnitude of $\cos\theta$ for a given detector does not change when the polarization is flipped (equivalent to a requirement that the trap position doesn't change when the polarization is flipped).  Then: 
+The superratio, and superratio asymmetry, has been used for precision beta decay measurements in the past to measure the neutron's beta asymmetry\cite{UCNA_first_superratio}, and our own collaboration has also used it to measure the beta asymmetry in $^{37}$K~\cite{ben_Abeta}.  More recently, it has been used to measure the neutron's Fierz interference term~\cite{UCNAfierz2020}\cite{Saul2020} as well, with notably more impressive results than using the earlier `supersum' data combination method~\cite{UCNA_first_Fierz}.  
+
+
+
+While Eq.~\ref{eq:singlepol_asymmetry} is conceptually encouraging, the assumptions that gave rise to it are too simplifying.  
+%
+Fortunately, as we'll soon see, the key to the effectiveness of the superratio technique is that many systematic effects can be made to cancel at the leading order, at the cost of some statistical resolving power.  
+%
+We will introduce some less restrictive assumptions for what follows, along with shorthand notation for improved readability (and to make it obvious which quantities are to be considered small).  First, we require that the magnitude of the polarization vector is the same for both polarization states, and also that the average of the magnitude of $\cos\theta$ for a given detector does not change when the polarization is flipped (equivalent to a requirement that the trap position doesn't change when the polarization is flipped).  Then: 
 \bea
 P &:=& |\vecP_{\bm +}| = |\vecP_{\bm -}|  \\
 \langle |\cos\theta | \rangle_T &:=& \langle |\cos\theta | \rangle_{\mathrm T+} \, = \, \langle |\cos\theta | \rangle_{\mathrm T-} \\
@@ -678,25 +716,22 @@ It is this latter observation which motivates the construction of the superratio
 
 %One way to do this is to separate the data into categories relating to their angular dependence with respect to the direction of nuclear spin (which parameterizes the $\Abeta$ observable).  If, as in our case, these sets of data can be further subdivided into categories that can be expected to have similar physical behaviours, but which may have differing systematic effects, the result is even more powerful.  In our case, the nuclear polarization is flipped periodically within a (mostly) symmetric apparatus, with beta detectors above and below along the axis of polarization.  The four beta spectra that result from this categorization can be used to construct a so-called superratio asymmetry.   
 
-The superratio, and superratio asymmetry, has been used for precision beta decay measurements in the past to measure the neutron's beta asymmetry\cite{UCNA_first_superratio}, and our own collaboration has also used it to measure the beta asymmetry in $^{37}$K~\cite{ben_Abeta}.  More recently, it has been used to measure the neutron's Fierz interference term~\cite{UCNAfierz2020}\cite{Saul2020} as well, with notably more impressive results than using the earlier `supersum' data combination method~\cite{UCNA_first_Fierz}.  
-
-The key to the effectiveness of the superratio technique is that many systematic effects can be made to cancel at the leading order, at the cost of some statistical resolving power.  
 
 %The mathematical details of the superratio construction and its results are discussed in detail within Section~\ref{appendix:superratio}, so within the present section we will limit ourselves to a discussion of the results.
 
 \note[jm]{Here's where Juliette thinks I need to discuss the superratio harder.  ``On page 20, the details of the superratio construction are also relegated to an appendix''}
 
-With the four rate spectra, $r_{D P}(\Ebeta)$, describing the rate at which events are detected in beta detector $D$ ($D =\{ \mathrm{T, B}  \}$ are the top and bottom detectors) from a decay whose parent had polarization $P$ (with $P=\{+,-\}$), we can construct the superratio asymmetry observable, $A_{\mathrm{super}}$, such that
-\bea
-A_{\mathrm{super}} \;\;=\;\; A_{\mathrm{super}}(\Ebeta) 
-&=& \frac{ \sqrt{r_{\mathrm T-}\, r_{\mathrm B+} \phantom{ (\!\!\!\!\!) } }\; -\, \sqrt{ r_{\mathrm T+}\, r_{\mathrm B-}\phantom{ (\!\!\!\!\!) }} }{ \sqrt{r_{\mathrm T-}\, r_{\mathrm B+}\phantom{ (\!\!\!\!\!) }} \;+\, \sqrt{r_{\mathrm T+}\, r_{\mathrm B-} \phantom{ (\!\!\!\!\!) }} },
-\eea
-and we find the following dependence for the parameters $\Abeta$ and $\bFierz$ from Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}):
-\bea
-A_{\mathrm{super}} &\approx& \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \left( 1 - \bFierz \frac{mc^2}{\Ebeta} \right), 
-\eea
-where $v$ is the speed of the emitted beta particle, $c$ is the speed of light, $m$ is the mass of the electron, $\Ebeta$ is the total beta energy, $\vec{P}$ gives the nuclear spin-polarization vector of the parent, and $\theta$ describes the angle between the polarization vector and the direction into which the beta is emitted.  The ensemble averaged term, $\langle | \cos\theta | \rangle$, is averaged over the betas that are observed in a \emph{detector} (located along the axis of polarization).
-%\note{define:  $v,c,\vec{P}, m_e,$...}
+%%%%With the four rate spectra, $r_{D P}(\Ebeta)$, describing the rate at which events are detected in beta detector $D$ ($D =\{ \mathrm{T, B}  \}$ are the top and bottom detectors) from a decay whose parent had polarization $P$ (with $P=\{+,-\}$), we can construct the superratio asymmetry observable, $A_{\mathrm{super}}$, such that
+%%%%\bea
+%%%%A_{\mathrm{super}} \;\;=\;\; A_{\mathrm{super}}(\Ebeta) 
+%%%%&=& \frac{ \sqrt{r_{\mathrm T-}\, r_{\mathrm B+} \phantom{ (\!\!\!\!\!) } }\; -\, \sqrt{ r_{\mathrm T+}\, r_{\mathrm B-}\phantom{ (\!\!\!\!\!) }} }{ \sqrt{r_{\mathrm T-}\, r_{\mathrm B+}\phantom{ (\!\!\!\!\!) }} \;+\, \sqrt{r_{\mathrm T+}\, r_{\mathrm B-} \phantom{ (\!\!\!\!\!) }} },
+%%%%\eea
+%%%%and we find the following dependence for the parameters $\Abeta$ and $\bFierz$ from Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}):
+%%%%\bea
+%%%%A_{\mathrm{super}} &\approx& \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \cos\theta | \rangle \left( 1 - \bFierz \frac{mc^2}{\Ebeta} \right), 
+%%%%\eea
+%%%%where $v$ is the speed of the emitted beta particle, $c$ is the speed of light, $m$ is the mass of the electron, $\Ebeta$ is the total beta energy, $\vec{P}$ gives the nuclear spin-polarization vector of the parent, and $\theta$ describes the angle between the polarization vector and the direction into which the beta is emitted.  The ensemble averaged term, $\langle | \cos\theta | \rangle$, is averaged over the betas that are observed in a \emph{detector} (located along the axis of polarization).
+%%%%%\note{define:  $v,c,\vec{P}, m_e,$...}
 
 In addition to eliminating systematic effects, the superratio asymmetry also provides an enhanced signal to be evaluated, as can be seen in Fig.~\ref{fig:FierzSignature}.
 
@@ -708,7 +743,8 @@ In addition to eliminating systematic effects, the superratio asymmetry also pro
 	\caption[Generated Beta Energy Spectrum and Superratio Asymmetry to Measure $\bFierz$]{A generated beta energy spectrum (top), and the superratio asymmetry associated with it (bottom) are constructed to measure a $\bFierz$ signal at the values shown.  The supersum method of Ref.~\cite{UCNA_first_Fierz} is roughly equivalent to constructing the top plot's beta energy spectrum.  Note that the magnitude of these $\bFierz$ values has been made to be unphysically large so that the effect to the top plot can be seen; both scalar and tensor couplings of the size needed to produce this effect have already been ruled out. }	\label{fig:FierzSignature}
 \end{figure}
 
-The superratio and superratio asymmetry are discussed in detail within Section~\ref{appendix:superratio}.  The discussion includes details on which sort of systematic errors will cancel out entirely, or to leading order, with this treatment -- however it must be noted that for the present project, higher-order corrections are included in all simulations, and the effects are propagated through to the end of the analysis.  Though many systematic effects can be reduced by using the superratio asymmetry, they must still be evaluated.  Therefore, measured values of $\Abeta$ and $\bFierz$ may be directly compared to theoretical predictions.
+%The superratio and superratio asymmetry are discussed in detail within Section~\ref{appendix:superratio}.  The discussion includes details on which sort of systematic errors will cancel out entirely, or to leading order, with this treatment -- however 
+It must be noted that for the present project, higher-order corrections are included in all simulations, and the effects are propagated through to the end of the analysis.  Though many systematic effects can be reduced by using the superratio asymmetry, they must still be evaluated.  Therefore, measured values of $\Abeta$ and $\bFierz$ may be directly compared to theoretical predictions.
 
 
 
@@ -778,11 +814,13 @@ MJA:  I can't help but also notice the follow-up article from September 2020~\ci
 %\input{appendix_superratio}
 %%%% --- * --- %%%%	
 
-\subsection{Derivation of the $\bFierz$ Dependence of the Superratio Asymmetry}
+%\subsection{Derivation of the $\bFierz$ Dependence of the Superratio Asymmetry}
 %\chapter[SuperRatio]{Derivation of the $\bFierz$ Dependence of the Superratio Asymmetry}
 \label{appendix:superratio}
-\note[jm]{JM suggests:  Move this thing out of an appendix and into the main?}
-\note[jbnn]{3. superratio:
+%\note[jm]{JM suggests:  Move this thing out of an appendix and into the main?}
+\note[jm]{JB on JM:  
+\\
+3. superratio:
 \\
 this is up to you. She has a point that the superratio is critical.
 You know that, and understand full details, and that's a real intellectual contribution you've made to your research.
@@ -851,7 +889,7 @@ In the case of the present experiment, we note that $|\vec{P}_+| = |\vec{P}_-|$ 
 %\label{eq:singlepol_asymmetry}
 %\eea
 
-\note[note, nolist]{begin thing I haven't yoinked from yet:  }
+%\note[note, nolist]{begin thing I haven't yoinked from yet:  }
 %%%While Eq.~\ref{eq:singlepol_asymmetry} is conceptually encouraging, the assumptions that gave rise to that expression are too simplifying.  We will introduce some more limited assumptions for what follows, along with shorthand notation for improved readability.  First, we require that the magnitude of the polarization vector is the same for both polarization states, and also that the average of the magnitude of $\cos\theta$ for a given detector does not change when the polarization is flipped (equivalent to a requirement that the trap position doesn't change when the polarization is flipped).  Then: 
 %%%\bea
 %%%P &:=& |\vec{P}_+| = |\vec{P}_-|  \\
