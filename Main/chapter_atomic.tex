@@ -27,7 +27,7 @@ A further consideration is that the outer electron in an $^{37}\textrm{\!Ar}^{-}
 
 It is useful to consider the energy spectrum of these shake-off electrons.  The most straightforward component of the SOE energy spectrum arises from the electrons that are lost immediately \emph{after} the decay, and we take these to initially have 0\,eV kinetic energy.  
 
-For the shake-off electrons arising from nuclear decay process, the initial energy spectra for SOEs originating in a particular atomic orbital shell can be estimated according to the procedure outlined by J.S. Levinger in 1953~\cite{Levinger}.
+For the shake-off electrons arising from the nuclear decay process, the initial energy spectra for SOEs originating in a particular atomic orbital shell can be estimated according to the procedure outlined by J.S. Levinger in 1953~\cite{Levinger}.
 %, who credits Feynman for the suggestion~\cite{Levinger}.
 %%%~\note[done, nolist]{JB:  \\
 %%%$\rightarrow$``by Levinger, who credits Feynman for the suggestion~\cite{Levinger}.''
@@ -52,7 +52,7 @@ btw, `arising from the Weak process itself' confuses me, maybe say ``from the in
 (i.e. as opposed to further atomic decays).}
 %
 
-Unfortunately, this treatment cannot determine the fractional contribution of each orbital to the total, nor can it determine the \emph{number} of electrons likely to be removed in a single decay event.  The implications of the SOE energy spectrum to the present experiment are discussed further in Chapter~\ref{sec:tof_bg}.
+Unfortunately, this treatment cannot determine the fractional contribution of each orbital to the total, nor can it determine the \emph{number} of electrons likely to be removed in a single decay event.  The implications of the \ac{SOE} energy spectrum to the present experiment are discussed further in Chapter~\ref{sec:tof_bg}.
 
 \note[org,nolist]{In the end, we used $(0.09)*(\textrm{0eV}) + (0.91)*(0.85*(\textrm{4S}) + 0.15*(\textrm{3P}))$.  But I say that in the other section.  Also, John used Eq.20 for the 4S, and Eq.24 for the 3P.}
 \note{Comment on how well this matches our data?  Somehow?}
@@ -100,7 +100,7 @@ With $\vec{\mu}$ fixed, it is clear that the magnitude of the energy shift must 
 %%% % % % %%%
 \section{Optical Pumping}
 \label{sec:op}
-The optical pumping process necessary for this work involves using a laser to stimulate atomic transitions.  With a correctly tuned and polarized laser beam, the aggregate effect is to introduce a biased random walk towards a state of high spin-polarization (sometimes called a \emph{stretched state}).  Although the transitions to which the laser couples are often thought of as atomic transitions, the coupling of angular momenta between orbital electrons and the nucleus results in \emph{both} becoming polarized.  
+The optical pumping process necessary for this work involves using a laser to stimulate atomic transitions.  By applying a circularly polarized laser beam tuned to match the atomic resonance, the aggregate effect to the atoms on which the laser is incident is to introduce a biased random walk towards a state of high spin-polarization (sometimes called a \emph{stretched state}).  Although the transitions to which the laser couples are often thought of as atomic transitions, the coupling of angular momenta between orbital electrons and the nucleus results in \emph{both} becoming polarized.  
 
 With every absorbed photon, one unit of angular momentum is transferred to the atom, and an orbital electron jumps to a higher energy level.  By ensuring that the incident polarization laser is fully circularly polarized (and choosing an appropriate axis of quantization), it is possible to ensure that all the absorbed photons must \emph{increase} the angular momentum projection quantum number.  After absorbing a photon, the excited electron will eventually decay to a lower energy level, emitting a photon in the process.  The emitted photon carries one unit of angular momentum, and is emitted in a random direction -- therefore the resulting change in atomic angular momentum projection is also randomized, provided that there exists an available lower energy state for the orbital electron to decay into.   When the electron has been moved to the maximally polarized ground state, it can no longer be excited by the laser beam that drove it there (assuming perfect circular polarization for the laser), because there is no excited state available with higher angular momentum.  
 
@@ -112,19 +112,22 @@ The cloud polarization can also be disrupted by the presence of a non-uniform ma
 
 By contrast, if the magnetic field is misaligned with the polarization axis, then a spin (even one initially aligned with the polarization axis) will experience a time-dependent depolarization force as it precesses.  Worse yet, if the magnetic field is non-uniform, then the spins on one side of the atom cloud will precess about a different axis, at a different rate, than the spins on the opposite side.  
 
-This time-dependent depolarization mechanism is critical to \ac{NMR} measurements, but for our purposes here, we wish to suppress it.  To minimize depolarization effects arising from magnetic field non-uniformities, an additional uniform magnetic field may be applied along the axis of polarization.  This has the effect of decreasing the \emph{fractional} size of any non-uniformities that may be present.  The applied field must also be kept relatively small ($\sim$ 2.3 Gauss, in our case) in order to prevent the atomic and nuclear angular momenta from becoming decoupled.  
-
-
-
-\note[note,nolist]{}
-
+This time-dependent depolarization mechanism is critical to \ac{NMR} measurements, but for our purposes here, we wish to suppress it.  To minimize depolarization effects arising from magnetic field non-uniformities, an additional uniform magnetic field may be applied along the axis of polarization.  This has the effect of decreasing the \emph{fractional} size of any non-uniformities that may be present.  The applied field must also be kept relatively small ($\sim$ 2.3 Gauss, in our case) in order to prevent the atomic and nuclear angular momenta from becoming decoupled.  The optical pumping process is described in more detail within our collaboration's Ref.~\cite{ben_OP}.
+%and the required sophistication with an AC-MOT described in Section~\ref{sec:acmot} below.
 
 \note[note,nolist]{}
 
-\color{skyblue}
-The primary detail described here is that the optical pumping is disturbed by any component of magnetic field not directed along the quantization axis --- in our case, the vertical axis, defined by the direction of propogation for the optical pumping light, and along which the detectors are placed.  The optical pumping process is described in detail within our collaboration's Ref.~\cite{ben_OP}, and the required sophistication with an AC-MOT described in Section~\ref{sec:acmot} below.
-\color{black}
+\note[note,nolist]{
+A circularly polarized laser is tuned to match the relevant atomic resonances, and is directed through the trapping region along the vertical axis in both directions.  When a photon is absorbed by an atom, the atom transitions to an excited state and its total angular momentum (electron spin + orbital + nuclear spin) along the vertical axis is incremented by one unit.  When the atom is de-excited a photon is emitted isotropically, 
+so it follows that if there are available states of higher and lower angular momentum, the \emph{average} change in the angular momentum projection is zero.  If the atom is not yet spin-polarized, it can absorb and re-emit another photon, following a biased random walk towards complete polarization.  
+}
 
+
+%\note[note,nolist]{}
+%\color{skyblue}
+%The primary detail described here is that the optical pumping is disturbed by any component of magnetic field not directed along the quantization axis --- in our case, the vertical axis, defined by the direction of propogation for the optical pumping light, and along which the detectors are placed.  The optical pumping process is described in detail within our collaboration's Ref.~\cite{ben_OP}, and the required sophistication with an AC-MOT described in Section~\ref{sec:acmot} below.
+%\color{black}
+%
 
 
 
@@ -157,7 +160,7 @@ Although this setup will decrease atomic velocity, it does not create a confinin
 %%% % % % %%%
 \section{Atom Trapping with a Magneto-Optical Trap}
 \label{section:mot}
-\note[note]{Move(d) the content of the other MOT section into here.}
+%\note[note]{Move(d) the content of the other MOT section into here.}
 Since its initial description by Raab et. al. in 1987~\cite{raabprentiss}, the \ac{MOT} has become a widely used technique in many atomic physics laboratories.\aside{An opportunity to cite a bunch of people here...} The MOT produces confined samples of cold, electrically neutral and isotopically pure atoms confined within a small spatial region.  It is these properties that make the MOT a valuable tool not only in atomic physics, but for precision measurements in nuclear physics as well, and the \ac{TRINAT} collaboration has adopted the technique wholeheartedly.
 
 The technique is used predominantly with alkalis due to their simple orbital electron structure, and once set up it is quite robust.  The MOT's trapping force is specific to the isotope for which the trap has been tuned. This feature makes it ideal for use in precision radioactive decay experiments, since the daughters are unaffected by the trapping forces keeping the parent confined.
@@ -171,7 +174,7 @@ A MOT can be created from relatively simple components:  a quadrupole-shaped mag
 
 %%% % % % %%%
 %\section{Atom Trapping with a MOT (tbd) }
-\note[note]{Move this content over to the *other* MOT section.}
+%\note[note]{Move this content over to the *other* MOT section.}
 The quadrupolar magnetic field\aside{constant field gradient} is typically generated using a set of two current carrying electrical coils in a geometry similar to a Helmholtz coil, but with the two coils' currents flowing anti-parallel to one another.  This anti-Helmholtz coil is constructed to surround the trapping region, and introduces a quadrupolar magnetic field.  Within the central region where the trap is located, the magnetic field $\vec{B}$ has the approximate shape,
 \bea
 	\vec{B} &=& 2 B_0 z \,\hat{z} - (B_0 x \,\hat{x} + B_0 y \,\hat{y}), 

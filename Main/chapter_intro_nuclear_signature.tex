@@ -403,8 +403,11 @@ In practice, we already know that the weak force couples (almost) entirely to le
 
 It is this subtlety which gives rise to the energy dependence ($\me c^2 / \Ee $) by which $\bFierz$ is multiplied in Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}).  
 %--- it is fundamentally an \emph{interference} term between the interactions of standard model physics with an unknown exotic physics term.  
-That is, if we have restricted ourselves to interactions involving right-handed anti-neutrinos travelling at the speed of light, then the scalar or tensor components of this interaction, if present, must also couple to right-handed helicity electrons.  The lower the energy of the outgoing electron, the greater the fraction of available phase space in which the electron appears to be right-handed from the reference frame of the mediating $W$ boson.  In other words, this term describes a mechanism by which scalar and tensor couplings can effectively compete with the expected vector and axial couplings;  this is why $\bFierz$ is described as an \emph{interference} term~\cite{hong_sternberg_garcia}\cite{Greiner2009}.
+That is, if we have restricted ourselves to interactions involving right-handed anti-neutrinos travelling at the speed of light, then the scalar or tensor components of this interaction, if present, must also couple to right-handed helicity electrons.  The lower the energy of the outgoing electron, the greater the fraction of available phase space in which the electron appears to be right-handed from the reference frame of the mediating $W$-boson.  In other words, this term describes a mechanism by which scalar and tensor couplings can effectively compete with the expected vector and axial couplings~\cite{hong_sternberg_garcia}\cite{Greiner2009}.
+%;  this is why $\bFierz$ is described as an \emph{interference} term~\cite{hong_sternberg_garcia}\cite{Greiner2009}.
 % effectively competing with the expected vector and axial couplings.  
+
+As a practical matter, the ($\me c^2 / \Ee $) dependence of the Fierz term suggests that $\bFierz$ is best measured by a relatively low-energy experiment (such as the one described here) in order to maximize sensitivity;  a high-energy experiment would have trouble constraining it.
 
 
 \note{somewhere:  point out that $\bFierz$ is linear in BSM.  other observables are quadratic.  So this way is best for small S, T couplings.}
@@ -416,8 +419,8 @@ That is, if we have restricted ourselves to interactions involving right-handed 
 %* citations for Ran Hong and Greiner2009.  They go here.  --> done!
 %\\
 * ...Also, it arises from the Dirac spinor term?
-\\
-* Practically, it means we're sensitive to this and high energy is not.
+%\\
+%* Practically, it means we're sensitive to this and high energy is not.
 }
 
 We will henceforth take $C_X = C_X^\prime$, which is equivalent to a requirement that all couplings are left-handed.  We define a set of purely left-handed couplings:
@@ -445,7 +448,7 @@ We also introduce $\rho$, the ratio of Gamow-Teller and Fermi couplings:  %$\rho
 The value of $\rho$ is unique to a particular transition, and must be extracted experimentally (see Sec.~\ref{sec:extractinglambda}).
 ~\aside[note]{See Appendix~\ref{sec:combo_formalism} for a discussion of the relationship between parameters $C_X$ and $g_X$.  I guess.}  
 
-Using the above notation and the simplifying assumptions that give rise it, it is possible to re-write Eqs.~(\ref{eq:jtw_xi_integrated_intro})-(\ref{eq:jtw_Abetaxi_integrated_intro}) as:
+Using the above notation and the simplifying assumptions that give rise it, and dropping terms of order (small)$^2$ or higher, it is possible to re-write Eqs.~(\ref{eq:jtw_xi_integrated_intro})-(\ref{eq:jtw_Abetaxi_integrated_intro}) as:
 
 \bea
 \xi &=& 2 \,\, C_V^2 \, | M_F |^2 \left( 1 + \rho^2 \right)
@@ -454,9 +457,11 @@ Using the above notation and the simplifying assumptions that give rise it, it i
 \bFierz &=& \frac{-2\gamma}{1 + \rho^2} \left( \frac{g_S}{g_V} + \rho^2 \frac{g_T}{g_A} \right). 
 \label{bFierzwithlambda}
 \\
-\Abeta &=& \frac{\frac{2}{5} \rho^2 - 2 \rho \sqrt{\frac{3}{5}}  }{1 + \rho^2}.
+\Abeta &=& \frac{\frac{2}{5} \rho^2 - 2 \rho \sqrt{\frac{3}{5}}  }{1 + \rho^2},
 \label{eq:Awithrho_intro}
 \eea
+where $\bFierz$ reduces to 0 in the standard model limit where $g_S = g_T = 0$.  Notably, $\bFierz$ is the only term within our beta decay \ac{PDF} which includes (small) exotic couplings at the \emph{linear} order;  $g_S$ and $g_T$ arise only at quadratic order within the other terms, and thus have been dropped from Eqs.~(\ref{eq:xiwithrho_intro}) and (\ref{eq:Awithrho_intro}) above.
+
 
 
 \note[note,nolist]{}
@@ -483,32 +488,38 @@ Using the above notation and the simplifying assumptions that give rise it, it i
 %%%%Dan's $\Bnu$:  \cite{dan_Bnu}.
 %%%%P.Shidling's $^{37}$K halflife:  \cite{shidling2014} }
 
+\note[note]{
+Deleted paragraph:
+\\...\\
 Because the nucleus is significantly more massive than either of the other two outgoing particles, the great majority of the released kinetic energy is distributed between the leptons, while the nucleus receives only a tiny fraction of the total.  This feature lends itself to an approximation, as above, in which the energy of the recoiling nucleus (the ``recoil'') is neglected entirely, and the decay may be described only in terms of the momenta of the outgoing positron(electron) and neutrino(anti-neutrino).  
 %, as in the description from \ac(JTW)~\cite{jtw}~\cite{jtw_coulomb}.  
 The terms that have been neglected in this treatment are sometimes called recoil-order corrections.
+}
 
 %In order to proceed with a measurement, we must find an equation to describe the probability of beta decay events with any given distribution of energy and momenta among the daughter particles, as a function of the strength of the specific couplings of interest to us.  To do this, two sets of formalisms are combined -- the older formalism of JTW, %~\cite{jtw},~\cite{jtw_coulomb}, 
 %which describes the effects of all types of Standard Model and exotic couplings of interest to us here, but which truncates its expression at first order in the (small) parameter of transferred nuclear recoil energy, and a newer formalism from Holstein~\cite{holstein}, which includes terms up to several orders higher in recoil energy, but which does not include any description of the exotic couplings of particular interest to us.  
-Although recoil-order and other small corrections must be accounted for within the standard model description of beta decay, in the case of exotic couplings, leading order \ac{JTW} description is adequate, because any exotic couplings present in nature have already been determined to be either small or nonexistant.  Therefore, in a search for exotic physics of this nature, it is sufficient to describe any exotic coupling parameters with expressions truncated at first order, in combination with a more precise set of expressions to account for the well-understood physical behaviours that dominate.  
 
-Within this work, we are particularly interested in the $\bFierz$ parameter.  Though it is identically zero under the standard model, it is quite sensitive to certain \ac{BSM} physics.  In particular, it describes (small) left-handed scalar and tensor couplings at \emph{linear} order, while these \ac{BSM} parameters only enter at the quadratic order in the case of $\xi$ and $\Abeta$.  
+
+%%%Within this work, we are particularly interested in the $\bFierz$ parameter.  Though it is identically zero under the standard model, it is quite sensitive to certain \ac{BSM} physics.  In particular, it describes (small) left-handed scalar and tensor couplings at \emph{linear} order, while these \ac{BSM} parameters only enter at the quadratic order in the case of $\xi$ and $\Abeta$.  
+
+
 %%In particular, in terms of the left-handed scalar and tensor couplings $g_S$ and $g_T$, $\bFierz$ has the form 
 %%\bea
 %%\bFierz &=& \frac{-2\gamma}{1 + \rho^2} \left( \frac{g_S}{g_V} + \rho^2 \frac{g_T}{g_A} \right). 
 %%%\label{bFierzwithlambda}
 %%\eea
 %%%Here $\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2} \approx 1$, where $Z^\prime$ is the atomic number of the daughter, and as usual $\alpha$ is the fine structure constant. 
-It is clear that Eq.~\ref{bFierzwithlambda} reduces to 0 in the standard model limit where $g_S = g_T = 0$.
+%It is clear that Eq.~\ref{bFierzwithlambda} reduces to 0 in the standard model limit where $g_S = g_T = 0$.
 %$\gamma \approx 1$ is defined as in Appendix~\ref{sec:jtw_formalism}, and\
 
 
 
 %
-\note[jm]{This is where Juliette thinks I need more info about Abeta and bFierz.  
+\note[done,nolist]{This is where Juliette thinks I need more info about Abeta and bFierz.  
 \\
 ``On the bottom of page 14 she lists relevant quantities (including bFierz itself) but sends the reader to an appendix rather than defining them here.''}
 
-\note[jm]{John says:  My suggested remedy:
+\note[done,nolist]{John says:  My suggested remedy:
 \\
 First write $b_F$ in JTW terms of $C_S$, $C_S$', $C_T$, $C_T$' and the $C_V$'s.
 \\
@@ -528,7 +539,7 @@ the fact that a massive particle has helicity depending on frame-- one can alway
 \\...\\
 W. Greiner and B. M\"uller, Gauge Theory of Weak Interactions, Springer, 4th ed. 2009.
 }
-\note[jbnn]{JB on JM's complaint:  
+\note[done,nolist]{JB on JM's complaint:  
 \\
 Juliette has done you and us a real service here.
 You write down the Fierz term in helicity terms previously undefined.
@@ -550,9 +561,10 @@ and, I think?, \textbf{its practical implications} (we're sensitive to it and hi
 %%%% --- * --- %%%%
 \section{The Superratio}
 \label{signature_chapter}
-In considering Eqs.~(\ref{equation:integrated_jtw_INTRODUCTION})-(\ref{eq:overallenergydependence_intro}), we see that the $\bFierz$ term includes an explicit energy dependence.  From this, it seems natural to conclude that the shape of the beta energy spectrum can be used to measure the value of $\bFierz$.  This assertion is correct as far as it goes --- but a direct measurement of the complete energy spectrum is arguably not the best way to approach the matter.  To see this, it is helpful to consider the $\Abeta$ term within the same equation, which carries an explicit angular dependence, as well as its own explicit energy dependence.  
+In considering Eqs.~(\ref{equation:integrated_jtw_INTRODUCTION})-(\ref{eq:overallenergydependence_intro}), we see that the $\bFierz$ term includes an explicit energy dependence.  From this, it seems natural to conclude that the shape of the beta energy spectrum can be used to measure the value of $\bFierz$.  This assertion is correct as far as it goes --- but a direct measurement of the complete energy spectrum is arguably not the best way to approach the matter.  In fact, it is possible to extract a much clearer signal to measure both $\Abeta$ and $\bFierz$ by making some clever choices in how our data should be processed.  
+To see this, it is helpful to consider the $\Abeta$ term within Eq.~(\ref{equation:integrated_jtw_INTRODUCTION}), which carries an explicit angular dependence as well as its own explicit energy dependence.  
 
-Indeed, though a judicious choice of detector placements, it is possible to measure the beta energy spectrum at its angular extrema, with $\cos\theta \approx \pm 1$ (recall that $\theta$ is defined to be the angle between direction of nuclear polarization and beta emission).  
+Though a judicious choice of detector placements, it is possible to measure the beta energy spectrum at its angular extrema, with $\cos\theta \approx \pm 1$ (recall that $\theta$ is defined to be the angle between direction of nuclear polarization and beta emission).  
 \aside{Of course, the $\Abeta$ term vanishes for decays from spin-zero nuclei.}  
 With differing contributions to each angle-selected beta spectrum from the $\Abeta$ term (and no other angular dependence), it is clear that any nonzero $\bFierz$ term must provide a different \emph{fractional} contribution to the full spectrum as a function of angle.
 %\aside{Recall that this is angle between polarization and emission.}  
@@ -581,6 +593,12 @@ where the $\varepsilon_{\mathrm T / \mathrm B}(\Ebeta)$ are the (top/bottom) det
 %(\emph{i.e.}, observed in a detector with $\cos\theta \approx \pm 1$ in the present experiment), 
 for each detector and polarization state combination.  This latter term is approximately $\pm 1$ as a result of our detector geometry, but contains important sign information.  
 
+\note[note, nolist]{}
+For a pointlike trap in the center of the chamber, 103.484 mm from either (DSSSD) detector,~\aside{Does this even agree with whatever I wrote about the geometry in the other section?} each of which is taken to be circular with a radius of 15.5 mm, we find that $\langle | \cos\theta | \rangle_{\mathrm T/ \mathrm B, +/-} \approx 0.994484$, and is the same for all four cases.
+\aside{Not quite true.  Some strips are missing.}
+% (or for $r=15.0$\,mm, we find that $\langle | \cos\theta | \rangle_{\mathrm T/ \mathrm B, +/-} \approx 0.994829$). 
+\aside{This is only true if we neglect (back-)scatter.  This is not actually a good approximation.  But we have pretty good simulations to give us the real numbers, anyway. } Note that a horizontally displaced trap will decrease the magnitude of $\langle | \cos\theta | \rangle $, but as it is an expectation value of an absolute value, all four will remain equal to one another.  In the case of a vertically displaced trap, these four values will no longer all be equal, however it will still be the case that $\langle | \cos\theta | \rangle_{\mathrm T +} = \langle | \cos\theta | \rangle_{\mathrm T -}$, and $\langle | \cos\theta | \rangle_{\mathrm B+} = \langle | \cos\theta | \rangle_{\mathrm B -}$.  \aside{Is that definitely true, or is it only true to lowest order?}
+\note[note, nolist]{}
 
 %\note[note,nolist]{}
 
@@ -625,12 +643,17 @@ A_{\mathrm{super}} &\rightarrow& \frac{ r_{\mathrm T+}\, - \,r_{\mathrm B+} }{r_
 The superratio, and superratio asymmetry, has been used for precision beta decay measurements in the past to measure the neutron's beta asymmetry\cite{UCNA_first_superratio}, and our own collaboration has also used it to measure the beta asymmetry in $^{37}$K~\cite{ben_Abeta}.  More recently, it has been used to measure the neutron's Fierz interference term~\cite{UCNAfierz2020}\cite{Saul2020} as well, with notably more impressive results than using the earlier `supersum' data combination method~\cite{UCNA_first_Fierz}.  
 
 
+%%%\note{}
+%%%In the case of the present experiment, we note that $|\vec{P}_+| = |\vec{P}_-|$ is correct to a high degree of precision.
+%%%\note{}
+
+
 
 While Eq.~\ref{eq:singlepol_asymmetry} is conceptually encouraging, the assumptions that gave rise to it are too simplifying.  
 %
 Fortunately, as we'll soon see, the key to the effectiveness of the superratio technique is that many systematic effects can be made to cancel at the leading order, at the cost of some statistical resolving power.  
 %
-We will introduce some less restrictive assumptions for what follows, along with shorthand notation for improved readability (and to make it obvious which quantities are to be considered small).  First, we require that the magnitude of the polarization vector is the same for both polarization states, and also that the average of the magnitude of $\cos\theta$ for a given detector does not change when the polarization is flipped (equivalent to a requirement that the trap position doesn't change when the polarization is flipped).  Then: 
+We will introduce some less restrictive assumptions for what follows, along with shorthand notation for improved readability (and to make it obvious which quantities are to be considered small).  First, we require that the magnitude of the polarization vector is the same for both polarization states (within the present experiment, $|\vecP_{\bm +}| = |\vecP_{\bm -}|$ is correct to a high degree of precision), and also that the average of the magnitude of $\cos\theta$ for a given detector does not change when the polarization is flipped (equivalent to a requirement that the trap position doesn't change when the polarization is flipped).  Then: 
 \bea
 P &:=& |\vecP_{\bm +}| = |\vecP_{\bm -}|  \\
 \langle |\cos\theta | \rangle_T &:=& \langle |\cos\theta | \rangle_{\mathrm T+} \, = \, \langle |\cos\theta | \rangle_{\mathrm T-} \\
@@ -686,6 +709,22 @@ A_{\mathrm{super}} &\approx& \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \co
 \eea
 
 
+In addition to eliminating systematic effects, the superratio asymmetry also provides an enhanced signal to be evaluated, as can be seen in Fig.~\ref{fig:FierzSignature}.  The price for this clear signal and reduction in systematics is, unfortunately, a decrease in overall statistical resolving power.  Given the difficulty of controlling many of the cancelled systematics, this can potentially be a very good trade-off.  
+
+\begin{figure}[h!!tb]
+	\centering
+	\includegraphics[width=.999\linewidth]
+	{Figures/Fierz_Signature.png}
+	\caption[Generated Beta Energy Spectrum and Superratio Asymmetry to Measure $\bFierz$]{A generated beta energy spectrum (top), and the superratio asymmetry associated with it (bottom) are constructed to measure a $\bFierz$ signal at the values shown.  The supersum method of Ref.~\cite{UCNA_first_Fierz} is roughly equivalent to constructing the top plot's beta energy spectrum.  Note that the magnitude of these $\bFierz$ values has been made to be unphysically large so that the effect to the top plot can be seen; both scalar and tensor couplings of the size needed to produce this effect have already been ruled out. }	\label{fig:FierzSignature}
+\end{figure}
+
+
+There are some limitations to what the superratio technique is able to deal with effectively, however --- notably, scattering effects don't cancel out particularly well.  Within the present project, this is a major systematic.  
+
+Scattering, unpolarized background, \emph{and} the variety of effects effectively addressed by the superratio asymmetry construction are all included within the simulations to which the experimental data is compared, and the effects are propagated through the analysis to the end;  although many systematic effects can be reduced by the technique described above, they must still be evaluated.
+
+
+
 \note[note,nolist]{}
 
 
@@ -698,9 +737,11 @@ A_{\mathrm{super}} &\approx& \Abeta \, \frac{v}{c} \, |\vec{P}| \, \langle | \co
 %\note[oldnote,nolist]{}
 %In the TRINAT geometry with two polarization states (+/-) and two nearly equivalent detectors (T/B) aligned along the axis of polarization, we are able to describe four different count rates, with different combinations of polarization states and detectors.  Thus, neglecting beta scattering effects, we have:
 
-
-\note[note,nolist]{}
-It is this latter observation which motivates the construction of the superratio and superratio asymmetry as new observables comprised of a combination of multiple physical measurements at the angular extrema of beta emission.  In fact, it is possible to extract a much clearer signal to measure both $\Abeta$ and $\bFierz$ by making some clever choices in how our data should be processed.  A further benefit to using the superratio construction, as we will soon see, is the cancellation (to first order) of many systematic effects.  The ``price'' for this reduction in systematics is, unfortunately, a decrease in statistical resolving power.  
+%It is this latter observation which motivates the construction of the superratio and superratio asymmetry as new observables comprised of a combination of multiple physical measurements at the angular extrema of beta emission.  
+%\note{
+%In fact, it is possible to extract a much clearer signal to measure both $\Abeta$ and $\bFierz$ by making some clever choices in how our data should be processed.  
+%}
+%A further benefit to using the superratio construction, as we will soon see, is the cancellation (to first order) of many systematic effects.  The ``price'' for this reduction in systematics is, unfortunately, a decrease in statistical resolving power.  
 %
 %In fact, it is possible to extract a much clearer signal if we are clever with our choice of measurement.  To see this, it is helpful to notice that the \emph{overall} size of the $\bFierz$ term does not vary as a function of beta emission angle -- however, the $\Abeta$ term \emph{does}.  Indeed, in some sense, $\Abeta$ can be thought of as a parameterization of the extent to which the number of beta emissions changes as a function of angle.  
 %
@@ -719,7 +760,7 @@ It is this latter observation which motivates the construction of the superratio
 
 %The mathematical details of the superratio construction and its results are discussed in detail within Section~\ref{appendix:superratio}, so within the present section we will limit ourselves to a discussion of the results.
 
-\note[jm]{Here's where Juliette thinks I need to discuss the superratio harder.  ``On page 20, the details of the superratio construction are also relegated to an appendix''}
+\note[done,nolist]{Here's where Juliette thinks I need to discuss the superratio harder.  ``On page 20, the details of the superratio construction are also relegated to an appendix''}
 
 %%%%With the four rate spectra, $r_{D P}(\Ebeta)$, describing the rate at which events are detected in beta detector $D$ ($D =\{ \mathrm{T, B}  \}$ are the top and bottom detectors) from a decay whose parent had polarization $P$ (with $P=\{+,-\}$), we can construct the superratio asymmetry observable, $A_{\mathrm{super}}$, such that
 %%%%\bea
@@ -733,18 +774,10 @@ It is this latter observation which motivates the construction of the superratio
 %%%%where $v$ is the speed of the emitted beta particle, $c$ is the speed of light, $m$ is the mass of the electron, $\Ebeta$ is the total beta energy, $\vec{P}$ gives the nuclear spin-polarization vector of the parent, and $\theta$ describes the angle between the polarization vector and the direction into which the beta is emitted.  The ensemble averaged term, $\langle | \cos\theta | \rangle$, is averaged over the betas that are observed in a \emph{detector} (located along the axis of polarization).
 %%%%%\note{define:  $v,c,\vec{P}, m_e,$...}
 
-In addition to eliminating systematic effects, the superratio asymmetry also provides an enhanced signal to be evaluated, as can be seen in Fig.~\ref{fig:FierzSignature}.
-
-%We consider the effect of extracting 
-\begin{figure}[h!!tb]
-	\centering
-	\includegraphics[width=.999\linewidth]
-	{Figures/Fierz_Signature.png}
-	\caption[Generated Beta Energy Spectrum and Superratio Asymmetry to Measure $\bFierz$]{A generated beta energy spectrum (top), and the superratio asymmetry associated with it (bottom) are constructed to measure a $\bFierz$ signal at the values shown.  The supersum method of Ref.~\cite{UCNA_first_Fierz} is roughly equivalent to constructing the top plot's beta energy spectrum.  Note that the magnitude of these $\bFierz$ values has been made to be unphysically large so that the effect to the top plot can be seen; both scalar and tensor couplings of the size needed to produce this effect have already been ruled out. }	\label{fig:FierzSignature}
-\end{figure}
 
 %The superratio and superratio asymmetry are discussed in detail within Section~\ref{appendix:superratio}.  The discussion includes details on which sort of systematic errors will cancel out entirely, or to leading order, with this treatment -- however 
-It must be noted that for the present project, higher-order corrections are included in all simulations, and the effects are propagated through to the end of the analysis.  Though many systematic effects can be reduced by using the superratio asymmetry, they must still be evaluated.  Therefore, measured values of $\Abeta$ and $\bFierz$ may be directly compared to theoretical predictions.
+
+%%It must be noted that for the present project, higher-order corrections are included in all simulations, and the effects are propagated through to the end of the analysis.  Though many systematic effects can be reduced by using the superratio asymmetry, they must still be evaluated.  Therefore, measured values of $\Abeta$ and $\bFierz$ may be directly compared to theoretical predictions.
 
 
 
@@ -818,17 +851,17 @@ MJA:  I can't help but also notice the follow-up article from September 2020~\ci
 %\chapter[SuperRatio]{Derivation of the $\bFierz$ Dependence of the Superratio Asymmetry}
 \label{appendix:superratio}
 %\note[jm]{JM suggests:  Move this thing out of an appendix and into the main?}
-\note[jm]{JB on JM:  
-\\
-3. superratio:
-\\
-this is up to you. She has a point that the superratio is critical.
-You know that, and understand full details, and that's a real intellectual contribution you've made to your research.
-\\ ...\\
-You could just say it's a critical technique, say a little more qualitatively
-why it's critical (I have not re-read this) but the full lengthy details are reproducing refs. X and are best left to an appendix.
-\\
-Or as you suggest, bring it back in, because it's critical.}
+%\note[jm]{JB on JM:  
+%\\
+%3. superratio:
+%\\
+%this is up to you. She has a point that the superratio is critical.
+%You know that, and understand full details, and that's a real intellectual contribution you've made to your research.
+%\\ ...\\
+%You could just say it's a critical technique, say a little more qualitatively
+%why it's critical (I have not re-read this) but the full lengthy details are reproducing refs. X and are best left to an appendix.
+%\\
+%Or as you suggest, bring it back in, because it's critical.}
 %
 %Recalling the beta decay \ac{PDF}'s overall energy dependence in Eq.~(\ref{eq:overallenergydependence_intro}), we note that the Fermi function $\FFminus$ at any reasonable level of approximation is integrable only by numerical methods.  As a result, there is little that could be changed to make $W(\Ebeta)$ more difficult to work with, so we can safely take $W(\Ebeta)$ to be an arbitrary function.  Therefore, for the remainder of this section, we will take $W(\Ebeta)$ to implicitly include the small corrections to overall energy dependence that arise from e.g.\! recoil-order corrections, as described by Holstein~\cite{holstein}.
 
@@ -860,15 +893,8 @@ Or as you suggest, bring it back in, because it's critical.}
 %%%%\eea
 %%%%where $\varepsilon_{\mathrm T / \mathrm B}(\Ebeta)$ are the (top/bottom) detector efficiencies, $\Omega_{\mathrm T / \mathrm B}$ are the fractional solid angles for the (top/bottom) detector from the trap position, $N_{+/-}$ are the number of atoms trapped in each (+/-) polarization state, and $|\vec{P}_{+/-}|$ are the magnitudes of the polarization along the detector axis for each polarization state.  $\langle \cos\theta \rangle_{\mathrm T/ \mathrm B, +/-} $ is the average of $\cos\theta$ for \emph{observed} outgoing betas, for each detector and polarization state combination.  This latter term is approximately $\pm 1$ as a result of our detector geometry, but contains important sign information.  
 
-\note[note, nolist]{}
-For a pointlike trap in the center of the chamber, 103.484 mm from either (DSSSD) detector,~\aside{Does this even agree with whatever I wrote about the geometry in the other section?} each of which is taken to be circular with a radius of 15.5 mm, we find that $\langle | \cos\theta | \rangle_{\mathrm T/ \mathrm B, +/-} \approx 0.994484$, and is the same for all four cases.
-\aside{Not quite true.  Some strips are missing.}
-% (or for $r=15.0$\,mm, we find that $\langle | \cos\theta | \rangle_{\mathrm T/ \mathrm B, +/-} \approx 0.994829$). 
-\aside{This is only true if we neglect (back-)scatter.  This is not actually a good approximation.  But we have pretty good simulations to give us the real numbers, anyway. } Note that a horizontally displaced trap will decrease the magnitude of $\langle | \cos\theta | \rangle $, but as it is an expectation value of an absolute value, all four will remain equal to one another.  In the case of a vertically displaced trap, these four values will no longer all be equal, however it will still be the case that $\langle | \cos\theta | \rangle_{\mathrm T +} = \langle | \cos\theta | \rangle_{\mathrm T -}$, and $\langle | \cos\theta | \rangle_{\mathrm B+} = \langle | \cos\theta | \rangle_{\mathrm B -}$.  \aside{Is that definitely true, or is it only true to lowest order?}
 
-\note{}
-In the case of the present experiment, we note that $|\vec{P}_+| = |\vec{P}_-|$ is correct to a high degree of precision.
-\note{}
+
 
 %We define the superratio, $s$, to be:
 %\bea
@@ -984,7 +1010,7 @@ The statistical rate function $f$ must be split into vector and axial components
 %Both vector and axial statistical rate functions are mathematically non-trivial objects\cite{towner_hardy_1995_frombook}\cite{HardyTowner2005_Superallowed}, but can be evaluated by, e.g., the methods of Refs.~\cite{wilkinson2}\cite{wilkinson3}\cite{wilkinson4}.  
 Such calculations are beyond the scope of the present work, however we will note that 
 %For our purposes here, we will simply note that 
-$f_V$ and $f_A$ are characterized primarily by the beta endpoint energy $E_0$, which can be readily measured.  
+$f_V$ and $f_A$ are characterized primarily by the beta endpoint energy $E_0$ (scaling as $\sim E_0^5$), a quantity which can readily be measured.\aside[note]{John said this.  But I should probably cite someone here.}  
 
 The partial half-life $t$ can be quickly calculated given knowledge of the total half-life $t_{1/2}$ and branching ratio $R$, as:
 \bea
@@ -1012,7 +1038,7 @@ It is worthwhile, at this stage, to briefly discuss the corrections to the Fermi
 |M_{GT}|^2 &=& (1+\delta_R^\prime) (1 + \delta_{NS}^A - \delta_C^A) (1+\Delta_R^A) \, |M_{GT}^0|^2 , 
 \label{eq:MGT_expand}
 \eea 
-where $\delta_C^{V}$ ($\delta_C^{A}$) is the isospin symmetry breaking correction for the vector (axial-vector) current.  Here, $\delta^\prime_R$ is the portion of the outer radiative correction (\emph{i.e.}, it is dependent on the specific transition in question) that depends \emph{only trivially} on the nucleus; it is identically the same for vector and axial couplings.  The $\delta_{NS}^V$ ($\delta_{NS}^A$) term is the portion of the outer radiative correction for the vector (axial-vector) current with a \emph{non-trivial} dependence on nuclear structure.  These require a detailed shell model calculation to evaluate, as described in \emph{e.g.}  Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.  Finally, the quantities $\Delta_R^V$ and $\Delta_R^A$ arise from inner radiative corrections (\emph{i.e.}, independent of the specific transition being considered) to the vector and axial-vector currents, and may be calculated as in Refs.~\cite{MarcianoSirlin_1986}\cite{MarcianoSirlin_2006}\cite{CzarneckiMarcianoSirlin_2019}.  Although they do not depend on the specifics of any transition, the $\Delta_R^V$ and $\Delta_R^A$ terms are included here within the expressions for (transition-specific) $M_F$ and $M_{GT}$ for our later convenience.  This convention is sometimes, but not always, followed within the published literature~\cite{SeverijnsTandecki2008}\cite{HardyTownerSuperallowed2020}. 
+where $\delta_C^{V}$ ($\delta_C^{A}$) is the isospin symmetry breaking correction for the vector (axial-vector) current.  Here, $\delta^\prime_R$ is the portion of the outer radiative correction (\emph{i.e.}, it is dependent on the specific transition in question) that depends \emph{only trivially} on the nucleus; it is identically the same for vector and axial couplings.  The $\delta_{NS}^V$ ($\delta_{NS}^A$) term is the portion of the outer radiative correction for the vector (axial-vector) current with a \emph{non-trivial} dependence on nuclear structure.  These require a detailed shell model calculation to evaluate, as described in \emph{e.g.}  Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.  Finally, the quantities $\Delta_R^V$ and $\Delta_R^A$ arise from inner radiative corrections (\emph{i.e.}, independent of the specific transition being considered) to the vector and axial-vector currents, and may be calculated as in Refs.~\cite{MarcianoSirlin_1986}\cite{MarcianoSirlin_2006}\cite{CzarneckiMarcianoSirlin_2019}\cite{Hayen2021}.  Although they do not depend on the specifics of any transition, the $\Delta_R^V$ and $\Delta_R^A$ terms are included here within the expressions for (transition-specific) $M_F$ and $M_{GT}$ for our later convenience.  This convention is sometimes, but not always, followed within the published literature~\cite{SeverijnsTandecki2008}\cite{HardyTownerSuperallowed2020}. 
 
 %%\note[note,nolist]{}
 %%$\delta_C^{V}$ is the isospin symmetry breaking correction for the vector current, $\delta^\prime_R$ is the portion of the outer radiative correction (ie, dependent on the specific nucleus in question) that depends only trivially on the nucleus, 
@@ -1025,8 +1051,8 @@ We will now consider the special case of superallowed $0^+ \rightarrow 0^+$ deca
 %As such, they are 
 %%very well suited to extract (using other experimentally measured parameters) a measure of the fundamental vector coupling strength.  
 ideal candidates for measurements of the fundamental vector coupling strength.
-If the \ac{CVC} hypothesis holds (and there is some reason to believe that it does~\cite{severijns2006}\cite{HardyTownerSuperallowed2020}), then this coupling strength is common to \emph{all} transitions.
-\note[jbnn]{My apologies for speculating more needs to be said about $0^+ \rightarrow 0^+$ -- that's not her main concern-- but it might help to add a further qualitative sentence after
+If the \ac{CVC} hypothesis holds (and there is some reason to believe that it does~\cite{severijns2006}\cite{HardyTownerSuperallowed2020}), then this coupling strength is common to \emph{all} transitions.  We will soon see how knowledge of this absolute vector coupling strength taken from measurements of $0^+ \rightarrow 0^+$ decay allows us to make predictions about the decay of $^{37}$K as well.  
+\note[done,nolist]{My apologies for speculating more needs to be said about $0^+ \rightarrow 0^+$ -- that's not her main concern-- but it might help to add a further qualitative sentence after
 \\
 `then this coupling strength is common to all transitions.'
 \\
@@ -1052,12 +1078,12 @@ where we have made use of Eq.~(\ref{eq:partialhalflife_theory}).
 \aside[note]{I think we've probably assumed something like 
 \\
 $C_V |M_F^0|_{0^+\!\rightarrow0^+} = 2$ ? } 
-Within Eqs.~(\ref{eq:Ft_with_fVt})-(\ref{eq:Ft_with_Vud}) above, only the parameters $t$ and $G_F$ are measured directly, while the other parameters must be calculated.  If all measurements and calculations have been performed perfectly, then Eq.~(\ref{eq:Ft_with_fVt}) is expected to yield the same $\mathcal{F}t$-value for \emph{any} superallowed $0^+ \rightarrow 0^+$ transition.  The above relationship is commonly used to extract an experimental value for $V_{ud}$, which cannot be calculated directly.
+Within Eqs.~(\ref{eq:Ft_with_fVt})-(\ref{eq:Ft_with_Vud}) above, only the parameters $t$ and $G_F$ are measured directly, while the other parameters must be calculated.  If all measurements and calculations have been performed perfectly, then Eq.~(\ref{eq:Ft_with_fVt}) is expected to yield the same $\mathcal{F}t$-value for \emph{any} superallowed $0^+ \rightarrow 0^+$ transition, as the contributions from nuclear structure have all been removed.  The above relationship is commonly used to extract an experimental value for $V_{ud}$, which cannot be calculated directly.
 
 While Eq.~(\ref{eq:Ft_with_Vud}) describes physical parameters that are universal, it is important to remember that we have only arrived at this result by specializing our description to the superallowed $0^+ \rightarrow 0^+$ transitions; Eqs.~(\ref{eq:Ft_with_fVt})-(\ref{eq:Ft_with_Vud}) are not applicable as-is to other types of transitions.  %, so the nuclear structure parameters of Eqs.~(\ref{eq:Ft_with_fVt})-(\ref{eq:Ft_with_Vud}) must only be evaluated for this same class of decays.  
 It is, however, also possible to write down an analogous expression to describe the universal vector coupling strength using parameters related to other types of decays.  As the axial current is not conserved, we will still only be interested in the vector components of such transitions, and it will take a bit more work to separate these out within a transition where both couplings contribute.  We will consider the mixed (Fermi/Gamow-Teller) mirror decays (of which $^{37}$K \emph{is} an example).  Again, $C_V=1$ (it is a universal parameter), however for the case of mirror transitions, $M_F^0 = 1$ and $M_{GT}\neq0$.
 
-It is useful, at this stage, to recall the definition of $\rho$, the axial-vector/vector mixing ratio for a specific transition, from Eq.~(\ref{eq:definerho_intro}).  In the notation of Eqs.~(\ref{eq:MF_expand})-(\ref{eq:MGT_expand}), we have:
+It is useful, at this stage, to recall the definition of $\rho$, the axial-vector/vector mixing ratio for a specific transition from Eq.~(\ref{eq:definerho_intro}).  In the notation of Eqs.~(\ref{eq:MF_expand})-(\ref{eq:MGT_expand}), we have:
 \bea
 \rho &:=& \frac{C_A \, M_{GT} }{C_V \, M_F} 
 \nonumber
@@ -1069,7 +1095,7 @@ It is useful, at this stage, to recall the definition of $\rho$, the axial-vecto
 \eea
 
 
-As before, we use Eq.~(\ref{eq:partialhalflife_theory}) to write down $f_V t$, this time for mixed mirror transitions:
+As before, we use Eq.~(\ref{eq:partialhalflife_theory}) to write down $f_V t$, this time for the mixed mirror \mbox{transitions}:
 \bea
 ( f_V t ) \Bigg\rvert_{\mathrm{mirror}_{\phantom .}}
 \!\!\!\!\!\! \!\!\!\!\!\! 
@@ -1089,20 +1115,50 @@ applying the same nuclear structure corrections that were used in Eq.~(\ref{eq:F
 ( f_V t ) \Bigg\rvert_{\mathrm{mirror}_{\phantom .}}
 \!\!\!\!\!\! \!\!\!\!\!\! 
 (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) 
-\\
+\nonumber \\
 &=& 
 \frac{K}{G_F^2 V_{ud}^2 (1+\Delta_R^V)
 \left(1 + \frac{f_A}{f_V}\rho^2 \right) } 
+\label{eq:Ftmirror_withVud}
 %\frac{K}{G_F^2 V_{ud}^2 C_V^2 |M_F^0|^2 (1+\Delta_R^V)
 %\left(1 + \frac{f_A}{f_V}\frac{C_A^2}{C_V^2} \frac{|M_{GT}^0|^2}{ |M_F^0|^2} \frac{(1 + \delta_{NS}^A - \delta_C^A) }{(1 + \delta_{NS}^V - \delta_C^V)} \frac{(1+\Delta_R^A)}{(1+\Delta_R^V)} \right) } 
 \eea
 
-Comparing this result to Eq.~(\ref{eq:Ft_with_Vud}), it is immediately clear that these two expressions are closely related:
+Using a measured value of $\rho$, it is possible to extract a measurement of $V_{ud}$ from Eq.~(\ref{eq:Ftmirror_withVud}) above.  However, as a separate measurement of $\rho$ is not always available, it is perhaps more common to approach the above result as a way to \emph{find} $\rho$.  Comparing with Eqs.~(\ref{eq:Ft_with_Vud}) and (\ref{eq:Ftmirror_withVud}):  
 \bea
-\mathcal{F}t^{\mathrm{mirror}}
+\mathcal{F}t^{0^+\!\rightarrow0^+}
 &=& 
-\frac{2 \mathcal{F}t^{0^+\!\rightarrow0^+} }{ \left(1 + \frac{f_A}{f_V}\rho^2 \right) }
+\frac{1}{2} \left(1 + \frac{f_A}{f_V}\rho^2 \right) \mathcal{F}t^{\mathrm{mirror}}.
+\label{eq:Ft_and_Ftmirror}
 \eea
+We see, perhaps counterintuitively, that Eq.~(\ref{eq:Ft_and_Ftmirror}) makes it possible to extract the value of $\rho$ for one transition by using (in part) information measured in an entirely separate class of transitions.  
+
+Of course, this method for evaluating $\rho$ relies on the accuracy and precision of the theoretical calculations involved to reach this point.  It is worth noting that the lepton phase space integrals $f_V$ and $f_A$ for vector and axial couplings, which directly affect the extracted value of $\rho$ in Eq.~(\ref{eq:Ft_and_Ftmirror}) above, are identically the same under the allowed approximation.  However, when higher-order corrections are taken into account, they are found to differ by $\sim 0.9\%$ for the primary $^{37}$K decay branch~\cite{HayenSeverijns2019}.
+
+
+
+\note[note,nolist]{}
+%\note[tag]{Now just *say some stuff* about the various Ft values.}
+\note[note,nolist]{}
+
+%Here, $f_A$ and $f_V$ are integrals over the lepton phase space for the axial vector and vector parts. Those integrals are identical in the allowed approximation, but differ by X\% when higher-order terms are taken into account~\cite{Hayen2021}.
+%(see Appendix~\ref{appendix_forthepeople}, Refs.~\cite{holstein},~\cite{Hayen2021}.)
+\note[tag]{$f_A$ and $f_V$ with higher-order terms.  X\%.  See Hayen2021.  Or, perhaps, HayenSeverijns2019?  }
+
+
+%%%%\color{skyblue}The uncorrected Fermi matrix element $M_F^0$ is related to quantities that have already been defined by $| M_F |^2 =  (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) | M_F^0 |^2 $.  
+%%%%\color{black}
+%With Eq.~(\ref{eq:rhorelation}), the value of $\rho$ in a mirror decay is described in terms of physical observables from an entirely separate class of decay transitions, as well as its own half-life and branching ratio.  Alternately, with a separate measurement of $\rho$, a check can be performed on the value of $V_{ud}$.
+%%~\aside{this would be a good place to cite a bunch of people.}
+\note[bluetodo,nolist]{}
+
+
+%Comparing this with Eq.~(\ref{eq:Ft_with_Vud}), it is clear that these two expressions are closely related:
+%\bea
+%\mathcal{F}t^{\mathrm{mirror}}
+%&=& 
+%\frac{2 \mathcal{F}t^{0^+\!\rightarrow0^+} }{ \left(1 + \frac{f_A}{f_V}\rho^2 \right) }
+%\eea
 
 
 %%%\bea
@@ -1121,106 +1177,93 @@ Comparing this result to Eq.~(\ref{eq:Ft_with_Vud}), it is immediately clear tha
 %\aside[note]{We haven't put this in yet, but eventually we'll probably have $C_V |M_F^0|_{\mathrm{mirror}} = 1$ ? }
 %\aside[note]{*Probably* we have  $C_V = M_F^0 = 1$ by construction?  }
 %
-\note[tag]{Now just *say some stuff* about the various Ft values.}
-\note[note,nolist]{}
 
-\color{skyblue}
-Then Eq.~(\ref{eq:rho_with_corrections}) becomes:
-\bea
-\mathcal{F}t^{\mathrm{mirror}} 
-&=& 
-\frac{K}{G_F^2 V_{ud}^2 C_V^2 |M_F^0|^2 (1+\Delta_R^V) 
-\left(1 + \frac{f_A}{f_V} \rho^2 \right) } 
-\eea
+%%%%\color{skyblue}
+%%%%Then Eq.~(\ref{eq:rho_with_corrections}) becomes:
+%%%%\bea
+%%%%\mathcal{F}t^{\mathrm{mirror}} 
+%%%%&=& 
+%%%%\frac{K}{G_F^2 V_{ud}^2 C_V^2 |M_F^0|^2 (1+\Delta_R^V) 
+%%%%\left(1 + \frac{f_A}{f_V} \rho^2 \right) } 
+%%%%\eea
+%%%%
+%%%%%\note[note]{And.... now what?\\ The important thing is... to be careful about what goes where?  Or something?\\ Or, maybe the inner radiative corrections were *always* there.  idk.  maybe Hayen addresses this?  But I can't quite turn his notation into something like this.}
+%%%%
+%%%%\bea
+%%%%\mathcal{F}t &=& f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ),
+%%%%\label{eq:define_Ft}
+%%%%\eea
+%%%%where 
+%%%%$\delta_C^{V}$ is the isospin symmetry breaking correction for the vector current, 
+%%%%$\delta^\prime_R$ is the portion of the outer radiative correction (ie, dependent on the specific nucleus in question) that depends only trivially on the nucleus, 
+%%%%and
+%%%%$\delta_{NS}^{V}$ is the portion of the outer radiative correction %(depends on the specific nucleus) 
+%%%%to the vector current that depends in a \emph{non-trivial} way on nuclear structure and requires a detailed shell model calculation to evaluate, as described in e.g.  Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.  
+%%%%We have of course implicitly specialized the $\mathcal{F}t$ value to consider only the vector component of the statistical rate function, but this is redundant in the case of the superallowed $0^+ \rightarrow 0^+$ transitions that are presently under consideration.
+%%%%
+%%%%Within Eq.~\ref{eq:define_Ft}, we have corrected away all contributions from nuclear structure, and what remains can also be described in terms of fundamental couplings as:
+%%%%\bea
+%%%%\mathcal{F}t &=& \frac{K}{2 \, G_V^2 (1+\Delta_R^V) },
+%%%%\label{eq:relate_Ft_to_couplings}
+%%%%\eea
+%%%%with $K$ a rather messy combination of physical constants: $K = (\hbar c)^6 2\pi^3 \hbar \ln(2) (\me c^2)^{-5}$.  
+%%%%%
+%%%%In Eq.~\ref{eq:relate_Ft_to_couplings} above, $G_V$ is the vector coupling constant for semileptonic weak interactions, and $\Delta_R^{V}$ is the vector current's inner radiative correction (independent of the specific transition being considered), calculated as in e.g. Refs.~\cite{MarcianoSirlin_1986}\cite{MarcianoSirlin_2006}\cite{CzarneckiMarcianoSirlin_2019}.  %$\Delta_R^{V}$
+%%%%
+%%%%We can also relate the vector coupling constant $G_V$ to two other experimental observables:
+%%%%\bea
+%%%%G_V = V_{ud}  \, G_F
+%%%%\label{eq:Vud_relate}
+%%%%\eea
+%%%%where $G_F$ is the weak interaction coupling constant, and is measured experimentally through muon decay.  
+%%%%$V_{ud}$ is the up-down mixing element within the \ac{CKM} matrix, and its precise determination is an active area of current research, motivated in part by the attempt to search for or constrain the possible presence of a fourth generation of quarks. 
+%%%%\color{black}
 
-%\note[note]{And.... now what?\\ The important thing is... to be careful about what goes where?  Or something?\\ Or, maybe the inner radiative corrections were *always* there.  idk.  maybe Hayen addresses this?  But I can't quite turn his notation into something like this.}
+%%%%\color{skyblue}
+%%%%Combining Eqs.~(\ref{eq:define_Ft}), (\ref{eq:relate_Ft_to_couplings}), and (\ref{eq:Vud_relate}), we have:
+%%%%\bea
+%%%%\mathcal{F}t &=& \frac{K}{2 \, G_F^2 \, V_{ud}^2 (1+\Delta_R^V) } 
+%%%%\nonumber \\
+%%%%&=& 
+%%%%f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ), 
+%%%%%\label{eq:Ft_with_Vud}
+%%%%\eea
+%%%%which allows for a variety of cross-checks to be performed on physical observables.  
+%%%%\color{black}
+%%%%
+%%%%\color{skyblue}
+%%%%We now turn our attention back to the mixed transitions (of which $^{37}$K \emph{is} an example) to establish an analogous relationship between observables.  Eq.~(\ref{eq:define_Ft}) is still technically applicable, but the $f_Vt$ value is no longer so readily observable, as it accounts for only the vector-coupled portion of the decay phase space, and the axial coupling also contributes to the transition.  
+%%%%\color{black}
+%%%%\color{skyblue}
+%%%%We extend the corrected vector $\mathcal{F}t$ value of Eq.~(\ref{eq:Ft_with_Vud}) to mirror decays\aside[note]{Is it all mixed transitions, or only mirror decays??} by including the contribution of the (squared) Gamow-Teller matrix element, mostly by inspection.  The result, denoted $\mathcal{F}t^{\mathrm{\,mirror}}$ (sometimes $\mathcal{F}t_0$), is given by
+%%%%%We define a corrected $ft$ value specific to the case of mirror nuclei, denoted $\mathcal{F}t_0$ 
+%%%%%\cite{SeverijnsTandecki2008}
+%%%%\cite{shidling2014}
+%%%%\cite{naviliat2009april}
+%%%%\cite{ben_Abeta}:
+%%%%\bea
+%%%%\mathcal{F}t^{\mathrm{\,mirror}} &=&  \mathcal{F}t^{0^+\!\rightarrow0^+} \, C_V^2 \, | M_F^0|^2 \left(1+\frac{f_A}{f_V} \rho^2 \right),
+%%%%\label{eq:rhorelation}
+%%%%%\frac{2 \mathcal{F}t }{ 1 + \frac{f_A}{f_V} \rho^2}, 
+%%%%%%\nonumber \\
+%%%%%%&=& f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} )
+%%%%\eea
+%%%%\aside[note]{this equation is wrong!!!}
+%%%%%where, in order to get at the vector portion of the full $ft$ value, an adjustment has been made to account for the axial coupling in the decay.  
+%%%%where $\rho$ is the ratio of axial vector and vector matrix elements defined as in Eq.~(\ref{eq:definerho_intro}). 
+%%%%\color{black} 
 
-\bea
-\mathcal{F}t &=& f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ),
-\label{eq:define_Ft}
-\eea
-where 
-$\delta_C^{V}$ is the isospin symmetry breaking correction for the vector current, 
-$\delta^\prime_R$ is the portion of the outer radiative correction (ie, dependent on the specific nucleus in question) that depends only trivially on the nucleus, 
-and
-$\delta_{NS}^{V}$ is the portion of the outer radiative correction %(depends on the specific nucleus) 
-to the vector current that depends in a \emph{non-trivial} way on nuclear structure and requires a detailed shell model calculation to evaluate, as described in e.g.  Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.  
-We have of course implicitly specialized the $\mathcal{F}t$ value to consider only the vector component of the statistical rate function, but this is redundant in the case of the superallowed $0^+ \rightarrow 0^+$ transitions that are presently under consideration.
-
-Within Eq.~\ref{eq:define_Ft}, we have corrected away all contributions from nuclear structure, and what remains can also be described in terms of fundamental couplings as:
-\bea
-\mathcal{F}t &=& \frac{K}{2 \, G_V^2 (1+\Delta_R^V) },
-\label{eq:relate_Ft_to_couplings}
-\eea
-with $K$ a rather messy combination of physical constants: $K = (\hbar c)^6 2\pi^3 \hbar \ln(2) (\me c^2)^{-5}$.  
-%
-In Eq.~\ref{eq:relate_Ft_to_couplings} above, $G_V$ is the vector coupling constant for semileptonic weak interactions, and $\Delta_R^{V}$ is the vector current's inner radiative correction (independent of the specific transition being considered), calculated as in e.g. Refs.~\cite{MarcianoSirlin_1986}\cite{MarcianoSirlin_2006}\cite{CzarneckiMarcianoSirlin_2019}.  %$\Delta_R^{V}$
-
-We can also relate the vector coupling constant $G_V$ to two other experimental observables:
-\bea
-G_V = V_{ud}  \, G_F
-\label{eq:Vud_relate}
-\eea
-where $G_F$ is the weak interaction coupling constant, and is measured experimentally through muon decay.  
-$V_{ud}$ is the up-down mixing element within the \ac{CKM} matrix, and its precise determination is an active area of current research, motivated in part by the attempt to search for or constrain the possible presence of a fourth generation of quarks. 
-\color{black}
-
-\color{skyblue}
-Combining Eqs.~(\ref{eq:define_Ft}), (\ref{eq:relate_Ft_to_couplings}), and (\ref{eq:Vud_relate}), we have:
-\bea
-\mathcal{F}t &=& \frac{K}{2 \, G_F^2 \, V_{ud}^2 (1+\Delta_R^V) } 
-\nonumber \\
-&=& 
-f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ), 
-%\label{eq:Ft_with_Vud}
-\eea
-which allows for a variety of cross-checks to be performed on physical observables.  
-\color{black}
-
-\color{skyblue}
-We now turn our attention back to the mixed transitions (of which $^{37}$K \emph{is} an example) to establish an analogous relationship between observables.  Eq.~(\ref{eq:define_Ft}) is still technically applicable, but the $f_Vt$ value is no longer so readily observable, as it accounts for only the vector-coupled portion of the decay phase space, and the axial coupling also contributes to the transition.  
-\color{black}
-\color{skyblue}
-We extend the corrected vector $\mathcal{F}t$ value of Eq.~(\ref{eq:Ft_with_Vud}) to mirror decays\aside[note]{Is it all mixed transitions, or only mirror decays??} by including the contribution of the (squared) Gamow-Teller matrix element, mostly by inspection.  The result, denoted $\mathcal{F}t^{\mathrm{\,mirror}}$ (sometimes $\mathcal{F}t_0$), is given by
-%We define a corrected $ft$ value specific to the case of mirror nuclei, denoted $\mathcal{F}t_0$ 
-%\cite{SeverijnsTandecki2008}
-\cite{shidling2014}
-\cite{naviliat2009april}
-\cite{ben_Abeta}:
-\bea
-\mathcal{F}t^{\mathrm{\,mirror}} &=&  \mathcal{F}t^{0^+\!\rightarrow0^+} \, C_V^2 \, | M_F^0|^2 \left(1+\frac{f_A}{f_V} \rho^2 \right),
-\label{eq:rhorelation}
-%\frac{2 \mathcal{F}t }{ 1 + \frac{f_A}{f_V} \rho^2}, 
-%%\nonumber \\
-%%&=& f_V t \, (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} )
-\eea
-\aside[note]{this equation is wrong!!!}
-%where, in order to get at the vector portion of the full $ft$ value, an adjustment has been made to account for the axial coupling in the decay.  
-where $\rho$ is the ratio of axial vector and vector matrix elements defined as in Eq.~(\ref{eq:definerho_intro}). 
-\color{black} 
-Here, $f_A$ and $f_V$ are integrals over the lepton phase space for the axial vector and vector parts. Those integrals are identical in the allowed approximation, but differ by X\% when higher-order terms are taken into account.
-(see Appendix~\ref{appendix_forthepeople}, Refs.~\cite{holstein},~\cite{Hayen2021}.)
-\note[tag]{$f_A$ and $f_V$ with higher-order terms.  X\%.  See Hayen2021.}
-
-
-\color{skyblue}The uncorrected Fermi matrix element $M_F^0$ is related to quantities that have already been defined by $| M_F |^2 =  (1 + \delta^\prime_R)(1 + \delta_{NS}^V - \delta_C^{V} ) | M_F^0 |^2 $.  
-\color{black}
-With Eq.~(\ref{eq:rhorelation}), the value of $\rho$ in a mirror decay is described in terms of physical observables from an entirely separate class of decay transitions, as well as its own half-life and branching ratio.  Alternately, with a separate measurement of $\rho$, a check can be performed on the value of $V_{ud}$.
-%~\aside{this would be a good place to cite a bunch of people.}
-
-
-\note[bluetodo,nolist]{}
 %%%% --- * --- %%%%
-\ifthenelse{\boolean{isdraft}}
-{
-	\pagebreak
-}
-{}
+%\ifthenelse{\boolean{isdraft}}
+%{
+%	\pagebreak
+%}
+%{}
 %%%% --- * --- %%%%
 
-\note[jm]{This is where Juliette is confused about what I'm talking about with this transition and why I don't describe it better.  ``On page 17 she describes a transition other than the one she is studying, but they neglects to explain the transition under consideration. Perhaps it is understandable if the calculation is quite onerous; I would have liked to see a brief summary of it here rather than simply referring to multiple sources.''}
+\note[done,nolist]{This is where Juliette is confused about what I'm talking about with this transition and why I don't describe it better.  ``On page 17 she describes a transition other than the one she is studying, but they neglects to explain the transition under consideration. Perhaps it is understandable if the calculation is quite onerous; I would have liked to see a brief summary of it here rather than simply referring to multiple sources.''}
 
-\note[jbnn]{John on Juliette's p. 17 comment about $0^+ \rightarrow 0^+$:
+\note[done,nolist]{John on Juliette's p. 17 comment about $0^+ \rightarrow 0^+$:
 \\...\\
 She's clearly just concerned you spend pages on 0+ to 0+, but then
 just "define" your mirror nucleus master equation 1.21 with minimal to no explanation. 
@@ -1233,7 +1276,7 @@ $\rightarrow$
 \\
 ``We extend this corrected Ft value for our vector part to our mirror nucleus by including the contribution of the G-T matrix element squared, mostly by inspection [your references here]''
 \\...\\
-Then your Eq.~(\ref{eq:rhorelation})
+Then your Eq.~(probably \ref{eq:Ft_and_Ftmirror})
 \\...\\
 ``where rho is the ratio of axial vector to vector matrix elements defined in
 Eq.~(\ref{eq:definerho_intro}).
@@ -1249,37 +1292,37 @@ vector and vector parts. Those integrals are identical in the allowed approximat
 
 \note[bluetodo,nolist]{}
 \note[bluetodo,nolist]{}
-\note{
-It is often convenient to write the $ft$ value in terms of contributions from the fundamental coupling strengths of the weak interactions, and the corrections and adjustments to the result relating to the specifics of nuclear structure.
-To this end, we introduce $\lambda$, a quantity closely related to $\rho$.  $\lambda$ is in some sense the more fundamental quantity, but it cannot be measured directly.  We have:
-\\
-$\lambda := \frac{C_A M_{GT}^0}{C_V M_F^0} \;\; \approx \;\; \frac{C_A M_{GT}}{C_V M_F}$,
-\\
-where $M_F^0$ and $M_{GT}^0$ are the \emph{uncorrected} Fermi and Gamow-Teller matrix elements associated with a particular transition.  These quantities are related to $\rho$ by (cite shidling2014):
-\\
-$\rho = \frac{C_A M_{GT}^0}{C_V M_F^0} \left( \frac{ (1 + \delta_{NS}^A - \delta_C^{A} ) (1 + \Delta_R^A) }{ (1 + \delta_{NS}^V - \delta_C^{V} ) (1 + \Delta_R^V) } \right)^{\!\!1/2} 
-\;=\;\; \frac{C_A M_{GT}}{C_V M_F}$ .
-}
-
-%%%\beq
-%%%\lambda &:=& \frac{C_A M_{GT}^0}{C_V M_F^0} \;\; \approx \;\; \frac{C_A M_{GT}}{C_V M_F},    
-%%%\nonumber
-%%%%\label{eq:definelambda}
-%%%\eeq
-%%%where $M_F^0$ and $M_{GT}^0$ are the \emph{uncorrected} Fermi and Gamow-Teller matrix elements associated with a particular transition.  These quantities are related to $\rho$ by (cite shidling2014):
-%%%\bea
-%%%\rho &=& \frac{C_A M_{GT}^0}{C_V M_F^0} \left( \frac{ (1 + \delta_{NS}^A - \delta_C^{A} ) (1 + \Delta_R^A) }{ (1 + \delta_{NS}^V - \delta_C^{V} ) (1 + \Delta_R^V) } \right)^{\!\!1/2} 
-%%%\;=\;\; \frac{C_A M_{GT}}{C_V M_F} . \nonumber
-%%%%\label{equation:shidling_rho}
-%%%\eea
-%%%}
-
-%Here, $\delta_C^{V/A}$ is the isospin symmetry breaking correction for the vector/axial current, %$\Delta_R^{V/A}$ is the vector/axial inner radiative correction (independent of the specific nucleus being considered, calculated as in e.g. Refs.~\cite{MarcianoSirlin_1986}\cite{MarcianoSirlin_2006}\cite{CzarneckiMarcianoSirlin_2019}), and 
-%$\delta_{NS}^{V/A}$ is the portion of the outer radiative correction %(depends on the specific nucleus) 
-%that depends in a non-trivial way on nuclear structure, requiring a detailed shell model calculation as described in e.g. Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.
-
-\note[bluetodo,nolist]{}
-%Assuming that the \ac{CVC} hypothesis holds (and there is some reason to believe that it does~\cite{severijns2006}\cite{HardyTownerSuperallowed2020}), 
+%%\note{
+%%It is often convenient to write the $ft$ value in terms of contributions from the fundamental coupling strengths of the weak interactions, and the corrections and adjustments to the result relating to the specifics of nuclear structure.
+%%To this end, we introduce $\lambda$, a quantity closely related to $\rho$.  $\lambda$ is in some sense the more fundamental quantity, but it cannot be measured directly.  We have:
+%%\\
+%%$\lambda := \frac{C_A M_{GT}^0}{C_V M_F^0} \;\; \approx \;\; \frac{C_A M_{GT}}{C_V M_F}$,
+%%\\
+%%where $M_F^0$ and $M_{GT}^0$ are the \emph{uncorrected} Fermi and Gamow-Teller matrix elements associated with a particular transition.  These quantities are related to $\rho$ by (cite shidling2014):
+%%\\
+%%$\rho = \frac{C_A M_{GT}^0}{C_V M_F^0} \left( \frac{ (1 + \delta_{NS}^A - \delta_C^{A} ) (1 + \Delta_R^A) }{ (1 + \delta_{NS}^V - \delta_C^{V} ) (1 + \Delta_R^V) } \right)^{\!\!1/2} 
+%%\;=\;\; \frac{C_A M_{GT}}{C_V M_F}$ .
+%%}
+%%
+%%%%%\beq
+%%%%%\lambda &:=& \frac{C_A M_{GT}^0}{C_V M_F^0} \;\; \approx \;\; \frac{C_A M_{GT}}{C_V M_F},    
+%%%%%\nonumber
+%%%%%%\label{eq:definelambda}
+%%%%%\eeq
+%%%%%where $M_F^0$ and $M_{GT}^0$ are the \emph{uncorrected} Fermi and Gamow-Teller matrix elements associated with a particular transition.  These quantities are related to $\rho$ by (cite shidling2014):
+%%%%%\bea
+%%%%%\rho &=& \frac{C_A M_{GT}^0}{C_V M_F^0} \left( \frac{ (1 + \delta_{NS}^A - \delta_C^{A} ) (1 + \Delta_R^A) }{ (1 + \delta_{NS}^V - \delta_C^{V} ) (1 + \Delta_R^V) } \right)^{\!\!1/2} 
+%%%%%\;=\;\; \frac{C_A M_{GT}}{C_V M_F} . \nonumber
+%%%%%%\label{equation:shidling_rho}
+%%%%%\eea
+%%%%%}
+%%
+%%%Here, $\delta_C^{V/A}$ is the isospin symmetry breaking correction for the vector/axial current, %$\Delta_R^{V/A}$ is the vector/axial inner radiative correction (independent of the specific nucleus being considered, calculated as in e.g. Refs.~\cite{MarcianoSirlin_1986}\cite{MarcianoSirlin_2006}\cite{CzarneckiMarcianoSirlin_2019}), and 
+%%%$\delta_{NS}^{V/A}$ is the portion of the outer radiative correction %(depends on the specific nucleus) 
+%%%that depends in a non-trivial way on nuclear structure, requiring a detailed shell model calculation as described in e.g. Refs.~\cite{TownerHardy2008}\cite{JausRasche1990}\cite{barker1992}\cite{Towner1992}\cite{Towner1994}.
+%%
+%%\note[bluetodo,nolist]{}
+%%%Assuming that the \ac{CVC} hypothesis holds (and there is some reason to believe that it does~\cite{severijns2006}\cite{HardyTownerSuperallowed2020}), 
 
 
 %While we will primarily work with the experimentally measured quantity $\rho$, defined as in Eq.~\ref{eq:definerho}, it is worthwhile to backtrack slightly to consider how this quantity is measured in practice, as this is needed to properly interpret a measurement of $\bFierz$.  We introduce a related quantity, $\lambda$, which cannot be measured directly, but which is in some sense more fundamental than $\rho$.  We have:
@@ -1332,7 +1375,7 @@ $\rho = \frac{C_A M_{GT}^0}{C_V M_F^0} \left( \frac{ (1 + \delta_{NS}^A - \delta
 
 
 %\note[tag]{finish it.}
-\note{While it is possible to measure rho through angular correlations and stuff, like in Dan's thesis .... \cite{dan_Bnu} }
+%\note{While it is possible to measure rho through angular correlations and stuff, like in Dan's thesis .... \cite{dan_Bnu} }
 \note{the point is, you get rho from ... uh... 
 \\...\\
 Shidling hands you rho, using as input: the absolute rate (which is what he actually measured), Vud (from 0+ to 0+), and fancy calculations of things by theorists.}

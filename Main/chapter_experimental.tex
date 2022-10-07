@@ -168,23 +168,25 @@ A MOT requires a quadrupolar magnetic field, and we generate ours with two curre
 (cite someone), so our dominant loss mechanism is radioactive decay rather than thermal escape. }
 
 
-We spin-polarize $^{37}\textrm{K}$ atoms within the trapping region by optical pumping~\cite{ben_OP}.  A circularly polarized laser is tuned to match the relevant atomic resonances, and is directed through the trapping region along the vertical axis in both directions.  When a photon is absorbed by an atom, the atom transitions to an excited state and its total angular momentum (electron spin + orbital + nuclear spin) along the vertical axis is incremented by one unit.  When the atom is de-excited a photon is emitted isotropically, 
-so it follows that if there are available states of higher and lower angular momentum, the \emph{average} change in the angular momentum projection is zero.  If the atom is not yet spin-polarized, it can absorb and re-emit another photon, following a biased random walk towards complete polarization.  
-
-In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  In particular, the magnetic field must be aligned along the polarization axis (otherwise the tendency will be to actually depolarize the atoms), and it must be uniform in both magnitude and direction over the region of interest to avoid introducing a spatially-dependent depolarization mechanism.  
+We spin-polarize $^{37}\textrm{K}$ atoms within the trapping region by optical pumping (See Ch.~\ref{sec:op})~\cite{ben_OP}.  In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  
+%This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  
+In particular, the magnetic field must be aligned along the polarization axis, 
+%(otherwise the tendency will be to actually depolarize the atoms), 
+and it must be uniform in magnitude over the region of interest.  
+% to avoid introducing a spatially-dependent depolarization mechanism.  
 Note that this type of magnetic field is not compatible with the MOT, which requires a uniform magnetic field \emph{gradient} in all directions (characteristic of a quadrupolar field shape), and has necessitated our use of the AC-MOT.
 
-In the end, the average (over both directions) polarization $|\vec{P}|$ achieved during the 2014 beam time is $|\vec{P}| = 0.9913 \pm 0.0009$, and the measurements are consistent with both polarization directions having the same magnitude of polarization\cite{ben_OP}.
 
 %\note[tag, nolist]{End duplicated section.  When I'm done, most of the content should still live *right hhere*.}
-\note[note]{}
-\note[done,nolist]{Duplications between this and the other chapter's equivalent section are eliminated up to here.}
-
+\note[note,nolist]{}
+\note[note,nolist]{}
+%\note[done,nolist]{Duplications between this and the other chapter's equivalent section are eliminated up to here.}
+\note[org,nolist]{Removed subsection start:  Magnetic Field Trimming}
 
 
 \FloatBarrier
 %%%%%%% % %%%%%%%%
-\subsection{Magnetic Field Trimming}
+%\subsection{Magnetic Field Trimming}
 \label{sec:trimming}
 With ambient magnetic fields from, e.g., the TRIUMF cyclotron and the earth, it is necessary to have available a means to cancel these fields out if we hope to create a well controlled, uniform magnetic field directed along the polarization axis within the trapping region --- a necessity for optical pumping.  
 
@@ -218,7 +220,12 @@ but TRINAT's Helmholtz trim coils are adjusted during calibrations with cyclotro
 %%%%%%% % %%%%%%%%
 \section{Measurement Geometry and Detectors}
 \label{sec:geometry}
-The TRINAT detection chamber operates at ultra-high vacuum (UHV) and provides not only the apparatus necessary to intermittently confine and then spin-polarize atoms, but also the variety of detectors and implements required to quantify their position, temperature, and polarization.  The detection chamber further boasts an array of electrostatic hoops to collect both positively and negatively charged low energy particles into two opposing microchannel plate (MCP) detectors, each backed by a set of delay lines to measure hit position, and a further set of two beta detectors positioned across from each other along the polarization axis, each of which consists of a 40x40 pixel double-sided silicon strip detector (DSSD) and a scintillator coupled to a photomultiplier tube (PMT) 
+The TRINAT detection chamber operates at \ac{UHV} 
+%ultra-high vacuum (UHV) 
+and provides not only the apparatus necessary to intermittently confine and then spin-polarize atoms, but also the variety of detectors and implements required to quantify their position, temperature, and polarization.  The detection chamber further boasts an array of electrostatic hoops to collect both positively and negatively charged low energy particles into two opposing \ac{MCP} detectors, each backed by a set of delay lines to measure hit position, and a further set of two beta detectors positioned across from each other along the polarization axis, each of which consists of a 40x40 pixel 
+\ac{DSSD} %double-sided silicon strip detector (DSSD) 
+and a scintillator coupled to a \ac{PMT} 
+%photomultiplier tube (PMT) 
 (see Fig.~\ref{chamber_decayevent}). The chamber also includes 6 viewports specifically designed to be used for the trapping and optical pumping lasers (see Fig.~\ref{fig:thechamber}.).
 
 
@@ -245,13 +252,14 @@ The TRINAT detection chamber operates at ultra-high vacuum (UHV) and provides no
 \end{figure}
 
 
+\clearpage
 %%%% --- * --- %%%%
-\ifthenelse{\boolean{isdraft}}
-{
-	\clearpage
-	\pagebreak
-}
-{}
+%\ifthenelse{\boolean{isdraft}}
+%{
+%	\clearpage
+%	\pagebreak
+%}
+%{}
 %%%% --- * --- %%%%
 \section{Microchannel Plates and Electrostatic Hoops}
 \label{section:mcps}
@@ -261,11 +269,11 @@ a constant, nearly uniform electric field across the space between the two MCP d
 The resulting electric field acts to pull positively charged ions towards one MCP detector and negatively charged electrons towards the other (see Figs.~\ref{chamber_decayevent} and~\ref{fig:thechamber}).  
 
 
-The detector intended to collect the negatively charged electrons (the ``eMCP'') has an active area of $75.0\,$mm, and is positioned 
+The detector intended to collect the negatively charged electrons (the \acs{eMCP}) has an active area of $75.0\,$mm, and is positioned 
 %is 75 mm in diameter~\aside{No, it's 86.6 mm in diameter, but the active area is only 75 mm.}and positioned 
-$100.0\,$mm from the chamber centre.  It features a Z-stack configuration of three plates, and it is backed by a set of three separate delay lines in a ``hexagonal'' arrangement for redundant position sensitivity (the ``HEX75'').  The detector used to collect positively charged ions (the ``iMCP,'' or equivalently the ``rMCP'' since many of the ions collected are recoils from decay) is $80.0\,$mm in diameter and positioned $101.4\,$mm from the chamber centre.  It features only two plates arranged in a chevron configuration, and it is backed by a set of two separate delay lines (the ``DLD80'') for position sensitivity.  
+$100.0\,$mm from the chamber centre.  It features a Z-stack configuration of three plates, and it is backed by a set of three separate delay lines in a hexagonal arrangement for redundant position sensitivity (the ``HEX75'').  The detector used to collect positively charged ions (the \acs{iMCP}, or equivalently the \acs{rMCP} -- since many of the ions collected are recoils from decay) is $80.0\,$mm in diameter and positioned $101.4\,$mm from the chamber centre.  It features only two plates arranged in a chevron configuration, and it is backed by a set of two separate delay lines (the ``DLD80'') for position sensitivity.  
 %
-In the context of the present work, the rMCP data is used primarily in conjuction with the photoionization laser to characterize the atom cloud (Section~\ref{photoions}), while the eMCP data is used, together with the beta detectors, as a `tag' for decay events originating from the cloud. \aside{Do I talk about how this works somewhere?  Probably in that section on cuts.}
+In the context of the present work, the \ac{rMCP} data is used primarily in conjuction with the photoionization laser to characterize the atom cloud (Section~\ref{photoions}), while the \ac{eMCP} data is used, together with the beta detectors, as a tag for decay events originating from the cloud. \aside{Do I talk about how this works somewhere?  Probably in that section on cuts.}
 
 
 
@@ -298,7 +306,7 @@ In order to measure properties of the trapped $^{37}\textrm{K}$ cloud, a 10\,kHz
 \note{Probably worth mentioning that we test this stuff offline on stable \isotope[41]{K}. But also, surely it should be mentioned in like the AC-MOT/Polarization section too.}
 
 Because an electric field has been applied within this region (Section~\ref{section:field})
-the $^{37}\textrm{K}^+$ ions are immediately pulled into the detector on one side of the chamber, while the freed $e^-$ is pulled towards the detector on the opposite side of the chamber.  Because  $^{37}\textrm{K}^+$ is quite heavy relative to its initial energy, it can be treated as moving in a straight line directly to the detector, where its hit position on the microchannel plate is taken as a 2D projection of its position within the cloud.  Similarly, given a sufficient understanding of the electric field, the time difference between the laser pulse and the microchannel plate hit allows for a calculation of the ion's initial position along the third axis.  
+the $^{37}\textrm{K}^+$ ions are immediately pulled into the detector on one side of the chamber, while the freed $e^-$ is pulled towards the detector on the opposite side of the chamber.  Because  $^{37}\textrm{K}^+$ is quite heavy relative to its initial energy, it can be treated as moving in a straight line directly to the detector, where its hit position on the microchannel plate is taken as a 2D projection of its position within the cloud.  Similarly, given a sufficient understanding of the electric field, the time difference between the laser pulse and the microchannel plate hit --- which we will sometimes refer to as a \ac{TOF} --- allows for a calculation of the ion's initial position along the third axis.  
 
 \note{As a check:  the camera measurements for photons from de-excitation.  It's aimed 35 degrees from vertical, with its horizontal axis the same as ..... one of the other axes.  I think it's the TOF axis.  I can check this when my computer comes back.   Also, there's an unknown additional delay between some of our DAQ channels that can't be explained by accounting for cable lengths, so we really like having the check there.}
 \note[jb1]{JB says:  ``yes, camera x-axis is tof axis.''}
@@ -311,20 +319,4 @@ The key to the polarization measurement is that only atoms in the excited atomic
 the cloud has been fully polarized.  The number of photoion events that occur once the sample has been maximally polarized, in comparison with the size and shape of the initial spike of photoions, provides a very precise characterization of the cloud's final polarization~\cite{ben_OP}.
 
 
-\section{Considerations for Data Collection}
-\label{sec:dataconsiderations}
-\note[note]{Talk about the data collection.  What types of events are stored?}
-Although the detection chamber was designed to feature two \ac{MCP} detectors on opposing sides of an applied electric field, and intended for simultaneous use, in practice the two detectors produced quite a bit of feedback when operated at the same time.  As a result, the decision was made to use only one MPC detector at any given time;  the detector in use was switched every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into electron and recoil runs (sometimes `\ac{eMCP}' and `\ac{rMCP}') depending on what the detector in use was intended to detect.  
-
-These two types of runs were used for very different purposes in terms of analysis.  The electron runs were used directly to measure nuclear physics parameters $\Abeta$ and $\bFierz$.  The recoil runs were used to measure cloud polarization, position, and size.  These parameters --- particularly the polarization --- must be well understood in order to effect the nuclear physics measurements performed with the other detector.  The method of switching periodically which detector is in use assures that our knowledge of the atom cloud may be treated as concurrent to the electron run measurements.
-
-\note[note,nolist]{Moved from MCP+Hoops}
-Due to an unfortunate interaction between the two MCP detectors, during the 2014 beamtime it was not possible to run both the eMCP and the rMCP simultaneously without producing a large background on at least one detector (there seemed to be no consistency as to which detector was most affected at a given time).  As a result, data was instead collected with only one MCP detector biased at a time, and the active detector was alternated every few hours to spend approximately equal time collecting data with the eMCP and rMCP.~\aside{Reference that one table.}  
-\note[note,nolist]{}
-
-\color{skyblue}
-There are too many events and the daq is overwhelmed if you record all the events where the eMCP or rMCP is hit.  Although possibly we recorded some with all the eMCP events?  Not sure.
-Instead, we record all the events where a scintillator is hit, and all(?) the events where a photoionization laser pulse happens.  It goes at like 10 kHz.  Or maybe it was all the events with a photoionization laser pulse in coincidence with a photoelectron (TOF window) or photoion (TOF window).  But I don't think that's quite right.  That's not what the spectra looked like in the end, so I think that was maybe only for the online plots or something?  Not for the triggers.  Did we clean the non-SOE events in the data acquisition *right then*?  You could do that ok with the electrons, but not so much with the ions.  
-\color{black}
-\note[tag]{}
 
