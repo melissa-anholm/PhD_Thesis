@@ -14,7 +14,7 @@ In a precision measurement, the bulk of the research is in determining the syste
 \label{sec:dataconsiderations}
 %\note[note]{Talk about the data collection.  What types of events are stored?}
 Although the detection chamber was designed to feature two \ac{MCP} detectors on opposing sides of an applied electric field, and intended for simultaneous use, in practice the two detectors produced quite a bit of feedback during simultaneous online operation.  %when operated at the same time.  
-As a result, the decision was made to bias only one MPC detector at a time;  the detector in use was switched every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into electron and recoil runs (sometimes `\ac{eMCP}' and `\ac{rMCP}' runs), depending on what the detector in use was intended to detect.  
+As a result, the decision was made to bias only one MPC detector at a time;  the detector in use was switched every few hours, collecting approximately the same amount of data with each detector.  Thus, the runs are sorted into electron and recoil runs (sometimes \ac{eMCP} and \ac{rMCP} runs), depending on what the detector in use was intended to detect.  
 
 %\color{skyblue}
 %Although the detection chamber was designed to feature two MCP detectors on opposing sides of an applied electric field intended for simultaneous use (see Section~\ref{section:mcps}), in practice the two detectors produced quite a bit of feedback when operated at the same time.  In order to salvage usable data from the beamtime, it was necessary to run only one detector at a time, but switched which detector was in use every few hours, collecting approximately the same amount of data with each detector (see Tables~\ref{table:runlist_electrons} and~\ref{table:runlist_recoils}).  Thus, the runs are sorted into `electron' and `recoil' runs, depending on what the detector in use was intended to detect.  
@@ -48,7 +48,9 @@ The recoil runs may also be analyzed in the future as part of a search for right
   
 
 %\note[note,nolist]{Moved from MCP+Hoops}
-In addition to dividing up the online data according to the active \ac{MCP} detector, the data is further sorted into runsets based on when certain settings were adjusted, and the individual runsets are treated separately for nearly all parts of the analysis.  One such parameter is the overall strength of the electric field;  data
+In addition to dividing up the online data according to the active \ac{MCP} detector, the data is further sorted into runsets based on when certain settings were adjusted, and the individual runsets are treated separately for nearly all parts of the analysis.  The classification of runs is summarized in Tables~\ref{table:runlist_electrons} and~\ref{table:runlist_recoils}.
+
+One parameter that was varied is the overall strength of the electric field;  data
 %Online scientific data 
 has been collected with the eMCP at electric field strengths of 66.7\,V/cm \aside{the 66 V/cm data is all crap} and 150.\,V/cm, while rMCP data has been collected at 395.\,V/cm, 415.\,V/cm, and 535.\,V/cm.  Note that these field strengths are all too low to significantly perturb any but the least energetic of the (positively charged) betas originating from decay, and those betas already lack the energy that would be needed to travel through the SiC mirror and Be foil vacuum seal into a beta detector. 
 
@@ -118,7 +120,7 @@ Because the characteristics of these timing sum distributions varied from run to
 	\label{fig:position_with_sumcuts}
 \end{figure}
 
-\FloatBarrier  % I think this has to go away eventually.
+%\FloatBarrier  % I think this has to go away eventually.
 \section{Calibrations with the rMCP}
 \label{sec:rmcp_cals}
 A calibration mask was created for the \ac{rMCP}, to eliminate any nonlinearities in the images produced.  Several months before the $\isotope[37]{K}$ beamtime was to occur, the mask was attached in front of the rMCP, and a test of the delay lines' ability to produce an image was performed using an alpha source to illuminate the full surface of the detector.~\aside{I *think* we used an alpha source?  Not sure what else we could have done, but I better check this!}  The mask was later removed in advance of the beamtime, in order to preserve the highest possible surface area, and calibrations were performed using the older mask data and subsequently applied to the online $\isotope[37]{K}$ data.% (see Fig.~\ref{fig:rmcp_calibration}).
@@ -164,7 +166,7 @@ But also, I really don't want to get into this, otherwise somebody will ask me t
 
 
 %%%% --- * --- %%%%
-\FloatBarrier
+%\FloatBarrier
 \section{Cloud Position Measurement}
 \label{sec:cloud_calibration}
 With the \ac{rMCP} detector calibrated (Section~\ref{sec:rmcp_cals}), several types of data may be extracted.  It is possible to extract the hit positions and times-of-flight for the incident nuclear recoils, and an analysis of such data could be used to perform a test of right-handed currents within the nuclear weak force, as discussed in Chapter~\ref{section_rslow}.  However, we will focus here on what may be learned about the \emph{atom cloud} from rMCP events in coincidence with the photoionization laser.~\aside[org]{Also... does the camera data go in this section??}  
@@ -175,21 +177,29 @@ The first step in such a measurement is to try to eliminate as much background a
 
 With these basic cuts performed, the cloud position and size must be measured.  We are particularly interested in measurements of the cloud during the time when it is considered to be \emph{polarized} --- however the great majority of photoionization events occur when the cloud is \emph{not polarized} (see Fig.~\ref{fig:position_v_acmottime_3axes}).  This is because the photoionization laser acts only on excited atomic states, which are readily available during the operation of the \ac{MOT}.  When the \ac{MOT} is shut off, the atoms quickly de-excite.  At the start of optical pumping 300$\,\mu$s later (in the case of the 535 V/cm data), there is a short burst of photoions due to the atoms being temporarily placed into an excited state as part of the optical pumping process.  The photoion burst falls away rapidly as atoms are optically pumped into the stretched state and can no longer be excited by the optical pumping laser.  
 
-\begin{figure}[h!tb]
+
+A projection of the cloud's position on the $x$- and $z$-axes, and its \ac{TOF} (indicative of position along the $y$-axis) is plotted over the course of the repeating \ac{AC-MOT}/\ac{OP} cycle in Fig.~\ref{fig:position_v_acmottime_3axes}. 
+%
+\begin{figure}[h!t!b!!!!!]
 	\centering
-	\includegraphics[width=.999\linewidth]
+	\includegraphics[width=.99\linewidth]
 	{Figures/rMCP_xyz_vs_acmottime.png}
 	\caption[Photoion Hit Positions at 535 V/cm, as a function of AC-MOT Time]{Projections of photoion hit positions and \ac{TOF} at 535 V/cm, as a function of time since the start of the last \ac{AC-MOT} cycle.  The trap's periodic motion can be seen in sync with the \ac{AC-MOT}'s cycles, and it is clear that the cloud is also being compressed during this time, before being allowed to expand ballistically when the MOT is shut off.  The photoion burst at the start of optical pumping 300$\,\mu$s after the AC-MOT is shut off can be seen on the lower two plots. 	}	
 	\label{fig:position_v_acmottime_3axes}
 \end{figure}
+\FloatBarrier
+%
 
-A projection of the cloud's position on the $x$- and $z$-axes, and its \ac{TOF} (indicative of position along the $y$-axis) is plotted over the course of the repeating \ac{AC-MOT}/\ac{OP} cycle in Fig.~\ref{fig:position_v_acmottime_3axes}. The mysterious vertical stripes seen Fig.~\ref{fig:photoionhits_2D} are clearly evident in the top plot of Fig.~\ref{fig:position_v_acmottime_3axes}, and their positions do not change over the AC-MOT cycle, even though cloud motion is clearly visible.  
+\noindent
+The mysterious vertical stripes seen Fig.~\ref{fig:photoionhits_2D} are clearly evident in the top plot of
+Fig.~\ref{fig:position_v_acmottime_3axes}, and their positions do not change over the AC-MOT cycle, even though cloud motion is clearly visible.  
+%\FloatBarrier
  
 To extract the size and position of the atom cloud as projected onto all three axes, time slices of several hundred $\mu$s are taken from the beginning of the AC-MOT cycle, and from the part of the AC-MOT cycle immediately before the MOT is turned off.  A gaussian is fitted to the cloud projection, with its parameters describing the trap's size and position during these parts of the cycle.  A linear interpolation applied to describe the cloud's 3D size and position during polarized times, as functions of time since the AC-MOT cycle started.  Results are shown in Table~\ref{table:cloudpositions}.
 
 
 \input{table_cloudpositions}  %  \label{table:cloudpositions}
-\FloatBarrier %%% this will have to go.
+%\FloatBarrier %%% this will have to go.
 
 \note{Also, we noticed the trap drifting after one of the runs, because one of the batteries on one of the thingies adjusting the laser frequency (I think) was failing. }
 \note[jb1]{JB:  ``If we rejected the data with the MOT moving (indeed a battery determining the voltage controlled oscillator frequency offset between absorption in stable \isotope[41]{K} cell and the \isotope[37]{K} resonance) then that's all you need to say.''}
@@ -215,7 +225,7 @@ The fraction of the atoms in the excited state during optical pumping was modele
 \\
 | \vecP_{\bm{-}} | &=& 0.9912 \,\pm\, 0.0009, 
 \eea
-consistent with the same polarization magnitude for both states, and precise to \mbox{$<0.1\%$}.  This result could only be attained after weeks of optimization using \mbox{stable} $^{41}$K polarization data, with all optical pumping and magnetic field switching parameters kept constant.
+consistent with the same polarization magnitude for both states, and precise to \mbox{$<0.1\%$}. This result could only be attained after weeks of optimization using \mbox{stable} $^{41}$K polarization data, with all optical pumping and magnetic field switching parameters kept constant.  This result removes the polarization from serious consideration as a systematic for $\bFierz$, and it is therefore left off the error budget of Table~\ref{table:budget}.
 
 The analysis to extract the polarization was performed primarily by other members of the collaboration, and is discussed thoroughly within the collaboration's Ref.~\cite{ben_OP}.
 
@@ -254,7 +264,7 @@ The analysis to extract the polarization was performed primarily by other member
 %%%% --- * --- %%%%
 
 %%%% --- * --- %%%%	
-\FloatBarrier
+%\FloatBarrier
 \section{Electron Run Data Selection and Preliminary Cuts}
 \label{sec:preliminary_cuts}
 
