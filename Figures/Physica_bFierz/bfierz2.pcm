@@ -1,0 +1,71 @@
+!
+destroy *
+defaults
+clear
+
+
+!s=cs+cs'
+!t=ct+ct'
+
+!H. Saul et al. Phys. Rev. Lett. 125, 112501 
+! b = 0.017+-0.021
+
+
+t=[-0.2:0.2:0.001]
+
+!scales\commensurate -0.2 0.2 0 -0.2 0.2 0
+scales\commensurate -0.1 0.1 0 -0.1 0.1 0
+label\yaxis `a<_>L<^><^>T<_> = (C<_>T<^>+C<_>T<^><^>prime<_>)/2'
+label\xaxis `a<_>R<^><^>S<_> = (C<_>S<^>+C<_>S<^><^>prime<_>)/2'
+
+
+bn=0.017
+sigbn=0.021
+
+legend on
+legend frame 10 15 60 30
+legend autoheight off
+set %txthit 2.5
+
+set lintyp 9
+sn=bn*(1+3*(1.26^2))-t*1.26*3
+graph `neutron Saul PRL 2020' sn/2 t/2
+legend off
+bn=bn+sigbn
+sn=bn*(1+3*(1.26^2))-t*1.26*3
+graph\noaxes sn/2 t/2 
+bn=bn-sigbn-sigbn
+sn=bn*(1+3*(1.26^2))-t*1.26*3
+graph\noaxes sn/2 t/2 
+bn=bn+sigbn
+
+set lintyp 1
+
+b37=0.033
+sigb37=0.093
+
+
+colour blue
+s37=b37*(1+0.5768^2)-(0.5768^2/1.26*t)
+legend on
+graph\noaxes `37K Anholm 2022' s37/2 t/2
+legend off
+b37=b37+sigb37
+s37=b37*(1+0.5768^2)-(0.5768^2/1.26*t)
+graph\noaxes s37/2 t/2 
+b37=b37-sigb37-sigb37
+s37=b37*(1+0.5768^2)-(0.5768^2/1.26*t)
+graph\noaxes s37/2 t/2
+b37=b37+sigb37
+
+xjb=[-0.25:0.25:0.02]
+yjb=xjb*0
+
+colour white
+graph xjb yjb
+
+yjb=[-0.25:0.25:0.02]
+xjb=yjb*0
+graph xjb yjb
+
+
