@@ -10,6 +10,25 @@ Jackson, J.~D., Treiman, S.~B. {\mdseries and} Wyld, H.~W., \textit{Coulomb
   Corrections in Allowed Beta Transitions}, Nuclear Physics, Vol.~4,
   pp.~206--212, Nov. 1957.
 
+\bibitem{thesis}
+Anholm, M., \textit{Characterizing the {AC-MOT}}, Master's thesis, University
+  of British Columbia, 2014.
+
+\bibitem{ben_Abeta}
+Fenker, B., Gorelov, A., Melconian, D., Behr, J.~A., Anholm, M., Ashery, D.,
+  Behling, R.~S., Cohen, I., Craiciu, I., Gwinner, G., McNeil, J., Mehlman, M.,
+  Olchanski, K., Shidling, P.~D., Smale, S. {\mdseries and} Warner, C.~L.,
+  \textit{Precision Measurement of the $\ensuremath{\beta}$ Asymmetry in
+  Spin-Polarized $^{37}\mathrm{K}$ Decay}, Physical Review Letters, Vol.~120,
+  pp.~062502, Feb 2018.
+
+\bibitem{griffiths_particles}
+Griffiths, D., \textit{Introduction to Elementary Particles}, Wiley-VCH, 2008.
+
+\bibitem{peskinandschroeder}
+Peskin, M. {\mdseries and} Schroeder, D., \textit{An Introduction to Quantum
+  Field Theory}, Westview Press, 1995.
+
 \bibitem{becquerel1896}
 Becquerel, H., \textit{Sur les radiations {\'e}mises par phosphorescence},
   Comptes rendus de l'Academie des Sciences, Paris, Vol.~122, pp.~420--421,
@@ -40,6 +59,16 @@ Rutherford, E. {\mdseries and} Soddy, F., \textit{LX. radioactive change}, The
   London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science,
   Vol.~5, No.~29, pp.~576--591, 1903.
 
+\bibitem{hahn1911new}
+Hahn, O. {\mdseries and} Meitner, L., \textit{New $\beta$-Radiatian from
+  Thorium X}, Journal of the R{\"o}ntgen Society, Vol.~7, No.~27, pp.~51--51,
+  1911.
+
+\bibitem{chadwick1914}
+Chadwick, J., \textit{Intensit{\"a}tsverteilung im magnetischen Spectrum der
+  $\beta$-Strahlen von radium B+ C}, Verhandl. Dtsc. Phys. Ges., Vol.~16,
+  pp.~383, 1914.
+
 \bibitem{PauliNeutrino1978}
 Brown, L.~M., \textit{The idea of the neutrino}, Physics today, Vol.~31, No.~9,
   pp.~23, 1978.
@@ -55,6 +84,43 @@ Pais, A., \textit{Inward Bound: Of Matter and Forces in the Physical World},
 \bibitem{Fermi1934German}
 {Fermi}, E., \textit{{Versuch einer Theorie der $\beta$-Strahlen. I}},
   {Zeitschrift f{\"u}r Physik}, Vol.~88, No.~3, pp.~161--177, 1934.
+
+\bibitem{joliotcurie1934}
+Joliot, F. {\mdseries and} Curie, I., \textit{Artificial production of a new
+  kind of radio-element}, Nature, Vol.~133, No. 3354, pp.~201--202, 1934.
+
+\bibitem{nobelprize_1935}
+\textit{The nobel prize in chemistry 1935}.
+
+\bibitem{guerra2009enrico}
+Guerra, F. {\mdseries and} Robotti, N., \textit{Enrico Fermi’s discovery of
+  neutron-induced artificial radioactivity: The influence of his theory of beta
+  decay}, Physics in perspective, Vol.~11, No.~4, pp.~379--404, 2009.
+
+\bibitem{wick1934sugli}
+Wick, G.~C., \textit{Sugli elementi radioattivi di F. Joliot e I. Curie}, Atti
+  R. Accad. Naz. Lincei. Ren, Vol.~19, pp.~319--324, 1934.
+
+\bibitem{yukawa1}
+Yukawa, H. {\mdseries and} Sakata, S., \textit{On the Theory of the
+  $\beta$-Disintegration and the Allied Phenomenon}, Proceedings of the
+  Physico-Mathematical Society of Japan. 3rd Series, Vol.~17, pp.~467--479,
+  1935.
+
+\bibitem{yukawa2}
+YUKAWA, H. {\mdseries and} SAKATA, S., \textit{On the theory of internal pair
+  production}, Proceedings of the Physico-Mathematical Society of Japan. 3rd
+  Series, Vol.~17, pp.~397--407, 1935.
+
+\bibitem{yukawa3}
+YUKAWA, H. {\mdseries and} SAKATA, S., \textit{Supplement to “On the Theory
+  of the $\beta$-Disintegration and the Allied Phenomenon.”}, Proceedings of
+  the Physico-Mathematical Society of Japan. 3rd Series, Vol.~18, pp.~128--130,
+  1936.
+
+\bibitem{alvarez1937}
+{Alvarez}, L.~W., \textit{{Nuclear K Electron Capture}}, Physical Review,
+  Vol.~52, No.~2, pp.~134--135, Jul. 1937.
 
 \bibitem{GamowTeller}
 Gamow, G. {\mdseries and} Teller, E., \textit{Selection Rules for the
@@ -204,6 +270,16 @@ Schirber, M., \textit{Q\&A: with Standard Bearer Steven Weinberg}, APS News,
 \bibitem{krane}
 Krane, K.~S., \textit{Introductory Nuclear Physics}, Wiley, New York, 1988.
 
+\bibitem{ben_thesis}
+Fenker, B.~B., \textit{Precise measurement of the $\beta$-asymmetry in the
+  decay of magneto-optically trapped, spin-polarized 37K}, Ph.D. thesis, Texas
+  A\&M University, 2016.
+
+\bibitem{dan_thesis}
+Melconian, D.~G., \textit{Measurement of the Neutrino Asymmetry in the Beta
+  Decay of Laser-Cooled, Polarized $^{37}\textrm{K}$}, Ph.D. thesis, Simon
+  Fraser University, 2005.
+
 \bibitem{Falkowski2021}
 Falkowski, A., Gonz{\'a}lez-Alonso, M. {\mdseries and} Naviliat-Cuncic, O.,
   \textit{Comprehensive analysis of beta decays within and beyond the Standard
@@ -287,14 +363,6 @@ Greiner, W. {\mdseries and} M{\"u}ller, B., \textit{Leptonic Interactions}, pp.
 Pattie, R.~J. et~al., \textit{First Measurement of the Neutron
   $\ensuremath{\beta}$ Asymmetry with Ultracold Neutrons}, Physical Review
   Letters, Vol.~102, pp.~012301, Jan 2009.
-
-\bibitem{ben_Abeta}
-Fenker, B., Gorelov, A., Melconian, D., Behr, J.~A., Anholm, M., Ashery, D.,
-  Behling, R.~S., Cohen, I., Craiciu, I., Gwinner, G., McNeil, J., Mehlman, M.,
-  Olchanski, K., Shidling, P.~D., Smale, S. {\mdseries and} Warner, C.~L.,
-  \textit{Precision Measurement of the $\ensuremath{\beta}$ Asymmetry in
-  Spin-Polarized $^{37}\mathrm{K}$ Decay}, Physical Review Letters, Vol.~120,
-  pp.~062502, Feb 2018.
 
 \bibitem{UCNAfierz2020}
 Sun, X. et~al., \textit{Improved limits on Fierz interference using asymmetry
@@ -443,10 +511,6 @@ Raab, E.~L., Prentiss, M., Cable, A., Chu, S. {\mdseries and} Pritchard, D.~E.,
   \textit{Trapping of Neutral Sodium Atoms with Radiation Pressure}, Physical
   Review Letters, Vol.~59, pp.~2631--2634, Dec 1987.
 
-\bibitem{thesis}
-Anholm, M., \textit{Characterizing the {AC-MOT}}, Master's thesis, University
-  of British Columbia, 2014.
-
 \bibitem{harveymurray}
 Harvey, M. {\mdseries and} Murray, A.~J., \textit{Cold Atom Trap with Zero
   Residual Magnetic Field: The AC Magneto-Optical Trap}, Physical Review
@@ -471,11 +535,6 @@ Swanson, T.~B., Asgeirsson, D., Behr, J.~A., Gorelov, A. {\mdseries and}
 Audi, G., Wapstra, A. {\mdseries and} Thibault, C., \textit{The {AME2003}
   Atomic Mass Evaluation}, Nuclear Physics A, Vol.~729, No.~1, pp.~337 -- 676,
   2003.
-
-\bibitem{ben_thesis}
-Fenker, B.~B., \textit{Precise measurement of the $\beta$-asymmetry in the
-  decay of magneto-optically trapped, spin-polarized 37K}, Ph.D. thesis, Texas
-  A\&M University, 2016.
 
 \bibitem{spencer_thesis}
 Behling, R.~S., \textit{Measurement of the Standard Model Beta Asymmetry
@@ -519,11 +578,6 @@ Brown, M. A.-P. et~al., \textit{New result for the neutron
 Severijns, N. {\mdseries and} Naviliat-Cuncic, O., \textit{Symmetry tests in
   nuclear beta decay}, Annual Review of Nuclear and Particle Science, Vol.~61,
   pp.~23--46, 2011.
-
-\bibitem{dan_thesis}
-Melconian, D.~G., \textit{Measurement of the Neutrino Asymmetry in the Beta
-  Decay of Laser-Cooled, Polarized $^{37}\textrm{K}$}, Ph.D. thesis, Simon
-  Fraser University, 2005.
 
 \bibitem{holstein_errata}
 Holstein, B.~R., \textit{Erratum: Recoil effects in allowed beta decay: The

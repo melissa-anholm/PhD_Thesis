@@ -97,19 +97,19 @@
    \evensidemargin 0.0in  %   Left margin on even-numbered pages.
    \marginparwidth 0pt    %   Width of marginal notes.
 \else                     % Values for one-sided printing:
-	\ifthenelse{\boolean{isdraft}}
-	{
-    	\oddsidemargin 0.0in   %% MJA kludge:  push everything to the left.
-	 	\evensidemargin 0.0in  %% MJA kludge:  push everything to the left.
-	}
-	{
-	%	\oddsidemargin 0.5in   %   Note that \oddsidemargin = \evensidemargin
-	%	\evensidemargin 0.5in  % MJA:  Default behavior:  push everything to the right.	
-		\oddsidemargin 0.0in   %% MJA kludge:  push everything to the left.
-	 	\evensidemargin 0.0in  %% MJA kludge:  push everything to the left.
-	}
-%	\oddsidemargin 0.25in   %% MJA kludge  put everything in the middle.
-%	\evensidemargin 0.25in  %% MJA kludge 
+%	\ifthenelse{\boolean{isdraft}}
+%	{
+%    	\oddsidemargin 0.0in   %% MJA kludge:  push everything to the left.
+%	 	\evensidemargin 0.0in  %% MJA kludge:  push everything to the left.
+%	}
+%	{
+%	%	\oddsidemargin 0.5in   %   Note that \oddsidemargin = \evensidemargin
+%	%	\evensidemargin 0.5in  % MJA:  Default behavior:  push everything to the right.	
+%		\oddsidemargin 0.0in   %% MJA kludge:  push everything to the left.
+%	 	\evensidemargin 0.0in  %% MJA kludge:  push everything to the left.
+%	}
+	\oddsidemargin 0.25in   %% MJA kludge  put everything in the middle.
+	\evensidemargin 0.25in  %% MJA kludge 
    \marginparwidth 0pt
 \fi
 \marginparsep 10pt        % Horizontal space between outer margin and 

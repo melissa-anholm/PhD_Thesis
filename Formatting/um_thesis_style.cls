@@ -300,7 +300,8 @@
          University of Manitoba \\
          Winnipeg \par}         
          \vskip 9em
-         Copyright\@copyrightnotice
+         %Copyright
+         \@copyrightnotice
       \end{center} \par 
       \null
     } % end of vbox enclosing title info

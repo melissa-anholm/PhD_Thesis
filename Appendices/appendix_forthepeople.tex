@@ -34,15 +34,15 @@ We will use the Lee-Hang interaction Hamiltonian here, which incorporates a line
 \input{equation_LeeYangHamiltonian.tex}\unskip
 where $C_X$ and $C_X^{\prime}$ (with $X=\{V,A,S,T,P\}$) are complex coupling constants for vector, axial, scalar, tensor, and pseudoscalar interactions, and $\psi_Y$ (with $Y=\{p,n,e,\nu\}$) are the wavefunctions for the interaction's proton, neutron, electron, and neutrino.  Operators $\gamma_5$ and $\gamma_\mu$ are Dirac gamma matrices, and $\mbox{$\sigma_{\lambda\mu} = -\frac{i}{2}(\gamma_\lambda \gamma_\mu - \gamma_\mu\gamma_\lambda )$}$.  As usual, ``H.C.'' represents the Hermitian conjugate of the previous terms within the Hamiltonian.
 
-With these expressions in place, it is possible to obtain a complete solution for the differential decay rate of Eq.~\ref{eq:fermidifferentialdecayrate} in terms of physical observables.
+With these expressions in place, it is possible to obtain a complete solution for the differential decay rate of Eq.~(\ref{eq:fermidifferentialdecayrate}) in terms of physical observables.
 
 \note{Fermi formalism really only *has* the leading order things.  we've already gotten rid of some.}
-\note{Blurb continuation:  JTW is for the BSM shit, because they created it before they really knew which form the operators take.~\cite{jtw}\cite{jtw_coulomb}  Holstein is for the small contributions to physics that we actually know to exist.~\cite{holstein}\cite{holstein_errata}}
+\note{Blurb continuation:  JTW is for the BSM shit, because they created it before they really knew which form the operators take.~\cite{jtw,jtw_coulomb}  Holstein is for the small contributions to physics that we actually know to exist.~\cite{holstein,holstein_errata}}
 
 \section[JTW Formalism]{JTW Formalism}
 \label{sec:jtw_formalism}
-Rather than going through the full calculation to find the differential decay rate, I will instead simply give the result, taken from \ac{JTW} and others\cite{LeeYang}\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}.  To leading order, we find a five-dimensional \ac{PDF} for beta decay kinematics:  
-%\cite{LeeYang}\cite{jtw}\cite{jtw_coulomb}\cite{EbelFeldman1957}:
+Rather than going through the full calculation to find the differential decay rate, I will instead simply give the result, taken from \ac{JTW} and others~\cite{LeeYang,jtw,jtw_coulomb,EbelFeldman1957}.  To leading order, we find a five-dimensional \ac{PDF} for beta decay kinematics:  
+%\cite{LeeYang,jtw,jtw_coulomb,EbelFeldman1957}:
 %
 %
 %
@@ -57,7 +57,7 @@ where, for convenience, we have defined a nuclear alignment term,
 \note{Missing factors of c ??}
 %%%\aside{We have already specialized to $\beta^+$ decay.  .... Wait, we have?  Where?  ... There.  Fixed. It's not like that anymore.}
 
-In Eqs.~(\ref{equation:jtw_master}) and~(\ref{eq:Talign}), $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the outgoing $\beta$ particle's (total) energy, momentum 3-vector, and momentum scalar, while $\Enu$, $\vecpnu$, and $\pnu$ are the equivalent quantities for the outgoing (anti-)neutrino, and $E_0$ is the maximum possible $\beta$ energy associated with the transition.\aside{Holstein gives a formula for it.  Maybe I should write it out...}   $\vecJ$ is the nuclear angular momentum vector of the parent, and $J$ is its projection onto the axis of quantization. $\hatj$ is a unit vector in the direction of $\vecJ$ (note that in general, $\hatj \neq \frac{\vecJ}{J}$).  As usual, $\me$ is the mass of the electron, and $c$ is the speed of light.  The infinitesimal surface element $\dOmegabeta$ ($\dOmeganu$) represents the direction of $\beta$ (neutrino) emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with $Z^\prime$ the proton number of the daughter nucleus, and is evaluated as in e.g. Refs.~\cite{wilkinson2}\cite{wilkinson3}\cite{wilkinson4}. 
+In Eqs.~(\ref{equation:jtw_master}) and~(\ref{eq:Talign}), $\Ebeta$, $\vecpbeta$, and $\pbeta$ are the outgoing $\beta$ particle's (total) energy, momentum 3-vector, and momentum scalar, while $\Enu$, $\vecpnu$, and $\pnu$ are the equivalent quantities for the outgoing (anti-)neutrino, and $E_0$ is the maximum possible $\beta$ energy associated with the transition.\aside{Holstein gives a formula for it.  Maybe I should write it out...}   $\vecJ$ is the nuclear angular momentum vector of the parent, and $J$ is its projection onto the axis of quantization. $\hatj$ is a unit vector in the direction of $\vecJ$ (note that in general, $\hatj \neq \frac{\vecJ}{J}$).  As usual, $\me$ is the mass of the electron, and $c$ is the speed of light.  The infinitesimal surface element $\dOmegabeta$ ($\dOmeganu$) represents the direction of $\beta$ (neutrino) emission.  The function $\FFpm$ is known as a Fermi function for outgoing electrons (top) and positrons (bottom), with $Z^\prime$ the proton number of the daughter nucleus, and is evaluated as in \emph{e.g.} Refs.~\cite{wilkinson2,wilkinson3,wilkinson4}. 
 
 %\aside{Possibly it should be $Z^\prime$ and for the daughter nucleus...}  The Fermi function accounts for the electric force between the nucleus and the charged outgoing beta particle, and its integral over $\Ebeta$ has no closed form expression.
 
@@ -69,7 +69,7 @@ In Eqs.~(\ref{equation:jtw_master}) and~(\ref{eq:Talign}), $\Ebeta$, $\vecpbeta$
 For the reader's convenience, the kinematic factors unique to a particular transition are written out here in terms of their couplings.~\aside{...which are the same as in the Lee-Yang Hamiltonian!}
 \input{equations_jtw_params}
 
-In Eqs. \ref{eq:jtw_xi} - \ref{eq:jtw_DTRxi}, we have used $\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2}$, and as usual, $\alpha$ is the fine structure constant.  Here, $M_F$ and $M_{GT}$ are the Fermi and Gamow-Teller matrix elements, and are unique to the transition under consideration, 
+In Eqs.~(\ref{eq:jtw_xi}) - (\ref{eq:jtw_DTRxi}), we have used $\gamma := \left( 1-\alpha^2 Z^{\prime 2} \right)^{1/2}$, and as usual, $\alpha$ is the fine structure constant.  Here, $M_F$ and $M_{GT}$ are the Fermi and Gamow-Teller matrix elements, and are unique to the transition under consideration, 
 while the $C_X$ and $C_X^\prime$ (for $X = \{ V,A,S,T\} $) are as in Eq.~(\ref{eq:lee_yang_hamiltonian}).
 %are, as in the Lee-Yang Hamiltonian in Eq.~(\ref{eq:lee_yang_hamiltonian}), the complex coupling constants describing the global strength of vector, axial, scalar, and tensor couplings within charged weak interactions.  
 %
@@ -113,11 +113,11 @@ We have also made use of the following shorthand definitions of $\lambda_{J^\pri
 %%%}
 
 
-Note that Eq.~\ref{equation:jtw_master} depends on neutrino momentum, which we cannot observe directly;  to make use of the neutrino momentum, it must first be reconstructed from the momenta of the outgoing beta and daughter nucleus.
+Note that Eq.~(\ref{equation:jtw_master}) depends on neutrino momentum, which we cannot observe directly;  to make use of the neutrino momentum, it must first be reconstructed from the momenta of the outgoing beta and daughter nucleus.
 %Furthermore, we cannot use this expression to reconstruct neutrino momenta in our decay events either, because it would be necessary to account for the momentum of the recoiling daughter nucleus, treating the decay as a three-body problem.  
-From an experimental standpoint, within the present experiment we it is not possible to reconstruct the the neutrino momenta with the available data, because we failed to measure the momenta of the daughters in conjunction with the tagged beta decay events with which we are primarily concerned in this thesis, so there is insufficient kinematic information available.   
+From an experimental standpoint, within the present experiment it is not possible to reconstruct the neutrino momenta with the available data, because we failed to measure the momenta of the daughters in conjunction with the tagged beta decay events with which we are primarily concerned in this thesis, so there is insufficient kinematic information available.   
 
-From a theoretical standpoint, JTW has intentionally neglected recoil-order terms -- meaning that the daughter nucleus is treated, for the purpose of kinetic energy calculations, as being infinitely massive, and as such it must have no change in kinetic energy from the decay--however the approximation still allows for it to undergo a change in momentum.  One result of this approximation is that the neutrino energy, $\Enu$, is not a free variable within Eq.~\ref{equation:jtw_master}, since the total amount of energy released is fixed for a given transition.  The inherent inconsistencies of this approximation make it a tricky starting point for a description of neutrino and recoil kinematics.
+From a theoretical standpoint, JTW has intentionally neglected recoil-order terms -- meaning that the daughter nucleus is treated, for the purpose of kinetic energy calculations, as being infinitely massive, and as such it must have no change in kinetic energy from the decay--however the approximation still allows for it to undergo a change in momentum.  One result of this approximation is that the neutrino energy, $\Enu$, is not a free variable within Eq.~(\ref{equation:jtw_master}), since the total amount of energy released is fixed for a given transition.  The inherent inconsistencies of this approximation make it a tricky starting point for a description of neutrino and recoil kinematics.
 
 It is fortunately possible to simplify Eq.~(\ref{equation:jtw_master}) by integrating over all possible neutrino directions %(but not the neutrino energy), 
 such that the resulting distribution no longer depends on parameters that are not observed.  
@@ -159,7 +159,7 @@ however we do not require that they be positive, which would make the two conven
 There are a number of degrees of freedom left in the expressions that remain, and it is not immediately obvious how certain choices about these parameters might affect the physical results, or which approximations or assumptions ought to be made in order to arrive at a theory that matches the observational reality.  This is in part a result of the fact that the theory behind \ac{JTW} was developed before we had a detailed experimental understanding of much of the behaviour of beta decay, so all mathematically consistent behaviours are treated with roughly the same amount of consideration within the model.  
 
 %The qualitative meaning behind some such parameter choices is described in what follows.  
-Perhaps the most notable improvement to our understanding of Eqs.~(\ref{equation:integrated_jtw})-(\ref{eq:jtw_Abetaxi_integrated}) is that the weak interaction arises predominantly from vector ($C_V$, $C_V^\prime$) and axial-vector ($C_A$, $C_A^\prime$) couplings, and the scalar and tensor couplings, if present at all, are comparatively small.  
+Perhaps the most notable improvement to our understanding of Eqs.~(\ref{equation:integrated_jtw}) - (\ref{eq:jtw_Abetaxi_integrated}) is that the weak interaction arises predominantly from vector ($C_V$, $C_V^\prime$) and axial-vector ($C_A$, $C_A^\prime$) couplings, and the scalar and tensor couplings, if present at all, are comparatively small.  
 % and must be relegated to the realm of precision measurements to search for exotic physics. 
 In particular, 
 \bea
@@ -274,13 +274,13 @@ Note that the $f_i(\Ee)$ in Eq.~\ref{eq:holstein_FHFf} are the same spectral fun
 \input{equation_holstein_F2}\unskip
 \input{equation_holstein_F3}\unskip
 %and we might really appreciate if these things could be simplified a bit.  
-where most of the terms in Eqs.~\ref{equation:holstein_F0}-\ref{equation:holstein_F3} have yet to be defined.
+where most of the terms in Eqs.~(\ref{equation:holstein_F0}) - (\ref{equation:holstein_F3}) have yet to be defined.
 
 The terms $a_1, a_2, b, c_1, c_2, d, e, f, g, h, j_2, j_3$ are described as being structure functions.  Holstein gives some predictions for their form, assuming the impulse approximation holds, in his Eq.~(67).
 %\aside{There was something wrong with this assumption.  Something circular.  I forget.  Blah.}  
 For the most part, the forms of these structure functions are beyond the scope of this thesis, so I will not re-state them here, however
 %\aside{Or will I?}  
-it should be noted that the numerical values used for these parameters were taken from a private communication from Ian Towner to the TRINAT collaboration\cite{itownerCalcs}.
+it should be noted that the numerical values used for these parameters were taken from a private communication from Ian Towner to the TRINAT collaboration~\cite{itownerCalcs}.
 %\comment{It should be noted that the numerical values used for these parameters came from a private communication from Ian Towner to ... someone other than me.}  
 
 An exception is made for parameters $a_i$ and $c_i$, as these are closely related to the Fermi- and Gamow-Teller couplings for the transition, and must be compared to the equivalent expressions within JTW's formalism.  
@@ -301,7 +301,7 @@ c(q^2) &\approx& \frac{g_A(q^2)}{(1 + \frac{\Delta}{2M})} \left[ M_{GT} + \frac{
 + A \frac{\Delta}{2 M} M_{\sigma L} + \frac{1}{2} \Delta M_{\sigma r p} \right],
 \label{equation:full_c}
 \eea
-where $\Delta$ is the difference between the masses of the parent and daughter nuclei, $M_F$ and $M_{GT}$ are the familiar Fermi and Gamow-Teller matrix elements specific to the transition, and $g_V(q^2)$ and $g_A(q^2)$ are the universally applicable vector and axial couplings (which vary according to the energy scale involved).  The terms $M_{r^2}$, $M_{\mathbf{r} \cdot \mathbf{p} }$, $M_{\sigma r^2}$, $M_{1y}$, $M_{\sigma L}$, and $M_{\sigma r p}$ are matrix elements relating to the nuclear structure of the parent and daughter isotopes.  For the sake of simplicity, we note that for the transition of primary concern to us here, $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$, we find that \mbox{$M_{\mathbf{r} \cdot \mathbf{p} } = M_{\sigma L} = M_{\sigma r p} = 0$}, so those terms can safely be dropped\cite{itownerCalcs}.  Recalling that the energy dependence in $g_V(q^2)$ and $g_A(q^2)$ only becomes relevant at much higher energy scales, we will take the approximation that they are to be treated as constant.
+where $\Delta$ is the difference between the masses of the parent and daughter nuclei, $M_F$ and $M_{GT}$ are the familiar Fermi and Gamow-Teller matrix elements specific to the transition, and $g_V(q^2)$ and $g_A(q^2)$ are the universally applicable vector and axial couplings (which vary according to the energy scale involved).  The terms $M_{r^2}$, $M_{\mathbf{r} \cdot \mathbf{p} }$, $M_{\sigma r^2}$, $M_{1y}$, $M_{\sigma L}$, and $M_{\sigma r p}$ are matrix elements relating to the nuclear structure of the parent and daughter isotopes.  For the sake of simplicity, we note that for the transition of primary concern to us here, $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$, we find that \mbox{$M_{\mathbf{r} \cdot \mathbf{p} } = M_{\sigma L} = M_{\sigma r p} = 0$}, so those terms can safely be dropped~\cite{itownerCalcs}.  Recalling that the energy dependence in $g_V(q^2)$ and $g_A(q^2)$ only becomes relevant at much higher energy scales, we will take the approximation that they are to be treated as constant.
 %are nearly constant at the energy scales of concern to 
 It immediately follows that:
 \bea
@@ -355,7 +355,7 @@ If we make the further assumption that these form factors are identical, and tha
 \bea
 	X = Y = \frac{9\pi R}{140}
 \eea
-in the Eqs.~(\ref{eq:holstein_DeltaF1_Euvs} - \ref{eq:holstein_DeltaF7_Euvs}) that follow.
+in the Eqs.~(\ref{eq:holstein_DeltaF1_Euvs}) - (\ref{eq:holstein_DeltaF7_Euvs}) that follow.
 
 Because Holstein doesn't actually write 
 %this stuff out 
@@ -371,7 +371,7 @@ So, we'll write out the functions for these corrections.
 \input{equation_holstein_DeltaF4_Euvs}\unskip
 \input{equation_holstein_DeltaF7_Euvs}\unskip
 
-We note that the above corrections have been written in terms of $a=a(q^2)$ and $c=c(q^2)$, and we must use Eqs.~(\ref{equation:series_expand_a}, \ref{equation:series_expand_c}) to put the results in terms of $a_1$,  $a_2$, $c_1$, and $c_2$ so that they can be correctly combined with Eqs.~(\ref{equation:holstein_F0}-\ref{equation:holstein_F3}).
+We note that the above corrections have been written in terms of $a=a(q^2)$ and $c=c(q^2)$, and we must use Eqs.~(\ref{equation:series_expand_a}) and~(\ref{equation:series_expand_c}) to put the results in terms of $a_1$,  $a_2$, $c_1$, and $c_2$ so that they can be correctly combined with Eqs.~(\ref{equation:holstein_F0}) - (\ref{equation:holstein_F3}).
 
 If we evaluate Holstein's Eqs.~(B8) for $\beta^+$ decay modes (i.e., the \emph{lower} sign when the option arises), taking
 %, which I will absolutely not type out here, 
@@ -713,7 +713,7 @@ $u=v=J=J^\prime=3/2$ and $s=0$, we find the following values:
 %\section{Qualitative Parameter Descriptions and Convention Compatibility}
 \section{Combining Formalisms}
 \label{sec:combo_formalism}
-To combine the two formalisms, we begin by comparing individual terms within \ac{JTW}'s integrated \ac{PDF} (Eq.~\ref{equation:integrated_jtw}) and Holstein's comparable \ac{PDF} (Eq.~\ref{equation:holstein52}).  We find:
+To combine the two formalisms, we begin by comparing individual terms within \ac{JTW}'s integrated \ac{PDF} (Eq.~(\ref{equation:integrated_jtw})) and Holstein's comparable \ac{PDF} (Eq.~(\ref{equation:holstein52})).  We find:
 \bea
 \xi &\approx& G_v^2 \cos^2\theta_c \,\, F_0(\Ebeta)  \label{eq:jtw_holstein_xi}
 \\
@@ -723,7 +723,7 @@ where the equality is exact within certain limits as described below.
 
 With these relationships established, we can proceed to compare individual terms within each of the above expressions.  Recalling that \ac{JTW} retains fewer expansion terms than Holstein, and also neglects the smaller nuclear structure functions entirely, it is clear that many terms from Holstein simply have no equivalent within \ac{JTW}.  In fact, of the Holstein structure functions $a_1, a_2, b, c_1, c_2, d, e, f, g, h, j_2$, and $j_3$, only $a_1$ and $c_1$ are represented within \ac{JTW}.  Holstein has made it clear that $a_1$ and $c_1$ are related, respectively, to the Fermi (vector) and Gamow-Teller (axial) couplings.  However, \ac{JTW} uses more parameters to describe each of these:  the vector coupling is parameterized by $M_F$, $C_V$, and $C_V^\prime$, and the axial coupling by $M_{GT}$, $C_A$, and $C_A^\prime$.
 
-To properly compare the Holstein and JTW formalisms, Eqs.~(\ref{eq:jtw_holstein_xi}-\ref{eq:jtw_holstein_Abetaxi}) must be evaluated with $C_S \!=\! C_S^\prime \!=\! C_T \!=\! C_T^\prime = 0$, and $a_2 \!=\! b \!=\! c_2 \!=\! d \!=\! e \!=\! f \!=\! g \!=\! h \!=\! j_2 \!=\! j_3 \!=\! 0$, and $M = \infty$.  We find, from Eq.~(\ref{eq:jtw_holstein_xi}):
+To properly compare the Holstein and JTW formalisms, Eqs.~(\ref{eq:jtw_holstein_xi})-(\ref{eq:jtw_holstein_Abetaxi}) must be evaluated with $C_S \!=\! C_S^\prime \!=\! C_T \!=\! C_T^\prime = 0$, \mbox{$a_2 \!=\! b \!=\! c_2 \!=\! d \!=\! e \!=\! f \!=\! g \!=\! h \!=\! j_2 \!=\! j_3 \!=\! 0$}, and $M = \infty$.  We find, from Eq.~(\ref{eq:jtw_holstein_xi}):
 \bea
 | a_1 |^2 \,\,\, G_v^2 \cos^2\theta_c &=& | M_F |^2 \, (|C_V|^2 + |C_V^\prime|^2 )  
 \label{eq:holstein_a1_from_xi} 
@@ -758,7 +758,7 @@ a_1 &=& \frac{M_F}     {G_v \cos\theta_c} \, \frac{1}{\sqrt{2}} \, (C_V + C_V^\p
 c_1 &=& \frac{M_{GT}}{G_v \cos\theta_c} \, \frac{-1}{\sqrt{2}} \, (C_A + C_A^\prime ). 
 \label{eq:c1_def}
 \eea
-We note that in the above expressions, the terms ${G_v \cos\theta_c}$, $(C_V + C_V^\prime )$, and $(C_A + C_A^\prime )$ are universally applicable, while the portion of the couplings dependent on the structure of the nucleus resides entirely within the nuclear matrix elements $M_F$ and $M_{GT}$.
+We note that in the above expressions, the terms ${G_v \cos\theta_c}$, $(C_V + C_V^\prime )$, and \mbox{$(C_A + C_A^\prime )$} are universally applicable, while the portion of the couplings dependent on the structure of the nucleus resides entirely within the nuclear matrix elements $M_F$ and $M_{GT}$.
 %\note{}
 
 For convenience, we define the following left-handed couplings for vectors, axial vectors, scalars, and tensors:
@@ -802,9 +802,9 @@ Now, Eqs.~(\ref{eq:jtw_holstein_sign},\ref{eq:jtw_Abetaxi_integrated_LH}, \ref{e
 Eq.~(\ref{bFierzwithrho}) is also consistent.  
 }
 %
-The sign ambiguity can be attributed to a sign ambiguity in the original \ac{JTW} publications.  The result is that the literature can't seem to agree on a single sign convention, or even whether the convention ought to be the same in the cases of $\beta^-$/$\beta^+$ decay.  See, for example, Refs~\cite{dan_thesis}\cite{GCBall2000}\cite{Raman1978}.  The important point is that, for whichever convention is in use, the equations result in broadly correct physical behaviour.  In the case of $^{37}$K, we can use the fact that the overall sign of $\Abeta$ \emph{must} be negative within our mathematical expressions, because it is experimentally measured to be negative.  
+The sign ambiguity can be attributed to a sign ambiguity in the original \ac{JTW} publications.  The result is that the literature can't seem to agree on a single sign convention, or even whether the convention ought to be the same in the cases of $\beta^-$/$\beta^+$ decay.  See, for example, Refs.~\cite{dan_thesis,GCBall2000,Raman1978}.  The important point is that, for whichever convention is in use, the equations result in broadly correct physical behaviour.  In the case of $^{37}$K, we can use the fact that the overall sign of $\Abeta$ \emph{must} be negative within our mathematical expressions, because it is experimentally measured to be negative.  
 
-We are now in a position to write out Eqs.~(\ref{eq:jtw_xi_integrated}), (\ref{eq:jtw_bxi_integrated}), and (\ref{eq:jtw_Abetaxi_integrated}) in terms of only real, left-handed couplings.  Doing so, we note that if the couplings are required to be real, then $\bFierz$ is \emph{only} sensitive to left-handed scalar or tensor couplings, and within $\Abeta$, the requirement is only that the scalar and tensor couplings must have \emph{the same} handedness.
+We are now in a position to write out Eqs.~(\ref{eq:jtw_xi_integrated}),~(\ref{eq:jtw_bxi_integrated}), and (\ref{eq:jtw_Abetaxi_integrated}) in terms of only real, left-handed couplings.  Doing so, we note that if the couplings are required to be real, then $\bFierz$ is \emph{only} sensitive to left-handed scalar or tensor couplings, and within $\Abeta$, the requirement is only that the scalar and tensor couplings must have \emph{the same} handedness.
 
 The resulting expressions are:
 \input{equations_jtw_params_LH.tex}

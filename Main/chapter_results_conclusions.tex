@@ -20,7 +20,9 @@ After corrections have been applied and uncertainties evaluated, statistical con
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/Chi2_2D_AllData.png}
-	\caption[$\chi^2$ Map for All Data]{A $\chi^2$ map to compare all data to a simulated parameter space of $\Abeta$ and $\bFierz$ values.  All corrections have been included, however only statistical confidence intervals are shown.}	
+	\caption[$\chi^2$ Map for All Data]{A $\chi^2$ map to compare all experimental data to a simulated parameter space of $\Abeta$ and $\bFierz$ values.  The minimum reduced $\chi^2$ value is 0.95145.  All corrections have been included, however only statistical confidence intervals are shown.  
+	%\copyright~2022 Melissa Anholm.
+	}	
 	\label{fig:2dchi2_alldata}
 \end{figure}
 %
@@ -38,11 +40,16 @@ and a list of contributing uncertainties is provided in Table~\ref{table:budget}
 \label{sec:compare_Abeta}
 \note{Here, I have to move over some of the other section's stuff.
 Also, talk about how this measurement compares with the collaboration's previous.}
-The uncertainty associated with this measurement of $\Abeta$ is significantly larger than the collaboration's previous measurement of $\Abeta$ using the same data, in which the final result was $\mbox{$\Abeta = -0.5707 \pm 0.0013(\textrm{stat}) \pm 0.0013(\textrm{sys}) \pm 0.0005(\textrm{pol})$}$~\cite{ben_Abeta} before correcting for a data selection issue that only became apparent after publication.  However, it must be noted that the present measurement is a two-parameter measurement rather than a one-parameter measurement, so it is expected that the uncertainty associated with a single parameter should be larger.
+The uncertainty associated with this measurement of $\Abeta$ is significantly larger than the collaboration's previous measurement of $\Abeta$ using the same data, in which the final result was $\mbox{$\Abeta = -0.5707 \pm 0.0013(\textrm{stat}) \pm 0.0013(\textrm{sys}) \pm 0.0005(\textrm{pol})$}$~\cite{ben_Abeta} before correcting for a data selection issue that only became apparent after publication.  (The third $\Abeta$ uncertainty term, labelled `pol', arises from the uncertainty in the associated nuclear polarization measurement, which is statistically independent from the other contributions and has very few systematics in common with the other terms.  This contribution is not present in the $\bFierz$ error budget because to leading order the polarization has no effect on $\bFierz$.)  In considering the collaboration's published result for $\Abeta$, it must be noted that 
+the present measurement is a two-parameter measurement rather than a one-parameter measurement, so it is expected that the uncertainty associated with a single parameter should be larger.
 
-To evaluate whether the two measurements are consistent, a thin vertical slice of Fig.~\ref{fig:2dchi2_alldata} can be extracted at $\bFierz=0$, and its projection will provide the centroid (including systematic offsets) and statistical error associated with a one-parameter analysis for $\Abeta$ --- though this method cannot produce an estimate of the extent to which systematic uncertainties might be different.  This simple check gives a one-parameter measurement of $\Abeta = -0.5714 \pm 0.0020(\textrm{stat})$.
+%However, 
 
-The above one-parameter result for $\Abeta$ is consistent with the collaboration's prior uncorrected \emph{and} corrected results, even after one accounts for the fact that the previous result suffered from an oversight in which some partially polarized data was not removed from the final analysis for $\Abeta$, despite the fact that this cut \emph{was} implemented in the associated polarization measurement.  This accounts for $5\%$ of the data used in that analysis, and is estimated to decrease the average polarization by approximately $0.3\%$.  
+To evaluate whether the collaboration's previous measurement of $\Abeta$ is consistent with the results of this analysis, a thin vertical slice of Fig.~\ref{fig:2dchi2_alldata} can be extracted at $\bFierz=0$, and its projection will provide the centroid (including systematic offsets) and statistical error associated with a one-parameter analysis for $\Abeta$ --- though this method cannot produce an estimate of the extent to which systematic uncertainties might be different.  This simple check gives a one-parameter measurement of $\Abeta = -0.5714 \pm 0.0020(\textrm{stat})$.
+
+
+
+While it is unclear why the statistical uncertainty remains so much larger in the present analysis even after eliminating one of the parameters, this one-parameter result for $\Abeta$ is at least consistent with \emph{both} the collaboration's prior uncorrected and corrected results, even after one accounts for the fact that the previous result suffered from an oversight in which some partially polarized data was not removed from the final analysis for $\Abeta$, despite the fact that this cut \emph{was} implemented in the associated polarization measurement.  This accounts for $5\%$ of the data used in that analysis, and is estimated to decrease the average polarization by approximately $0.3\%$.  
 \note[tag]{Somewhere I have to say what the polarization actually was.}
 An estimate of the size of the effect on the previous measurement of $\Abeta$ suggests that the true value of $\Abeta$ is likely to be $\sim 0.0016$ more negative than reported.  
 %Furthermore, there is no uncertainty associated with polarization described within the present analysis, simply because to leading order there is no effect on $\bFierz$, although it strongly affects a measurement of $\Abeta$.  
@@ -54,10 +61,11 @@ Accounting for this, a more accurate one-parameter measurement might produce the
 \label{sec:scalartensorlimits}
 \label{sec:relation_to_other_measurements}
 \note{begin literal quote from John:}
-The best existing measurement of the Fierz interference term is in the decay of the neutron, with
-\mbox{$\bFierz = 0.017 \pm 0.021$} --- consistent with the standard model prediction of zero, and with previous results for the neutron's $\bFierz$~\cite{Saul2020}\cite{UCNAfierz2020}. Our measurement is strongly related, yet complementary.  
+The best existing measurements of the Fierz interference term are taken from the decay of the neutron, with \mbox{$\bFierz = 0.017 \pm 0.021$} from PERKEO III being both the most precise and most recent result~\cite{Saul2020}, published only a few months after a result of $\bFierz = 0.066 \pm 0.041$(stat) $\pm 0.024$(sys) from their UCNA competitors~\cite{UCNAfierz2020}.  These results are \emph{nearly} consistent with the standard model prediction of zero at the 1-$\sigma$ level.
+
+%consistent with the standard model prediction of zero, and with the two recent (and independent) results for the neutron's $\bFierz$ value~\cite{Saul2020,UCNAfierz2020}. 
 %
-This result for $\bFierz$ cannot be directly compared to our result in $^{37}$K, because the neutron's sensitivity to scalar and tensor couplings is different than our own.  In particular, using $\rho$ as defined in Eq.~\ref{eq:definerho_intro}
+Our measurement is strongly related, yet complementary.  The measured values of $\bFierz$ cannot be directly compared between the neutron and $^{37}$K, because the neutron's sensitivity to scalar and tensor couplings is different than our own.  In particular, using $\rho$ as defined in Eq.~(\ref{eq:definerho_intro})
 %$\lambda := \frac{g_A M_{GT}}{g_V M_F}$, a parameter unique to a given transition (see Eq.~(\ref{eq:definelambda}) and the related discussion)
 we find:
 %
@@ -67,12 +75,12 @@ we find:
 %\bFierz = \pm \frac{(C_S +C_S') + (C_T - C_T') \lambda^2}{ 1 + \lambda^2}
 \label{eq:bFierz_in_conclusion}
 \eea
-where the top/bottom sign is for $\beta^-$/$\beta^+$ decay, and $g_X$ ($X = \{ V,A,S,T\} $) is a purely left-handed coupling for vectors, axial-vectors, scalars, and tensors~\cite{jtw}\cite{jtw_coulomb}.
+where the top/bottom sign is for $\beta^-$/$\beta^+$ decay, and $g_X$ ($X = \{ V,A,S,T\} $) is a purely left-handed coupling for vectors, axial-vectors, scalars, and tensors~\cite{jtw,jtw_coulomb}.
 %~\aside{I think we're missing a $\gamma$.}
 %(the plus is for $\beta^-$ decay and the - for $\beta^+$ decay)
 In the case of $^{37}$K, a previous measurement puts $ | \rho | \approx 0.576 $, while, in the case of the neutron, the equivalent quantity within Eq.~(\ref{eq:bFierz_in_conclusion}) is 
 %$| \rho | \approx 
-$\sim 2.215 $~\cite{NeutronAbeta2018}\cite{Saul2020}\cite{UCNAfierz2020}.
+$\sim$2.215~\cite{NeutronAbeta2018,Saul2020,UCNAfierz2020}.
 \note{is it always lambda for the neutron???  ... possibly.}
 %%$\lambda$ is close to $\sqrt{3/5}$ (the expected value of \mbox{$J/(J+1)$} for a single $J=3/2$, $d 3/2$ nucleon)~\cite{deShalit1963}
 %%In our $^{37}$K case, $\lambda^2$ = $|M_{\rm GT}|^2$/$|M_{\rm F}|^2$ is close to 3/5 (the expected value of \mbox{$J/(J+1)$} for a single $J=3/2$, $d 3/2$ nucleon)~\cite{deShalit1963},
@@ -84,7 +92,9 @@ This means that our observable is comparatively less sensitive to Lorentz tensor
 \begin{figure}[h!t!b!]
 	\centering
 	\includegraphics[width=.999\linewidth]{Figures/ScalarTensorLimits.pdf}
-	\caption[An exclusion plot for left-handed scalar and tensor couplings comparing this work with the recent $\bFierz$ measurement in the neutron]{An exclusion plot comparing the measured $1\sigma$ limits for left-handed scalar and tensor couplings, comparing this work with the recent $\bFierz$ measurement in the neutron\cite{Saul2020}.}
+	\caption[An exclusion plot for left-handed scalar and tensor couplings comparing this work with the recent $\bFierz$ measurement in the neutron]{An exclusion plot comparing the measured $1\sigma$ limits for left-handed scalar and tensor couplings, comparing this work with the recent $\bFierz$ measurement in the neutron~\cite{Saul2020}.  Figure is modelled after a script provided by John Behr.  
+	%\copyright~2022 Melissa Anholm.
+	}
 	\note{Pretty sure the sign of the $C_S$ constraint is flipped.  Also, I just can't get this centroid or these limits.  What?}
 	\note[jbn]{For [bfierz exclusion plot], you have the sign correct and I don't, though I think you need $-b (1+\lambda^2)/2 = -0.02$
 \\...\\
@@ -96,6 +106,10 @@ then one just substitutes the values of bf you want to plot, like maybe the cent
 
 However, measurements of the superallowed $0^+ \rightarrow 0^+$ beta decays are able to produce constraints on scalar couplings which are unrivaled by any other type of measurement, and improving with every experimental generation.  Though these transitions offer no sensitivity at all to tensor couplings, it would be incredibly difficult for a mixed transition measurement such as ours to compete on scalar coupling limits with the superallowed $0^+ \rightarrow 0^+$ transitions.  
 At the time of writing, measurements of average $\Ebeta$ values from superallowed $0^+ \rightarrow 0^+$ transitions have together produced a constraint of \mbox{$\left| C_S / C_V \right| \leq 0.0010$} at the $1\sigma$ confidence level~\cite{HardyTownerSuperallowed2020}.
+
+Nevertheless, it is valuable to the physics community to be able to measure observables relating to exotic physics through multiple independent experimental approaches.  As each type of measurement is necessarily sensitive to different systematic effects, the apparent redundancy of a measurement such as this one is more appropriately interpreted as a valuable cross-check. 
+
+
 %At the time of writing, the superallowed $0^+ \rightarrow 0^+$ transition measurements have together produced a constraint of \mbox{$\left| C_S / C_V \right| \leq 0.0010$} at the $1\sigma$ confidence level~\cite{HardyTownerSuperallowed2020}.
 \note{}
 
@@ -127,13 +141,13 @@ As discussed in Ch.~\ref{intro_chapter}, the nuclear weak force is known to be a
 normal-matter leptons (such as the electron and electron neutrino) emerge with left-handed chirality,
 while the anti-leptons (e.g. the positron and electron anti-neutrino) emerge with right-handed chirality.  
 
-In the limit of massless particles, the particle's chirality is the same as its helicity. Thus, in a left-handed model, the direction of an (ultrarelativistic) normal lepton's spin is antiparallel direction of its motion, and the direction of spin for an anti-lepton is parallel to its direction of motion.  For a non-relativistic particle the property of chirality is fairly abstract, and describes the appropriate group representation and projection operators to be used in calculations.  It should be noted that a fully chiral model is also one which is maximally parity violating.
+In the limit of massless particles, the particle's chirality is the same as its helicity. Thus, in a left-handed model, the direction of an (ultrarelativistic) normal lepton's spin is antiparallel to its direction of motion, and the direction of spin for an anti-lepton is parallel to its direction of motion.  For a non-relativistic particle the property of chirality is fairly abstract, and describes the appropriate group representation and projection operators to be used in calculations.  It should be noted that a fully chiral model is also one which is maximally parity violating.
 
-This odd quirk of the nuclear weak force is not only \emph{predominantly} true, but it is, to the best of our current scientific knowledge, \emph{always} true -- that is, attempts to measure any right-handed chiral components of the weak force have produced results consistent with zero~\cite{severijns_beck_cuncic_2006}\cite{severijns_cuncic_2011}.  This project proposes a further measurement to constrain the strength of the right-handed component of the weak interaction.  
+This odd quirk of the nuclear weak force is not only \emph{predominantly} true, but it is, to the best of our current scientific knowledge, \emph{always} true --- that is, attempts to measure any right-handed chiral components of the weak force have produced results consistent with zero~\cite{severijns_beck_cuncic_2006,severijns_cuncic_2011}.  This project proposes a further measurement to constrain the strength of the right-handed component of the weak interaction.  
 
 Although the primary focus of this thesis is a search for exotic scalar and tensor couplings within the weak force, it is clear that a precision search for right-handed vector and axial-vector $(V+A)$ interactions would be motivated by very similar rationale.
 
-In the proposed experiment, we focus once again on the spin-polarized decay, \mbox{$^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$}, exploiting the principle of conservation of angular momentum as it applies to this transition.  The proposed analysis could be performed on the data that has already been collected, although as we will see, there are some inherent difficulties to this approach which might be eliminated with a fresh set of decay data.
+In the proposed experiment, we focus once again on the spin-polarized decay, \mbox{$^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$}, exploiting the principle of conservation of angular momentum as it applies to this transition.  The proposed analysis could be performed on the data that has already been collected, although, as we will see, there are some inherent difficulties to this approach which might be eliminated with a fresh set of decay data.
 
 
 
@@ -151,25 +165,28 @@ The decay may be treated as a three-body problem in which the available kinetic 
 
 It should be noted that for the class of decays of greatest interest, where the beta and the neutrino emerge back-to-back along the polarization axis, the recoiling daughter nucleus will have zero momentum along the directions perpendicular to this axis, and on average less total energy than if the beta and neutrino were emitted in a parallel direction.  Henceforth, daughter nuclei from a back-to-back decay as shown in Figure~\ref{fig:rhc} will be described as `slow' recoils.  In terms of observables, 
 %these slow recoils, upon being swept into a detector by an ambient electric field, 
-this means that if the electric field is configured to point along one of the axes perpendicular to the polarization direction, then when the recoiling ion is swept away into a detector, the slow recoil's hit position should be exactly along the projection of the polarization axis.  Furthermore, the slow recoil's time of flight should be in the middle of the time of flight spectrum, since other recoils will be emitted with momentum towards or away from the detector.  Of course, this is a simplistic description; in nature, no matter how strong the right-handed couplings, emitted particles will have a continuous angular spectrum -- the above is only meant to describe the angular set up which would give us maximal sensitivity to observables relating to right-handed currents.  
+this means that if the electric field is configured to point along one of the axes perpendicular to the polarization direction, then when the recoiling ion is swept away into a detector, the slow recoil's hit position should be exactly along the projection of the polarization axis.  Furthermore, the slow recoil's time of flight should be in the middle of the time of flight spectrum, since other recoils will be emitted with momentum towards or away from the detector.  Of course, this is a simplistic description; in nature, no matter how strong the right-handed couplings, emitted particles will have a continuous angular spectrum -- the above is only meant to describe the angular setup which would give us maximal sensitivity to observables relating to right-handed currents.  
 
 \begin{figure}[h!t!b!]
 	\centering
 	\includegraphics[width=.999\linewidth]{Figures/RHC.png}
 	\caption[A Comparison of Left-Handed and Right-Handed Couplings]{A comparison of left-handed and right-handed vector and axial couplings in polarized beta decay.  The above are extremal examples;  in nature there is no requirement for the leptons to be emitted back-to-back, or for either to be emitted along the axis of polarization.  However the class of events with minimal momentum allocated to the recoiling daughter nucleus (i.e., the result of back-to-back lepton emission) is what provides the most sensitivity to the $\Rslow$ observable, and a $\beta$ coincidence (our detectors are located along the axis of polarization) is required.
-	The precise scenario on the right is the only one that is \emph{completely} disallowed in the absence of right-handed couplings, and only in the relativistic limit.  For intermediate decay scenarios, the probability is simply suppressed based on the extent to which the usual left-handed coupling can access the phase space.
+	The precise scenario on the right is the only one that is \emph{completely} disallowed in the absence of right-handed couplings, and only in the relativistic limit.  For intermediate decay scenarios, the probability is simply suppressed based on the extent to which the usual left-handed coupling can access the phase space.  
+	%\copyright~2022 Melissa Anholm.
 	\label{fig:rhc}
 	}
 \end{figure}
 
-The recoiling $^{37}\textrm{\!Ar}$ nucleus is a bit trickier to work with in some ways than an outgoing beta particle, but it is possible to do, and a necessary component of this measurement.  One useful feature of the $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar}$ transition is that, in addition to the $\beta^+$ emitted in the decay itself, one or more \emph{orbital} electrons from the parent atom are typically lost.  In the majority of decay events only one orbital electron is shaken off, which results in the daughter $^{37}\textrm{\!Ar}$ atom being electrically neutral~\cite{gorelov2000}\cite{dan_thesis}.  In the remaining cases, two or more orbital electrons are lost this way, and the daughter atom is positively charged.  If we apply an electric field perpendicular to the direction of polarization, these positively charged $^{37}\textrm{\!Ar}^{(+n)}$ ions may be collected into a detector, from which hit position and time of flight information may be extracted.  The shake-off electrons are emitted with an average energy of only $\sim$ 2\,eV so to a very good approximation the other decay products are not perturbed by the presence of shake-off electrons\cite{Levinger}.  
+The recoiling $^{37}\textrm{\!Ar}$ nucleus is a bit trickier to work with in some ways than an outgoing beta particle, but it is possible to do, and a necessary component of this measurement.  One useful feature of the $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar}$ transition is that, in addition to the $\beta^+$ emitted in the decay itself, one or more \emph{orbital} electrons from the parent atom are typically lost.  In the majority of decay events only one orbital electron is shaken off, which results in the daughter $^{37}\textrm{\!Ar}$ atom being electrically neutral~\cite{gorelov2000,dan_thesis}.  In the remaining cases, two or more orbital electrons are lost this way, and the daughter atom is positively charged.  If we apply an electric field perpendicular to the direction of polarization, these positively charged $^{37}\textrm{\!Ar}^{(+n)}$ ions may be collected into a detector, from which hit position and time of flight information may be extracted.  The shake-off electrons are emitted with an average energy of only $\sim$ 2\,eV so to a very good approximation the other decay products are not perturbed by the presence of shake-off electrons~\cite{Levinger}.  
 
 The potential exists to use these shake-off electrons as a tag for good events, in a way similar to what has been done in the present measurements of $\bFierz$ and $\Abeta$.  This could greatly improve the cleanliness of the spectra.  Unfortunately, within the 2014 data that has already been collected, the recoil detector and electron detector could not be made to work simultaneously.  Some of the resulting spectra are shown in Fig.~\ref{fig:RslowSpectra}.  While an analysis to search for right-handed interactions could be performed on existing data, it would likely \emph{significantly} improve the results if a new dataset were collected with both \ac{MCP} detectors working at the same time. 
 
 \begin{figure}[htb]
 	\centering
 	\includegraphics[width=.999\linewidth]{Figures/Rslow_tof_squished.png}
-	\caption[Recoil TOF Spectra at 535 V/cm]{Recoil TOF Spectra for $^{37}$K, taken at 535 V/cm.  Recoil spectra are partially separated by charge state.  For the most part, the dips within the centre of each charge state distribution are the result of the decay chamber's geometry.  However, within these spectra, a non-zero $\Rslow$ would manifest as a change in the relative sizes of the mid-charge-state dips when comparing the red and blue spectra.	}
+	\caption[Recoil TOF Spectra at 535 V/cm]{Recoil TOF Spectra for $^{37}$K, taken at 535 V/cm.  Recoil spectra are partially separated by charge state.  For the most part, the dips within the centre of each charge state distribution are the result of the decay chamber's geometry.  However, within these spectra, a non-zero $\Rslow$ would manifest as a change in the relative sizes of the mid-charge-state dips when comparing the red and blue spectra.	
+	%\copyright~2022 Melissa Anholm.
+	}
 	\label{fig:RslowSpectra}
 \end{figure}
 
@@ -193,11 +210,15 @@ This two-parameter analysis to measure $\Abeta$ and $\bFierz$ has produced the r
 \eea
 where uncertainties are evaluated at 1$\sigma$.  This measurement of $\bFierz$ is consistent with the standard model value of $\bFierz=0$ for the absence of scalar and tensor currents, and $\Abeta$ is consistent both with the collaboration's prior measurement of $\Abeta$, as well as with the theory prediction using no exotic physics, at 
 %value predicted by the standard model at
-$\Abeta=-0.5706\pm0.0007$.  %\aside[tag]{somewhere, I have to define $\Abeta$ in terms of $\lambda$...}
+$\Abeta=-0.5706\pm0.0007$.  %\aside[tag]{somewhere, I have to define $\Abeta$ in terms of $\lambda$...} 
+To date there is little credible experimental evidence for the presence of scalar or tensor interactions;  the fact that our result is consistent with $\bFierz=0$ indicates that we are in agreement with the experimental community as well.
 
-The result for $\bFierz$ is dominated by statistical uncertainty, suggesting that the measurement could be improved simply by counting longer.  There is also room for improvement in the systematic uncertainty, which is dominated by scattering and the related measurements of material thicknesses.  
+%a non-zero $\bFierz$ value; this means that our own measured $\bFierz$ value is also consistent with the other \emph{experimental} evidence.
+
+The result for $\bFierz$ is dominated by statistical uncertainty, suggesting that the measurement could be improved simply by counting longer.  It is unlikely, with the present apparatus, to be possible to count \emph{faster} instead, as the event rates recorded are already approaching the maximum that our data acquisition system can tolerate without causing problems.  Unfortunately, to extract $^{37}$K at a reasonable rate, a special titanium carbide target must be built and installed.  This is not a desirable target for the other research groups at TRIUMF, so they are available only infrequently.  However --- and perhaps especially in light of the present result --- it is likely that TRINAT will have access to a titanium carbide target again at some point in the future, and it will then be possible to perform an updated measurement of $\bFierz$ in $^{37}$K.
+
+There is also room for improvement to the systematic uncertainty, which is dominated by scattering and the related measurements of material thicknesses.  
 \note[tag]{Gerald says:  write another paragraph here.}
-
 \note{begin direct quote from John:}
 Largely because of this result,
 the collaboration is working to reduce the largest systematics,
@@ -208,6 +229,7 @@ The projected systematic uncertainty could approach 0.01 in a future
 experment, which would then likely continue to be limited by statistics.
 \note{end quote from John.}
 
+%Precision measurements in nuclei are of continued interest to the scientific community as a way to search for or constrain exotic physics, and
 
 
 

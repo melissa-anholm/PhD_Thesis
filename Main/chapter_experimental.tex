@@ -23,7 +23,7 @@ several related experiments using other isotopes.
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/DoubleMot5.pdf}
-	\caption[The TRINAT experimental set-up, viewed from above]{The TRINAT experimental set-up, viewed from above.  Ions from the beamline pass through the collection chamber onto the neutralizer, which is held at ground.  The neutralizer is heated to release the neutral atoms from its surface back into the collection chamber, where some are collected into a \ac{MOT}.  Atoms from the collection chamber's MOT are transferred directly into the detection chamber's MOT approximately once per second, kept focused during the transfer by funnel beams (lasers).  Within the detection chamber, background events are dramatically reduced.  }
+	\caption[The TRINAT experimental set-up, viewed from above]{The TRINAT experimental set-up, viewed from above.  Ions from the beamline pass through the collection chamber onto the neutralizer, which is held at ground.  The neutralizer is heated to release the neutral atoms from its surface back into the collection chamber, where some are collected into a \ac{MOT}.  Atoms from the collection chamber's MOT are transferred directly into the detection chamber's MOT approximately once per second, kept focused during the transfer by funnel beams (lasers).  Within the detection chamber, background events are dramatically reduced.  Diagram was provided courtesy of Alexandre Gorelov, but has been lightly modified by the author. }
 	\label{fig:doublemot}
 \note{Figure was originally created by Alexandre, modified by ... someone else?  Or Alexandre?  And I got it from ... probably an experimental proposal?  I should figure out how to cite a proposal...}
 %%\note[jbnn]{In Fig 2.2 caption ``Every 16 sec the atoms are transferred''
@@ -84,7 +84,9 @@ We now turn our attention to what happens to the atom cloud in the detection cha
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/DutyCycle_2014.pdf}
-	\caption[The 2014 duty cycle for transferring, cooling, trapping, and optically pumping $^{37}\textrm{K}$]{The duty cycle used for transferring, cooling, trapping, and optically pumping $\isotope[37]{K}$ during the June 2014 experiment.  Not drawn to scale.  Question marks indicate timings that varied either as a result of electronic jitter or as a result of variable times to execute the control code.  Atoms are transferred during operation of the DC-MOT.  Though the push beam laser itself is only on for $30\,$ms, the bulk of the DC-MOT's operation time afterwards is needed to collect and cool the transferred atoms.  After 100 on/off cycles of optical pumping and the AC-MOT, the DC-MOT resumes and the next group of atoms is transferred in.  After 16 atom transfers, the polarization of the optical pumping laser is flipped to spin-polarize the atoms in the opposite direction, in order to minimize systematic errors.}	
+	\caption[The 2014 duty cycle for transferring, cooling, trapping, and optically pumping $^{37}\textrm{K}$]{The duty cycle used for transferring, cooling, trapping, and optically pumping $\isotope[37]{K}$ during the June 2014 experiment.  Not drawn to scale.  Question marks indicate timings that varied either as a result of electronic jitter or as a result of variable times to execute the control code.  Atoms are transferred during operation of the DC-MOT.  Though the push beam laser itself is only on for $30\,$ms, the bulk of the DC-MOT's operation time afterwards is needed to collect and cool the transferred atoms.  After 100 on/off cycles of optical pumping and the AC-MOT, the DC-MOT resumes and the next group of atoms is transferred in.  After 16 atom transfers, the polarization of the optical pumping laser is flipped to spin-polarize the atoms in the opposite direction, in order to minimize systematic errors.  
+	%\copyright~2022 Melissa Anholm.
+	}	
 	\label{fig:dutycycle}
 	\note[jbnn]{You could similarly (relative to the thing with the Swanson transfer method) comment a paragraph of critical things concerning the polarization, using your figure of the duty cycle as a guide.
 	\\...\\
@@ -140,7 +142,8 @@ Some details of the present implementation of the AC-MOT are given in Ref.~\cite
 \begin{figure}[ht]
 	\centering
 		\includegraphics[width=.999\linewidth]{acmot.png}
-		\caption[The AC-MOT and Optical Pumping Cycle]{One cycle of trapping with the AC-MOT, followed by optical pumping to spin-polarize the atoms.  After atoms are transferred into the science chamber, this cycle is repeated 100 times before the next transfer.  The magnetic dipole field is created by running parallel (rather than anti-parallel as is needed for the MOT) currents through the two coils.}
+		\caption[The AC-MOT and Optical Pumping Cycle]{One cycle of trapping with the AC-MOT, followed by optical pumping to spin-polarize the atoms.  After atoms are transferred into the science chamber, this cycle is repeated 100 times before the next transfer.  The magnetic dipole field is created by running parallel (rather than anti-parallel as is needed for the MOT) currents through the two coils.  %\copyright~2022 Melissa Anholm.
+		}
 		\label{fig:acmot}
 \end{figure}
 
@@ -159,7 +162,7 @@ Some details of the present implementation of the AC-MOT are given in Ref.~\cite
 
 \note{Probably document things about the waveform and frequency used for the beamtime, since I don't think it's in my MSc.}
 
-As alluded to in the previous section~(\ref{section:overview}), the measurements in question required a spin-polarized sample of atoms, and a precise knowledge of what that polarization was.  This is needed in order to make best use of the superratio asymmetry for both $\Abeta$ and $\bFierz$ measurements.~\cite{ben_Abeta}\cite{ben_OP}.
+As alluded to in the previous section~(\ref{section:overview}), the measurements in question required a spin-polarized sample of atoms, and a precise knowledge of what that polarization was.  This is needed in order to make best use of the superratio asymmetry for both $\Abeta$ and $\bFierz$ measurements~\cite{ben_Abeta,ben_OP}.
 
 A MOT requires a quadrupolar magnetic field, and we generate ours with two current-carrying anti-Helmholtz coils located within the vacuum chamber itself.  Since these coils are expected to run an alternating current, heat is produced and cannot be dissipated in the vacuum.  Therefore the coils themselves are hollow copper tubes, and they are continuously cooled by pumping temperature-controlled water through them.   
 
@@ -168,7 +171,7 @@ A MOT requires a quadrupolar magnetic field, and we generate ours with two curre
 (cite someone), so our dominant loss mechanism is radioactive decay rather than thermal escape. }
 
 
-We spin-polarize $^{37}\textrm{K}$ atoms within the trapping region by optical pumping (See Ch.~\ref{sec:op})~\cite{ben_OP}.  In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  
+We spin-polarize $^{37}\textrm{K}$ atoms within the trapping region by optical pumping (see Ch.~\ref{sec:op})~\cite{ben_OP}.  In order to optimally polarize a sample of atoms by this method, it is necessary to have precise control over the magnetic field.  
 %This is because absent other forces, a spin will undergo Larmor precession about the magnetic field lines.  
 In particular, the magnetic field must be aligned along the polarization axis, 
 %(otherwise the tendency will be to actually depolarize the atoms), 
@@ -197,7 +200,7 @@ Final trimming was done by optimizing the polarization of (stable) $^{41}$K atom
 
 
 The AC-MOT and optical pumping magnetic fields were generated using Stanford Research Systems' DS345 arbitrary waveform generators, and amplified by two \mbox{Matsusada} DOP 25-80 bipolar amplifiers (20 kHz bandwidth, with $\pm$25 V and $\pm$80 A).
-The waveforms were carefully trimmed in shape, time, and amplitude to minimize magnetic fields resulting from induced from eddy currents during the optical pumping cycle, again with the MCP assembly removed and the vacuum chamber kept open to air.
+The waveforms were carefully trimmed in shape, time, and amplitude to minimize magnetic fields resulting from induced eddy currents during the optical pumping cycle, again with the MCP assembly removed and the vacuum chamber kept open to air.
 
 Because the amplifiers' bandwidth was inadequate when using current control mode, so voltage control had to be used instead, allowing only for indirect control of the current.  This proved to be a much more time consuming process, requiring empirical iteration.  
 %, a much more time-exacting process requiring empirical iteration. 
@@ -233,8 +236,8 @@ and a scintillator coupled to a \ac{PMT}
 \begin{figure}[h!t!b!]
 	\centering
 	\includegraphics[width=.9\linewidth]{Figures/chamber_cross_section_with_event.png}
-	\caption[Diagram of the TRINAT Detection Chamber]{A scale diagram of the interior of the TRINAT detection chamber, shown edge-on with a decay event. After a decay, the daughter will be unaffected by forces from the MOT.  Positively charged recoils and negatively charged shake-off electrons are pulled towards detectors in opposite directions.  Although the $\beta^+$ is charged, it is also highly relativistic and escapes the electric field with minimal perturbation.
-	\\
+	\caption[Diagram of the TRINAT Detection Chamber]{A scale diagram of the interior of the TRINAT detection chamber, shown edge-on with a decay event. After a decay, the daughter will be unaffected by forces from the MOT.  Positively charged recoils and negatively charged shake-off electrons are pulled towards detectors in opposite directions.  Although the $\beta^+$ is charged, it is also highly relativistic and escapes the electric field with minimal perturbation.  
+	%\copyright~2022 Melissa Anholm.
 	\\
 	% line breaks because somehow it fucks up my equation formatting if I let them go on this same page.  *shrug*
 	}
@@ -247,7 +250,7 @@ and a scintillator coupled to a \ac{PMT}
 	\centering
 	\includegraphics[width=.80\linewidth]{Figures/chamber_photo_2.png}
 	\note{Chamber walls are made from 316-L stainless steel, chosen for strength, cost, and minimal eddy currents.}
-	\caption[A Photo from Inside the TRINAT Detection Chamber]{Inside the TRINAT detection chamber.  This photo is taken from the vantage point of one of the microchannel plates, looking into the chamber towards the second microchannel plate.  The current-carrying copper Helmholtz coils and two beta telescopes are visible at the top and bottom.  The metallic piece in the foreground is one of the electrostatic hoops used to generate an electric field within the chamber.  The hoop's central circular hole allows access to the microchannel plate, and the two elongated holes on the sides allow the MOT's trapping lasers to pass unimpeded at an angle of 45 degrees `out of the page'.}
+	\caption[A Photo from Inside the TRINAT Detection Chamber]{Inside the TRINAT detection chamber.  This photo is taken from the vantage point of one of the microchannel plates, looking into the chamber towards the second microchannel plate.  The current-carrying copper Helmholtz coils and two beta telescopes are visible at the top and bottom.  The metallic piece in the foreground is one of the electrostatic hoops used to generate an electric field within the chamber.  The hoop's central circular hole allows access to the microchannel plate, and the two elongated holes on the sides allow the MOT's trapping lasers to pass unimpeded at an angle of 45 degrees `out of the page'.  Photo was provided courtesy of Alexandre Gorelov.}
 	\label{fig:thechamber}
 \end{figure}
 
@@ -269,7 +272,7 @@ a constant, nearly uniform electric field across the space between the two MCP d
 The resulting electric field acts to pull positively charged ions towards one MCP detector and negatively charged electrons towards the other (see Figs.~\ref{chamber_decayevent} and~\ref{fig:thechamber}).  
 
 
-The detector intended to collect the negatively charged electrons (the \acs{eMCP}) has an active area of $75.0\,$mm, and is positioned 
+The detector intended to collect the negatively charged electrons (the \acs{eMCP}) has an active area of $75.0\,$mm$^2$, and is positioned 
 %is 75 mm in diameter~\aside{No, it's 86.6 mm in diameter, but the active area is only 75 mm.}and positioned 
 $100.0\,$mm from the chamber centre.  It features a Z-stack configuration of three plates, and it is backed by a set of three separate delay lines in a hexagonal arrangement for redundant position sensitivity (the ``HEX75'').  The detector used to collect positively charged ions (the \acs{iMCP}, or equivalently the \acs{rMCP} -- since many of the ions collected are recoils from decay) is $80.0\,$mm in diameter and positioned $101.4\,$mm from the chamber centre.  It features only two plates arranged in a chevron configuration, and it is backed by a set of two separate delay lines (the ``DLD80'') for position sensitivity.  
 %
@@ -290,7 +293,7 @@ In the context of the present work, the \ac{rMCP} data is used primarily in conj
 \label{section:betadetectors}
 The beta detectors, located above and below the atom cloud along the axis of polarization (Fig.~\ref{chamber_decayevent}), are each the combination of a plastic scintillator and a set of silicon strip detectors.  Using all of the available information, these detectors are able to reconstruct the energy of an incident beta, as well as its hit position, and provide a timestamp for the hit's arrival.  Together the upper and lower beta detectors subtend approximately 1.4\% of the total solid angle as measured with respect to the cloud position. 
 
-	The two sets of beta detectors were positioned directly along the axis of polarization.  Each beta detector consists of a plastic scintillator and photo-multiplier tube (PMT) \aside{There's gotta be a better way to describe it} placed directly behind a 40$\times$40-pixel double-sided silicon strip detector (DSSD).  \aside{what's the open area of the detector?  how big is each pixel?}  The scintillator is used to measure the overall energy of the incoming particles, as well as to assign a timestamp to these events, while the DSSD is used both to localize the hit position to one (or in some cases, two) individual pixel(s), and also to discriminate between different types of incoming particles.  In particular, though the scintillator will measure the energy of an incoming beta or an incoming gamma with similar efficiency, the beta will lose a portion of its kinetic energy as it passes through the DSSD into the scintillator.  By contrast, an incident gamma will deposit only a very small amount of energy in the DSSD layer, making it possible to reject events with insufficient energy deposited in the DSSD as likely gamma ray events.  Given that the decay of interest to us emits positrons, we expect a persistent background 511 keV gamma rays that are not of interest to us, so it is extremely important that we are able to clean these background events from our spectrum. 
+	The two sets of beta detectors were positioned directly along the axis of polarization.  Each beta detector consists of a plastic scintillator and photo-multiplier tube (PMT) \aside{There's gotta be a better way to describe it} placed directly behind a 40$\times$40-pixel double-sided silicon strip detector (DSSD).  \aside{what's the open area of the detector?  how big is each pixel?}  The scintillator is used to measure the overall energy of the incoming particles, as well as to assign a timestamp to these events, while the DSSD is used both to localize the hit position to one (or in some cases, two) individual pixel(s), and also to discriminate between different types of incoming particles.  In particular, though the scintillator will measure the energy of an incoming beta or an incoming gamma with similar efficiency, the beta will lose a portion of its kinetic energy as it passes through the DSSD into the scintillator.  By contrast, an incident gamma will deposit only a very small amount of energy in the DSSD layer, making it possible to reject events with insufficient energy deposited in the DSSD as likely gamma ray events.  Given that the decay of interest to us emits positrons, we expect a persistent background of 511 keV gamma rays that are not of interest to us, so it is extremely important that we are able to clean these background events from our spectrum. 
 
 
 It must be noted that the path between the cloud of trapped atoms and either beta detector is blocked by two objects:  a 275$\,\mu$m silicon carbide mirror (necessary for both trapping and optical pumping), and a 229$\,\mu$m beryllium foil (separating the UHV vacuum within the chamber from the outside world).  In order to minimize beta scattering and energy attenuation, these objects have had their materials selected to use the lightest nuclei with the desired material properties, and have been manufactured to be as thin as possible without compromising the experiment.  As the $^{37}\textrm{K} \rightarrow \,^{37}\textrm{\!Ar} + \beta^{+} + \nu_e$ decay process releases $Q=5.125$\,MeV of kinetic energy~\cite{Q_value}, the great majority of betas are energetic enough to punch through both obstacles without significant energy loss before being collected by the beta detectors.  

@@ -50,14 +50,15 @@ A_{\mathrm{super}}(\Ebeta)
 \label{eq:AsuperAbetabFierz}
 \eea
 
-Of course, when all systematics are properly accounted for, Eq.~\ref{eq:AsuperAbetabFierz} is no longer an adequate description of the full relationship between the observable and physical parameters and a comparison to monte carlo must be used.  A series of Geant4 simulations are performed and the results are (re-)processed with slightly different cuts and calibrations so as to match with the experimental conditions in each of the three electron datasets, and the superratio asymmetries are constructed.  The degree to which the simulations and experiment match is evaluated by using a $\chi^2$ comparison of the superratio asymmetries as the figure of merit (see Figs.~\ref{fig:asymmetryB},\ref{fig:asymmetryC},\ref{fig:asymmetryD}).  This is repeated for a range of $\Abeta$ and $\bFierz$ values, and a $\chi^2$ mapping of the 2D parameter space is produced.  
+Of course, when all systematics are properly accounted for, Eq.~(\ref{eq:AsuperAbetabFierz}) is no longer an adequate description of the full relationship between the observable and physical parameters and a comparison to Monte Carlo must be used.  A series of Geant4 simulations are performed and the results are (re-)processed with slightly different cuts and calibrations so as to match with the experimental conditions in each of the three electron datasets, and the superratio asymmetries are constructed.  The degree to which the simulations and experiment match is evaluated by using a $\chi^2$ comparison of the superratio asymmetries as the figure of merit (see Figs.~\ref{fig:asymmetryB},~\ref{fig:asymmetryC},~\ref{fig:asymmetryD}).  This is repeated for a range of $\Abeta$ and $\bFierz$ values, and a $\chi^2$ mapping of the 2D parameter space is produced.  
 
 %
 \begin{figure}[h!t!b!]
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/BestAsymmetry_SetB.png}
-	\caption[SetB Superratio Asymmetry]{A superratio asymmetry from Dataset B, and the best fits from simulations.}	
+	\caption[SetB Superratio Asymmetry]{A superratio asymmetry from Dataset B (red) with 1$\sigma$ statistical errors, and the best fit results (evaluated from 400 keV--4800 keV) from simulations.  %\copyright~2022 Melissa Anholm.
+	}	
 	\label{fig:asymmetryB}
 \end{figure}
 %
@@ -65,7 +66,8 @@ Of course, when all systematics are properly accounted for, Eq.~\ref{eq:AsuperAb
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/BestAsymmetry_SetC.png}
-	\caption[SetC Superratio Asymmetry]{A superratio asymmetry from Dataset C, and the best fits from simulations.}	
+	\caption[SetC Superratio Asymmetry]{A superratio asymmetry from Dataset C (red) with 1$\sigma$ statistical errors, and the best fit results (evaluated from 400 keV--4800 keV) from simulations.  %\copyright~2022 Melissa Anholm.
+	}	
 	\label{fig:asymmetryC}
 \end{figure}
 %	
@@ -73,7 +75,8 @@ Of course, when all systematics are properly accounted for, Eq.~\ref{eq:AsuperAb
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/BestAsymmetry_SetD.png}
-	\caption[SetD Superratio Asymmetry]{A superratio asymmetry from Dataset D, and the best fits from simulations.}	
+	\caption[SetD Superratio Asymmetry]{A superratio asymmetry from Dataset D (red) with 1$\sigma$ statistical errors, and the best fit results (evaluated from 400 keV--4800 keV) from simulations.  %\copyright~2022 Melissa Anholm.
+	}	
 	\label{fig:asymmetryD}
 \end{figure}
 %
@@ -82,7 +85,7 @@ For each superratio asymmetry constructed from simulated spectra, the scintillat
 
 A major caveat to the above description is that running a high statistics G4 simulation of our experiment is a computationally expensive process, so it was not possible to perform a separate simulation at every `pixel' within the parameter space.  Instead, to evaluate how well the experimental data matched to the expectation for varying values of $\Abeta$ and $\bFierz$, only three simulations were performed for different values of $\bFierz$, all using the same nominal value for $\Abeta$.  The $A_{\mathrm{super}}(\Ebeta)$ spectra representing intermediate $\bFierz$ values were created from a linear combination of spectra generated at the two closest values of $\bFierz$.
 
-To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$ spectrum was simply scaled.  From Eq.~\ref{eq:AsuperAbetabFierz} it is clear that this works well so long as $\bFierz$ is small and any systematics are evaluated separately.  This method allows for an arbitrarily finely pixellated 2D $\chi^2$ map to be created.  It is done separately for each of the three experimental data sets so as to facilitate evaluation of systematic effects that changed between runsets.  See Figs.~\ref{fig:2dchi2_setB},\ref{fig:2dchi2_setC},\ref{fig:2dchi2_setD}.
+To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$ spectrum was simply scaled.  From Eq.~(\ref{eq:AsuperAbetabFierz}) it is clear that this works well so long as $\bFierz$ is small and any systematics are evaluated separately.  This method allows for an arbitrarily finely pixellated 2D $\chi^2$ map to be created.  It is done separately for each of the three experimental data sets so as to facilitate evaluation of systematic effects that changed between runsets.  See Figs.~\ref{fig:2dchi2_setB},~\ref{fig:2dchi2_setC}, and~\ref{fig:2dchi2_setD}.
 
 \begin{figure}[h!tb]
 	\centering
@@ -90,7 +93,9 @@ To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$
 	{Figures/Chi2_2D_SetB.png}
 	\note{Systematic uncertainties are evaluated by adjusting parameters and creating a new (set of) chi2 maps very much like this one.}
 %	\note[tag]{On the per-dataset $\chi^2$ maps and SR asymmetries, go through and write descriptions for the goddamn pictures.}
-	\caption[$\chi^2$ Map for Runset B]{A $\chi^2$ map to compare data from Runset B to a parameter space of $\Abeta$ and $\bFierz$ values.  The contours show 1$\sigma$, 90\%, and 95\% statistical confidence intervals.}	
+	\caption[$\chi^2$ Map for Runset B]{A $\chi^2$ map to compare data from Runset B to a parameter space of $\Abeta$ and $\bFierz$ values.  The contours show 1$\sigma$, 90\%, and 95\% statistical confidence intervals, and the minimum reduced $\chi^2$ value is 0.9216.  
+	%\copyright~2022 Melissa Anholm.
+	}	
 	\label{fig:2dchi2_setB}
 \end{figure}
 %
@@ -98,7 +103,9 @@ To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/Chi2_2D_SetC.png}
-	\caption[$\chi^2$ Map for Runset C]{A $\chi^2$ map to compare data from Runset C to a parameter space of $\Abeta$ and $\bFierz$ values.  The contours show 1$\sigma$, 90\%, and 95\% statistical confidence intervals.}	
+	\caption[$\chi^2$ Map for Runset C]{A $\chi^2$ map to compare data from Runset C to a parameter space of $\Abeta$ and $\bFierz$ values.  The contours show 1$\sigma$, 90\%, and 95\% statistical confidence intervals, and the minimum reduced $\chi^2$ value is 1.0064.  
+%	\copyright~2022 Melissa Anholm.
+	}	
 	\label{fig:2dchi2_setC}
 \end{figure}
 %
@@ -106,7 +113,9 @@ To vary the effective $\Abeta$ value, the generated $A_{\mathrm{super}}(\Ebeta)$
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/Chi2_2D_SetD.png}
-	\caption[$\chi^2$ Map for Runset D]{A $\chi^2$ map to compare data from Runset D to a parameter space of $\Abeta$ and $\bFierz$ values.  The contours show 1$\sigma$, 90\%, and 95\% statistical confidence intervals.}	
+	\caption[$\chi^2$ Map for Runset D]{A $\chi^2$ map to compare data from Runset D to a parameter space of $\Abeta$ and $\bFierz$ values.  The contours show 1$\sigma$, 90\%, and 95\% statistical confidence intervals, and the minimum reduced $\chi^2$ value is 0.9567.  
+	%\copyright~2022 Melissa Anholm.
+	}	
 	\label{fig:2dchi2_setD}
 \end{figure}
 
@@ -154,16 +163,17 @@ As this is the dominant systematic error, the TRINAT collaboration is working to
 \note{I could and probably *should* add a description of the scintillator threshold uncertainty evaluation.  But I'm going to skip that for Round 1 and see if anybody notices.}
 The two plastic scintillators were calibrated by the collaboration using online data, with reference points from the beta spectrum endpoint and the compton edge arising from annihilation radiation.  Calibration was performed using only \emph{polarized} data, because the final measurements use only polarized data, and the scintillator gain is more stable in the absence of the stronger oscillating magnetic fields from the AC-MOT.  
 
-A linear calibration is used, with
+A linear calibration is used to extract $E_{\textrm{scint}}$, the energy absorbed in the scintillator, from $Q_{\textrm{QDC}}$, the raw signal reported by the \ac{QDC}, with
 \bea
 E_{\textrm{scint}} &=& \frac{1}{m}(Q_{\textrm{QDC}} - b), 
 \eea
 and the detector resolution arising from photon counting statistics is given by
 \bea
-\sigma &=& \sqrt{\lambda E_{\textrm{scint}}}.
+\sigma(E_{\textrm{scint}}) &=& \sqrt{\lambda E_{\textrm{scint}}}.
 \eea
+In the above, $m$ and $b$ are simply the parameters for a linear calibration, and $\lambda$ is a parameter that characterizes the detector's resolution independent of photon counting statistics.
 
-During online data collection, one QDC module failed abruptly and had to be replaced.  As a result, the collected data is calibrated separately before and after the module failure, and the calibrations change slightly at this time. The methodology used is described in detail within~\cite{ben_thesis}, so the results will simply be stated here in Table~\ref{table:scintcal}.
+During online data collection, one \ac{QDC} module failed abruptly and had to be replaced.  As a result, the collected data is calibrated separately before and after the module failure, and the calibrations change slightly at this time. The methodology used is described in detail within~\cite{ben_thesis}, so the results will simply be stated here in Table~\ref{table:scintcal}.
 \input{table_scintcal}
 
 To evaluate the systematic effects associated with the scintillators' calibrations, the calibration for each scintillator is adjusted independently to produce energy measurements that are higher by one standard deviation, and lower by one standard deviation, and the resulting changes to the $\chi^2$ map's $\Abeta$ and $\bFierz$ centroids is measured.  For this, the datasets corresponding to both sets of calibration numbers have their calibrations adjusted simultaneously, but each individual scintillator is treated separately.  There is no reason to think the two scintillators' calibration accuracies should be correlated, so errors resulting from a changed scintillator calibration are added to one another in quadrature.
@@ -199,7 +209,7 @@ The changes to measured values of $\bFierz$ and $\Abeta$ from these adjustments 
 \subsection{The Atomic Cloud}
 \label{sec:lineshape_results}
 \note{A lot of this content (in "The Atomic Cloud") has gone into (Section~\ref{sec:responsefunction}) instead.  I really need to just mention it here (Sec.~\ref{sec:lineshape_results}) and give an indication of how good the result is.  Then evaluate stuff.}
-Uncertainties relating to the position, size, motion, and expansion of the atomic cloud are evaluated using the response function, which is implemented as described in Ch.~\ref{sec:responsefunction}. To evaluate how well the simple monte carlo + response function (SMC+RF) performs in evaluating uncertainties, the relationship between how the SMC+RF and the full G4 simulation changes when a BSM parameter is adjusted is considered in Fig.~\ref{fig:lineshape_demo}.
+Uncertainties relating to the position, size, motion, and expansion of the atomic cloud are evaluated using the response function, which is implemented as described in Ch.~\ref{sec:responsefunction}. To evaluate how well the simple Monte Carlo + response function (SMC+RF) performs in evaluating uncertainties, the relationship between how the SMC+RF and the full G4 simulation changes when a BSM parameter is adjusted is considered in Fig.~\ref{fig:lineshape_demo}.
 
 \begin{figure}[h!!!t]
 	\centering
@@ -212,7 +222,7 @@ Uncertainties relating to the position, size, motion, and expansion of the atomi
 	\label{fig:lineshape_demo}
 \end{figure}
 
-To evaluate the propagated systematic effects arising from our knowledge of the cloud position, the simple monte carlo is used to generate events originating at points chosen randomly from the distributions produced by linear interpolation of the parameters in Table~\ref{table:cloudpositions}, with each parameter describing the distribution allowed to vary in accordance with its stated uncertainty, assuming gaussian-distributed errors.  The results for each of the three datasets are shown in Fig.~\ref{fig:Abeta_position_err} for $\Abeta$ and Fig.~\ref{fig:bFierz_position_err} for $\bFierz$.
+To evaluate the propagated systematic effects arising from our knowledge of the cloud position, the simple Monte Carlo is used to generate events originating at points chosen randomly from the distributions produced by linear interpolation of the parameters in Table~\ref{table:cloudpositions}, with each parameter describing the distribution allowed to vary in accordance with its stated uncertainty, assuming gaussian-distributed errors.  The results for each of the three datasets are shown in Fig.~\ref{fig:Abeta_position_err} for $\Abeta$ and Fig.~\ref{fig:bFierz_position_err} for $\bFierz$.
 
 
 \begin{figure}[h!!tb]
@@ -264,7 +274,8 @@ The convolution of this simple detector response function with v/c then scales t
 centroid MC, with the lineshape tail varied by $\pm$10\% of its value,
 a generic uncertainty accepted by the community for MC electromagnetic simulations.
 The fit $b_{\rm Fierz}$ centroid changes by $\pm$ 0.0076, summarized
-as the 0.008 ``Low Energy Tail'' in the systematics table at the start of this chapter.
+as the 0.008 ``Low Energy Tail'' within the systematics table in Sec.~\ref{sec:measured_limits}.
+%the following chapter's Table~\ref{table:budget}.
 When compared with other uncertainties of the present data set,
 this is small enough that the accuracy of this estimate is adequate.
 %}
@@ -274,7 +285,7 @@ this is small enough that the accuracy of this estimate is adequate.
 Modeling of background events is coverered comprehensively in Ch.~\ref{sec:tof_bg}.  Because the background model doesn't fully fit the experimental TOF spectrum, a relatively large variation in the number of background events is considered.  The background spectrum is scaled from its nominal size up by a factor of 2 and down by a factor of 2.  
 
 Since the background has been reduced greatly by the improved time-of-flight
-analysis, this even this large variation in the number of background events makes a relatively small contribution to the final result.
+analysis, even this large variation in the number of background events makes a relatively small contribution to the final result.
 
 
 \subsection{Material Thicknesses}
@@ -282,7 +293,7 @@ There are three distinct objects a beta emitted from the central atom cloud must
 
 The propagated uncertainties are treated as uncorrelated (added in quadrature), and evaluated by running high-statistics Geant4 simulations with a parameter adjusted, then propagating the result through the analysis pipeline to compare against superratio asymmetries constructed to span the 2D BSM parameter space.  Because of the processor time required for this, certain simplifying assumptions were used to reduce the necessary number of simulations.  In particular, the top and bottom for each type of object were treated as producing the same size propagated uncertainty, though the top and bottom errors were not treated as being correlated.  Simulations were run to ensure there would not be any large nonlinear effects when combining a change in thickness for one type of object.  
 
-Furthermore, since the DSSD and the mirror have a similar density of silicon, which is the dominant material in causing scattering from the mirrors, and because the two have as a similar thicknesses and thickness uncertainties, the the propagated uncertainties from the DSSDs and mirrors were assumed to produce similar size effects on the result.  Thus, the uncertainties arising from uncertainties in the beryllium foil and mirror thicknesses were the only ones evaluated directly within Geant4.  The propagated uncertainty arising from DSSD thickness was assumed to be the same size as the uncertainty arising from mirror thicknesses.  
+Furthermore, since the DSSD and the mirror both have a similar density of silicon (which is the dominant material in causing scattering from the mirrors), and because the two both also have similar thickness values and uncertainties, the propagated uncertainties from the DSSDs and mirrors were assumed to produce similar sized effects on the result.  Thus, the uncertainties arising from uncertainties in the beryllium foil and mirror thicknesses were the only ones evaluated directly within Geant4.  The propagated uncertainty arising from DSSD thickness was assumed to be the same size as the uncertainty arising from mirror thicknesses.  
 
 All uncertainties from material thicknesses are believed to be uncorrelated, and are added in quadrature to the final systematic uncertainty.  
 

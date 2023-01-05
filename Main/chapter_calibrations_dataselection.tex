@@ -29,7 +29,7 @@ These two types of runs were used for very different purposes in terms of analys
 
 %\color{skyblue}
 %While the beta asymmetry and Fierz interference are best evaluated using the electron runs, the polarization (a dominant uncertainty in the beta asymmetry measurement) and cloud position are best evaluated with recoil runs.  
-The the evaluation of cloud position is discussed in Section~\ref{sec:cloud_calibration}.
+The evaluation of cloud position is discussed in Section~\ref{sec:cloud_calibration}, 
 % the subject of a recent publication (see~\cite{ben_OP}), 
 and the polarization measurement is discussed in Section~\ref{sec:pol_meas},
 The recoil runs may also be analyzed in the future as part of a search for right-handed weak interactions (discussed further in Chapter~\ref{section_rslow}).
@@ -105,7 +105,8 @@ For a perfectly operating detector, one would expect for a collection of many me
 	\includegraphics[width=.999\linewidth]
 	{Figures/rMCP_sumcuts_447.pdf}
 	\note{Are these things *definitely* in nanoseconds?  Check!}
-	\caption[Timing sums for the rMCP, run 447.]{Timing sums and associated cuts for the rMCP detector, run 447.  The `$10\%$' cuts shown simply eliminate events in which the distribution's height at that value is less than `$10\%$' of that distribution's maximum, and the `$1\%$' cuts are performed in a similar manner.  Note that this is \emph{not} the equivalent of eliminating $10\%$ ($1\%$) of events. The above distributions each show the results within their own distribution after cuts are taken on the \emph{other} distribution.  Only a single run is shown here to avoid washing out features -- because the characteristics of these spectra varied significantly over the course of the beamtime, and not all of the changes can be attributed to a change in settings.
+	\caption[Timing sums for the rMCP, run 447.]{Timing sums and associated cuts for the rMCP detector, run 447.  The `$10\%$' cuts shown simply eliminate events in which the distribution's height at that value is less than `$10\%$' of that distribution's maximum, and the `$1\%$' cuts are performed in a similar manner.  Note that this is \emph{not} the equivalent of eliminating $10\%$ ($1\%$) of events. The above distributions each show the results within their own distribution after cuts are taken on the \emph{other} distribution.  Only a single run is shown here to avoid washing out features -- because the characteristics of these spectra varied significantly over the course of the beamtime, and not all of the changes can be attributed to a change in settings.  
+	%\copyright~2022 Melissa Anholm.
 	}	
 	\label{fig:sumcuts}
 \end{figure}
@@ -116,7 +117,9 @@ Because the characteristics of these timing sum distributions varied from run to
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/rMCP_xyz_comparecuts447.pdf}
-	\caption[Cloud Position for run 447 for various \ac{rMCP} timing sum cuts]{Cloud Position for run 447 for rMCP timing sum cuts as shown in Fig.~\ref{fig:sumcuts}.}	
+	\caption[Cloud Position for run 447 for various \ac{rMCP} timing sum cuts]{Cloud Position for run 447 for rMCP timing sum cuts as shown in Fig.~\ref{fig:sumcuts}.  
+	%\copyright~2022 Melissa Anholm.
+	}	
 	\label{fig:position_with_sumcuts}
 \end{figure}
 
@@ -131,7 +134,7 @@ With the preliminary calibration providing a visible image to work with, the `$1
 
 When the online rMCP data was eventually collected, it was found that the rMCP image appeared offset by several centimeters relative to the previous calibration, which necessarily affected the location of the timing sum peaks (similar to those shown in Fig.~\ref{fig:sumcuts}).  The most likely cause for this is a change in cable lengths between the readout and data acquisition in the months between the calibration and online data collection, but it meant a new set of `$10\%$' cuts needed to be established for the online data, and also cast some doubt on the validity of the established calibrations.  In the end, these cuts were established on a run-by-run basis due to the varying shape of the timing sum peaks.  
 
-Our ability to confidently accurately apply the old offline calibration to the new online data depended on our ability to center the image correctly, as different parts of the image are stretched and squeezed differently.  The appearance of the plate edge--the only remaining indicator of the quality of the centering or overall calibration--changed shape slightly from run to run.  Despite this, images from the online data were all summed together after applying run-by-run cuts, and the resulting image was centered by eye.  
+Our ability to confidently accurately apply the old offline calibration to the new online data depended on our ability to center the image correctly, as different parts of the image are stretched and squeezed differently.  The appearance of the plate $\mbox{edge ---}$ the only remaining indicator of the quality of the centering or overall calibration --- changed shape slightly from run to run.  Despite this, images from the online data were all summed together after applying run-by-run cuts, and the resulting image was centered by eye.  
 
 The centering was performed iteratively, because the subsequent steps in the calibration will distort the image differently depending on how accurately it was centered beforehand.  These subsequent steps in which the image is stretched and squished will also change the apparent centering of the overall image.  Calibrated and uncalibrated images are shown in Fig.~\ref{fig:rmcp_calibration} for both offline and online data.
 
@@ -139,7 +142,9 @@ The centering was performed iteratively, because the subsequent steps in the cal
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/rMCP_Calibration}
-	\caption[rMCP Calibration]{rMCP Calibration.  The left images show the rMCP hit map with only a basic preliminary calibration; the images on the right are filled with the same hit data, but after the calibration has been performed.  The upper two images are from data collected offline in advance of the 2014 beamtime using an alpha source; the shadow from a calibration mask is clearly visible.  The lower images show rMCP data taken from a single online run, and includes both photoion and nuclear recoil data, collected over both the polarized and AC-MOT times.  The photoion image of the atom cloud visible in the centre of the lower plots.}
+	\caption[rMCP Calibration]{rMCP Calibration.  The left images show the rMCP hit map with only a basic preliminary calibration; the images on the right are filled with the same hit data, but after the calibration has been performed.  The upper two images are from data collected offline in advance of the 2014 beamtime using an alpha source; the shadow from a calibration mask is clearly visible.  The lower images show rMCP data taken from a single online run, and includes both photoion and nuclear recoil data, collected over both the polarized and AC-MOT times.  The photoion image of the atom cloud is visible in the centre of the lower plots.  
+	%\copyright~2022 Melissa Anholm.
+	}
 	\label{fig:rmcp_calibration}
 \end{figure}
 
@@ -152,7 +157,8 @@ The lower plots in Fig.~\ref{fig:rmcp_calibration} show an unfortunate pattern o
 	\note[bluetodo]{You know, I think this one is flipped relative to the previous image.  Bleh.  Probably this one is the correct one, but who wants to deal with that?  Also .... did we switch MCP plates between calibration and the run?  I think possibly we did!  I'll have to ask the eLog.}
 	\note{Does this thing even have a TOF cut?}
 	\caption[Photoion Hit Positions in 2D]{Photoion Hit Positions in 2D.  This is the entirety of the good photoion data taken at 535 V/cm.  The central bright spot is an image of the atom cloud arising from photoionization events of unpolarized atoms; the rest is background.  Vertical stripes of indeterminate cause can be seen across the face of the image -- it has not been possible to eliminate them in analysis. 
-	}	
+	%\copyright~2022 Melissa Anholm.	
+}	
 	\label{fig:photoionhits_2D}
 \end{figure}
 
@@ -173,7 +179,7 @@ With the \ac{rMCP} detector calibrated (Section~\ref{sec:rmcp_cals}), several ty
 
 This class of data (events with both an \ac{rMCP} hit and a photoionization laser hit in coincidence) can be used to measure cloud polarization, and the methodology and results of that process as it applies to this particular experiment are discussed in a recent publication~\cite{ben_OP}.  We are also interested in the cloud's position and size during the periods of time where decay data is collected, since this represents a potential systematic effect that must be accounted for within our models.  The latter will be the primary focus of this section.  
 
-The first step in such a measurement is to try to eliminate as much background as possible.  We have already required that every event considered here must include both an rMCP hit and a photoionization laser pulse.  As we are interested in measurements of trap position, it makes sense to also require a \emph{complete} set of position data recorded on the \ac{rMCP}'s delay lines.   This is further trimmed by a `$10\%$ cut' on the timing sums, as described in Sec.~\ref{sec:rmcp_cuts}.  Any event including a scintillator hit is rejected, as these events have an increased likelihood for a recoiling ion to be detected on the rMCP instead of- or in addition to the photoion we expect (It is at this stage of the process that Fig.~\ref{fig:photoionhits_2D} is created.).  Finally, some fairly loose cuts are applied about the central $x$- and $z$-positions, as well as the ion's time of flight (measured with respect to the arrival of a photoionization laser pulse).
+The first step in such a measurement is to try to eliminate as much background as possible.  We have already required that every event considered here must include both an rMCP hit and a photoionization laser pulse.  As we are interested in measurements of trap position, it makes sense to also require a \emph{complete} set of position data recorded on the \ac{rMCP}'s delay lines.   This is further trimmed by a `$10\%$ cut' on the timing sums, as described in Sec.~\ref{sec:rmcp_cuts}.  Any event including a scintillator hit is rejected, as these events have an increased likelihood for a recoiling ion to be detected on the rMCP instead of- or in addition to the photoion we expect. (It is at this stage of the process that Fig.~\ref{fig:photoionhits_2D} is created.)  Finally, some fairly loose cuts are applied about the central $x$- and $z$-positions, as well as the ion's time of flight (measured with respect to the arrival of a photoionization laser pulse).
 
 With these basic cuts performed, the cloud position and size must be measured.  We are particularly interested in measurements of the cloud during the time when it is considered to be \emph{polarized} --- however the great majority of photoionization events occur when the cloud is \emph{not polarized} (see Fig.~\ref{fig:position_v_acmottime_3axes}).  This is because the photoionization laser acts only on excited atomic states, which are readily available during the operation of the \ac{MOT}.  When the \ac{MOT} is shut off, the atoms quickly de-excite.  At the start of optical pumping 300$\,\mu$s later (in the case of the 535 V/cm data), there is a short burst of photoions due to the atoms being temporarily placed into an excited state as part of the optical pumping process.  The photoion burst falls away rapidly as atoms are optically pumped into the stretched state and can no longer be excited by the optical pumping laser.  
 
@@ -184,7 +190,9 @@ A projection of the cloud's position on the $x$- and $z$-axes, and its \ac{TOF} 
 	\centering
 	\includegraphics[width=.99\linewidth]
 	{Figures/rMCP_xyz_vs_acmottime.png}
-	\caption[Photoion Hit Positions at 535 V/cm, as a function of AC-MOT Time]{Projections of photoion hit positions and \ac{TOF} at 535 V/cm, as a function of time since the start of the last \ac{AC-MOT} cycle.  The trap's periodic motion can be seen in sync with the \ac{AC-MOT}'s cycles, and it is clear that the cloud is also being compressed during this time, before being allowed to expand ballistically when the MOT is shut off.  The photoion burst at the start of optical pumping 300$\,\mu$s after the AC-MOT is shut off can be seen on the lower two plots. 	}	
+	\caption[Photoion Hit Positions at 535 V/cm, as a function of AC-MOT Time]{Projections of photoion hit positions and \ac{TOF} at 535 V/cm, as a function of time since the start of the last \ac{AC-MOT} cycle.  The trap's periodic motion can be seen in sync with the \ac{AC-MOT}'s cycles, and it is clear that the cloud is also being compressed during this time, before being allowed to expand ballistically when the MOT is shut off.  The photoion burst at the start of optical pumping 300$\,\mu$s after the AC-MOT is shut off can be seen on the lower two plots.  
+	%\copyright~2022 Melissa Anholm.
+	}	
 	\label{fig:position_v_acmottime_3axes}
 \end{figure}
 \FloatBarrier
@@ -282,7 +290,7 @@ It is also necessary to remove from direct consideration any event which is coin
 
 Over the course of the runtime, there were several instances where we noted an apparent electrical discharge within the experimental chamber, producing enormous backgrounds for a short time.  The detectors typically recovered quickly afterward, so it was neither necessary nor useful to stop an entire run to wait for the system to recover.  Instead, the time when the discharge occurred was recorded, and events within approximately one minute of the spark time were discarded.  
 
-We use only the ``fully polarized'' events for which we have a detailed understanding of the nuclear polarization (described in more detail in ~\cite{ben_OP}).  This means we must use \emph{only} events from the ``optical pumping'' portion of the duty cycle (see Fig.~\ref{fig:dutycycle}), and discard events when the DC- or AC-MOT is active.  After the AC-MOT is shut off, there is a short delay before optical pumping begins (see Tables~\ref{table:runlist_electrons} and~\ref{table:runlist_recoils}) to allow the magnetic field to decay, and it is only after $100\,\mu s$ of optical pumping that we consider the atoms to be fully polarized.  Furthermore, because the magnetic field from the DC-MOT is slow to decay (relative to the field from the AC-MOT), all events from the first five AC/OP cycles after every atom transfer are discarded.  A further benefit of our insistence on considering only polarized data is that the scintillators' gains are more stable in the presence of only the (small, stable) magnetic field used for optical pumping than they are in the presence of a larger oscillating magnetic field used for trapping~\cite{ben_thesis}.
+We use only the ``fully polarized'' events for which we have a detailed understanding of the nuclear polarization (described in more detail in~\cite{ben_OP}).  This means we must use \emph{only} events from the ``optical pumping'' portion of the duty cycle (see Fig.~\ref{fig:dutycycle}), and discard events when the DC- or AC-MOT is active.  After the AC-MOT is shut off, there is a short delay before optical pumping begins (see Tables~\ref{table:runlist_electrons} and~\ref{table:runlist_recoils}) to allow the magnetic field to decay, and it is only after $100\,\mu s$ of optical pumping that we consider the atoms to be fully polarized.  Furthermore, because the magnetic field from the DC-MOT is slow to decay (relative to the field from the AC-MOT), all events from the first five AC/OP cycles after every atom transfer are discarded.  A further benefit of our insistence on considering only polarized data is that the scintillators' gains are more stable in the presence of only the (small, stable) magnetic field used for optical pumping than they are in the presence of a larger oscillating magnetic field used for trapping~\cite{ben_thesis}.
 \note{change by 0.2\% of its value vs change by 0.5\% of its value, according to Ben's thesis pg 143.}
 \note{Ben didn't do the 5 cycle discarding thing in his Abeta analysis, but he *did* do it in his OP analysis.}
 
@@ -316,7 +324,7 @@ Each strip will have its own noise spectrum, energy calibration, and energy reso
 	We further require at least one `x' strip and one `y' strip within that same detector record an energy above the `noise threshold', which is determined individually for each strip, and is defined according to the signal-to-noise (SNR) ratio.  In other words, for each individual strip, the energy at which a certain fraction of events are `real' events (as opposed to electronic noise) defines a particular `noise threshold'.  Values are tabulated for each strip at SNRs of 0.25, 0.5, 0.75, 1.0, and 2.0.  As a default, the strip-by-strip SNR of 0.25 is used.~\aside{In Ben's thesis, he says it's *actually* an SNR of 0.17 ...}  
 
 
-	We require that the x strip and the y strip agree (to within some number of standard deviations --- this is a parameter that can be varied) in amount of energy deposited, and in the time at which that hit occurred.  In order to avoid problems resulting from the strips' non-uniform noise thresholds, we further require that the energy deposited be greater than some lower-end cutoff which is selected so as to be higher than every individual strip's noise threshold.  In this case, the DSSDs' lower energy uniform threshold was set at 50 keV, a departure from the choice of 60 keV in an earlier analysis~\cite{ben_Abeta}~\cite{ben_thesis}.
+	We require that the x strip and the y strip agree (to within some number of standard deviations --- this is a parameter that can be varied) in amount of energy deposited, and in the time at which that hit occurred.  In order to avoid problems resulting from the strips' non-uniform noise thresholds, we further require that the energy deposited be greater than some lower-end cutoff which is selected so as to be higher than every individual strip's noise threshold.  In this case, the DSSDs' lower energy uniform threshold was set at 50 keV, a departure from the choice of 60 keV in an earlier analysis~\cite{ben_Abeta,ben_thesis}.
 
 
 We also elect to use only events where a beta hit the DSSD within a $15.5\,$mm radius of the center of the detector, as a large fraction of the DSSD hits at larger radii are from betas that have scattered from the collimator walls.~\aside{Did I even mention the collimator?  Like, in the previous chapter or something..?} Furthermore, events with more than \emph{one} DSSD hit are rejected, as these events are likely either accidental coincidences of two beta decays, or else the result of betas scattering out of a scintillator before their energy can be fully absorbed.  
@@ -349,7 +357,7 @@ The eMCP features a set of three delay lines, intended to be used to record the 
 Though only two delay lines is sufficient to determine the position within the plane of the MCP if they are both hit, the presence of a third delay line allows for some redundancy.  In practice, however, a large fraction of otherwise `good' events include a hit on the eMCP, but have insufficient information recorded on the delay line channels to reconstruct a position.  
 
 
-Because a SOE from the trap is most likely to land in the centre of the plate, while \emph{a priori} the background from other sources not expected to have any particular spatial distribution,  it might make sense to accept only events where the eMCP hit is within some radius of the central peak.  This methodology was seriously considered because the remaining data after this cut is taken has a much lower fraction of background events polluting it -- however even for the most generous eMCP radius cuts, this results in a loss of about half of the events.  The overall measurement is limited by statistics rather than systematics, so it was decided that no cuts on eMCP hit position would be taken in the final analysis.
+Because a SOE from the trap is most likely to land in the centre of the plate, while \emph{a priori} the background from other sources is not expected to have any particular spatial distribution,  it might make sense to accept only events where the eMCP hit is within some radius of the central peak.  This methodology was seriously considered because the remaining data after this cut is taken has a much lower fraction of background events polluting it -- however even for the most generous eMCP radius cuts, this results in a loss of about half of the events.  The overall measurement is limited by statistics rather than systematics, so it was decided that no cuts on eMCP hit position would be taken in the final analysis.
 %(see Fig.~\ref{fig:soe_tof_positioncompare}).  
 %Therefore, it was decided that no position cuts on the eMCP would be made in the final analysis.
 
@@ -374,7 +382,9 @@ Several years after the data was initially collected, a problem was discovered w
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/LE_TE_peaks.pdf}
-	\caption[LE and TE Timing Peaks]{SOE TOF peaks (eMPC - Scintillator), using the leading edge (LE) and using the trailing edge (TE).  Data is sorted according to runset.  For each individual runset, the TE peak is broader than the LE peak.  The centroid of each runset is also more variable in the TE plots.}	
+	\caption[LE and TE Timing Peaks]{SOE TOF peaks (eMPC - Scintillator), using the leading edge (LE) and using the trailing edge (TE).  Data is sorted according to runset.  For each individual runset, the TE peak is broader than the LE peak.  The centroid of each runset is also more variable in the TE plots.  
+	%\copyright~2022 Melissa Anholm.
+	}	
 	\label{fig:LE_TE}
 \end{figure}
 
@@ -387,7 +397,9 @@ With the data reprocessed using the leading edge for timestamps, I wanted to eli
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/WalkAdjust.png}
-	\caption[SOE TOF Walk and Correction]{SOE TOF walk, measured with respect to scintillator hit time.  The effect is actually occuring in the beta detectors, not in the eMPC, and is most likely the result of the \ac{CFD} settings.  Spectra from the top and bottom scintillators are shown before (left) and after (right) applying a quartic adjustment to straighten out the effective TOF.}	
+	\caption[SOE TOF Walk and Correction]{SOE TOF walk, measured with respect to scintillator hit time.  The effect is actually occuring in the beta detectors, not in the eMPC, and is most likely the result of the \ac{CFD} settings.  Spectra from the top and bottom scintillators are shown before (left) and after (right) applying a quartic adjustment to straighten out the effective TOF.  
+	%\copyright~2022 Melissa Anholm.
+	}	
 	\label{fig:WalkAdjust}
 \end{figure}
 
@@ -396,7 +408,9 @@ With the data reprocessed using the leading edge for timestamps, I wanted to eli
 	\centering
 	\includegraphics[width=.999\linewidth]
 	{Figures/experimental_scintspectra_lin.png}
-	\caption[Experimental Scintillator Spectra]{Experimental scintillator spectra, for both detectors in both polarization states.  These spectra are what remain after all cuts have been taken, and all runsets are included.  Binning is selected to match the convention used for the final analysis.}	
+	\caption[Experimental Scintillator Spectra]{Experimental scintillator spectra, for both detectors in both polarization states.  These spectra are what remain after all cuts have been taken, and all runsets are included.  Binning is selected to match the convention used for the final analysis.  
+	%\copyright~2022 Melissa Anholm.
+	}	
 	\label{fig:scintspectra}
 	\note[tag]{Experimental scint. spectra plot needs to be referenced in text.}
 \end{figure}
